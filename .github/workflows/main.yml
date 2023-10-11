@@ -1,0 +1,9 @@
+on:
+  # 允许手动push触发
+  push:
+    branches:
+      - main
+  # 允许外部仓库事件触发
+  repository_dispatch:
+    types:
+      - deploy // event_type就是这个
