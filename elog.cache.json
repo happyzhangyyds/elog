@@ -2566,37 +2566,44 @@
       "relativePath": "/情绪表达/[自我批评] 缺乏人际交往的艺术 .md"
     },
     {
-      "id": "86f5b335-e4be-4e21-bb6a-18cf252663e0",
-      "doc_id": "86f5b335-e4be-4e21-bb6a-18cf252663e0",
-      "updated": 1697026380000,
-      "body_original": "\n# 前言\n\n\n# 我的观点\n\n\n# 总结\n\n",
+      "id": "1ab6b359-03fa-4d3a-8a7e-6d0871344a97",
+      "doc_id": "1ab6b359-03fa-4d3a-8a7e-6d0871344a97",
+      "updated": 1697032260000,
+      "body_original": "\n# 前言\n\n\n---\n\n\n  前几天吃午饭的时候，突然想到一件事情，就是关于博客备份的事情。\n  之前为了对高数18讲进行全部重新CDN加速，一直用的都是notion自带的导出为markdown的功能，但是如果数据一多，速度就很慢，而且一个一个导出很费时间。\n  昨天晚上和今天尝试并使用了elog，实现了notion文章自动批量下载到本地，并根据自定义的熟悉进行合适的归档。\n  首先非常感谢这个想法的启蒙博主：某中二的黑科技研究中心\n  文章标题及链接：[  ](https://darkreunion.tech/article/backup-notion-to-github?giscus=5b1855710a9073bbb30d3264lzzxL%2FY5boFMZEtzfT2uvrsTkpO815dTCl%2BcFCsI%2FwZTnmkVo1SjQB2CllPRsX9pkEFoeAZ77J%2FviSyilYpOqYYX%2FGm9rbQWTk0T8J0bqUaJf4Q%2BJl9YANenxts%3D)[**备份 Notion 文档到 Github**](https://darkreunion.tech/article/backup-notion-to-github?giscus=5b1855710a9073bbb30d3264lzzxL%2FY5boFMZEtzfT2uvrsTkpO815dTCl%2BcFCsI%2FwZTnmkVo1SjQB2CllPRsX9pkEFoeAZ77J%2FviSyilYpOqYYX%2FGm9rbQWTk0T8J0bqUaJf4Q%2BJl9YANenxts%3D)\n\n\n# 正文\n\n\n---\n\n\n  实践的过程并不顺利，甚至还有些小艰难，作为纯技术小白，以下记录我的一些踩坑经历。\n\n\n  首先从阅读[技术文档](https://elog.1874.cool/)开始。\n\n\n## 一、备份文件夹及环境配置\n\n\n---\n\n\n   导航到技术文档的[快速开始](https://elog.1874.cool/notion/start)，使用vscode创建备份文件夹并开始环境配置。\n\n\n  ⚠️请注意环境需要正确安装，理论上安装环境的时间在2-3分钟左右。\n\n\n  然后对项目进行初始化配置，生成`elog.config.js`以及`.elog.env`两个文件，接下来就是进入[配置详情](https://elog.1874.cool/notion/fe8ywmt999gon12w)，配置相应的参数。\n\n\n## 二、正确进行参数配置\n\n\n---\n\n\n  我希望对notion的数据库的文章进行批量导出，那么在配置`elog.config.js`就需要注意平台的选择。\n\n\n```javascript\nmodule.exports = {\n  write: {\n    platform: \"notion\", //那么要注意平台的选择\n  },\n};\n```\n\n\n⚠️在最开始的时候，我忽视了平台的选择，导致报错：`未知的写作平台`\n\n\n  然后是notion相关的配置，首先要关注自己的数据库的属性。\n作者大大也提供了数据库的模板，可以参考[配置流程](https://elog.1874.cool/notion/gvnxobqogetukays#notion)。\n\n\n  我采用的数据库是notionnext的数据库格式，并且elog也支持自定义数据库的字段。\n\n\n```javascript\nnotion: {\n      token: process.env.NOTION_TOKEN,\n      databaseId: process.env.NOTION_DATABASE_ID,\n      filter: false, // {property: 'status', select: {equals: '已发布'}}\n      sorts: false, // [{timestamp: 'created_time', direction: 'descending'}],\n      catalog: false,\n    },\n\n//这是默认的配置，以下是我修改后针对notionnext数据库的配置\nnotion: {\n      token: process.env.NOTION_TOKEN,\n      databaseId: process.env.NOTION_DATABASE_ID,\n      filter:  {\n        property: 'type',\n        select: {\n          equals: 'Post'\n        }\n      }, \n      sorts: true, \n      catalog: {\n        enable: true,\n        property: \"tags\",\n      }\n    },\n//这里我希望筛选数据库中属性type中的post，也就是发布文章，同时我也希望文章按照tags的标签进行本地归档。所以对此处进行了如下修改。\n```\n\n\n  另外如果想要正确输出到指定目录，还需要注意该问题：\n\n\n```javascript\ndeploy: {\n    platform: 'local',\n    local: {\n      outputDir: './docs',\n      filename: 'title',\n      format: 'markdown',\n      catalog: true,\n//在部署平台配置项中配置deploy.local.catalog=true\n      formatExt: '',\n    },\n//一定要记得勾选部署时候到目录选项\n```\n\n\n\n![](https://bu.dusays.com/2023/10/11/65269d1bd607c.png)\n\n\n\n\n![](https://bu.dusays.com/2023/10/11/65269d8c5bdd1.png)\n\n\n\n\n  如果要做针对自己数据库的属性更改，请参照[**Notion API 文档 - Filter database entries**](https://developers.notion.com/reference/post-database-query-filter)**。**\n\n\n  接下来就是正确获取notion的Integration Token和DatabaseId，按照[配置流程](https://elog.1874.cool/notion/gvnxobqogetukays#notion)走就可以。\n\n\n\n![](https://bu.dusays.com/2023/10/11/65269eb157ccb.png)\n\n\n\n\n![](https://bu.dusays.com/2023/10/11/65269ec15fd7e.png)\n\n\n\n\n## 三、合适的网络条件\n\n\n---\n\n\n  在正确配置notion的集成和id之后，可以开始执行\n\n\n```shell\nelog sync -e .elog.env\n```\n\n\n⚠️注意，由于notion api的延时问题，校园网条件下，notion api会经常超时，所以推荐使用手机流量。\n  如果一切顺利，那么您将可以看到文章被正常输入到本地目录。\n\n\n## 四、进阶操作，自动备份 \n\n\n---\n\n\n  阅读技术文档[持续集成](https://elog.1874.cool/notion/vy55q9xwlqlsfrvk)\n\n\n  notion的自动化流程有一定的起手难度。\n\n\n  原理是通过slack捕捉notion数据库字段的变化，比如“status”从“Draft”变位“Published”，那么就可以推送到slack的频道中，然后开始触发pipedream，调用github actions的api进行部署。\n\n\n  有些复杂，首先，需要进行slack注册，并且进行notion的关联。\n\n\n\n![](https://bu.dusays.com/2023/10/11/6526a1e54f8c2.png)\n\n\n\n\n![](https://bu.dusays.com/2023/10/11/6526a1f09a7e6.png)\n\n\n\n\n  如果一切顺利，那么接下来进入pipedream的部署，将slack与pipedream进行关联，最困难的是如何配置https请求。\n\n\n![](https://bu.dusays.com/2023/10/11/6526a771a80be.png)\n\n\n  在这里我要特别感谢DC's博主，他的文章给了我启发 ：[ 定期备份notion](https://amydc.com/a/24c2897b-78f3-4f6a-b8e6-292ea60edf7c)\n\n\n```javascript\nhttps://serverless-api-elog.vercel.app/api/github?user=cyolc932&repo=elog&event_type=deploy&token=xxx\n```\n\n\n同时参考1874博主的[文档](https://github.com/LetTTGACO/serverless-api)，正确配置该请求。\n\n\n```javascript\nuser: Github用户名\nrepo: Github仓库名\ntoken: Github Token\nevent_type: 配置在 Github workflows 中的repository_dispatch.types的值\n```\n\n\n  在这个步骤中，您还要获取[GitHub的token](https://github.com/settings/tokens/)\n\n\n  如果这一步正确，并且serverless api返回`sussess！`，那么恭喜你，已经成功了一半了。\n\n\n  接下来让我们回到vscode的文件夹，进行打包环境的安装\n\n\n```shell\nyarn add @elog/cli\n```\n\n\n在`package.json`加上如下脚本\n\n\n```javascript\n{\n  \"dependencies\": {\n    \"@elog/cli\": \"^0.8.0\"\n  },\n//以下为添加的脚本\n  \"scripts\": {\n    \"build\": \"yarn\", \n    \"elog:init\": \"elog init\",\n    \"sync:local\": \"elog sync -e .elog.env\", \n    \"sync\": \"elog sync\", \n    \"clean\": \"elog clean\"\n  }\n}\n```\n\n\n  接下来到了困难的阶段，配置GitHub的actions，首先配置环境变量，主要是notion的token和id。\n\n\n路径如下：`设置-Secrets and variables-Actions-Secrets`\n\n\n接下来创建GitHub的工作流：`.github/workflows/main.yaml`\n\n\n最主要的是这一步\n\n\n```yaml\n- name: 配置Git用户名邮箱\n        run: |\n          git config --global user.name \"xxxx\"\n          git config --global user.email \"xxxx\"\n```\n\n\n⚠️请注意，接下来不要随意在本地和远程修改，不然会导致冲突。\n\n\n  如果一切顺利，当您在notion中将文章的状态变为“Published”时候，将会自动触发工作流，进行备份，如果遇到错误，请排查工作流的报错信息。\n\n\n![](https://bu.dusays.com/2023/10/11/6526a765b9ded.png)\n\n\n⚠️同时注意放开workflow的写入权限，在该仓库的设置，工作流里找到该选项。\n\n\n如果一切顺利，将会自动触发备份。\n\n\n# 总结\n\n\n---\n\n\n  特别鸣谢：1874博主和群友的耐心解答！\n\n",
       "properties": {
         "password": "",
         "icon": "",
-        "date": "2023-10-11 12:13:00",
+        "date": "2023-10-11",
         "type": "Post",
-        "category": "",
-        "slug": "",
-        "Created time": "2023-10-11T12:13:00.000Z",
-        "tags": [],
-        "summary": "",
-        "title": "[test] ",
+        "category": "动手实践",
+        "slug": "elog",
+        "Created time": "2023-10-11T12:29:00.000Z",
+        "tags": [
+          "实用教程"
+        ],
+        "summary": "尝试并使用了elog，实现了notion文章自动批量下载到本地，并根据自定义的熟悉进行合适的归档。",
+        "title": "[跨域协同]  elog+notion实现md优雅备份",
         "status": "Published",
-        "urlname": "86f5b335-e4be-4e21-bb6a-18cf252663e0",
-        "updated": "2023-10-11 12:13:00"
+        "urlname": "1ab6b359-03fa-4d3a-8a7e-6d0871344a97",
+        "updated": "2023-10-11 13:51:00"
       },
-      "catalog": [],
+      "catalog": [
+        {
+          "title": "实用教程",
+          "doc_id": "1ab6b359-03fa-4d3a-8a7e-6d0871344a97"
+        }
+      ],
       "body": "",
-      "realName": "[test] ",
-      "relativePath": "/[test] .md"
+      "realName": "[跨域协同]  elog+notion实现md优雅备份",
+      "relativePath": "/实用教程/[跨域协同]  elog+notion实现md优雅备份.md"
     }
   ],
   "catalog": [
     {
       "object": "page",
-      "id": "86f5b335-e4be-4e21-bb6a-18cf252663e0",
-      "created_time": "2023-10-11T12:13:00.000Z",
-      "last_edited_time": "2023-10-11T12:13:00.000Z",
+      "id": "1ab6b359-03fa-4d3a-8a7e-6d0871344a97",
+      "created_time": "2023-10-11T12:29:00.000Z",
+      "last_edited_time": "2023-10-11T13:51:00.000Z",
       "created_by": {
         "object": "user",
         "id": "e66e3bc6-30f1-4020-b696-2787f04dc3ea"
@@ -2605,7 +2612,12 @@
         "object": "user",
         "id": "e66e3bc6-30f1-4020-b696-2787f04dc3ea"
       },
-      "cover": null,
+      "cover": {
+        "type": "external",
+        "external": {
+          "url": "https://bu.dusays.com/2023/10/11/6526a857f3ace.png"
+        }
+      },
       "icon": null,
       "parent": {
         "type": "database_id",
@@ -2615,20 +2627,22 @@
       "properties": {
         "password": "",
         "icon": "",
-        "date": "2023-10-11 12:13:00",
+        "date": "2023-10-11",
         "type": "Post",
-        "category": "",
-        "slug": "",
-        "Created time": "2023-10-11T12:13:00.000Z",
-        "tags": [],
-        "summary": "",
-        "title": "[test] ",
+        "category": "动手实践",
+        "slug": "elog",
+        "Created time": "2023-10-11T12:29:00.000Z",
+        "tags": [
+          "实用教程"
+        ],
+        "summary": "尝试并使用了elog，实现了notion文章自动批量下载到本地，并根据自定义的熟悉进行合适的归档。",
+        "title": "[跨域协同]  elog+notion实现md优雅备份",
         "status": "Published",
-        "urlname": "86f5b335-e4be-4e21-bb6a-18cf252663e0",
-        "updated": "2023-10-11 12:13:00"
+        "urlname": "1ab6b359-03fa-4d3a-8a7e-6d0871344a97",
+        "updated": "2023-10-11 13:51:00"
       },
-      "url": "https://www.notion.so/test-86f5b335e4be4e21bb6a18cf252663e0",
-      "public_url": "https://fragrantknowledge.notion.site/test-86f5b335e4be4e21bb6a18cf252663e0"
+      "url": "https://www.notion.so/elog-notion-md-1ab6b35903fa4d3a8a7e6d0871344a97",
+      "public_url": "https://fragrantknowledge.notion.site/elog-notion-md-1ab6b35903fa4d3a8a7e6d0871344a97"
     },
     {
       "object": "page",
@@ -4701,8 +4715,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231011%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231011T122006Z&X-Amz-Expires=3600&X-Amz-Signature=d0ea5ce9a9c2e3a04728b7fe9d200d8963e6d95d83b4e3447bfa7caaa07f0e51&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-11T13:20:06.171Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231011%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231011T135207Z&X-Amz-Expires=3600&X-Amz-Signature=c206851c6ba2d4369c54f099de713f5320954e7f6969d652c63d84bdcd8593b6&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-11T14:52:07.918Z"
         }
       },
       "icon": null,
@@ -5205,8 +5219,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231011%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231011T122006Z&X-Amz-Expires=3600&X-Amz-Signature=03d176e546dc21a45a03de0bd260c1b5331ae1e5063ab73e64c61f9b6dfba820&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-11T13:20:06.175Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231011%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231011T135207Z&X-Amz-Expires=3600&X-Amz-Signature=51feb47cd593e868915a934161280cab5614dcf32ff7e77b4b7753d0aa217b58&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-11T14:52:07.917Z"
         }
       },
       "icon": null,
@@ -5487,8 +5501,8 @@
       "icon": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f6304c04-ca6d-4a05-a577-2bffb9cfd351/%E6%88%AA%E5%B1%8F2023-07-10_10.16.16.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231011%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231011T122006Z&X-Amz-Expires=3600&X-Amz-Signature=c45c47c8731bc76d5d3a713732012925a70c3ebfac099314a81f022f3f142d70&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-11T13:20:06.186Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f6304c04-ca6d-4a05-a577-2bffb9cfd351/%E6%88%AA%E5%B1%8F2023-07-10_10.16.16.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231011%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231011T135207Z&X-Amz-Expires=3600&X-Amz-Signature=a93ad4a3d7bcc082bd0acc1d6992d2d6b8a567284ae1b66f89f6c51500430bfd&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-11T14:52:07.921Z"
         }
       },
       "parent": {
@@ -5539,8 +5553,8 @@
       "icon": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7d6b240a-f7be-418c-bf43-04373fb7962a/%E6%88%AA%E5%B1%8F2023-07-03_14.27.48.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231011%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231011T122006Z&X-Amz-Expires=3600&X-Amz-Signature=00a67e65e3e14009d6279e558afefdf0ad3aa0f3f4fbafcc27bf46c0461975c6&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-11T13:20:06.186Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7d6b240a-f7be-418c-bf43-04373fb7962a/%E6%88%AA%E5%B1%8F2023-07-03_14.27.48.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231011%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231011T135207Z&X-Amz-Expires=3600&X-Amz-Signature=352a1938708fe2641178f70efb19a2c24c6ba9a8f9e686f541eef0d20bbdfbfc&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-11T14:52:07.921Z"
         }
       },
       "parent": {
@@ -5639,8 +5653,8 @@
       "icon": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6534acae-1d5b-432d-808b-7ad08d784d3e/%E6%88%AA%E5%B1%8F2023-07-01_10.39.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231011%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231011T122006Z&X-Amz-Expires=3600&X-Amz-Signature=bae3025db0ae1cea1acc2d583fb7b7bc3555d79d68ce8ed80b483136158d4874&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-11T13:20:06.184Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6534acae-1d5b-432d-808b-7ad08d784d3e/%E6%88%AA%E5%B1%8F2023-07-01_10.39.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231011%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231011T135207Z&X-Amz-Expires=3600&X-Amz-Signature=b128ca0f5971550ae05e061590ca8ca0693c3a95dcf3c4b5852d59ab5420bbb9&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-11T14:52:07.937Z"
         }
       },
       "parent": {
