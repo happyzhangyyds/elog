@@ -48,8 +48,8 @@ jobs:
 
       - name: 配置Git用户名邮箱
         run: |
-          git config --global user.name "xxxx"
-          git config --global user.email "xxxx"
+          git config --global user.name "happyzhangyyds"
+          git config --global user.email "1695257917@qq.com"
 
       - name: 提交yuque拉取的文章到GitHub仓库
         run: |
