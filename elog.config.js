@@ -4,10 +4,17 @@ module.exports = {
     notion: {
       token: process.env.NOTION_TOKEN,
       databaseId: process.env.NOTION_DATABASE_ID,
-      filter:false, // {property: 'status', select: {equals: 'published'}}
-      sorts: true, 
-      // [{timestamp: 'created_time', direction: 'descending'}],
-      catalog: false,
+      filter:  {
+        property: 'type',
+        select: {
+          equals: 'Post'
+        }
+      }, // {property: 'status', select: {equals: 'published'}}
+      sorts: true, // [{timestamp: 'created_time', direction: 'descending'}],
+      catalog: {
+        enable: true,
+        property: "tags",
+      }
     },
   },
   deploy: {
@@ -16,28 +23,8 @@ module.exports = {
       outputDir: './docs',
       filename: 'title',
       format: 'markdown',
-      catalog: false,
+      catalog: true,
       formatExt: '',
-    },
-    confluence: {
-      user: process.env.CONFLUENCE_USER,
-      password: process.env.WORDPRESS_PASSWORD,
-      endpoint: process.env.WORDPRESS_ENDPOINT,
-      spaceKey: process.env.CONFLUENCE_SPACE_KEY,
-      rootPageId: process.env.CONFLUENCE_ROOT_PAGE_ID, // 可选
-      formatExt: '', // 可选
-    },
-    wordpress: {
-      username: process.env.WORDPRESS_USERNAME,
-      password: process.env.WORDPRESS_PASSWORD,
-      endpoint: process.env.WORDPRESS_ENDPOINT,
-      keyMap: {
-        tags: 'tags',
-        categories: 'categories',
-        cover: 'cover',
-        description: 'description',
-      },
-      formatExt: ''
     },
   },
   image: {
