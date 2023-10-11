@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@elog/cli": "^0.8.0"
+  }
+}
