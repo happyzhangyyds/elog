@@ -78,7 +78,7 @@ jobs:
           # deploy_key可以推送到别的仓库, SSH_PRIVATE_KEY 为自己电脑的ssh私钥
           deploy_key: ${{ secrets.SSH_PRIVATE_KEY }}
           # 具体目录以自己实际情况为准
-          publish_dir: docs/.vitepress/dist
+          publish_dir: docs/
           external_repository: xxxx/xxxx.github.io
-          publish_branch: master
+          publish_branch: main
           commit_message: ${{ github.event.head_commit.message }}
