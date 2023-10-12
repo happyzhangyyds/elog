@@ -4,7 +4,7 @@
 
 前几天吃午饭的时候，突然想到一件事情，就是关于博客备份的事情。
 之前为了对高数 18 讲进行全部重新 CDN 加速，一直用的都是 notion 自带的导出为 markdown 的功能，但是如果数据一多，速度就很慢，而且一个一个导出很费时间。
-昨天晚上和今天尝试并使用了 elog，实现了 notion 文章自动批量下载到本地，并根据自定义的数据库 shu x 进行合适的归档。
+昨天晚上和今天尝试并使用了 elog，实现了 notion 文章自动批量下载到本地，并根据自定义的数据库属性进行合适的归档。
 首先非常感谢这个想法的启蒙博主：某中二的黑科技研究中心
 文章标题及链接：[ ](https://darkreunion.tech/article/backup-notion-to-github?giscus=5b1855710a9073bbb30d3264lzzxL%2FY5boFMZEtzfT2uvrsTkpO815dTCl%2BcFCsI%2FwZTnmkVo1SjQB2CllPRsX9pkEFoeAZ77J%2FviSyilYpOqYYX%2FGm9rbQWTk0T8J0bqUaJf4Q%2BJl9YANenxts%3D)[**备份 Notion 文档到 Github**](https://darkreunion.tech/article/backup-notion-to-github?giscus=5b1855710a9073bbb30d3264lzzxL%2FY5boFMZEtzfT2uvrsTkpO815dTCl%2BcFCsI%2FwZTnmkVo1SjQB2CllPRsX9pkEFoeAZ77J%2FviSyilYpOqYYX%2FGm9rbQWTk0T8J0bqUaJf4Q%2BJl9YANenxts%3D)
 
@@ -273,7 +273,7 @@ elog 的项目非常具有实践价值，通过该项目，不仅可以实现博
 
 > 💡 **特别鸣谢：  
 > 🌺** [1874 博主的 elog 项目及其技术文档](https://github.com/LetTTGACO/elog)  
-> 🌺  [在自行实践遇到困难和解决的宝贵经历](https://bu.dusays.com/2023/10/12/6527510b65304.png)  
+> 🌺 [在自行实践遇到困难和解决的宝贵经历](https://bu.dusays.com/2023/10/12/6527510b65304.png)  
 > 🌺 [北门清燕](https://www.bmqy.net/2651.html#more)、[DC's](https://amydc.com/a/24c2897b-78f3-4f6a-b8e6-292ea60edf7c)、[IMQL.LIFE](https://www.imql.life/2023/08/12/Writing_on_The_Cloud_With_YuQue/)等群友的最佳实践文档
 
 ### 小彩蛋
