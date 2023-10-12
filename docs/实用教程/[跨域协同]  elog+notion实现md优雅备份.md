@@ -4,7 +4,7 @@
 
 前几天吃午饭的时候，突然想到一件事情，就是关于博客备份的事情。
 之前为了对高数 18 讲进行全部重新 CDN 加速，一直用的都是 notion 自带的导出为 markdown 的功能，但是如果数据一多，速度就很慢，而且一个一个导出很费时间。
-昨天晚上和今天尝试并使用了 elog，实现了 notion 文章自动批量下载到本地，并根据自定义的熟悉进行合适的归档。
+昨天晚上和今天尝试并使用了 elog，实现了 notion 文章自动批量下载到本地，并根据自定义的数据库 shu x 进行合适的归档。
 首先非常感谢这个想法的启蒙博主：某中二的黑科技研究中心
 文章标题及链接：[ ](https://darkreunion.tech/article/backup-notion-to-github?giscus=5b1855710a9073bbb30d3264lzzxL%2FY5boFMZEtzfT2uvrsTkpO815dTCl%2BcFCsI%2FwZTnmkVo1SjQB2CllPRsX9pkEFoeAZ77J%2FviSyilYpOqYYX%2FGm9rbQWTk0T8J0bqUaJf4Q%2BJl9YANenxts%3D)[**备份 Notion 文档到 Github**](https://darkreunion.tech/article/backup-notion-to-github?giscus=5b1855710a9073bbb30d3264lzzxL%2FY5boFMZEtzfT2uvrsTkpO815dTCl%2BcFCsI%2FwZTnmkVo1SjQB2CllPRsX9pkEFoeAZ77J%2FviSyilYpOqYYX%2FGm9rbQWTk0T8J0bqUaJf4Q%2BJl9YANenxts%3D)
 
@@ -25,6 +25,26 @@
 ⚠️ 请注意环境需要正确安装，理论上安装环境的时间在 2-3 分钟左右。
 
 然后对项目进行初始化配置，生成`elog.config.js`以及`.elog.env`两个文件，接下来就是进入[配置详情](https://elog.1874.cool/notion/fe8ywmt999gon12w)，配置相应的参数。
+  ⚠️ 请注意，将您的.elog.env 文件列入 git 的忽略跟踪
+
+```markdown
+使用`.gitignore` 文件：创建一个名为 `.gitignore` 的文件，并在其中列出你想要隐藏的文件或文件夹的名称。在这个文件中，你可以使用通配符或模式来指定要忽略的文件类型或文件夹。当你将 `.gitignore` 文件提交到 GitHub 仓库时，Git 将忽略这些文件，不会将它们包含在版本控制中。
+
+请注意，`.gitignore` 文件只能隐藏未被跟踪的文件。如果某个文件已经被 Git 跟踪并提交到仓库中，那么即使你在 `.gitignore` 文件中将其列为忽略项，它仍然会在仓库中可见。（解决该问题请导航到结尾彩蛋部分）
+```
+
+```shell
+## 下面是一个示例 `.gitignore` 文件的内容：
+
+# 忽略所有 .txt 文件
+*.txt
+
+# 忽略文件夹
+my_folder/
+
+# 忽略特定文件
+secret.txt
+```
 
 ## 二、正确进行参数配置
 
@@ -396,10 +416,89 @@ code: 1
 
 如果问题仍然存在，请提供更多的上下文信息，例如您的工作流文件、代码片段或其他相关细节，以便我能够更好地帮助您解决问题。
 
-```
+````
 
 
 
   </details>
 
+
+<details>
+  <summary>解决环境变量可见性问题</summary>
+
+
+```markdown
+如果某个文件已经被 Git 跟踪并提交到仓库中，即使你在 `.gitignore` 文件中将其列为忽略项，它仍然会在仓库中可见。要解决这个问题，你需要执行以下步骤：
+
+1. 首先，从 Git 仓库中删除已经跟踪的文件。可以使用以下命令将文件从 Git 仓库中删除，但保留在本地文件系统中：
+
+````
+
+git rm --cached <file>
+
 ```
+
+将 `<file>` 替换为要从 Git 仓库中删除的文件的路径。
+
+2. 然后，将删除的文件添加到 `.gitignore` 文件中，以确保将来不会再次将其纳入版本控制。在 `.gitignore` 文件中添加文件路径或模式，例如：
+
+```
+
+<file>
+```
+
+3. 最后，提交对 `.gitignore` 文件和已删除文件的更改：
+
+```
+git add .gitignore
+git commit -m "Remove and ignore the specified file"
+```
+
+这样，已删除的文件将不再出现在 Git 仓库的历史记录中，并且在将来的提交中也不会被包含。
+
+请注意，这些步骤仅会将文件从 Git 仓库中删除，并阻止将来的提交。如果你希望完全从仓库中删除文件的所有痕迹，你可能需要执行其他操作，如修改 Git 的历史记录。这种情况下，建议谨慎操作，并在进行任何重要操作之前备份你的仓库。
+
+````
+
+
+
+  </details>
+
+
+<details>
+  <summary>如何删除git的历史痕迹</summary>
+
+
+```markdown
+要删除 Git 仓库中的文件的所有痕迹，包括历史记录和提交信息，可以按照以下步骤进行操作：
+
+1. 首先，确保你备份了重要的文件和仓库，以防止意外数据丢失。
+
+2. 使用 `git filter-branch` 命令来修改 Git 的历史记录。这个命令可以重写提交历史，并删除指定文件的所有痕迹。以下是一个示例命令：
+
+````
+
+git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch <file>' --prune-empty --tag-name-filter cat -- --all
+
+```
+
+将 `<file>` 替换为要删除痕迹的文件的路径。这个命令将遍历所有提交，并从中删除指定文件的所有痕迹。
+
+3. 执行该命令后，Git 将会重写历史记录。这可能需要一些时间，具体取决于你的仓库大小和提交数量。在完成后，Git 会显示重写的提交数量。
+
+4. 接下来，使用 `git push --force` 命令将修改后的历史记录推送到远程仓库。请注意，这个命令会强制推送修改后的历史记录，因此请确保你在进行此操作之前已经备份了重要的数据。
+
+```
+
+git push --force origin <branch-name>
+
+```
+
+将 `<branch-name>` 替换为你要推送的分支名称。
+
+这样，指定文件的所有痕迹将从 Git 仓库的历史记录中完全删除。
+
+请注意，这个操作是不可逆的，并且会影响到与指定文件相关的所有提交和分支。因此，在执行此操作之前，请务必谨慎，并确保你理解操作的影响。
+```
+
+  </details>
