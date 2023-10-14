@@ -2660,9 +2660,86 @@
       "body": "",
       "realName": "[自然奇观] 从墨脱森林到冷噶错银河 ",
       "relativePath": "/必看精选/[自然奇观] 从墨脱森林到冷噶错银河 .md"
+    },
+    {
+      "id": "78deb745-8bb8-4d87-b8bf-9426cbc073ff",
+      "doc_id": "78deb745-8bb8-4d87-b8bf-9426cbc073ff",
+      "updated": 1697260020000,
+      "body_original": "\nI know that using another language to express my opinions is very difficult. I may not be able to convey my feelings accurately, but we must take this path to improve ourselves.So I wish to do these things, even though they are very difficult.\n\n\nLanguage is a tool that allows us to express the consciousness in our minds. If we wish to convey our viewpoints and insights to more people, we need a universal language. At the same time, language also influences our way of thinking and behavioral habits, presenting us with a more inclusive and open world.\n\n\nWe need to confront what we used to fear. Perhaps this is the truly exciting moment that awaits us!\n\n",
+      "properties": {
+        "password": "",
+        "icon": "",
+        "date": "2023-10-14",
+        "type": "Post",
+        "category": "走近生活",
+        "slug": "ssh",
+        "Created time": "2023-10-14T04:13:00.000Z",
+        "tags": [
+          "情绪表达"
+        ],
+        "summary": "We need to confront what we used to fear. Perhaps this is the truly exciting moment that awaits us!",
+        "title": "[connection]  Build the language system",
+        "status": "Published",
+        "urlname": "78deb745-8bb8-4d87-b8bf-9426cbc073ff",
+        "updated": "2023-10-14 05:07:00"
+      },
+      "catalog": [
+        {
+          "title": "情绪表达",
+          "doc_id": "78deb745-8bb8-4d87-b8bf-9426cbc073ff"
+        }
+      ],
+      "body": "",
+      "realName": "[connection]  Build the language system",
+      "relativePath": "/情绪表达/[connection]  Build the language system.md"
     }
   ],
   "catalog": [
+    {
+      "object": "page",
+      "id": "78deb745-8bb8-4d87-b8bf-9426cbc073ff",
+      "created_time": "2023-10-14T04:13:00.000Z",
+      "last_edited_time": "2023-10-14T05:07:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "e66e3bc6-30f1-4020-b696-2787f04dc3ea"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "e66e3bc6-30f1-4020-b696-2787f04dc3ea"
+      },
+      "cover": {
+        "type": "external",
+        "external": {
+          "url": "https://bu.dusays.com/2023/10/14/652a21fb59f15.png"
+        }
+      },
+      "icon": null,
+      "parent": {
+        "type": "database_id",
+        "database_id": "455841bd-1ef4-4ae5-8f0f-954b329c565d"
+      },
+      "archived": false,
+      "properties": {
+        "password": "",
+        "icon": "",
+        "date": "2023-10-14",
+        "type": "Post",
+        "category": "走近生活",
+        "slug": "ssh",
+        "Created time": "2023-10-14T04:13:00.000Z",
+        "tags": [
+          "情绪表达"
+        ],
+        "summary": "We need to confront what we used to fear. Perhaps this is the truly exciting moment that awaits us!",
+        "title": "[connection]  Build the language system",
+        "status": "Published",
+        "urlname": "78deb745-8bb8-4d87-b8bf-9426cbc073ff",
+        "updated": "2023-10-14 05:07:00"
+      },
+      "url": "https://www.notion.so/connection-Build-the-language-system-78deb7458bb84d87b8bf9426cbc073ff",
+      "public_url": "https://fragrantknowledge.notion.site/connection-Build-the-language-system-78deb7458bb84d87b8bf9426cbc073ff"
+    },
     {
       "object": "page",
       "id": "57a103ab-b4a0-4fa9-9875-d42270d83f74",
@@ -4869,8 +4946,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231012%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231012T134937Z&X-Amz-Expires=3600&X-Amz-Signature=2f3e24fd6d6d70512a5f3cbd5acc31741015367736c518b61dfbd9468cfca942&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-12T14:49:37.784Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231014%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231014T050755Z&X-Amz-Expires=3600&X-Amz-Signature=0d72e78ed6f9689f924d7e85634ce33d5993956603852540fce0572636069128&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-14T06:07:55.312Z"
         }
       },
       "icon": null,
@@ -5373,8 +5450,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231012%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231012T134937Z&X-Amz-Expires=3600&X-Amz-Signature=b32d2786dcbdea951ac061a7cd8d361cf9dee07fa6c473273a28ffbfdd7461de&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-12T14:49:37.795Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231014%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231014T050755Z&X-Amz-Expires=3600&X-Amz-Signature=86ac07fe59caaa4426d8d0bd2fecf6299d4be8a45eeb648177820cb92f8574e2&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-14T06:07:55.306Z"
         }
       },
       "icon": null,
@@ -5655,8 +5732,8 @@
       "icon": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f6304c04-ca6d-4a05-a577-2bffb9cfd351/%E6%88%AA%E5%B1%8F2023-07-10_10.16.16.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231012%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231012T134937Z&X-Amz-Expires=3600&X-Amz-Signature=e986c2da100a282316ee5bbf17d3a58af6f4585032da5289bf86c37cf0889d12&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-12T14:49:37.802Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f6304c04-ca6d-4a05-a577-2bffb9cfd351/%E6%88%AA%E5%B1%8F2023-07-10_10.16.16.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231014%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231014T050755Z&X-Amz-Expires=3600&X-Amz-Signature=ade3f0850d6266218b6f1e1be7bdc232dc121f5cbec38a1839c1d67584d21a46&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-14T06:07:55.314Z"
         }
       },
       "parent": {
@@ -5707,8 +5784,8 @@
       "icon": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7d6b240a-f7be-418c-bf43-04373fb7962a/%E6%88%AA%E5%B1%8F2023-07-03_14.27.48.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231012%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231012T134937Z&X-Amz-Expires=3600&X-Amz-Signature=399ae8508703095d13f1e225cf4d118742f801d927f03418eb204bc28fd95f26&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-12T14:49:37.787Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7d6b240a-f7be-418c-bf43-04373fb7962a/%E6%88%AA%E5%B1%8F2023-07-03_14.27.48.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231014%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231014T050755Z&X-Amz-Expires=3600&X-Amz-Signature=6515eb3a6cf2d05c78c2c5e4ed699503356ef4e1feeae902cbd57bbe250e3d04&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-14T06:07:55.314Z"
         }
       },
       "parent": {
@@ -5807,8 +5884,8 @@
       "icon": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6534acae-1d5b-432d-808b-7ad08d784d3e/%E6%88%AA%E5%B1%8F2023-07-01_10.39.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231012%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231012T134937Z&X-Amz-Expires=3600&X-Amz-Signature=b064300f11d4acabfb60a9ee2611ed7780456bb66e43165c0704029c2da471af&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-12T14:49:37.786Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6534acae-1d5b-432d-808b-7ad08d784d3e/%E6%88%AA%E5%B1%8F2023-07-01_10.39.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231014%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231014T050755Z&X-Amz-Expires=3600&X-Amz-Signature=eb544919cedede7ed96b7841ae168dcfb926b2779904b1ec01580d6618708f8e&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-14T06:07:55.322Z"
         }
       },
       "parent": {
