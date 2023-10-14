@@ -2692,9 +2692,86 @@
       "body": "",
       "realName": "[connection]  Build the language system",
       "relativePath": "/情绪表达/[connection]  Build the language system.md"
+    },
+    {
+      "id": "eedd219c-f9bd-4dff-8b1b-c900de9496fc",
+      "doc_id": "eedd219c-f9bd-4dff-8b1b-c900de9496fc",
+      "updated": 1697271300000,
+      "body_original": "\n# Preface\n\n\n---\n\n\nCustomizing the domain for Notion and integrating it with Apple Calendar is an incredibly marvelous endeavor.Below, I shall present to you a [demonstration](https://notion.matrixcore.top/) showcasing the process of establishing the desired integration.\n\n\n# Main Content\n\n\n---\n\n\nDear friends, behold the moment of witnessing miracles. Join me eagerly as we embark on this hands-on endeavor.\n\n\n## Customizing the domain for Notion.\n\n\n---\n\n\nFirst and foremost, procure a domain name and associate it with Cloudflare.You may acquire detailed insights on the operational procedures by referring to this[ article.](https://www.lpolaris.com/article/usecloudflare)\n\n\nSubsequently, within Cloudflare, you must establish a worker and input the corresponding code.\n\n\nBy copying the URL of the Notion page, generate your script code on this [website.](/771ef38657244c27b9389734a9cbff44)You may also follow the step-by-step instructions provided in the video below for guidance.\n\n\n## Synchronize your Notion calendar board with Apple Calendar\n\n\n---\n\n\nYou can establish connections between Notion databases through the [notion.cafe ](https://notion.cafe/)website.The following video provides a comprehensive explanation, invest some time, and you shall achieve success!\n\n\n# Summary\n\n\n---\n\n\n> 💡 Special acknowledgment is given to the authors below who have provided inspiration.  \n> 🌺  [**✨notion页面添加域名攻略/作品集网站**](https://www.bilibili.com/video/BV1wY411f7wj/?spm_id_from=333.999.top_right_bar_window_history.content.click&vd_source=237e295a40d7aaea043ead8c0d2c78ab)  \n> 🌺  [**3分钟替换域名｜Notion教程**](https://www.bilibili.com/video/BV1ne4y1r776/?spm_id_from=333.788.top_right_bar_window_history.content.click&vd_source=237e295a40d7aaea043ead8c0d2c78ab)[  \n> ](https://www.bilibili.com/video/BV1ne4y1r776/?spm_id_from=333.788.top_right_bar_window_history.content.click&vd_source=237e295a40d7aaea043ead8c0d2c78ab)🌺  [**太酷啦！Notion日历终于可以同步到苹果日历还有谷歌日历啦！**](https://www.bilibili.com/video/BV1LX4y1m7cm/?spm_id_from=333.337.search-card.all.click&vd_source=237e295a40d7aaea043ead8c0d2c78ab)\n\n\nFeel free to leave any questions or comments in the comment section, and we'll catch up next time! Goodbye!\n\n",
+      "properties": {
+        "password": "",
+        "icon": "",
+        "date": "2023-10-14",
+        "type": "Post",
+        "category": "动手实践",
+        "slug": "Calendar",
+        "Created time": "2023-10-14T07:46:00.000Z",
+        "tags": [
+          "实用教程"
+        ],
+        "summary": "Customizing the domain for Notion and integrating it with Apple Calendar is an incredibly marvelous endeavor.",
+        "title": "[notion] Customize Notion domain and link to Apple Calendar",
+        "status": "Published",
+        "urlname": "eedd219c-f9bd-4dff-8b1b-c900de9496fc",
+        "updated": "2023-10-14 08:15:00"
+      },
+      "catalog": [
+        {
+          "title": "实用教程",
+          "doc_id": "eedd219c-f9bd-4dff-8b1b-c900de9496fc"
+        }
+      ],
+      "body": "",
+      "realName": "[notion] Customize Notion domain and link to Apple Calendar",
+      "relativePath": "/实用教程/[notion] Customize Notion domain and link to Apple Calendar.md"
     }
   ],
   "catalog": [
+    {
+      "object": "page",
+      "id": "eedd219c-f9bd-4dff-8b1b-c900de9496fc",
+      "created_time": "2023-10-14T07:46:00.000Z",
+      "last_edited_time": "2023-10-14T08:15:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "e66e3bc6-30f1-4020-b696-2787f04dc3ea"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "e66e3bc6-30f1-4020-b696-2787f04dc3ea"
+      },
+      "cover": {
+        "type": "external",
+        "external": {
+          "url": "https://bu.dusays.com/2023/10/14/652a4e010e3b6.png"
+        }
+      },
+      "icon": null,
+      "parent": {
+        "type": "database_id",
+        "database_id": "455841bd-1ef4-4ae5-8f0f-954b329c565d"
+      },
+      "archived": false,
+      "properties": {
+        "password": "",
+        "icon": "",
+        "date": "2023-10-14",
+        "type": "Post",
+        "category": "动手实践",
+        "slug": "Calendar",
+        "Created time": "2023-10-14T07:46:00.000Z",
+        "tags": [
+          "实用教程"
+        ],
+        "summary": "Customizing the domain for Notion and integrating it with Apple Calendar is an incredibly marvelous endeavor.",
+        "title": "[notion] Customize Notion domain and link to Apple Calendar",
+        "status": "Published",
+        "urlname": "eedd219c-f9bd-4dff-8b1b-c900de9496fc",
+        "updated": "2023-10-14 08:15:00"
+      },
+      "url": "https://www.notion.so/notion-Customize-Notion-domain-and-link-to-Apple-Calendar-eedd219cf9bd4dff8b1bc900de9496fc",
+      "public_url": "https://fragrantknowledge.notion.site/notion-Customize-Notion-domain-and-link-to-Apple-Calendar-eedd219cf9bd4dff8b1bc900de9496fc"
+    },
     {
       "object": "page",
       "id": "78deb745-8bb8-4d87-b8bf-9426cbc073ff",
@@ -4946,8 +5023,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231014%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231014T072856Z&X-Amz-Expires=3600&X-Amz-Signature=0d70e839b4388ecf975260006cad5f2293bc24a1e31b63c276003108b90849d6&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-14T08:28:56.113Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231014%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231014T081744Z&X-Amz-Expires=3600&X-Amz-Signature=60eac3186d749170f7cc034404ce9d3bb754eeb182d6a25843a00d4b6da68bf8&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-14T09:17:43.991Z"
         }
       },
       "icon": null,
@@ -5450,8 +5527,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231014%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231014T072856Z&X-Amz-Expires=3600&X-Amz-Signature=bebb9016997c9ef455501799cdb3ad8096b3579528a8232b5dc2426d68958d5e&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-14T08:28:56.126Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231014%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231014T081744Z&X-Amz-Expires=3600&X-Amz-Signature=9955841bca3b6eeab9207e4a96191d90e135b1578d8ac7db4d048714828dc61b&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-14T09:17:43.987Z"
         }
       },
       "icon": null,
@@ -5732,8 +5809,8 @@
       "icon": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f6304c04-ca6d-4a05-a577-2bffb9cfd351/%E6%88%AA%E5%B1%8F2023-07-10_10.16.16.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231014%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231014T072856Z&X-Amz-Expires=3600&X-Amz-Signature=0efab6a01d94ee15eeb9544eb0333fcc94c51cc92786adab5abda890ab74a7c3&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-14T08:28:56.134Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f6304c04-ca6d-4a05-a577-2bffb9cfd351/%E6%88%AA%E5%B1%8F2023-07-10_10.16.16.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231014%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231014T081744Z&X-Amz-Expires=3600&X-Amz-Signature=2c9d2e538b7a9325d96d5511bf1d5e553ca2aa4cc6289db078e255e31f800e53&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-14T09:17:43.995Z"
         }
       },
       "parent": {
@@ -5784,8 +5861,8 @@
       "icon": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7d6b240a-f7be-418c-bf43-04373fb7962a/%E6%88%AA%E5%B1%8F2023-07-03_14.27.48.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231014%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231014T072856Z&X-Amz-Expires=3600&X-Amz-Signature=0d4a5b939c08d50f0df1f97b655dd9c50970b61b1049875ad85535a595222581&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-14T08:28:56.115Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7d6b240a-f7be-418c-bf43-04373fb7962a/%E6%88%AA%E5%B1%8F2023-07-03_14.27.48.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231014%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231014T081744Z&X-Amz-Expires=3600&X-Amz-Signature=196d5d1f3da050ed11c645489529e605cace3ec5af784c244efdb410016a4d6c&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-14T09:17:44.001Z"
         }
       },
       "parent": {
@@ -5884,8 +5961,8 @@
       "icon": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6534acae-1d5b-432d-808b-7ad08d784d3e/%E6%88%AA%E5%B1%8F2023-07-01_10.39.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231014%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231014T072856Z&X-Amz-Expires=3600&X-Amz-Signature=5dcdbc645eec31f4fe4c4ee08cce529063f5f06235e00a83ac85907e6481af1f&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-14T08:28:56.132Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6534acae-1d5b-432d-808b-7ad08d784d3e/%E6%88%AA%E5%B1%8F2023-07-01_10.39.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231014%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231014T081744Z&X-Amz-Expires=3600&X-Amz-Signature=e3c7445c661b3f7354de49bb9e2ace481b5b72b64e88194183ae97060e9f4f05&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-14T09:17:43.993Z"
         }
       },
       "parent": {
