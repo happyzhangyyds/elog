@@ -2820,9 +2820,86 @@
       "body": "",
       "realName": "[出门聚餐] 从相聚中看到时间与友情 ",
       "relativePath": "/情绪表达/[出门聚餐] 从相聚中看到时间与友情 .md"
+    },
+    {
+      "id": "fd805238-ca04-4b7b-b848-04996084eab7",
+      "doc_id": "fd805238-ca04-4b7b-b848-04996084eab7",
+      "updated": 1697550060000,
+      "body_original": "\n# 前言\n\n\n---\n\n\n  这篇文章当中朱光潜先生谈到了创造与模仿之间的关系，值得好好读一下。\n\n\n# 正文\n\n\n---\n\n\n![](https://bu.dusays.com/2023/10/17/652e8e339c8c8.png)\n\n\n![](https://bu.dusays.com/2023/10/17/652e8e34f121e.png)\n\n\n![](https://bu.dusays.com/2023/10/17/652e8e363ed12.png)\n\n\n![](https://bu.dusays.com/2023/10/17/652e8e376c3eb.png)\n\n\n![](https://bu.dusays.com/2023/10/17/652e8e38ac7a9.png)\n\n\n![](https://bu.dusays.com/2023/10/17/652e8e3ae931a.png)\n\n\n# 总结\n\n\n---\n\n\n  模仿和时间的沉淀才能让一门技艺炉火纯青。\n\n",
+      "properties": {
+        "password": "",
+        "icon": "",
+        "date": "2023-10-17",
+        "type": "Post",
+        "category": "走近生活",
+        "slug": "beauty13",
+        "Created time": "2023-10-17T13:36:00.000Z",
+        "tags": [
+          "谈美-朱光潜"
+        ],
+        "summary": "模仿和时间的沉淀才能让一门技艺炉火纯青。",
+        "title": "[谈美] 十三“不似则失其所以为诗，似则失其所以为我”。  ——创造与模仿 （朱光潜）",
+        "status": "Published",
+        "urlname": "fd805238-ca04-4b7b-b848-04996084eab7",
+        "updated": "2023-10-17 13:41:00"
+      },
+      "catalog": [
+        {
+          "title": "谈美-朱光潜",
+          "doc_id": "fd805238-ca04-4b7b-b848-04996084eab7"
+        }
+      ],
+      "body": "",
+      "realName": "[谈美] 十三“不似则失其所以为诗，似则失其所以为我”。  ——创造与模仿 （朱光潜）",
+      "relativePath": "/谈美-朱光潜/[谈美] 十三“不似则失其所以为诗，似则失其所以为我”。  ——创造与模仿 （朱光潜）.md"
     }
   ],
   "catalog": [
+    {
+      "object": "page",
+      "id": "fd805238-ca04-4b7b-b848-04996084eab7",
+      "created_time": "2023-10-17T13:36:00.000Z",
+      "last_edited_time": "2023-10-17T13:41:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "e66e3bc6-30f1-4020-b696-2787f04dc3ea"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "e66e3bc6-30f1-4020-b696-2787f04dc3ea"
+      },
+      "cover": {
+        "type": "external",
+        "external": {
+          "url": "https://bu.dusays.com/2023/10/17/652e8ef1d53bf.png"
+        }
+      },
+      "icon": null,
+      "parent": {
+        "type": "database_id",
+        "database_id": "455841bd-1ef4-4ae5-8f0f-954b329c565d"
+      },
+      "archived": false,
+      "properties": {
+        "password": "",
+        "icon": "",
+        "date": "2023-10-17",
+        "type": "Post",
+        "category": "走近生活",
+        "slug": "beauty13",
+        "Created time": "2023-10-17T13:36:00.000Z",
+        "tags": [
+          "谈美-朱光潜"
+        ],
+        "summary": "模仿和时间的沉淀才能让一门技艺炉火纯青。",
+        "title": "[谈美] 十三“不似则失其所以为诗，似则失其所以为我”。  ——创造与模仿 （朱光潜）",
+        "status": "Published",
+        "urlname": "fd805238-ca04-4b7b-b848-04996084eab7",
+        "updated": "2023-10-17 13:41:00"
+      },
+      "url": "https://www.notion.so/fd805238ca044b7bb84804996084eab7",
+      "public_url": "https://fragrantknowledge.notion.site/fd805238ca044b7bb84804996084eab7"
+    },
     {
       "object": "page",
       "id": "7f745672-418c-4f6c-880a-a50d3b7ccd8d",
@@ -5254,8 +5331,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231015%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231015T135109Z&X-Amz-Expires=3600&X-Amz-Signature=0d8e2d756356cabc5a32e47d92888a873ca6867286bd9598b3a400f97e9da656&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-15T14:51:09.611Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231017%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231017T134244Z&X-Amz-Expires=3600&X-Amz-Signature=06e82ec66dfdc3c740f9e5398f836334bd2e8c736fdaef70c795e9ee5879a5be&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-17T14:42:44.347Z"
         }
       },
       "icon": null,
@@ -5758,8 +5835,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231015%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231015T135109Z&X-Amz-Expires=3600&X-Amz-Signature=e078a022d916ac6734b12bd712ec069aaa9a3da129a5c0037c3907e9aa0a2e0d&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-15T14:51:09.615Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231017%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231017T134244Z&X-Amz-Expires=3600&X-Amz-Signature=94a26e855e9af8b2888a0bff2ef93cc24eea91b5ff911146b3dec07accc53baf&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-17T14:42:44.342Z"
         }
       },
       "icon": null,
@@ -6040,8 +6117,8 @@
       "icon": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f6304c04-ca6d-4a05-a577-2bffb9cfd351/%E6%88%AA%E5%B1%8F2023-07-10_10.16.16.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231015%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231015T135109Z&X-Amz-Expires=3600&X-Amz-Signature=466762b35693c814b50d7741681e1de08726d43bd6a42237e6483de94a4b919f&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-15T14:51:09.624Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f6304c04-ca6d-4a05-a577-2bffb9cfd351/%E6%88%AA%E5%B1%8F2023-07-10_10.16.16.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231017%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231017T134244Z&X-Amz-Expires=3600&X-Amz-Signature=8d1995828791cf159d28d5aa7954dc99c13660e2a1fe5e77e7a679b223ca5cbf&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-17T14:42:44.354Z"
         }
       },
       "parent": {
@@ -6092,8 +6169,8 @@
       "icon": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7d6b240a-f7be-418c-bf43-04373fb7962a/%E6%88%AA%E5%B1%8F2023-07-03_14.27.48.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231015%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231015T135109Z&X-Amz-Expires=3600&X-Amz-Signature=0045652edcc393286554ccf71fc440f6cdb528f0e0038d7045da288470e3a76e&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-15T14:51:09.624Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7d6b240a-f7be-418c-bf43-04373fb7962a/%E6%88%AA%E5%B1%8F2023-07-03_14.27.48.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231017%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231017T134244Z&X-Amz-Expires=3600&X-Amz-Signature=ccd278b1ff4d73e0abd0da3df29a74449932bfdccd281d854381fe30d3baee46&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-17T14:42:44.355Z"
         }
       },
       "parent": {
@@ -6192,8 +6269,8 @@
       "icon": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6534acae-1d5b-432d-808b-7ad08d784d3e/%E6%88%AA%E5%B1%8F2023-07-01_10.39.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231015%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231015T135109Z&X-Amz-Expires=3600&X-Amz-Signature=91aecc705edbffc81aef2130cb9a684ca024af2d5fad46968bcb15f31a1dd0e1&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-15T14:51:09.622Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6534acae-1d5b-432d-808b-7ad08d784d3e/%E6%88%AA%E5%B1%8F2023-07-01_10.39.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231017%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231017T134244Z&X-Amz-Expires=3600&X-Amz-Signature=5dacabf419711184d9c4acd572fe66da3f00d45f9e3039a30170185c1749faa1&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-17T14:42:44.350Z"
         }
       },
       "parent": {
