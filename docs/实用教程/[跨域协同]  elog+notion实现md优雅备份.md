@@ -169,7 +169,7 @@ notion 的自动化流程有一定的起手难度。
 
 ![](https://bu.dusays.com/2023/10/11/6526a771a80be.png)
 
-在这里我要特别感谢 DC's 博主，他的文章给了我启发 ：[ 定期备份 notion](https://amydc.com/a/24c2897b-78f3-4f6a-b8e6-292ea60edf7c)
+在这里我要特别感谢 DC's 博主，他的文章给了我启发 ：[ 定期备份 notion](https://aaqq.cc/article/24c2897b-78f3-4f6a-b8e6-292ea60edf7c)
 
 ```javascript
 https://serverless-api-elog.vercel.app/api/github?user=xxx&repo=xxx&event_type=xxx&token=xxx
@@ -274,7 +274,7 @@ elog 的项目非常具有实践价值，通过该项目，不仅可以实现博
 > 💡 **特别鸣谢：  
 > 🌺** [1874 博主的 elog 项目及其技术文档](https://github.com/LetTTGACO/elog)  
 > 🌺 [在自行实践遇到困难和解决的宝贵经历](https://bu.dusays.com/2023/10/12/6527510b65304.png)  
-> 🌺 [北门清燕](https://www.bmqy.net/2651.html#more)、[DC's](https://amydc.com/a/24c2897b-78f3-4f6a-b8e6-292ea60edf7c)、[IMQL.LIFE](https://www.imql.life/2023/08/12/Writing_on_The_Cloud_With_YuQue/)等群友的最佳实践文档
+> 🌺 [北门清燕](https://www.bmqy.net/2651.html#more)、[DC's](https://aaqq.cc/article/24c2897b-78f3-4f6a-b8e6-292ea60edf7c)、[IMQL.LIFE](https://www.imql.life/2023/08/12/Writing_on_The_Cloud_With_YuQue/)等群友的最佳实践文档
 
 ### 小彩蛋
 
