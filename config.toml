@@ -202,7 +202,13 @@ uglyURLs = false
         pre = "internal"
         post = ""
     [[menu.main]]
+        pageref = "/tech/"
+        name = "往期归档"
         weight = 3
+        pre = "internal"
+        post = ""
+    [[menu.main]]
+        weight = 4
         identifier = "theme-switcher"
     # [[menu.main]]
     #     weight = 8
