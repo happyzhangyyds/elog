@@ -2,34 +2,37 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
-    <title type="text">Hugo 主题 MemE</title>
-    <subtitle type="html">MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</subtitle>
-    <updated>2023-10-28T17:50:31&#43;08:00</updated>
-    <id>https://example.com/</id>
-    <link rel="alternate" type="text/html" href="https://example.com/" />
-    <link rel="self" type="application/atom&#43;xml" href="https://example.com/atom.xml" />
+    <title type="text">Home</title>
+    <subtitle type="html">少年辛苦终身事，莫向光阴惰寸功，爱自己是终身浪漫的开始🌹</subtitle>
+    <updated>2023-10-28T18:31:44&#43;08:00</updated>
+    <id>https://matrixcore.life/</id>
+    <link rel="alternate" type="text/html" href="https://matrixcore.life/" />
+    <link rel="self" type="application/atom&#43;xml" href="https://matrixcore.life/atom.xml" />
     <author>
-            <name>reuixiy</name>
-            <uri>https://example.com/</uri>
+            <name>MatrixCore</name>
+            <uri>https://matrixcore.life</uri>
             
-                <email>reuixiy@gmail.com</email>
+                <email>matrixcore@qq.com</email>
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.119.0">Hugo</generator>
         <entry>
             <title type="text">Hello</title>
-            <link rel="alternate" type="text/html" href="https://example.com/life/hello/" />
-            <id>https://example.com/life/hello/</id>
-            <updated>2023-10-28T17:47:35&#43;08:00</updated>
+            <link rel="alternate" type="text/html" href="https://matrixcore.life/life/hello/" />
+            <id>https://matrixcore.life/life/hello/</id>
+            <updated>2023-10-28T18:21:46&#43;08:00</updated>
             <published>2023-10-28T17:46:04&#43;08:00</published>
             <author>
-                    <name>reuixiy</name>
-                    <uri>https://io-oi.me/</uri>
-                    <email>reuixiy@gmail.com</email>
+                    <name>MatrixCore</name>
+                    <uri>https://matrixcore.life</uri>
+                    <email>matrixcore@qq.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html"></summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">hello world
+thank you</summary>
             
-                <content type="html"></content>
+                <content type="html">&lt;p&gt;hello world&lt;/p&gt;
+&lt;p&gt;thank you&lt;/p&gt;
+</content>
             
             
             

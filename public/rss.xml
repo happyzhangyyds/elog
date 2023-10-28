@@ -7,38 +7,40 @@
 
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Hugo 主题 MemE</title>
-        <link>https://example.com/</link>
-        <description>MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</description>
+        <title>Home</title>
+        <link>https://matrixcore.life/</link>
+        <description>少年辛苦终身事，莫向光阴惰寸功，爱自己是终身浪漫的开始🌹</description>
         <generator>Hugo 0.119.0 https://gohugo.io/</generator>
         
             <language>zh-CN</language>
         
         
-            <managingEditor>reuixiy@gmail.com (reuixiy)</managingEditor>
+            <managingEditor>matrixcore@qq.com (MatrixCore)</managingEditor>
         
         
-            <webMaster>reuixiy@gmail.com (reuixiy)</webMaster>
+            <webMaster>matrixcore@qq.com (MatrixCore)</webMaster>
         
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sat, 28 Oct 2023 17:50:31 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sat, 28 Oct 2023 18:31:44 &#43;0800</lastBuildDate>
         
-            <atom:link rel="self" type="application/rss&#43;xml" href="https://example.com/rss.xml" />
+            <atom:link rel="self" type="application/rss&#43;xml" href="https://matrixcore.life/rss.xml" />
         
         
             <item>
                 <title>Hello</title>
-                <link>https://example.com/life/hello/</link>
-                <guid isPermaLink="true">https://example.com/life/hello/</guid>
+                <link>https://matrixcore.life/life/hello/</link>
+                <guid isPermaLink="true">https://matrixcore.life/life/hello/</guid>
                 <pubDate>Sat, 28 Oct 2023 17:46:04 &#43;0800</pubDate>
                 
-                    <author>reuixiy@gmail.com (reuixiy)</author>
+                    <author>matrixcore@qq.com (MatrixCore)</author>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
-                    <description></description>
+                    <description>&lt;p&gt;hello world&lt;/p&gt;
+&lt;p&gt;thank you&lt;/p&gt;
+</description>
                 
                 
                 
