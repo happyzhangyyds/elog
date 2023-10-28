@@ -8,10 +8,10 @@
     $lineHeight: {{ . }};
 {{ end }}
 
-{{ with .Site.Params.postWidth | default 42 }}
+{{ with .Site.Params.postWidth | default 45 }}
     $postWidth: {{ . }}em;
 {{ end }}
-{{ with .Site.Params.listWidth | default 42 }}
+{{ with .Site.Params.listWidth | default 45 }}
     $listWidth: {{ . }}em;
 {{ end }}
 

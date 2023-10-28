@@ -1,11 +1,12 @@
 .home {
-    text-align: center;
+    text-align: left;
     .poetry {
         font-size: 1em;
         width: auto;
-        max-width: 26em;
+        max-width: 45em;
         margin: 0 auto;
         padding: 5em 1em 10em;
+        text-indent: 2em;
     }
     .links {
         position: absolute;
