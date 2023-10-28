@@ -3068,9 +3068,86 @@
       "body": "",
       "realName": "[流动核心] 采桑小道 相视抿笑",
       "relativePath": "/流动核心/[流动核心] 采桑小道 相视抿笑.md"
+    },
+    {
+      "id": "baf40679-65eb-462b-8b1f-60f3546b55c5",
+      "doc_id": "baf40679-65eb-462b-8b1f-60f3546b55c5",
+      "updated": 1698494100000,
+      "body_original": "\n# 前言\n\n\n---\n\n\n  前些天在服务器上部署了wordpress，满足了一部分的虚荣心，但是使用体验并不是很好，因为服务器晚间丢包率很高，而且wordpress加载速度也不够，所以整体上导致网站华而不实。\n\n\n  所以，这些天在研究hugo，据说是最快的博客系统，经过一天的踩坑经历，发现快确实快，但是真的蛮折腾的，部署到vercel上有很多的注意点，但是直到现在我还没完全弄明白。\n\n\n  目前正在使用的NotionNext我认为是很契合我个人的使用体验的，作为一个完整博客该具有的要素基本上都能完美实现，通过cdn加速之后，已经接近完美了。但是我还想想要一个平台专注内容的创作和管理，极简，并且快速，这个时候，我打算采用hugo作为NotionNext的辅助，所以目前还在尝试当中。\n\n\n# 正文\n\n\n---\n\n\n  这部分归档一些思考。\n\n\n## 静态博客还是动态博客\n\n\n---\n\n\n  选择静态博客还是动态博客取决于您的需求和偏好。以下是一些考虑因素：\n\n\n**静态博客：**\n\n\n  安全性：静态博客通常比动态博客更安全，因为它们没有后台数据库或服务器端代码，减少了潜在的安全漏洞。\n\n\n  性能：静态博客加载速度快，因为它们只是简单的HTML、CSS和JavaScript文件，无需进行数据库查询或服务器端处理。\n\n\n  管理简单：静态博客不需要服务器端的配置和维护，您可以使用静态网页托管服务（如GitHub Pages、Netlify等）来托管和管理您的博客。\n\n\n  适用于简单内容：如果您的博客主要是文字、图像和简单的交互元素，而不需要复杂的用户交互或动态内容，静态博客是一个简单且高效的选择。\n\n\n**动态博客：**\n\n\n  交互性：动态博客可以实现更复杂的用户交互和功能，如评论系统、用户登录、搜索功能等。\n\n\n  数据库支持：如果您的博客需要存储大量数据或需要复杂的数据查询和处理，动态博客使用数据库可以更好地支持这些需求。\n\n\n  灵活性：动态博客可以使用服务器端脚本语言（如PHP、Python、Ruby等）来编写更复杂的逻辑和功能，您可以根据需要进行自定义开发。\n\n\n  扩展性：如果您计划将博客扩展为更复杂的网站或应用程序，动态博客提供了更大的灵活性和扩展性。\n\n\n  综上所述，如果您希望简单、高效、安全的博客，并且不需要复杂的用户交互或动态内容，静态博客是一个不错的选择。如果您需要更多的交互功能、数据库支持以及更大的灵活性和扩展性，动态博客可能更适合您的需求。\n\n\n## 静态托管对比VPS\n\n\n---\n\n\n  静态网页托管服务和VPS（虚拟专用服务器）是两种不同的托管方式，它们在速度方面有一些区别。\n\n\n  静态网页托管服务是一种将静态网页文件（如HTML、CSS、JavaScript、图像等）托管在云端服务器上的服务。这些服务通常由大型云服务提供商（如Amazon Web Services、Microsoft Azure、Google Cloud等）提供。静态网页托管服务具有以下特点：\n\n1. 高速缓存：静态网页托管服务通常会使用全球分布的内容分发网络（CDN），将网页内容缓存在多个服务器节点上。这样可以使用户从离他们最近的服务器节点获取内容，从而提高加载速度。\n2. 管理方便：使用静态网页托管服务，您无需担心服务器的管理和维护。云服务提供商会负责服务器的配置、安全性和可用性，您只需要上传网页文件并设置域名解析即可。\n3. 适用于简单网站：静态网页托管服务适用于简单的静态网站，不需要动态内容或数据库支持。如果您的网站主要是展示性的，没有复杂的交互功能，那么静态网页托管服务是一个快速、简便和经济的选择。\n\nVPS是一种虚拟化技术，它将一台物理服务器划分为多个虚拟服务器。每个VPS都具有独立的操作系统、磁盘空间和资源。VPS具有以下特点：\n\n1. 灵活性和自定义性：使用VPS，您可以完全控制服务器的配置和设置。您可以安装和运行自己的软件、应用程序和数据库，以满足特定的需求。这使得VPS适用于需要定制化和灵活性的网站和应用程序。\n2. 资源独享：VPS提供独立的资源，您不需要与其他用户共享带宽、内存和处理能力。这意味着在资源方面，VPS可能会比共享托管服务更快。\n3. 适用于复杂应用：VPS适用于需要动态内容、数据库支持和更高级功能的网站和应用程序。如果您的网站需要处理用户交互、用户登录、电子商务等复杂功能，VPS可能是更好的选择。\n\n  在速度方面，静态网页托管服务通常具有较快的加载速度，因为它们使用CDN和高速缓存来提供内容。而VPS的速度则取决于服务器的配置、网络连接和负载情况。如果VPS配置得当，并且没有过多的负载，它通常可以提供相对较快的响应时间。\n\n\n  总的来说，如果您的网站是简单的静态网页，没有复杂的交互功能，静态网页托管服务可能是更好的选择，因为它们提供简便、高速和经济的解决方案。但如果您需要更高的灵活性和自定义性，以及处理复杂的网站或应用程序，VPS可能更适合您的需求，尽管它可能需要更多的管理和维护工作。\n\n\n## 学习网页样式\n\n\n---\n\n\n```html\n.home {\ntext-align: center;\n.poetry {\nfont-size: 1em;\nwidth: auto;\nmax-width: 26em;\nmargin: 0 auto;\npadding: 5em 1em 10em;\ntext-indent: 2em;\n<!--首行缩进 -->\n}\n.links {\nposition: absolute;\nbottom: 10%;\nleft: 5%;\nright: 5%;\nfont-size: 1.5em;\n}\n.links-item {\npadding: $homeLinksPadding;\ndisplay: inline-block;\n\n<!--\n这段代码是用来定义一个网页中的样式。下面是对每个部分的解释：\n\n1. `.home`：这是一个类选择器，表示应用于具有`class=\"home\"`的HTML元素。在这个例子中，它是一个包含首页内容的容器。\n\n2. `text-align: center;`：将容器中的文本内容水平居中对齐。\n\n3. `.poetry`：这是一个类选择器，表示应用于具有`class=\"poetry\"`的HTML元素。在这个例子中，它是一个包含诗歌内容的容器。\n\n4. `font-size: 1em;`：设置诗歌容器中的字体大小为1em。`em`是相对于父元素字体大小的单位。\n\n5. `width: auto;`：使诗歌容器的宽度自动适应其内容。\n\n6. `max-width: 26em;`：设置诗歌容器的最大宽度为26em。如果诗歌内容超过这个宽度，容器将自动调整大小以适应。\n\n7. `margin: 0 auto;`：设置诗歌容器的上下边距为0，左右边距为自动，从而使其在水平方向上居中对齐。\n\n8. `padding: 5em 1em 10em;`：设置诗歌容器的内边距。上内边距为5em，左右内边距为1em，下内边距为10em。\n\n9. `.links`：这是一个类选择器，表示应用于具有`class=\"links\"`的HTML元素。在这个例子中，它是一个包含链接的容器。\n\n10. `position: absolute;`：将链接容器的定位方式设置为绝对定位，使其相对于其最近的已定位祖先元素定位。\n\n11. `bottom: 10%;`：将链接容器的底部与其包含块的底部距离设为10%。\n\n12. `left: 5%;`：将链接容器的左侧与其包含块的左侧距离设为5%。\n\n13. `right: 5%;`：将链接容器的右侧与其包含块的右侧距离设为5%。\n\n14. `font-size: 1.5em;`：设置链接容器中的字体大小为1.5em。\n\n15. `.links-item`：这是一个类选择器，表示应用于具有`class=\"links-item\"`的HTML元素。在这个例子中，它是链接容器中的每个链接项。\n\n16. `padding: $homeLinksPadding;`：设置链接项的内边距。这里的`$homeLinksPadding`是一个变量，可能在代码中的其他地方定义了其具体值。\n\n17. `display: inline-block;`：将链接项显示为内联块元素，使其在同一行上水平排列，并允许设置宽度和高度。\n\n-->\n```\n\n\n# 总结\n\n\n---\n\n\n  尝试使用hugo并学习博客的框架，争取能够之后能自定义并编写适合自己的样式，当然这还有很长很长的路要走。\n\n",
+      "properties": {
+        "password": "",
+        "icon": "",
+        "date": "2023-10-28",
+        "type": "Post",
+        "category": "走近生活",
+        "slug": "hugo",
+        "Created time": "2023-10-28T11:29:00.000Z",
+        "tags": [
+          "实用教程"
+        ],
+        "summary": "这些天在研究hugo，据说是最快的博客系统",
+        "title": "[数据归档] 博客：静态还是动态",
+        "status": "Published",
+        "urlname": "baf40679-65eb-462b-8b1f-60f3546b55c5",
+        "updated": "2023-10-28 11:55:00"
+      },
+      "catalog": [
+        {
+          "title": "实用教程",
+          "doc_id": "baf40679-65eb-462b-8b1f-60f3546b55c5"
+        }
+      ],
+      "body": "",
+      "realName": "[数据归档] 博客：静态还是动态",
+      "relativePath": "/实用教程/[数据归档] 博客：静态还是动态.md"
     }
   ],
   "catalog": [
+    {
+      "object": "page",
+      "id": "baf40679-65eb-462b-8b1f-60f3546b55c5",
+      "created_time": "2023-10-28T11:29:00.000Z",
+      "last_edited_time": "2023-10-28T11:55:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "e66e3bc6-30f1-4020-b696-2787f04dc3ea"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "e66e3bc6-30f1-4020-b696-2787f04dc3ea"
+      },
+      "cover": {
+        "type": "external",
+        "external": {
+          "url": "https://bu.dusays.com/2023/10/28/653cf64f750ff.png"
+        }
+      },
+      "icon": null,
+      "parent": {
+        "type": "database_id",
+        "database_id": "455841bd-1ef4-4ae5-8f0f-954b329c565d"
+      },
+      "archived": false,
+      "properties": {
+        "password": "",
+        "icon": "",
+        "date": "2023-10-28",
+        "type": "Post",
+        "category": "走近生活",
+        "slug": "hugo",
+        "Created time": "2023-10-28T11:29:00.000Z",
+        "tags": [
+          "实用教程"
+        ],
+        "summary": "这些天在研究hugo，据说是最快的博客系统",
+        "title": "[数据归档] 博客：静态还是动态",
+        "status": "Published",
+        "urlname": "baf40679-65eb-462b-8b1f-60f3546b55c5",
+        "updated": "2023-10-28 11:55:00"
+      },
+      "url": "https://www.notion.so/baf4067965eb462b8b1f60f3546b55c5",
+      "public_url": "https://fragrantknowledge.notion.site/baf4067965eb462b8b1f60f3546b55c5"
+    },
     {
       "object": "page",
       "id": "cccafdfc-417c-40cb-9f61-cba3fd0b287f",
@@ -3108,7 +3185,6 @@
           "情绪表达"
         ],
         "summary": "今晚的月亮像是被咬了一小口的饼干🍪",
-        "URL": "",
         "title": "[纸纹日记] 癸卯年九月十一小记",
         "status": "Published",
         "urlname": "cccafdfc-417c-40cb-9f61-cba3fd0b287f",
@@ -3154,7 +3230,6 @@
           "情绪表达"
         ],
         "summary": "复盘以前的灵感和近期的一些打算",
-        "URL": "",
         "title": "[数据归档] 近期数据归档及体会",
         "status": "Published",
         "urlname": "5eb2ae0a-2823-4ee0-8e29-a286e707e33c",
@@ -3200,7 +3275,6 @@
           "Deutsch"
         ],
         "summary": "Within this module, knowledge pertaining to the study of the German language shall be documented, facilitating subsequent revision.",
-        "URL": "",
         "title": "[Deutsch] Module 1",
         "status": "Published",
         "urlname": "d0af679f-6886-49b7-8558-2dc5b237ad62",
@@ -3246,7 +3320,6 @@
           "谈美-朱光潜"
         ],
         "summary": "模仿和时间的沉淀才能让一门技艺炉火纯青。",
-        "URL": "",
         "title": "[谈美] 十三“不似则失其所以为诗，似则失其所以为我”  ——创造与模仿 （朱光潜）",
         "status": "Published",
         "urlname": "d85688cc-1b02-422d-b395-fef474c0cb13",
@@ -3292,7 +3365,6 @@
           "谈美-朱光潜"
         ],
         "summary": "模仿和时间的沉淀才能让一门技艺炉火纯青。",
-        "URL": "",
         "title": "[谈美] 十三“不似则失其所以为诗，似则失其所以为我”。 ——创造与模仿 （朱光潜）",
         "status": "Published",
         "urlname": "fd805238-ca04-4b7b-b848-04996084eab7",
@@ -3338,7 +3410,6 @@
           "情绪表达"
         ],
         "summary": "时间会冷却，会遗忘，但是感觉却似曾相识。",
-        "URL": "",
         "title": "[出门聚餐] 从相聚中看到时间与友情 ",
         "status": "Published",
         "urlname": "7f745672-418c-4f6c-880a-a50d3b7ccd8d",
@@ -3384,7 +3455,6 @@
           "情绪表达"
         ],
         "summary": " 其间对于武学的热爱，哲学的追思，爱情的甜蜜与痛苦，江湖的恩恩怨怨，都是支撑起一部伟大文学作品的基石。",
-        "URL": "",
         "title": "[心意相通] 经典的不同演绎方式 ",
         "status": "Published",
         "urlname": "488f173b-85af-473e-99dd-77586c03455b",
@@ -3430,7 +3500,6 @@
           "情绪表达"
         ],
         "summary": "珍惜每一个能对你，提出善意的提醒和鼓励的人，如果没有他们，你怎么能进步呢？",
-        "URL": "",
         "title": "[酒逢知己] 时间磨平了我骄傲的棱角 ",
         "status": "Published",
         "urlname": "f3297943-a8ae-40a9-bcbd-d64097c4bf85",
@@ -3476,7 +3545,6 @@
           "实用教程"
         ],
         "summary": "Customizing the domain for Notion and integrating it with Apple Calendar is an incredibly marvelous endeavor.",
-        "URL": "",
         "title": "[notion] Customize Notion domain and link to Apple Calendar",
         "status": "Published",
         "urlname": "eedd219c-f9bd-4dff-8b1b-c900de9496fc",
@@ -3522,7 +3590,6 @@
           "情绪表达"
         ],
         "summary": "We need to confront what we used to fear. Perhaps this is the truly exciting moment that awaits us!",
-        "URL": "",
         "title": "[connection]  Build the language system",
         "status": "Published",
         "urlname": "78deb745-8bb8-4d87-b8bf-9426cbc073ff",
@@ -3568,7 +3635,6 @@
           "必看精选"
         ],
         "summary": "从墨脱森林到冷噶错银河，见证自然母亲的瑰丽奇观！",
-        "URL": "",
         "title": "[自然奇观] 从墨脱森林到冷噶错银河 ",
         "status": "Published",
         "urlname": "57a103ab-b4a0-4fa9-9875-d42270d83f74",
@@ -3614,7 +3680,6 @@
           "野火FPGA"
         ],
         "summary": "根据机械按键的构造与原理,设计并实现按键消抖模块，思考并解决其中遇到的问题。",
-        "URL": "",
         "title": "[野火] 第19章  按键消抖模块的设计与验证",
         "status": "Published",
         "urlname": "91952bba-ac9d-4541-b2c0-a327d823175b",
@@ -3660,7 +3725,6 @@
           "实用教程"
         ],
         "summary": "通过elog实现notion文章批量下载到本地，以及自动化云端备份和迁移。",
-        "URL": "",
         "title": "[跨域协同]  elog+notion实现md优雅备份",
         "status": "Published",
         "urlname": "1ab6b359-03fa-4d3a-8a7e-6d0871344a97",
@@ -3706,7 +3770,6 @@
           "情绪表达"
         ],
         "summary": "希望通过这件小事，来提醒大家注意生活中的小细节。",
-        "URL": "",
         "title": "[自我批评] 缺乏人际交往的艺术 ",
         "status": "Published",
         "urlname": "989f74ae-5c53-44fc-9f86-0993bd50911a",
@@ -3752,7 +3815,6 @@
           "情绪表达"
         ],
         "summary": "如果说存在主义是对生活意义的审慎思考，那荒诞主义就是对无趣生活的热情拥抱。",
-        "URL": "",
         "title": "[欲拒还迎] 荒诞艺术中的璀璨之花",
         "status": "Published",
         "urlname": "2d5a24cc-ca9e-4ea9-bc27-64a590bb28e6",
@@ -3798,7 +3860,6 @@
           "实用教程"
         ],
         "summary": "笔记的三大策略、信息筛选、如何整理以及主动回忆。",
-        "URL": "",
         "title": "[记忆方法] 整理自up主：ZoeLanguages的学习经验",
         "status": "Published",
         "urlname": "8c00dfde-496e-4e07-84c8-35c9d7d6470c",
@@ -3844,7 +3905,6 @@
           "情绪表达"
         ],
         "summary": "  甘其食，美其服，安其居，乐其俗。",
-        "URL": "",
         "title": "[命运咽喉]  系统中的常值误差",
         "status": "Published",
         "urlname": "8cbda638-a2d6-4f78-adc8-e5a415d98b0d",
@@ -3890,7 +3950,6 @@
           "情绪表达"
         ],
         "summary": "在生命土壤中盛开的苍凉而妖艳的花朵，似乎暗含着神秘的征兆",
-        "URL": "",
         "title": "[螺旋自洽] 算法与自博弈 ",
         "status": "Published",
         "urlname": "e3f91097-3395-4963-a7d0-034e56efceef",
@@ -3936,7 +3995,6 @@
           "谈美-朱光潜"
         ],
         "summary": "从心所欲而不逾矩",
-        "URL": "",
         "title": "[谈美] 十二“从心所欲，不逾矩” ——创造与格律（朱光潜）",
         "status": "Published",
         "urlname": "997ddb37-0139-475d-bc17-31a2eef13e60",
@@ -3982,7 +4040,6 @@
           "野火FPGA"
         ],
         "summary": "时序逻辑电路中最常用的偶数分频和奇数分频的实现",
-        "URL": "",
         "title": "[野火] 第18章  分频器",
         "status": "Published",
         "urlname": "6fd86967-4cfe-418d-96b9-12d19f9c3b8c",
@@ -4028,7 +4085,6 @@
           "谈美-朱光潜"
         ],
         "summary": "艺术与游戏",
-        "URL": "",
         "title": "[谈美] 九 “大人者不失其赤子之心” ——艺术与游戏 （朱光潜）",
         "status": "Published",
         "urlname": "a2c43f76-7d06-4945-94b5-dbf8162011c0",
@@ -4074,7 +4130,6 @@
           "流动核心"
         ],
         "summary": "及时对建议库进行更新是一项非常重要的事情",
-        "URL": "",
         "title": "[二级缓存]  Terminal优化",
         "status": "Published",
         "urlname": "df30cd4e-bdcb-4fc4-8b5e-a6218d029450",
@@ -4120,7 +4175,6 @@
           "情绪表达"
         ],
         "summary": "文学带给人们什么，是建筑一座精神家园，还是和古老恒星的对白。",
-        "URL": "",
         "title": "[旧页重读] 阅读之问  ",
         "status": "Published",
         "urlname": "d4cc7357-524e-46c8-9e69-8697aed3534b",
@@ -4166,7 +4220,6 @@
           "情绪表达"
         ],
         "summary": "心情小记",
-        "URL": "",
         "title": "[纸纹日记] 癸卯年八月十八小记",
         "status": "Published",
         "urlname": "acb8f147-2d38-4b6d-b0c7-a96765f05fa2",
@@ -4212,7 +4265,6 @@
           "野火FPGA"
         ],
         "summary": "有了计数器我们能做的事情就太多了太多了",
-        "URL": "",
         "title": "[野火] 第17章 计数器",
         "status": "Published",
         "urlname": "d49b44ee-da1a-4648-90d8-62216404d987",
@@ -4258,7 +4310,6 @@
           "野火FPGA"
         ],
         "summary": "本章主要讲解了阻塞赋值(=)与非阻塞赋值(<=)会给设计的电路所产生的差异",
-        "URL": "",
         "title": "[野火] 第16章 阻塞赋值与非阻塞赋值",
         "status": "Published",
         "urlname": "387d9d8d-0f98-451a-995d-874eb8ff1d61",
@@ -4304,7 +4355,6 @@
           "野火FPGA"
         ],
         "summary": "进行时序逻辑的设计,那寄存器就是必不可少的元素",
-        "URL": "",
         "title": "[野火] 第15章  时序逻辑的开始 --- 寄存器",
         "status": "Published",
         "urlname": "d659fa96-a78e-4ee4-9f84-5f94c5a0bf89",
@@ -4350,7 +4400,6 @@
           "野火FPGA"
         ],
         "summary": "本章主要讲解 Latch 是什么,以及它的产生、危害、如何避免",
-        "URL": "",
         "title": "[野火] 第14章  避免 Latch 的产生",
         "status": "Published",
         "urlname": "59d63641-0bfa-4897-84d7-9bac488a5b93",
@@ -4396,7 +4445,6 @@
           "谈美-朱光潜"
         ],
         "summary": "恋爱中的对象是已经艺术化过的自然",
-        "URL": "",
         "title": "[谈美]  七 “情人眼底出西施 ”  ——美与自然 （朱光潜）",
         "status": "Published",
         "urlname": "05646400-c7b8-400b-b435-5501e1a4242b",
@@ -4442,7 +4490,6 @@
           "野火FPGA"
         ],
         "summary": "通过全加器的例子来给大家讲解层次化设计的思想",
-        "URL": "",
         "title": "[野火] 第13章  层次化设计",
         "status": "Published",
         "urlname": "d4300a30-d83b-409b-a862-ea17d9383f8d",
@@ -4488,7 +4535,6 @@
           "野火FPGA"
         ],
         "summary": "用 Verilog 语言描述一个具有半加器功能的电路",
-        "URL": "",
         "title": "[野火] 第12章  简单组合逻辑 --- 半加器",
         "status": "Published",
         "urlname": "87d302aa-9ea3-4d83-bc93-26abe3312a53",
@@ -4535,7 +4581,6 @@
           "推荐"
         ],
         "summary": "介绍了通过沙拉查词+anki导出的方式，对学习的单词进行可视化整理",
-        "URL": "",
         "title": "[外语学习] 沙拉查词+anki进行记忆强化 ",
         "status": "Published",
         "urlname": "0f241874-f693-4d17-81ea-8fb4f49943eb",
@@ -4581,7 +4626,6 @@
           "近期规划"
         ],
         "summary": "背诵sharp的记录",
-        "URL": "",
         "title": "[背诵记忆] 十月sharp小酌",
         "status": "Published",
         "urlname": "a29f2851-071c-475e-8d09-b3f4b23fabf8",
@@ -4627,7 +4671,6 @@
           "谈美-朱光潜"
         ],
         "summary": "对昨晚读到的一篇好文章进行二次复盘并整理",
-        "URL": "",
         "title": "[谈美]  三、“子非鱼，安知鱼之乐？”  ——宇宙的人情化 （朱光潜）",
         "status": "Published",
         "urlname": "e72ae62e-5a17-4eab-8636-836e9d970b07",
@@ -4674,7 +4717,6 @@
           "自动飞控"
         ],
         "summary": "飞机姿态、轨迹控制、空速马赫数、自动飞行性能、电/光传操作系统",
-        "URL": "",
         "title": "[自动飞控] 第3章 飞行控制系统分析",
         "status": "Published",
         "urlname": "737cf734-6ceb-4497-af89-5151d3e0f6aa",
@@ -4721,7 +4763,6 @@
           "自动飞控"
         ],
         "summary": "介绍舵机与舵回路",
-        "URL": "",
         "title": "[自动飞控] 第2章 舵机与舵回路",
         "status": "Published",
         "urlname": "32ac0142-e239-4731-be6c-4d4929fc43a1",
@@ -4767,7 +4808,6 @@
           "实用教程"
         ],
         "summary": "用热情去做好自己喜欢的事情 ",
-        "URL": "",
         "title": "[云服务器] “moments”&”Navidrome”demo",
         "status": "Published",
         "urlname": "b457af70-b5c6-460a-870a-3896d3c41856",
@@ -4813,7 +4853,6 @@
           "野火FPGA"
         ],
         "summary": "用Verilog 语言描述一个具有 3-8 译码器功能的电路",
-        "URL": "",
         "title": "[野火] 第11章 简单组合逻辑 --- 译码器",
         "status": "Published",
         "urlname": "9a81a9f7-5157-4b23-9b77-6aa7209de4c5",
@@ -4859,7 +4898,6 @@
           "野火FPGA"
         ],
         "summary": "用Verilog 语言描述一个具有多路选择器功能的电路",
-        "URL": "",
         "title": "[野火] 第10章  简单组合逻辑 --- 多路选择器",
         "status": "Published",
         "urlname": "fb45282b-c586-4946-85ac-75f11808e6a1",
@@ -4905,7 +4943,6 @@
           "野火FPGA"
         ],
         "summary": "建立一个完整的工程来验证软件安装是否正确",
-        "URL": "",
         "title": "[野火] 第9章  点亮你的 LED 灯",
         "status": "Published",
         "urlname": "494e59b0-ebb7-49aa-abd9-2fa04ae82ba2",
@@ -4951,7 +4988,6 @@
           "野火FPGA"
         ],
         "summary": "FPGA基本知识",
-        "URL": "",
         "title": "[野火] 第8章  初识 Verilog HDL",
         "status": "Published",
         "urlname": "b9bdeecc-1f6b-4824-b9e3-9f085a5e3fc3",
@@ -5000,7 +5036,6 @@
           "情绪表达"
         ],
         "summary": "教师维系着精神文明的滋养和传承",
-        "URL": "",
         "title": "[时过境迁] 教师节的一点想法💡",
         "status": "Published",
         "urlname": "845dec82-f305-4a0a-a9a7-6d70ecae0e3f",
@@ -5049,7 +5084,6 @@
           "情绪表达"
         ],
         "summary": "现在这个阶段是青年步入社会，选择职业发展的黄金阶段",
-        "URL": "",
         "title": "[职业选择] 如何选择就业和努力方向？",
         "status": "Published",
         "urlname": "267bf53c-7829-423a-8bd6-85e28a8c8e71",
@@ -5098,7 +5132,6 @@
           "情绪表达"
         ],
         "summary": "如果说哲学是双向的，互通的，而现实就是单调的，严谨的。",
-        "URL": "",
         "title": "[实践体会]  非同等刺激下的兴趣倾向",
         "status": "Published",
         "urlname": "34b04fd1-89b7-4be2-a1d5-f8a9adc6d53f",
@@ -5148,7 +5181,6 @@
           "自动飞控"
         ],
         "summary": "用于记录《飞行管理与自动飞行控制系统》的学习笔记",
-        "URL": "",
         "title": "[民航科普] 自动飞行控制概述",
         "status": "Published",
         "urlname": "ad9dabdc-aca9-453c-9478-d9d92e255edf",
@@ -5195,7 +5227,6 @@
           "热门文章"
         ],
         "summary": "高数强化第一讲",
-        "URL": "",
         "title": "第1讲 函数极限与连续",
         "status": "Published",
         "urlname": "b9cd4ff9-22a0-4531-8b96-bf7c2dad6fe8",
@@ -5242,7 +5273,6 @@
           "热门文章"
         ],
         "summary": "高数强化第二讲",
-        "URL": "",
         "title": "第2讲 数列极限",
         "status": "Published",
         "urlname": "c2ed1a6e-5d8b-4b3c-88d5-3d7892164c3e",
@@ -5292,7 +5322,6 @@
           "推荐"
         ],
         "summary": "搞点钢琴听听，钢琴相对而言，听起来比较舒服一点，至少我是这么觉得的。",
-        "URL": "",
         "title": "[放松心情] 钢琴鉴赏 ",
         "status": "Published",
         "urlname": "2d029392-1074-44a9-87b8-0586f82b1d66",
@@ -5339,7 +5368,6 @@
           "推荐"
         ],
         "summary": "用杜老师的图床对图片进行加速",
-        "URL": "",
         "title": "[速度优化]  前端图片性能优化",
         "status": "Published",
         "urlname": "fb138fdb-9484-477d-96a6-2e8c5fa1f83c",
@@ -5385,7 +5413,6 @@
           "情绪表达"
         ],
         "summary": "聆听和收录天依好听的歌曲",
-        "URL": "",
         "title": "[治愈嗓音]  华夏风韵，洛水天依",
         "status": "Published",
         "urlname": "164de527-1908-46ef-8e22-a02d2e6e3c3f",
@@ -5432,7 +5459,6 @@
           "推荐"
         ],
         "summary": "番茄钟和沉没成本以及一些经历思考",
-        "URL": "",
         "title": "[沉没成本] 通过番茄🍅人生来聊沉没成本 ",
         "status": "Published",
         "urlname": "4ef494f6-a115-4039-aace-5b426f6ee7ee",
@@ -5478,7 +5504,6 @@
           "实用教程"
         ],
         "summary": "介绍win桌面美化插件，WinDynamicDesktop和rainmeter",
-        "URL": "",
         "title": "[桌面美化] Windows也可以像Mac一样优雅",
         "status": "Published",
         "urlname": "2b1ec1b7-ee27-45c5-a0f8-34e348858661",
@@ -5525,7 +5550,6 @@
           "推荐"
         ],
         "summary": "分享计算机专业学习路线和讲讲我的规划及感受！",
-        "URL": "",
         "title": "[技能拓展]  计算机专业学习路线—点亮你的科技树🌲",
         "status": "Published",
         "urlname": "589e3818-c78a-4871-b121-a20bce5ae185",
@@ -5572,7 +5596,6 @@
           "热门文章"
         ],
         "summary": "一元函数微分学应用、一元函数积分学应用、微分方程的物理应用、傅立叶级数",
-        "URL": "",
         "title": "[高数基础]  第十五讲 数学一、数学二专题内容",
         "status": "Published",
         "urlname": "4898c655-35b5-4581-8281-3d2721d8fb01",
@@ -5619,7 +5642,6 @@
           "热门文章"
         ],
         "summary": "常数项级数的概念与性质、正向级数及其敛散性的判别、交错级数和任意项级数及其敛散性的判别、幂级数及其收敛域、幂级数求和函数、函数展开成幂级数",
-        "URL": "",
         "title": "[高数基础]  第十四讲 无穷级数",
         "status": "Published",
         "urlname": "c4bc784f-7384-4203-87ce-de4b14c948c0",
@@ -5666,7 +5688,6 @@
           "热门文章"
         ],
         "summary": "微分方程的概念、求解、伯努利方程、二阶可降阶微分方程的求解、高阶线性微分方程的求解、二阶常系数齐次线性微分方程的通解、二阶常系数非齐次线性微分方程的特解、n阶常系数线性微分方程的解",
-        "URL": "",
         "title": "[高数基础]  第十三讲 常微分方程",
         "status": "Published",
         "urlname": "e1035958-eb35-4f1e-90c2-906b94d2c154",
@@ -5713,7 +5734,6 @@
           "热门文章"
         ],
         "summary": "积分等式与积分不等式",
-        "URL": "",
         "title": "[高数基础] 第十讲  积分等式与积分不等式",
         "status": "Published",
         "urlname": "3fd1b18e-2777-43d6-a80d-6324c2669f71",
@@ -5760,7 +5780,6 @@
           "热门文章"
         ],
         "summary": "用定积分计算平面图形和旋转体的面积体积",
-        "URL": "",
         "title": "[高数基础] 第九讲 一元函数积分学的几何应用",
         "status": "Published",
         "urlname": "1933c549-96f0-4a90-bc3f-b9ce9ea1e0eb",
@@ -5785,8 +5804,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231028%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231028T060820Z&X-Amz-Expires=3600&X-Amz-Signature=b99554b53dfd2e6a244b6d03bd695d8e9c047536efb876146d128061cc336b73&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-28T07:08:20.269Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231028%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231028T115751Z&X-Amz-Expires=3600&X-Amz-Signature=a56a4f01ad36b0be77c2c763c47da14eb34716901cbe6f1b32375e16e01b5195&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-28T12:57:51.192Z"
         }
       },
       "icon": null,
@@ -5807,7 +5826,6 @@
           "实用教程"
         ],
         "summary": "介绍互联网软件开源协议",
-        "URL": "",
         "title": "[知识分享] 开源许可证教程",
         "status": "Published",
         "urlname": "743a1849-6955-4532-9732-463ba5eca045",
@@ -5854,7 +5872,6 @@
           "热门文章"
         ],
         "summary": "基本积分计算",
-        "URL": "",
         "title": "[高数基础] 第八讲  一元函数积分学的概念与计算",
         "status": "Published",
         "urlname": "9868b57b-52ab-4314-85d5-10d2e8a9dd1a",
@@ -5901,7 +5918,6 @@
           "热门文章"
         ],
         "summary": "零点问题与微分不等式",
-        "URL": "",
         "title": "[高数基础] 第七讲 零点问题与微分不等式",
         "status": "Published",
         "urlname": "fd38a29f-d0bd-4351-9018-4f5118ad18ea",
@@ -5948,7 +5964,6 @@
           "热门文章"
         ],
         "summary": "有界与最值、介值定理、平均值定理、零点定理、费马定理、罗尔定理，拉格朗日中值定理、柯西中值定理、泰勒公式、积分中值定理",
-        "URL": "",
         "title": "[高数基础] 第六讲 中值定理",
         "status": "Published",
         "urlname": "18b0348d-88ab-42d4-9962-503139ed7385",
@@ -5995,7 +6010,6 @@
           "热门文章"
         ],
         "summary": "极值、单调性、凹凸性",
-        "URL": "",
         "title": "[高数基础] 第五讲  一元函数微分学的几何应用",
         "status": "Published",
         "urlname": "6d3ee319-7ddd-42f5-8854-2e6a3cfe505f",
@@ -6042,7 +6056,6 @@
           "热门文章"
         ],
         "summary": "高数基础知识第四讲知识点索引",
-        "URL": "",
         "title": "[高数基础]  第四讲 一元函数微分学的概念与计算",
         "status": "Published",
         "urlname": "af1cf66e-5de8-423a-b8f1-8639cf65b907",
@@ -6088,7 +6101,6 @@
           "实用教程"
         ],
         "summary": "万物皆可RSS（🐶保命）",
-        "URL": "",
         "title": "[天之骄子] RSS为什么退出了互联网的舞台？",
         "status": "Published",
         "urlname": "a36853ca-49f6-4e31-a18f-1f12ad5e0090",
@@ -6134,7 +6146,6 @@
           "实用教程"
         ],
         "summary": "1600副本具体攻略",
-        "URL": "",
         "title": "[海岛奇兵] 1600副本攻略合辑",
         "status": "Published",
         "urlname": "d14bdcac-8ec5-40e9-9a2d-1edcbd4b0906",
@@ -6181,7 +6192,6 @@
           "热门文章"
         ],
         "summary": "极限、连续和间断",
-        "URL": "",
         "title": "[高数基础]   第三讲 函数极限与连续性",
         "status": "Published",
         "urlname": "2aa09a2d-802e-4f32-b52f-99043e75f3a0",
@@ -6228,7 +6238,6 @@
           "热门文章"
         ],
         "summary": "数列极限的基本知识",
-        "URL": "",
         "title": "[高数基础] 第二讲 数列极限",
         "status": "Published",
         "urlname": "c224fc04-5dbc-4c47-8cb4-69d53bdc6030",
@@ -6275,7 +6284,6 @@
           "热门文章"
         ],
         "summary": "衔接高中与大学之间的基础知识",
-        "URL": "",
         "title": "[高数基础]  第一讲 高等数学预备知识",
         "status": "Published",
         "urlname": "134cd97a-1ac9-47bf-919e-d44adf947937",
@@ -6300,8 +6308,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231028%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231028T060820Z&X-Amz-Expires=3600&X-Amz-Signature=2702662b8ce2935ae13bef099f188a8542d7bef140bd5866c24ed000364dd1b7&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-28T07:08:20.271Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231028%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231028T115751Z&X-Amz-Expires=3600&X-Amz-Signature=373b3e20e9145bedf177d916e14d3e60f97e3e3d20f1ca84be615a8bf6c43978&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-28T12:57:51.190Z"
         }
       },
       "icon": null,
@@ -6322,7 +6330,6 @@
           "情绪表达"
         ],
         "summary": "爱情里的双方，往往是充满矛盾的，从最初的热恋，平静，矛盾，缓和，会经历大大小小的风浪和波折。",
-        "URL": "",
         "title": "[影乐鉴赏] 《我怀念的》-孙燕姿",
         "status": "Published",
         "urlname": "9d3fa1c8-b70a-4719-9842-e9d7ef76de21",
@@ -6369,7 +6376,6 @@
           "推荐"
         ],
         "summary": "根据王老师的讲座视频进行整理",
-        "URL": "",
         "title": "[哲学讲堂] 什么是性灵？（王德峰）",
         "status": "Published",
         "urlname": "c211555a-08a5-464f-b22d-6c1a68fb09b5",
@@ -6416,7 +6422,6 @@
           "热门文章"
         ],
         "summary": "二重积分的概念与计算",
-        "URL": "",
         "title": "[高数基础]  第十二讲 二重积分",
         "status": "Published",
         "urlname": "1930b0df-1884-4753-9316-8780d305ae81",
@@ -6463,7 +6468,6 @@
           "热门文章"
         ],
         "summary": "三重积分、三重积分的概念性质、对称性和计算、第一型曲线积分、第一型曲面积分、重积分与第一型线面积分的应用、第二型曲线和曲面积分",
-        "URL": "",
         "title": "[高数基础]  第十八讲 三重积分、曲线曲面积分",
         "status": "Published",
         "urlname": "328e4727-bb5f-43b3-9f8d-9f11d13768c8",
@@ -6510,7 +6514,6 @@
           "热门文章"
         ],
         "summary": "向量代数、空间平面与直线、空间曲线与曲面、场论初步、多元函数微分学的几何应用",
-        "URL": "",
         "title": "[高数基础]  第十七讲 多元函数积分学的基础知识",
         "status": "Published",
         "urlname": "c366b6ef-2b5a-48a0-a63a-743804d2fc32",
@@ -6557,7 +6560,6 @@
           "热门文章"
         ],
         "summary": "多元函数多元函数偏导数、极值和最值、条件极值和拉格朗日乘法",
-        "URL": "",
         "title": "[高数基础]  第十一讲 多元函数微分学",
         "status": "Published",
         "urlname": "a56c8d40-8c26-4c3d-af8d-cd280968dbb6",
@@ -6588,8 +6590,8 @@
       "icon": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f6304c04-ca6d-4a05-a577-2bffb9cfd351/%E6%88%AA%E5%B1%8F2023-07-10_10.16.16.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231028%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231028T060820Z&X-Amz-Expires=3600&X-Amz-Signature=48f7cebc67c3ba252bcf73b6566fb96c63e5aadb5ddf0a727c87fd29d3e00834&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-28T07:08:20.274Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f6304c04-ca6d-4a05-a577-2bffb9cfd351/%E6%88%AA%E5%B1%8F2023-07-10_10.16.16.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231028%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231028T115751Z&X-Amz-Expires=3600&X-Amz-Signature=f443ba77c2f0b8a547b48ee213d9cc1b15d2da6816636b6b7ab2927d44c00783&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-28T12:57:51.192Z"
         }
       },
       "parent": {
@@ -6610,7 +6612,6 @@
           "热门文章"
         ],
         "summary": "对考研英语阅读理解解题方法的一个汇总",
-        "URL": "",
         "title": "[考研英语] 阅读理解",
         "status": "Published",
         "urlname": "fca04e3f-5339-47e4-b840-e0545e8e2f7e",
@@ -6641,8 +6642,8 @@
       "icon": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7d6b240a-f7be-418c-bf43-04373fb7962a/%E6%88%AA%E5%B1%8F2023-07-03_14.27.48.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231028%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231028T060820Z&X-Amz-Expires=3600&X-Amz-Signature=d42043cf600a1e81af309d9148225ed6874386cb6293a494313f85a060318aad&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-28T07:08:20.274Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7d6b240a-f7be-418c-bf43-04373fb7962a/%E6%88%AA%E5%B1%8F2023-07-03_14.27.48.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231028%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231028T115751Z&X-Amz-Expires=3600&X-Amz-Signature=437917b8386cfeb50c217bbdea9dee5744bf98fd18d4a2a4f761cd3cc52e9251&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-28T12:57:51.193Z"
         }
       },
       "parent": {
@@ -6663,7 +6664,6 @@
           "热门文章"
         ],
         "summary": "对考研英语完形填空解题方法的一个汇总",
-        "URL": "",
         "title": "[考研英语] 完形填空",
         "status": "Published",
         "urlname": "809a25d8-d84e-4d37-9b6e-d8b2619cb98b",
@@ -6712,7 +6712,6 @@
           "流动核心"
         ],
         "summary": "看飞鱼在空中划过优美的弧线，看繁星倒影在大海",
-        "URL": "",
         "title": "[三级缓存] 向阳花笺",
         "status": "Published",
         "urlname": "022f7d8a-9372-46cd-bb64-839cbaed8b9b",
@@ -6743,8 +6742,8 @@
       "icon": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6534acae-1d5b-432d-808b-7ad08d784d3e/%E6%88%AA%E5%B1%8F2023-07-01_10.39.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231028%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231028T060820Z&X-Amz-Expires=3600&X-Amz-Signature=b8c67cb39e1253f2d1dcdd4dc927fe28a6811057c8d077de5558fde97c9f9aa7&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-28T07:08:20.272Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6534acae-1d5b-432d-808b-7ad08d784d3e/%E6%88%AA%E5%B1%8F2023-07-01_10.39.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231028%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231028T115751Z&X-Amz-Expires=3600&X-Amz-Signature=5512c777eeca33cf901ec1d7ac7a34c5e27bf6f9c643a69da3e9be51de6b2f72&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-28T12:57:51.191Z"
         }
       },
       "parent": {
@@ -6765,7 +6764,6 @@
           "热门文章"
         ],
         "summary": "考研英语语法汇总",
-        "URL": "",
         "title": "[考研英语] 语法基础",
         "status": "Published",
         "urlname": "28cd7407-6123-4399-b11d-8ec36c097a3a",
@@ -6814,7 +6812,6 @@
           "流动核心"
         ],
         "summary": "情书写给山鬼  心事寄予西风",
-        "URL": "",
         "title": "[流动核心] 蜿蜒曲折 妙遇神女",
         "status": "Published",
         "urlname": "7d7146fd-92b8-41df-98cb-83bb633f05f3",
@@ -6864,7 +6861,6 @@
           "必看精选"
         ],
         "summary": "大学对于独立人格的塑造是很重要的，最主要的是在不断试错的过程当中培养自己解决问题的能力。",
-        "URL": "",
         "title": "[经验分享] 谈学习观",
         "status": "Published",
         "urlname": "82b35d39-bc92-4f75-a733-42ce2ca0b27a",
@@ -6915,7 +6911,6 @@
           "情绪表达"
         ],
         "summary": "情感带给了人的羁绊，但也确确实实是给人生画上了颜色，对于一个没有情感的人，一个充满感情的人，就像是雨后的彩虹。",
-        "URL": "",
         "title": "[影乐鉴赏] 假如爱有天意",
         "status": "Published",
         "urlname": "745ad0a6-9638-43f7-813d-26726756a1fc",
@@ -6964,7 +6959,6 @@
           "流动核心"
         ],
         "summary": "无人问津的渡口  开满鲜花",
-        "URL": "",
         "title": "[流动核心] 少沽风雅 静颂松劝",
         "status": "Published",
         "urlname": "cd073ac5-86d9-45e9-b687-43e28e3d1f12",
@@ -7010,7 +7004,6 @@
           "实用教程"
         ],
         "summary": "我特别喜欢ubuntu的命令行的使用方式，这样可以更加简洁纯粹的去做一件事情",
-        "URL": "",
         "title": "[技术分享] Ubuntu_linux",
         "status": "Published",
         "urlname": "cfe7d585-e634-434b-b08a-8fc6dd6a8906",
@@ -7060,7 +7053,6 @@
           "必看精选"
         ],
         "summary": "记录我对博客优化的过程，您可以看作是博客优化的日志。",
-        "URL": "",
         "title": "[技术分享] 博客优化",
         "status": "Published",
         "urlname": "9f3356ce-a1a0-43d8-9d72-d4a0f39e1444",
@@ -7109,7 +7101,6 @@
           "流动核心"
         ],
         "summary": "草木有本心  何求美人折 ",
-        "URL": "",
         "title": "[流动核心] 东方璀璨 遗我明珠",
         "status": "Published",
         "urlname": "8c5a76b0-e4e9-4be2-837f-f6783b4c8bdf",
@@ -7158,7 +7149,6 @@
           "流动核心"
         ],
         "summary": "人间四月芳菲尽  山寺桃花始盛开",
-        "URL": "",
         "title": "[流动核心] 采桑小道 相视抿笑",
         "status": "Published",
         "urlname": "e14d5cad-a8aa-42aa-819e-c1985e73a897",
@@ -7207,7 +7197,6 @@
           "流动核心"
         ],
         "summary": "谷神不死  是谓玄牝",
-        "URL": "",
         "title": "[流动核心] 闲敲棋子 倩舞灯花",
         "status": "Published",
         "urlname": "7a59f7e2-ab0d-4755-a878-8e96954ea306",
