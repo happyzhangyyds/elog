@@ -46,7 +46,7 @@ Within this module, knowledge pertaining to the study of the German language sha
 
 ![](https://bu.dusays.com/2023/10/18/652fd413f338c.png)
 
-## 模块 01-第 06 讲-德语一般现在时动词变位
+## 模块 01 - 第 06 讲 - 德语一般现在时动词变位
 
 ![](https://bu.dusays.com/2023/10/18/652fd4155d1ac.png)
 
