@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sat, 28 Oct 2023 13:56:56 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sat, 28 Oct 2023 13:59:31 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://matrixcore.life/rss.xml" />
         
@@ -33,30 +33,6 @@
                 <link>https://matrixcore.life/life/hello-world/</link>
                 <guid isPermaLink="true">https://matrixcore.life/life/hello-world/</guid>
                 <pubDate>Sat, 28 Oct 2023 13:56:07 &#43;0800</pubDate>
-                
-                    <author>matrixcore@qq.com (MatrixCore)</author>
-                
-                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
-                
-                    <description></description>
-                
-                
-                
-                
-                
-                    
-                        
-                    
-                        
-                    
-                
-            </item>
-        
-            <item>
-                <title>test</title>
-                <link>https://matrixcore.life/life/%E8%B7%A8%E5%9F%9F%E5%8D%8F%E5%90%8C-elog&#43;notion%E5%AE%9E%E7%8E%B0md%E4%BC%98%E9%9B%85%E5%A4%87%E4%BB%BD/</link>
-                <guid isPermaLink="true">https://matrixcore.life/life/%E8%B7%A8%E5%9F%9F%E5%8D%8F%E5%90%8C-elog&#43;notion%E5%AE%9E%E7%8E%B0md%E4%BC%98%E9%9B%85%E5%A4%87%E4%BB%BD/</guid>
-                <pubDate>Sat, 28 Oct 2023 12:10:16 &#43;0800</pubDate>
                 
                     <author>matrixcore@qq.com (MatrixCore)</author>
                 
@@ -671,6 +647,30 @@ git commit -m &amp;#34;Remove and ignore the specified file&amp;#34;
 请注意，这个操作是不可逆的，并且会影响到与指定文件相关的所有提交和分支。因此，在执行此操作之前，请务必谨慎，并确保你理解操作的影响。
 &lt;/code&gt;&lt;/pre&gt;  &lt;/details&gt;
 </description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title></title>
+                <link>https://matrixcore.life/life/%E8%B7%A8%E5%9F%9F%E5%8D%8F%E5%90%8C-elog&#43;notion%E5%AE%9E%E7%8E%B0md%E4%BC%98%E9%9B%85%E5%A4%87%E4%BB%BD/</link>
+                <guid isPermaLink="true">https://matrixcore.life/life/%E8%B7%A8%E5%9F%9F%E5%8D%8F%E5%90%8C-elog&#43;notion%E5%AE%9E%E7%8E%B0md%E4%BC%98%E9%9B%85%E5%A4%87%E4%BB%BD/</guid>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+                
+                    <author>matrixcore@qq.com (MatrixCore)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description></description>
                 
                 
                 

@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Home</title>
     <subtitle type="html">少年辛苦终身事，莫向光阴惰寸功，爱自己是终身浪漫的开始🌹</subtitle>
-    <updated>2023-10-28T13:56:56&#43;08:00</updated>
+    <updated>2023-10-28T13:59:31&#43;08:00</updated>
     <id>https://matrixcore.life/</id>
     <link rel="alternate" type="text/html" href="https://matrixcore.life/" />
     <link rel="self" type="application/atom&#43;xml" href="https://matrixcore.life/atom.xml" />
@@ -20,35 +20,8 @@
             <title type="text">Hello World</title>
             <link rel="alternate" type="text/html" href="https://matrixcore.life/life/hello-world/" />
             <id>https://matrixcore.life/life/hello-world/</id>
-            <updated>2023-10-28T13:56:46&#43;08:00</updated>
+            <updated>2023-10-28T13:58:39&#43;08:00</updated>
             <published>2023-10-28T13:56:07&#43;08:00</published>
-            <author>
-                    <name>MatrixCore</name>
-                    <uri>https://matrixcore.life</uri>
-                    <email>matrixcore@qq.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html"></summary>
-            
-                <content type="html"></content>
-            
-            
-            
-            
-            
-                
-                    
-                
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">test</title>
-            <link rel="alternate" type="text/html" href="https://matrixcore.life/life/%E8%B7%A8%E5%9F%9F%E5%8D%8F%E5%90%8C-elog&#43;notion%E5%AE%9E%E7%8E%B0md%E4%BC%98%E9%9B%85%E5%A4%87%E4%BB%BD/" />
-            <id>https://matrixcore.life/life/%E8%B7%A8%E5%9F%9F%E5%8D%8F%E5%90%8C-elog&#43;notion%E5%AE%9E%E7%8E%B0md%E4%BC%98%E9%9B%85%E5%A4%87%E4%BB%BD/</id>
-            <updated>2023-10-28T13:50:49&#43;08:00</updated>
-            <published>2023-10-28T12:10:16&#43;08:00</published>
             <author>
                     <name>MatrixCore</name>
                     <uri>https://matrixcore.life</uri>
@@ -665,6 +638,33 @@ git commit -m &amp;#34;Remove and ignore the specified file&amp;#34;
 请注意，这个操作是不可逆的，并且会影响到与指定文件相关的所有提交和分支。因此，在执行此操作之前，请务必谨慎，并确保你理解操作的影响。
 &lt;/code&gt;&lt;/pre&gt;  &lt;/details&gt;
 </content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text"></title>
+            <link rel="alternate" type="text/html" href="https://matrixcore.life/life/%E8%B7%A8%E5%9F%9F%E5%8D%8F%E5%90%8C-elog&#43;notion%E5%AE%9E%E7%8E%B0md%E4%BC%98%E9%9B%85%E5%A4%87%E4%BB%BD/" />
+            <id>https://matrixcore.life/life/%E8%B7%A8%E5%9F%9F%E5%8D%8F%E5%90%8C-elog&#43;notion%E5%AE%9E%E7%8E%B0md%E4%BC%98%E9%9B%85%E5%A4%87%E4%BB%BD/</id>
+            <updated>2023-10-28T13:58:45&#43;08:00</updated>
+            <published>0001-01-01T00:00:00&#43;00:00</published>
+            <author>
+                    <name>MatrixCore</name>
+                    <uri>https://matrixcore.life</uri>
+                    <email>matrixcore@qq.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html"></summary>
+            
+                <content type="html"></content>
             
             
             
