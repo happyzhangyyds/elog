@@ -2,14 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://matrixcore.life/life/hello/</loc>
-    <lastmod>2023-10-28T18:21:46+08:00</lastmod>
-  </url><url>
     <loc>https://matrixcore.life/</loc>
-    <lastmod>2023-10-28T18:21:46+08:00</lastmod>
+    <lastmod>2023-10-28T21:19:54+08:00</lastmod>
   </url><url>
     <loc>https://matrixcore.life/life/</loc>
-    <lastmod>2023-10-28T18:21:46+08:00</lastmod>
+    <lastmod>2023-10-28T21:19:54+08:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/life/%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E4%B8%AD%E5%8C%BB%E6%98%AF%E5%A6%82%E4%BD%95%E7%9C%8B%E7%97%85%E7%9A%84/</loc>
+    <lastmod>2023-10-28T21:19:54+08:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/life/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%AD%E5%8C%BB/</loc>
+    <lastmod>2023-10-28T20:34:46+08:00</lastmod>
   </url><url>
     <loc>https://matrixcore.life/categories/</loc>
   </url><url>
