@@ -1,7 +1,6 @@
 +++
 title = 'test'
 date = 2023-10-28T12:10:16+08:00
-draft = false
 +++
 
 # 前言

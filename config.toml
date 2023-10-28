@@ -100,7 +100,7 @@ uglyURLs = false
     # 邮箱
     email = "matrixcore@qq.com"
     # 座右铭或简介
-    motto = "Viva La Vida"
+    motto = ""
     # 头像
     avatar = ""
     # 网站（默认值：baseURL）
