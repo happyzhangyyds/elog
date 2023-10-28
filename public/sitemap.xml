@@ -2,11 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://matrixcore.life/life/hello-world/</loc>
+    <lastmod>2023-10-28T13:56:46+08:00</lastmod>
+  </url><url>
     <loc>https://matrixcore.life/</loc>
-    <lastmod>2023-10-28T13:50:49+08:00</lastmod>
+    <lastmod>2023-10-28T13:56:46+08:00</lastmod>
   </url><url>
     <loc>https://matrixcore.life/life/</loc>
-    <lastmod>2023-10-28T13:50:49+08:00</lastmod>
+    <lastmod>2023-10-28T13:56:46+08:00</lastmod>
   </url><url>
     <loc>https://matrixcore.life/life/%E8%B7%A8%E5%9F%9F%E5%8D%8F%E5%90%8C-elog&#43;notion%E5%AE%9E%E7%8E%B0md%E4%BC%98%E9%9B%85%E5%A4%87%E4%BB%BD/</loc>
     <lastmod>2023-10-28T13:50:49+08:00</lastmod>

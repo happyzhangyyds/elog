@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Home</title>
     <subtitle type="html">少年辛苦终身事，莫向光阴惰寸功，爱自己是终身浪漫的开始🌹</subtitle>
-    <updated>2023-10-28T13:54:41&#43;08:00</updated>
+    <updated>2023-10-28T13:56:56&#43;08:00</updated>
     <id>https://matrixcore.life/</id>
     <link rel="alternate" type="text/html" href="https://matrixcore.life/" />
     <link rel="self" type="application/atom&#43;xml" href="https://matrixcore.life/atom.xml" />
@@ -16,6 +16,33 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.119.0">Hugo</generator>
+        <entry>
+            <title type="text">Hello World</title>
+            <link rel="alternate" type="text/html" href="https://matrixcore.life/life/hello-world/" />
+            <id>https://matrixcore.life/life/hello-world/</id>
+            <updated>2023-10-28T13:56:46&#43;08:00</updated>
+            <published>2023-10-28T13:56:07&#43;08:00</published>
+            <author>
+                    <name>MatrixCore</name>
+                    <uri>https://matrixcore.life</uri>
+                    <email>matrixcore@qq.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html"></summary>
+            
+                <content type="html"></content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">test</title>
             <link rel="alternate" type="text/html" href="https://matrixcore.life/life/%E8%B7%A8%E5%9F%9F%E5%8D%8F%E5%90%8C-elog&#43;notion%E5%AE%9E%E7%8E%B0md%E4%BC%98%E9%9B%85%E5%A4%87%E4%BB%BD/" />

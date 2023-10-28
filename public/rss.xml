@@ -23,10 +23,34 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sat, 28 Oct 2023 13:54:41 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sat, 28 Oct 2023 13:56:56 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://matrixcore.life/rss.xml" />
         
+        
+            <item>
+                <title>Hello World</title>
+                <link>https://matrixcore.life/life/hello-world/</link>
+                <guid isPermaLink="true">https://matrixcore.life/life/hello-world/</guid>
+                <pubDate>Sat, 28 Oct 2023 13:56:07 &#43;0800</pubDate>
+                
+                    <author>matrixcore@qq.com (MatrixCore)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description></description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>test</title>
