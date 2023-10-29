@@ -2,8 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://matrixcore.life/tech/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231029/</loc>
+    <lastmod>2023-10-29T21:49:12+08:00</lastmod>
+  </url><url>
     <loc>https://matrixcore.life/</loc>
-    <lastmod>2023-10-28T21:39:32+08:00</lastmod>
+    <lastmod>2023-10-29T21:49:12+08:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/tags/</loc>
+    <lastmod>2023-10-29T21:49:12+08:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/tech/</loc>
+    <lastmod>2023-10-29T21:49:12+08:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/tags/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/</loc>
+    <lastmod>2023-10-29T21:49:12+08:00</lastmod>
   </url><url>
     <loc>https://matrixcore.life/life/</loc>
     <lastmod>2023-10-28T21:19:54+08:00</lastmod>
@@ -17,20 +29,11 @@
     <loc>https://matrixcore.life/tech/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/hugo/</loc>
     <lastmod>2023-10-28T21:39:29+08:00</lastmod>
   </url><url>
-    <loc>https://matrixcore.life/tags/</loc>
-    <lastmod>2023-10-28T21:39:32+08:00</lastmod>
-  </url><url>
-    <loc>https://matrixcore.life/tech/</loc>
-    <lastmod>2023-10-28T21:39:32+08:00</lastmod>
-  </url><url>
     <loc>https://matrixcore.life/tags/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2023-10-28T21:39:31+08:00</lastmod>
   </url><url>
     <loc>https://matrixcore.life/tech/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231025/</loc>
     <lastmod>2023-10-28T21:39:29+08:00</lastmod>
-  </url><url>
-    <loc>https://matrixcore.life/tags/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/</loc>
-    <lastmod>2023-10-28T21:39:31+08:00</lastmod>
   </url><url>
     <loc>https://matrixcore.life/tech/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231022/</loc>
     <lastmod>2023-10-28T21:39:29+08:00</lastmod>
