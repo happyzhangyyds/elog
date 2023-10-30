@@ -2989,7 +2989,7 @@
     {
       "id": "640cc08e-0271-4f07-bb18-78d1bda0562a",
       "doc_id": "640cc08e-0271-4f07-bb18-78d1bda0562a",
-      "updated": 1698587220000,
+      "updated": 1698587280000,
       "body_original": "\n# 前言\n\n\n---\n\n\n  我觉得晚上如果在条件允许的情况下，腾出时间写一写小结是很好的事情。今天打算对这个周末的日程做一些小结。\n\n\n# 正文\n\n\n---\n\n\n从周五开始到周日的晚上。\n\n\n## 懒懒的起床\n\n\n---\n\n\n  周五的早上，因为不需要进行实习，所以起得一般，大概也就八点半起床，主要是晚上睡得晚，大学的作息时间比高中还晚，好在不需要太早起，高中22:15都上床了，大学这个时候还在操场拉单杠散步出去打水呢，然后23:00上床就不错了，然后这个时候吧，心里一团乱麻，肯定睡不着，聊聊天玩玩手机就到了23:20，这个时候就算开始睡觉，起码也得20分钟入睡。所以能在凌晨之前睡着就很不错了。之前晚上还看看书，现在晚上把朱光潜的《谈美》看完之后，就没找其他纸质书了。最近最主要的是把曲黎敏老师讲解的《黄帝内经》系统整理出来，放在由hugo驱动的[月亮船](https://matrixcore.life/)里。下次去图书馆看看有没有这本书。巧了，刚拿手机搜了一下，被借走了，好在还有其他的一本书，先拿过来看看，感情大学四年，天天呆在图书馆，对图书利用率这么低。\n\n\n## 课程设计之水果分类\n\n\n---\n\n\n  然后中午吃完午饭也没顾得上休息，就去借研讨室，因为有个课程设计，要做水果识别，之前复现了一位博主的项目，采用yolo+python能识别不同的水果，但是老师提出了更高的要求，要能识别水果的不同品种和等级，这说实话，蛮有挑战性的，比如红富士和黄元帅，虽然我都没听说过这些品种，但是现阶段还是要把yolo的流程给想一想，看看有没有办法去找这些数据集，反正这是一个很头疼的事情，宝宝心里苦。\n\n\n## 昏庸的下午和无聊的晚上\n\n\n---\n\n\n  周五的下午没什么心情，累死了，下午回去睡觉，晚上出来吃饭，然后晚上也没什么心情干活，就去比较hugo和hexo的博客框架，因为之前买了域名和VPS，本来想好好学wordpress的，但是如昨天所说，我更喜欢hugo的简洁和快速。\n\n\n  晚上用VPS折腾hugo无果，卡在了nginx进行静态文件分发到web服务器的这个步骤，没办法。\n\n\n## 略有起伏的早上\n\n\n---\n\n\n  早上的时候，有一个大胆的想法，采用elog+hugo实现博客的备份，首先放弃了在服务器上使用hugo，nginx没玩明白，然后就觉得采用好朋友vercel进行静态托管，这是一个很棒的想法，一来快速，而来省钱。\n\n\n  说干就干，一开始是可以的，到了中午基本上有一个模样，从选择hugo的主题，最终选择了MeMe，虽然我也很喜欢New Bee主题，但是MeMe主题文件才不到1MB，而且更符合我的个性，然后开始对主题调参数进行优化。\n\n\n  但是中午吃完饭回来之后，发现hugo如果要渲染markdown，需要有front matter，一般来说，hugo写新文档都是:\n\n\n```shell\nhugo new posts/hello-world.md\n```\n\n\n  这个时候会出现一个带有front matter的空白md文档，在上面进行书写即可，写完之后。\n\n\n```shell\nhugo server -D ##在本地预览\nhugo  ##生成静态文件\n```\n\n\n  但是我当时还没有把elog的front matter玩明白，于是就去请教elog的作者。但是下午我一整个操作都是因为这个想法：因为没有实现elog的front matter，我本来打算新开一个文件夹部署hugo的\n\n\n```shell\nhugo new site blog\n```\n\n\n然后下载主题文件，本地预览，奇怪的是，vercel屡屡报255的错误，要么是主题文件哪个文件不行啦，又是什么什么问题的，折腾了半个下午，我一直在检查我的步骤，也找了很多攻略，最后还是凉凉。\n\n\n  到了晚上终于放弃了，重新回到了elog+hugo，因为第一次尝试的时候，vercel没报错，我选择的架构是other，可以正常渲染public文件，我就纳了闷儿了，所以这个问题一直没解决。\n\n\n  晚上请教elog作者之后，成功解决了front matter的问题，只需要改一行代码，然后最重要的是\n\n\n```shell\nelog clean ##清除掉以前的缓存，重新进行全量备份，如果不执行，就是增量备份，以前的文档没有front matter\n```\n\n\n  然后和群友唠唠嗑，晚上成功实现了备份，在上面的[月亮船](https://matrixcore.life/)里。不得不说，仔细阅读技术文档，同时感谢elog开发者的热情帮助，太帅了！\n\n\n## 平常的早晨\n\n\n---\n\n\n  周日早上也很平常，八点半起床，吃完早饭去图书馆学习，背了一会单词，突然想起来自动飞行控制作业没写，七大题，上午写了四题。然后去食饭，准备下午的体测。\n\n\n  上午顺便优化了一下友链，然后把[朋友圈](https://moments.matrixcore.top/)的订阅更新了一下。\n\n\n  一点回宿舍，睡到两点多，然后上个厕所，喝瓶红牛，最后一瓶了，正好派上用场，体测漫长的等待。\n\n\n  拿着手机不知所措，看来还是要把anki下回来，巩固单词，先测了肺活量，上学期因为二阳恢复没几天，身体状态很差，拼了老命补测才84，那时候肺活量奇低，才4200，今天4600，好一些。\n\n\n  然后去单杠，单杠我自然不担心，因为隔三差五，晚上就去操场拉几个，这次因为半拉也算数，连摆带晃25个，上次体测可是直臂20，可把我牛逼坏了。\n\n\n  然后去跳远，2.45，然后50，6.8，然后测身高体重，最后1000。\n\n\n  1000说实话，我觉得红牛后坐力太大，我感觉血液流速太快反而控制不了身体，跑1000时候，整个人浑身乏力，当然因为9月初三阳给我整怕了，一直没敢练1000，去年1000 3.04可给我牛逼坏了，这次就啪啪打脸，因为大四毕业体测只要50，所以大家都很慢，我和阿宝在第三第四的位置，前面的两圈都是互相挡风，但是越到后面整个人我越不行，腿tm都软了，红牛劲太大。\n\n\n  我以前跑1000的时候，意识极度清醒，虽然难受吧，但是腿上不减速，现在的感觉就是想加速，身体不听使唤，没办法。跑了个3.58.\n\n\n  最后综合下来84.8，差强人意，最主要扣分在1000和体前屈，体前屈也才18，满分的只有引体和bmi。\n\n\n  所以有时间，试着跑跑，慢慢恢复。大一到大三创高硬性要求3.5公里*50次，大四事情多，也比较懒，所以整个人也没这么高强度训练和这个习惯了，最后就是压腿，引体，散步。\n\n\n## 周末的尾声\n\n\n---\n\n\n  今天的月亮好圆啊，估计也是农历九月15 16的，19:00-20:00写完自动飞控作业，20:00-21:00刷bilibil，聊了一会天，然后21:00到现在21:42写写回忆录，然后基本就差不多了，明天又是早八，去工训。\n\n\n# 总结\n\n\n---\n\n\n  大学倒计时过一天少一天，感觉时间利用率不高，之后规划。\n\n- [ ] 课程设计看一看\n- [ ] sharplinggo进度赶一赶\n- [ ] 野火FPGA拉下好多了\n- [ ] 整理《黄帝内经》到hugo\n",
       "properties": {
         "password": "",
@@ -3006,7 +3006,7 @@
         "title": "[心情小记] 体测小结&状态反馈",
         "status": "Published",
         "urlname": "640cc08e-0271-4f07-bb18-78d1bda0562a",
-        "updated": "2023-10-29 13:47:00"
+        "updated": "2023-10-29 13:48:00"
       },
       "catalog": [
         {
@@ -3017,14 +3017,46 @@
       "body": "",
       "realName": "[心情小记] 体测小结&状态反馈",
       "relativePath": "/情绪表达/[心情小记] 体测小结&状态反馈.md"
+    },
+    {
+      "id": "8831f223-b577-4acc-bd50-ac0c9dfc796e",
+      "doc_id": "8831f223-b577-4acc-bd50-ac0c9dfc796e",
+      "updated": 1698673860000,
+      "body_original": "\n# 前言\n\n\n---\n\n\n  今晚的状态还是有点疲惫，看上去又是摸鱼摸多了，有必要对日程进行一下简短的的回顾。\n\n\n# 正文\n\n\n---\n\n\n  先说一说，今天感觉最明显的一个点吧，就是时间不受控制地流逝，上课的时候呢，希望时间可以过得快一些，这样可以早点做完去吃午饭。\n\n\n  这里我要额外阐述我今天发现的一个感受，人的专注度显然是有限的，对于外在评价标准和内在价值体系之间的配平如何做得更好，我们熟悉那些我们有过印象的事情，而对于新知识的接受则存在一定的空档期，所以就会变得更加昏昏欲睡。\n\n\n  上午的实习，最主要的介绍的是WXR的气象雷达，上课的时间肯定是摸鱼有点困难的，但是我们的精神峰值并没有完全被调动出来，也就是我们自我的价值观没有得到配平，所以我认为这是一项值得注意的事情，动力有限，而目标没有实现，这是处于我们这种心境的同龄人的大多感受，对于未来的迷茫和疲惫。\n\n\n  当然上课也还是有很多闪光点的，比如，今天老师讲解的时候非常细致，小班教学的效果确实优于大班教学，在听的过程中干扰更小，专注力更强。\n\n\n  昨天体测，今天身体的每个关节都在表示抗拒，手臂酸痛，腰的两侧酸痛， 腿酸痛，中午吃得饱饱的，但是中午睡觉的环境得更加优化一下。太吵了，根本睡不舒服。\n\n\n  我发现上午人的精神状态可能是最好的，其次就是晚上八九点的时候，反正下午我刚睡醒那会儿，整个人都是懵逼的，下午对WXR系统进行了测试工作。\n\n\n  可以察觉出，实际上在实习的过程中，需要一种更方便的衔接和复习知识的办法，同时需要自己保持很高的兴致去做一件事情，当然我认为这是存在一定困难的。\n\n\n  下午回去洗衣服，洗澡，然后睡觉，其实本来下午超过了三点是不应该睡觉的，会干扰晚上的睡眠，但是，要知道秋冬人的情绪总是偏于低落的，而且醒着的时候又有很多事情要去做，所以我倒头就睡，好家伙，没想到一觉就睡到19:00，起来食晚餐，然后出发去图书馆，然后又刷了半天bilibili，没猜错，又刷了很久的bilibili，当然我认为这不完全是一个坏事，因为逃避是人的本能，寻找新鲜事物也是本能，保持和世界的联系，多看看未曾见过的事情也还可以。\n\n\n  但是我觉得有一点不好，就是刷完视频时候有一种惯性，而且时间也不允许你去做更多有价值的事情了，我从21:30开始写作，现在是21:46，我马上就得写到结尾了，所以一些更有价值的事情没有动力去做，这就需要进行超前矫正，可问题是，谁能想到呢？\n\n\n# 总结\n\n\n---\n\n\n  日子周而复始，而时间毕竟是公正的，当新鲜感慢慢褪去，我们又必须再度启程！\n\n",
+      "properties": {
+        "password": "",
+        "icon": "",
+        "date": "2023-10-30",
+        "type": "Post",
+        "category": "走近生活",
+        "slug": "231030",
+        "Created time": "2023-10-30T13:29:00.000Z",
+        "tags": [
+          "情绪表达"
+        ],
+        "summary": "日子周而复始，而时间毕竟是公正的，当新鲜感慢慢褪去，我们又必须再度启程！",
+        "title": "[日程总结] 初秋的第一场雾",
+        "status": "Published",
+        "urlname": "8831f223-b577-4acc-bd50-ac0c9dfc796e",
+        "updated": "2023-10-30 13:51:00"
+      },
+      "catalog": [
+        {
+          "title": "情绪表达",
+          "doc_id": "8831f223-b577-4acc-bd50-ac0c9dfc796e"
+        }
+      ],
+      "body": "",
+      "realName": "[日程总结] 初秋的第一场雾",
+      "relativePath": "/情绪表达/[日程总结] 初秋的第一场雾.md"
     }
   ],
   "catalog": [
     {
       "object": "page",
-      "id": "640cc08e-0271-4f07-bb18-78d1bda0562a",
-      "created_time": "2023-10-29T12:57:00.000Z",
-      "last_edited_time": "2023-10-29T13:47:00.000Z",
+      "id": "8831f223-b577-4acc-bd50-ac0c9dfc796e",
+      "created_time": "2023-10-30T13:29:00.000Z",
+      "last_edited_time": "2023-10-30T13:51:00.000Z",
       "created_by": {
         "object": "user",
         "id": "e66e3bc6-30f1-4020-b696-2787f04dc3ea"
@@ -3036,7 +3068,52 @@
       "cover": {
         "type": "external",
         "external": {
-          "url": "https://images.unsplash.com/photo-1522856339183-9a8b06b05937?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb"
+          "url": "https://bu.dusays.com/2023/10/30/653fb4e0d89ed.png"
+        }
+      },
+      "icon": null,
+      "parent": {
+        "type": "database_id",
+        "database_id": "455841bd-1ef4-4ae5-8f0f-954b329c565d"
+      },
+      "archived": false,
+      "properties": {
+        "password": "",
+        "icon": "",
+        "date": "2023-10-30",
+        "type": "Post",
+        "category": "走近生活",
+        "slug": "231030",
+        "Created time": "2023-10-30T13:29:00.000Z",
+        "tags": [
+          "情绪表达"
+        ],
+        "summary": "日子周而复始，而时间毕竟是公正的，当新鲜感慢慢褪去，我们又必须再度启程！",
+        "title": "[日程总结] 初秋的第一场雾",
+        "status": "Published",
+        "urlname": "8831f223-b577-4acc-bd50-ac0c9dfc796e",
+        "updated": "2023-10-30 13:51:00"
+      },
+      "url": "https://www.notion.so/8831f223b5774accbd50ac0c9dfc796e",
+      "public_url": "https://fragrantknowledge.notion.site/8831f223b5774accbd50ac0c9dfc796e"
+    },
+    {
+      "object": "page",
+      "id": "640cc08e-0271-4f07-bb18-78d1bda0562a",
+      "created_time": "2023-10-29T12:57:00.000Z",
+      "last_edited_time": "2023-10-29T13:48:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "e66e3bc6-30f1-4020-b696-2787f04dc3ea"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "e66e3bc6-30f1-4020-b696-2787f04dc3ea"
+      },
+      "cover": {
+        "type": "external",
+        "external": {
+          "url": "https://bu.dusays.com/2023/10/29/653e62c24322a.png"
         }
       },
       "icon": null,
@@ -3060,7 +3137,7 @@
         "title": "[心情小记] 体测小结&状态反馈",
         "status": "Published",
         "urlname": "640cc08e-0271-4f07-bb18-78d1bda0562a",
-        "updated": "2023-10-29 13:47:00"
+        "updated": "2023-10-29 13:48:00"
       },
       "url": "https://www.notion.so/640cc08e02714f07bb1878d1bda0562a",
       "public_url": "https://fragrantknowledge.notion.site/640cc08e02714f07bb1878d1bda0562a"
@@ -5722,8 +5799,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231029%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231029T134753Z&X-Amz-Expires=3600&X-Amz-Signature=0038d2288bc90aa3062eb5adcca715b525c552e7d2ab843a008c570c73da11a0&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-29T14:47:53.443Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231030%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231030T135408Z&X-Amz-Expires=3600&X-Amz-Signature=be305fdcc21bc57a9b2402d700ab86cd092eccc556c816ff268eeb6bd7747252&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-30T14:54:08.005Z"
         }
       },
       "icon": null,
@@ -6226,8 +6303,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231029%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231029T134753Z&X-Amz-Expires=3600&X-Amz-Signature=b18d807f3d890dfebdd7e91f2508c56323e2eb98177c1f52e40cd61dbfaa857d&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-29T14:47:53.438Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231030%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231030T135408Z&X-Amz-Expires=3600&X-Amz-Signature=a6aed6284925410129f9750099ef6190d6ffd653afb5d9d33d1f3ae9c9acdff0&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-30T14:54:08.001Z"
         }
       },
       "icon": null,
@@ -6508,8 +6585,8 @@
       "icon": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f6304c04-ca6d-4a05-a577-2bffb9cfd351/%E6%88%AA%E5%B1%8F2023-07-10_10.16.16.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231029%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231029T134753Z&X-Amz-Expires=3600&X-Amz-Signature=83246ce5776c85b77b4903bd7f461e3344737220c3db292db1801a8d3e5e8251&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-29T14:47:53.446Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f6304c04-ca6d-4a05-a577-2bffb9cfd351/%E6%88%AA%E5%B1%8F2023-07-10_10.16.16.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231030%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231030T135408Z&X-Amz-Expires=3600&X-Amz-Signature=b333b11170979f6e79e0de5b3fea5ea09436c7054c52756b490c6f8e348c8eb7&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-30T14:54:08.010Z"
         }
       },
       "parent": {
@@ -6560,8 +6637,8 @@
       "icon": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7d6b240a-f7be-418c-bf43-04373fb7962a/%E6%88%AA%E5%B1%8F2023-07-03_14.27.48.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231029%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231029T134753Z&X-Amz-Expires=3600&X-Amz-Signature=466189851ceaf2c1cb717303a24e31cd201785bd6820bc3d3f0acbebfc601ab0&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-29T14:47:53.447Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7d6b240a-f7be-418c-bf43-04373fb7962a/%E6%88%AA%E5%B1%8F2023-07-03_14.27.48.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231030%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231030T135408Z&X-Amz-Expires=3600&X-Amz-Signature=728c3161827e287ea1e5fc62559e138e9954635c7a991d43264acf16986cbb73&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-30T14:54:08.010Z"
         }
       },
       "parent": {
@@ -6660,8 +6737,8 @@
       "icon": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6534acae-1d5b-432d-808b-7ad08d784d3e/%E6%88%AA%E5%B1%8F2023-07-01_10.39.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231029%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231029T134753Z&X-Amz-Expires=3600&X-Amz-Signature=2af816d882bada1a0e69132317b8c5d362e767b92a69779b64661cc88494ef5c&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-29T14:47:53.446Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6534acae-1d5b-432d-808b-7ad08d784d3e/%E6%88%AA%E5%B1%8F2023-07-01_10.39.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231030%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231030T135408Z&X-Amz-Expires=3600&X-Amz-Signature=fdd1a728e442d680c8ec1afefb5b4ebe0097a9e8c96b688654ae68e0a85b51d2&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-30T14:54:08.007Z"
         }
       },
       "parent": {
