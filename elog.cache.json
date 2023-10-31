@@ -3051,9 +3051,9 @@
       "relativePath": "/情绪表达/[日程总结] 初秋的第一场雾.md"
     },
     {
-      "id": "fb9bf124-6855-4cbf-95fa-e8995428032f",
-      "doc_id": "fb9bf124-6855-4cbf-95fa-e8995428032f",
-      "updated": 1698759660000,
+      "id": "7bf39fc3-8be1-4238-b002-dddc53e71d79",
+      "doc_id": "7bf39fc3-8be1-4238-b002-dddc53e71d79",
+      "updated": 1698759960000,
       "body_original": "\n# 前言\n\n\n---\n\n\n  早上没有很多的波澜，下午也是，实习的生活需要大半天的时间，实习完了及时非常疲惫，仍然感觉有很多事情，可能快毕业了，要经历和遭遇的事情也就越来越多了吧，我感觉真得适当休息，现在晚上我写这段文字的时候，心情是很烦躁的，感觉很多事情压在身上，很不舒服。\n\n\n# 正文\n\n\n---\n\n\n  即使如此，还是有一些收获的，首先今天下午到晚上吃晚饭的时候，才实现了真正意义上的cdn加速，目前的博客正常时候的速度，初次加载会慢一点，大概6秒左右，之后有了缓存之后，往后每次加载速度维持在2秒左右，cdn的效果还是比较明显的，只不过晚上用校园网访问自己的域名还是除了一点小故障，但过一会就好了，非常感谢能批评指正我问题的小伙伴，促进了我的思考，同时非常感谢tanglu的耐心解答，为我排查并成功解决了问题。\n\n\n  这是第一件值得记录的事情，速度是博客和每个网站非常看重的一点。\n\n\n  诶呦，先把其他的事情，写一下，首先是关于就业信息的填报，以及找到了原籍人才市场接纳的程序，等到户口本，一些材料准备齐全之后，明天把就业信息申报表给填完，然后是今天的实习好像还留个了作业，需要记得写掉，其实就是课程设计的deadline已经发布，在十一月的中下旬，晚餐报告设计，十二月就得出结果。\n\n\n  除去这些，自己还有一些事情需要做，首先就是计划写一篇文章， 之前有位朋友给我发邮件推荐了一款压缩软件，在明后天我打算有时间结合具体的博客搭建的方案，讲一讲这方面的知识。\n\n\n 然后就是自己的学习真的很难挤出时间去做，最主要的还不是没时间，是没心情，这就是个奇奇怪怪的问题了，心情一旦不好，做很多事情都是很费劲的。\n\n\n  最主要的还是要继续深入的学习FPGA，sharplinggo，《黄帝内经》，有时间学一学javascript。\n\n\n  当然，今天还有一个很特别的感受。\n\n\n  那些热衷于自己所热爱的事业的程序员，工程师，似乎能一直驻守在自己喜欢的岗位上，用自己的开源精神帮助每一位遇见的有缘人，而且我还感觉到一个系统所调用的各种子系统之间的关系。\n\n\n  就拿博客来讲，今天升级了twikoo的评论系统，优化了cdn，这里面涉及到方方面面的技术，从写作开始，notion的平台，到文章的发布，notionnext，再到文章通过elog进行实时备份。非常生动而有趣，作为使用者，受益者，我们已经深刻感受到这份巨大的馈赠所赋予的幸福感。所以也会引导我们尝试去追求，去做一些更有意义的事情。\n\n\n  人生而短暂，随着时间的流逝，过去的很多东西都会被遗忘，但总有一些烨烨生辉的时刻值得好好回味。\n\n\n# 总结\n\n\n---\n\n\n  写点什么好呢，我希望能好好睡觉，能更好地安排时间和生活，别让自己太累，做一些自己喜欢的事情，调节好自己的心情，同时多去发现一些有趣的事情，我的梦想是成为一个普通人。\n\n",
       "properties": {
         "password": "",
@@ -3062,20 +3062,20 @@
         "type": "Post",
         "category": "走近生活",
         "slug": "231031",
-        "Created time": "2023-10-31T13:22:00.000Z",
+        "Created time": "2023-10-31T13:45:00.000Z",
         "tags": [
           "情绪表达"
         ],
         "summary": "现在晚上我写这段文字的时候，心情是很烦躁的，感觉很多事情压在身上，很不舒服。",
         "title": "[日程总结] 夹缝中挤时间",
-        "status": "Draft",
-        "urlname": "fb9bf124-6855-4cbf-95fa-e8995428032f",
-        "updated": "2023-10-31 13:41:00"
+        "status": "Published",
+        "urlname": "7bf39fc3-8be1-4238-b002-dddc53e71d79",
+        "updated": "2023-10-31 13:46:00"
       },
       "catalog": [
         {
           "title": "情绪表达",
-          "doc_id": "fb9bf124-6855-4cbf-95fa-e8995428032f"
+          "doc_id": "7bf39fc3-8be1-4238-b002-dddc53e71d79"
         }
       ],
       "body": "",
@@ -3086,9 +3086,9 @@
   "catalog": [
     {
       "object": "page",
-      "id": "fb9bf124-6855-4cbf-95fa-e8995428032f",
-      "created_time": "2023-10-31T13:22:00.000Z",
-      "last_edited_time": "2023-10-31T13:41:00.000Z",
+      "id": "7bf39fc3-8be1-4238-b002-dddc53e71d79",
+      "created_time": "2023-10-31T13:45:00.000Z",
+      "last_edited_time": "2023-10-31T13:46:00.000Z",
       "created_by": {
         "object": "user",
         "id": "e66e3bc6-30f1-4020-b696-2787f04dc3ea"
@@ -3100,7 +3100,7 @@
       "cover": {
         "type": "external",
         "external": {
-          "url": "https://www.notion.so/images/page-cover/nasa_ibm_type_704.jpg"
+          "url": "https://bu.dusays.com/2023/10/31/6541049dec025.png"
         }
       },
       "icon": null,
@@ -3116,18 +3116,18 @@
         "type": "Post",
         "category": "走近生活",
         "slug": "231031",
-        "Created time": "2023-10-31T13:22:00.000Z",
+        "Created time": "2023-10-31T13:45:00.000Z",
         "tags": [
           "情绪表达"
         ],
         "summary": "现在晚上我写这段文字的时候，心情是很烦躁的，感觉很多事情压在身上，很不舒服。",
         "title": "[日程总结] 夹缝中挤时间",
-        "status": "Draft",
-        "urlname": "fb9bf124-6855-4cbf-95fa-e8995428032f",
-        "updated": "2023-10-31 13:41:00"
+        "status": "Published",
+        "urlname": "7bf39fc3-8be1-4238-b002-dddc53e71d79",
+        "updated": "2023-10-31 13:46:00"
       },
-      "url": "https://www.notion.so/fb9bf12468554cbf95fae8995428032f",
-      "public_url": "https://fragrantknowledge.notion.site/fb9bf12468554cbf95fae8995428032f"
+      "url": "https://www.notion.so/7bf39fc38be14238b002dddc53e71d79",
+      "public_url": "https://fragrantknowledge.notion.site/7bf39fc38be14238b002dddc53e71d79"
     },
     {
       "object": "page",
@@ -5876,8 +5876,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231031%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231031T134309Z&X-Amz-Expires=3600&X-Amz-Signature=0efe987bd4426ce99203050bb6d2e81938c1bfb1b37990b99760c3a5cae231c6&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-31T14:43:09.141Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231031%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231031T134640Z&X-Amz-Expires=3600&X-Amz-Signature=986a91fc121add0c1fc3fa15eb1ffa0c1ce2a2a2ddbee9534e74660a598870a2&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-31T14:46:40.048Z"
         }
       },
       "icon": null,
@@ -6380,8 +6380,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231031%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231031T134309Z&X-Amz-Expires=3600&X-Amz-Signature=7170381d4cdd269011e42d689c4958a3b2797db558fbacbd0f483bf667bc31d7&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-31T14:43:09.141Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231031%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231031T134640Z&X-Amz-Expires=3600&X-Amz-Signature=ce8df127bcf31b9518d9017e16908d169b490a0d45e7df533dc9501178cadeb4&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-31T14:46:40.042Z"
         }
       },
       "icon": null,
@@ -6662,8 +6662,8 @@
       "icon": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f6304c04-ca6d-4a05-a577-2bffb9cfd351/%E6%88%AA%E5%B1%8F2023-07-10_10.16.16.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231031%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231031T134309Z&X-Amz-Expires=3600&X-Amz-Signature=481f5c7eab2cfe536d17c38d909de97fb383fc6fb83be817aeeec4764d43e4e1&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-31T14:43:09.175Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f6304c04-ca6d-4a05-a577-2bffb9cfd351/%E6%88%AA%E5%B1%8F2023-07-10_10.16.16.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231031%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231031T134640Z&X-Amz-Expires=3600&X-Amz-Signature=cfa5c8ed007e5ccc068964e4503bba51d2b9d396e427289090fd9ef1e78611f1&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-31T14:46:40.053Z"
         }
       },
       "parent": {
@@ -6714,8 +6714,8 @@
       "icon": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7d6b240a-f7be-418c-bf43-04373fb7962a/%E6%88%AA%E5%B1%8F2023-07-03_14.27.48.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231031%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231031T134309Z&X-Amz-Expires=3600&X-Amz-Signature=a4eafd09567f36f8ecebc1e56100a6613fe0acbac807fd301f126a055989c5e1&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-31T14:43:09.149Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7d6b240a-f7be-418c-bf43-04373fb7962a/%E6%88%AA%E5%B1%8F2023-07-03_14.27.48.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231031%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231031T134640Z&X-Amz-Expires=3600&X-Amz-Signature=6fac149b4bbc4d27bc9a5fdc674f88fe7dae12f9d5e906f447113ff03c13bf77&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-31T14:46:40.053Z"
         }
       },
       "parent": {
@@ -6814,8 +6814,8 @@
       "icon": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6534acae-1d5b-432d-808b-7ad08d784d3e/%E6%88%AA%E5%B1%8F2023-07-01_10.39.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231031%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231031T134309Z&X-Amz-Expires=3600&X-Amz-Signature=370bc04b2e2ded1a2a57ac4361f92d26331218c156835772433008f86e95dbc5&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-31T14:43:09.174Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6534acae-1d5b-432d-808b-7ad08d784d3e/%E6%88%AA%E5%B1%8F2023-07-01_10.39.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231031%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231031T134640Z&X-Amz-Expires=3600&X-Amz-Signature=dfce6298cbe20691cfaebf3fd24e83873421be2c5b72c38952710dffb9ab65ac&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-31T14:46:40.052Z"
         }
       },
       "parent": {
