@@ -2050,7 +2050,7 @@
     {
       "id": "6d3ee319-7ddd-42f5-8854-2e6a3cfe505f",
       "doc_id": "6d3ee319-7ddd-42f5-8854-2e6a3cfe505f",
-      "updated": 1696425240000,
+      "updated": 1698899760000,
       "body_original": "\n```javascript\n- 050\n\t\t- 051\n\t\t\t- 0511极值与最值\n\t\t- 052\n\t\t\t- 0521单调性与极值判别\n\t\t- 053\n\t\t\t- 0531凹凸性与拐点\n\t\t- 054\n\t\t\t- 0541凹凸性与拐点判别\n\t\t- 055\n\t\t\t- 0551渐近线\n\t\t- 056\n\t\t\t- 0561最值或极值\n\t\t\t- 0562作函数图形\n```\n\n\n# 050\n\n\n---\n\n\n![](https://bu.dusays.com/2023/09/13/65012e68e68bb.png)\n\n\n## 051\n\n\n---\n\n\n![](https://bu.dusays.com/2023/09/13/65012e8f9b944.png)\n\n\n### 0511极值与最值\n\n\n---\n\n\n![](https://bu.dusays.com/2023/09/13/65012e9109885.png)\n\n\n![](https://bu.dusays.com/2023/09/13/65012e924dcca.png)\n\n\n![](https://bu.dusays.com/2023/09/13/65012e9384c50.png)\n\n\n![](https://bu.dusays.com/2023/09/13/65012e94b0619.png)\n\n\n## 052\n\n\n---\n\n\n![](https://bu.dusays.com/2023/09/13/65012e960c05b.png)\n\n\n### 0521单调性与极值判别\n\n\n---\n\n\n![](https://bu.dusays.com/2023/09/13/65012e973fd83.png)\n\n\n![](https://bu.dusays.com/2023/09/13/65012e988199a.png)\n\n\n## 053\n\n\n---\n\n\n![](https://bu.dusays.com/2023/09/13/65012e999dc45.png)\n\n\n### 0531凹凸性与拐点\n\n\n---\n\n\n![](https://bu.dusays.com/2023/09/13/65012e9adea41.png)\n\n\n## 054\n\n\n---\n\n\n![](https://bu.dusays.com/2023/09/13/65012ecb19473.png)\n\n\n### 0541凹凸性与拐点判别\n\n\n---\n\n\n![](https://bu.dusays.com/2023/09/13/65012ecc7c259.png)\n\n\n![](https://bu.dusays.com/2023/09/13/65012ecdecbd5.png)\n\n\n## 055\n\n\n---\n\n\n![](https://bu.dusays.com/2023/09/13/65012ecf20401.png)\n\n\n### 0551渐近线\n\n\n---\n\n\n![](https://bu.dusays.com/2023/09/13/65012ed0599f9.png)\n\n\n## 056\n\n\n---\n\n\n![](https://bu.dusays.com/2023/09/13/65012ed18775f.png)\n\n\n### 0561最值或极值\n\n\n---\n\n\n![](https://bu.dusays.com/2023/09/13/65012ed301874.png)\n\n\n### 0562作函数图形\n\n\n---\n\n\n![](https://bu.dusays.com/2023/09/13/65012ed46700d.png)\n\n",
       "properties": {
         "password": "",
@@ -2066,9 +2066,9 @@
         ],
         "summary": "极值、单调性、凹凸性",
         "title": "[高数基础] 第五讲  一元函数微分学的几何应用",
-        "status": "Published",
+        "status": "Invisible",
         "urlname": "6d3ee319-7ddd-42f5-8854-2e6a3cfe505f",
-        "updated": "2023-10-04 21:14:00"
+        "updated": "2023-11-02 04:36:00"
       },
       "catalog": [
         {
@@ -2087,7 +2087,7 @@
     {
       "id": "af1cf66e-5de8-423a-b8f1-8639cf65b907",
       "doc_id": "af1cf66e-5de8-423a-b8f1-8639cf65b907",
-      "updated": 1696425240000,
+      "updated": 1698899760000,
       "body_original": "\n```javascript\n\t- 040\n\t\t- 041\n\t\t\t- 0411导数和微分概念\n\t\t- 042\n\t\t\t- 0421导数与微分计算\n```\n\n\n# 040\n\n\n---\n\n\n![](https://bu.dusays.com/2023/09/13/65012c160ae0e.png)\n\n\n## 041\n\n\n---\n\n\n![](https://bu.dusays.com/2023/09/13/65012c1eb479a.png)\n\n\n### 0411导数和微分概念\n\n\n---\n\n\n![](https://bu.dusays.com/2023/09/13/65012c206e2f4.png)\n\n\n![](https://bu.dusays.com/2023/09/13/65012c21d7c63.png)\n\n\n![](https://bu.dusays.com/2023/09/13/65012c23bf937.png)\n\n\n![](https://bu.dusays.com/2023/09/13/65012c2513ea8.png)\n\n\n![](https://bu.dusays.com/2023/09/13/65012c2674061.png)\n\n\n![](https://bu.dusays.com/2023/09/13/65012c2778d94.png)\n\n\n## 042\n\n\n---\n\n\n![](https://bu.dusays.com/2023/09/13/65012c2900e8c.png)\n\n\n### 0421导数与微分计算\n\n\n---\n\n\n![](https://bu.dusays.com/2023/09/13/65012c2a7a2f6.png)\n\n\n![](https://bu.dusays.com/2023/09/13/65012c2cb49ad.png)\n\n\n![](https://bu.dusays.com/2023/09/13/65012c2de0b50.png)\n\n\n![](https://bu.dusays.com/2023/09/13/65012c2f49d3f.png)\n\n",
       "properties": {
         "password": "",
@@ -2103,9 +2103,9 @@
         ],
         "summary": "高数基础知识第四讲知识点索引",
         "title": "[高数基础]  第四讲 一元函数微分学的概念与计算",
-        "status": "Published",
+        "status": "Invisible",
         "urlname": "af1cf66e-5de8-423a-b8f1-8639cf65b907",
-        "updated": "2023-10-04 21:14:00"
+        "updated": "2023-11-02 04:36:00"
       },
       "catalog": [
         {
@@ -5938,8 +5938,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231102%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231102T043540Z&X-Amz-Expires=3600&X-Amz-Signature=b5c801b012d39f0d9d07a2029f0f5d718de8d50e31401460a2c78530e1034a10&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-11-02T05:35:40.758Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231102%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231102T043923Z&X-Amz-Expires=3600&X-Amz-Signature=2a9407e8e9a60f12d1176c5f7dedd8e1d9e1056bb9cf4c4f40f0874dc844000f&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-11-02T05:39:23.021Z"
         }
       },
       "icon": null,
@@ -6110,7 +6110,7 @@
       "object": "page",
       "id": "6d3ee319-7ddd-42f5-8854-2e6a3cfe505f",
       "created_time": "2023-08-08T08:13:00.000Z",
-      "last_edited_time": "2023-10-04T13:14:00.000Z",
+      "last_edited_time": "2023-11-02T04:36:00.000Z",
       "created_by": {
         "object": "user",
         "id": "e66e3bc6-30f1-4020-b696-2787f04dc3ea"
@@ -6145,9 +6145,9 @@
         ],
         "summary": "极值、单调性、凹凸性",
         "title": "[高数基础] 第五讲  一元函数微分学的几何应用",
-        "status": "Published",
+        "status": "Invisible",
         "urlname": "6d3ee319-7ddd-42f5-8854-2e6a3cfe505f",
-        "updated": "2023-10-04 13:14:00"
+        "updated": "2023-11-02 04:36:00"
       },
       "url": "https://www.notion.so/6d3ee3197ddd42f588542e6a3cfe505f",
       "public_url": "https://fragrantknowledge.notion.site/6d3ee3197ddd42f588542e6a3cfe505f"
@@ -6156,7 +6156,7 @@
       "object": "page",
       "id": "af1cf66e-5de8-423a-b8f1-8639cf65b907",
       "created_time": "2023-08-08T07:32:00.000Z",
-      "last_edited_time": "2023-10-04T13:14:00.000Z",
+      "last_edited_time": "2023-11-02T04:36:00.000Z",
       "created_by": {
         "object": "user",
         "id": "e66e3bc6-30f1-4020-b696-2787f04dc3ea"
@@ -6191,9 +6191,9 @@
         ],
         "summary": "高数基础知识第四讲知识点索引",
         "title": "[高数基础]  第四讲 一元函数微分学的概念与计算",
-        "status": "Published",
+        "status": "Invisible",
         "urlname": "af1cf66e-5de8-423a-b8f1-8639cf65b907",
-        "updated": "2023-10-04 13:14:00"
+        "updated": "2023-11-02 04:36:00"
       },
       "url": "https://www.notion.so/af1cf66e5de8423ab8f18639cf65b907",
       "public_url": "https://fragrantknowledge.notion.site/af1cf66e5de8423ab8f18639cf65b907"
@@ -6442,8 +6442,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231102%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231102T043540Z&X-Amz-Expires=3600&X-Amz-Signature=2cb9d456db40880ebfdb89668e02f7dca1beaf2fa87d62111d8ab3f284366f5c&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-11-02T05:35:40.748Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231102%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231102T043923Z&X-Amz-Expires=3600&X-Amz-Signature=f9630c2e8021c63757b5417a35eb174b271909ef9303922dad0d29456243cb4d&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-11-02T05:39:23.008Z"
         }
       },
       "icon": null,
@@ -6861,8 +6861,8 @@
       "icon": {
         "type": "file",
         "file": {
-          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6534acae-1d5b-432d-808b-7ad08d784d3e/%E6%88%AA%E5%B1%8F2023-07-01_10.39.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231102%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231102T043540Z&X-Amz-Expires=3600&X-Amz-Signature=e1bcb78510144d59cef7baba05632a3e490303a06418b0c9ca7060b1265c7582&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-11-02T05:35:40.761Z"
+          "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6534acae-1d5b-432d-808b-7ad08d784d3e/%E6%88%AA%E5%B1%8F2023-07-01_10.39.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231102%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231102T043923Z&X-Amz-Expires=3600&X-Amz-Signature=bb35976b8dfb18f22307deabf47dd73c2e64115c50ea2bc4399a6a6218910dfd&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-11-02T05:39:23.024Z"
         }
       },
       "parent": {
