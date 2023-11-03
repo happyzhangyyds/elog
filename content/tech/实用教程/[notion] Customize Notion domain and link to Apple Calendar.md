@@ -11,7 +11,7 @@ summary: Customizing the domain for Notion and integrating it with Apple Calenda
 title: "[notion] Customize Notion domain and link to Apple Calendar"
 status: Published
 urlname: eedd219c-f9bd-4dff-8b1b-c900de9496fc
-updated: "2023-11-02 17:17:00"
+updated: "2023-11-02 09:17:00"
 ---
 
 # Preface

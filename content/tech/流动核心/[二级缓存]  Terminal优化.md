@@ -11,7 +11,7 @@ summary: 及时对建议库进行更新是一项非常重要的事情
 title: "[二级缓存]  Terminal优化"
 status: Published
 urlname: df30cd4e-bdcb-4fc4-8b5e-a6218d029450
-updated: "2023-11-02 17:17:00"
+updated: "2023-11-02 09:17:00"
 ---
 
 ## 三、建议库的收纳与更新

@@ -11,7 +11,7 @@ summary: 我特别喜欢ubuntu的命令行的使用方式，这样可以更加�
 title: "[技术分享] Ubuntu_linux"
 status: Published
 urlname: cfe7d585-e634-434b-b08a-8fc6dd6a8906
-updated: "2023-11-02 17:18:00"
+updated: "2023-11-02 09:18:00"
 ---
 
 > 💡 <u>**230704 更新**</u>  

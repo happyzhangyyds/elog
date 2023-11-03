@@ -11,7 +11,7 @@ summary: 介绍win桌面美化插件，WinDynamicDesktop和rainmeter
 title: "[桌面美化] Windows也可以像Mac一样优雅"
 status: Published
 urlname: 2b1ec1b7-ee27-45c5-a0f8-34e348858661
-updated: "2023-11-02 17:18:00"
+updated: "2023-11-02 09:18:00"
 ---
 
 # 前言
@@ -29,7 +29,7 @@ win 系统留下的还是装完 mac 之后最后的三个常用工具。
 
 ---
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7509f8e8-73ce-47c1-841a-cd14ae05dc1e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231103T003602Z&X-Amz-Expires=3600&X-Amz-Signature=ab4a313e92cd24bab5969760dc0a84f7a1a4d480f038dc471c5b987648cda9c1&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7509f8e8-73ce-47c1-841a-cd14ae05dc1e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231103T145043Z&X-Amz-Expires=3600&X-Amz-Signature=75c2e967523ee1f70341d757883a9b4b20b1b592639990decb972e254cf4996c&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 这是优化后的 win10，看上去有几分像**macOS Monterey**
 
@@ -61,7 +61,7 @@ apple 在审美上我一直还是比较认可的。
 
 正如您在上面图片中看到的三个小可爱一样，她们都对应着相应的快捷方式，您可以设置为你常用的软件或或者文件、文件夹。
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c35d64f5-e725-439a-9a6f-5300ccf75bb0/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231103T003602Z&X-Amz-Expires=3600&X-Amz-Signature=9d30dd78bb085377060dde54762ccc781f3c3291aa90e1a5834699bb784b0dc7&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c35d64f5-e725-439a-9a6f-5300ccf75bb0/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231103T145043Z&X-Amz-Expires=3600&X-Amz-Signature=4d79fe9ceab9b8f6f9b7d1a7f2cf70ddb57db24b818f54296cf92717dd584444&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 我用到的是这个主题文件，在[漫锋网](https://zhutix.com/new/)可以选择更多你喜欢的主题，如果有兴趣的话，您还可以在这里自定义您的鼠标，比如我用的就是花瓣鼠标。
 
@@ -95,4 +95,4 @@ win 上还有很多好用的软件，比如 quicker，多场景触发，超级�
 
 聆听作者大大用 freepiano 弹奏的《花之舞》
 
-[image](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/80ad5268-2a07-463f-8768-eb6afe7a986d/%E8%8A%B1%E4%B9%8B%E8%88%9E.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231103T003602Z&X-Amz-Expires=3600&X-Amz-Signature=1d5def1236f40314234f75e66f1fd1560fcb8f215426b42dbcf894bee6592b97&X-Amz-SignedHeaders=host&x-id=GetObject)
+[image](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/80ad5268-2a07-463f-8768-eb6afe7a986d/%E8%8A%B1%E4%B9%8B%E8%88%9E.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231103T145043Z&X-Amz-Expires=3600&X-Amz-Signature=25ed0a8af15fabd906ef34efbb2f3241715c8761202396a5f85d66325670cea5&X-Amz-SignedHeaders=host&x-id=GetObject)

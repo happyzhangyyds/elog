@@ -11,7 +11,7 @@ summary: "本章主要讲解 Latch 是什么,以及它的产生、危害、如�
 title: "[野火] 第14章  避免 Latch 的产生"
 status: Published
 urlname: 59d63641-0bfa-4897-84d7-9bac488a5b93
-updated: "2023-11-02 17:17:00"
+updated: "2023-11-02 09:17:00"
 ---
 
 > 💡 特别鸣谢野火 FPGA 的教学与帮助！  

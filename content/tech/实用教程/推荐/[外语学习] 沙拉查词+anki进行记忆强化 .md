@@ -12,7 +12,7 @@ summary: 介绍了通过沙拉查词+anki导出的方式，对学习的单词进
 title: "[外语学习] 沙拉查词+anki进行记忆强化 "
 status: Published
 urlname: 0f241874-f693-4d17-81ea-8fb4f49943eb
-updated: "2023-11-02 17:17:00"
+updated: "2023-11-02 09:17:00"
 ---
 
 # 前言
@@ -92,7 +92,7 @@ anki 是一个专注于背诵的软件，具有极高的自由度和丰富的玩
 
 最主要的是 html 的模版的编写，我这里提供了针对沙拉查词的模板，可以根据自己的需要，自行编写和修改 html 和 css，同时提供针对沙拉查词的 html 模板（右键下载）
 
-[image](https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/c4372573-9156-4aa9-8233-b249b7e1691e/%E5%BE%B7%E8%AF%AD.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231103T003536Z&X-Amz-Expires=3600&X-Amz-Signature=4489fc917a34731a3c71351a040f8df61ffd432ed13aff3fa42ec10c46aa6f73&X-Amz-SignedHeaders=host&x-id=GetObject)
+[image](https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/c4372573-9156-4aa9-8233-b249b7e1691e/%E5%BE%B7%E8%AF%AD.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231103%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231103T145035Z&X-Amz-Expires=3600&X-Amz-Signature=fc4bf4888fe48f7fceeb6e7f2f071e774bdc565bf00e29adeb442b8d7ce0f17e&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 ```html
 <head>

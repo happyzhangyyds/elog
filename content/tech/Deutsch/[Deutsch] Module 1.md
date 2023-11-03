@@ -11,7 +11,7 @@ summary: "Within this module, knowledge pertaining to the study of the German la
 title: "[Deutsch] Module 1"
 status: Published
 urlname: d0af679f-6886-49b7-8558-2dc5b237ad62
-updated: "2023-11-02 17:17:00"
+updated: "2023-11-02 09:17:00"
 ---
 
 # Preface

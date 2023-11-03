@@ -11,7 +11,7 @@ summary: FPGA基本知识
 title: "[野火] 第8章  初识 Verilog HDL"
 status: Published
 urlname: b9bdeecc-1f6b-4824-b9e3-9f085a5e3fc3
-updated: "2023-11-02 17:17:00"
+updated: "2023-11-02 09:17:00"
 ---
 
 ```markdown
