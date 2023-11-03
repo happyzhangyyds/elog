@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@elog/cli": "^0.8.0"
+  },
+  "scripts": {
+    "build": "yarn", 
+    "elog:init": "elog init",
+    "sync:local": "elog sync -e .elog.env", 
+    "sync": "elog sync", 
+    "clean": "elog clean"
+  }
+}
+
