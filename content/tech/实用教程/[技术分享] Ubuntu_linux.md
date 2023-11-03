@@ -5,14 +5,13 @@ date: "2023-05-01"
 type: Post
 category: 动手实践
 slug: ubuntu
-Created time: "2023-05-03T05:27:00.000Z"
 tags:
   - 实用教程
 summary: 我特别喜欢ubuntu的命令行的使用方式，这样可以更加简洁纯粹的去做一件事情
 title: "[技术分享] Ubuntu_linux"
 status: Published
 urlname: cfe7d585-e634-434b-b08a-8fc6dd6a8906
-updated: "2023-10-04 21:16:00"
+updated: "2023-11-02 17:18:00"
 ---
 
 > 💡 <u>**230704 更新**</u>  

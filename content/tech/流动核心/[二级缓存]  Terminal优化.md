@@ -5,14 +5,13 @@ date: "2023-10-05"
 type: Post
 category: 走近生活
 slug: Terminal
-Created time: "2023-10-05T11:41:00.000Z"
 tags:
   - 流动核心
 summary: 及时对建议库进行更新是一项非常重要的事情
 title: "[二级缓存]  Terminal优化"
 status: Published
 urlname: df30cd4e-bdcb-4fc4-8b5e-a6218d029450
-updated: "2023-10-06 16:10:00"
+updated: "2023-11-02 17:17:00"
 ---
 
 ## 三、建议库的收纳与更新

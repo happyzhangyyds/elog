@@ -5,14 +5,13 @@ date: "2023-10-10"
 type: Post
 category: 走近生活
 slug: sprache
-Created time: "2023-10-10T02:24:00.000Z"
 tags:
   - 实用教程
 summary: 笔记的三大策略、信息筛选、如何整理以及主动回忆。
 title: "[记忆方法] 整理自up主：ZoeLanguages的学习经验"
 status: Published
 urlname: 8c00dfde-496e-4e07-84c8-35c9d7d6470c
-updated: "2023-10-12 17:42:00"
+updated: "2023-11-02 17:17:00"
 ---
 
 # 问题

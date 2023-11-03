@@ -5,14 +5,13 @@ date: "2023-09-19"
 type: Post
 category: 璀璨星空
 slug: FPGA009
-Created time: "2023-09-19T11:36:00.000Z"
 tags:
   - 野火FPGA
 summary: 建立一个完整的工程来验证软件安装是否正确
 title: "[野火] 第9章  点亮你的 LED 灯"
 status: Published
 urlname: 494e59b0-ebb7-49aa-abd9-2fa04ae82ba2
-updated: "2023-10-04 21:15:00"
+updated: "2023-11-02 17:17:00"
 ---
 
 ```markdown

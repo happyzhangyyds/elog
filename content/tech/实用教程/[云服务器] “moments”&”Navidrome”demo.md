@@ -5,14 +5,13 @@ date: "2023-09-24"
 type: Post
 category: 动手实践
 slug: azure
-Created time: "2023-09-21T11:35:00.000Z"
 tags:
   - 实用教程
 summary: "用热情去做好自己喜欢的事情 "
 title: "[云服务器] “moments”&”Navidrome”demo"
 status: Published
 urlname: b457af70-b5c6-460a-870a-3896d3c41856
-updated: "2023-10-04 21:30:00"
+updated: "2023-11-02 17:17:00"
 ---
 
 # 前言

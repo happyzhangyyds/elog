@@ -5,14 +5,13 @@ date: "2023-10-18"
 type: Post
 category: 璀璨星空
 slug: DeuM1
-Created time: "2023-10-18T12:48:00.000Z"
 tags:
   - Deutsch
 summary: "Within this module, knowledge pertaining to the study of the German language shall be documented, facilitating subsequent revision."
 title: "[Deutsch] Module 1"
 status: Published
 urlname: d0af679f-6886-49b7-8558-2dc5b237ad62
-updated: "2023-10-18 20:56:00"
+updated: "2023-11-02 17:17:00"
 ---
 
 # Preface

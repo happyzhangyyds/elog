@@ -5,14 +5,13 @@ date: "2023-09-27"
 type: Post
 category: 璀璨星空
 slug: sharplingo
-Created time: "2023-09-27T13:27:00.000Z"
 tags:
   - 近期规划
 summary: 背诵sharp的记录
 title: "[背诵记忆] 十月sharp小酌"
 status: Published
 urlname: a29f2851-071c-475e-8d09-b3f4b23fabf8
-updated: "2023-10-08 21:47:00"
+updated: "2023-11-02 17:17:00"
 ---
 
 ## 前言

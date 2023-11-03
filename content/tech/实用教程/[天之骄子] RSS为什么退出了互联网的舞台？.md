@@ -5,14 +5,13 @@ date: "2023-08-08"
 type: Post
 category: 动手实践
 slug: RSS
-Created time: "2023-08-08T02:49:00.000Z"
 tags:
   - 实用教程
 summary: "万物皆可RSS（\U0001F436保命）"
 title: "[天之骄子] RSS为什么退出了互联网的舞台？"
 status: Published
 urlname: a36853ca-49f6-4e31-a18f-1f12ad5e0090
-updated: "2023-10-04 21:14:00"
+updated: "2023-11-02 17:18:00"
 ---
 
 # 前言

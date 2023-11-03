@@ -5,14 +5,13 @@ date: "2023-10-14"
 type: Post
 category: 动手实践
 slug: Calendar
-Created time: "2023-10-14T07:46:00.000Z"
 tags:
   - 实用教程
 summary: Customizing the domain for Notion and integrating it with Apple Calendar is an incredibly marvelous endeavor.
 title: "[notion] Customize Notion domain and link to Apple Calendar"
 status: Published
 urlname: eedd219c-f9bd-4dff-8b1b-c900de9496fc
-updated: "2023-10-14 16:15:00"
+updated: "2023-11-02 17:17:00"
 ---
 
 # Preface

@@ -5,14 +5,13 @@ date: "2023-09-19"
 type: Post
 category: 璀璨星空
 slug: FPGA008
-Created time: "2023-09-19T09:22:00.000Z"
 tags:
   - 野火FPGA
 summary: FPGA基本知识
 title: "[野火] 第8章  初识 Verilog HDL"
 status: Published
 urlname: b9bdeecc-1f6b-4824-b9e3-9f085a5e3fc3
-updated: "2023-10-04 21:15:00"
+updated: "2023-11-02 17:17:00"
 ---
 
 ```markdown
