@@ -208,6 +208,12 @@ uglyURLs = false
         pre = "internal"
         post = ""
     [[menu.main]]
+        pageref = "/categories/"
+        name = "分类"
+        weight = 4
+        pre = "internal"
+        post = ""
+    [[menu.main]]
         weight = 4
         identifier = "theme-switcher"
     # [[menu.main]]
