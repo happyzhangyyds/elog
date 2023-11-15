@@ -6534,8 +6534,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231115%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231115T120626Z&X-Amz-Expires=3600&X-Amz-Signature=2aafd17d166dfa6e2d7ae3be4101fb8963a178b2bc54863654b113e129277344&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-11-15T13:06:26.730Z"
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231115%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231115T120833Z&X-Amz-Expires=3600&X-Amz-Signature=6f27ef09957a7467a255e8d27ecc31365836cf3abd9ab52bc1de72c3e9d170ca&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-11-15T13:08:33.832Z"
         }
       },
       "icon": null,
@@ -7027,8 +7027,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231115%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231115T120626Z&X-Amz-Expires=3600&X-Amz-Signature=20cfa3d9d8922abf5b13a781e60b8a18fd2eeda634418397dcf2ebcbf8fb9424&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-11-15T13:06:26.741Z"
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231115%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231115T120833Z&X-Amz-Expires=3600&X-Amz-Signature=0a94c3cfe484d34745a4a3c98fe3ae40d8f8a284977d7f81ebdd584fb95bfb34&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-11-15T13:08:33.839Z"
         }
       },
       "icon": null,
