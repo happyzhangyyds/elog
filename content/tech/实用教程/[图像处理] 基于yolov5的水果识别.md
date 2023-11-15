@@ -9,9 +9,9 @@ tags:
   - 实用教程
 summary: 选择yolov5自定义数据集对红富士、黄元帅、国光进行识别。
 title: "[图像处理] 基于yolov5的水果识别"
-status: Draft
+status: Published
 urlname: b8a4b0fc-53f9-4796-814f-433c2ec41d68
-updated: "2023-11-15 12:03:00"
+updated: "2023-11-15 12:06:00"
 ---
 
 # 前言
