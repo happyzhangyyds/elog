@@ -3304,7 +3304,7 @@
     {
       "id": "b8a4b0fc-53f9-4796-814f-433c2ec41d68",
       "doc_id": "b8a4b0fc-53f9-4796-814f-433c2ec41d68",
-      "updated": 1700049660000,
+      "updated": 1700049780000,
       "body_original": "\n# 前言\n\n\n---\n\n\n  这几天一方面在忙着工训的实习，明天就到工训实习的实习的最后一天的，已经五六天没写文章了。简单回顾一下，\n\n\n```text\n  周二早上实习，下午睡到两点，一直工作到晚上九点四十，在AutoDL上跑完了自己的数据集，下午三个小时数据标注，晚上熟悉云服务器的环境配置，从八点多开始跑770张图片200轮的训练；\n  周一早上实习，下午到三点回去，睡到晚上，晚上心情很郁闷，取完快递拆箱，完成了红富士，黄元帅，国光三种小苹果共计770张到数据采集；\n  周日上午实在没有动力，打了一上午饥荒，下午去图书馆打了一下午饥荒，活到了60天，但是差点心态崩了，晚上着手开始写综合课设的中期检查；\n  周六双十一，我翻了翻微信，哔哩哔哩，番茄自习室，sharplingo，但是都没有发现白天在干啥，周六极有可能是心情低落的时期；\n  好的，然后周五的记录就续上了。关于心情的总结不是重点，先把最近yoloV5的工作给梳理出来。\n```\n\n\n# 正文\n\n\n---\n\n\n  这部分主要介绍是怎么认识yolov5的，起因是电子课程设计，选择了基于图像处理的水果识别的这个课题，然后开始查资料，了解相关的技术路线。由于是第一次做这种课题，并且还得负责主要任务，心累之余做肯定是要做的。我先去bilibili查找了相关的课题，大多数是通过matlab进行相对应的识别的，但是我觉得似乎不是很符合我的预期。\n\n\n![](https://bu.dusays.com/2023/11/15/65547538298c7.png)\n\n\n  \n\n\n## 基本思路\n\n\n---\n\n\n  于是我打算更进一步去想如何去做这个问题，当然解决问题，和写报告是很不一样的思路，写报告是不管怎么样，尽可能可读性强，但是解决问题，最主要的是理清楚思路。既然bilibli的综合排序没有找到我要的效果，通过询问gpt我大概得出了以下的思路：\n\n\n```text\n基于图像处理的水果分类系统设计背后的原理如下：\n1.图像获取：系统通过摄像头或其他图像采集设备获取水果的图像。\n2.图像预处理：对获取的图像进行预处理，包括图像去噪、图像增强、图像分割等操作，以提高后续处理的准确性和效果。\n3.特征提取：从预处理后的图像中提取出代表水果特征的信息，例如颜色、纹理、形状等。\n4.特征选择：根据水果分类的需求，选择最具区分度的特征进行分类，可以使用特征选择算法来辅助选择最优特征。\n5.分类器设计：根据选定的特征，设计合适的分类器模型，常用的分类器包括支持向量机（SVM）、人工神经网络（ANN）、决策树等。\n6.训练和测试：使用已标记的水果图像数据集进行分类器的训练，并使用另外的测试数据集评估分类器的性能。\n7.分类结果：将待分类的水果图像输入训练好的分类器，通过分类器进行分类，并输出水果的类别标签或概率。\n8.系统优化：根据分类结果的准确性和效率，对系统进行优化，包括调整参数、改进算法等。\n```\n\n\n  起初我想从比较熟悉的FPGA的相关的技术路线进行尝试，也查阅了相关的材料，但是实现的难度有点高。涉及到特征提取的有Sobel算法，可以对轮廓做很好的处理。\n\n\n  然后还发现一个[up主做的毕设](https://www.bilibili.com/video/BV1rs4y1X7bE/?spm_id_from=333.337.search-card.all.click&vd_source=237e295a40d7aaea043ead8c0d2c78ab)和这个也是相关的，很有意思。\n\n\n  然后查找了一些文献，如下：\n\n\n1.[基于多颜色和局部纹理的水果识别算法研究](http://cloud.matrixcore.top/s/BxpMf7ceWiMbpyY)\n\n\n2.[水果分类的多模板匹配算法及其FPGA实现](http://cloud.matrixcore.top/s/Y8ey2oj99pKee6g)\n\n\n3.[水果自动识别的BP神经网络方法](http://cloud.matrixcore.top/s/nFgerGYRqZZy8b3)\n\n\n4.[基于注意力YOLOv5模型的自动水果识别](http://cloud.matrixcore.top/s/exaX3dNwfn4jgbZ)\n\n\n5.[基于轻量化改进YOLOv5的苹果树产量测定方法](http://cloud.matrixcore.top/s/ecDHTxi8N3SjD4T)\n\n\n  在文献1，当中采取的方式，首先是先对图像进行预处理，对图像进行平滑去噪，图像增强，完成图像从环境中分离出来。然后进行特征提取，其中有颜色特征，纹理特征，然后放入BP神经网络分类器进行训练。\n\n\n  在文献2，主要是针对方案一中的图像预处理进行了相对应的优化，采用了FPGA当中的Soebl边缘化提取特征向量。然后对比SSD、YOLO、CenterNet等方式的性能。\n  在文献3，基本思路是和文献1类似的，多出了一些特征，比如面积特征，周长特征，弧度特征，颜色特征，然后通过神经网络进行分类。\n  在文献4，采用的方式是进行YOLOv5模型进行水果自动识别，但是对模型进行了一些改进。在yolov5对网络后面又增加了一层网络，按照重要程度强化有用的特征，抑制掉无用的特征，替换了边框回归损失函数，提升了预测的精度。\n\n\n  在文献5，同样也是对yolov5算法进行优化和改进，也是通过更换深度可分离卷积和添加注意力机制模块，提升准确度和降低网络负担。 \n\n\n## 选择yolov5\n\n\n---\n\n\n  因为刚接触这个问题，通过查阅的文献，感觉选择yolo的方式更加便于实践学习和操作。\n\n\n  关于yolov5的简介：\n\n\n```text\nYOLOv5是一种基于深度学习的目标检测算法，它是YOLO（You Only Look Once）系列算法的最新版本。YOLOv5的原理可以概括为以下几个步骤：\n\n1. 基础网络：YOLOv5使用了一种轻量级的卷积神经网络作为基础网络。这个网络主要用于提取图像的特征。\n\n2. 特征提取：YOLOv5通过基础网络将输入图像转换为一系列特征图。这些特征图具有不同的尺度和语义信息，用于检测不同大小和类别的目标。\n\n3. Anchor boxes：YOLOv5使用了一种称为Anchor boxes的技术来预测目标的位置和类别。Anchor boxes是一些预定义的边界框，每个框都与一个特定的尺度和长宽比相关联。YOLOv5通过在特征图上滑动这些Anchor boxes来检测目标。\n\n4. 预测：对于每个Anchor box，YOLOv5预测目标的位置和类别。位置预测使用边界框的中心坐标、宽度和高度来表示。类别预测使用一个多类别分类器来确定目标的类别。\n\n5. 损失函数：YOLOv5使用一种称为YOLOv5 Loss的损失函数来训练网络。该损失函数综合考虑了位置和类别的预测误差，并通过最小化损失来优化网络参数。\n\n6. 多尺度检测：YOLOv5通过在不同尺度的特征图上进行检测来提高目标检测的性能。这种多尺度检测可以帮助模型检测不同大小的目标。\n\n总体而言，YOLOv5通过将图像分为不同的网格单元，并在每个网格单元上预测目标的位置和类别来实现目标检测。它具有较快的检测速度和较高的准确率，适用于各种实时应用场景，如自动驾驶、视频监控和物体识别等。\n```\n\n\n  好在，可以站在巨人的肩膀上。我通过博主：思绪无限 的[文章](https://www.cnblogs.com/sixuwuxian/p/17372580.html)进行了学习。\n\n\n  \n\n\n## 环境配置\n\n\n---\n\n\n  对于刚开始使用pycharm的我，来说，配置环境还是走了不少弯路的，前期，要下载pycharm和anaconda，用于配置环境，一开始我在Mac系统上配置环境没有成功，一直不知道如何把pycharm关联anaconda的环境，后来就转到win下进行操作。关于如何搭建并配置深度学习环境，我参考了up主：[思绪无限的教程](https://www.bilibili.com/video/BV1Hg4y1t78v/?spm_id_from=333.999.0.0&vd_source=237e295a40d7aaea043ead8c0d2c78ab)，初步完成了环境的激活。\n\n\n## 训练自己的数据集\n\n\n---\n\n\n  这部分介绍如何训练自己的数据集。\n\n\n### 采集所需要的识别物体的图像\n\n\n---\n\n\n  我是通过手机进行摄影，然后通过usb上传到电脑，然后手机拍摄的图片肯定太大了，而且在[yolov5的官方文档](https://docs.ultralytics.com/yolov5/)上说，训练的数据集最好能达到1500张以上。然后非常感谢一个宝藏的批量图片裁剪[在线网页](https://uutool.cn/img-clip-batch/)，没有广告，而且效率很高，我把770多张图片裁剪为640*640的大小，减小图片的体积。\n\n\n### labelimg\n\n\n---\n\n\n  之前通过23张图片，简单熟悉了yolo的训练流程，后面购买了，红富士，黄元帅，和国光，三种类型的苹果进行数据采集，目的是为了通过yolov5来训练模型识别这三种水果的能力。\n\n\n  前期通过不同角度完成了对数据集的拍摄，共计770张图片，然后次日花了很久用labelimg软件对图片进行数据标注，在此不得不提一下。labelimg软件我刚开始觉得非常难用，因为需要配置python环境，而且动不动就闪退。就在我找不到头绪之际，非常感谢up主：[小周不会做](https://www.bilibili.com/video/BV1Xh4y1574N/?spm_id_from=333.880.my_history.page.click&vd_source=237e295a40d7aaea043ead8c0d2c78ab) 提供的灵感，up主提供了labelimg的打包版，这样子就可以启动并进行使用了，让图片得到顺利的标注。\n\n\n### 正确配置路径\n\n\n---\n\n\n  然后可以现在本地环境上进行调试一下，可以参考这位up主：[遗落的教程](https://www.bilibili.com/video/BV1f94y1R7a4/?spm_id_from=333.880.my_history.page.click&vd_source=237e295a40d7aaea043ead8c0d2c78ab)，讲解得很详细。还有怎么用快捷键打标签，可以参照这位up主：[圣音去扉](https://space.bilibili.com/471665566)的[教程](https://www.bilibili.com/video/BV1rT411f7Up/?spm_id_from=333.880.my_history.page.click&vd_source=237e295a40d7aaea043ead8c0d2c78ab)。然后需要现在本地环境能够正常的跑成功，在这前提下，可以尝试使用带有GPU的云服务器进行训练。\n\n\n### AutoDL\n\n\n---\n\n\n  关于如何使用AutoDL，非常感谢up主：[你可是处女座啊](https://space.bilibili.com/21060026)的[教程](https://www.bilibili.com/video/BV13s4y1V7b4/?spm_id_from=333.880.my_history.page.click&vd_source=237e295a40d7aaea043ead8c0d2c78ab)，介绍得很详细，如何上传文件夹到服务器，可以使用scp命令，也可以使用网页进行上传。\n\n\n  然后，你还需要配置CUDA环境，在服务器上安装必要的环境，然后就可以开始使用gpu进行愉快的训练了。我使用的是英伟达的3080显卡，速度已经感觉很快了，但是770张200轮跑下来，也花了一个半小时。\n\n\n# 总结\n\n\n---\n\n\n  后续还需要进行参数微调，但是自我感觉时间有限，还有点累，所以，这篇文章后面就写得很简单，我又得做又得写报告，虽然很难崩得住，但是也得顶住啊。\n\n",
       "properties": {
         "password": "",
@@ -3316,11 +3316,11 @@
         "tags": [
           "实用教程"
         ],
-        "summary": "选择yolov5自定义数据集对",
+        "summary": "选择yolov5自定义数据集对红富士、黄元帅、国光进行识别。",
         "title": "[图像处理] 基于yolov5的水果识别",
         "status": "Draft",
         "urlname": "b8a4b0fc-53f9-4796-814f-433c2ec41d68",
-        "updated": "2023-11-15 12:01:00"
+        "updated": "2023-11-15 12:03:00"
       },
       "catalog": [
         {
@@ -3338,7 +3338,7 @@
       "object": "page",
       "id": "b8a4b0fc-53f9-4796-814f-433c2ec41d68",
       "created_time": "2023-11-15T06:49:00.000Z",
-      "last_edited_time": "2023-11-15T12:01:00.000Z",
+      "last_edited_time": "2023-11-15T12:03:00.000Z",
       "created_by": {
         "object": "user",
         "id": "e66e3bc6-30f1-4020-b696-2787f04dc3ea"
@@ -3369,11 +3369,11 @@
         "tags": [
           "实用教程"
         ],
-        "summary": "选择yolov5自定义数据集对",
+        "summary": "选择yolov5自定义数据集对红富士、黄元帅、国光进行识别。",
         "title": "[图像处理] 基于yolov5的水果识别",
         "status": "Draft",
         "urlname": "b8a4b0fc-53f9-4796-814f-433c2ec41d68",
-        "updated": "2023-11-15 12:01:00"
+        "updated": "2023-11-15 12:03:00"
       },
       "url": "https://www.notion.so/yolov5-b8a4b0fc53f94796814f433c2ec41d68",
       "public_url": "https://fragrantknowledge.notion.site/yolov5-b8a4b0fc53f94796814f433c2ec41d68"
@@ -6534,8 +6534,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231115%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231115T120209Z&X-Amz-Expires=3600&X-Amz-Signature=2b5a1030a2522af233b3d7f6e3a4bd5b6fa59291f9109b47b9ef8e8afda802ca&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-11-15T13:02:09.936Z"
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231115%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231115T120405Z&X-Amz-Expires=3600&X-Amz-Signature=8e5e50f95eb932c1bbfbed490d34d250a001bffe7fb15c4c69ae8d285a737350&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-11-15T13:04:05.589Z"
         }
       },
       "icon": null,
@@ -7027,8 +7027,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231115%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231115T120209Z&X-Amz-Expires=3600&X-Amz-Signature=35f8cf9f85370e9d3796c82da9cfa4a0cf7bf534d0dcd2b6cee9f6d72231e584&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-11-15T13:02:09.938Z"
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231115%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231115T120405Z&X-Amz-Expires=3600&X-Amz-Signature=3d35d5d77778e3eee44f6be575d0d71af159c0e726f7fea5a1ceb6a29be3a851&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-11-15T13:04:05.591Z"
         }
       },
       "icon": null,
