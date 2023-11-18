@@ -11,7 +11,7 @@ summary: 选择yolov5自定义数据集对红富士、黄元帅、国光进行�
 title: "[图像处理] 基于yolov5的水果识别"
 status: Published
 urlname: b8a4b0fc-53f9-4796-814f-433c2ec41d68
-updated: "2023-11-15 12:06:00"
+updated: "2023-11-18 08:31:00"
 ---
 
 # 前言
@@ -123,6 +123,7 @@ YOLOv5是一种基于深度学习的目标检测算法，它是YOLO（You Only L
 ---
 
 我是通过手机进行摄影，然后通过 usb 上传到电脑，然后手机拍摄的图片肯定太大了，而且在[yolov5 的官方文档](https://docs.ultralytics.com/yolov5/)上说，训练的数据集最好能达到 1500 张以上。然后非常感谢一个宝藏的批量图片裁剪[在线网页](https://uutool.cn/img-clip-batch/)，没有广告，而且效率很高，我把 770 多张图片裁剪为 640\*640 的大小，减小图片的体积。
+11.18 更新：今天用 safari 测试才发现，可能是我在 win 上开了插件，所以没广告，所以也在 safari 上装了插件。
 
 ### labelimg
 
