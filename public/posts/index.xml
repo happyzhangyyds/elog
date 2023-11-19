@@ -1,0 +1,965 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on MatrixCore</title>
+    <link>https://matrixcore.life/posts/</link>
+    <description>Recent content in Posts on MatrixCore</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 18 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://matrixcore.life/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[哲学启蒙] 用马克思哲学解读《道德经》</title>
+      <link>https://matrixcore.life/posts/%E5%AF%B9%E8%AF%9D%E6%9C%AA%E6%9D%A5/marxism-1/</link>
+      <pubDate>Sat, 18 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%AF%B9%E8%AF%9D%E6%9C%AA%E6%9D%A5/marxism-1/</guid>
+      <description>所以马克思哲学的开篇，能否这样写，世界是实践的，实践是运动的，运动是有规律的，规律是可以被认识的呢？</description>
+    </item>
+    
+    <item>
+      <title>[笔记同传] 用双手减少大脑过度思考的偏差</title>
+      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/video-record/</link>
+      <pubDate>Sat, 18 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/video-record/</guid>
+      <description>笔记同传的思想归根到底还是来自于从前老师的提醒：不动笔墨不读书，本质上就是读电子书，做电子笔记。</description>
+    </item>
+    
+    <item>
+      <title>[图像处理] yolov5后续的性能调节</title>
+      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/yolov5-2/</link>
+      <pubDate>Fri, 17 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/yolov5-2/</guid>
+      <description>接下来的主要任务是把中期的课设报告完善一下，提升逻辑性，美观度，加一些问题和思考。</description>
+    </item>
+    
+    <item>
+      <title>[检索技巧] 关键字匹配提升准确率</title>
+      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/231116/</link>
+      <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/231116/</guid>
+      <description>获取想要的信息要花费一些心力，而时间似乎又是有限的，我们可以采用高级检索的方式对结果进行精确匹配。</description>
+    </item>
+    
+    <item>
+      <title>[图像处理] 基于yolov5的水果识别</title>
+      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/yolov5-1/</link>
+      <pubDate>Wed, 15 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/yolov5-1/</guid>
+      <description>选择yolov5自定义数据集对红富士、黄元帅、国光进行识别。</description>
+    </item>
+    
+    <item>
+      <title>[唯物史观] 何以动心，心隐尚之</title>
+      <link>https://matrixcore.life/posts/%E5%AF%B9%E8%AF%9D%E6%9C%AA%E6%9D%A5/heart/</link>
+      <pubDate>Fri, 10 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%AF%B9%E8%AF%9D%E6%9C%AA%E6%9D%A5/heart/</guid>
+      <description>我穿越过荒诞主义的走廊，来到虚无主义的宫殿，却又让我见识到存在主义的炙热。</description>
+    </item>
+    
+    <item>
+      <title>[学习追问] What还是How那么Why  </title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231110/</link>
+      <pubDate>Fri, 10 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231110/</guid>
+      <description>当秋叶落下之后，我回到了本该属于我的地方。</description>
+    </item>
+    
+    <item>
+      <title>[空谷回音] 智能时代背后的离子化</title>
+      <link>https://matrixcore.life/posts/%E5%AF%B9%E8%AF%9D%E6%9C%AA%E6%9D%A5/bing001/</link>
+      <pubDate>Mon, 06 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%AF%B9%E8%AF%9D%E6%9C%AA%E6%9D%A5/bing001/</guid>
+      <description>我希望通过不同的方式来完成空谷的回音。</description>
+    </item>
+    
+    <item>
+      <title>[偶然天成] 取次花丛懒回顾</title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/accident/</link>
+      <pubDate>Sun, 05 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/accident/</guid>
+      <description>只要想起一生中遗憾的事，梅花就落满了南山。</description>
+    </item>
+    
+    <item>
+      <title>[定点反馈] 一场秋雨一场寒</title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231105/</link>
+      <pubDate>Sun, 05 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231105/</guid>
+      <description>今天又为自己写了一份遗书，我估计在我大限之日，我至少能写出10000份遗书，多么伟大的梦想！</description>
+    </item>
+    
+    <item>
+      <title>[创作环境] 尝试多终端进行写作</title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231104/</link>
+      <pubDate>Sat, 04 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231104/</guid>
+      <description>我希望用我熟悉的掌中设备来做一些更有意义的事情，通过多终端来分别记录自己的不同感受。</description>
+    </item>
+    
+    <item>
+      <title>[新的尝试] 在安卓上尝试使用obsidian&#43;notion的组合</title>
+      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/obsidian/</link>
+      <pubDate>Sat, 04 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/obsidian/</guid>
+      <description>我发现在安卓上使用obsidian+notion成为可能。</description>
+    </item>
+    
+    <item>
+      <title>[主域驱动] 若即若离的坐立不安</title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231103/</link>
+      <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231103/</guid>
+      <description>写出来的意义就在于我需要回忆我做了些什么，就是这么简单。同时交流和分享自己的观点，也看看别人在做些什么。</description>
+    </item>
+    
+    <item>
+      <title>[日程总结] 天色暗下来了</title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231102/</link>
+      <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231102/</guid>
+      <description>习惯的促使下，一件熟悉的事情的开始是理所当然的，而当你逐渐喜欢这件事情的时候，它就已经成为了生活本身.</description>
+    </item>
+    
+    <item>
+      <title>[种颗种子] 启发式的数据库操作</title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231101/</link>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231101/</guid>
+      <description>我们并不单纯是对于海量数据进行机械式地存储和提取，我们更像是运用一种生成式的方式来表达我们自己的观点。</description>
+    </item>
+    
+    <item>
+      <title>[日程总结] 夹缝中挤时间</title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231031/</link>
+      <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231031/</guid>
+      <description>现在晚上我写这段文字的时候，心情是很烦躁的，感觉很多事情压在身上，很不舒服。</description>
+    </item>
+    
+    <item>
+      <title>[日程总结] 初秋的第一场雾</title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231030/</link>
+      <pubDate>Mon, 30 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231030/</guid>
+      <description>日子周而复始，而时间毕竟是公正的，当新鲜感慢慢褪去，我们又必须再度启程！</description>
+    </item>
+    
+    <item>
+      <title>[心情小记] 体测小结&amp;状态反馈</title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231029/</link>
+      <pubDate>Sun, 29 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231029/</guid>
+      <description>我觉得晚上如果在条件允许的情况下，腾出时间写一写小结是很好的事情。</description>
+    </item>
+    
+    <item>
+      <title>[数据归档] 博客：静态还是动态</title>
+      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/hugo/</link>
+      <pubDate>Sat, 28 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/hugo/</guid>
+      <description>这些天在研究hugo，据说是最快的博客系统</description>
+    </item>
+    
+    <item>
+      <title>[纸纹日记] 癸卯年九月十一小记</title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231025/</link>
+      <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231025/</guid>
+      <description>今晚的月亮像是被咬了一小口的饼干🍪</description>
+    </item>
+    
+    <item>
+      <title>[数据归档] 近期数据归档及体会</title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231022/</link>
+      <pubDate>Sun, 22 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231022/</guid>
+      <description>复盘以前的灵感和近期的一些打算</description>
+    </item>
+    
+    <item>
+      <title>[Deutsch] Module 1</title>
+      <link>https://matrixcore.life/posts/%E5%BE%B7%E8%AF%AD%E5%AD%A6%E4%B9%A0/deum1/</link>
+      <pubDate>Wed, 18 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%BE%B7%E8%AF%AD%E5%AD%A6%E4%B9%A0/deum1/</guid>
+      <description>Within this module, knowledge pertaining to the study of the German language shall be documented, facilitating subsequent revision.</description>
+    </item>
+    
+    <item>
+      <title>[谈美] 十三“不似则失其所以为诗，似则失其所以为我”  ——创造与模仿 （朱光潜）</title>
+      <link>https://matrixcore.life/posts/%E8%B0%88%E7%BE%8E-%E6%9C%B1%E5%85%89%E6%BD%9C/beauty13/</link>
+      <pubDate>Wed, 18 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E8%B0%88%E7%BE%8E-%E6%9C%B1%E5%85%89%E6%BD%9C/beauty13/</guid>
+      <description>模仿和时间的沉淀才能让一门技艺炉火纯青。</description>
+    </item>
+    
+    <item>
+      <title>[出门聚餐] 从相聚中看到时间与友情 </title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231015/</link>
+      <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231015/</guid>
+      <description>时间会冷却，会遗忘，但是感觉却似曾相识。</description>
+    </item>
+    
+    <item>
+      <title>[心意相通] 经典的不同演绎方式 </title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/heavenswordanddragonsabre01/</link>
+      <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/heavenswordanddragonsabre01/</guid>
+      <description>其间对于武学的热爱，哲学的追思，爱情的甜蜜与痛苦，江湖的恩恩怨怨，都是支撑起一部伟大文学作品的基石。</description>
+    </item>
+    
+    <item>
+      <title>[connection]  Build the language system</title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/ssh/</link>
+      <pubDate>Sat, 14 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/ssh/</guid>
+      <description>We need to confront what we used to fear. Perhaps this is the truly exciting moment that awaits us!</description>
+    </item>
+    
+    <item>
+      <title>[notion] Customize Notion domain and link to Apple Calendar</title>
+      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/calendar/</link>
+      <pubDate>Sat, 14 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/calendar/</guid>
+      <description>Customizing the domain for Notion and integrating it with Apple Calendar is an incredibly marvelous endeavor.</description>
+    </item>
+    
+    <item>
+      <title>[酒逢知己] 时间磨平了我骄傲的棱角 </title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/kindred-spirit/</link>
+      <pubDate>Sat, 14 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/kindred-spirit/</guid>
+      <description>珍惜每一个能对你，提出善意的提醒和鼓励的人，如果没有他们，你怎么能进步呢？</description>
+    </item>
+    
+    <item>
+      <title>[自然奇观] 从墨脱森林到冷噶错银河 </title>
+      <link>https://matrixcore.life/posts/%E5%BF%85%E7%9C%8B%E7%B2%BE%E9%80%89/nature/</link>
+      <pubDate>Thu, 12 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%BF%85%E7%9C%8B%E7%B2%BE%E9%80%89/nature/</guid>
+      <description>从墨脱森林到冷噶错银河，见证自然母亲的瑰丽奇观！</description>
+    </item>
+    
+    <item>
+      <title>[野火] 第19章  按键消抖模块的设计与验证</title>
+      <link>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga019/</link>
+      <pubDate>Thu, 12 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga019/</guid>
+      <description>根据机械按键的构造与原理,设计并实现按键消抖模块，思考并解决其中遇到的问题。</description>
+    </item>
+    
+    <item>
+      <title>[自我批评] 缺乏人际交往的艺术 </title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/communication/</link>
+      <pubDate>Wed, 11 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/communication/</guid>
+      <description>希望通过这件小事，来提醒大家注意生活中的小细节。</description>
+    </item>
+    
+    <item>
+      <title>[跨域协同]  elog&#43;notion实现md优雅备份</title>
+      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/elog/</link>
+      <pubDate>Wed, 11 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/elog/</guid>
+      <description>通过elog实现notion文章批量下载到本地，以及自动化云端备份和迁移。</description>
+    </item>
+    
+    <item>
+      <title>[欲拒还迎] 荒诞艺术中的璀璨之花</title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/joker/</link>
+      <pubDate>Tue, 10 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/joker/</guid>
+      <description>如果说存在主义是对生活意义的审慎思考，那荒诞主义就是对无趣生活的热情拥抱。</description>
+    </item>
+    
+    <item>
+      <title>[记忆方法] 整理自up主：ZoeLanguages的学习经验</title>
+      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/sprache/</link>
+      <pubDate>Tue, 10 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/sprache/</guid>
+      <description>笔记的三大策略、信息筛选、如何整理以及主动回忆。</description>
+    </item>
+    
+    <item>
+      <title>[命运咽喉]  系统中的常值误差</title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/error/</link>
+      <pubDate>Mon, 09 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/error/</guid>
+      <description>甘其食，美其服，安其居，乐其俗。</description>
+    </item>
+    
+    <item>
+      <title>[螺旋自洽] 算法与自博弈 </title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/conch/</link>
+      <pubDate>Sat, 07 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/conch/</guid>
+      <description>在生命土壤中盛开的苍凉而妖艳的花朵，似乎暗含着神秘的征兆</description>
+    </item>
+    
+    <item>
+      <title>[谈美] 十二“从心所欲，不逾矩” ——创造与格律（朱光潜）</title>
+      <link>https://matrixcore.life/posts/%E8%B0%88%E7%BE%8E-%E6%9C%B1%E5%85%89%E6%BD%9C/beauty11/</link>
+      <pubDate>Fri, 06 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E8%B0%88%E7%BE%8E-%E6%9C%B1%E5%85%89%E6%BD%9C/beauty11/</guid>
+      <description>从心所欲而不逾矩</description>
+    </item>
+    
+    <item>
+      <title>[野火] 第18章  分频器</title>
+      <link>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga018/</link>
+      <pubDate>Fri, 06 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga018/</guid>
+      <description>时序逻辑电路中最常用的偶数分频和奇数分频的实现</description>
+    </item>
+    
+    <item>
+      <title>[二级缓存]  Terminal优化</title>
+      <link>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/terminal/</link>
+      <pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/terminal/</guid>
+      <description>及时对建议库进行更新是一项非常重要的事情</description>
+    </item>
+    
+    <item>
+      <title>[谈美] 九 “大人者不失其赤子之心” ——艺术与游戏 （朱光潜）</title>
+      <link>https://matrixcore.life/posts/%E8%B0%88%E7%BE%8E-%E6%9C%B1%E5%85%89%E6%BD%9C/beauty09/</link>
+      <pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E8%B0%88%E7%BE%8E-%E6%9C%B1%E5%85%89%E6%BD%9C/beauty09/</guid>
+      <description>艺术与游戏</description>
+    </item>
+    
+    <item>
+      <title>[旧页重读] 阅读之问  </title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/reading/</link>
+      <pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/reading/</guid>
+      <description>文学带给人们什么，是建筑一座精神家园，还是和古老恒星的对白。</description>
+    </item>
+    
+    <item>
+      <title>[纸纹日记] 癸卯年八月十八小记</title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231002/</link>
+      <pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231002/</guid>
+      <description>心情小记</description>
+    </item>
+    
+    <item>
+      <title>[野火] 第16章 阻塞赋值与非阻塞赋值</title>
+      <link>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga/</link>
+      <pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga/</guid>
+      <description>本章主要讲解了阻塞赋值(=)与非阻塞赋值(&amp;lt;=)会给设计的电路所产生的差异</description>
+    </item>
+    
+    <item>
+      <title>[野火] 第17章 计数器</title>
+      <link>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga017/</link>
+      <pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga017/</guid>
+      <description>有了计数器我们能做的事情就太多了太多了</description>
+    </item>
+    
+    <item>
+      <title>[野火] 第15章  时序逻辑的开始 --- 寄存器</title>
+      <link>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga015/</link>
+      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga015/</guid>
+      <description>进行时序逻辑的设计,那寄存器就是必不可少的元素</description>
+    </item>
+    
+    <item>
+      <title>[谈美]  七 “情人眼底出西施 ”  ——美与自然 （朱光潜）</title>
+      <link>https://matrixcore.life/posts/%E8%B0%88%E7%BE%8E-%E6%9C%B1%E5%85%89%E6%BD%9C/beauty07/</link>
+      <pubDate>Sat, 30 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E8%B0%88%E7%BE%8E-%E6%9C%B1%E5%85%89%E6%BD%9C/beauty07/</guid>
+      <description>恋爱中的对象是已经艺术化过的自然</description>
+    </item>
+    
+    <item>
+      <title>[野火] 第13章  层次化设计</title>
+      <link>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga013/</link>
+      <pubDate>Sat, 30 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga013/</guid>
+      <description>通过全加器的例子来给大家讲解层次化设计的思想</description>
+    </item>
+    
+    <item>
+      <title>[野火] 第14章  避免 Latch 的产生</title>
+      <link>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga014/</link>
+      <pubDate>Sat, 30 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga014/</guid>
+      <description>本章主要讲解 Latch 是什么,以及它的产生、危害、如何避免</description>
+    </item>
+    
+    <item>
+      <title>[野火] 第12章  简单组合逻辑 --- 半加器</title>
+      <link>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga012/</link>
+      <pubDate>Fri, 29 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga012/</guid>
+      <description>用 Verilog 语言描述一个具有半加器功能的电路</description>
+    </item>
+    
+    <item>
+      <title>[外语学习] 沙拉查词&#43;anki进行记忆强化 </title>
+      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/saladict/</link>
+      <pubDate>Thu, 28 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/saladict/</guid>
+      <description>介绍了通过沙拉查词+anki导出的方式，对学习的单词进行可视化整理</description>
+    </item>
+    
+    <item>
+      <title>[背诵记忆] 十月sharp小酌</title>
+      <link>https://matrixcore.life/posts/%E8%BF%91%E6%9C%9F%E8%A7%84%E5%88%92/sharplingo/</link>
+      <pubDate>Wed, 27 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E8%BF%91%E6%9C%9F%E8%A7%84%E5%88%92/sharplingo/</guid>
+      <description>背诵sharp的记录</description>
+    </item>
+    
+    <item>
+      <title>[谈美]  三、“子非鱼，安知鱼之乐？”  ——宇宙的人情化 （朱光潜）</title>
+      <link>https://matrixcore.life/posts/%E8%B0%88%E7%BE%8E-%E6%9C%B1%E5%85%89%E6%BD%9C/beauty03/</link>
+      <pubDate>Wed, 27 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E8%B0%88%E7%BE%8E-%E6%9C%B1%E5%85%89%E6%BD%9C/beauty03/</guid>
+      <description>对昨晚读到的一篇好文章进行二次复盘并整理</description>
+    </item>
+    
+    <item>
+      <title>[云服务器] “moments”&amp;”Navidrome”demo</title>
+      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/azure/</link>
+      <pubDate>Sun, 24 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/azure/</guid>
+      <description>用热情去做好自己喜欢的事情</description>
+    </item>
+    
+    <item>
+      <title>[自动飞控] 第2章 舵机与舵回路</title>
+      <link>https://matrixcore.life/posts/%E8%BF%91%E6%9C%9F%E8%A7%84%E5%88%92/%E8%87%AA%E5%8A%A8%E9%A3%9E%E6%8E%A7/afsc02/</link>
+      <pubDate>Sun, 24 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E8%BF%91%E6%9C%9F%E8%A7%84%E5%88%92/%E8%87%AA%E5%8A%A8%E9%A3%9E%E6%8E%A7/afsc02/</guid>
+      <description>介绍舵机与舵回路</description>
+    </item>
+    
+    <item>
+      <title>[自动飞控] 第3章 飞行控制系统分析</title>
+      <link>https://matrixcore.life/posts/%E8%BF%91%E6%9C%9F%E8%A7%84%E5%88%92/%E8%87%AA%E5%8A%A8%E9%A3%9E%E6%8E%A7/afcs03/</link>
+      <pubDate>Sun, 24 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E8%BF%91%E6%9C%9F%E8%A7%84%E5%88%92/%E8%87%AA%E5%8A%A8%E9%A3%9E%E6%8E%A7/afcs03/</guid>
+      <description>飞机姿态、轨迹控制、空速马赫数、自动飞行性能、电/光传操作系统</description>
+    </item>
+    
+    <item>
+      <title>[野火] 第11章 简单组合逻辑 --- 译码器</title>
+      <link>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga011/</link>
+      <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga011/</guid>
+      <description>用Verilog 语言描述一个具有 3-8 译码器功能的电路</description>
+    </item>
+    
+    <item>
+      <title>[野火] 第10章  简单组合逻辑 --- 多路选择器</title>
+      <link>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga010/</link>
+      <pubDate>Wed, 20 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga010/</guid>
+      <description>用Verilog 语言描述一个具有多路选择器功能的电路</description>
+    </item>
+    
+    <item>
+      <title>[野火] 第8章  初识 Verilog HDL</title>
+      <link>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga008/</link>
+      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga008/</guid>
+      <description>FPGA基本知识</description>
+    </item>
+    
+    <item>
+      <title>[野火] 第9章  点亮你的 LED 灯</title>
+      <link>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga009/</link>
+      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga009/</guid>
+      <description>建立一个完整的工程来验证软件安装是否正确</description>
+    </item>
+    
+    <item>
+      <title>[时过境迁] 教师节的一点想法💡</title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/teacher/</link>
+      <pubDate>Sun, 10 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/teacher/</guid>
+      <description>教师维系着精神文明的滋养和传承</description>
+    </item>
+    
+    <item>
+      <title>[职业选择] 如何选择就业和努力方向？</title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/job/</link>
+      <pubDate>Fri, 08 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/job/</guid>
+      <description>现在这个阶段是青年步入社会，选择职业发展的黄金阶段</description>
+    </item>
+    
+    <item>
+      <title>[实践体会]  非同等刺激下的兴趣倾向</title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/stimulate/</link>
+      <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/stimulate/</guid>
+      <description>如果说哲学是双向的，互通的，而现实就是单调的，严谨的。</description>
+    </item>
+    
+    <item>
+      <title>[民航科普] 自动飞行控制概述</title>
+      <link>https://matrixcore.life/posts/%E8%BF%91%E6%9C%9F%E8%A7%84%E5%88%92/%E8%87%AA%E5%8A%A8%E9%A3%9E%E6%8E%A7/afcs/</link>
+      <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E8%BF%91%E6%9C%9F%E8%A7%84%E5%88%92/%E8%87%AA%E5%8A%A8%E9%A3%9E%E6%8E%A7/afcs/</guid>
+      <description>用于记录《飞行管理与自动飞行控制系统》的学习笔记</description>
+    </item>
+    
+    <item>
+      <title>第1讲 函数极限与连续</title>
+      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%BC%BA%E5%8C%96/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu101/</link>
+      <pubDate>Wed, 23 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%BC%BA%E5%8C%96/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu101/</guid>
+      <description>高数强化第一讲</description>
+    </item>
+    
+    <item>
+      <title>第2讲 数列极限</title>
+      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%BC%BA%E5%8C%96/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu102/</link>
+      <pubDate>Wed, 23 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%BC%BA%E5%8C%96/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu102/</guid>
+      <description>高数强化第二讲</description>
+    </item>
+    
+    <item>
+      <title>[放松心情] 钢琴鉴赏 </title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/%E6%8E%A8%E8%8D%90/piano/</link>
+      <pubDate>Fri, 18 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/%E6%8E%A8%E8%8D%90/piano/</guid>
+      <description>搞点钢琴听听，钢琴相对而言，听起来比较舒服一点，至少我是这么觉得的。</description>
+    </item>
+    
+    <item>
+      <title>[治愈嗓音]  华夏风韵，洛水天依</title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/tianyi/</link>
+      <pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/tianyi/</guid>
+      <description>聆听和收录天依好听的歌曲</description>
+    </item>
+    
+    <item>
+      <title>[速度优化]  前端图片性能优化</title>
+      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/picturespeed/</link>
+      <pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/picturespeed/</guid>
+      <description>用杜老师的图床对图片进行加速</description>
+    </item>
+    
+    <item>
+      <title>[沉没成本] 通过番茄🍅人生来聊沉没成本 </title>
+      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/tomato/</link>
+      <pubDate>Sat, 12 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/tomato/</guid>
+      <description>番茄钟和沉没成本以及一些经历思考</description>
+    </item>
+    
+    <item>
+      <title>[桌面美化] Windows也可以像Mac一样优雅</title>
+      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/beautify/</link>
+      <pubDate>Fri, 11 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/beautify/</guid>
+      <description>介绍win桌面美化插件，WinDynamicDesktop和rainmeter</description>
+    </item>
+    
+    <item>
+      <title>[技能拓展]  计算机专业学习路线—点亮你的科技树🌲</title>
+      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/hackway/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/hackway/</guid>
+      <description>分享计算机专业学习路线和讲讲我的规划及感受！</description>
+    </item>
+    
+    <item>
+      <title>[高数基础]   第三讲 函数极限与连续性</title>
+      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu003/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu003/</guid>
+      <description>极限、连续和间断</description>
+    </item>
+    
+    <item>
+      <title>[高数基础]  第一讲 高等数学预备知识</title>
+      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu001/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu001/</guid>
+      <description>衔接高中与大学之间的基础知识</description>
+    </item>
+    
+    <item>
+      <title>[高数基础]  第十一讲 多元函数微分学</title>
+      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu011/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu011/</guid>
+      <description>多元函数多元函数偏导数、极值和最值、条件极值和拉格朗日乘法</description>
+    </item>
+    
+    <item>
+      <title>[高数基础]  第十七讲 多元函数积分学的基础知识</title>
+      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu017/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu017/</guid>
+      <description>向量代数、空间平面与直线、空间曲线与曲面、场论初步、多元函数微分学的几何应用</description>
+    </item>
+    
+    <item>
+      <title>[高数基础]  第十三讲 常微分方程</title>
+      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu013/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu013/</guid>
+      <description>微分方程的概念、求解、伯努利方程、二阶可降阶微分方程的求解、高阶线性微分方程的求解、二阶常系数齐次线性微分方程的通解、二阶常系数非齐次线性微分方程的特解、n阶常系数线性微分方程的解</description>
+    </item>
+    
+    <item>
+      <title>[高数基础]  第十二讲 二重积分</title>
+      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu012/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu012/</guid>
+      <description>二重积分的概念与计算</description>
+    </item>
+    
+    <item>
+      <title>[高数基础]  第十五讲 数学一、数学二专题内容</title>
+      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu015/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu015/</guid>
+      <description>一元函数微分学应用、一元函数积分学应用、微分方程的物理应用、傅立叶级数</description>
+    </item>
+    
+    <item>
+      <title>[高数基础]  第十八讲 三重积分、曲线曲面积分</title>
+      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu018/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu018/</guid>
+      <description>三重积分、三重积分的概念性质、对称性和计算、第一型曲线积分、第一型曲面积分、重积分与第一型线面积分的应用、第二型曲线和曲面积分</description>
+    </item>
+    
+    <item>
+      <title>[高数基础]  第十四讲 无穷级数</title>
+      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu014/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu014/</guid>
+      <description>常数项级数的概念与性质、正向级数及其敛散性的判别、交错级数和任意项级数及其敛散性的判别、幂级数及其收敛域、幂级数求和函数、函数展开成幂级数</description>
+    </item>
+    
+    <item>
+      <title>[高数基础]  第四讲 一元函数微分学的概念与计算</title>
+      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu004/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu004/</guid>
+      <description>高数基础知识第四讲知识点索引</description>
+    </item>
+    
+    <item>
+      <title>[高数基础] 第七讲 零点问题与微分不等式</title>
+      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu007/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu007/</guid>
+      <description>零点问题与微分不等式</description>
+    </item>
+    
+    <item>
+      <title>[高数基础] 第九讲 一元函数积分学的几何应用</title>
+      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu009/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu009/</guid>
+      <description>用定积分计算平面图形和旋转体的面积体积</description>
+    </item>
+    
+    <item>
+      <title>[高数基础] 第二讲 数列极限</title>
+      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu002/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu002/</guid>
+      <description>数列极限的基本知识</description>
+    </item>
+    
+    <item>
+      <title>[高数基础] 第五讲  一元函数微分学的几何应用</title>
+      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu005/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu005/</guid>
+      <description>极值、单调性、凹凸性</description>
+    </item>
+    
+    <item>
+      <title>[高数基础] 第八讲  一元函数积分学的概念与计算</title>
+      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu008/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu008/</guid>
+      <description>基本积分计算</description>
+    </item>
+    
+    <item>
+      <title>[高数基础] 第六讲 中值定理</title>
+      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu006/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu006/</guid>
+      <description>有界与最值、介值定理、平均值定理、零点定理、费马定理、罗尔定理，拉格朗日中值定理、柯西中值定理、泰勒公式、积分中值定理</description>
+    </item>
+    
+    <item>
+      <title>[高数基础] 第十讲  积分等式与积分不等式</title>
+      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu010/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu010/</guid>
+      <description>积分等式与积分不等式</description>
+    </item>
+    
+    <item>
+      <title>[知识分享] 开源许可证教程</title>
+      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/license/</link>
+      <pubDate>Wed, 09 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/license/</guid>
+      <description>介绍互联网软件开源协议</description>
+    </item>
+    
+    <item>
+      <title>[天之骄子] RSS为什么退出了互联网的舞台？</title>
+      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/rss/</link>
+      <pubDate>Tue, 08 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/rss/</guid>
+      <description>万物皆可RSS（🐶保命）</description>
+    </item>
+    
+    <item>
+      <title>[海岛奇兵] 1600副本攻略合辑</title>
+      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/boombeach/</link>
+      <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/boombeach/</guid>
+      <description>1600副本具体攻略</description>
+    </item>
+    
+    <item>
+      <title>[哲学讲堂] 什么是性灵？（王德峰）</title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/%E6%8E%A8%E8%8D%90/wdf-1/</link>
+      <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/%E6%8E%A8%E8%8D%90/wdf-1/</guid>
+      <description>根据王老师的讲座视频进行整理</description>
+    </item>
+    
+    <item>
+      <title>[影乐鉴赏] 《我怀念的》-孙燕姿</title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/mv-mu-1/</link>
+      <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/mv-mu-1/</guid>
+      <description>爱情里的双方，往往是充满矛盾的，从最初的热恋，平静，矛盾，缓和，会经历大大小小的风浪和波折。</description>
+    </item>
+    
+    <item>
+      <title>[考研英语] 阅读理解</title>
+      <link>https://matrixcore.life/posts/%E7%A0%94%E8%8B%B1-%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/xu/</link>
+      <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E7%A0%94%E8%8B%B1-%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/xu/</guid>
+      <description>对考研英语阅读理解解题方法的一个汇总</description>
+    </item>
+    
+    <item>
+      <title>[考研英语] 完形填空</title>
+      <link>https://matrixcore.life/posts/%E7%A0%94%E8%8B%B1-%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/cong/</link>
+      <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E7%A0%94%E8%8B%B1-%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/cong/</guid>
+      <description>对考研英语完形填空解题方法的一个汇总</description>
+    </item>
+    
+    <item>
+      <title>[三级缓存] 向阳花笺</title>
+      <link>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/sunflower/</link>
+      <pubDate>Sun, 18 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/sunflower/</guid>
+      <description>看飞鱼在空中划过优美的弧线，看繁星倒影在大海</description>
+    </item>
+    
+    <item>
+      <title>[流动核心] 采桑小道 相视抿笑</title>
+      <link>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/poem/</link>
+      <pubDate>Sun, 18 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/poem/</guid>
+      <description>人间四月芳菲尽  山寺桃花始盛开</description>
+    </item>
+    
+    <item>
+      <title>[考研英语] 语法基础</title>
+      <link>https://matrixcore.life/posts/%E7%A0%94%E8%8B%B1-%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/jing/</link>
+      <pubDate>Sun, 18 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E7%A0%94%E8%8B%B1-%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/jing/</guid>
+      <description>考研英语语法汇总</description>
+    </item>
+    
+    <item>
+      <title>[影乐鉴赏] 假如爱有天意</title>
+      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/love/</link>
+      <pubDate>Mon, 12 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/love/</guid>
+      <description>情感带给了人的羁绊，但也确确实实是给人生画上了颜色，对于一个没有情感的人，一个充满感情的人，就像是雨后的彩虹。</description>
+    </item>
+    
+    <item>
+      <title>[经验分享] 谈学习观</title>
+      <link>https://matrixcore.life/posts/%E6%8E%A8%E8%8D%90/%E5%BF%85%E7%9C%8B%E7%B2%BE%E9%80%89/learn/</link>
+      <pubDate>Mon, 12 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%8E%A8%E8%8D%90/%E5%BF%85%E7%9C%8B%E7%B2%BE%E9%80%89/learn/</guid>
+      <description>大学对于独立人格的塑造是很重要的，最主要的是在不断试错的过程当中培养自己解决问题的能力。</description>
+    </item>
+    
+    <item>
+      <title>[流动核心] 蜿蜒曲折 妙遇神女</title>
+      <link>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/feedback/</link>
+      <pubDate>Tue, 06 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/feedback/</guid>
+      <description>情书写给山鬼  心事寄予西风</description>
+    </item>
+    
+    <item>
+      <title>[技术分享] Ubuntu_linux</title>
+      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/ubuntu/</link>
+      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/ubuntu/</guid>
+      <description>我特别喜欢ubuntu的命令行的使用方式，这样可以更加简洁纯粹的去做一件事情</description>
+    </item>
+    
+    <item>
+      <title>[流动核心] 闲敲棋子 倩舞灯花</title>
+      <link>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/inexhaustible/</link>
+      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/inexhaustible/</guid>
+      <description>谷神不死  是谓玄牝</description>
+    </item>
+    
+    <item>
+      <title>[流动核心] 东方璀璨 遗我明珠</title>
+      <link>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/sunrise/</link>
+      <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/sunrise/</guid>
+      <description>草木有本心  何求美人折</description>
+    </item>
+    
+    <item>
+      <title>[流动核心] 少沽风雅 静颂松劝</title>
+      <link>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/flow/</link>
+      <pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/flow/</guid>
+      <description>无人问津的渡口  开满鲜花</description>
+    </item>
+    
+    <item>
+      <title>[技术分享] 博客优化</title>
+      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E5%BF%85%E7%9C%8B%E7%B2%BE%E9%80%89/improve/</link>
+      <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E5%BF%85%E7%9C%8B%E7%B2%BE%E9%80%89/improve/</guid>
+      <description>记录我对博客优化的过程，您可以看作是博客优化的日志。</description>
+    </item>
+    
+  </channel>
+</rss>
