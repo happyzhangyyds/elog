@@ -38,7 +38,7 @@ enableGitInfo = true
     # 激活 cool 模式，酷爽但是消耗资源也更多，
     # 如果想更换页面背景，只需要将图片命名为 `default.jpg` 后，置于 `/static/imgs/bg` 文件夹中即可，
     # 浏览器有缓存，更换后强制页面刷新（快捷键为 Ctrl+Shift+R）一下即可
-    hasActiveCool = true
+    hasActiveCool = false
 
     # 展开/折叠代码块，默认不折叠，
     # 设置为 `true` ，则默认折叠所有代码块，
@@ -98,7 +98,7 @@ enableGitInfo = true
     [params.img]
         # 如果你不想显示图片，想显示一段话，只需要
         # 设置 `noImgButWords` 为 true 即可
-        notImgButWords = true
+        notImgButWords = false
         # 内置了 `girl.jpg, wukong.jpg, and tux.jpg, cat.svg ……`，当然你可以
         # 把自己喜欢图片放在 `static/imgs/` 目录中，并在 `src` 引用它,
         # 你还可以通过 `width` 调整引入图片的显示大小，
