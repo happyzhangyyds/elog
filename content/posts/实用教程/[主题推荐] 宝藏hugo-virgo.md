@@ -7,11 +7,11 @@ category: 动手实践
 slug: hugo-virgo
 tags:
   - 实用教程
-summary: Hugo本身是静态网页的速度就很快，virgo主题又非常简洁美观，所以我觉得值得推荐给大家。
+summary: Hugo是静态网页的速度很快，virgo主题又非常简洁美观，值得推荐给大家。
 title: "[主题推荐] 宝藏hugo-virgo"
 status: Published
 urlname: 88e46c94-2bfa-41b3-9c04-c3c4f32b8048
-updated: "2023-11-21 02:57:00"
+updated: "2023-11-21 03:00:00"
 ---
 
 # 前言
@@ -46,7 +46,7 @@ updated: "2023-11-21 02:57:00"
 
 然后我在 mac 上预装了 hugo 的环境。关于如何安装 Hugo，可以进行 Hugo 的[官网](https://gohugo.io/installation/)开始操作。然后关于各个系统如何安装 hugo，知乎上也有介绍，可以尝试一下。
 
-### 本地安装 hugo
+## 本地安装 hugo
 
 ---
 
@@ -60,7 +60,7 @@ sudo port install hugo
 
 或者您也可以选择根据指导，从源代码进行搭建。关于 win 如何安装 Hugo，您可以参考[这篇文章](https://zhuanlan.zhihu.com/p/440175312)。
 
-### 选择喜欢的 hugo 主题
+## 选择喜欢的 hugo 主题
 
 ---
 
@@ -72,7 +72,7 @@ sudo port install hugo
 
 当时我遇到 virgo 的第一眼的时候，就觉得非常惊艳，遂发了篇朋友圈介绍了一下，然后自己尝试部署了一下。
 
-### 内容创作与 virgo 的配置
+## 内容创作与 virgo 的配置
 
 ---
 
