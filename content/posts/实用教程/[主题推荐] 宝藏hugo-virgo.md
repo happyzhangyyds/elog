@@ -7,11 +7,11 @@ category: 动手实践
 slug: hugo-virgo
 tags:
   - 实用教程
-summary: 本身hugo是静态网页的速度就很快，而且virgo又非常简洁美观，所以我觉得值得推荐给大家。
+summary: Hugo本身是静态网页的速度就很快，virgo主题又非常简洁美观，所以我觉得值得推荐给大家。
 title: "[主题推荐] 宝藏hugo-virgo"
 status: Published
 urlname: 88e46c94-2bfa-41b3-9c04-c3c4f32b8048
-updated: "2023-11-21 02:54:00"
+updated: "2023-11-21 02:57:00"
 ---
 
 # 前言
@@ -55,6 +55,7 @@ updated: "2023-11-21 02:54:00"
 ```shell
 brew install hugo
 sudo port install hugo
+#两种方式都可以，选择其一就行
 ```
 
 或者您也可以选择根据指导，从源代码进行搭建。关于 win 如何安装 Hugo，您可以参考[这篇文章](https://zhuanlan.zhihu.com/p/440175312)。
