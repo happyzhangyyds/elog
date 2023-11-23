@@ -7,11 +7,11 @@ category: 动手实践
 slug: LubanCat-16
 tags:
   - 鲁班猫
-summary: 简单从理论角度介绍了如何为鲁班猫设置静态ip
+summary: 从理论角度介绍了如何为鲁班猫设置静态ip
 title: "[静态网络] 为鲁班猫设置静态ip（理论）"
-status: Draft
+status: Published
 urlname: cf3a7e3b-8afa-46c8-bde2-dbc8036001ea
-updated: "2023-11-23 08:40:00"
+updated: "2023-11-23 08:48:00"
 ---
 
 # 前言
@@ -83,7 +83,7 @@ nmcli help
 nmcli OBJECT help
 ```
 
-这篇文章详细介绍[nucli](https://doc.embedfire.com/linux/rk356x/quick_start/zh/latest/quick_start/wireless/wifi/wifi.html#nmcli)命令。
+这篇文章详细介绍[nmcli](https://doc.embedfire.com/linux/rk356x/quick_start/zh/latest/quick_start/wireless/wifi/wifi.html#nmcli)命令。
 
 - 桌面端连接是我们熟用的办法。
 
