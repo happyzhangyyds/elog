@@ -6,11 +6,11 @@ draft: false
 <div class="nav">
 
 ## 🌞 *我的小屋*
-- [MatrixCore](/)
-- [起始界面](https://nav.matrixcore.top)
-- [NotionNext](https://matrixcore.top)
-- [番茄自习室](/https://www.tomatolist.com/show_group.html?group_id=27f2b200-d549-4ba9-a2cc-1b6025be2c7b)
-- [Sharplingo](https://sharplingo.cn)
+- [番茄人生](https://www.tomatolist.com/show_group.html?group_id=27f2b200-d549-4ba9-a2cc-1b6025be2c7b)
+- [音乐世界](http://music.matrixcore.top)
+- [德语学习](https://sharplingo.cn)
+- [小鲁班猫](https://www.bilibili.com/video/BV1Es4y1T7fV/?spm_id_from=333.788&vd_source=237e295a40d7aaea043ead8c0d2c78ab)
+- [出去逛逛](https://moments.matrixcore.top)
 
 ## 🔨 *常用工具*
 - [图片裁剪](https://uutool.cn/img-clip-batch/)
@@ -20,6 +20,7 @@ draft: false
 - [学校邮箱](https://mail.cauc.edu.cn)
 - [笔记社区](https://bbs.marginnote.com.cn)
 - [笔记插件](https://ohmymn.marginnote.cn/guide/)
+- [必应站长](https://www.bing.com/webmasters/)
 
 ## 📑 *友情链接*
 - [Tangly](https://tangly1024.com/)
@@ -27,6 +28,7 @@ draft: false
 - [杜老师说](https://dusays.com)
 - [阮一峰](http://ruanyifeng.com)
 - [1874](https://1874.cool/)
+- [虹墨](https://www.imaegoo.com/friends/)
 - [鸦鸦](https://crowya.com)
 - [时雨](https://shiyu.dev)
 - [王语双](https://wangyushuang.com)
@@ -72,5 +74,8 @@ draft: false
 - [王德峰：马克思的哲学革命及其当代意义](https://www.bilibili.com/cheese/play/ep262011?csource=private_moments_updated_autopush&spm_id_from=444.42.list.card_courses.click)
 - [WallpaperCave](https://wallpapercave.com)
 - [Hackintosh-LEGION-Y7000P-安装教程](https://github.com/gclm/Hackintosh-LEGION-Y7000P-I7-9750H/blob/master/Course/README.md)
+- [MusicBrainz 不完全使用指南](https://www.himiku.com/archives/musicbrainz.html)
+- [谷歌测速](https://pagespeed.web.dev/)
+- [周娟：我们的孩子怎么了？](http://www.wyzxwk.com/Article/shiping/2023/11/483171.html)
 
 </div>
