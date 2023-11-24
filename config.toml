@@ -132,8 +132,8 @@ enableGitInfo = true
     # 如果想在开发环境下启用它，修改服务端口即可，如下
     # hugo server -p=1314
     [params.utterances]
-        active = false                             # 是否启用评论插件
-        repo = "loveminimal/comment"               # 输入你的仓库名称
+        active = true                             # 是否启用评论插件
+        repo = "happyzhangyyds/comment"               # 输入你的仓库名称
         issueTerm = "pathname"
         theme = "github-light"
         crossorigin = "anonymous"
