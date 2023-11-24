@@ -3475,9 +3475,84 @@
       "body": "",
       "realName": "[再谈心情] 在时间里享受生活",
       "relativePath": "/情绪表达/[再谈心情] 在时间里享受生活.md"
+    },
+    {
+      "id": "79b92f4e-459d-4ee4-aa26-7af8a23a0ed4",
+      "doc_id": "79b92f4e-459d-4ee4-aa26-7af8a23a0ed4",
+      "updated": 1700830320000,
+      "body_original": "\n# 前言\n\n\n---\n\n\n  前几日读完了朱光潜先生写的《谈美》，但是整理的进程往往一拖再拖，现在无聊的时候总喜欢去刷视频，读书静不下心来，更不谈静下心来去学习更加枯燥并且专业的知识了。今天乘着空闲的时间，把朱光潜先生的这本书进行归档。\n\n\n# 正文\n\n\n---\n\n\n![](https://bu.dusays.com/2023/11/24/6560925dd7519.png)\n\n\n![](https://bu.dusays.com/2023/11/24/6560926082cd9.png)\n\n\n![](https://bu.dusays.com/2023/11/24/65609262f0eaa.png)\n\n\n![](https://bu.dusays.com/2023/11/24/656092658c12b.png)\n\n\n![](https://bu.dusays.com/2023/11/24/65609268c5a27.png)\n\n\n![](https://bu.dusays.com/2023/11/24/6560926c259bd.png)\n\n\n# 总结\n\n\n---\n\n\n  在这篇文章当中，朱光潜先生分析了天才和灵感之间的关系，灵感的三个特征：突如其来，不由自主，突如其去，要这么说，灵感也只是也只是一种感受，和爱情的体验无太多的分别。\n\n\n  朱光潜先生把灵感指向了潜意识的研究，可能灵感是潜意识的特殊收获，其中有些话是非常有趣的。\n\n\n> _人只要留心，处处是学问，艺术家往往在他的艺术范围之外下功夫，在别种艺术之中玩索得一种意象，让他沉在潜意识里去酝酿一番，然后再用他的本行艺术的媒介把它翻译出来。_\n\n\n  我觉得这些话还是蛮有道理的，就比如你喜欢一个人，如果恰好她不在，这种感觉大多数是放在潜意识当中运作，在某一个时刻突然会想念起来。\n\n\n> _鱼跃鸢飞，风起水涌，以至于一尘之微，当其接触感官时我们虽常不自觉其在心灵中可生若何影响，但是到挥毫运斤时，他们都会涌到手腕上来，在无形中驱遣它，左右它。_\n\n\n  这段话我也很喜欢，这就像读过的书和走过的路一样，可能读的时候当初没有感觉，但是当你在写作的时候，这些思绪就会涌现出来。\n\n\n  写到这里我想起[简嫃的文字](https://zhuanlan.zhihu.com/p/500841759)，我有一句话记得很深。\n\n\n> _我将自己摊成稿纸，让岁月前来点苔。_\n\n\n\t_——简媜《私房书》_\n\n\n  以前读到过，一直很喜欢，下次有机会去读一读简嫃的作品。\n\n",
+      "properties": {
+        "password": "",
+        "icon": "",
+        "date": "2023-11-24",
+        "type": "Post",
+        "category": "璀璨星空",
+        "slug": "beauty14",
+        "tags": [
+          "谈美-朱光潜"
+        ],
+        "summary": "鱼跃鸢飞，风起水涌，以至于一尘之微，当其接触感官时我们虽常不自觉其在心灵中可生若何影响，但是到挥毫运斤时，他们都会涌到手腕上来，在无形中驱遣它，左右它。",
+        "title": "[谈美] 十四 “读书破万卷,下笔如有神” ——天才与灵感（朱光潜）",
+        "status": "Published",
+        "urlname": "79b92f4e-459d-4ee4-aa26-7af8a23a0ed4",
+        "updated": "2023-11-24 12:52:00"
+      },
+      "catalog": [
+        {
+          "title": "谈美-朱光潜",
+          "doc_id": "79b92f4e-459d-4ee4-aa26-7af8a23a0ed4"
+        }
+      ],
+      "body": "",
+      "realName": "[谈美] 十四 “读书破万卷,下笔如有神” ——天才与灵感（朱光潜）",
+      "relativePath": "/谈美-朱光潜/[谈美] 十四 “读书破万卷,下笔如有神” ——天才与灵感（朱光潜）.md"
     }
   ],
   "catalog": [
+    {
+      "object": "page",
+      "id": "79b92f4e-459d-4ee4-aa26-7af8a23a0ed4",
+      "created_time": "2023-11-24T12:09:00.000Z",
+      "last_edited_time": "2023-11-24T12:52:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "12c2841c-d7a5-4616-994c-596fe69e6ccf"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "12c2841c-d7a5-4616-994c-596fe69e6ccf"
+      },
+      "cover": {
+        "type": "external",
+        "external": {
+          "url": "https://bu.dusays.com/2023/11/24/65609be17858d.png"
+        }
+      },
+      "icon": null,
+      "parent": {
+        "type": "database_id",
+        "database_id": "04aa5173-51c7-4543-8d58-c2ddd2c58226"
+      },
+      "archived": false,
+      "properties": {
+        "password": "",
+        "icon": "",
+        "date": "2023-11-24",
+        "type": "Post",
+        "category": "璀璨星空",
+        "slug": "beauty14",
+        "tags": [
+          "谈美-朱光潜"
+        ],
+        "summary": "鱼跃鸢飞，风起水涌，以至于一尘之微，当其接触感官时我们虽常不自觉其在心灵中可生若何影响，但是到挥毫运斤时，他们都会涌到手腕上来，在无形中驱遣它，左右它。",
+        "title": "[谈美] 十四 “读书破万卷,下笔如有神” ——天才与灵感（朱光潜）",
+        "status": "Published",
+        "urlname": "79b92f4e-459d-4ee4-aa26-7af8a23a0ed4",
+        "updated": "2023-11-24 12:52:00"
+      },
+      "url": "https://www.notion.so/79b92f4e459d4ee4aa267af8a23a0ed4",
+      "public_url": "https://fragrantknowledge.notion.site/79b92f4e459d4ee4aa267af8a23a0ed4"
+    },
     {
       "object": "page",
       "id": "976caca9-c956-4ac5-9897-ea46f8d62c90",
@@ -7030,8 +7105,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20231124%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231124T093829Z&X-Amz-Expires=3600&X-Amz-Signature=ce909049fb15054a0789e3c9c000084dce95ef7211735c925c6907c0b1023554&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-11-24T10:38:29.085Z"
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20231124%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231124T125555Z&X-Amz-Expires=3600&X-Amz-Signature=b6f26c8350bf59002234f070576dcecc86bf7063ebf28e9f10b64f9888007081&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-11-24T13:55:55.424Z"
         }
       },
       "icon": null,
@@ -7523,8 +7598,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20231124%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231124T093829Z&X-Amz-Expires=3600&X-Amz-Signature=5a086f9756c66317c8543eb2329d7c4dc5fa5a1a45a0c3732fb8dabb66c1bae4&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-11-24T10:38:29.103Z"
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20231124%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231124T125555Z&X-Amz-Expires=3600&X-Amz-Signature=5c4f858054afea157624ce3ef9ade7ad1e6bccc83fa5f6f4644f0910966180fd&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-11-24T13:55:55.426Z"
         }
       },
       "icon": null,
