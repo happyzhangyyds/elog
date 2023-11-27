@@ -3568,9 +3568,150 @@
       "body": "",
       "realName": "[纯真年代] prettyshell背后的泛物化",
       "relativePath": "/情绪表达/[纯真年代] prettyshell背后的泛物化.md"
+    },
+    {
+      "id": "4cb82d85-f418-42ad-8d49-83551a13dda7",
+      "doc_id": "4cb82d85-f418-42ad-8d49-83551a13dda7",
+      "updated": 1700979300000,
+      "body_original": "\n# 前言\n\n\n---\n\n\n  这是一份日志记录。\n\n\n# 正文\n\n\n---\n\n\n  这是一份正文。\n\n\n## 清空reeder\n\n\n---\n\n- [**名校毕业的焦虑之路**](https://www.bilibili.com/video/BV1AH4y117dA/?spm_id_from=444.42.list.card_archive.click&vd_source=237e295a40d7aaea043ead8c0d2c78ab)\n\n> 💡 在一个陌生国度的生存指南\n\n- [**治愈向VLOG：德国小镇车水马龙的延时摄影**](https://www.bilibili.com/video/BV11N4y117j2/?spm_id_from=444.42.list.card_archive.click&vd_source=237e295a40d7aaea043ead8c0d2c78ab)\n\n> 💡 很放松，很治愈的视频。\n\n- [**机智的留德生活～vlog1｜孤独是节必修课｜柏林初印象｜超市采购｜**](https://www.bilibili.com/video/BV1MH4y1m7zN/?spm_id_from=444.42.list.card_archive.click&vd_source=237e295a40d7aaea043ead8c0d2c78ab)\n\n> 💡 很真实的生活向的生活，很棒的景色！很独特的体验。\n\n\n  前面说过，刷bilibili更像是一种寻宝任务，过滤出有用信息的概率，大概是千分之0.2，当然我瞎说的，如果不幸点到了主页，那么很抱歉，赶紧关闭标签页，回到收藏页。\n\n\n# 总结\n\n\n---\n\n",
+      "properties": {
+        "password": "",
+        "icon": "",
+        "date": "2023-11-26",
+        "type": "Post",
+        "category": "",
+        "slug": "",
+        "tags": [],
+        "summary": "",
+        "title": "[日志记录] 摸鱼向+进度追踪",
+        "status": "Draft",
+        "urlname": "4cb82d85-f418-42ad-8d49-83551a13dda7",
+        "updated": "2023-11-26 06:15:00"
+      },
+      "catalog": [],
+      "body": "",
+      "realName": "[日志记录] 摸鱼向+进度追踪",
+      "relativePath": "/[日志记录] 摸鱼向+进度追踪.md"
+    },
+    {
+      "id": "90bb6ecb-b747-4237-9466-2584e879ce8f",
+      "doc_id": "90bb6ecb-b747-4237-9466-2584e879ce8f",
+      "updated": 1701059520000,
+      "body_original": "\n  我不是个画家，但撷取美的片刻是我的心愿。\n\n\n  我不是个作家，但记录每一次的感动是我的习惯。\n\n\n  仔细想想，生活的本身即是书、即是画。也许前一刻，我们是阅书观画的读者，而下一刻，却又变成书中主角、画中人物了。更有可能，我们同时既是读者，又是主角。\n\n\n  每个日子，都是内容不同的一本书，风格迥异的一幅画。只是我们的脚步太匆忙了，常常忘记去读它，欣赏它，随意地浏览过去，便断言生活是一味地今日抄袭昨日，只是公式化的食衣住行罢了。阅读，不仅是认识符号而已，更要懂得符号所传递的内涵；而观画，也不只是五彩缤纷的调配，细细想来，画中原是有画。\n\n\n  我是个小人物，只希望自己别那么匆忙，希望能够静下来，老老实实地把生活一本一幅慢慢地看，用我的心细细品尝，并把愉美的刹那、感动的心情，一字一句、勤劳不倦地做成生活之细笔。\n\n\n  于是，处处美丽。\n\n",
+      "properties": {
+        "password": "",
+        "icon": "",
+        "date": "2023-11-27",
+        "type": "Post",
+        "category": "璀璨星空",
+        "slug": "jianzhen-1",
+        "tags": [
+          "简嫃"
+        ],
+        "summary": "每个日子，都是内容不同的一本书，风格迥异的一幅画。只是我们的脚步太匆忙了，常常忘记去读它，欣赏它。",
+        "title": "[水问] 生活细笔小引 （简嫃）",
+        "status": "Published",
+        "urlname": "90bb6ecb-b747-4237-9466-2584e879ce8f",
+        "updated": "2023-11-27 04:32:00"
+      },
+      "catalog": [
+        {
+          "title": "简嫃",
+          "doc_id": "90bb6ecb-b747-4237-9466-2584e879ce8f"
+        }
+      ],
+      "body": "",
+      "realName": "[水问] 生活细笔小引 （简嫃）",
+      "relativePath": "/简嫃/[水问] 生活细笔小引 （简嫃）.md"
     }
   ],
   "catalog": [
+    {
+      "object": "page",
+      "id": "90bb6ecb-b747-4237-9466-2584e879ce8f",
+      "created_time": "2023-11-27T04:21:00.000Z",
+      "last_edited_time": "2023-11-27T04:32:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "95e830ca-fbb7-4c94-b0da-73426f4304db"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "e66e3bc6-30f1-4020-b696-2787f04dc3ea"
+      },
+      "cover": {
+        "type": "external",
+        "external": {
+          "url": "https://bu.dusays.com/2023/11/27/65641aa9deed7.jpg"
+        }
+      },
+      "icon": null,
+      "parent": {
+        "type": "database_id",
+        "database_id": "04aa5173-51c7-4543-8d58-c2ddd2c58226"
+      },
+      "archived": false,
+      "properties": {
+        "password": "",
+        "icon": "",
+        "date": "2023-11-27",
+        "type": "Post",
+        "category": "璀璨星空",
+        "slug": "jianzhen-1",
+        "tags": [
+          "简嫃"
+        ],
+        "summary": "每个日子，都是内容不同的一本书，风格迥异的一幅画。只是我们的脚步太匆忙了，常常忘记去读它，欣赏它。",
+        "title": "[水问] 生活细笔小引 （简嫃）",
+        "status": "Published",
+        "urlname": "90bb6ecb-b747-4237-9466-2584e879ce8f",
+        "updated": "2023-11-27 04:32:00"
+      },
+      "url": "https://www.notion.so/90bb6ecbb747423794662584e879ce8f",
+      "public_url": "https://fragrantknowledge.notion.site/90bb6ecbb747423794662584e879ce8f"
+    },
+    {
+      "object": "page",
+      "id": "4cb82d85-f418-42ad-8d49-83551a13dda7",
+      "created_time": "2023-11-26T05:40:00.000Z",
+      "last_edited_time": "2023-11-26T06:15:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "12c2841c-d7a5-4616-994c-596fe69e6ccf"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "12c2841c-d7a5-4616-994c-596fe69e6ccf"
+      },
+      "cover": {
+        "type": "external",
+        "external": {
+          "url": "https://source.unsplash.com/random"
+        }
+      },
+      "icon": null,
+      "parent": {
+        "type": "database_id",
+        "database_id": "04aa5173-51c7-4543-8d58-c2ddd2c58226"
+      },
+      "archived": false,
+      "properties": {
+        "password": "",
+        "icon": "",
+        "date": "2023-11-26",
+        "type": "Post",
+        "category": "",
+        "slug": "",
+        "tags": [],
+        "summary": "",
+        "title": "[日志记录] 摸鱼向+进度追踪",
+        "status": "Draft",
+        "urlname": "4cb82d85-f418-42ad-8d49-83551a13dda7",
+        "updated": "2023-11-26 06:15:00"
+      },
+      "url": "https://www.notion.so/4cb82d85f41842ad8d4983551a13dda7",
+      "public_url": "https://fragrantknowledge.notion.site/4cb82d85f41842ad8d4983551a13dda7"
+    },
     {
       "object": "page",
       "id": "b6bf13a3-477e-4c81-bafe-e3222d1785c0",
@@ -7255,8 +7396,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20231125%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231125T134523Z&X-Amz-Expires=3600&X-Amz-Signature=b5c27d30a5b461a0b999bc611a4ef0b1c6dbe04f0ebe4e98b241243894641686&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-11-25T14:45:23.725Z"
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20231127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231127T043308Z&X-Amz-Expires=3600&X-Amz-Signature=0a18ab74bc4eb0de33cb2094577561bb32547395d420a39bb47e764b37d97bef&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-11-27T05:33:08.272Z"
         }
       },
       "icon": null,
@@ -7748,8 +7889,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20231125%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231125T134523Z&X-Amz-Expires=3600&X-Amz-Signature=927fc6738ec13aa824974bb8dac431d397045dd54924d83f26fa0f27369cc59d&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-11-25T14:45:23.727Z"
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20231127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231127T043308Z&X-Amz-Expires=3600&X-Amz-Signature=4f4349fb2025ed244a049745437767541377bf7d672cff7e078040b945e6dbe7&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-11-27T05:33:08.273Z"
         }
       },
       "icon": null,
