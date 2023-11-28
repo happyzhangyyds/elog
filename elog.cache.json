@@ -3742,9 +3742,11 @@
         "icon": "",
         "date": "2023-11-28",
         "type": "Post",
-        "category": "",
+        "category": "璀璨星空",
         "slug": "jianzhen-3",
-        "tags": [],
+        "tags": [
+          "简嫃"
+        ],
         "summary": "大自然不会只顾让花朵绽放，草木生长，而忘了让音乐流传。我总认为，若能澄心净耳听，万籁俱寂亦是韵。",
         "title": "[水问] 聆听（简嫃）",
         "status": "Published",
@@ -7612,8 +7614,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20231128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231128T041926Z&X-Amz-Expires=3600&X-Amz-Signature=55748a4f78b121cdc8aa4b89bb540b653f6120a56ced5f6da539197562400ade&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-11-28T05:19:26.318Z"
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20231128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231128T042154Z&X-Amz-Expires=3600&X-Amz-Signature=a8ce50cb3c014bf4250aef7ac16f88342148fede43fcfab898f9b2b19aafc53c&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-11-28T05:21:54.223Z"
         }
       },
       "icon": null,
@@ -8105,8 +8107,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20231128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231128T041926Z&X-Amz-Expires=3600&X-Amz-Signature=cb1c80f5c983d8547d909821805f21f6413f264de7353136c2f81801d7b44b95&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-11-28T05:19:26.319Z"
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20231128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231128T042154Z&X-Amz-Expires=3600&X-Amz-Signature=e13571604bad98b6fa7224648db4fbe242950f03c7f738e2f7e5ba774e03e179&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-11-28T05:21:54.225Z"
         }
       },
       "icon": null,
