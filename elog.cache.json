@@ -3570,30 +3570,6 @@
       "relativePath": "/情绪表达/[纯真年代] prettyshell背后的泛物化.md"
     },
     {
-      "id": "4cb82d85-f418-42ad-8d49-83551a13dda7",
-      "doc_id": "4cb82d85-f418-42ad-8d49-83551a13dda7",
-      "updated": 1700979300000,
-      "body_original": "\n# 前言\n\n\n---\n\n\n  这是一份日志记录。\n\n\n# 正文\n\n\n---\n\n\n  这是一份正文。\n\n\n## 清空reeder\n\n\n---\n\n- [**名校毕业的焦虑之路**](https://www.bilibili.com/video/BV1AH4y117dA/?spm_id_from=444.42.list.card_archive.click&vd_source=237e295a40d7aaea043ead8c0d2c78ab)\n\n> 💡 在一个陌生国度的生存指南\n\n- [**治愈向VLOG：德国小镇车水马龙的延时摄影**](https://www.bilibili.com/video/BV11N4y117j2/?spm_id_from=444.42.list.card_archive.click&vd_source=237e295a40d7aaea043ead8c0d2c78ab)\n\n> 💡 很放松，很治愈的视频。\n\n- [**机智的留德生活～vlog1｜孤独是节必修课｜柏林初印象｜超市采购｜**](https://www.bilibili.com/video/BV1MH4y1m7zN/?spm_id_from=444.42.list.card_archive.click&vd_source=237e295a40d7aaea043ead8c0d2c78ab)\n\n> 💡 很真实的生活向的生活，很棒的景色！很独特的体验。\n\n\n  前面说过，刷bilibili更像是一种寻宝任务，过滤出有用信息的概率，大概是千分之0.2，当然我瞎说的，如果不幸点到了主页，那么很抱歉，赶紧关闭标签页，回到收藏页。\n\n\n# 总结\n\n\n---\n\n",
-      "properties": {
-        "password": "",
-        "icon": "",
-        "date": "2023-11-26",
-        "type": "Post",
-        "category": "",
-        "slug": "",
-        "tags": [],
-        "summary": "",
-        "title": "[日志记录] 摸鱼向+进度追踪",
-        "status": "Draft",
-        "urlname": "4cb82d85-f418-42ad-8d49-83551a13dda7",
-        "updated": "2023-11-26 06:15:00"
-      },
-      "catalog": [],
-      "body": "",
-      "realName": "[日志记录] 摸鱼向+进度追踪",
-      "relativePath": "/[日志记录] 摸鱼向+进度追踪.md"
-    },
-    {
       "id": "90bb6ecb-b747-4237-9466-2584e879ce8f",
       "doc_id": "90bb6ecb-b747-4237-9466-2584e879ce8f",
       "updated": 1701059640000,
@@ -3709,9 +3685,84 @@
       "body": "",
       "realName": "[水问] 聆听（简嫃）",
       "relativePath": "/[水问] 聆听（简嫃）.md"
+    },
+    {
+      "id": "fff4de69-522d-47b5-9e21-12c7c59c646a",
+      "doc_id": "fff4de69-522d-47b5-9e21-12c7c59c646a",
+      "updated": 1701783660000,
+      "body_original": "\n# 前言\n\n\n---\n\n\n  应该已经隔了一周的时间没去总结生活了，周五考试，趁着今天有空写一些回忆录。\n\n\n# 正文\n\n\n---\n\n\n  这次的主题是适应生活，适当地听取别人的意见。\n\n\n## 考试周的烦恼\n\n\n---\n\n\n  每次到12月初，总是感觉时间过得很快并且很无趣，大概是因为冬天我的思想不够活跃。并且困在生活里头，在上一周的周一到周四，中午还会看看简嫃的书，整理整理，但是也没心思写读后感。\n\n\n  然后周五上了一天的课，并且去做自动飞行控制的实验，进行matlab的仿真，使用simiulink搭建流程图，然后查看波形图，在做和写实验报告的时候真是感觉是苦差事一桩。\n\n\n  周末放松了很久，把自动飞行控制的虚拟仿真做了之后，全在打饥荒。\n\n\n  然后周一，也就离周五的考试越来越近了，才着手准备开始复习。\n\n\n  今天周二，勉强看到第三章开始。\n\n\n## 为什么会感到无趣呢\n\n\n---\n\n\n  我始终没想明白的一件事情，是为什么会感觉到生活很无趣呢，是因为学业的压力，还是生活的烦恼，还是其他的经历，实际上，仔细想来，不管怎么想，生活总是不尽如人意。一件一件的小事累积起来就会很烦躁。\n\n\n  现在情绪的承载能力越来越弱了，越来越厌倦这种单调乏味无趣的生活了。\n\n\n  看样子生活是一团乱麻，与其思考这些无意义的事情，不如昏沉沉地睡去。\n\n\n  然而总还是要苏醒的。看看十一月份做的规划，现在并没有很好地完成的，事情总是一茬接着一茬。情绪也因此被惯坏了。\n\n\n## 一些有趣的事情\n\n\n---\n\n\n  最近在读简嫃的书，这当然已经不是什么秘密了，简嫃的书，我觉得读起来很有意思。我现在觉得想要逃离世界和互联网，过量的信息和广告以及各种无聊的事情让我都觉得无处容身。\n\n\n  考完试之后，需要把实验报告继续升华一下，需要更加具有逻辑性，实际上，我并不是很喜欢文书的写作，不知道为什么，我觉得按照要求写作是一件很困难的事情，总觉得像是在完成任务一样，从小我就很抗拒这些事情，然而这也是需要改的缺点，诚然任务可以囫囵过去，但是我行我素的习惯却会伴随一生。\n\n\n# 总结\n\n\n---\n\n\n  这只是一篇划水的总结，昨天早上还在折腾鲁班猫，自己的能力还需要系统得提升，知识忘得快，学起来却并没有那么容易，人的惰性往往是很大的。\n\n",
+      "properties": {
+        "password": "",
+        "icon": "",
+        "date": "2023-12-05",
+        "type": "Post",
+        "category": "走近生活",
+        "slug": "231205",
+        "tags": [
+          "情绪表达"
+        ],
+        "summary": "知识忘得快，学起来却并没有那么容易，人的惰性往往是很大的。",
+        "title": "[心情小结] 适应生活",
+        "status": "Published",
+        "urlname": "fff4de69-522d-47b5-9e21-12c7c59c646a",
+        "updated": "2023-12-05 13:41:00"
+      },
+      "catalog": [
+        {
+          "title": "情绪表达",
+          "doc_id": "fff4de69-522d-47b5-9e21-12c7c59c646a"
+        }
+      ],
+      "body": "",
+      "realName": "[心情小结] 适应生活",
+      "relativePath": "/情绪表达/[心情小结] 适应生活.md"
     }
   ],
   "catalog": [
+    {
+      "object": "page",
+      "id": "fff4de69-522d-47b5-9e21-12c7c59c646a",
+      "created_time": "2023-12-05T13:14:00.000Z",
+      "last_edited_time": "2023-12-05T13:41:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "12c2841c-d7a5-4616-994c-596fe69e6ccf"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "12c2841c-d7a5-4616-994c-596fe69e6ccf"
+      },
+      "cover": {
+        "type": "external",
+        "external": {
+          "url": "https://bu.dusays.com/2023/12/05/656f27e3b00d2.jpg"
+        }
+      },
+      "icon": null,
+      "parent": {
+        "type": "database_id",
+        "database_id": "04aa5173-51c7-4543-8d58-c2ddd2c58226"
+      },
+      "archived": false,
+      "properties": {
+        "password": "",
+        "icon": "",
+        "date": "2023-12-05",
+        "type": "Post",
+        "category": "走近生活",
+        "slug": "231205",
+        "tags": [
+          "情绪表达"
+        ],
+        "summary": "知识忘得快，学起来却并没有那么容易，人的惰性往往是很大的。",
+        "title": "[心情小结] 适应生活",
+        "status": "Published",
+        "urlname": "fff4de69-522d-47b5-9e21-12c7c59c646a",
+        "updated": "2023-12-05 13:41:00"
+      },
+      "url": "https://www.notion.so/fff4de69522d47b59e2112c7c59c646a",
+      "public_url": "https://fragrantknowledge.notion.site/fff4de69522d47b59e2112c7c59c646a"
+    },
     {
       "object": "page",
       "id": "6166a77e-90a8-496e-af17-d0a801dc5a50",
@@ -3887,48 +3938,6 @@
       },
       "url": "https://www.notion.so/90bb6ecbb747423794662584e879ce8f",
       "public_url": "https://fragrantknowledge.notion.site/90bb6ecbb747423794662584e879ce8f"
-    },
-    {
-      "object": "page",
-      "id": "4cb82d85-f418-42ad-8d49-83551a13dda7",
-      "created_time": "2023-11-26T05:40:00.000Z",
-      "last_edited_time": "2023-11-26T06:15:00.000Z",
-      "created_by": {
-        "object": "user",
-        "id": "12c2841c-d7a5-4616-994c-596fe69e6ccf"
-      },
-      "last_edited_by": {
-        "object": "user",
-        "id": "12c2841c-d7a5-4616-994c-596fe69e6ccf"
-      },
-      "cover": {
-        "type": "external",
-        "external": {
-          "url": "https://source.unsplash.com/random"
-        }
-      },
-      "icon": null,
-      "parent": {
-        "type": "database_id",
-        "database_id": "04aa5173-51c7-4543-8d58-c2ddd2c58226"
-      },
-      "archived": false,
-      "properties": {
-        "password": "",
-        "icon": "",
-        "date": "2023-11-26",
-        "type": "Post",
-        "category": "",
-        "slug": "",
-        "tags": [],
-        "summary": "",
-        "title": "[日志记录] 摸鱼向+进度追踪",
-        "status": "Draft",
-        "urlname": "4cb82d85-f418-42ad-8d49-83551a13dda7",
-        "updated": "2023-11-26 06:15:00"
-      },
-      "url": "https://www.notion.so/4cb82d85f41842ad8d4983551a13dda7",
-      "public_url": "https://fragrantknowledge.notion.site/4cb82d85f41842ad8d4983551a13dda7"
     },
     {
       "object": "page",
@@ -7614,8 +7623,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20231128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231128T042154Z&X-Amz-Expires=3600&X-Amz-Signature=a8ce50cb3c014bf4250aef7ac16f88342148fede43fcfab898f9b2b19aafc53c&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-11-28T05:21:54.223Z"
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20231205%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231205T134342Z&X-Amz-Expires=3600&X-Amz-Signature=c192ba4a5362eecf6d890b682f5b0bd1b95221e687d091d2b9c1d82eb09f7d28&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-12-05T14:43:42.804Z"
         }
       },
       "icon": null,
@@ -8107,8 +8116,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20231128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231128T042154Z&X-Amz-Expires=3600&X-Amz-Signature=e13571604bad98b6fa7224648db4fbe242950f03c7f738e2f7e5ba774e03e179&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-11-28T05:21:54.225Z"
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20231205%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231205T134342Z&X-Amz-Expires=3600&X-Amz-Signature=a8018c2607c1255871eccefb0363888ee021eefa0c577dade8a54eb9906b94d1&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-12-05T14:43:42.800Z"
         }
       },
       "icon": null,
