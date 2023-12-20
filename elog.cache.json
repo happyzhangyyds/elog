@@ -3906,8 +3906,8 @@
     {
       "id": "9077438b-340c-45d8-becc-7c74e83333f4",
       "doc_id": "9077438b-340c-45d8-becc-7c74e83333f4",
-      "updated": 1703085600000,
-      "body_original": "\n  我将简单介绍这个短暂而震撼的尝试。\n  我相中了obsidian的双链和关系图谱的功能，这一块正好补足了notion尚未开发出导图的缺陷。\n  而无法多端同步一直是obsidian的痛点，如果搭配上具备一个同步网盘，那么这个问题也将迎刃而解。\n  我搜索了一下，obsidian可以配合坚果云使用，但我之前用过一段时间的坚果云，并表示其实我还是更喜欢nextcloud。\n  问题出在如何协调nextcloud和obsidian的同步文件夹。\n  我不得不感谢notionnext的自定义同步文件夹的功能，使得我不需要迁移obsidian的默认保存位置，就可以无缝上传obsidian的整个文件夹。\n  当然，需要为nextcloud设置后台和耗电权限。  \n\n\n至此obsidian+notion+notionnext+nextcloud的组合，将会焕发出新的光彩！\n\n",
+      "updated": 1703085720000,
+      "body_original": "\n  我将简单介绍这个短暂而震撼的尝试。\n  我相中了obsidian的双链和关系图谱的功能，这一块正好补足了notion尚未开发出导图的缺陷。\n  而无法多端同步一直是obsidian的痛点，如果搭配上具备一个同步网盘，那么这个问题也将迎刃而解。\n  我搜索了一下，obsidian可以配合坚果云使用，但我之前用过一段时间的坚果云，并表示其实我还是更喜欢nextcloud。\n  问题出在如何协调nextcloud和obsidian的同步文件夹。\n  我不得不感谢notionnext的自定义同步文件夹的功能，使得我不需要迁移obsidian的默认保存位置，就可以无缝上传obsidian的整个文件夹。\n  当然，需要为nextcloud设置后台和耗电权限。\n\n\n  至此obsidian+notion+notionnext+nextcloud的组合，将会焕发出新的光彩！\n\n",
       "properties": {
         "password": "",
         "icon": "",
@@ -3922,7 +3922,7 @@
         "title": "[文件管理] NextCloud为Obsidian保驾护航",
         "status": "Published",
         "urlname": "9077438b-340c-45d8-becc-7c74e83333f4",
-        "updated": "2023-12-20 15:20:00"
+        "updated": "2023-12-20 15:22:00"
       },
       "catalog": [
         {
@@ -3940,7 +3940,7 @@
       "object": "page",
       "id": "9077438b-340c-45d8-becc-7c74e83333f4",
       "created_time": "2023-12-20T15:12:00.000Z",
-      "last_edited_time": "2023-12-20T15:20:00.000Z",
+      "last_edited_time": "2023-12-20T15:22:00.000Z",
       "created_by": {
         "object": "user",
         "id": "95e830ca-fbb7-4c94-b0da-73426f4304db"
@@ -3975,7 +3975,7 @@
         "title": "[文件管理] NextCloud为Obsidian保驾护航",
         "status": "Published",
         "urlname": "9077438b-340c-45d8-becc-7c74e83333f4",
-        "updated": "2023-12-20 15:20:00"
+        "updated": "2023-12-20 15:22:00"
       },
       "url": "https://www.notion.so/NextCloud-Obsidian-9077438b340c45d8becc7c74e83333f4",
       "public_url": "https://fragrantknowledge.notion.site/NextCloud-Obsidian-9077438b340c45d8becc7c74e83333f4"
@@ -8148,8 +8148,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20231220%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231220T152100Z&X-Amz-Expires=3600&X-Amz-Signature=a25cf8827ef96b045af042a40379123721457867a2363704a9b4876d0769be8c&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-12-20T16:21:00.898Z"
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20231220%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231220T152258Z&X-Amz-Expires=3600&X-Amz-Signature=df786e2af29c940e2d01b441d8f75f60259b252ba378dcd6719b4bd4a6767ab6&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-12-20T16:22:58.549Z"
         }
       },
       "icon": null,
@@ -8641,8 +8641,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20231220%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231220T152101Z&X-Amz-Expires=3600&X-Amz-Signature=350da0c1bdbd7cf692eaf17b3d525124c9637e524227e547089d50368b979cbf&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-12-20T16:21:01.224Z"
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20231220%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231220T152258Z&X-Amz-Expires=3600&X-Amz-Signature=3bf8ee12fb64d676d3dad14c557f41c4d03397ba8bbd3847753fac7e509ba5f6&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-12-20T16:22:58.801Z"
         }
       },
       "icon": null,

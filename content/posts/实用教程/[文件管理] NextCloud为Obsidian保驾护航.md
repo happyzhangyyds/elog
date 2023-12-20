@@ -11,7 +11,7 @@ summary: obsidian与notion珠联璧合，nextcloud为obsidian保驾护航。
 title: "[文件管理] NextCloud为Obsidian保驾护航"
 status: Published
 urlname: 9077438b-340c-45d8-becc-7c74e83333f4
-updated: "2023-12-20 15:20:00"
+updated: "2023-12-20 15:22:00"
 ---
 
 我将简单介绍这个短暂而震撼的尝试。
