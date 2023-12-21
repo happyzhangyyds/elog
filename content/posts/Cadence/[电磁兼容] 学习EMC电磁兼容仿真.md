@@ -4,14 +4,14 @@ icon: ""
 date: "2023-12-21"
 type: Post
 category: 璀璨星空
-slug: ＥＭＣ
+slug: EMC
 tags:
   - Cadence
 summary: 在前期的设计阶段考虑电磁兼容性并采取相应的措施，可以有效降低电子设备的电磁干扰和辐射水平。
 title: "[电磁兼容] 学习EMC电磁兼容仿真"
 status: Published
-urlname: 79d8a81d-6798-4035-accc-f211b5207a01
-updated: "2023-12-21 09:29:00"
+urlname: aedd2a84-8e3a-4c36-acc6-991ee86d1e1b
+updated: "2023-12-21 10:00:00"
 ---
 
 # 前言
