@@ -3964,9 +3964,84 @@
       "body": "",
       "realName": "[电磁兼容] 学习EMC电磁兼容仿真",
       "relativePath": "/Cadence/[电磁兼容] 学习EMC电磁兼容仿真.md"
+    },
+    {
+      "id": "76abc904-d14c-4b36-a93f-70b072c15e1a",
+      "doc_id": "76abc904-d14c-4b36-a93f-70b072c15e1a",
+      "updated": 1703219400000,
+      "body_original": "\n# 前言\n\n\n---\n\n\n  围绕电路设计和PCB展开工作。\n\n\n# 正文\n\n\n---\n\n\n  步骤分析。感谢记得诚前辈分享的文章：[**硬件工程师如何零基础入门?**](https://www.zhihu.com/question/421337221#:~:text=%E7%A1%AC%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%A6%82%E4%BD%95%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%3F%201%201%E3%80%81%20%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB%20%E7%A1%AC%E4%BB%B6%E7%9A%84%E5%85%A5%E9%97%A8%E9%9C%80%E8%A6%81%E5%85%88%E7%9C%8B%E5%9F%BA%E6%9C%AC%E7%9A%84%E4%B9%A6%E7%B1%8D%EF%BC%8C%E5%92%8C%20%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5%20%E7%BB%93%E5%90%88%E7%B4%A7%E5%AF%86%E7%9A%84%E8%AF%BE%E7%A8%8B%E6%9C%89%EF%BC%9A%E7%94%B5%E8%B7%AF%E5%88%86%E6%9E%90%E3%80%81%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E3%80%81%20%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AF,%E4%B8%8B%E9%9D%A2%E7%9A%84%E8%A7%86%E9%A2%91%E9%83%BD%E6%98%AF%E5%A4%A7%E5%8E%82%E5%87%BA%E5%93%81%E7%9A%84%EF%BC%8C%E8%AF%BE%E7%A8%8B%E8%B4%A8%E9%87%8F%E9%9D%9E%E5%B8%B8%E9%AB%98%EF%BC%8C%E6%9B%B4%E9%87%8D%E8%A6%81%E7%9A%84%E6%98%AF%E5%85%8D%E8%B4%B9%EF%BC%81%20...%204%204%E3%80%81%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%E7%9A%84%E6%90%AD%E5%BB%BA%20%E7%9F%A5%E9%81%93%E8%A6%81%E7%9C%8B%E4%BB%80%E4%B9%88%E4%B9%A6%EF%BC%8C%E4%B8%8A%E4%BB%80%E4%B9%88%E7%BD%91%E7%AB%99%E5%AD%A6%E4%B9%A0%EF%BC%8C%E5%B9%B6%E9%85%8D%E6%9C%89%E4%B8%8D%E9%94%99%E7%9A%84%E6%95%99%E5%AD%A6%E8%A7%86%E9%A2%91%EF%BC%8C%20%E6%8E%A5%E4%B8%8B%E6%9D%A5%E5%B0%B1%E6%98%AF%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%EF%BC%8C%E5%B9%B6%E4%B8%8D%E6%96%AD%E5%AE%8C%E5%96%84%E5%AE%83%E3%80%82%20%E5%9B%A0%E4%B8%BA%E7%A1%AC%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88%E8%A6%81%E5%AD%A6%E7%9A%84%E5%86%85%E5%AE%B9%E5%BE%88%E5%A4%9A%EF%BC%8C%E6%88%91%E6%95%B4%E7%90%86%E4%BA%86%E4%B8%80%E4%BB%BD%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E3%80%82%20)\n\n\n## 基本知识\n\n\n---\n\n\n  电分，数模电，高频，电磁波，最好能系统梳理出这几门课的知识框架，先从适当小的章节为最小单位，不做太过于具体的细节。\n\n\n  在大学期间，是有过这几门课的基础的，但仍需加强。\n\n\n## 寻找相关的电子社区\n\n\n---\n\n\n  感谢记得诚前辈分享的文章：[**学习电子，有什么网站可以推荐？**](https://zhuanlan.zhihu.com/p/365694522)\n\n\n## 搭建知识体系\n\n\n---\n\n\n  这个我觉得是很重要很有意思的一环，知识的输入和转换是很重要的一环。顺着记得诚前辈的思路。\n\n\n### 电子元器件学习\n\n\n---\n\n\n> **电子产品是由一个个电子元器件组成的，了解其特性、原理、学会选型，是基本功。**\n\n\n  感谢[**ICGOO商城**](https://www.zhihu.com/people/zhang-bo-71-56)**的文章：**[**电子元器件种类有哪些?产品一般都如何分类？**](https://zhuanlan.zhihu.com/p/362719557)\n\n\n> **电阻类**：插件薄膜（色环）电阻，金属膜电阻，金属氧化膜电阻，碳膜电阻，绕线电阻，水泥电阻，铝壳电阻，陶瓷片式电阻，热敏电阻，压敏电阻等。\n\n\n\t**电容类**：铝电解电容，钽电容点电容，涤纶电容，聚丙烯薄膜电容，金属化聚丙烯薄膜电容，陶瓷电容，安规电容，抗EMI电容等。\n\n\n\t**电位器类**：线绕电位器，导电塑料电位器，金属陶瓷电位器，碳膜电位器，微调电位器，面板电位器，精密电位器，直滑式电位器等。\n\n\n\t**磁性元件**：绕线片式电感，叠层片式电感，轴向电感，色码电感，径向电感，环形电感，片式磁珠，插件式磁珠，工频变压器，音频变压器，开关电源变压器，脉冲信号变压器，射频变压器等。\n\n\n\t**开关类**：滑动开关，波动开关，轻触开关，微动开关，钮子开关，按键开关，直键开关，旋转开关，拨码开关，薄膜开关等。\n\n\n\t**继电器**：直流电磁继电器，交流电磁继电器，磁保持继电器，舌簧继电器，固态继电器等。\n\n\n\t**接插件**：排针排母，欧式连接器，牛角连接器，简牛连接器，IDC连接器，XH连接器，VH链接器，D-SUB连接器，水晶头水晶座，电源连接器，插头插孔，IC座，射频链接器，光缆连接器，欧式接线端子，栅栏式接线端子，插拔式接线端子，轨道式接线端子，弹簧式接线端子，耳机插座插头，圆形裸端子等。\n\t**保险元件**：保险丝，熔断器，气体放电管等。\n\n\n\t**滤波元件**：压电陶瓷滤波器，声表面波振荡器，石英晶体滤波器。\n\n\n\t**PCB板**：纸基PCB，玻璃布基PCB，合成纤维PCB，陶瓷基底PCB等。\n\n\n\t**电机风扇**：直流电动机，交流电动机，交流发电机，直流发电机，交流风扇，直流风扇等。\n\n\n\t**电声器件**：扬声器，传声器，受话器，送话器，送受话器组合件，耳筒，拾音器，蜂鸣片，蜂鸣器等。\n\n\n\t**线材类**：漆包线，电线电缆，光纤线等。\n\n\n\t**二极管**：整流二极管，快恢复二极管，超快恢复二极管，[肖特基二极管](https://zhuanlan.zhihu.com/p/146572860)，开关二极管，稳压二极管，瞬态抑制二极管，TVS二极管，变容二极管，触发二极管，发光二极管等。\n\n\n\t**三极管**：PNP型三极管，NPN型三极管。通用小功率三极管，开关三极管，通用功率三极管，达林顿管，低饱三极管，压降三极管，数字三极管，带阻三极管，射频三极管等。\n\n\n\t**集成电路IC**：模拟IC：电源管理IC：线性稳压IC，电压基准IC,开关稳压控制器,运算放大器,电压比较器。\n\n\n\t数字IC、通用逻辑IC：缓冲器，驱动器，触发器，锁存器，寄存器，门电路，编码器，译码器，计数器，收发器，电平转换器。\n\n\n\t**处理器：**CPU,单片机，DSP,FPGA,CPLD。\n\n\n\t**储存器**：DRAM,SRAM,PROM,EPROM,EEPROM,FLASHMEMORY。\n\n\n\t**其他类**：接口IC,时钟IC，ADC转换器，DAC转器件，专用IC定制IC，微博IC，混合集成电路等。\n\n\n\t**晶振**：普通晶振，温补晶振，恒温晶振，压控晶振等。\n\n\n\t**显示器件**：数码管，LED器件，OLED显示器，LCD液晶显示器等。\n\n\n\t**传感器**：霍尔传感器，温度传感器等。\n\n\n\t**微波元器件**：隔离器，功分器，耦合器，3DB电桥，合路器，衰减器，移相器，谐振器，环形器，混频器等。\n\n\n\t补充：场效应管，晶体管，光耦，光续短期，红外发射管，红外接收管，晶闸管，复合晶体管，可控硅一类。\n\n\n\t1.固定电阻，电位，敏感电阻可以统称为电阻类。\n\n\n\t2.片式电阻的电阻体为氧化膜（厚膜电阻）或金属膜（薄膜电阻），所以可以和色环电阻一起归类为膜式电阻。\n\n\n\t3.热敏电阻又可以归类为传感器类（温度传感器）。\n\n\n\t4.压敏电阻，瞬态抑制二极管，热敏电阻PTC中可恢复保险丝等，可以和保险丝一起归为保护元件器类。保护元件又可以分为电压保护元件和电流保护元件。\n\n\n\t5.陶瓷材料做成的压敏电阻，热敏电阻中用的陶瓷是一种半导体陶瓷，但是这些元件一般并不会归为半导体器件。\n\n\n\t6.片式多层陶瓷电容和插件式陶瓷电容可以合并归类为陶瓷电容。不过由于片式多层陶瓷电容比插件式陶瓷电容，应用广泛得多，所以可以分开归类。单独把片式多才呢过陶瓷电容提出来。\n\n\n\t7.开关，继电器，连接器，电极等又可以归类为机电元件类。\n\n\n\t8.磁珠是一种特殊的电感器，也可以归类为电感器类。\n\t9.驻极体式受话器内含MOS管等半导体器件，固态继电器内含光耦等半导体器件。有缘晶振内涵IC或晶体等半导体器件，但是，一般归类时不会把它们专门放在半导体元件中讲解，而是分别归在电声器件中，继电器，晶振元件中。\n\n\n\t10.有的微电机系统元器件又可以归在传感器类中。\n\n\n### 硬件开发工具的使用\n\n\n---\n\n\n开发工具：学习Cadence的使用，跟着于博士或者小马哥的视频尽快上手。\n\n\n测试工具：熟悉万用表、示波器、电烙铁、热风枪等仪器的使用。\n\n\n### 电路设计和PCB\n\n\n---\n\n\n学习常见的电路，分析电路，模仿电路，设计电路。\n\n\n### 总线接口协议\n\n\n---\n\n\n学习总线接口协议。\n\n\n### 进阶内容学习\n\n\n---\n\n\n  电源完整性，EMC电磁兼容，C语言进阶，射频电路设计，嵌入式Linux，英语，信号完整和PCB设计。\n\n\n# 总结\n\n\n---\n\n\n  兴趣是最好的老师。\n\n",
+      "properties": {
+        "password": "",
+        "icon": "",
+        "date": "2023-12-22",
+        "type": "Post",
+        "category": "",
+        "slug": "Hardware-engineer",
+        "tags": [
+          "Cadence"
+        ],
+        "summary": "硬件工程师需要熟悉的一些基本技能。",
+        "title": "[基本技能] 硬件工程师成长规划",
+        "status": "Published",
+        "urlname": "76abc904-d14c-4b36-a93f-70b072c15e1a",
+        "updated": "2023-12-22 04:30:00"
+      },
+      "catalog": [
+        {
+          "title": "Cadence",
+          "doc_id": "76abc904-d14c-4b36-a93f-70b072c15e1a"
+        }
+      ],
+      "body": "",
+      "realName": "[基本技能] 硬件工程师成长规划",
+      "relativePath": "/Cadence/[基本技能] 硬件工程师成长规划.md"
     }
   ],
   "catalog": [
+    {
+      "object": "page",
+      "id": "76abc904-d14c-4b36-a93f-70b072c15e1a",
+      "created_time": "2023-12-22T03:06:00.000Z",
+      "last_edited_time": "2023-12-22T04:30:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "12c2841c-d7a5-4616-994c-596fe69e6ccf"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "12c2841c-d7a5-4616-994c-596fe69e6ccf"
+      },
+      "cover": {
+        "type": "external",
+        "external": {
+          "url": "https://bu.dusays.com/2023/12/22/6585109841eac.jpg"
+        }
+      },
+      "icon": null,
+      "parent": {
+        "type": "database_id",
+        "database_id": "04aa5173-51c7-4543-8d58-c2ddd2c58226"
+      },
+      "archived": false,
+      "properties": {
+        "password": "",
+        "icon": "",
+        "date": "2023-12-22",
+        "type": "Post",
+        "category": "",
+        "slug": "Hardware-engineer",
+        "tags": [
+          "Cadence"
+        ],
+        "summary": "硬件工程师需要熟悉的一些基本技能。",
+        "title": "[基本技能] 硬件工程师成长规划",
+        "status": "Published",
+        "urlname": "76abc904-d14c-4b36-a93f-70b072c15e1a",
+        "updated": "2023-12-22 04:30:00"
+      },
+      "url": "https://www.notion.so/76abc904d14c4b36a93f70b072c15e1a",
+      "public_url": "https://fragrantknowledge.notion.site/76abc904d14c4b36a93f70b072c15e1a"
+    },
     {
       "object": "page",
       "id": "aedd2a84-8e3a-4c36-acc6-991ee86d1e1b",
@@ -8223,8 +8298,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20231221%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231221T100225Z&X-Amz-Expires=3600&X-Amz-Signature=13fe79385bdab095ad4f7fd7e87788318d77c3b51e30be02f311b88132f39e14&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-12-21T11:02:25.738Z"
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20231222%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231222T043230Z&X-Amz-Expires=3600&X-Amz-Signature=60f3cf9ec2f46d7e5099cef492123e736c0deadecff59436d0b0098439085d06&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-12-22T05:32:30.159Z"
         }
       },
       "icon": null,
@@ -8716,8 +8791,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20231221%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231221T100226Z&X-Amz-Expires=3600&X-Amz-Signature=740cfc565b8bf558abc5a0bd08288b67f70a80010ae56e5e7c95aad0eb269b7e&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-12-21T11:02:26.237Z"
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20231222%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231222T043230Z&X-Amz-Expires=3600&X-Amz-Signature=a8f062882b36ab9000b84809d139332f15f24c466ac5348988fcdb83fb7d8d1f&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-12-22T05:32:30.437Z"
         }
       },
       "icon": null,
