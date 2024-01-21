@@ -4157,6 +4157,83 @@
       "relativePath": "/情绪表达/[情绪价值] 环境与启蒙的基石.md"
     },
     {
+      "id": "a4bc17f5-f35c-42b8-9099-c3cef783afe0",
+      "doc_id": "a4bc17f5-f35c-42b8-9099-c3cef783afe0",
+      "updated": 1705854660000,
+      "body_original": "\n# 前言\n\n\n---\n\n\n这是一篇待完成的文章，用于测试vps中使用crontab定时脚本，执行elog的git pull，从而拉取最新的文章到onedrive，实现数据中心的集成。\n\n\n# 正文\n\n\n---\n\n\n待完成\n\n\n需要注意单向同步的操作\n\n\n```shell\n如果您的远程分支名称是`main`，则可以使用以下命令来强制单向拉取仓库并放弃本地更改：\n\n```\ngit fetch --all\ngit reset --hard origin/main\n```\n\n这将执行以下操作：\n\n# 1. git fetch --all：这将从远程存储库获取最新的更改，包括所有分支和标签，但不会合并到本地分支。\n# 2. git reset --hard origin/<branch>：这将将本地分支重置为与远程分支完全一致的状态。请将<branch>替换为您要重置的分支名称。\n请注意，执行此操作将放弃本地分支上的所有未提交的更改和提交历史。确保您已经备份了重要的更改，并且确定您要放弃本地更改并完全匹配远程分支的状态。\n请谨慎使用此命令，并确保在执行之前理解其影响。\n```\n\n\n# 总结\n\n\n---\n\n\n待完成\n\n",
+      "properties": {
+        "password": "",
+        "icon": "",
+        "date": "2024-01-21",
+        "type": "Post",
+        "category": "动手实践",
+        "slug": "crontab-1",
+        "tags": [
+          "实用教程"
+        ],
+        "summary": "尝试为obsidian建立数据中心，使用vps定时同步到onedrive",
+        "title": "[数据中心] 测试crontab同步elog+Onedrive",
+        "status": "Published",
+        "urlname": "a4bc17f5-f35c-42b8-9099-c3cef783afe0",
+        "updated": "2024-01-21 16:31:00"
+      },
+      "catalog": [
+        {
+          "title": "实用教程",
+          "doc_id": "a4bc17f5-f35c-42b8-9099-c3cef783afe0"
+        }
+      ],
+      "body": "",
+      "realName": "[数据中心] 测试crontab同步elog+Onedrive",
+      "relativePath": "/实用教程/[数据中心] 测试crontab同步elog+Onedrive.md"
+    }
+  ],
+  "catalog": [
+    {
+      "object": "page",
+      "id": "a4bc17f5-f35c-42b8-9099-c3cef783afe0",
+      "created_time": "2024-01-21T15:51:00.000Z",
+      "last_edited_time": "2024-01-21T16:31:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "12c2841c-d7a5-4616-994c-596fe69e6ccf"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "12c2841c-d7a5-4616-994c-596fe69e6ccf"
+      },
+      "cover": {
+        "type": "external",
+        "external": {
+          "url": "https://bu.dusays.com/2023/11/20/655ac0fedd7c3.jpeg"
+        }
+      },
+      "icon": null,
+      "parent": {
+        "type": "database_id",
+        "database_id": "04aa5173-51c7-4543-8d58-c2ddd2c58226"
+      },
+      "archived": false,
+      "properties": {
+        "password": "",
+        "icon": "",
+        "date": "2024-01-21",
+        "type": "Post",
+        "category": "动手实践",
+        "slug": "crontab-1",
+        "tags": [
+          "实用教程"
+        ],
+        "summary": "尝试为obsidian建立数据中心，使用vps定时同步到onedrive",
+        "title": "[数据中心] 测试crontab同步elog+Onedrive",
+        "status": "Published",
+        "urlname": "a4bc17f5-f35c-42b8-9099-c3cef783afe0",
+        "updated": "2024-01-21 16:31:00"
+      },
+      "url": "https://www.notion.so/crontab-elog-Onedrive-a4bc17f5f35c42b89099c3cef783afe0",
+      "public_url": "https://fragrantknowledge.notion.site/crontab-elog-Onedrive-a4bc17f5f35c42b89099c3cef783afe0"
+    },
+    {
       "object": "page",
       "id": "79ba51e7-4263-4563-8077-b8f2761ecd22",
       "created_time": "2024-01-21T11:24:00.000Z",
@@ -8676,8 +8753,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240121%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240121T160955Z&X-Amz-Expires=3600&X-Amz-Signature=7dc608a9281ab14034d5d01dd1948271a4fc7efdaf00beae285dd7edfb2113e6&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2024-01-21T17:09:55.671Z"
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240121%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240121T163418Z&X-Amz-Expires=3600&X-Amz-Signature=ce564cae85dd5d4cb871f5b1364f4d1f5a613d153e7bae4284d19521cfc3b4f5&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2024-01-21T17:34:18.101Z"
         }
       },
       "icon": null,
@@ -9169,8 +9246,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240121%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240121T160955Z&X-Amz-Expires=3600&X-Amz-Signature=7a2d4842e39be9aa3b5a3afbd277cf91b6f4926afbe2eeaaf395aadb7ed537de&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2024-01-21T17:09:55.674Z"
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240121%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240121T163418Z&X-Amz-Expires=3600&X-Amz-Signature=dd5eddc7675810ba9bac27bc7852b5c6c70e82abe0285ef82dbc5c4ed23b3174&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2024-01-21T17:34:18.109Z"
         }
       },
       "icon": null,
