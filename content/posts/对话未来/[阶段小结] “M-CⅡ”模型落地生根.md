@@ -11,7 +11,7 @@ summary: Matrix是我们真实生存的世界， 一招一式，都是学习。
 title: "[阶段小结] “M-CⅡ”模型落地生根"
 status: Published
 urlname: 1e28ff0c-13ea-4540-b106-5f76ecb0c701
-updated: "2024-01-20 13:56:00"
+updated: "2024-01-20 14:00:00"
 ---
 
 # 前言
@@ -87,11 +87,7 @@ Matrix 是我们真实生存的世界， 一招一式，都是学习。
 
 ---
 
-在
-
-[[三级缓存] 向阳花笺 | MatrixCore](https://matrixcore.top/article/sunflower)
-
-中的 May 22,23 有一份简笔画。
+在[[三级缓存] 向阳花笺 | MatrixCore](https://matrixcore.top/article/sunflower)中的 May 22,23 有一份简笔画。
 这是手稿的全貌。
 
 ![](https://bu.dusays.com/2024/01/20/65abcf6b92b68.png)
