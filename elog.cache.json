@@ -4159,26 +4159,33 @@
     {
       "id": "a4bc17f5-f35c-42b8-9099-c3cef783afe0",
       "doc_id": "a4bc17f5-f35c-42b8-9099-c3cef783afe0",
-      "updated": 1705853100000,
+      "updated": 1705853280000,
       "body_original": "\n# 前言\n\n\n---\n\n\n这是一篇待完成的文章，用于测试vps中使用crontab定时脚本，执行elog的git pull，从而拉取最新的文章到onedrive，实现数据中心的集成。\n\n\n# 正文\n\n\n---\n\n\n待完成\n\n\n# 总结\n\n\n---\n\n\n待完成\n\n",
       "properties": {
         "password": "",
         "icon": "",
         "date": "2024-01-21",
         "type": "Post",
-        "category": "",
-        "slug": "",
-        "tags": [],
-        "summary": "测试",
+        "category": "动手实践",
+        "slug": "crontab-1",
+        "tags": [
+          "实用教程"
+        ],
+        "summary": "尝试为obsidian建立数据中心",
         "title": "[数据中心] 测试crontab同步elog+Onedrive",
         "status": "Published",
         "urlname": "a4bc17f5-f35c-42b8-9099-c3cef783afe0",
-        "updated": "2024-01-21 16:05:00"
+        "updated": "2024-01-21 16:08:00"
       },
-      "catalog": [],
+      "catalog": [
+        {
+          "title": "实用教程",
+          "doc_id": "a4bc17f5-f35c-42b8-9099-c3cef783afe0"
+        }
+      ],
       "body": "",
       "realName": "[数据中心] 测试crontab同步elog+Onedrive",
-      "relativePath": "/[数据中心] 测试crontab同步elog+Onedrive.md"
+      "relativePath": "/实用教程/[数据中心] 测试crontab同步elog+Onedrive.md"
     }
   ],
   "catalog": [
@@ -4186,7 +4193,7 @@
       "object": "page",
       "id": "a4bc17f5-f35c-42b8-9099-c3cef783afe0",
       "created_time": "2024-01-21T15:51:00.000Z",
-      "last_edited_time": "2024-01-21T16:05:00.000Z",
+      "last_edited_time": "2024-01-21T16:08:00.000Z",
       "created_by": {
         "object": "user",
         "id": "12c2841c-d7a5-4616-994c-596fe69e6ccf"
@@ -4212,14 +4219,16 @@
         "icon": "",
         "date": "2024-01-21",
         "type": "Post",
-        "category": "",
-        "slug": "",
-        "tags": [],
-        "summary": "测试",
+        "category": "动手实践",
+        "slug": "crontab-1",
+        "tags": [
+          "实用教程"
+        ],
+        "summary": "尝试为obsidian建立数据中心",
         "title": "[数据中心] 测试crontab同步elog+Onedrive",
         "status": "Published",
         "urlname": "a4bc17f5-f35c-42b8-9099-c3cef783afe0",
-        "updated": "2024-01-21 16:05:00"
+        "updated": "2024-01-21 16:08:00"
       },
       "url": "https://www.notion.so/crontab-elog-Onedrive-a4bc17f5f35c42b89099c3cef783afe0",
       "public_url": "https://fragrantknowledge.notion.site/crontab-elog-Onedrive-a4bc17f5f35c42b89099c3cef783afe0"
@@ -8744,8 +8753,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240121%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240121T160517Z&X-Amz-Expires=3600&X-Amz-Signature=aa2e3470c206d45966c7840cd7d24471e341b317dd974e059d0093aa3e6442bd&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2024-01-21T17:05:17.356Z"
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240121%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240121T160955Z&X-Amz-Expires=3600&X-Amz-Signature=7dc608a9281ab14034d5d01dd1948271a4fc7efdaf00beae285dd7edfb2113e6&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2024-01-21T17:09:55.671Z"
         }
       },
       "icon": null,
@@ -9237,8 +9246,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240121%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240121T160517Z&X-Amz-Expires=3600&X-Amz-Signature=9433f091095c0541f58a9e0ad7e785476ba9bc502c05b28064180d5d4344a2cf&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2024-01-21T17:05:17.358Z"
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/df0856fb-2fb2-48cc-9757-26396f643087/%E6%88%AA%E5%B1%8F2023-08-06_19.45.19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240121%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240121T160955Z&X-Amz-Expires=3600&X-Amz-Signature=7a2d4842e39be9aa3b5a3afbd277cf91b6f4926afbe2eeaaf395aadb7ed537de&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2024-01-21T17:09:55.674Z"
         }
       },
       "icon": null,
