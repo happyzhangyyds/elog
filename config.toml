@@ -1,4 +1,4 @@
-baseURL = 'https://matrixcore.life/'
+baseURL = 'https://hugo.matrixcore.life/'
 languageCode = 'zh-cn'
 title = 'MatrixCore'
 
