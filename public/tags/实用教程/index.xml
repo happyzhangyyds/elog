@@ -6,7 +6,43 @@
     <description>Recent content in 实用教程 on MatrixCore</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 18 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://matrixcore.life/tags/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://matrixcore.life/tags/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[数据中心] 测试crontab同步elog&#43;Onedrive</title>
+      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/crontab-1/</link>
+      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/crontab-1/</guid>
+      <description>为obsidian建立数据中心，使用vps定时同步到onedrive</description>
+    </item>
+    
+    <item>
+      <title>[文件管理] NextCloud为Obsidian保驾护航</title>
+      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/nextcloud-obsidian/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/nextcloud-obsidian/</guid>
+      <description>obsidian与notion珠联璧合，nextcloud为obsidian保驾护航。</description>
+    </item>
+    
+    <item>
+      <title>[狗命要紧] jellyfin&#43;crontab&#43;mailx快感管理</title>
+      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/pleasure-management/</link>
+      <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/pleasure-management/</guid>
+      <description>使用jellyfin+crontab+mailx+postfix+QQ邮箱+微信提醒实现快感的时间调度</description>
+    </item>
+    
+    <item>
+      <title>[主题推荐] 宝藏hugo-virgo</title>
+      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/hugo-virgo/</link>
+      <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/hugo-virgo/</guid>
+      <description>Hugo是静态网页的速度很快，virgo主题又非常简洁美观，值得推荐给大家。</description>
+    </item>
+    
     <item>
       <title>[笔记同传] 用双手减少大脑过度思考的偏差</title>
       <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/video-record/</link>

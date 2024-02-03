@@ -2,25 +2,127 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/240121/</loc>
+    <lastmod>2024-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/crontab-1/</loc>
+    <lastmod>2024-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/</loc>
+    <lastmod>2024-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/</loc>
+    <lastmod>2024-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/tags/</loc>
+    <lastmod>2024-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/tags/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2024-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/tags/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/</loc>
+    <lastmod>2024-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/%E5%AF%B9%E8%AF%9D%E6%9C%AA%E6%9D%A5/240120/</loc>
+    <lastmod>2024-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/tags/%E5%AF%B9%E8%AF%9D%E6%9C%AA%E6%9D%A5/</loc>
+    <lastmod>2024-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/%E7%94%9F%E5%91%BD%E6%99%BA%E6%85%A7-%E6%9B%B2%E9%BB%8E%E6%95%8F/wisdom-of-life-2/</loc>
+    <lastmod>2024-01-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/%E7%94%9F%E5%91%BD%E6%99%BA%E6%85%A7-%E6%9B%B2%E9%BB%8E%E6%95%8F/wisdom-of-life-2/</loc>
+    <lastmod>2024-01-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/tags/%E7%94%9F%E5%91%BD%E6%99%BA%E6%85%A7-%E6%9B%B2%E9%BB%8E%E6%95%8F/</loc>
+    <lastmod>2024-01-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/%E7%94%9F%E5%91%BD%E6%99%BA%E6%85%A7-%E6%9B%B2%E9%BB%8E%E6%95%8F/wisdom-of-life-1/</loc>
+    <lastmod>2024-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231230/</loc>
+    <lastmod>2023-12-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/cadence/hardware-engineer/</loc>
+    <lastmod>2023-12-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/tags/cadence/</loc>
+    <lastmod>2023-12-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/cadence/emc/</loc>
+    <lastmod>2023-12-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/nextcloud-obsidian/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/cadence/cadence1/</loc>
+    <lastmod>2023-12-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231217/</loc>
+    <lastmod>2023-12-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/pleasure-management/</loc>
+    <lastmod>2023-12-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231210/</loc>
+    <lastmod>2023-12-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/%E7%AE%80%E5%AB%83/jianzhen-5/</loc>
+    <lastmod>2023-12-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/tags/%E7%AE%80%E5%AB%83/</loc>
+    <lastmod>2023-12-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/%E7%AE%80%E5%AB%83/jianzhen-4/</loc>
+    <lastmod>2023-12-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231205/</loc>
+    <lastmod>2023-12-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/%E7%AE%80%E5%AB%83/jianzhen-3/</loc>
+    <lastmod>2023-11-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/%E7%AE%80%E5%AB%83/jianzhen-2/</loc>
+    <lastmod>2023-11-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/%E7%AE%80%E5%AB%83/jianzhen-1/</loc>
+    <lastmod>2023-11-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231117/</loc>
+    <lastmod>2023-11-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231125/</loc>
+    <lastmod>2023-11-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231124/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/%E8%B0%88%E7%BE%8E-%E6%9C%B1%E5%85%89%E6%BD%9C/beauty15/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/%E8%B0%88%E7%BE%8E-%E6%9C%B1%E5%85%89%E6%BD%9C/beauty14/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/tags/%E8%B0%88%E7%BE%8E-%E6%9C%B1%E5%85%89%E6%BD%9C/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/%E9%B2%81%E7%8F%AD%E7%8C%AB/lubancat-16/</loc>
+    <lastmod>2023-11-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/tags/%E9%B2%81%E7%8F%AD%E7%8C%AB/</loc>
+    <lastmod>2023-11-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/hugo-virgo/</loc>
+    <lastmod>2023-11-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/gifts/</loc>
+    <lastmod>2023-11-20T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://matrixcore.life/posts/%E5%AF%B9%E8%AF%9D%E6%9C%AA%E6%9D%A5/marxism-1/</loc>
     <lastmod>2023-11-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/video-record/</loc>
-    <lastmod>2023-11-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://matrixcore.life/</loc>
-    <lastmod>2023-11-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://matrixcore.life/posts/</loc>
-    <lastmod>2023-11-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://matrixcore.life/tags/</loc>
-    <lastmod>2023-11-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://matrixcore.life/tags/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2023-11-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://matrixcore.life/tags/%E5%AF%B9%E8%AF%9D%E6%9C%AA%E6%9D%A5/</loc>
     <lastmod>2023-11-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/yolov5-2/</loc>
@@ -36,9 +138,6 @@
     <lastmod>2023-11-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231110/</loc>
-    <lastmod>2023-11-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://matrixcore.life/tags/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/</loc>
     <lastmod>2023-11-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://matrixcore.life/posts/%E5%AF%B9%E8%AF%9D%E6%9C%AA%E6%9D%A5/bing001/</loc>
@@ -90,9 +189,6 @@
     <lastmod>2023-10-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://matrixcore.life/tags/%E5%BE%B7%E8%AF%AD%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2023-10-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://matrixcore.life/tags/%E8%B0%88%E7%BE%8E-%E6%9C%B1%E5%85%89%E6%BD%9C/</loc>
     <lastmod>2023-10-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231015/</loc>
@@ -368,11 +464,16 @@
     <loc>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/sunrise/</loc>
     <lastmod>2023-04-25T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/sunrise/</loc>
+    <lastmod>2023-04-25T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/flow/</loc>
     <lastmod>2023-04-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E5%BF%85%E7%9C%8B%E7%B2%BE%E9%80%89/improve/</loc>
     <lastmod>2023-04-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://matrixcore.life/posts/@%E5%8F%8C%E9%93%BE/fpga/</loc>
   </url><url>
     <loc>https://matrixcore.life/about/</loc>
     <lastmod>2023-11-19T16:45:04+08:00</lastmod>
@@ -383,7 +484,7 @@
     <loc>https://matrixcore.life/categories/</loc>
   </url><url>
     <loc>https://matrixcore.life/nav/</loc>
-    <lastmod>2023-11-19T16:45:04+08:00</lastmod>
+    <lastmod>2023-11-24T14:51:42+08:00</lastmod>
   </url><url>
     <loc>https://matrixcore.life/search/</loc>
     <lastmod>2023-11-19T16:45:04+08:00</lastmod>
