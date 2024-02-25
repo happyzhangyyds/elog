@@ -11,7 +11,7 @@ summary: 为obsidian建立数据中心，使用vps定时同步到onedrive
 title: "[数据中心] 测试crontab同步elog+Onedrive"
 status: Published
 urlname: a4bc17f5-f35c-42b8-9099-c3cef783afe0
-updated: "2024-02-03 08:12:00"
+updated: "2024-02-03 08:21:00"
 ---
 
 # 前言
