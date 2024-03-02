@@ -10,8 +10,8 @@ tags:
 summary: 建立一个完整的工程来验证软件安装是否正确
 title: "[野火] 第9章  点亮你的 LED 灯"
 status: Published
-urlname: 494e59b0-ebb7-49aa-abd9-2fa04ae82ba2
-updated: "2023-11-02 09:17:00"
+urlname: 80fc2d36-5656-4889-9096-fbb0a5b44f8b
+updated: "2024-02-25 12:12:00"
 ---
 
 ```markdown

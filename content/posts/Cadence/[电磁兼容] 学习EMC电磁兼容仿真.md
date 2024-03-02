@@ -10,8 +10,8 @@ tags:
 summary: 在前期的设计阶段考虑电磁兼容性并采取相应的措施，可以有效降低电子设备的电磁干扰和辐射水平。
 title: "[电磁兼容] 学习EMC电磁兼容仿真"
 status: Published
-urlname: aedd2a84-8e3a-4c36-acc6-991ee86d1e1b
-updated: "2023-12-30 14:46:00"
+urlname: 91bbcdfa-c3bf-4cf8-b2e4-a0fd85d4edef
+updated: "2024-02-25 12:12:00"
 ---
 
 # 前言

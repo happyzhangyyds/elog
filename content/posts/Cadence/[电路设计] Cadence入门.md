@@ -10,8 +10,8 @@ tags:
 summary: 需要具备电路设计、PCB布局、元器件选择、测试和故障排除等方面的专业知识和技能。
 title: "[电路设计] Cadence入门"
 status: Published
-urlname: 20cca308-24b8-4c9a-ab0d-413546da30c4
-updated: "2023-12-18 10:00:00"
+urlname: a57cf3cb-9908-4374-8874-d7d05a352042
+updated: "2024-02-25 12:12:00"
 ---
 
 # 前言

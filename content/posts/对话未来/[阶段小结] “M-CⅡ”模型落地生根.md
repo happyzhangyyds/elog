@@ -10,8 +10,8 @@ tags:
 summary: Matrix是我们真实生存的世界， 一招一式，都是学习。
 title: "[阶段小结] “M-CⅡ”模型落地生根"
 status: Published
-urlname: 1e28ff0c-13ea-4540-b106-5f76ecb0c701
-updated: "2024-01-20 14:00:00"
+urlname: 95fd6070-5679-4c6d-89f2-22184ee14b4b
+updated: "2024-02-25 12:12:00"
 ---
 
 # 前言
