@@ -11,8 +11,70 @@ summary: 为obsidian建立数据中心，使用vps定时同步到onedrive
 title: "[数据中心] 测试crontab同步elog+Onedrive"
 status: Published
 urlname: 9f509fa3-f0c9-41b0-b86a-3a8a61b86b50
-updated: "2024-02-25 12:12:00"
+updated: "2024-03-02 06:54:00"
 ---
+
+# 更新 log
+
+---
+
+之前我一致在思考如何对于文章进行纵向管理，可以说，也正是这个念头，才产生了这篇文章，当我再去思考纵向管理的时候，它核心的定义是什么的时候，我认为可以这么来理解，即**“站在过去自己的肩膀上”**，为了避免重复造轮子，从而节约时间和精力能去做更多有意义的事情。
+同时，我们还应该清楚地认识到，每一个开始，都是要付出不下的决心和代价，如果每次想到同一个问题的时候都需要在原地踏步，甚至重新思考，我认为这种模式是低效的，正如同，我们学过了大学的知识，但是在之后运用中却不得不花费时间自己再去学一遍。从结果导向来看，这种结果是不尽如人意的。那么我们就需要反思问题出在哪里。
+如果再往前追溯，我们甚至还可以想到我们的高中，但是那个时候大部分的知识都忘掉了，我们翻看过去的笔记的概率无限接近于零，因为当下有更多要紧的事情要去完成。所以，电子化时代确实是带来了这个问题解决的思路和可能。
+当然理论部分，我觉得不应该再花时间做过多的解释和强调了。
+
+### 关于服务器同步原理的更新 2024-03-02
+
+---
+
+- cron 在执行 elog 指令的时候存在困难，**需要配置一些环境变量**，在折腾之后，并没有成功。
+
+```shell
+在 Linux 系统中，cron 任务是在一个相对干净的环境中执行的，通常缺少一些常见的环境变量。这可能导致在 cron 任务中无法访问一些用户环境中可用的变量或路径。下面是一些关于 cron 运行环境的重要信息：
+1. PATH 环境变量：
+   cron 任务运行时通常只包含一个非常基本的 PATH 环境变量，这可能导致在 cron 任务中无法直接调用系统中的一些命令或程序。为了解决这个问题，你可以在 crontab 任务中显式设置 PATH 环境变量，或者在命令中使用绝对路径来调用命令。
+2. 当前工作目录：
+   cron 任务的默认工作目录通常是用户的家目录。因此，如果你的任务需要在特定目录中执行，最好在 crontab 任务中使用 `cd` 命令切换到正确的工作目录。
+3. 标准输入和标准输出：
+   cron 任务通常没有与终端相关联的标准输入和标准输出。如果任务产生输出，最好将输出重定向到文件中，以便后续查看。
+4. 环境变量：
+   cron 任务通常缺少用户登录时设置的环境变量，包括一些自定义的 PATH、LD_LIBRARY_PATH 等。为了在 cron 任务中使用这些环境变量，你可以在任务中加载包含这些变量的文件，比如使用 `source` 命令加载一个包含环境变量设置的脚本。
+5. 日志记录：
+   为了方便排查问题，建议在 crontab 任务中将输出和错误信息重定向到日志文件中。这样可以帮助你在任务执行时查看输出信息以及任何错误。
+总的来说，要确保 cron 任务能够正常执行，最好在编写任务时考虑到这些环境限制，并相应地设置环境变量、工作目录和输出记录方式。
+```
+
+- 在[CC 康纳百川](/9f509fa3f0c941b0b86a3a8a61b86b50)的提醒下，打算使用 git 拉取仓库的代码，因为仓库的数据一直都是最新的。经过本地和远程测试，可以成功被执行。操作步骤如下：
+
+```shell
+如果你想拉取整个 GitHub 存储库中的特定文件夹，可以使用 Git 工具来克隆该存储库，并在本地保留所需的文件夹。这种方法可以通过 Git 的子模块或者使用 sparse checkout 功能来实现。
+以下是一个示例，展示如何使用 Git 克隆整个 GitHub 存储库并只保留特定文件夹的内容：
+1. 首先，克隆 GitHub 存储库到本地。假设你已经安装了 Git：
+git clone <repository_url>
+请将 `<repository_url>` 替换为 GitHub 存储库的 URL。
+2. 进入克隆的存储库目录：
+cd repository_name
+请将 `repository_name` 替换为你克隆的存储库的名称。
+3. 使用 sparse checkout 功能来只保留特定文件夹的内容。首先启用 sparse checkout：
+git config core.sparsecheckout true
+4. 然后，指定要保留的文件夹路径。编辑 `.git/info/sparse-checkout` 文件，将需要的文件夹路径添加到文件中：
+echo "folder_path/*" >> .git/info/sparse-checkout
+请将 `folder_path` 替换为你想要保留的文件夹路径。
+5. 最后，更新工作区以应用 sparse checkout：
+git read-tree -mu HEAD
+现在，你的本地存储库中应该只包含特定文件夹的内容。
+这种方法允许你克隆整个 GitHub 存储库，并只保留特定文件夹的内容，而不是整个存储库。
+
+如果你已经使用 sparse checkout 将特定文件夹的内容克隆到本地，并且想要更新这个文件夹以获取最新的更改，你可以执行以下命令：
+1. 首先，确保你在存储库的根目录中。
+2. 拉取存储库的最新更改：
+git pull
+这将拉取存储库的最新更改。
+3. 如果你只想更新特定文件夹而不是整个存储库，可以执行以下命令：
+git checkout HEAD folder_path
+这将更新特定文件夹的内容以反映最新更改。
+通过执行这些命令，你可以更新本地存储库中特定文件夹的内容，而不必拉取整个存储库的内容。
+```
 
 # 前言
 
@@ -130,7 +192,7 @@ obsidian -- notion标准化 --> 服务器定时同步;
 subgraph 服务器定时同步
 vps & crontab & id1["onedrive(远程)"];
 end;
-vps --> crontab -- 先elog同步数据,后执行sync确保远程最新 --> id1;
+vps --> crontab -- 先git拉取仓库最新数据,后执行sync确保远程最新 --> id1;
 id1 -- 本机启动之后下载最新版本 --> id0;
 id0 --> obsidian -- 增加双链 --> id1;
 
@@ -150,21 +212,21 @@ id0 --> obsidian -- 增加双链 --> id1;
 
 - 确认移除旧的客户端
 
-```text
+```shell
 sudo apt remove onedrive
 sudo add-apt-repository --remove ppa:yann1ck/onedrive
 ```
 
 - 此外，Ubuntu 及其克隆在安装“onedrive”软件包时有创建“默认”系统服务文件的坏习惯，这样客户端将自动运行正在验证的客户端帖子。此系统条目是错误的，需要删除。
 
-```text
+```shell
 sudo rm /etc/systemd/user/default.target.wants/onedrive.service
 
 ```
 
 - 使用类似于以下内容的脚本，以确保您的系统正确更新
 
-```text
+```shell
 #!/bin/bash
 rm -rf /var/lib/dpkg/lock-frontend
 rm -rf /var/lib/dpkg/lock
@@ -178,7 +240,7 @@ apt-get autoclean -y
 
 - 确认您的操作系统，示例如下
 
-```text
+```shell
 alex@ubuntu-system:~$ lsb_release -a
 No LSB modules are available.
 Distributor ID: Ubuntu
@@ -190,30 +252,29 @@ Codename:       jammy
 
 - 选择对应的发行版（Ubuntu20.04）添加 OpenSuSE Build Service 存储库发布密钥
 
-```text
+```shell
 wget -qO - <https://download.opensuse.org/repositories/home:/npreining:/debian-ubuntu-onedrive/xUbuntu_20.04/Release.key> | sudo apt-key add -
 
 ```
 
 - 添加 OpenSuSE Build Service 存储库
 
-```text
+```shell
 echo 'deb <https://download.opensuse.org/repositories/home:/npreining:/debian-ubuntu-onedrive/xUbuntu_20.04/> ./' | sudo tee /etc/apt/sources.list.d/onedrive.list
 
 ```
 
 - 更新您的 apt 软件包缓存
 
-```text
+```shell
 sudo apt-get update
 
 ```
 
 - 安装 onedrive
 
-```text
+```shell
 sudo apt install --no-install-recommends --no-install-suggests onedrive
-
 ```
 
 - 阅读并了解以下这些软件包的[已知问题](https://github.com/abraunegg/onedrive/blob/master/docs/ubuntu-package-install.md#known-issues-with-installing-from-the-above-packages)，采取任何需要的行动。
@@ -228,30 +289,23 @@ sudo apt install --no-install-recommends --no-install-suggests onedrive
 
 - 授权，您将被要求使用网络浏览器打开特定的 URL，您必须登录您的微软帐户，并授予应用程序访问文件的权限。授予应用程序权限后，您将被重定向到空白页面。将空白页面的 URI 复制到应用程序中。
 
-```text
+```shell
 [user@hostname ~]$ onedrive
-
 Authorize this app visiting:
-
 https://.....
-
 Enter the response uri:
-
-
 ```
 
 - 显示您的配置
 
-```text
+```shell
 onedrive --display-config
-
 ```
 
 - 执行同步
 
-```text
+```shell
 onedrive --synchronize
-
 ```
 
 更多详细的步骤我将不再具体介绍，需要您阅读项目文档。
@@ -275,10 +329,9 @@ onedrive --synchronize
 
 当您在服务器上完成 elog 和 onedrive 的环境安装之后，您可以编写同步脚本。
 
-```text
+```shell
 00 12 * * *  cd /root/OneDrive/software/remotely-save/elog && elog sync -e .elog.env
 02 12 * * *  onedrive --synchronize
-
 ```
 
 这段代码的意思就是每天中午 12 点执行一次 elog 同步，获取 notion 中的最新数据，过两分钟执行 onedrive 的主动同步，来保障远程仓库是最新的。（因为我不确定是否 onedrive 会自动同步，所以我选择了手动的方式。）
