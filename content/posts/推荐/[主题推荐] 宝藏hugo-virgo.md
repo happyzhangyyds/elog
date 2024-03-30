@@ -11,7 +11,7 @@ summary: Hugo是静态网页的速度很快，virgo主题又非常简洁美观�
 title: "[主题推荐] 宝藏hugo-virgo"
 status: Published
 urlname: d16af3db-e30c-475c-9dfa-8b544723d587
-updated: "2024-02-25 12:12:00"
+updated: "2024-03-23 08:44:00"
 ---
 
 # 前言
