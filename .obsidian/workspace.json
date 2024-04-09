@@ -1,0 +1,170 @@
+{
+  "main": {
+    "id": "3ada63243fdc3307",
+    "type": "split",
+    "children": [
+      {
+        "id": "6b97f741e8cd136b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bdf77435989fba28",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1c99dc1d19b06ad5",
+    "type": "split",
+    "children": [
+      {
+        "id": "fe71b97ce7aa8363",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5fce4c17724b057a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "d6953f4a7ffc63db",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": true,
+                "explainSearch": true,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "bdd84a841face81b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "b46a30efffb3c376",
+    "type": "split",
+    "children": [
+      {
+        "id": "f5074d29af4d103d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9acef5c832148b79",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c28eaae62feb88c5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c94d278283382130",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "7e4425463e35cd6e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "5fce4c17724b057a",
+  "lastOpenFiles": [
+    "022f7d8a937246cdbb64839cbaed8b9b.md",
+    "32dd62f6-6adc-4cd8-a1e9-6fda1e7a64de.md",
+    "content/posts/推荐/[沉没成本] 通过番茄🍅人生来聊沉没成本 .md",
+    "content/posts/实用教程/推荐/[沉没成本] 通过番茄🍅人生来聊沉没成本 .md",
+    "content/posts/实用教程/推荐/[沉没成本] 通过番茄🍅人生来聊沉没成本.md",
+    "content/posts/推荐/[沉没成本] 通过番茄人生来聊沉没成本 .md",
+    "content/posts/流动核心/[流动核心] 东方璀璨 遗我明珠-matrixcore.md",
+    "content/posts/@双链/德语学习.md",
+    "content/posts/项塔兰-Gregory David Roberts/[极夜星光] 黑暗世界的心灵之镜-Gregory David Roberts.md",
+    "content/posts/简嫃/[水问] 聆听（简嫃）.md",
+    "content/posts/@双链/简媜.md",
+    "content/posts/近期规划/[背诵记忆] 十月sharp小酌.md",
+    "content/posts/@双链/研英-基础阶段.md",
+    "content/posts/必看精选/[自然奇观] 从墨脱森林到冷噶错银河 .md",
+    "content/posts/简嫃/[水问] 人生路口的捕梦人——简媜自述.md",
+    "content/posts/@双链/谈美-朱光潜.md",
+    "content/posts/@双链/研数-高数强化.md",
+    "content/posts/@双链/生命智慧-曲黎敏.md",
+    "content/posts/生命智慧-曲黎敏/[生命智慧] 中医是如何看病的-扁鹊使虢太子起死回生-曲黎敏.md",
+    "content/posts/生命智慧-曲黎敏/中医是如何看病的-扁鹊使虢太子起死回生.md",
+    "content/posts/@双链/cadence.md",
+    "content/posts/@双链/自动飞控.md",
+    "content/posts/@双链/推荐.md",
+    "content/posts/实用教程/推荐/[跨域协同]  elog+notion实现md优雅备份.md",
+    "content/posts/推荐/[跨域协同]  elog+notion实现md优雅备份.md",
+    "content/posts/@双链/研数-高数基础.md"
+  ]
+}
