@@ -11,8 +11,14 @@ summary: 大多数手机和许多现代的无线网卡支持一种叫作“Wi-Fi
 title: "[网络中继] 使用linux来中继wifi信号"
 status: Published
 urlname: 360321b9-eb2a-4fbe-a76a-96c7b2671596
-updated: "2024-03-30 17:05:00"
+updated: "2024-04-11 03:59:00"
 ---
+
+# 更新 log
+
+---
+
+已通过购置 usb 网卡的方式实现了单设备 wifi 接受并共享热点，未实现 wifi 中继，中继和热点还是有区别的。之后有时间更新。
 
 # 前言
 

@@ -11,7 +11,7 @@ summary: 这篇文章随进度更新，用于记录在毕设过程中遇到的�
 title: "[毕业设计] 基于Yolo的航拍图像黑匣子检测算法设计"
 status: Published
 urlname: 4953c12f-b064-475e-aa3b-1a7019651192
-updated: "2024-03-26 16:10:00"
+updated: "2024-04-14 08:22:00"
 ---
 
 # 前言
@@ -47,7 +47,7 @@ updated: "2024-03-26 16:10:00"
 感谢 up 主：[用镜头记录成长](https://space.bilibili.com/26021795)，参考[论文写作表达语句表达系列课程 一 病句修改 成分残缺\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV1PB4y1U7JU/?buvid=XYA9A96A2DBF2E51A918ECE55EFA494C98935&is_story_h5=false&mid=nPIoZdTfuXw2Qtcat9xxZw%3D%3D&p=1&plat_id=114&share_from=ugc&share_medium=android&share_plat=android&share_session_id=e1117509-5d59-4fd0-b122-21d23e500899&share_source=WEIXIN&share_tag=s_i&timestamp=1693714483&unique_k=HFqrbnI&up_id=26021795&share_times=1&vd_source=237e295a40d7aaea043ead8c0d2c78ab)该视频进行总结。
 
 <details>
-  <summary>  以下内容是对该视频进行的笔记梳理。</summary>
+  <summary>以下内容是对该视频进行的笔记梳理。</summary>
 
 ### 一、主语残缺
 
@@ -179,25 +179,97 @@ updated: "2024-03-26 16:10:00"
 
 然后最主要的还需要引入英伟达的 CUDA，可以现在本地装，但我还是倾向于选择[autodl](https://www.autodl.com/home)，因为这里已经预装了 cuda 环境。
 
-这里细节很多，但现在又过了好久了，**有点忘了**，在选择基础镜像的时候就应该要注意选择合适的版本，不然后面配置 cuda 会麻烦死。（看来日志还是要即使记录，当时费了一下午的劲，真是服了）
+这里细节很多，但现在又过了好久了，**有点忘了**，在选择基础镜像的时候就应该要注意选择合适的版本，不然后面配置 cuda 会麻烦死。（看来日志还是要及时记录，当时费了一下午的劲，真是服了）
 
 ## 数据集的预处理
 
 ---
 
-课题中 yolov5 的数据集是采用的航拍视角，和我当时课设做得很不一样，一张 4K 的图十几兆，直接读取极为不现实，就和蚂蚁一样，还有很多干扰，不好办。所以需要预先对数据集进行切片处理。
+课题中 yolov5 的数据集是采用的航拍视角，在肉眼识别存在困难，还有很多干扰。所以需要预先对数据集进行切片处理。然后挑出切片完后包含黑匣子的图片，再进行标注。
 
-然后挑出切片完后包含黑匣子的图片，再进行标注。
+以下是切片程序：
+
+```python
+from PIL import Image
+import os
+import random
+#from PIL import Image: 导入Python Imaging Library (PIL) 中的 Image 模块，用于图像处理。
+#import os: 导入 os 模块，用于处理文件和目录。
+#import random: 导入 random 模块，用于生成随机数。
+
+def slice_and_save_images(input_folder, output_folder, random_size=True, fixed_size=(640, 640), overlap_ratio=0.2):
+    #函数的定义，它接收几个参数，包括输入输出文件夹路径、是否随机切片大小、固定切片大小以及重叠比率。
+    # 获取输入文件夹中的所有文件
+    image_files = [f for f in os.listdir(input_folder) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp'))]
+
+    # 创建输出文件夹
+    os.makedirs(output_folder, exist_ok=True)
+
+    # 循环处理每张图像
+    for image_file in image_files:
+        input_path = os.path.join(input_folder, image_file)
+
+        # 打开图像
+        original_image = Image.open(input_path)
+
+        # 获取图像大小
+        width, height = original_image.size
+
+        # 随机生成或手动指定切片大小
+        #根据 random_size 参数决定是随机生成切片大小还是使用固定大小。随机大小在固定大小的一半到固定大小之间。
+        if random_size:
+            slice_width = random.randint(fixed_size[0] // 2, fixed_size[0])
+            slice_height = random.randint(fixed_size[1] // 2, fixed_size[1])
+        else:
+            slice_width, slice_height = fixed_size
+
+        # 计算重叠区域大小,由 overlap_ratio 参数决定的。
+        overlap_width = int(slice_width * overlap_ratio)
+        overlap_height = int(slice_height * overlap_ratio)
+
+        # 计算切片数量
+        num_slices_horizontal = (width - overlap_width) // (slice_width - overlap_width)
+        num_slices_vertical = (height - overlap_height) // (slice_height - overlap_height)
+
+        # 创建一个文件夹用于保存切片后的小图片
+        output_subfolder = os.path.join(output_folder, os.path.splitext(image_file)[0])
+        os.makedirs(output_subfolder, exist_ok=True)
+
+        # 切片并保存
+        for i in range(num_slices_horizontal):
+            for j in range(num_slices_vertical):
+                left = i * (slice_width - overlap_width)
+                upper = j * (slice_height - overlap_height)
+                right = left + slice_width
+                lower = upper + slice_height
+
+                # 切片
+                slice_image = original_image.crop((left, upper, right, lower))
+
+                # 生成唯一的切片文件名
+                slice_filename = f"{os.path.splitext(image_file)[0]}_slice_{j}_{i}.jpg"
+
+                # 保存切片
+                slice_image.save(os.path.join(output_subfolder, slice_filename))
+
+# 调用函数，传入输入图像文件夹路径和输出文件夹路径,更换为自己的文件夹
+slice_and_save_images(r"C:\Users\Raj\Desktop\bbox", r"C:\Users\Raj\Desktop\bbox全部切片",
+                      random_size=False, fixed_size=(640, 640))
+```
+
+切片完成之后，需要挑出包含切片中包含目标对象的图片，之后作为训练集。
+
+![](https://bu.dusays.com/2024/04/11/6617967763c57.webp)
 
 ## 验证集
 
 ---
 
-最开始验证集是用的数据集的一部分，但是后面采用新的验证集，难度瞬间就上来了，测试精度从 0.996 瞬间跌到都到不了 0.7。
+最开始验证集是用的数据集的一部分，但是后面采用新的验证集，难度瞬间就上来了，测试精度从 0.996 瞬间跌到都到不了 0.7。一方面需要扩充数据集，另一方面需要选择合适的模型对网络参数进行调整。
 
-然后问题就来了，一方面需要扩充数据集，另一方面需要选择合适的模型对网络参数的挑战。
+![](https://bu.dusays.com/2024/04/11/66179754ea383.webp)
 
-### 扩充验证集
+## 扩充训练集
 
 ---
 
@@ -205,66 +277,55 @@ updated: "2024-03-26 16:10:00"
 
 参考文章：[**YOLO 数据集实现数据增强的方法（裁剪、平移 、旋转、改变亮度、加噪声等）**](https://blog.csdn.net/weixin_43334693/article/details/131744918)
 
-<details>
-  <summary>数据增强的概念</summary>
-
-**数据增强**是一种重要的机器学习方法之一，是**基于已有的训练样本数据来生成更多的训练数据**，其目的就是**为了使扩增的训练数据尽可能接近真实分布的数据，从而提高检测精度**。此外，数据增强能够迫使模型**学习到更多鲁棒性的特征，从而有效提高模型的泛化能力**。
-
-在实际的应用场景中，足量且高保真的优质数据集通常是可遇不可求的，这不仅**费钱费时费力，而且隐私保护和极端概率问题，数据集的获取变得尤为困难**。因此，一种低成本且有效的方法便是**利用数据增强来减少对训练数据的依赖**，从而帮助开发人员更好更快地构建高精度的 AI 模型。
-
-  </details>
-
-<details>
-  <summary>数据增强的作用</summary>
-
-**（1） 避免过拟合。**当数据集具有某种明显的特征，例如数据集中图片基本在同一个场景中拍摄，使用 Cutout 方法和风格迁移变化等相关方法可避免模型学到跟目标无关的信息。
-
-**（2）提升模型鲁棒性，降低模型对图像的敏感度。**当训练数据都属于比较理想的状态，碰到一些特殊情况，如遮挡，亮度，模糊等情况容易识别错误，对训练数据加上噪声，掩码等方法可提升模型鲁棒性。
-
-**（3）增加训练数据，提高模型泛化能力。**
-
-**（4）避免样本不均衡。**在工业缺陷检测方面，医疗疾病识别方面，容易出现正负样本极度不平衡的情况，通过对少样本进行一些数据增强方法，降低样本不均衡比例。
-
-  </details>
-
-<details>
-  <summary>常见的数据增强的办法</summary>
-
-（1）比较常用的**几何变换**方法主要有：
-
-- 翻转
-- 旋转
-- 裁剪
-- 缩放
-- 平移
-- 抖动
-
-值得注意的是，在某些具体的任务中，当使用这些方法时需要主要标签数据的变化，如目标检测中若使用翻转，则需要将 gt 框进行相应的调整。
-
-（2）比较常用的**像素变换**方法主要有：
-
-- 加椒盐噪声
-- 高斯噪声
-- 进行高斯模糊
-- 调整 HSV 对比度
-- 调节亮度
-- 饱和度
-- 直方图均衡化
-- 调整白平衡等
-
-  </details>
-
-### 实操思路
+### 数据增强的概念和作用
 
 ---
 
-1. txt 转 xml
-2. 读取 xml 进行扩充
-3. 扩充完的 xml 转 txt
-4. 打包数据集上传服务器
+**数据增强**是一种重要的机器学习方法之一，是**基于已有的训练样本数据来生成更多的训练数据**，其目的就是**为了使扩增的训练数据尽可能接近真实分布的数据，从而提高检测精度**。此外，数据增强能够迫使模型**学习到更多鲁棒性的特征，从而有效提高模型的泛化能力**。
 
-<details>
-  <summary>进行txt转xml操作，代码如下：</summary>
+### 常见的数据增强的办法
+
+---
+
+（1）比较常用的**几何变换**方法主要有：
+翻转、旋转、裁剪、缩放、平移、抖动
+（2）比较常用的**像素变换**方法主要有：
+加椒盐噪声、高斯噪声、进行高斯模糊、调整 HSV 对比度、调节亮度、饱和度、直方图均衡化、调整白平衡等
+
+具体解释如下：
+
+- 随机裁剪：从原始图像中随机裁剪出一部分，例如裁剪四角、中心或者上下部分等。这种方法能够增加模型的鲁棒性，使其对图像的不同部分都能进行有效的特征提取。
+- 翻转或镜像：可以水平翻转或垂直翻转图像。这种方法能够模拟图像在不同视角下的情况，帮助模型学习到更多的特征。
+- 旋转：将原图像旋转不同的角度来生成新的样本。需要注意的是，旋转后图像的维度可能会发生变化，因此在处理时需要确保图像尺寸的合理性。
+- 亮度或对比度调节：通过改变图像的亮度和对比度，可以模拟不同光照条件下的图像情况，提高模型的适应性。
+- 色度调节：改变图像中 R、G、B 颜色分量的比例，从而生成具有不同颜色特征的样本。
+  饱和度调节：调节图像的饱和度，即改变色彩的纯度。这可以模拟不同颜色鲜艳程度的图像，增加样本的多样性。
+- 高斯模糊、锐化、添加噪声：对图像进行这些处理可以模拟图像在采集和传输过程中可能出现的失真情况，有助于提高模型的鲁棒性。
+  灰度化：将彩色图像转换为灰度图像，可以进一步增加样本的多样性
+
+### txt 转 xml
+
+---
+
+在数据增强的时候，代码是对 xml 进行操作的，所以需要先经历一步，从 txt 到 xml 的过程。
+
+**核心原理解释**：将 YOLO 格式中的归一化坐标转换为像素坐标。
+
+1. 从 YOLO 格式的文本文件中读取每个目标的类别索引和归一化的边界框坐标  `(class_index, x_center_norm, y_center_norm, width_norm, height_norm)`。
+2. 将归一化的中心点坐标  `(x_center_norm, y_center_norm)`  和宽度、高度  `(width_norm, height_norm)`  转换为像素坐标。
+3. 使用像素坐标来计算 PASCAL VOC 格式的边界框  `(xmin, ymin, xmax, ymax)`
+
+**核心转换逻辑：**
+
+```python
+# 计算 PASCAL VOC 的 (xmin, ymin, xmax, ymax)
+xmin = int(round(x_center - (width / 2)))
+ymin = int(round(y_center - (height / 2)))
+xmax = int(round(x_center + (width / 2)))
+ymax = int(round(y_center + (height / 2)))
+```
+
+**转换代码：**
 
 ```python
 # -*- coding: utf-8 -*-
@@ -361,29 +422,45 @@ if __name__ == "__main__":
         img_xml = img_base_name + ".xml"
         img_txt = img_base_name + ".txt"
         txt_xml(img_path, img_name, txt_path, img_txt, xml_path, img_xml)
-
 ```
 
-  </details>
+例如，这就是标注后的归一化坐标
 
-**核心原理解释**：如果图像的大小是 640x640 像素，换算从 YOLO 格式到 PASCAL VOC 格式时，你需要使用这个尺寸来将 YOLO 格式中的归一化坐标转换为像素坐标。
-
-以下是转换的具体步骤：
-
-1. 从 YOLO 格式的文本文件中读取每个目标的类别索引和归一化的边界框坐标  `(class_index, x_center_norm, y_center_norm, width_norm, height_norm)`。
-2. 将归一化的中心点坐标  `(x_center_norm, y_center_norm)`  和宽度、高度  `(width_norm, height_norm)`  转换为像素坐标。
-3. 使用像素坐标来计算 PASCAL VOC 格式的边界框  `(xmin, ymin, xmax, ymax)`
-
-```python
-# 计算 PASCAL VOC 的 (xmin, ymin, xmax, ymax)
-xmin = int(round(x_center - (width / 2)))
-ymin = int(round(y_center - (height / 2)))
-xmax = int(round(x_center + (width / 2)))
-ymax = int(round(y_center + (height / 2)))
+```text
+0 0.719594 0.901037 0.108083 0.091896
 ```
 
-<details>
-  <summary>进行xml扩充操作</summary>
+这就是转换后的 xml 坐标和其他的一些元素，转换完可以用 labelimg 验证一下
+
+```html
+<annotation>
+  <folder>1</folder>
+  <filename>000000_slice_2_2.jpg</filename>
+  <size>
+    <width>640</width>
+    <height>640</height>
+    <depth>3</depth>
+  </size>
+  <object>
+    <name>0</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>426</xmin>
+      <ymin>547</ymin>
+      <xmax>495</xmax>
+      <ymax>606</ymax>
+    </bndbox>
+  </object>
+</annotation>
+```
+
+### 数据集扩充
+
+---
+
+根据上述分析的方式进行数据集扩充
 
 ```python
 # -*- coding=utf-8 -*-
@@ -932,15 +1009,468 @@ if __name__ == '__main__':
                 cnt += 1  # 继续增强下一张
 ```
 
-  </details>
+**这是扩充数据集后的效果图：**
 
-今天不想写了，又遇到一件悲伤的事情，tmd 开启了流量限制，结果 scp 传文件传到 93%断掉了，我真的服了。（原谅我的坏心情，写不下去了，到凌晨了，累麻了）
+![](https://bu.dusays.com/2024/04/11/6617aa185934d.webp)
+
+**接下来需要对扩充好的数据集进行 xml 转 txt：**
+
+```python
+import xml.etree.ElementTree as ET
+import os
+from os import getcwd
+import glob
+
+# 1.
+# 自己创建文件夹,例如：label_mal label_txt  也可以修改别的
+image_set = 'xml'  # 需要转换的文件夹名称（文件夹内放xml标签文件）
+imageset2 = 'labels2'  # 保存txt的文件夹
+# 2.
+# 换成你的类别 当前的顺序，就txt 0,1,2,3 四个类别
+classes = ['0']  # 标注时的标签 注意顺序一定不要错。
+
+# 3.
+# # 转换文件夹的绝对路径
+# data_dir = 'D:/detectAuto_/data'
+# 或者 读取当前路径
+data_dir = getcwd()  # 当前路径
+
+
+'''
+xml中框的左上角坐标和右下角坐标(x1,y1,x2,y2)
+》》txt中的中心点坐标和宽和高(x,y,w,h)，并且归一化
+'''
+
+
+def convert(size, box):
+    dw = 1. / size[0]
+    dh = 1. / size[1]
+    x = (box[0] + box[1]) / 2.0
+    y = (box[2] + box[3]) / 2.0
+    w = box[1] - box[0]
+    h = box[3] - box[2]
+    x = x * dw
+    w = w * dw
+    y = y * dh
+    h = h * dh
+    return (x, y, w, h)
+
+
+def convert_annotation(data_dir, imageset1, imageset2, image_id):
+    in_file = open(data_dir + '/%s/%s.xml' % (imageset1, image_id),encoding='UTF-8')  # 读取xml
+    out_file = open(data_dir + '/%s/%s.txt' % (imageset2, image_id), 'w',encoding='UTF-8')  # 保存txt
+
+    tree = ET.parse(in_file)
+    root = tree.getroot()
+    size = root.find('size')
+    w = int(size.find('width').text)
+    h = int(size.find('height').text)
+    for obj in root.iter('object'):
+        difficult = obj.find('difficult').text
+        cls = obj.find('name').text
+        if cls not in classes or int(difficult) == 1:
+            continue
+        cls_id = classes.index(cls)  # 获取类别索引
+        xmlbox = obj.find('bndbox')
+        b = (float(xmlbox.find('xmin').text), float(xmlbox.find('xmax').text), float(xmlbox.find('ymin').text),
+             float(xmlbox.find('ymax').text))
+        bb = convert((w, h), b)
+        out_file.write(str(cls_id) + " " + " ".join([str('%.6f' % a) for a in bb]) + '\n')
+
+
+image_ids = []
+for x in glob.glob(data_dir + '/%s' % image_set + '/*.xml'):
+    image_ids.append(os.path.basename(x)[:-4])
+print('\n%s数量:' % image_set, len(image_ids))  # 确认数量
+i = 0
+for image_id in image_ids:
+    i = i + 1
+    convert_annotation(data_dir, image_set, imageset2, image_id)
+    print("%s 数据:%s/%s文件完成！" % (image_set, i, len(image_ids)))
+
+print("Done!!!")
+```
+
+然后打包好数据集上传服务器
+
+## Autodl 训练效果
+
+---
+
+由于引入了数据集进行扩充后，图片的数量增多，训练时间也更长。
+
+**50 轮训练的效果图：**
+
+![](https://bu.dusays.com/2024/04/11/6617ab85ad332.webp)
+
+![](https://bu.dusays.com/2024/04/11/6617abad2cda9.webp)
+
+**60 轮训练的效果图：**
+
+![](https://bu.dusays.com/2024/04/11/6617ac328a49e.webp)
+
+![](https://bu.dusays.com/2024/04/11/6617ac3d49907.webp)
+
+**100 轮训练的效果图：**
+
+![](https://bu.dusays.com/2024/04/11/6617b28c2adf3.webp)
+
+![](https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/e7ed53b3-ac03-4882-8685-215b5d5f586f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240415%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240415T133651Z&X-Amz-Expires=3600&X-Amz-Signature=90e6dc697948e10866750556115849c88bd47bda427e256cf7c01df03910d191&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+应该还是数据集的问题，出现了过拟合的现象。之后肯定还需要对数据集进行调整，另外由于采用的是最快的训练模型，在训练精度上肯定还有提升的空间。但之前在使用的时候，还出现了一些报错的情况，需要再花时间研究研究。
+
+## 测试模块的编写
+
+---
+
+在设计 GUI 之前，需要初步完成图片和视频检测的程序编写
+
+**1.图片检测测试-核心代码摘录**
+
+```python
+def predict(img):
+    img = torch.from_numpy(img).to(device)
+    img = img.half() if half else img.float()
+    img /= 255.0
+    if img.ndimension() == 3:
+        img = img.unsqueeze(0)
+
+    t1 = time_synchronized()
+    pred = model(img, augment=False)[0]
+    pred = non_max_suppression(pred, opt.conf_thres, opt.iou_thres, classes=opt.classes,
+                               agnostic=opt.agnostic_nms)
+    t2 = time_synchronized()
+    InferNms = round((t2 - t1), 2)
+
+    return pred, InferNms
+
+
+def cv_imread(filePath):
+    # 读取图片
+    cv_img = cv2.imdecode(np.fromfile(filePath, dtype=np.uint8), -1)
+
+    if len(cv_img.shape) > 2:
+        if cv_img.shape[2] > 3:
+            cv_img = cv_img[:, :, :3]
+    return cv_img
+
+
+def plot_one_box(img, x, color=None, label=None, line_thickness=None):
+    # Plots one bounding box on image img
+    tl = line_thickness or round(0.002 * (img.shape[0] + img.shape[1]) / 2) + 1  # line/font thickness
+    color = color or [random.randint(0, 255) for _ in range(3)]
+    c1, c2 = (int(x[0]), int(x[1])), (int(x[2]), int(x[3]))
+    cv2.rectangle(img, c1, c2, color, thickness=tl, lineType=cv2.LINE_AA)
+    if label:
+        tf = max(tl - 1, 1)  # font thickness
+        t_size = cv2.getTextSize(label, 0, fontScale=tl / 3, thickness=tf)[0]
+        c2 = c1[0] + t_size[0], c1[1] - t_size[1] - 3
+        cv2.rectangle(img, c1, c2, color, -1, cv2.LINE_AA)  # filled
+        cv2.putText(img, label, (c1[0], c1[1] - 2), 0, tl / 3, [225, 255, 255], thickness=tf, lineType=cv2.LINE_AA)
+
+
+if __name__ == '__main__':
+    img_path = "./UI_rec/testpicture/000743_slice_3_5.jpg"
+    image = cv_imread(img_path)
+    image = cv2.resize(image, (640, 640))
+    img0 = image.copy()
+    img = letterbox(img0, new_shape=imgsz)[0]
+    img = np.stack(img, 0)
+    img = img[:, :, ::-1].transpose(2, 0, 1)  # BGR to RGB, to 3x416x416
+    img = np.ascontiguousarray(img)
+
+    pred, useTime = predict(img)
+
+    det = pred[0]
+    p, s, im0 = None, '', img0
+    if det is not None and len(det):  # 如果有检测信息则进入
+        det[:, :4] = scale_coords(img.shape[1:], det[:, :4], im0.shape).round()  # 把图像缩放至im0的尺寸
+        number_i = 0  # 类别预编号
+        detInfo = []
+        for *xyxy, conf, cls in reversed(det):  # 遍历检测信息
+            c1, c2 = (int(xyxy[0]), int(xyxy[1])), (int(xyxy[2]), int(xyxy[3]))
+            # 将检测信息添加到字典中
+            detInfo.append([names[int(cls)], [c1[0], c1[1], c2[0], c2[1]], '%.2f' % conf])
+            number_i += 1  # 编号数+1
+
+            label = '%s %.2f' % (names[int(cls)], conf)
+
+            # 画出检测到的目标物
+            plot_one_box(image, xyxy, label=label, color=colors[int(cls)])
+    # 实时显示检测画面
+    cv2.imshow('Stream', image)
+    # if cv2.waitKey(1) & 0xFF == ord('q'):
+    #     break
+    c = cv2.waitKey(0) & 0xff
+
+```
+
+![](https://bu.dusays.com/2024/04/11/6617d07e11f63.webp)
+
+2.**视频检测测试-核心代码摘录**
+
+```python
+def predict(img):
+    img = torch.from_numpy(img).to(device)
+    img = img.half() if half else img.float()
+    img /= 255.0
+    if img.ndimension() == 3:
+        img = img.unsqueeze(0)
+
+    t1 = time_synchronized()
+    pred = model(img, augment=False)[0]
+    pred = non_max_suppression(pred, opt.conf_thres, opt.iou_thres, classes=opt.classes,
+                               agnostic=opt.agnostic_nms)
+    t2 = time_synchronized()
+    InferNms = round((t2 - t1), 2)
+
+    return pred, InferNms
+
+
+def plot_one_box(img, x, color=None, label=None, line_thickness=None):
+    # Plots one bounding box on image img
+    tl = line_thickness or round(0.002 * (img.shape[0] + img.shape[1]) / 2) + 1  # line/font thickness
+    color = color or [random.randint(0, 255) for _ in range(3)]
+    c1, c2 = (int(x[0]), int(x[1])), (int(x[2]), int(x[3]))
+    cv2.rectangle(img, c1, c2, color, thickness=tl, lineType=cv2.LINE_AA)
+    if label:
+        tf = max(tl - 1, 1)  # font thickness
+        t_size = cv2.getTextSize(label, 0, fontScale=tl / 3, thickness=tf)[0]
+        c2 = c1[0] + t_size[0], c1[1] - t_size[1] - 3
+        cv2.rectangle(img, c1, c2, color, -1, cv2.LINE_AA)  # filled
+        cv2.putText(img, label, (c1[0], c1[1] - 2), 0, tl / 3, [225, 255, 255], thickness=tf, lineType=cv2.LINE_AA)
+
+
+if __name__ == '__main__':
+    #video_path = 1
+    video_path = "UI_rec/testvideo/test.mp4"
+    # 初始化视频流
+    vs = cv2.VideoCapture(video_path)
+    (W, H) = (None, None)
+    frameIndex = 0  # 视频帧数
+
+    try:
+        prop = cv2.CAP_PROP_FRAME_COUNT
+        total = int(vs.get(prop))
+        # print("[INFO] 视频总帧数：{}".format(total))
+    # 若读取失败，报错退出
+    except:
+        print("[INFO] could not determine # of frames in video")
+        print("[INFO] no approx. completion time can be provided")
+        total = -1
+
+    fourcc = cv2.VideoWriter_fourcc(*'XVID')
+    ret, frame = vs.read()
+    vw = frame.shape[1]
+    vh = frame.shape[0]
+    print("[INFO] 视频尺寸：{} * {}".format(vw, vh))
+    output_video = cv2.VideoWriter("./UI_rec/result/results.avi", fourcc, 20.0, (vw, vh))  # 处理后的视频对象
+
+    # 遍历视频帧进行检测
+    while True:
+        # 从视频文件中逐帧读取画面
+        (grabbed, image) = vs.read()
+
+        # 若grabbed为空，表示视频到达最后一帧，退出
+        if not grabbed:
+            print("[INFO] 运行结束...")
+            output_video.release()
+            vs.release()
+            exit()
+        # 获取画面长宽
+        if W is None or H is None:
+            (H, W) = image.shape[:2]
+
+        image = cv2.resize(image, (640, 640))
+        img0 = image.copy()
+        img = letterbox(img0, new_shape=imgsz)[0]
+        img = np.stack(img, 0)
+        img = img[:, :, ::-1].transpose(2, 0, 1)  # BGR to RGB, to 3x416x416
+        img = np.ascontiguousarray(img)
+
+        pred, useTime = predict(img)
+
+        det = pred[0]
+        p, s, im0 = None, '', img0
+        if det is not None and len(det):  # 如果有检测信息则进入
+            det[:, :4] = scale_coords(img.shape[1:], det[:, :4], im0.shape).round()  # 把图像缩放至im0的尺寸
+            number_i = 0  # 类别预编号
+            detInfo = []
+            for *xyxy, conf, cls in reversed(det):  # 遍历检测信息
+                c1, c2 = (int(xyxy[0]), int(xyxy[1])), (int(xyxy[2]), int(xyxy[3]))
+                # 将检测信息添加到字典中
+                detInfo.append([names[int(cls)], [c1[0], c1[1], c2[0], c2[1]], '%.2f' % conf])
+                number_i += 1  # 编号数+1
+
+                label = '%s %.2f' % (names[int(cls)], conf)
+
+                # 画出检测到的目标物
+                plot_one_box(image, xyxy, label=label, color=colors[int(cls)])
+
+        # 实时显示检测画面
+        cv2.imshow('Stream', image)
+        image = cv2.resize(image, (vw, vh))
+        output_video.write(image)  # 保存标记后的视频
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+
+        # print("FPS:{}".format(int(0.6/(end-start))))
+        frameIndex += 1
+
+        # if frameIndex >= total:  # 可设置检测的最大帧数提前退出
+        #     print("[INFO] 运行结束...")
+        #     output_video.release()
+        #     vs.release()
+        #     exit()
+```
+
+[效果呈现](https://www.bilibili.com/video/BV1Lm421E7M2/?spm_id_from=333.999.0.0&vd_source=237e295a40d7aaea043ead8c0d2c78ab)
+
+## GUI 界面
+
+---
+
+![](https://bu.dusays.com/2024/04/11/6617b40a08bdb.webp)
+
+**主控程序：**
+
+```python
+# -*- coding: utf-8 -*-
+# runMain.py
+from sys import argv, exit
+#这行代码从sys模块中导入了两个函数：argv和exit。argv是一个命令行参数的列表，当从终端运行Python脚本时，可以通过这个列表访问这些参数。exit函数用于退出Python程序。
+from PyQt5.QtWidgets import QApplication
+#这行代码从PyQt5的QtWidgets模块中导入了QApplication类。QApplication类管理GUI应用程序的控制流和主要设置，是所有基于Qt的GUI应用程序的起点。
+from bboxRecognition import bbox_MainWindow
+#这行代码从bboxRecognition模块（可能是一个自定义模块）中导入了一个名为bbox_MainWindow的类。这个类用于识别黑匣子。
+if __name__ == '__main__':
+#这行代码检查是否是直接运行这个脚本，而不是作为模块导入到其他脚本中。如果是直接运行，那么下面的代码块将被执行
+    app = QApplication(argv)
+#这行代码创建了一个QApplication实例，它是任何PyQt5应用程序的入口点。argv参数传递给QApplication，这样它就可以处理来自命令行的参数。
+    win = bbox_MainWindow()
+#这行代码创建了box_MainWindow类的一个实例，这个实例很可能是应用程序的主窗口。
+    win.showTime()
+#与时间相关的功能。
+    exit(app.exec_())
+#最后，这行代码启动了应用程序的主事件循环，通过调用exec_()方法。当事件循环开始后，应用程序将等待用户事件并响应他们。exit函数确保应用程序可以干净地退出，返回码将传递给exit，以便操作系统可以知道程序是正常退出还是发生了错误。
+```
+
+**简要摘录核心功能代码：**
+
+1.启动 GUI 界面
+
+```python
+#这段代码定义了一个名为bbox_MainWindow的类，它继承自QBeautyUI。这个类是一个GUI窗口，用于某种目标检测或者视频处理应用程序。
+class bbox_MainWindow(QBeautyUI):
+    #这行代码调用父类QBeautyUI的构造函数，确保继承的功能得到正确初始化。
+    def __init__(self, *args, obj=None, **kwargs):
+        super(bbox_MainWindow, self).__init__(*args, **kwargs)
+
+        self.setupUi(self)  # 界面生成
+        self.retranslateUi(self)  # 界面控件
+        #这两行代码可能调用了在QBeautyUI中定义的方法，用于初始化和设置用户界面。
+        self.setUiStyle(window_flag=True, transBack_flag=True)  # 设置界面样式
+        #这行代码调用setUiStyle方法来设置窗口的样式，是使窗口透明或者应用其他视觉效果。
+        self.path = getcwd()
+        self.video_path = getcwd()
+        #这里设置了两个路径变量，self.path和self.video_path，它们都被初始化为当前工作目录的路径。
+        self.timer_camera = QtCore.QTimer()  # 定时器
+        self.timer_video = QtCore.QTimer()  # 视频定时器
+        self.flag_timer = ""  # 用于标记正在进行的功能项（视频/摄像）
+
+        self.LoadModel()  # 加载预训练模型
+        self.slot_init()  # 定义槽函数，这是Qt中用于处理信号和槽机制的函数，用于响应事件。
+        self.files = []  #
+        self.cap_video = None  # 视频流对象
+        self.CAM_NUM = 0  # 摄像头标号
+        self.cap = cv2.VideoCapture(self.CAM_NUM)  # 屏幕画面对象
+        #这几行代码初始化了一些变量，包括一个空列表self.files，一个空的视频流对象self.cap_video，一个摄像头编号self.CAM_NUM，以及使用cv2.VideoCapture创建的摄像头视频捕获对象self.cap。
+        self.detInfo = []
+        self.current_image = []
+        self.detected_image = None
+        # self.dataset = None
+        self.count = 0  # 表格行数，用于记录识别识别条目
+        self.res_set = []  # 用于历史结果记录的列表
+        self.c_video = 0
+        self.count_name = ["黑匣子"]
+        self.count_table = []
+        #这一部分初始化了更多的变量，包括用于存储检测信息、当前图像、检测到的图像、结果集和其他相关数据的列表和变量。
+```
+
+1. 读取预训练模型
+
+```python
+def LoadModel(self, model_path=None):
+        """
+        读取预训练模型
+        """
+        parser = argparse.ArgumentParser()
+        parser.add_argument('--weights', nargs='+', type=str, default='../weights/best.pt',
+                            help='model.pt path(s)')  # 模型路径仅支持.pt文件
+        parser.add_argument('--img-size', type=int, default=480, help='inference size (pixels)')  # 检测图像大小，仅支持480
+        parser.add_argument('--conf-thres', type=float, default=0.25, help='object confidence threshold')  # 置信度阈值
+        parser.add_argument('--iou-thres', type=float, default=0.45, help='IOU threshold for NMS')  # NMS阈值
+        # 选中运行机器的GPU或者cpu，有GPU则GPU，没有则cpu，若想仅使用cpu，可以填cpu即可
+        parser.add_argument('--device', default='0',
+                            help='cuda device, i.e. 0 or 0,1,2,3 or cpu')
+        parser.add_argument('--save-dir', type=str, default='inference', help='directory to save results')  # 文件保存路径
+        parser.add_argument('--classes', nargs='+', type=int,
+                            help='filter by class: --class 0, or --class 0 2 3')  # 分开类别
+        parser.add_argument('--agnostic-nms', action='store_true', help='class-agnostic NMS')  # 使用NMS
+        self.opt = parser.parse_args()  # opt局部变量，重要
+        out, weight, imgsz = self.opt.save_dir, self.opt.weights, self.opt.img_size  # 得到文件保存路径，文件权重路径，图像尺寸
+        self.device = select_device(self.opt.device)  # 检验计算单元,gpu还是cpu
+        self.half = self.device.type != '0'  # 如果使用gpu则进行半精度推理
+        if model_path:
+            weight = model_path
+        self.model = attempt_load(weight, map_location=self.device)  # 读取模型
+        self.imgsz = check_img_size(imgsz, s=self.model.stride.max())  # 检查图像尺寸
+        if self.half:  # 如果是半精度推理
+            self.model.half()  # 转换模型的格式
+        self.names = self.model.module.names if hasattr(self.model, 'module') else self.model.names  # 得到模型训练的类别名
+    """
+    这段代码定义了一个名为 `LoadModel` 的方法，它用于加载预训练的机器学习模型，并对模型进行一些初始化设置。这个方法是用于深度学习模型的推理（inference）的准备工作。具体来看，方法的功能包括：
+1. **参数解析**：
+   使用 `argparse` 库来解析命令行参数。这些参数包括模型权重文件的路径、输入图像的大小、置信度阈值、IOU阈值、计算设备（CPU或GPU）、结果保存目录、类别过滤以及是否使用类别无关的非极大值抑制（NMS）。
+2. **设置默认参数**：
+   如果在调用方法时没有指定 `model_path`，它会使用默认的参数设置。
+3. **选择计算设备**：
+   使用 `select_device` 函数（这个函数在代码中没有给出，但可以推断它的功能是选择使用CPU还是GPU进行计算）。
+4. **模型加载**：
+   使用 `attempt_load` 函数加载模型，这个函数可能是一个自定义函数或者来自某个库，用于加载模型并将其映射到指定的计算设备上。
+5. **图像尺寸检查**：
+   使用 `check_img_size` 函数确保输入图像的尺寸与模型的步长兼容。
+6. **半精度推理**：
+   如果计算设备是GPU，则将模型转换为半精度（float16），这样可以加快推理速度并减少内存使用。
+7. **类别名称处理**：
+   获取模型训练时的类别名称，并且如果这些名称在 `Chinese_name` 字典中有对应的中文名称，就替换为中文名称。
+8. **颜色分配**：
+   为每个类别分配一个颜色，这通常用于在图像上绘制检测结果。如果类别的数量没有超过预定义的颜色列表 `color`，它会使用这些颜色；否则，会随机生成颜色。
+9. **预推理**：
+   创建一个零图像张量，并通过模型进行一次前向传递，这通常是为了让模型在实际推理之前“热身”，确保CUDA核心已经加载，从而在后续的推理中能够更快。
+这个方法是深度学习模型部署的常见步骤的集合，用于准备模型进行后续的图像处理和对象检测任务。代码中提到的一些函数和变量（如 `select_device`, `attempt_load`, `check_img_size`, `Chinese_name`）没有在这段代码中定义，所以它们的具体实现细节是未知的，但从上下文中可以推测它们的大致功能。
+```
+
+3.融合检测程序-如上面所呈现
 
 ## 后续多模态的融合
 
 ---
 
 后续完成基础可见光条件的训练之后，还要尝试进行多光谱的融合，提高模型的精确度。
+
+# 20240413 会议纪要
+
+---
+
+- 明确可检测的图片，进行界限的区分；
+- 在可见光条件下，界定遮挡比例
+- 黑匣子出现极端位置（例如垂直放置情况下），识别灵敏度的控制
+- 漏检率不能低于 5%
+- 提高验证集的数量，要有统计结果，配合导出检测结果
+- 更改 GUI 界面的配色
+- 使用多光谱网络模型
+- 预计五月初开始论文的撰写
 
 # 总结
 
