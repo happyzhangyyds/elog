@@ -9,9 +9,9 @@ tags:
   - 实用教程
 summary: 这篇文章简单介绍了如何通过Nextcloud Webdav的方式进行Zotero同步，内容包括：服务器入门，linux运维面板的安装，Nextcloud和Mysql的安装，Nginx的使用，Zotero的Webdav的设置，解除php上传的限制，从而实现在自有网盘间进行数据同步，为搭建大规模数据集提供了基础。
 title: "[文献管理]  基于Nextcloud_Webdav的Zotero同步方案"
-status: Draft
+status: Published
 urlname: d04a5572-3f9a-486d-ac95-c02ffd093e23
-updated: "2024-04-21 03:48:00"
+updated: "2024-04-21 03:49:00"
 ---
 
 # 前言
@@ -96,7 +96,11 @@ array (
 
 ---
 
-> 💡
+> 💡 什么是 WebDAV 呢？  
+> 简单来说，webdav 就像一个存储服务，各种应用都可以连接到它，允许应用直接访问我们的云盘内容，对其进行读写操作。**我们可以网络服务比作一只章鱼，云盘是它的大脑，WebDAV 是它的触角。**每个触角都连接到我们智能设备上的应用程序。我们的应用可以通过触角读取章鱼的大脑，并将数据写入大脑，改变大脑的记忆和内容。  
+> 作者：知乎用户  
+> 链接：[https://www.zhihu.com/question/30719209/answer/1229364665](https://www.zhihu.com/question/30719209/answer/1229364665)  
+> 来源：知乎
 
 参考官方说明，webdav 一般格式为：
 
