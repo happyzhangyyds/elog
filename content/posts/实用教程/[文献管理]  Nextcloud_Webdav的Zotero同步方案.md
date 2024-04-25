@@ -11,7 +11,7 @@ summary: 这篇文章简单介绍了如何通过Nextcloud Webdav的方式进行Z
 title: "[文献管理]  Nextcloud_Webdav的Zotero同步方案"
 status: Published
 urlname: d04a5572-3f9a-486d-ac95-c02ffd093e23
-updated: "2024-04-21 04:00:00"
+updated: "2024-04-23 12:36:00"
 ---
 
 # 前言
@@ -39,9 +39,9 @@ updated: "2024-04-21 04:00:00"
 
 首先我需要声明一点，需求可能具有普遍性，但是做法可能因人而异，选择适合自己的就行。我采用的方案是使用[软云](https://ruan.cloud/aff/HNAAAYYQ)的服务器，目前购置的是 2H4G40G4M 这款机型。三年的费用在 500 左右，目前体验下来速度很不错，跑了一个[hugo](http://hugo.matrixcore.top/)练练手，小破站弱不禁风，大佬手下留情 😢，效果如下图所示，测试时间为北京时间上午 11 点左右，响应时长在 1-2s 之间。首先比较基础的就是，购买服务器之后进行 ssh 登陆，在终端输入 ssh root@ipv4，输入密码进行验证即可。
 
-![](https://bu.dusays.com/2024/04/21/662481aecf0b9.webp)
+![](https://bu.dusays.com/2024/04/23/6627ab4ccee3d.jpeg)
 
-![](https://bu.dusays.com/2024/04/21/66248291ca16a.webp)
+![](https://bu.dusays.com/2024/04/23/6627ab1eb234a.png)
 
 ## 安装 1panel
 
