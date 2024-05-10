@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://bu.dusays.com/2024/04/23/6627ad7c08194.jpeg" />
+<title>[精简指令] 走近RISC-V | Hugo ʕ•ᴥ•ʔ Bear Blog</title>
+<meta name="title" content="[精简指令] 走近RISC-V" />
+<meta name="description" content="这是一篇很仓促的文章，但与其说其非常不成熟，我更愿意视其为一个起点，因为目前所从事的岗位也是在和各种硬件打交道，所以我还是希望能对此保持长久的热情，去做自己喜欢的事情。" />
+<meta name="keywords" content="实用教程," />
+
+
+<meta property="og:title" content="[精简指令] 走近RISC-V" />
+<meta property="og:description" content="这是一篇很仓促的文章，但与其说其非常不成熟，我更愿意视其为一个起点，因为目前所从事的岗位也是在和各种硬件打交道，所以我还是希望能对此保持长久的热情，去做自己喜欢的事情。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/risc-v/" /><meta property="og:image" content="https://hugo.matrixcore.life/images/share.png"/><meta property="article:section" content="Blog" />
+<meta property="article:published_time" content="2024-04-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-04-25T00:00:00+00:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://hugo.matrixcore.life/images/share.png"/>
+
+<meta name="twitter:title" content="[精简指令] 走近RISC-V"/>
+<meta name="twitter:description" content="这是一篇很仓促的文章，但与其说其非常不成熟，我更愿意视其为一个起点，因为目前所从事的岗位也是在和各种硬件打交道，所以我还是希望能对此保持长久的热情，去做自己喜欢的事情。"/>
+
+
+
+<meta itemprop="name" content="[精简指令] 走近RISC-V">
+<meta itemprop="description" content="这是一篇很仓促的文章，但与其说其非常不成熟，我更愿意视其为一个起点，因为目前所从事的岗位也是在和各种硬件打交道，所以我还是希望能对此保持长久的热情，去做自己喜欢的事情。"><meta itemprop="datePublished" content="2024-04-25T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2024-04-25T00:00:00+00:00" />
+<meta itemprop="wordCount" content="41"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="keywords" content="实用教程," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Hugo ʕ•ᴥ•ʔ Bear Blog</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<content>
+  <h1 id="前言">前言</h1>
+<hr>
+<p>自从在23年开始关注并加入RISC-V社区以来，RISC-V一直以来都引起我高度的兴趣，老石在这块的分享很棒，可以详见B站：<a href="https://www.bilibili.com/video/BV1Xj411y79f/?spm_id_from=333.337.search-card.all.click&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab"><strong>这就是芯片未来！RISC-V已势不可挡”一期视频看懂RISC-V的前世今生</strong></a></p>
+<h1 id="正文">正文</h1>
+<hr>
+<h3 id="什么是risc-v">什么是risc-v</h3>
+<p>RISC-V（读作“risk-five”）是一个开放标准的指令集架构（ISA），它基于精简指令集计算机（RISC）原则。由加州大学伯克利分校的研究人员于2010年启动，RISC-V被设计为高度模块化的ISA，允许广泛的实现可能性，从小型微控制器到高性能处理器。</p>
+<p>以下是RISC-V的一些关键特点：</p>
+<ol>
+<li><strong>开放和免费</strong>：RISC-V的规范可以自由下载，任何人都可以设计、制造和销售RISC-V芯片而不必支付许可费。这与ARM和x86等专有ISA形成鲜明对比。</li>
+<li><strong>模块化设计</strong>：RISC-V的ISA分为基本的指令集，称为“基础整数ISA”，以及一系列可选的扩展。这种模块化设计使得实现可以根据需要包含或排除特定的功能。</li>
+<li><strong>简洁性</strong>：RISC-V遵循RISC原则，指令集被设计得尽可能简单，这有助于减少硬件的复杂性，提高能效，并简化软件开发。</li>
+<li><strong>可扩展性</strong>：RISC-V支持从32位、64位到128位的不同地址空间，适应不同的应用需求。</li>
+<li><strong>支持自定义指令</strong>：RISC-V允许在保持与标准ISA兼容的同时添加自定义指令，这对于需要特定硬件加速的应用（如嵌入式系统、数字信号处理等）特别有用。</li>
+<li><strong>生态系统</strong>：随着RISC-V的普及，围绕它形成了一个生态系统，包括开源和商业工具链、操作系统支持、参考设计和教育资源。</li>
+<li><strong>多用途</strong>：RISC-V已被用于各种应用，从物联网（IoT）设备的微控制器到高性能计算服务器的处理器核心。</li>
+<li><strong>社区驱动</strong>：RISC-V的发展受到一个活跃社区的支持，这个社区由学术界、工业界和个人贡献者组成。</li>
+</ol>
+<p>RISC-V的开放性和灵活性使其在学术研究、教育、开源项目和商业产品中得到了广泛应用。尽管它是相对较新的ISA，但RISC-V正快速成为全球计算领域的重要参与者。</p>
+<h3 id="我的感受和体验">我的感受和体验</h3>
+<hr>
+<p>据IT之家的报道：<a href="https://www.ithome.com/0/764/177.htm"><strong>第三代“香山”RISC-V 开源高性能处理器核亮相，性能进入全球第一梯队</strong></a></p>
+<p><a href="https://xiangshan-doc.readthedocs.io/zh-cn/latest/">香山处理器官方文档</a></p>
+<p>今晚参与了RISC-V社区分享的关于RISC-V历史的介绍，虽然很多部分听不懂哈，但也开始慢慢了解该组织的进展。</p>
+<p>虽然目前对我而言，时间精力都非常宝贵，但我始终坚信，兴趣是最好的老师。自从参与中科院的“一生一芯”活动开始接触到linux以来，linux一直在生活和精神上影响着我，不论是crontab的奇妙，还是其丰富多样的命令行，都让我感到非常奇妙的体验。</p>
+<p>引用香山文档中，<a href="https://mp.weixin.qq.com/s/1Irs9a0EKoB7P-J_4ju66A">孙院士对于开源精神</a>的介绍。我们可以看到在社区当中，奉献进步共享共治是一种宏伟的观念，在协作开发流程中增强团队的凝聚力，这是很有益的一件事。</p>
+<p>这是香山的文档，我打算抽空看看。</p>
+<p><a href="https://github.com/OpenXiangShan/XiangShan-doc/blob/main/slides/20210622-RVWC-%E9%A6%99%E5%B1%B1%E5%BC%80%E6%BA%90%E9%AB%98%E6%80%A7%E8%83%BDRISC-V%E5%A4%84%E7%90%86%E5%99%A8.pdf"><strong>20210622-RVWC-香山开源高性能RISC-V处理器.pdf</strong></a></p>
+<p>以下是<a href="https://github.com/riscv/riscv-profiles">RISC-V Architecture Profiles</a></p>
+<p>后续将对该文章进行补充更新。</p>
+<h1 id="总结">总结</h1>
+<hr>
+<p>这是一篇很仓促的文章，但与其说其非常不成熟，我更愿意视其为一个起点，因为目前所从事的岗位也是在和各种硬件打交道，所以我还是希望能对此保持长久的热情，去做自己喜欢的事情。</p>
+<h2 id="附录">附录</h2>
+<hr>
+<p><a href="https://www.bilibili.com/video/BV1ep421Q7UK/?spm_id_from=333.337.search-card.all.click&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab"><strong>国产RISC-V芯片，还威胁不到X86，但替代ARM真有戏</strong></a></p>
+<p><a href="https://www.bilibili.com/video/BV1kt421w7LB/?spm_id_from=333.337.search-card.all.click&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab"><strong>被低估的国产CPU芯片RISC-V何以胜？为什么能发展得这样快？凭什么得到这样多国产操作系统</strong></a></p>
+<p><a href="https://www.bilibili.com/video/BV1ym411y7cN/?spm_id_from=333.337.search-card.all.click&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab"><strong>Linux之父Linus Torvalds在一次对话中调侃AI炒作： 很搞笑，大概我也会被大模型取代</strong></a></p>
+<blockquote>
+<p>💡 MatrixCore说：非常有趣的对话，得知了linux和git的起源</p>
+</blockquote>
+<p><a href="https://www.bilibili.com/video/BV1qC4y127rs/?spm_id_from=333.337.search-card.all.click&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab"><strong>除了国产替代，卖出100亿的RISC-V还给芯片带来了什么？【差评君】</strong></a></p>
+<blockquote>
+<p>💡 MatrixCore说：非常好的入门普及，讲得极为形象</p>
+</blockquote>
+<p><img src="https://bu.dusays.com/2024/04/25/662a79c7b49f4.jpeg" alt="662a79c7b49f4.jpeg"></p>
+
+</content>
+<p>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/">#实用教程</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>

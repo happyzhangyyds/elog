@@ -32,7 +32,7 @@
 <meta itemprop="name" content="[知识分享] 开源许可证教程">
 <meta itemprop="description" content="介绍互联网软件开源协议"><meta itemprop="datePublished" content="2023-08-09T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-08-09T00:00:00+00:00" />
-<meta itemprop="wordCount" content="460"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="wordCount" content="342"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
 <meta itemprop="keywords" content="实用教程," />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -228,12 +228,12 @@
 <content>
   <h1 id="前言">前言</h1>
 <blockquote>
-<p>💡 根据阮一峰老师的教程学习<a href="http://www.ruanyifeng.com/blog/2017/10/open-source-license-tutorial.html?f=tt&amp;hmsr=toutiao.io&amp;utm_campaign=toutiao.io">开源协议</a>🌹</p>
+<p>💡   根据阮一峰老师的教程学习<a href="http://www.ruanyifeng.com/blog/2017/10/open-source-license-tutorial.html?f=tt&amp;hmsr=toutiao.io&amp;utm_campaign=toutiao.io">开源协议</a>🌹</p>
 <p>同时结合知乎专栏的文章进行一些补充；<br>
 文章标题：<a href="https://zhuanlan.zhihu.com/p/402330251"><strong>技术分享 | 如何为你的代码选择一个合适的开源协议？</strong></a><br>
-作者：卢文双 资深数据库内核研发 🌹</p>
+作者：卢文双 资深数据库内核研发🌹</p>
 </blockquote>
-<p>如果你足够细心，很容易注意到即使是一小段代码，优秀的作者都在文件开头附上一段关于版权的声明，比如  <code>Licensed under the MIT license</code>。同时，一些博客也会标明”此文章采用  <code>CC BY 4.0 CN</code>  协议“。</p>
+<p>如果你足够细心，很容易注意到即使是一小段代码，优秀的作者都在文件开头附上一段关于版权的声明，比如 <code>Licensed under the MIT license</code>。同时，一些博客也会标明”此文章采用 <code>CC BY 4.0 CN</code> 协议“。</p>
 <p>如果我们拷贝了别人的代码或文章却没注意版权问题，在国外法律意识特别强的环境下（国内版权意识也在逐步加强），那么我们的作品会因触犯别人的权益而违法。即使是最开放的开源协议，最低要求也是保留原作者对代码的声明，所以<code>开源不等于免费，也不等于没有约束</code>。</p>
 <p><strong>何为 LICENCE？</strong></p>
 <blockquote>
@@ -241,7 +241,7 @@
 </blockquote>
 <p>对于大多数人来说，没必要花大把时间去写许可协议，选择一种比较流行的开源协议就足够了，省时省力，更便于自己作品的传播，于人于己都有利。</p>
 <blockquote>
-<p>说句题外话，很多国外开发者在尊重他人劳动成果方面做得很好，如果 A 的作品是因为 B 的作品的启发而来，A 甚至都没有使用 B 任何一句代码，但 A 会在他的作品里面指明是受到了 B 的启发：</p>
+<p>说句题外话，很多国外开发者在尊重他人劳动成果方面做得很好，如果A的作品是因为B的作品的启发而来，A甚至都没有使用B任何一句代码，但A会在他的作品里面指明是受到了B的启发：</p>
 </blockquote>
 <pre><code>```text
 Inspired by XXX link: http://www.xxxx.com
@@ -251,18 +251,18 @@ Inspired by XXX link: http://www.xxxx.com
 <h1 id="正文">正文</h1>
 <p>作为一个开发者，如果你打算开源自己的代码，千万不要忘记，选择一种开源许可证（license）。
 许多开发者对开源许可证了解很少，不清楚有哪些许可证，应该怎么选择。本文介绍开源许可证的基本知识，主要参考了 <a href="http://opensource.com/">OpenSource.com</a></p>
-<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/9a025adb-38da-432f-9970-f56c6a87567d/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240302%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20240302T031541Z&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=139949c6b30343b9f238b0ee17cdfcacfcf5173620bc16a4ad13da0abe4632ab&amp;X-Amz-SignedHeaders=host&amp;x-id=GetObject" alt=""></p>
+<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/9a025adb-38da-432f-9970-f56c6a87567d/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240510%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20240510T162206Z&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=c37a1447ae99d589226676ec96e8852ba406ce557760378e790c0e00c814c6b8&amp;X-Amz-SignedHeaders=host&amp;x-id=GetObject" alt="v2-97fec510246c342a057e14410b2b9de3_r.jpg"></p>
 <hr>
 <h2 id="一什么是开源许可证"><strong>一、什么是开源许可证</strong></h2>
 <p>开源许可证是一种法律许可。通过它，版权拥有人明确允许，用户可以免费地使用、修改、共享版权软件。</p>
 <p>版权法默认禁止共享，也就是说，没有许可证的软件，就等同于保留版权，虽然开源了，用户只能看看源码，不能用，一用就会侵犯版权。所以软件开源的话，必须明确地授予用户开源许可证。</p>
 <hr>
 <h2 id="二开源许可证的种类"><strong>二、开源许可证的种类</strong></h2>
-<p>目前，国际公认的开源许可证共有<a href="https://opensource.org/licenses/alphabetical">80 多种</a>。它们的共同特征是，都允许用户免费地使用、修改、共享源码，但是都有各自的使用条件。</p>
+<p>目前，国际公认的开源许可证共有<a href="https://opensource.org/licenses/alphabetical">80多种</a>。它们的共同特征是，都允许用户免费地使用、修改、共享源码，但是都有各自的使用条件。</p>
 <p>如果一种开源许可证没有任何使用条件，连保留作者信息都不需要，那么就等同于放弃版权了。这时，软件可以直接声明进入&quot;公共领域&quot;（public domain）。</p>
 <p>根据使用条件的不同，开源许可证分成两大类。</p>
 <blockquote>
-<p>宽松式（permissive）许可证 Copyleft 许可证</p>
+<p>宽松式（permissive）许可证Copyleft 许可证</p>
 </blockquote>
 <hr>
 <h2 id="三宽松式许可证"><strong>三、宽松式许可证</strong></h2>
@@ -283,7 +283,7 @@ Inspired by XXX link: http://www.xxxx.com
 <p><strong>（2） BSD（三条款版）</strong></p>
 <p>分发软件时，必须保留原始的许可证声明。不得使用原始作者的名字为软件促销。</p>
 <blockquote>
-<p><!-- raw HTML omitted --><strong>BSD 可证</strong><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><strong>BSD可证</strong><!-- raw HTML omitted --></p>
 </blockquote>
 <pre><code>BSD可证也来源于大学，与MIT差不多，也非常简单、慷慨。
 
@@ -311,12 +311,12 @@ BSD 开源协议鼓励代码共享，但需要尊重代码作者的著作权。B
 <hr>
 <p><strong>（4）Apache 2</strong></p>
 <p>分发软件时，必须保留原始的许可证声明。凡是修改过的文件，必须向用户说明该文件修改过；没有修改过的文件，必须保持许可证不变。</p>
-<p>Apache Licence 是著名的非盈利开源组织 Apache 采用的协议。该协议和 BSD 类似，同样鼓励代码共享和尊重原作者的著作权，同样允许修改代码、再发布（作为开源或商业软件）。需要满足的条件也和 BSD 类似：</p>
+<p>Apache Licence 是著名的非盈利开源组织 Apache 采用的协议。该协议和BSD类似，同样鼓励代码共享和尊重原作者的著作权，同样允许修改代码、再发布（作为开源或商业软件）。需要满足的条件也和BSD类似：</p>
 <ol>
 <li>需要为使用代码的用户提供一份 Apache Licence 。</li>
 <li>如果你修改了代码，需要在被修改的文件中说明。</li>
 <li>在延伸的代码中（修改和由源代码衍生的代码中）需要带有原来代码中的协议、商标、专利声明和其他原作者规定需要包含的说明。</li>
-<li>如果再发布的产品中包含一个<code>Notice</code>文件，则在 Notice 文件中需要带有 Apache Licence 。你可以在<code>Notice</code>中增加自己的许可，但不可对 Apache Licence 构成更改。</li>
+<li>如果再发布的产品中包含一个<code>Notice</code>文件，则在Notice文件中需要带有 Apache Licence 。你可以在<code>Notice</code>中增加自己的许可，但不可对 Apache Licence 构成更改。</li>
 </ol>
 <p>Apache Licence 也是对商业应用友好的许可，使用者也可以在需要的时候修改代码来满足需要并作为开源或商业产品发布/销售。</p>
 <hr>
@@ -335,17 +335,17 @@ BSD 开源协议鼓励代码共享，但需要尊重代码作者的著作权。B
 <p>如果云服务（即 SAAS）用到的代码是该许可证，那么云服务的代码也必须开源。</p>
 <p><strong>（2）GPL</strong></p>
 <p>如果项目包含了 GPL 许可证的代码，那么整个项目都必须使用 GPL 许可证。</p>
-<p>GPL（GNU GENERAL PUBLIC LICENSE）来源于自由软件联盟 GNU，GPL/LGPL 侧重于代码及衍生代码的开源与免费使用。</p>
-<p>GPL 协议的主要内容是只要在一个软件中使用（”使用”指类库引用，修改后的代码或者衍生代码）GPL 协议的产品，则该软件产品必须也采用 GPL 协议，既必须也是开源和免费。<strong>这就是所谓的”传染性”</strong>。</p>
-<p>由于 GPL 严格要求使用了 GPL 类库的软件产品必须使用 GPL 协议，对于使用 GPL 协议的开源代码，商业软件或者对代码有保密要求的部门就不适合集成/采用作为类库和二次开发的基础。</p>
-<p>我们很熟悉的 Linux 就是采用了 GPL。GPL 协议和 BSD, Apache Licence 等鼓励代码重用的许可很不一样。GPL 的出发点是<code>代码的开源/免费使用/引用/修改</code>和<code>衍生代码的开源/免费使用</code>，但<code>不允许</code>修改后和衍生的代码做为<code>闭源</code>的商业软件发布和销售。</p>
-<p>其它细节和 BSD/Apache 等协议类似。</p>
+<p>GPL（GNU GENERAL PUBLIC LICENSE）来源于自由软件联盟GNU，GPL/LGPL侧重于代码及衍生代码的开源与免费使用。</p>
+<p>GPL协议的主要内容是只要在一个软件中使用（”使用”指类库引用，修改后的代码或者衍生代码）GPL 协议的产品，则该软件产品必须也采用GPL协议，既必须也是开源和免费。<strong>这就是所谓的”传染性”</strong>。</p>
+<p>由于GPL严格要求使用了GPL类库的软件产品必须使用GPL协议，对于使用GPL协议的开源代码，商业软件或者对代码有保密要求的部门就不适合集成/采用作为类库和二次开发的基础。</p>
+<p>我们很熟悉的Linux就是采用了GPL。GPL协议和BSD, Apache Licence等鼓励代码重用的许可很不一样。GPL的出发点是<code>代码的开源/免费使用/引用/修改</code>和<code>衍生代码的开源/免费使用</code>，但<code>不允许</code>修改后和衍生的代码做为<code>闭源</code>的商业软件发布和销售。</p>
+<p>其它细节和BSD/Apache等协议类似。</p>
 <p><strong>（3）LGPL</strong></p>
 <p>如果项目采用动态链接调用该许可证的库，项目可以不用开源。</p>
-<p>LGPL（GNU LESSER GENERAL PUBLIC LICENSE）来自于自由软件联盟 GNU，可以翻译为更宽松的 GPL 协议，也属于传染性开源协议。</p>
-<p>LGPL 是 GPL 的一个主要为类库使用设计的开源协议。和<code>GPL要求任何使用/修改/衍生之GPL类库的的软件必须采用GPL协议</code>不同，LGPL 允许商业软件通过类库引用(link)方式使用 LGPL 类库而不需要开源商业软件的代码。这使得采用 LGPL 协议的开源代码可以被商业软件作为类库引用并发布和销售。</p>
-<p>但是如果修改 LGPL 协议的代码或者衍生，则所有修改的代码，涉及修改部分的额外代码和衍生的代码都必须采用 LGPL 协议，因此，LGPL 协议的开源代码很适合作为第三方类库被商业软件引用，但不适合希望以 LGPL 协议代码为基础，通过修改和衍生的方式做二次开发的商业软件采用。</p>
-<p>GPL/LGPL 都保障原作者的知识产权，避免有人利用开源代码复制并开发类似的产品。</p>
+<p>LGPL（GNU LESSER GENERAL PUBLIC LICENSE）来自于自由软件联盟GNU，可以翻译为更宽松的GPL协议，也属于传染性开源协议。</p>
+<p>LGPL是GPL的一个主要为类库使用设计的开源协议。和<code>GPL要求任何使用/修改/衍生之GPL类库的的软件必须采用GPL协议</code>不同，LGPL 允许商业软件通过类库引用(link)方式使用LGPL类库而不需要开源商业软件的代码。这使得采用LGPL协议的开源代码可以被商业软件作为类库引用并发布和销售。</p>
+<p>但是如果修改LGPL协议的代码或者衍生，则所有修改的代码，涉及修改部分的额外代码和衍生的代码都必须采用LGPL协议，因此，LGPL协议的开源代码很适合作为第三方类库被商业软件引用，但不适合希望以LGPL协议代码为基础，通过修改和衍生的方式做二次开发的商业软件采用。</p>
+<p>GPL/LGPL都保障原作者的知识产权，避免有人利用开源代码复制并开发类似的产品。</p>
 <p><strong>（4）Mozilla（MPL）</strong></p>
 <p>只要该许可证的代码在单独的文件中，新增的其他文件可以不用开源。</p>
 <hr>
@@ -386,12 +386,12 @@ BSD 开源协议鼓励代码共享，但需要尊重代码作者的著作权。B
 <p><strong>责任承担</strong>(Hold Liable)：代码的作者承担代码使用后的风险及产生的后果。如果禁止，那么作者将不会承担责任，可以理解为免责条款。</p>
 </li>
 <li>
-<p><strong>商标使用</strong>(Use Trademark)：可以使用作者的姓名，作品的 Logo，或商标。</p>
+<p><strong>商标使用</strong>(Use Trademark)：可以使用作者的姓名，作品的Logo，或商标。</p>
 </li>
 <li>
 <p><strong>附加协议</strong>(Sublicensing)：允许在软件分发传播过程中附加上原来没有的协议条款等。</p>
-<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/83696c0f-4536-47b1-a5e6-636ea88a3c5a/v2-35c93d5cd90a59bb0838a6dfe679bec5_r.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240302%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20240302T031542Z&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=40080cfe4224218c3a229a61bba4d098d0177eb75bcbbb11d052b866e57f42f3&amp;X-Amz-SignedHeaders=host&amp;x-id=GetObject" alt=""></p>
-<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/0b76227b-a253-4757-8a18-93210c0f7c6c/v2-ec1b279039b4e3415662df71132f37cc_720w.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240302%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20240302T031542Z&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=33a6f50d0ca66c161373eeb15d8a28b15986daa300774f4692e174814600b92b&amp;X-Amz-SignedHeaders=host&amp;x-id=GetObject" alt=""></p>
+<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/83696c0f-4536-47b1-a5e6-636ea88a3c5a/v2-35c93d5cd90a59bb0838a6dfe679bec5_r.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240510%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20240510T162210Z&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=50b56da9c7057174a2272377b72292a3ef7f8deaa05b812a9a8783fdbf1a1f8a&amp;X-Amz-SignedHeaders=host&amp;x-id=GetObject" alt="v2-35c93d5cd90a59bb0838a6dfe679bec5_r.jpeg"></p>
+<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/0b76227b-a253-4757-8a18-93210c0f7c6c/v2-ec1b279039b4e3415662df71132f37cc_720w.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240510%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20240510T162210Z&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=27e6b4a2a7884c96bc7f5ab66c04110f1b0a68be807ea9410afdd22f59cd9e3e&amp;X-Amz-SignedHeaders=host&amp;x-id=GetObject" alt="v2-ec1b279039b4e3415662df71132f37cc_720w.webp"></p>
 <hr>
 <h2 id="参考链接"><strong>参考链接</strong></h2>
 <ul>
@@ -405,38 +405,70 @@ BSD 开源协议鼓励代码共享，但需要尊重代码作者的著作权。B
 </blockquote>
 <h3 id="感谢您能看到最后这是送给您的小彩蛋httpswwwbilibilicomreadcv6986215">感谢您能看到最后，这是送给您的<a href="https://www.bilibili.com/read/cv6986215/">小彩蛋</a></h3>
 <hr>
-<p>最后我还想介绍一下 CC BY 4.0 CN 协议
-文章参考哔哩哔哩专栏，作者：<a href="https://space.bilibili.com/383013"><strong>靈雲 Reign</strong></a><strong>🌺🌺🌺</strong></p>
-<p>CC 协议（A Creative Commons License）的中文叫做知识共享许可协议，是允许他人分发作品的公共版权许可之一。2002 年 12 月 16 日，美国非盈利性组织 Creative Commons 首次发布了 CC 协议。4.0 版本发布于 2013 年 11 月 25 日。</p>
-<p><!-- raw HTML omitted --><strong>署名（英语：Attribution，by）</strong><!-- raw HTML omitted -->您（用户）可以复制、发行、展览、表演、放映、广播或通过信息网络传播本作品。您必须按照作者或者许可人指定的方式对作品进行署名。</p>
-<p>您（用户）必须给出适当的署名，并提供指向本许可协议（指你使用的 CC 协议）的链接，同时标明是否（对原始作品）作了修改。您可以用任何合理的方式来署名，但是不得以任何方式暗示许可人为您或您的使用背书。</p>
-<p>通常情况下的 CC 协议必有这条，所以也就是必须进行署名，尊重原作者劳动成果。并且还要提供 CC 协议的链接，注明是否有所修改。其中最奇怪的一点在于“不得以任何方式暗示许可人为您或您的使用背书”，这里的“背书”来源于银行的票据业务，是指使用人不能明示或暗示观众：“我使用了许可人的作品，许可人支持我的创作，并且可以用许可人的声誉确保我的使用行为可信可靠”。</p>
-<p>具体可以查看知乎上王若枫的解释，原网址 <a href="https://www.zhihu.com/question/20930001/answer/133964332">https://www.zhihu.com/question/20930001/answer/133964332</a></p>
+<pre><code>最后我还想介绍一下CC BY 4.0 CN协议
+文章参考哔哩哔哩专栏，作者：[**靈雲Reign**](https://space.bilibili.com/383013)**🌺🌺🌺**
+
+
+CC协议（A Creative Commons License）的中文叫做知识共享许可协议，是允许他人分发作品的公共版权许可之一。2002年12月16日，美国非盈利性组织Creative Commons首次发布了CC协议。4.0版本发布于2013年11月25日。 
+
+
+&lt;u&gt;**署名（英语：Attribution，by）**&lt;/u&gt;您（用户）可以复制、发行、展览、表演、放映、广播或通过信息网络传播本作品。您必须按照作者或者许可人指定的方式对作品进行署名。
+
+
+您（用户）必须给出适当的署名，并提供指向本许可协议（指你使用的CC协议）的链接，同时标明是否（对原始作品）作了修改。您可以用任何合理的方式来署名，但是不得以任何方式暗示许可人为您或您的使用背书。
+
+
+通常情况下的CC协议必有这条，所以也就是必须进行署名，尊重原作者劳动成果。并且还要提供CC协议的链接，注明是否有所修改。其中最奇怪的一点在于“不得以任何方式暗示许可人为您或您的使用背书”，这里的“背书”来源于银行的票据业务，是指使用人不能明示或暗示观众：“我使用了许可人的作品，许可人支持我的创作，并且可以用许可人的声誉确保我的使用行为可信可靠”。
+
+
+具体可以查看知乎上王若枫的解释，原网址  https://www.zhihu.com/question/20930001/answer/133964332
+</code></pre>
 <blockquote>
 <p>背书是指票据转让时原持有人在票据背面加盖自己的印鉴证明该票据真实有效、如果有问题就找我。它不是担保（票据就是他的，他不能为自己担保），而是证明或声明的意思。</p>
 </blockquote>
 <blockquote>
 <p>背书用于社会事务，一般是指【声明支持某人或某事、为某人或某事发声】，一个单位或个人对另一个单位或个人的行为表示支持，以自身的信誉度来证明另一个单位或个人也同样可信可靠。而不是为另一单位或个人的行为进行担保的意思。万一那个人的行为真的出了问题，你不能从经济或法律上追究这个人的责任。这是跟银行业务有所区别的地方。</p>
 </blockquote>
-<p>具体的，署名需要包括以下内容：</p>
-<p>包含任何版权声明（如适用）。如果作品自身带有作者的版权声明，版权声明必须保持不变，或在一种合理的方式下重新分发给媒介。</p>
-<p>引用作者的名字，网名或用户 ID 等。如果作品发布在互联网上，如果存在作者的个人档案页面，应附上页面的链接。</p>
-<p>引用作品的标题或名称（如适用），前提是存在标题或名称。如果作品发布在互联网上，应在重新分发时应附上原作品的标题或者名称。</p>
-<p>引用作品的 CC 许可协议。如果作品发布在互联网上，应引用作者的 CC 许可协议，且应附有到 CC 网站的链接。（网址和跳转链接均可）</p>
-<p>如果作品是一个派生作品或改编作品，除了以上几点外，还应该说明这是一个派生作品，如“这是[作者]的[作品]的芬兰语翻译版本”或“剧本在[作者]的[原作品]基础上改编”。</p>
+<pre><code>具体的，署名需要包括以下内容：
+
+
+包含任何版权声明（如适用）。如果作品自身带有作者的版权声明，版权声明必须保持不变，或在一种合理的方式下重新分发给媒介。
+
+
+引用作者的名字，网名或用户ID等。如果作品发布在互联网上，如果存在作者的个人档案页面，应附上页面的链接。
+
+
+引用作品的标题或名称（如适用），前提是存在标题或名称。如果作品发布在互联网上，应在重新分发时应附上原作品的标题或者名称。
+
+
+引用作品的CC许可协议。如果作品发布在互联网上，应引用作者的CC许可协议，且应附有到CC网站的链接。（网址和跳转链接均可）
+
+
+如果作品是一个派生作品或改编作品，除了以上几点外，还应该说明这是一个派生作品，如“这是[作者]的[作品]的芬兰语翻译版本”或“剧本在[作者]的[原作品]基础上改编”。   
+</code></pre>
 <hr>
-<p><!-- raw HTML omitted --><strong>相同方式共享（英语：ShareAlike，sa）</strong><!-- raw HTML omitted -->您可以自由复制、散布、展示及演出本作品；若您改变、转变或更改本作品，仅在遵守与本作品相同的许可条款下，您才能散布由本作品产生的派生作品。</p>
-<p>带有 SA 的协议要求传播时也要遵循同样的 CC 协议进行，比如原作者注明了 NC 非商业性，则你在使用其作品进行内容创作时也当注明请其他人遵循 CC 协议中的 NC 规定，并且要带有 SA 标记以告诉其他人也应当遵循此 CC 协议。</p>
+<pre><code>&lt;u&gt;**相同方式共享（英语：ShareAlike，sa）**&lt;/u&gt;您可以自由复制、散布、展示及演出本作品；若您改变、转变或更改本作品，仅在遵守与本作品相同的许可条款下，您才能散布由本作品产生的派生作品。
+
+
+带有SA的协议要求传播时也要遵循同样的CC协议进行，比如原作者注明了NC非商业性，则你在使用其作品进行内容创作时也当注明请其他人遵循CC协议中的NC规定，并且要带有SA标记以告诉其他人也应当遵循此CC协议。
+</code></pre>
 <hr>
-<p><!-- raw HTML omitted --><strong>非商业性使用（英语：Noncommercial，nc）</strong><!-- raw HTML omitted -->您可以自由复制、散布、展示及演出本作品；您不得为商业目的而使用本作品。</p>
-<p>这个很好理解，带有 NC 的均不能用于商业目的。但在原创者允许的情况下，仍然可以用于商业目的。例如：小明在他的网站上以包括“非商业性运用”要素的答应协议发布了他的拍摄著作。在这种情况下，小红能够打印格斯的这幅相片欣赏。但是，如果没有小明的答应，小红不得贩卖这张打印的相片。</p>
+<pre><code>&lt;u&gt;**非商业性使用（英语：Noncommercial，nc）**&lt;/u&gt;您可以自由复制、散布、展示及演出本作品；您不得为商业目的而使用本作品。
+
+
+这个很好理解，带有NC的均不能用于商业目的。但在原创者允许的情况下，仍然可以用于商业目的。例如：小明在他的网站上以包括“非商业性运用”要素的答应协议发布了他的拍摄著作。在这种情况下，小红能够打印格斯的这幅相片欣赏。但是，如果没有小明的答应，小红不得贩卖这张打印的相片。 
+</code></pre>
 <hr>
-<p><!-- raw HTML omitted --><strong>禁止演绎（英语：No Derivative Works，nd)</strong><!-- raw HTML omitted -->您可以自由复制、散布、展示及演出本作品；您不得改变、转变或更改本作品。</p>
-<p>也就是只能原原本本地传播本作品，不得对其内容进行任何修改。例如：小明在自己的一首歌曲上使用包括“制止演绎”要素的答应协议。小刚想要截取小明的歌曲片段，混合在他的著作中而产生出全新的歌曲。在这种情况下，没有小明的答应，小刚就不能这么做（除非他的歌曲构成合理运用）。</p>
+<pre><code>&lt;u&gt;**禁止演绎（英语：No Derivative Works，nd)**&lt;/u&gt;您可以自由复制、散布、展示及演出本作品；您不得改变、转变或更改本作品。
+
+
+也就是只能原原本本地传播本作品，不得对其内容进行任何修改。例如：小明在自己的一首歌曲上使用包括“制止演绎”要素的答应协议。小刚想要截取小明的歌曲片段，混合在他的著作中而产生出全新的歌曲。在这种情况下，没有小明的答应，小刚就不能这么做（除非他的歌曲构成合理运用）。
+</code></pre>
 <hr>
-<p>混合搭配这些条例可产生 11 种有效组合（ND 和 SA 互斥，还有 1 种没有包括任何条款），因为 98%的使用情况均要求署名，其中的 5 种缺乏 BY 的条款不再使用。</p>
+<pre><code>混合搭配这些条例可产生11种有效组合（ND和SA互斥，还有1种没有包括任何条款），因为98%的使用情况均要求署名，其中的5种缺乏BY的条款不再使用。
+</code></pre>
 <blockquote>
-<p>💡 故一共有 6 种常用的版权规定组合<br>
+<p>💡 故一共有6种常用的版权规定组合<br>
 CC BY：署名标示（BY）</p>
 <p>CC BY-SA：署名标示（BY）- 相同方式共享（SA）</p>
 <p>CC BY-NC：署名标示（BY）- 非商业性使用（NC）</p>
@@ -444,18 +476,45 @@ CC BY：署名标示（BY）</p>
 <p>CC BY-ND：署名标示（BY）- 禁止演绎（ND）</p>
 <p>CC BY-NC-ND：署名标示（BY）- 非商业性使用（NC）- 禁止演绎（ND）</p>
 </blockquote>
-<p>这些组合的权利与要求都写在上面的具体组成条例之中，将不同条例的权利与要求组合起来即为对应的协议权利与要求。如果组合中没有该条例，则表明组合的权利与要求内容与该条例相反。例如没有表明 NC 即为可商用，没有表明 ND 即为可二次创作。</p>
-<p>对于之前提到的没有包括任何条款的组合，称为不受限制地在全球范围内发布内容，即 CC0。CC0 相当于是放弃以上四种条例的 CC 授权，成为 Public Domain（公有领域）的素材。</p>
+<pre><code>  CC BY：署名标示（BY）
+
+
+  CC BY-SA：署名标示（BY）- 相同方式共享（SA）
+
+
+  CC BY-NC：署名标示（BY）- 非商业性使用（NC）
+
+
+  CC BY-NC-SA：署名标示（BY）- 非商业性使用（NC）- 相同方式共享（SA）
+
+
+  CC BY-ND：署名标示（BY）- 禁止演绎（ND）
+
+
+  CC BY-NC-ND：署名标示（BY）- 非商业性使用（NC）- 禁止演绎（ND）
+
+
+这些组合的权利与要求都写在上面的具体组成条例之中，将不同条例的权利与要求组合起来即为对应的协议权利与要求。如果组合中没有该条例，则表明组合的权利与要求内容与该条例相反。例如没有表明NC即为可商用，没有表明ND即为可二次创作。
+
+
+对于之前提到的没有包括任何条款的组合，称为不受限制地在全球范围内发布内容，即CC0。CC0相当于是放弃以上四种条例的CC授权，成为Public Domain（公有领域）的素材。
+</code></pre>
 <hr>
 <p><!-- raw HTML omitted --><strong>适用范围</strong><!-- raw HTML omitted -->
-在创作共享许可下的作品在著作权法中生效。包括：<!-- raw HTML omitted --><strong>书籍，戏剧，电影，音乐，文章，图片，博客和网站。</strong><!-- raw HTML omitted -->不建议软件在 CC 许可下发布。</p>
-<p>该协议不光规定了使用者的义务，也同样赋予了使用者应有的权利。如：在创作共享许可下应用的作品不得修改所允许的合理使用或公平交易的权利或施加限制（因为其违反著作权例外）。此外，创作共享许可非独占及不可撤销。任何作品或在创作共享许可下获得的作品副本可根据该许可继续使用。</p>
-<p>也就是说创作者一旦根据此协议发布作品，就应当遵循此协议一视同仁的条款，不能增设任何法律限制或是技术限制，来限制他人进行本许可证已经允许的行为。</p>
-<p>由多种创作共享许可保护的作品，用户可以自行选择一种许可。</p>
+在创作共享许可下的作品在著作权法中生效。包括：<!-- raw HTML omitted --><strong>书籍，戏剧，电影，音乐，文章，图片，博客和网站。</strong><!-- raw HTML omitted -->不建议软件在CC许可下发布。</p>
+<pre><code>该协议不光规定了使用者的义务，也同样赋予了使用者应有的权利。如：在创作共享许可下应用的作品不得修改所允许的合理使用或公平交易的权利或施加限制（因为其违反著作权例外）。此外，创作共享许可非独占及不可撤销。任何作品或在创作共享许可下获得的作品副本可根据该许可继续使用。
+
+
+也就是说创作者一旦根据此协议发布作品，就应当遵循此协议一视同仁的条款，不能增设任何法律限制或是技术限制，来限制他人进行本许可证已经允许的行为。
+
+
+由多种创作共享许可保护的作品，用户可以自行选择一种许可。 
+</code></pre>
 <hr>
 <p><!-- raw HTML omitted --><strong>采用 CC 协议的意义或效果？</strong><!-- raw HTML omitted -->
 对于网络创作者而言，采用 CC 协议可以进行主动声明以应对未来创作公开到网络上后可能产生的转载问题。主动提供授权协议，有利于提醒转载者应按照相关协议进行，尽管目前咱们这的版权领域的现象一直都不让人称道，但是随着人们的相关意识的不断增强，也越来越自发地尊重创作者的版权，CC 协议的作用也越来越明显。在发生协议以外的转载行为时，于法于理上也有依据。目前在中国大陆内似乎还未有基于 CC 协议的诉讼。</p>
-<p>难以否认的是，使用范例里小明的主动约定和小红的守约是一个非常理想化的状况。在实际运用中，可能更多的人会直接使用创作者公开的素材而不去管所谓的授权或者协议。而 CC 协议在当下的网络环境中也近乎一种自律型的规约。但是，当使用、提及的次数多了，相比也能够提高更多人在这方面的意识。尽管前进步伐还很缓慢，但一步步一步步向前，总能改变。</p>
+<pre><code>难以否认的是，使用范例里小明的主动约定和小红的守约是一个非常理想化的状况。在实际运用中，可能更多的人会直接使用创作者公开的素材而不去管所谓的授权或者协议。而 CC 协议在当下的网络环境中也近乎一种自律型的规约。但是，当使用、提及的次数多了，相比也能够提高更多人在这方面的意识。尽管前进步伐还很缓慢，但一步步一步步向前，总能改变。 
+</code></pre>
 <hr>
 </li>
 </ul>

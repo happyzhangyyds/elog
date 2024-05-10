@@ -32,7 +32,7 @@
 <meta itemprop="name" content="[图像处理] 基于yolov5的水果识别">
 <meta itemprop="description" content="选择yolov5自定义数据集对红富士、黄元帅、国光进行识别。"><meta itemprop="datePublished" content="2023-11-15T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-11-15T00:00:00+00:00" />
-<meta itemprop="wordCount" content="198"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="wordCount" content="79"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
 <meta itemprop="keywords" content="实用教程," />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -236,11 +236,11 @@
 </span></span><span style="display:flex;"><span>  好的，然后周五的记录就续上了。关于心情的总结不是重点，先把最近yoloV5的工作给梳理出来。
 </span></span></code></pre></div><h1 id="正文">正文</h1>
 <hr>
-<p>这部分主要介绍是怎么认识 yolov5 的，起因是电子课程设计，选择了基于图像处理的水果识别的这个课题，然后开始查资料，了解相关的技术路线。由于是第一次做这种课题，并且还得负责主要任务，心累之余做肯定是要做的。我先去 bilibili 查找了相关的课题，大多数是通过 matlab 进行相对应的识别的，但是我觉得似乎不是很符合我的预期。</p>
-<p><img src="https://bu.dusays.com/2023/11/15/65547538298c7.png" alt=""></p>
+<p>这部分主要介绍是怎么认识yolov5的，起因是电子课程设计，选择了基于图像处理的水果识别的这个课题，然后开始查资料，了解相关的技术路线。由于是第一次做这种课题，并且还得负责主要任务，心累之余做肯定是要做的。我先去bilibili查找了相关的课题，大多数是通过matlab进行相对应的识别的，但是我觉得似乎不是很符合我的预期。</p>
+<p><img src="https://bu.dusays.com/2023/11/15/65547538298c7.png" alt="65547538298c7.png"></p>
 <h2 id="基本思路">基本思路</h2>
 <hr>
-<p>于是我打算更进一步去想如何去做这个问题，当然解决问题，和写报告是很不一样的思路，写报告是不管怎么样，尽可能可读性强，但是解决问题，最主要的是理清楚思路。既然 bilibli 的综合排序没有找到我要的效果，通过询问 gpt 我大概得出了以下的思路：</p>
+<p>于是我打算更进一步去想如何去做这个问题，当然解决问题，和写报告是很不一样的思路，写报告是不管怎么样，尽可能可读性强，但是解决问题，最主要的是理清楚思路。既然bilibli的综合排序没有找到我要的效果，通过询问gpt我大概得出了以下的思路：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>基于图像处理的水果分类系统设计背后的原理如下：
 </span></span><span style="display:flex;"><span>1.图像获取：系统通过摄像头或其他图像采集设备获取水果的图像。
 </span></span><span style="display:flex;"><span>2.图像预处理：对获取的图像进行预处理，包括图像去噪、图像增强、图像分割等操作，以提高后续处理的准确性和效果。
@@ -250,23 +250,23 @@
 </span></span><span style="display:flex;"><span>6.训练和测试：使用已标记的水果图像数据集进行分类器的训练，并使用另外的测试数据集评估分类器的性能。
 </span></span><span style="display:flex;"><span>7.分类结果：将待分类的水果图像输入训练好的分类器，通过分类器进行分类，并输出水果的类别标签或概率。
 </span></span><span style="display:flex;"><span>8.系统优化：根据分类结果的准确性和效率，对系统进行优化，包括调整参数、改进算法等。
-</span></span></code></pre></div><p>起初我想从比较熟悉的 FPGA 的相关的技术路线进行尝试，也查阅了相关的材料，但是实现的难度有点高。涉及到特征提取的有 Sobel 算法，可以对轮廓做很好的处理。</p>
-<p>然后还发现一个<a href="https://www.bilibili.com/video/BV1rs4y1X7bE/?spm_id_from=333.337.search-card.all.click&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab">up 主做的毕设</a>和这个也是相关的，很有意思。</p>
+</span></span></code></pre></div><p>起初我想从比较熟悉的FPGA的相关的技术路线进行尝试，也查阅了相关的材料，但是实现的难度有点高。涉及到特征提取的有Sobel算法，可以对轮廓做很好的处理。</p>
+<p>然后还发现一个<a href="https://www.bilibili.com/video/BV1rs4y1X7bE/?spm_id_from=333.337.search-card.all.click&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab">up主做的毕设</a>和这个也是相关的，很有意思。</p>
 <p>然后查找了一些文献，如下：</p>
 <p>1.<a href="http://cloud.matrixcore.top/s/BxpMf7ceWiMbpyY">基于多颜色和局部纹理的水果识别算法研究</a></p>
-<p>2.<a href="http://cloud.matrixcore.top/s/Y8ey2oj99pKee6g">水果分类的多模板匹配算法及其 FPGA 实现</a></p>
-<p>3.<a href="http://cloud.matrixcore.top/s/nFgerGYRqZZy8b3">水果自动识别的 BP 神经网络方法</a></p>
-<p>4.<a href="http://cloud.matrixcore.top/s/exaX3dNwfn4jgbZ">基于注意力 YOLOv5 模型的自动水果识别</a></p>
-<p>5.<a href="http://cloud.matrixcore.top/s/ecDHTxi8N3SjD4T">基于轻量化改进 YOLOv5 的苹果树产量测定方法</a></p>
-<p>在文献 1，当中采取的方式，首先是先对图像进行预处理，对图像进行平滑去噪，图像增强，完成图像从环境中分离出来。然后进行特征提取，其中有颜色特征，纹理特征，然后放入 BP 神经网络分类器进行训练。</p>
-<p>在文献 2，主要是针对方案一中的图像预处理进行了相对应的优化，采用了 FPGA 当中的 Soebl 边缘化提取特征向量。然后对比 SSD、YOLO、CenterNet 等方式的性能。
-在文献 3，基本思路是和文献 1 类似的，多出了一些特征，比如面积特征，周长特征，弧度特征，颜色特征，然后通过神经网络进行分类。
-在文献 4，采用的方式是进行 YOLOv5 模型进行水果自动识别，但是对模型进行了一些改进。在 yolov5 对网络后面又增加了一层网络，按照重要程度强化有用的特征，抑制掉无用的特征，替换了边框回归损失函数，提升了预测的精度。</p>
-<p>在文献 5，同样也是对 yolov5 算法进行优化和改进，也是通过更换深度可分离卷积和添加注意力机制模块，提升准确度和降低网络负担。</p>
-<h2 id="选择-yolov5">选择 yolov5</h2>
+<p>2.<a href="http://cloud.matrixcore.top/s/Y8ey2oj99pKee6g">水果分类的多模板匹配算法及其FPGA实现</a></p>
+<p>3.<a href="http://cloud.matrixcore.top/s/nFgerGYRqZZy8b3">水果自动识别的BP神经网络方法</a></p>
+<p>4.<a href="http://cloud.matrixcore.top/s/exaX3dNwfn4jgbZ">基于注意力YOLOv5模型的自动水果识别</a></p>
+<p>5.<a href="http://cloud.matrixcore.top/s/ecDHTxi8N3SjD4T">基于轻量化改进YOLOv5的苹果树产量测定方法</a></p>
+<p>在文献1，当中采取的方式，首先是先对图像进行预处理，对图像进行平滑去噪，图像增强，完成图像从环境中分离出来。然后进行特征提取，其中有颜色特征，纹理特征，然后放入BP神经网络分类器进行训练。</p>
+<p>在文献2，主要是针对方案一中的图像预处理进行了相对应的优化，采用了FPGA当中的Soebl边缘化提取特征向量。然后对比SSD、YOLO、CenterNet等方式的性能。
+在文献3，基本思路是和文献1类似的，多出了一些特征，比如面积特征，周长特征，弧度特征，颜色特征，然后通过神经网络进行分类。
+在文献4，采用的方式是进行YOLOv5模型进行水果自动识别，但是对模型进行了一些改进。在yolov5对网络后面又增加了一层网络，按照重要程度强化有用的特征，抑制掉无用的特征，替换了边框回归损失函数，提升了预测的精度。</p>
+<p>在文献5，同样也是对yolov5算法进行优化和改进，也是通过更换深度可分离卷积和添加注意力机制模块，提升准确度和降低网络负担。</p>
+<h2 id="选择yolov5">选择yolov5</h2>
 <hr>
-<p>因为刚接触这个问题，通过查阅的文献，感觉选择 yolo 的方式更加便于实践学习和操作。</p>
-<p>关于 yolov5 的简介：</p>
+<p>因为刚接触这个问题，通过查阅的文献，感觉选择yolo的方式更加便于实践学习和操作。</p>
+<p>关于yolov5的简介：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>YOLOv5是一种基于深度学习的目标检测算法，它是YOLO（You Only Look Once）系列算法的最新版本。YOLOv5的原理可以概括为以下几个步骤：
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>1. 基础网络：YOLOv5使用了一种轻量级的卷积神经网络作为基础网络。这个网络主要用于提取图像的特征。
@@ -285,25 +285,25 @@
 </span></span></code></pre></div><p>好在，可以站在巨人的肩膀上。我通过博主：思绪无限 的<a href="https://www.cnblogs.com/sixuwuxian/p/17372580.html">文章</a>进行了学习。</p>
 <h2 id="环境配置">环境配置</h2>
 <hr>
-<p>对于刚开始使用 pycharm 的我，来说，配置环境还是走了不少弯路的，前期，要下载 pycharm 和 anaconda，用于配置环境，一开始我在 Mac 系统上配置环境没有成功，一直不知道如何把 pycharm 关联 anaconda 的环境，后来就转到 win 下进行操作。关于如何搭建并配置深度学习环境，我参考了 up 主：<a href="https://www.bilibili.com/video/BV1Hg4y1t78v/?spm_id_from=333.999.0.0&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab">思绪无限的教程</a>，初步完成了环境的激活。</p>
+<p>对于刚开始使用pycharm的我，来说，配置环境还是走了不少弯路的，前期，要下载pycharm和anaconda，用于配置环境，一开始我在Mac系统上配置环境没有成功，一直不知道如何把pycharm关联anaconda的环境，后来就转到win下进行操作。关于如何搭建并配置深度学习环境，我参考了up主：<a href="https://www.bilibili.com/video/BV1Hg4y1t78v/?spm_id_from=333.999.0.0&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab">思绪无限的教程</a>，初步完成了环境的激活。</p>
 <h2 id="训练自己的数据集">训练自己的数据集</h2>
 <hr>
 <p>这部分介绍如何训练自己的数据集。</p>
 <h3 id="采集所需要的识别物体的图像">采集所需要的识别物体的图像</h3>
 <hr>
-<p>我是通过手机进行摄影，然后通过 usb 上传到电脑，然后手机拍摄的图片肯定太大了，而且在<a href="https://docs.ultralytics.com/yolov5/">yolov5 的官方文档</a>上说，训练的数据集最好能达到 1500 张以上。然后非常感谢一个宝藏的批量图片裁剪<a href="https://uutool.cn/img-clip-batch/">在线网页</a>，没有广告，而且效率很高，我把 770 多张图片裁剪为 640*640 的大小，减小图片的体积。
-11.18 更新：今天用 safari 测试才发现，可能是我在 win 上开了插件，所以没广告，所以也在 safari 上装了插件。</p>
+<p>我是通过手机进行摄影，然后通过usb上传到电脑，然后手机拍摄的图片肯定太大了，而且在<a href="https://docs.ultralytics.com/yolov5/">yolov5的官方文档</a>上说，训练的数据集最好能达到1500张以上。然后非常感谢一个宝藏的批量图片裁剪<a href="https://uutool.cn/img-clip-batch/">在线网页</a>，没有广告，而且效率很高，我把770多张图片裁剪为640*640的大小，减小图片的体积。
+11.18更新：今天用safari测试才发现，可能是我在win上开了插件，所以没广告，所以也在safari上装了插件。</p>
 <h3 id="labelimg">labelimg</h3>
 <hr>
-<p>之前通过 23 张图片，简单熟悉了 yolo 的训练流程，后面购买了，红富士，黄元帅，和国光，三种类型的苹果进行数据采集，目的是为了通过 yolov5 来训练模型识别这三种水果的能力。</p>
-<p>前期通过不同角度完成了对数据集的拍摄，共计 770 张图片，然后次日花了很久用 labelimg 软件对图片进行数据标注，在此不得不提一下。labelimg 软件我刚开始觉得非常难用，因为需要配置 python 环境，而且动不动就闪退。就在我找不到头绪之际，非常感谢 up 主：<a href="https://www.bilibili.com/video/BV1Xh4y1574N/?spm_id_from=333.880.my_history.page.click&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab">小周不会做</a> 提供的灵感，up 主提供了 labelimg 的打包版，这样子就可以启动并进行使用了，让图片得到顺利的标注。</p>
+<p>之前通过23张图片，简单熟悉了yolo的训练流程，后面购买了，红富士，黄元帅，和国光，三种类型的苹果进行数据采集，目的是为了通过yolov5来训练模型识别这三种水果的能力。</p>
+<p>前期通过不同角度完成了对数据集的拍摄，共计770张图片，然后次日花了很久用labelimg软件对图片进行数据标注，在此不得不提一下。labelimg软件我刚开始觉得非常难用，因为需要配置python环境，而且动不动就闪退。就在我找不到头绪之际，非常感谢up主：<a href="https://www.bilibili.com/video/BV1Xh4y1574N/?spm_id_from=333.880.my_history.page.click&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab">小周不会做</a> 提供的灵感，up主提供了labelimg的打包版，这样子就可以启动并进行使用了，让图片得到顺利的标注。</p>
 <h3 id="正确配置路径">正确配置路径</h3>
 <hr>
-<p>然后可以现在本地环境上进行调试一下，可以参考这位 up 主：<a href="https://www.bilibili.com/video/BV1f94y1R7a4/?spm_id_from=333.880.my_history.page.click&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab">遗落的教程</a>，讲解得很详细。还有怎么用快捷键打标签，可以参照这位 up 主：<a href="https://space.bilibili.com/471665566">圣音去扉</a>的<a href="https://www.bilibili.com/video/BV1rT411f7Up/?spm_id_from=333.880.my_history.page.click&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab">教程</a>。然后需要现在本地环境能够正常的跑成功，在这前提下，可以尝试使用带有 GPU 的云服务器进行训练。</p>
+<p>然后可以现在本地环境上进行调试一下，可以参考这位up主：<a href="https://www.bilibili.com/video/BV1f94y1R7a4/?spm_id_from=333.880.my_history.page.click&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab">遗落的教程</a>，讲解得很详细。还有怎么用快捷键打标签，可以参照这位up主：<a href="https://space.bilibili.com/471665566">圣音去扉</a>的<a href="https://www.bilibili.com/video/BV1rT411f7Up/?spm_id_from=333.880.my_history.page.click&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab">教程</a>。然后需要现在本地环境能够正常的跑成功，在这前提下，可以尝试使用带有GPU的云服务器进行训练。</p>
 <h3 id="autodl">AutoDL</h3>
 <hr>
-<p>关于如何使用 AutoDL，非常感谢 up 主：<a href="https://space.bilibili.com/21060026">你可是处女座啊</a>的<a href="https://www.bilibili.com/video/BV13s4y1V7b4/?spm_id_from=333.880.my_history.page.click&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab">教程</a>，介绍得很详细，如何上传文件夹到服务器，可以使用 scp 命令，也可以使用网页进行上传。</p>
-<p>然后，你还需要配置 CUDA 环境，在服务器上安装必要的环境，然后就可以开始使用 gpu 进行愉快的训练了。我使用的是英伟达的 3080 显卡，速度已经感觉很快了，但是 770 张 200 轮跑下来，也花了一个半小时。</p>
+<p>关于如何使用AutoDL，非常感谢up主：<a href="https://space.bilibili.com/21060026">你可是处女座啊</a>的<a href="https://www.bilibili.com/video/BV13s4y1V7b4/?spm_id_from=333.880.my_history.page.click&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab">教程</a>，介绍得很详细，如何上传文件夹到服务器，可以使用scp命令，也可以使用网页进行上传。</p>
+<p>然后，你还需要配置CUDA环境，在服务器上安装必要的环境，然后就可以开始使用gpu进行愉快的训练了。我使用的是英伟达的3080显卡，速度已经感觉很快了，但是770张200轮跑下来，也花了一个半小时。</p>
 <h1 id="总结">总结</h1>
 <hr>
 <p>后续还需要进行参数微调，但是自我感觉时间有限，还有点累，所以，这篇文章后面就写得很简单，我又得做又得写报告，虽然很难崩得住，但是也得顶住啊。</p>

@@ -32,7 +32,7 @@
 <meta itemprop="name" content="[速度优化]  前端图片性能优化">
 <meta itemprop="description" content="用杜老师的图床对图片进行加速"><meta itemprop="datePublished" content="2023-08-13T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-08-13T00:00:00+00:00" />
-<meta itemprop="wordCount" content="183"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="wordCount" content="166"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
 <meta itemprop="keywords" content="推荐," />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -228,14 +228,14 @@
 <content>
   <h1 id="前言">前言</h1>
 <hr>
-<p>今天做一道极限的题目，用到的等价无穷小，但是图片一直是博客杀手，我等了半天也出不来，却是没办法，notion 本身的图片加载速度只能说一般，而且国内的访问速度不是很理想，所以前几天我一直很苦恼。
-今天我打算用杜老师的图床对图片进行加速，之前使用 marginnote+obsidian 的时候就研究过这个东东，因为 obsidian 虽然强大，但是图片都是存储在本地，没办法同步到 notion，然后就用到了 picgo，一开始我不知道能用杜老师的图床，后来才发现，可以的，腾讯云的图床我用的还不是很舒服，smms 的图床虽然免费，但感觉有时候不稳定。
-picgo 就是一种快捷的图片上传服务，上传图片的同时还可以给你图片的链接。</p>
+<p>今天做一道极限的题目，用到的等价无穷小，但是图片一直是博客杀手，我等了半天也出不来，却是没办法，notion本身的图片加载速度只能说一般，而且国内的访问速度不是很理想，所以前几天我一直很苦恼。
+今天我打算用杜老师的图床对图片进行加速，之前使用marginnote+obsidian的时候就研究过这个东东，因为obsidian虽然强大，但是图片都是存储在本地，没办法同步到notion，然后就用到了picgo，一开始我不知道能用杜老师的图床，后来才发现，可以的，腾讯云的图床我用的还不是很舒服，smms的图床虽然免费，但感觉有时候不稳定。
+picgo就是一种快捷的图片上传服务，上传图片的同时还可以给你图片的链接。</p>
 <blockquote>
-<p>💡 首先感谢杜老师提供的图床服务 🌺🌺🌺<br>
+<p>💡 首先感谢杜老师提供的图床服务🌺🌺🌺<br>
 具体可以去杜老师的<a href="https://dusays.com/">博客</a>看一看<br>
-本文也参考了掘金社区作者<strong>lzg9527 的文章：</strong><a href="https://juejin.cn/post/6965761736083243044"><strong>前端性能优化——图片篇</strong></a><br>
-感谢作者热心的分享和介绍 😄</p>
+本文也参考了掘金社区作者<strong>lzg9527的文章：</strong><a href="https://juejin.cn/post/6965761736083243044"><strong>前端性能优化——图片篇</strong></a><br>
+感谢作者热心的分享和介绍😄</p>
 </blockquote>
 <h1 id="正文">正文</h1>
 <hr>
@@ -246,19 +246,19 @@ picgo 就是一种快捷的图片上传服务，上传图片的同时还可以�
 <p>并发的图片请求次数是有限的，其他的请求会推入到队列中等待或者停滞不前，直到上轮请求完成后新的请求才会发出。所以相当一部分图片资源请求是需要排队等待时间的，过多的图片必然会影响页面的加载和展示。</p>
 <h2 id="图片格式介绍">图片格式介绍</h2>
 <hr>
-<p>JPEG 是由 Joint Photographic Experts Group 所开发出的一种图片。它最大的特点是  <strong>有损压缩</strong>。当我们把图片体积压缩至原有体积的 50% 以下时，JPG 仍然可以保持住 60% 的品质。可以呈现多达 1600 万种颜色，足以应对大多数场景下对色彩的要求。</p>
+<p>JPEG 是由 Joint Photographic Experts Group 所开发出的一种图片。它最大的特点是 <strong>有损压缩</strong>。当我们把图片体积压缩至原有体积的 50% 以下时，JPG 仍然可以保持住 60% 的品质。可以呈现多达 1600 万种颜色，足以应对大多数场景下对色彩的要求。</p>
 <p>PNG（可移植网络图形格式）是由 W3C 开发的图片格式，是一种<strong>无损压缩</strong>的高保真的图片格式。PNG 图片具有比 JPEG 更强的色彩表现力，对线条的处理更加细腻，对透明度有良好的支持。它弥补了上文我们提到的 JPEG 的局限性，唯一的缺点就是　<strong>体积太大</strong>。</p>
 <p>GIF 是一种最多支持 256 种颜色的 8 位无损图片格式。这个限制让 GIF 格式对于多颜色或者摄影图片的展示无能为力。支持动画，适合去展示一些无限循环的动画，比如图标、表情、广告栏等。</p>
 <p>WebP 是一种同时提供了有损压缩与无损压缩（可逆压缩）的图片文件格式，派生自影像编码格式 VP8。它像 JPEG 一样对细节丰富的图片信手拈来，像 PNG 一样支持透明，像 GIF 一样可以显示动态图片，集多种图片文件格式的优点于一身。虽然 webP 有诸多优点，但是它不能完全替代 JPEG 和 PNG，因为浏览器对 WebP 支持并不普遍。特别是移动端 IOS 系统基本不支持。</p>
 <h2 id="图片压缩工具">图片压缩工具</h2>
 <hr>
-<p>我使用的是 Mac 的<a href="https://imageoptim.com/mac">ImageOptim</a>，使用体验还是比较良好的。
+<p>我使用的是Mac的<a href="https://imageoptim.com/mac">ImageOptim</a>，使用体验还是比较良好的。
 然后文章的作者也提供了一些其他的方案，比如：</p>
 <ul>
-<li><a href="https://link.juejin.cn/?target=https%3A%2F%2Ftinypng.com%2F">tinypng</a>  免费、批量、速度块</li>
-<li><a href="https://link.juejin.cn/?target=https%3A%2F%2Fzhitu.isux.us%2F">智图压缩</a>  百度很难搜到官网了，免费、批量、好用</li>
-<li><a href="https://link.juejin.cn/?target=https%3A%2F%2Fsquoosh.app%2F">squoosh</a>  在线图片压缩工具</li>
-<li><a href="https://link.juejin.cn/?target=https%3A%2F%2Fcompressor.io%2F">compressor</a>  支持 JPG、PNG、SVG、GIF</li>
+<li><a href="https://link.juejin.cn/?target=https%3A%2F%2Ftinypng.com%2F">tinypng</a> 免费、批量、速度块</li>
+<li><a href="https://link.juejin.cn/?target=https%3A%2F%2Fzhitu.isux.us%2F">智图压缩</a> 百度很难搜到官网了，免费、批量、好用</li>
+<li><a href="https://link.juejin.cn/?target=https%3A%2F%2Fsquoosh.app%2F">squoosh</a> 在线图片压缩工具</li>
+<li><a href="https://link.juejin.cn/?target=https%3A%2F%2Fcompressor.io%2F">compressor</a> 支持 JPG、PNG、SVG、GIF</li>
 </ul>
 <h2 id="使用-cdn-图片">🌟<strong>使用 CDN 图片</strong></h2>
 <hr>
@@ -300,7 +300,7 @@ picgo 就是一种快捷的图片上传服务，上传图片的同时还可以�
 <li>浪费用户的流量，有些用户并不想全部看完，全部加载会耗费大量流量。</li>
 </ul>
 <blockquote>
-<p>💡 这个技术博客的开发作者应该也是用上了的，我觉得 javascript 还是很有意思的，里面蕴含着很多解决问题的思想和办法。</p>
+<p>💡   这个技术博客的开发作者应该也是用上了的，我觉得javascript还是很有意思的，里面蕴含着很多解决问题的思想和办法。</p>
 </blockquote>
 <p><strong>图片预加载</strong></p>
 <p>图片预加载，是指在一些需要展示大量图片的网站，将图片提前加载到本地缓存中，从而提升用户体验。</p>
@@ -310,12 +310,12 @@ picgo 就是一种快捷的图片上传服务，上传图片的同时还可以�
 <p>常用的方法就是 css3 的媒体查询(media query)。</p>
 <p><strong>渐进式图片</strong></p>
 <p>渐进式图片的意思是在高画质图像加载完之前会先显示低画质版本。低画质版本由于画质低、压缩率高，尺寸很小，加载很快。在两者之间我们也可以根据需要显示不同画质的版本。</p>
-<p><img src="https://bu.dusays.com/2023/08/13/64d8e3653b7ae.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/08/13/64d8e3653b7ae.png" alt="64d8e3653b7ae.png"></p>
 <p>渐进式图片可以让用户产生图片加载变快的印象。用户不再盯着一片空白区域等待图片加载，而能看到图像变得越来越清晰，这样对用户体验也是友好的。</p>
 <p>骨架屏技术也是类似的原理。</p>
 <h1 id="总结">总结</h1>
 <hr>
-<p>作者的总结还是非常详细的，对于一个问题提供了很多解决问题的思路。再赞一个 👍！</p>
+<p>作者的总结还是非常详细的，对于一个问题提供了很多解决问题的思路。再赞一个👍！</p>
 <ol>
 <li>
 <p>选择合适的图片格式和压缩大图，可从根源上截图大图加载过慢的问题。</p>

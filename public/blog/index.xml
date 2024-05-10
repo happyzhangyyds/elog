@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2024, MatrixCore</copyright>
-    <lastBuildDate>Sun, 21 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo.matrixcore.life/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo.matrixcore.life/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[毕业设计] Yolov5多光谱解决方案探索</title>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/yolov5_multispectral/</link>
+      <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/yolov5_multispectral/</guid>
+      <description>通过多光谱可以通过对其他光谱的图像特征进行捕捉，从而提高在不同环境下的识别性能，如果单纯训练可见光，也许在夜晚环境下的模型的表现就会变差，而通过其他光谱就可以获得稳定的目标特征，从而实现模型更好地的环境适应性。</description>
+    </item>
+    
+    <item>
+      <title>[精简指令] 走近RISC-V</title>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/risc-v/</link>
+      <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/risc-v/</guid>
+      <description>这是一篇很仓促的文章，但与其说其非常不成熟，我更愿意视其为一个起点，因为目前所从事的岗位也是在和各种硬件打交道，所以我还是希望能对此保持长久的热情，去做自己喜欢的事情。</description>
+    </item>
+    
     <item>
       <title>[文献管理]  Nextcloud_Webdav的Zotero同步方案</title>
       <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/nextcloud_webdav-zotero/</link>
@@ -95,7 +113,7 @@
       <pubDate>Thu, 08 Feb 2024 00:00:00 +0000</pubDate>
       
       <guid>https://hugo.matrixcore.life/blog/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/240208/</guid>
-      <description>人生往往那么短暂，活着也许只是为了几个瞬间呢。</description>
+      <description>我不钟爱玲琅的饰物，不渴望丰盛的大餐，我更关心蔬菜如何从种子发芽，大树为什么会在风里唱歌。</description>
     </item>
     
     <item>
@@ -198,6 +216,15 @@
     </item>
     
     <item>
+      <title>[文件管理] NextCloud为Obsidian保驾护航</title>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/nextcloud-obsidian/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/nextcloud-obsidian/</guid>
+      <description>obsidian与notion珠联璧合，nextcloud为obsidian保驾护航。</description>
+    </item>
+    
+    <item>
       <title>[电路设计] Cadence入门</title>
       <link>https://hugo.matrixcore.life/blog/cadence/cadence1/</link>
       <pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate>
@@ -231,6 +258,15 @@
       
       <guid>https://hugo.matrixcore.life/blog/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231210/</guid>
       <description>实习对我来讲是一种全新的生活，新的环境，新的目标，从一个小蘑菇慢慢历练，总之，我需要跨过这个坎，步入二十岁的第二个阶段。</description>
+    </item>
+    
+    <item>
+      <title>[水问] 人生路口的捕梦人——简媜自述</title>
+      <link>https://hugo.matrixcore.life/blog/%E6%B0%B4%E9%97%AE-%E7%AE%80%E5%AB%83/jianzhen-5/</link>
+      <pubDate>Sun, 10 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/blog/%E6%B0%B4%E9%97%AE-%E7%AE%80%E5%AB%83/jianzhen-5/</guid>
+      <description>希望我的作品至少有一页能安慰未知时间里一个陌生的灵魂，若那时大寒，我的字里行间让他取了暖。那么，走在最后路程的我，可以抬头望天，与大化相视一笑。</description>
     </item>
     
     <item>
@@ -270,6 +306,15 @@
     </item>
     
     <item>
+      <title>[水问] 聆听-简嫃</title>
+      <link>https://hugo.matrixcore.life/blog/%E6%B0%B4%E9%97%AE-%E7%AE%80%E5%AB%83/jianzhen-3/</link>
+      <pubDate>Tue, 28 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/blog/%E6%B0%B4%E9%97%AE-%E7%AE%80%E5%AB%83/jianzhen-3/</guid>
+      <description>大自然不会只顾让花朵绽放，草木生长，而忘了让音乐流传。我总认为，若能澄心净耳听，万籁俱寂亦是韵。</description>
+    </item>
+    
+    <item>
       <title>[水问] 聆听（简嫃）</title>
       <link>https://hugo.matrixcore.life/blog/%E6%B0%B4%E9%97%AE-%E7%AE%80%E5%AB%83/jianzhen-3/</link>
       <pubDate>Tue, 28 Nov 2023 00:00:00 +0000</pubDate>
@@ -294,6 +339,24 @@
       
       <guid>https://hugo.matrixcore.life/blog/%E6%B0%B4%E9%97%AE-%E7%AE%80%E5%AB%83/jianzhen-2/</guid>
       <description>从一颗颗的橄榄，我学会一个“酿”字，从这个“酿”字，我领悟到如何去面对生活，甚至是人生。</description>
+    </item>
+    
+    <item>
+      <title>[水问] 我来酿——生活细笔之五-简嫃</title>
+      <link>https://hugo.matrixcore.life/blog/%E6%B0%B4%E9%97%AE-%E7%AE%80%E5%AB%83/jianzhen-2/</link>
+      <pubDate>Mon, 27 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/blog/%E6%B0%B4%E9%97%AE-%E7%AE%80%E5%AB%83/jianzhen-2/</guid>
+      <description>从一颗颗的橄榄，我学会一个“酿”字，从这个“酿”字，我领悟到如何去面对生活，甚至是人生。</description>
+    </item>
+    
+    <item>
+      <title>[水问] 生活细笔小引-简嫃</title>
+      <link>https://hugo.matrixcore.life/blog/%E6%B0%B4%E9%97%AE-%E7%AE%80%E5%AB%83/jianzhen-1/</link>
+      <pubDate>Mon, 27 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/blog/%E6%B0%B4%E9%97%AE-%E7%AE%80%E5%AB%83/jianzhen-1/</guid>
+      <description>每个日子，都是内容不同的一本书，风格迥异的一幅画。只是我们的脚步太匆忙了，常常忘记去读它，欣赏它。</description>
     </item>
     
     <item>
@@ -1356,6 +1419,15 @@
       
       <guid>https://hugo.matrixcore.life/blog/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/love/</guid>
       <description>情感带给了人的羁绊，但也确确实实是给人生画上了颜色，对于一个没有情感的人，一个充满感情的人，就像是雨后的彩虹。</description>
+    </item>
+    
+    <item>
+      <title>[经验分享] 谈学习观</title>
+      <link>https://hugo.matrixcore.life/blog/%E5%BF%85%E7%9C%8B%E7%B2%BE%E9%80%89/learn/</link>
+      <pubDate>Mon, 12 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/blog/%E5%BF%85%E7%9C%8B%E7%B2%BE%E9%80%89/learn/</guid>
+      <description>大学对于独立人格的塑造是很重要的，最主要的是在不断试错的过程当中培养自己解决问题的能力。</description>
     </item>
     
     <item>

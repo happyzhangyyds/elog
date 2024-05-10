@@ -32,7 +32,7 @@
 <meta itemprop="name" content="[跨域协同]  elog&#43;notion实现md优雅备份">
 <meta itemprop="description" content="通过elog实现notion文章批量下载到本地，以及自动化云端备份和迁移。"><meta itemprop="datePublished" content="2023-10-11T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-10-11T00:00:00+00:00" />
-<meta itemprop="wordCount" content="771"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="wordCount" content="661"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
 <meta itemprop="keywords" content="推荐," />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -229,23 +229,23 @@
   <h1 id="前言">前言</h1>
 <hr>
 <p>前几天吃午饭的时候，突然想到一件事情，就是关于博客备份的事情。
-之前为了对高数 18 讲进行全部重新 CDN 加速，一直用的都是 notion 自带的导出为 markdown 的功能，但是如果数据一多，速度就很慢，而且一个一个导出很费时间。
-昨天晚上和今天尝试并使用了 elog，实现了 notion 文章自动批量下载到本地，并根据自定义的数据库属性进行合适的归档。
+之前为了对高数18讲进行全部重新CDN加速，一直用的都是notion自带的导出为markdown的功能，但是如果数据一多，速度就很慢，而且一个一个导出很费时间。
+昨天晚上和今天尝试并使用了elog，实现了notion文章自动批量下载到本地，并根据自定义的数据库属性进行合适的归档。
 首先非常感谢这个想法的启蒙博主：某中二的黑科技研究中心
-文章标题及链接：<a href="https://darkreunion.tech/article/backup-notion-to-github?giscus=5b1855710a9073bbb30d3264lzzxL%2FY5boFMZEtzfT2uvrsTkpO815dTCl%2BcFCsI%2FwZTnmkVo1SjQB2CllPRsX9pkEFoeAZ77J%2FviSyilYpOqYYX%2FGm9rbQWTk0T8J0bqUaJf4Q%2BJl9YANenxts%3D"> </a><a href="https://darkreunion.tech/article/backup-notion-to-github?giscus=5b1855710a9073bbb30d3264lzzxL%2FY5boFMZEtzfT2uvrsTkpO815dTCl%2BcFCsI%2FwZTnmkVo1SjQB2CllPRsX9pkEFoeAZ77J%2FviSyilYpOqYYX%2FGm9rbQWTk0T8J0bqUaJf4Q%2BJl9YANenxts%3D"><strong>备份 Notion 文档到 Github</strong></a></p>
+文章标题及链接：<a href="https://darkreunion.tech/article/backup-notion-to-github?giscus=5b1855710a9073bbb30d3264lzzxL%2FY5boFMZEtzfT2uvrsTkpO815dTCl%2BcFCsI%2FwZTnmkVo1SjQB2CllPRsX9pkEFoeAZ77J%2FviSyilYpOqYYX%2FGm9rbQWTk0T8J0bqUaJf4Q%2BJl9YANenxts%3D">  </a><a href="https://darkreunion.tech/article/backup-notion-to-github?giscus=5b1855710a9073bbb30d3264lzzxL%2FY5boFMZEtzfT2uvrsTkpO815dTCl%2BcFCsI%2FwZTnmkVo1SjQB2CllPRsX9pkEFoeAZ77J%2FviSyilYpOqYYX%2FGm9rbQWTk0T8J0bqUaJf4Q%2BJl9YANenxts%3D"><strong>备份 Notion 文档到 Github</strong></a></p>
 <h1 id="正文">正文</h1>
 <hr>
 <p>实践的过程并不顺利，甚至还有些小艰难，作为纯技术小白，以下记录我的一些踩坑经历。</p>
 <p>首先从阅读<a href="https://elog.1874.cool/">技术文档</a>开始。</p>
 <h2 id="一备份文件夹及环境配置">一、备份文件夹及环境配置</h2>
 <hr>
-<p>导航到技术文档的<a href="https://elog.1874.cool/notion/start">快速开始</a>，使用 vscode 创建备份文件夹并开始环境配置。</p>
-<p>⚠️ 请注意环境需要正确安装，理论上安装环境的时间在 2-3 分钟左右。</p>
+<p>导航到技术文档的<a href="https://elog.1874.cool/notion/start">快速开始</a>，使用vscode创建备份文件夹并开始环境配置。</p>
+<p>⚠️请注意环境需要正确安装，理论上安装环境的时间在2-3分钟左右。</p>
 <p>然后对项目进行初始化配置，生成<code>elog.config.js</code>以及<code>.elog.env</code>两个文件，接下来就是进入<a href="https://elog.1874.cool/notion/fe8ywmt999gon12w">配置详情</a>，配置相应的参数。
-  ⚠️ 请注意，将您的.elog.env 文件列入 git 的忽略跟踪</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>使用`.gitignore` 文件：创建一个名为 <span style="color:#e6db74">`.gitignore`</span> 的文件，并在其中列出你想要隐藏的文件或文件夹的名称。在这个文件中，你可以使用通配符或模式来指定要忽略的文件类型或文件夹。当你将 <span style="color:#e6db74">`.gitignore`</span> 文件提交到 GitHub 仓库时，Git 将忽略这些文件，不会将它们包含在版本控制中。
+  ⚠️请注意，将您的.elog.env文件列入git的忽略跟踪</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>  使用`.gitignore` 文件：创建一个名为 <span style="color:#e6db74">`.gitignore`</span> 的文件，并在其中列出你想要隐藏的文件或文件夹的名称。在这个文件中，你可以使用通配符或模式来指定要忽略的文件类型或文件夹。当你将 <span style="color:#e6db74">`.gitignore`</span> 文件提交到 GitHub 仓库时，Git 将忽略这些文件，不会将它们包含在版本控制中。
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>请注意，`.gitignore` 文件只能隐藏未被跟踪的文件。如果某个文件已经被 Git 跟踪并提交到仓库中，那么即使你在 <span style="color:#e6db74">`.gitignore`</span> 文件中将其列为忽略项，它仍然会在仓库中可见。（解决该问题请导航到结尾彩蛋部分）
+</span></span><span style="display:flex;"><span>  请注意，`.gitignore` 文件只能隐藏未被跟踪的文件。如果某个文件已经被 Git 跟踪并提交到仓库中，那么即使你在 <span style="color:#e6db74">`.gitignore`</span> 文件中将其列为忽略项，它仍然会在仓库中可见。（解决该问题请导航到结尾彩蛋部分）
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e">## 下面是一个示例 `.gitignore` 文件的内容：</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 忽略所有 .txt 文件</span>
@@ -258,22 +258,22 @@
 </span></span><span style="display:flex;"><span>secret.txt
 </span></span></code></pre></div><h2 id="二正确进行参数配置">二、正确进行参数配置</h2>
 <hr>
-<p>我希望对 notion 的数据库的文章进行批量导出，那么在配置<code>elog.config.js</code>就需要注意平台的选择。</p>
+<p>我希望对notion的数据库的文章进行批量导出，那么在配置<code>elog.config.js</code>就需要注意平台的选择。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">write</span><span style="color:#f92672">:</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">platform</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;notion&#34;</span>, <span style="color:#75715e">//注意平台的选择
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  },
 </span></span><span style="display:flex;"><span>};
-</span></span></code></pre></div><p>⚠️ 在最开始的时候，我忽视了平台的选择，导致报错：<code>未知的写作平台</code></p>
-<p>然后是 notion 相关的配置，首先要关注自己的数据库的属性。
+</span></span></code></pre></div><p>⚠️在最开始的时候，我忽视了平台的选择，导致报错：<code>未知的写作平台</code></p>
+<p>然后是notion相关的配置，首先要关注自己的数据库的属性。
 作者大大也提供了数据库的模板，可以参考<a href="https://elog.1874.cool/notion/gvnxobqogetukays#notion">配置流程</a>。</p>
-<p>我采用的数据库是 notionnext 的数据库格式，并且 elog 也支持自定义数据库的字段。</p>
+<p>我采用的数据库是notionnext的数据库格式，并且elog也支持自定义数据库的字段。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">//这是默认的配置
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">notion</span><span style="color:#f92672">:</span> {
 </span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">token</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">NOTION_TOKEN</span>,
 </span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">databaseId</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">NOTION_DATABASE_ID</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">filter</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">sorts</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">filter</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>, 
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">sorts</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>, 
 </span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">catalog</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
 </span></span><span style="display:flex;"><span>    },
 </span></span><span style="display:flex;"><span>
@@ -286,8 +286,8 @@
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">select</span><span style="color:#f92672">:</span> {
 </span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">equals</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Post&#39;</span>
 </span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>      },
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">sorts</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>      }, 
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">sorts</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>, 
 </span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">catalog</span><span style="color:#f92672">:</span> {
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">enable</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">property</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;tags&#34;</span>,
@@ -306,35 +306,35 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#a6e22e">formatExt</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>,
 </span></span><span style="display:flex;"><span>    },
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//一定要记得勾选部署时候到目录选项
-</span></span></span></code></pre></div><p><img src="https://bu.dusays.com/2023/10/11/65269d1bd607c.png" alt=""></p>
-<p><img src="https://bu.dusays.com/2023/10/11/65269d8c5bdd1.png" alt=""></p>
+</span></span></span></code></pre></div><p><img src="https://bu.dusays.com/2023/10/11/65269d1bd607c.png" alt="65269d1bd607c.png"></p>
+<p><img src="https://bu.dusays.com/2023/10/11/65269d8c5bdd1.png" alt="65269d8c5bdd1.png"></p>
 <p>如果要做针对自己数据库的属性更改，请参照<a href="https://developers.notion.com/reference/post-database-query-filter"><strong>Notion API 文档 - Filter database entries</strong></a><strong>。</strong></p>
-<p>接下来就是正确获取 notion 的 Integration Token 和 DatabaseId，按照<a href="https://elog.1874.cool/notion/gvnxobqogetukays#notion">配置流程</a>走就可以。</p>
-<p><img src="https://bu.dusays.com/2023/10/11/65269eb157ccb.png" alt=""></p>
-<p><img src="https://bu.dusays.com/2023/10/11/65269ec15fd7e.png" alt=""></p>
+<p>接下来就是正确获取notion的Integration Token和DatabaseId，按照<a href="https://elog.1874.cool/notion/gvnxobqogetukays#notion">配置流程</a>走就可以。</p>
+<p><img src="https://bu.dusays.com/2023/10/11/65269eb157ccb.png" alt="65269eb157ccb.png"></p>
+<p><img src="https://bu.dusays.com/2023/10/11/65269ec15fd7e.png" alt="65269ec15fd7e.png"></p>
 <h2 id="三合适的网络条件">三、合适的网络条件</h2>
 <hr>
-<p>在正确配置 notion 的集成和 id 之后，可以开始执行</p>
+<p>在正确配置notion的集成和id之后，可以开始执行</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>elog sync -e .elog.env
-</span></span></code></pre></div><p>⚠️ 注意，由于 notion api 的延时问题，校园网条件下，notion api 会经常超时，所以推荐使用手机流量。
+</span></span></code></pre></div><p>⚠️注意，由于notion api的延时问题，校园网条件下，notion api会经常超时，所以推荐使用手机流量。
 如果一切顺利，那么您将可以看到文章被正常输入到本地目录。</p>
 <h2 id="四进阶操作自动备份">四、进阶操作，自动备份</h2>
 <hr>
 <p>阅读技术文档<a href="https://elog.1874.cool/notion/vy55q9xwlqlsfrvk">持续集成</a></p>
-<p>notion 的自动化流程有一定的起手难度。</p>
+<p>notion的自动化流程有一定的起手难度。</p>
 <h3 id="原理介绍">原理介绍</h3>
 <hr>
-<p>通过 slack 捕捉 notion 数据库字段的变化，比如“status”从“Draft”变为“Published”，那么就可以推送到 slack 的频道中，然后开始触发 pipedream，调用 github actions 的 api 进行部署。</p>
-<h3 id="关联-slacknotion">关联 slack+notion</h3>
+<p>通过slack捕捉notion数据库字段的变化，比如“status”从“Draft”变为“Published”，那么就可以推送到slack的频道中，然后开始触发pipedream，调用github actions的api进行部署。</p>
+<h3 id="关联slacknotion">关联slack+notion</h3>
 <hr>
-<p>首先，需要进行 slack 注册，授权给 notion 进行关联。</p>
-<p><img src="https://bu.dusays.com/2023/10/11/6526a1e54f8c2.png" alt=""></p>
-<p><img src="https://bu.dusays.com/2023/10/11/6526a1f09a7e6.png" alt=""></p>
-<h3 id="pipedream-配置">pipedream 配置</h3>
+<p>首先，需要进行slack注册，授权给notion进行关联。</p>
+<p><img src="https://bu.dusays.com/2023/10/11/6526a1e54f8c2.png" alt="6526a1e54f8c2.png"></p>
+<p><img src="https://bu.dusays.com/2023/10/11/6526a1f09a7e6.png" alt="6526a1f09a7e6.png"></p>
+<h3 id="pipedream配置">pipedream配置</h3>
 <hr>
-<p>如果一切顺利，那么接下来进入 pipedream 的部署，将 slack 与 pipedream 进行关联，最困难的是如何配置 https 请求。</p>
-<p><img src="https://bu.dusays.com/2023/10/11/6526a771a80be.png" alt=""></p>
-<p>在这里我要特别感谢 DC&rsquo;s 博主，他的文章给了我启发 ：<a href="https://aaqq.cc/article/24c2897b-78f3-4f6a-b8e6-292ea60edf7c"> 定期备份 notion</a></p>
+<p>如果一切顺利，那么接下来进入pipedream的部署，将slack与pipedream进行关联，最困难的是如何配置https请求。</p>
+<p><img src="https://bu.dusays.com/2023/10/11/6526a771a80be.png" alt="6526a771a80be.png"></p>
+<p>在这里我要特别感谢DC&rsquo;s博主，他的文章给了我启发 ：<a href="https://aaqq.cc/article/24c2897b-78f3-4f6a-b8e6-292ea60edf7c"> 定期备份notion</a></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//serverless-api-elog.vercel.app/api/github?user=xxx&amp;repo=xxx&amp;event_type=xxx&amp;token=xxx
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">//注意将xxx替换为自己的数据
 </span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//serverless-api-elog.vercel.app/api/github?user=cyolc932&amp;repo=elog&amp;event_type=deploy&amp;token=xxx
@@ -343,12 +343,12 @@
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">repo</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">Github仓库名</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">token</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">Github</span> <span style="color:#a6e22e">Token</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">event_type</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">配置在</span> <span style="color:#a6e22e">Github</span> <span style="color:#a6e22e">workflows</span> <span style="color:#a6e22e">中的repository_dispatch</span>.<span style="color:#a6e22e">types的值</span>
-</span></span></code></pre></div><p>同时参考 1874 博主的<a href="https://github.com/LetTTGACO/serverless-api">文档</a>，正确配置该请求。</p>
-<p>在这个步骤中，您还要获取<a href="https://github.com/settings/tokens/">GitHub 的 token</a></p>
-<p>如果这一步正确，并且 serverless api 返回<code>sussess！</code>，那么恭喜你，已经成功了一半了。</p>
+</span></span></code></pre></div><p>同时参考1874博主的<a href="https://github.com/LetTTGACO/serverless-api">文档</a>，正确配置该请求。</p>
+<p>在这个步骤中，您还要获取<a href="https://github.com/settings/tokens/">GitHub的token</a></p>
+<p>如果这一步正确，并且serverless api返回<code>sussess！</code>，那么恭喜你，已经成功了一半了。</p>
 <h3 id="安装打包环境">安装打包环境</h3>
 <hr>
-<p>接下来让我们回到 vscode 的文件夹，进行打包环境的安装</p>
+<p>接下来让我们回到vscode的文件夹，进行打包环境的安装</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>yarn add @elog/cli
 </span></span></code></pre></div><p>在<code>package.json</code>加上如下脚本</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
@@ -357,68 +357,67 @@
 </span></span><span style="display:flex;"><span>  },
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//以下为添加的脚本
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#e6db74">&#34;scripts&#34;</span><span style="color:#f92672">:</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;build&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;yarn&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;build&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;yarn&#34;</span>, 
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;elog:init&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;elog init&#34;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;sync:local&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;elog sync -e .elog.env&#34;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;sync&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;elog sync&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;sync:local&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;elog sync -e .elog.env&#34;</span>, 
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;sync&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;elog sync&#34;</span>, 
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;clean&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;elog clean&#34;</span>
 </span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="调试-github-自动化脚本">调试 github 自动化脚本</h3>
+</span></span></code></pre></div><h3 id="调试github自动化脚本">调试github自动化脚本</h3>
 <hr>
-<p>接下来到了困难的阶段，配置 GitHub 的 actions，首先配置环境变量，主要是 notion 的 token 和 id，填入在第二步获得的参数。</p>
+<p>接下来到了困难的阶段，配置GitHub的actions，首先配置环境变量，主要是notion的token和id，填入在第二步获得的参数。</p>
 <p>路径如下：<code>设置-Secrets and variables-Actions-Secrets</code></p>
-<p><img src="https://bu.dusays.com/2023/10/12/65274e6154488.png" alt=""></p>
-<p>接下来创建 GitHub 的工作流：<code>.github/workflows/main.yaml</code></p>
-<p>最主要的是这一步，配置完成之后，在 vscode 拉取仓库内容，进行本地和远程的同步。</p>
+<p><img src="https://bu.dusays.com/2023/10/12/65274e6154488.png" alt="65274e6154488.png"></p>
+<p>接下来创建GitHub的工作流：<code>.github/workflows/main.yaml</code></p>
+<p>最主要的是这一步，配置完成之后，在vscode拉取仓库内容，进行本地和远程的同步。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">配置Git用户名邮箱</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          git config --global user.name &#34;xxxx&#34;
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          git config --global user.email &#34;xxxx&#34;</span>          
-</span></span></code></pre></div><p>⚠️ 请注意，接下来不要随意在本地和远程双向修改，不然会导致冲突。</p>
-<h3 id="放开-actions-的写入权限">放开 actions 的写入权限</h3>
+</span></span></code></pre></div><p>⚠️请注意，接下来不要随意在本地和远程双向修改，不然会导致冲突。</p>
+<h3 id="放开actions的写入权限">放开actions的写入权限</h3>
 <hr>
-<p>⚠️ 同时注意放开 actions 的写入权限，在该仓库的设置，工作流里找到该选项。</p>
-<p><img src="https://bu.dusays.com/2023/10/12/65274f9c74f51.png" alt=""></p>
+<p>⚠️同时注意放开actions的写入权限，在该仓库的设置，工作流里找到该选项。</p>
+<p><img src="https://bu.dusays.com/2023/10/12/65274f9c74f51.png" alt="65274f9c74f51.png"></p>
 <h3 id="脚本触发">脚本触发</h3>
 <hr>
-<p>如果一切顺利，当您在 notion 中将文章的状态变为“Published”时候，将会自动触发工作流，进行备份，如果遇到错误，请排查工作流的报错信息。</p>
-<p><img src="https://bu.dusays.com/2023/10/11/6526a765b9ded.png" alt=""></p>
+<p>如果一切顺利，当您在notion中将文章的状态变为“Published”时候，将会自动触发工作流，进行备份，如果遇到错误，请排查工作流的报错信息。</p>
+<p><img src="https://bu.dusays.com/2023/10/11/6526a765b9ded.png" alt="6526a765b9ded.png"></p>
 <p>最后当您二次修改文章之后再次触发，文章会进行增量更新。</p>
 <h1 id="总结">总结</h1>
 <hr>
-<p>elog 的项目非常具有实践价值，通过该项目，不仅可以实现博客文档的整洁有序自动化的归档，而且可以兼容多平台，实现数据的自由迁移。</p>
+<p>elog的项目非常具有实践价值，通过该项目，不仅可以实现博客文档的整洁有序自动化的归档，而且可以兼容多平台，实现数据的自由迁移。</p>
 <p>在我遇到困难的时候，离不开群主和群友的耐心解答和帮助！</p>
 <blockquote>
 <p>💡 <strong>特别鸣谢：<br>
-🌺</strong> <a href="https://github.com/LetTTGACO/elog">1874 博主的 elog 项目及其技术文档</a><br>
+🌺</strong>  <a href="https://github.com/LetTTGACO/elog">1874博主的elog项目及其技术文档</a><br>
 🌺 <a href="https://bu.dusays.com/2023/10/12/6527510b65304.png">在自行实践遇到困难和解决的宝贵经历</a><br>
-🌺 <a href="https://www.bmqy.net/2651.html#more">北门清燕</a>、<a href="https://aaqq.cc/article/24c2897b-78f3-4f6a-b8e6-292ea60edf7c">DC&rsquo;s</a>、<a href="https://www.imql.life/2023/08/12/Writing_on_The_Cloud_With_YuQue/">IMQL.LIFE</a>等群友的最佳实践文档</p>
+🌺  <a href="https://www.bmqy.net/2651.html#more">北门清燕</a>、<a href="https://aaqq.cc/article/24c2897b-78f3-4f6a-b8e6-292ea60edf7c">DC&rsquo;s</a>、<a href="https://www.imql.life/2023/08/12/Writing_on_The_Cloud_With_YuQue/">IMQL.LIFE</a>等群友的最佳实践文档</p>
 </blockquote>
 <h3 id="小彩蛋">小彩蛋</h3>
 <hr>
 <!-- raw HTML omitted -->
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>Slack 是一种团队协作工具，旨在改善团队内部沟通和协作的效率。它提供了实时聊天、文件共享、通知和集成等功能，使团队成员能够更轻松地进行交流和合作。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>Slack是一种团队协作工具，旨在改善团队内部沟通和协作的效率。它提供了实时聊天、文件共享、通知和集成等功能，使团队成员能够更轻松地进行交流和合作。
 </span></span><span style="display:flex;"><span>以下是一些 Slack 的主要特点和功能：
-</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 实时聊天：Slack 提供了实时聊天功能，团队成员可以通过文本消息、表情符号、贴图等方式进行即时交流。你可以创建不同的频道（channels）来组织讨论，例如项目频道、团队频道等。
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 文件共享：你可以在 Slack 上轻松共享文件，包括文档、图片、音频和视频等。这样团队成员可以方便地查看、评论和编辑这些文件。
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> 通知和提醒：Slack 可以发送通知和提醒，包括新消息、提及你的消息、任务截止日期等。你可以通过设置来控制接收哪些通知，以确保你能及时获取重要信息。
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">4.</span> 集成和应用程序：Slack 支持与其他工具和应用程序的集成，例如 Google Drive、GitHub、Jira 等。这样你可以在 Slack 中直接访问和操作这些工具，提高工作效率。
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">5.</span> 搜索和存档：Slack 有强大的搜索功能，你可以轻松找到之前的消息、文件和链接等。此外，Slack 还会自动存档你的聊天记录，方便你随时回顾和查找。
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">6.</span> 多设备支持：你可以在电脑、手机和平板电脑等不同设备上使用 Slack，并且它们之间的聊天同步。
-</span></span><span style="display:flex;"><span>   总的来说，Slack 是一个强大的团队协作工具，可以帮助团队成员更好地沟通、协作和组织工作。它已经成为许多组织和公司的首选工具之一，无论是小型团队还是大型企业都可以受益于它的功能和便利性。
+</span></span><span style="display:flex;"><span>  总的来说，Slack 是一个强大的团队协作工具，可以帮助团队成员更好地沟通、协作和组织工作。它已经成为许多组织和公司的首选工具之一，无论是小型团队还是大型企业都可以受益于它的功能和便利性。
 </span></span></code></pre></div><!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>使用 github action 时报错 Run ad-m/github-push-action@master
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>  使用github action时报错Run ad-m/github-push-action@master
 </span></span><span style="display:flex;"><span>Push to branch main
 </span></span><span style="display:flex;"><span>remote: Write access to repository not granted.
 </span></span><span style="display:flex;"><span>fatal: unable to access &#39;[https://github.com/happyzhangyyds/elog.git/](https://github.com/happyzhangyyds/elog.git/)&#39;: The requested URL returned error: 403
 </span></span><span style="display:flex;"><span>Error: Invalid exit code: 128
-</span></span><span style="display:flex;"><span>at ChildProcess.&lt;<span style="color:#f92672">anonymous</span>&gt; (/home/runner/work/\_actions/ad-m/github-push-action/master/start.js:30:21)
+</span></span><span style="display:flex;"><span>at ChildProcess.&lt;<span style="color:#f92672">anonymous</span>&gt; (/home/runner/work/_actions/ad-m/github-push-action/master/start.js:30:21)
 </span></span><span style="display:flex;"><span>at ChildProcess.emit (node:events:514:28)
 </span></span><span style="display:flex;"><span>at maybeClose (node:internal/child_process:1105:16)
-</span></span><span style="display:flex;"><span>at ChildProcess.\_handle.onexit (node:internal/child_process:305:5) {
+</span></span><span style="display:flex;"><span>at ChildProcess._handle.onexit (node:internal/child_process:305:5) {
 </span></span><span style="display:flex;"><span>code: 128
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>这个错误表明您在尝试使用 GitHub Actions 运行 ad-m/github-push-action@master 时遇到了权限问题。具体来说，错误消息中提到您对存储库的写访问权限不足。
 </span></span><span style="display:flex;"><span>要解决这个问题，您可以执行以下步骤：
@@ -437,7 +436,7 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>fatal: protocol error: bad line length character: erro
 </span></span><span style="display:flex;"><span>To https://github.com/happyzhangyyds/elog.git
-</span></span><span style="display:flex;"><span>! [rejected] HEAD -&gt; main (fetch first)
+</span></span><span style="display:flex;"><span> ! [rejected]        HEAD -&gt; main (fetch first)
 </span></span><span style="display:flex;"><span>error: failed to push some refs to &#39;https://github.com/happyzhangyyds/elog.git&#39;
 </span></span><span style="display:flex;"><span>hint: Updates were rejected because the remote contains work that you do not
 </span></span><span style="display:flex;"><span>hint: have locally. This is usually caused by another repository pushing to
@@ -445,11 +444,11 @@
 </span></span><span style="display:flex;"><span>hint: &#39;git pull&#39; before pushing again.
 </span></span><span style="display:flex;"><span>hint: See the &#39;Note about fast-forwards&#39; in &#39;git push --help&#39; for details.
 </span></span><span style="display:flex;"><span>Error: Invalid exit code: 1
-</span></span><span style="display:flex;"><span>at ChildProcess.&lt;<span style="color:#f92672">anonymous</span>&gt; (/home/runner/work/\_actions/ad-m/github-push-action/master/start.js:30:21)
-</span></span><span style="display:flex;"><span>at ChildProcess.emit (node:events:514:28)
-</span></span><span style="display:flex;"><span>at maybeClose (node:internal/child_process:1105:16)
-</span></span><span style="display:flex;"><span>at ChildProcess.\_handle.onexit (node:internal/child_process:305:5) {
-</span></span><span style="display:flex;"><span>code: 1
+</span></span><span style="display:flex;"><span>    at ChildProcess.&lt;<span style="color:#f92672">anonymous</span>&gt; (/home/runner/work/_actions/ad-m/github-push-action/master/start.js:30:21)
+</span></span><span style="display:flex;"><span>    at ChildProcess.emit (node:events:514:28)
+</span></span><span style="display:flex;"><span>    at maybeClose (node:internal/child_process:1105:16)
+</span></span><span style="display:flex;"><span>    at ChildProcess._handle.onexit (node:internal/child_process:305:5) {
+</span></span><span style="display:flex;"><span>  code: 1
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>这个错误表明在尝试使用 GitHub Actions 运行 <span style="color:#e6db74">`ad-m/github-push-action@master`</span> 时遇到了推送失败的问题。根据错误消息，推送失败的原因可能是由于远程存储库包含了您本地没有的提交，导致冲突。
 </span></span><span style="display:flex;"><span>
@@ -459,7 +458,6 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>   ```bash
 </span></span><span style="display:flex;"><span>   git pull origin main
-</span></span><span style="display:flex;"><span>   ```
 </span></span></code></pre></div><ol start="2">
 <li>
 <p>在合并远程更改后，解决可能的冲突。如果存在冲突，您需要手动解决它们以确保代码的一致性。</p>
@@ -502,13 +500,10 @@
 <p>如果问题仍然存在，请提供更多的上下文信息，例如您的工作流文件、代码片段或其他相关细节，以便我能够更好地帮助您解决问题。</p>
 <pre tabindex="0"><code>
 
-
-  &lt;/details&gt;
-
+&lt;/details&gt;
 
 &lt;details&gt;
-  &lt;summary&gt;解决环境变量可见性问题&lt;/summary&gt;
-
+&lt;summary&gt;解决环境变量可见性问题&lt;/summary&gt;
 
 ```markdown
 如果某个文件已经被 Git 跟踪并提交到仓库中，即使你在 `.gitignore` 文件中将其列为忽略项，它仍然会在仓库中可见。要解决这个问题，你需要执行以下步骤：
@@ -529,13 +524,10 @@ git commit -m &#34;Remove and ignore the specified file&#34;
 <p>请注意，这些步骤仅会将文件从 Git 仓库中删除，并阻止将来的提交。如果你希望完全从仓库中删除文件的所有痕迹，你可能需要执行其他操作，如修改 Git 的历史记录。这种情况下，建议谨慎操作，并在进行任何重要操作之前备份你的仓库。</p>
 <pre tabindex="0"><code>
 
-
-  &lt;/details&gt;
-
+&lt;/details&gt;
 
 &lt;details&gt;
-  &lt;summary&gt;如何删除git的历史痕迹&lt;/summary&gt;
-
+&lt;summary&gt;如何删除git的历史痕迹&lt;/summary&gt;
 
 ```markdown
 要删除 Git 仓库中的文件的所有痕迹，包括历史记录和提交信息，可以按照以下步骤进行操作：

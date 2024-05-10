@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright © 2024, MatrixCore</copyright>
-    <lastBuildDate>Sun, 21 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[毕业设计] Yolov5多光谱解决方案探索</title>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/yolov5_multispectral/</link>
+      <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/yolov5_multispectral/</guid>
+      <description>通过多光谱可以通过对其他光谱的图像特征进行捕捉，从而提高在不同环境下的识别性能，如果单纯训练可见光，也许在夜晚环境下的模型的表现就会变差，而通过其他光谱就可以获得稳定的目标特征，从而实现模型更好地的环境适应性。</description>
+    </item>
+    
+    <item>
+      <title>[精简指令] 走近RISC-V</title>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/risc-v/</link>
+      <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/risc-v/</guid>
+      <description>这是一篇很仓促的文章，但与其说其非常不成熟，我更愿意视其为一个起点，因为目前所从事的岗位也是在和各种硬件打交道，所以我还是希望能对此保持长久的热情，去做自己喜欢的事情。</description>
+    </item>
+    
     <item>
       <title>[文献管理]  Nextcloud_Webdav的Zotero同步方案</title>
       <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/nextcloud_webdav-zotero/</link>
@@ -42,6 +60,15 @@
       
       <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/crontab-1/</guid>
       <description>为obsidian建立数据中心，使用vps定时同步到onedrive</description>
+    </item>
+    
+    <item>
+      <title>[文件管理] NextCloud为Obsidian保驾护航</title>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/nextcloud-obsidian/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/nextcloud-obsidian/</guid>
+      <description>obsidian与notion珠联璧合，nextcloud为obsidian保驾护航。</description>
     </item>
     
     <item>

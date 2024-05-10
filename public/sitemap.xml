@@ -2,16 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/nextcloud_webdav-zotero/</loc>
-    <lastmod>2024-04-21T00:00:00+00:00</lastmod>
+    <loc>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/yolov5_multispectral/</loc>
+    <lastmod>2024-04-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/risc-v/</loc>
+    <lastmod>2024-04-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hugo.matrixcore.life/blog/</loc>
-    <lastmod>2024-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2024-04-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hugo.matrixcore.life/</loc>
-    <lastmod>2024-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2024-04-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2024-04-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/nextcloud_webdav-zotero/</loc>
     <lastmod>2024-04-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hugo.matrixcore.life/blog/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/spring/</loc>
@@ -92,6 +98,9 @@
     <loc>https://hugo.matrixcore.life/blog/cadence/emc/</loc>
     <lastmod>2023-12-21T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/nextcloud-obsidian/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://hugo.matrixcore.life/blog/cadence/cadence1/</loc>
     <lastmod>2023-12-18T00:00:00+00:00</lastmod>
   </url><url>
@@ -104,7 +113,13 @@
     <loc>https://hugo.matrixcore.life/blog/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231210/</loc>
     <lastmod>2023-12-10T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://hugo.matrixcore.life/blog/%E6%B0%B4%E9%97%AE-%E7%AE%80%E5%AB%83/jianzhen-5/</loc>
+    <lastmod>2023-12-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://hugo.matrixcore.life/blog/%E7%AE%80%E5%AB%83/jianzhen-5/</loc>
+    <lastmod>2023-12-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hugo.matrixcore.life/blog/%E6%B0%B4%E9%97%AE-%E7%AE%80%E5%AB%83/</loc>
     <lastmod>2023-12-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hugo.matrixcore.life/blog/%E7%AE%80%E5%AB%83/</loc>
@@ -116,11 +131,11 @@
     <loc>https://hugo.matrixcore.life/blog/%E6%B0%B4%E9%97%AE-%E7%AE%80%E5%AB%83/jianzhen-4/</loc>
     <lastmod>2023-12-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hugo.matrixcore.life/blog/%E6%B0%B4%E9%97%AE-%E7%AE%80%E5%AB%83/</loc>
-    <lastmod>2023-12-07T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://hugo.matrixcore.life/blog/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231205/</loc>
     <lastmod>2023-12-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hugo.matrixcore.life/blog/%E6%B0%B4%E9%97%AE-%E7%AE%80%E5%AB%83/jianzhen-3/</loc>
+    <lastmod>2023-11-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hugo.matrixcore.life/blog/%E6%B0%B4%E9%97%AE-%E7%AE%80%E5%AB%83/jianzhen-3/</loc>
     <lastmod>2023-11-28T00:00:00+00:00</lastmod>
@@ -129,6 +144,12 @@
     <lastmod>2023-11-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hugo.matrixcore.life/blog/%E6%B0%B4%E9%97%AE-%E7%AE%80%E5%AB%83/jianzhen-2/</loc>
+    <lastmod>2023-11-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hugo.matrixcore.life/blog/%E6%B0%B4%E9%97%AE-%E7%AE%80%E5%AB%83/jianzhen-2/</loc>
+    <lastmod>2023-11-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hugo.matrixcore.life/blog/%E6%B0%B4%E9%97%AE-%E7%AE%80%E5%AB%83/jianzhen-1/</loc>
     <lastmod>2023-11-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hugo.matrixcore.life/blog/%E6%B0%B4%E9%97%AE-%E7%AE%80%E5%AB%83/jianzhen-1/</loc>
@@ -519,6 +540,9 @@
     <lastmod>2023-06-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hugo.matrixcore.life/blog/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/love/</loc>
+    <lastmod>2023-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hugo.matrixcore.life/blog/%E5%BF%85%E7%9C%8B%E7%B2%BE%E9%80%89/learn/</loc>
     <lastmod>2023-06-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hugo.matrixcore.life/blog/%E6%8E%A8%E8%8D%90/%E5%BF%85%E7%9C%8B%E7%B2%BE%E9%80%89/learn/</loc>

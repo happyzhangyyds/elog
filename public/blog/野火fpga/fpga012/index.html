@@ -32,7 +32,7 @@
 <meta itemprop="name" content="[野火] 第12章  简单组合逻辑 --- 半加器">
 <meta itemprop="description" content="用 Verilog 语言描述一个具有半加器功能的电路"><meta itemprop="datePublished" content="2023-09-29T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-09-29T00:00:00+00:00" />
-<meta itemprop="wordCount" content="264"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="wordCount" content="259"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
 <meta itemprop="keywords" content="野火FPGA," />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -227,77 +227,77 @@
 
 <content>
   <blockquote>
-<p>💡 特别鸣谢野火 FPGA 的教学与帮助！<br>
-本节相关的<a href="https://www.bilibili.com/video/BV17z411i7er?p=9&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab">教程 link </a>📌</p>
+<p>💡 特别鸣谢野火FPGA的教学与帮助！<br>
+本节相关的<a href="https://www.bilibili.com/video/BV17z411i7er?p=9&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab">教程link </a>📌</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 第 12 章 简单组合逻辑 --- 半加器:
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 12.1 章节导读:
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 12.2 理论学习:
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 12.3 实战演练:
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">-</span> 12.3.1 实验目标:
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">-</span> 12.3.2 硬件资源:
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">-</span> 12.3.3 程序设计:
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">-</span> 1. 模块框图:
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">-</span> 2. 波形图绘制:
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">-</span> 3. 代码编写:
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">-</span> 4. 仿真验证:
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">-</span> 仿真文件编写:
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">-</span> 仿真波形分析:
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">-</span> 12.3.4 上板验证:
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">-</span> 1. 引脚约束:
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">-</span> 2. 结果验证:
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">-</span> 12.4 章末总结:
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">-</span> 12.5 拓展训练:
-</span></span></code></pre></div><h1 id="121-章节导读">12.1 章节导读</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">-</span>  第12章  简单组合逻辑 --- 半加器:
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">-</span>  12.1  章节导读:
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">-</span>  12.2  理论学习:
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">-</span>  12.3  实战演练:
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">-</span>  12.3.1  实验目标:
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">-</span>  12.3.2  硬件资源:
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">-</span>  12.3.3  程序设计:
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">-</span>  1. 模块框图:
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">-</span>  2. 波形图绘制:
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">-</span>  3. 代码编写:
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">-</span>  4. 仿真验证:
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">-</span>  仿真文件编写:
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">-</span>  仿真波形分析:
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">-</span>  12.3.4  上板验证:
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">-</span>  1. 引脚约束:
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">-</span>  2. 结果验证:
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">-</span>  12.4  章末总结:
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">-</span>  12.5  拓展训练:
+</span></span></code></pre></div><h1 id="121--章节导读">12.1  章节导读</h1>
 <hr>
 <p>本章我们用 Verilog 语言描述一个具有半加器功能的电路,我们先从半加器作为引开始讲起,并在下一章中通过半加器构成的全加器来引入层次化设计的方法。</p>
-<h1 id="122-理论学习">12.2 理论学习</h1>
+<h1 id="122--理论学习">12.2  理论学习</h1>
 <hr>
 <p>数字电路中加法器是经常用到的一种基本器件,主要用于两个数或者多个数的加和, 加法器又分为半加器(half adder)和全加器(full adder)。半加器电路是指对两个输入数据位相加,输出一个结果位和进位,没有进位输入的加法器电路。是实现两个一位二进制数的加法运算电路。而全加器是在半加器的基础上的升级版,除了加数和被加数加和外还要加上上一级传进来的进位信号。</p>
-<h1 id="123-实战演练">12.3 实战演练</h1>
+<h1 id="123--实战演练">12.3  实战演练</h1>
 <hr>
 <h2 id="1231-实验目标">12.3.1 实验目标</h2>
 <hr>
 <p>设计并实现一个半加器,使用开发板上的按键 KEY1、KEY2 作为被加数输入,选择开发板上的 LED 灯 D7 加和的输出,LED 灯 D8 进位输出。</p>
-<h2 id="1232-硬件资源">12.3.2 硬件资源</h2>
+<h2 id="1232--硬件资源">12.3.2  硬件资源</h2>
 <p>我们使用开发板上的按键和 LED 灯进行半加器的验证,选取 KEY1、KEY2 分别作为被加数 in1、被加数 in2 的信号输入;以 LED 灯 D7 为和的输出 sum,以 LED 灯 D8 为进位的输出 count;如图 12-1 所示。
 由原理图可知,征途 Mini 按键未按下时为高电平、按下后为低电平;LED 灯则为低电平点亮。</p>
-<p><img src="https://bu.dusays.com/2023/09/29/6516d2c1cd328.png" alt=""></p>
-<p><img src="https://bu.dusays.com/2023/09/29/6516d2c2bed6d.png" alt=""></p>
-<h2 id="1233-程序设计">12.3.3 程序设计</h2>
+<p><img src="https://bu.dusays.com/2023/09/29/6516d2c1cd328.png" alt="6516d2c1cd328.png"></p>
+<p><img src="https://bu.dusays.com/2023/09/29/6516d2c2bed6d.png" alt="6516d2c2bed6d.png"></p>
+<h2 id="1233--程序设计">12.3.3  程序设计</h2>
 <hr>
 <h3 id="1模块框图">1.<strong>模块框图</strong></h3>
 <hr>
 <p>该工程只需实现一个半加器的功能,所以设计成一个模块即可。模块命名 half_adder,半加器由两个 1bit 的加数,分别命名为 in1 和 in2,输出也有两个信号, 为什么会是两个呢?我们不要忘记两个数加和后除了求得的“和”以外会有“进位”的情况,这里我们把进位信号单独拉出来,所以输出就有两个信号,分别为 1bit 的 sum 和 cout 信号,该模块的功能是实现输入任意两个 1bit 加数的组合都能求得正确的和与进位值。</p>
-<p><img src="https://bu.dusays.com/2023/09/29/6516d2c397475.png" alt=""></p>
-<p><img src="https://bu.dusays.com/2023/09/29/6516d2c4882c1.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/29/6516d2c397475.png" alt="6516d2c397475.png"></p>
+<p><img src="https://bu.dusays.com/2023/09/29/6516d2c4882c1.png" alt="6516d2c4882c1.png"></p>
 <h3 id="2波形图绘制">2.<strong>波形图绘制</strong></h3>
 <hr>
 <p>经分析得,in1 和 in2 均为 1bit 输入信号,其任意组合有 4 种,就能够全覆盖验证所有的输入情况,这里我们任意画了 4 种输入情况,每种输入情况的组合根据相加的结果会对应输出 4 种求得的和与进位关系,我们根据这种关系可以轻松的列出如表格 12-2 所示的真值表,然后再根据真值表的输入与输出的对应关系画出波形图。</p>
-<p><img src="https://bu.dusays.com/2023/09/29/6516d2c56082d.png" alt=""></p>
-<p><img src="https://bu.dusays.com/2023/09/29/6516d2c6455f9.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/29/6516d2c56082d.png" alt="6516d2c56082d.png"></p>
+<p><img src="https://bu.dusays.com/2023/09/29/6516d2c6455f9.png" alt="6516d2c6455f9.png"></p>
 <h3 id="3代码编写">3.<strong>代码编写</strong></h3>
 <hr>
 <p>半加器参考代码如下所示。
 根据上面 RTL 代码综合出的 RTL 视图如图 12-6 所示,我们可以看到加法器被抽象为一个“ADDER”的基本单元。</p>
-<p><img src="https://bu.dusays.com/2023/09/29/6516d2c8cbca4.png" alt=""></p>
-<p><img src="https://bu.dusays.com/2023/09/29/6516d2c9aaf8f.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/29/6516d2c8cbca4.png" alt="6516d2c8cbca4.png"></p>
+<p><img src="https://bu.dusays.com/2023/09/29/6516d2c9aaf8f.png" alt="6516d2c9aaf8f.png"></p>
 <h3 id="4仿真验证">4.仿真验证</h3>
 <hr>
 <p><strong>仿真文件编写</strong></p>
 <p>半加器仿真参考代码如下所示。</p>
-<p><img src="https://bu.dusays.com/2023/09/29/6516d2ca80aa5.png" alt=""></p>
-<p><img src="https://bu.dusays.com/2023/09/29/6516d2cb68a76.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/29/6516d2ca80aa5.png" alt="6516d2ca80aa5.png"></p>
+<p><img src="https://bu.dusays.com/2023/09/29/6516d2cb68a76.png" alt="6516d2cb68a76.png"></p>
 <p><strong>仿真波形分析</strong></p>
 <p>Testbench 编写完成后,我们启动 ModelSim 进行功能仿真验证,同样我们也让波形跑了 500ns,通过图 12-7 所示的波形我们可以观察到,in1 和 in2 输入的值均为 1bit 随机数, 而与之对应的 sum 和 cout 都是在输入变化的同一时刻立即变化,我们仔细核对每一组输入和输出之间的对应关系,发现波形中的“+”计算结果都是正确的,完全符合我们代码中的逻辑设计。
 我们通过观察“Transcript”界面(如图 12-8 所示)中打印的结果发现与前面绘制真值表的结果一一对应,从而进一步验证了 RTL 代码设计的正确性。</p>
-<p><img src="https://bu.dusays.com/2023/09/29/6516d2cc58e9a.png" alt=""></p>
-<h2 id="1234-上板验证">12.3.4 上板验证</h2>
+<p><img src="https://bu.dusays.com/2023/09/29/6516d2cc58e9a.png" alt="6516d2cc58e9a.png"></p>
+<h2 id="1234--上板验证">12.3.4  上板验证</h2>
 <hr>
 <h3 id="1引脚约束">1.<strong>引脚约束</strong></h3>
 <hr>
 <p>仿真验证通过后,准备上板验证,上板验证之前先要进行引脚约束。</p>
-<p><img src="https://bu.dusays.com/2023/09/29/6516d2cea4ea9.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/29/6516d2cea4ea9.png" alt="6516d2cea4ea9.png"></p>
 <h3 id="2结果验证">2.<strong>结果验证</strong></h3>
 <hr>
 <p>开发板连接 5V 直流电源和 USB-Blaster 下载器 JTAG 端口。线路正确连接后,打开开关为板卡上电。</p>
@@ -305,11 +305,11 @@
 只按下按键 KEY1 或 KEY2,in1 或 in2 输出低电平,得到和 sum 为 1,进位 count 为 0, D8 被点亮。
 只按下按键 KEY1 或 KEY2,in1 或 in2 输出低电平,得到和 sum 为 1,进位 count 为 0, D8 被点亮。
 两按键均未按下,in1 和 in2 输出均为高电平,得到和 sum 为 0,进位 count 为 1,D7 被点亮。</p>
-<h1 id="124-章末总结">12.4 章末总结</h1>
+<h1 id="124--章末总结">12.4  章末总结</h1>
 <hr>
 <p>本章主要讲解了数字电路中进行加法运算的基本加法单元——加法器,而我们设计的是一个没有前级进位功能且加数只有 1bit 的半加器,主要目的是为了引出下一章中的全加器。本章例子中所使用的语法和设计方法流程基本和之前相同,希望学习者能够进一步巩固开发方法和基本开发流程,认真完成章末的思考题。</p>
-<p><img src="https://bu.dusays.com/2023/09/29/6516d2cf7a3a4.png" alt=""></p>
-<h1 id="125-拓展训练">12.5 拓展训练</h1>
+<p><img src="https://bu.dusays.com/2023/09/29/6516d2cf7a3a4.png" alt="6516d2cf7a3a4.png"></p>
+<h1 id="125--拓展训练">12.5  拓展训练</h1>
 <hr>
 <p>1、尝试用 always 语句块的方式实现半加器;</p>
 <p>2、我们在数电中往往通过真值表把组合逻辑化简成由与非门构成的最简电路形式,然后再根据表达式用 Verilog 语言实现。</p>

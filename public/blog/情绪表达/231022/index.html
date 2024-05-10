@@ -32,7 +32,7 @@
 <meta itemprop="name" content="[数据归档] 近期数据归档及体会">
 <meta itemprop="description" content="复盘以前的灵感和近期的一些打算"><meta itemprop="datePublished" content="2023-10-22T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-10-22T00:00:00+00:00" />
-<meta itemprop="wordCount" content="174"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="wordCount" content="132"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
 <meta itemprop="keywords" content="情绪表达," />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -232,7 +232,7 @@
 <h1 id="正文">正文</h1>
 <hr>
 <p>分类介绍</p>
-<h2 id="ssh-免密访问-ubuntu-服务器">ssh 免密访问 ubuntu 服务器</h2>
+<h2 id="ssh免密访问ubuntu服务器">ssh免密访问ubuntu服务器</h2>
 <hr>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 生成 SSH 密钥对：在本地计算机上打开终端，并运行以下命令生成 SSH 密钥对：
 </span></span></code></pre></div><p>ssh-keygen -t rsa</p>
@@ -252,12 +252,12 @@
 请确保在服务器上的 `~/.ssh` 目录和 `~/.ssh/authorized_keys` 文件的权限设置正确。目录权限应为 `700`，文件权限应为 `600`。
 
 这样，你就可以通过 SSH 公钥身份验证在本地连接到 Ubuntu 服务器，而无需每次输入密码。
-</code></pre><h2 id="docker-和-docker-compose-的区别是什么">docker 和 docker compose 的区别是什么</h2>
+</code></pre><h2 id="docker-和docker-compose的区别是什么">docker 和docker compose的区别是什么</h2>
 <hr>
-<p>Docker 和 Docker Compose 是两个相关但不同的工具，用于容器化应用程序的部署和管理。</p>
-<p>Docker 是一种开源平台，用于构建、打包和运行应用程序的容器。它允许开发人员将应用程序及其依赖项打包到一个独立的、可移植的容器中，然后在任何支持 Docker 的环境中运行。Docker 提供了一个容器运行时环境，可以在不同的操作系统和硬件平台上实现应用程序的一致性和可移植性。</p>
-<p>Docker Compose 是一个用于定义和运行多个 Docker 容器的工具。它允许您使用一个单独的配置文件（通常是 YAML 格式）定义多个相关的容器，然后使用一个命令来启动、停止和管理这些容器。Docker Compose 简化了多容器应用程序的部署过程，可以通过一个命令一次性启动多个容器，并且可以指定容器之间的关联和依赖关系。</p>
-<p>总结一下，Docker 是一个用于构建和运行容器的平台，而 Docker Compose 是一个用于定义和管理多个相关容器的工具。Docker 主要关注单个容器的构建和运行，而 Docker Compose 则更适合于多容器应用程序的管理和编排。</p>
+<p>Docker和Docker Compose是两个相关但不同的工具，用于容器化应用程序的部署和管理。</p>
+<p>Docker是一种开源平台，用于构建、打包和运行应用程序的容器。它允许开发人员将应用程序及其依赖项打包到一个独立的、可移植的容器中，然后在任何支持Docker的环境中运行。Docker提供了一个容器运行时环境，可以在不同的操作系统和硬件平台上实现应用程序的一致性和可移植性。</p>
+<p>Docker Compose是一个用于定义和运行多个Docker容器的工具。它允许您使用一个单独的配置文件（通常是YAML格式）定义多个相关的容器，然后使用一个命令来启动、停止和管理这些容器。Docker Compose简化了多容器应用程序的部署过程，可以通过一个命令一次性启动多个容器，并且可以指定容器之间的关联和依赖关系。</p>
+<p>总结一下，Docker是一个用于构建和运行容器的平台，而Docker Compose是一个用于定义和管理多个相关容器的工具。Docker主要关注单个容器的构建和运行，而Docker Compose则更适合于多容器应用程序的管理和编排。</p>
 <h2 id="学习兴趣的讨论-review-2023-10-22">学习兴趣的讨论 （review） 2023-10-22</h2>
 <hr>
 <p>做我们任何一件感兴趣的事情一样，新颖性+极高的需求性+极高的精神奖赏。
@@ -268,8 +268,8 @@
 第三，缺乏精神奖赏，反而是负向消耗
 这是当前自主学习的三大困境。
 为此，我们在架构层面已经做出了一些必要的优化。
-目前实现从原始材料积累——mn 整理——博客输出，这个相对不错的流程，初步积累了一些基础的数据库，但是情况依然不容乐观。
-目前的记忆深度主要以来在博客期间的二次整理，mn 的体系略显臃肿，这里是急需要整改的一个地方，我们还是建议对数据进行必要的限制，或者做出更好的整理，把输入和输出的比例调整好，不要一昧贪图冒进。
+目前实现从原始材料积累——mn整理——博客输出，这个相对不错的流程，初步积累了一些基础的数据库，但是情况依然不容乐观。
+目前的记忆深度主要以来在博客期间的二次整理，mn的体系略显臃肿，这里是急需要整改的一个地方，我们还是建议对数据进行必要的限制，或者做出更好的整理，把输入和输出的比例调整好，不要一昧贪图冒进。
 同时，对于能量的补偿，需要获得更高的关注和更加合理的处理，尤其体现在食源的选择上，休息时间的间隙当中，思维的专注度上，以及精神需求的强度。
 对于个体来说，一般而言，虽然内源系统在处理干扰方面存在更高的优势，但是由于积累的时间和深度还不够，必然会存在一些非常致命的威胁，这是非常值得警惕的事情，在指令集中明确提出，所以对于指令集做出更好的优化也是非常重要的一件事情。
 其次整个的知识库都是平铺直叙的，很难产生质的飞跃，无法完成能量聚点。产生规律和共鸣。</p>
@@ -281,12 +281,12 @@
 <hr>
 <p>我提出这样一个假设，我认为我的身体是一个矩阵的接口，连接物理世界和精神世界，我的心更偏向于物理世界，而我的大脑偏向于精神世界。
 曾经我有过这样的体验，当我离一位姑娘很近的时候，心跳会加速，这是物理世界的反馈。同样，今天在复盘的时候，再次读到去年这个时候的一份信的时候，依旧在感慨，那样的感觉是多么神奇，我的思想走到了一个新矩阵，我在这里发现了你的意识和思维，并迭代于我的系统。
-之前在 bilibili 看过一个短片《<a href="https://search.bilibili.com/all?keyword=%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%80%BB%E5%8A%A8%E5%91%98&amp;from_source=webtop_search&amp;spm_id_from=333.1007&amp;search_source=5">机器人总动员</a>》 ，或许这就是矩阵的魅力。
+之前在bilibili看过一个短片《<a href="https://search.bilibili.com/all?keyword=%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%80%BB%E5%8A%A8%E5%91%98&amp;from_source=webtop_search&amp;spm_id_from=333.1007&amp;search_source=5">机器人总动员</a>》  ，或许这就是矩阵的魅力。
 所以，在今天这个时间节点为这段经历再次打一个补丁，用于之后该主题的深入思考。 2023-10-22</p>
 <h2 id="回忆与现实">回忆与现实</h2>
 <hr>
-<p>重新看到以前写的回忆录时，发现自己是一个精神能量很大的人，同时思维的复杂度反而降低了效率的执行。简单来讲，就是 IO 口，在通信传输的过程中带宽不够了，导致其他的程序没办法正常运行。
-现在 rm 这段文件，在新的环境中虽然有残影的渗透，但一般干活的时候遇到的次数就不多了，现在的一天一个人独处的时间还是很长的，大部分的时间还是用于服务器的学习，网站的修修补补，知识的汇总，偶尔有些小失落，但是整体上运行更加稳定一些。
+<p>重新看到以前写的回忆录时，发现自己是一个精神能量很大的人，同时思维的复杂度反而降低了效率的执行。简单来讲，就是IO口，在通信传输的过程中带宽不够了，导致其他的程序没办法正常运行。
+现在rm 这段文件，在新的环境中虽然有残影的渗透，但一般干活的时候遇到的次数就不多了，现在的一天一个人独处的时间还是很长的，大部分的时间还是用于服务器的学习，网站的修修补补，知识的汇总，偶尔有些小失落，但是整体上运行更加稳定一些。
 或许我更喜欢逃避现实 🐶 2023-10-22</p>
 <h2 id="日志文件的设想">日志文件的设想</h2>
 <hr>
@@ -295,7 +295,7 @@
 我们的大脑就像是地球上的蚂蚁，而各式各样的记忆和技能如同各种各样的地形，所以我们的灵感会被快速遗忘，我们瞬时记忆，很大来自于潜意识，长期记忆，以及短期大量重复记忆。
 如果我们没有请求数据库的操作，那么这些记忆，有价值的记忆会被遗忘。即使有请求数据库的操作，如果延时过多，或者负载冲击，也会导致数据库中“精灵”的死亡，精灵的生命周期取决于我们对于数据库的执行策略和环境干扰，即上述的联想拦截，在用户端发送请求时，数据会跨越很多条线路，做一个形象的比喻，我们就像是地球上忙碌的蚂蚁。
 最后提一嘴，我之前读完了《朱生豪情书》，我很佩服朱生豪先生对于数据库的读写操作，不愧为语言大师，记忆大师，艺术大师，爱情大师，当然我更愿意在私底下称他为朋友。
-之前我通过 twikoo 记录灵感，奈何因为不可抗力中断了，至于新的日志文件的组成方式，twikoo 依然是很好的选择。</p>
+之前我通过twikoo记录灵感，奈何因为不可抗力中断了，至于新的日志文件的组成方式，twikoo依然是很好的选择。</p>
 <h2 id="小贴士">小贴士</h2>
 <hr>
 <p>六字诀养生发音法</p>
@@ -308,21 +308,21 @@
 <h1 id="总结">总结</h1>
 <hr>
 <ul>
-<li><input disabled="" type="checkbox"> 学习<a href="https://www.bilibili.com/video/BV1ih411c7U3/?vd_source=237e295a40d7aaea043ead8c0d2c78ab">1panel</a>的 linux 运维面板</li>
-<li><input disabled="" type="checkbox"> wordpress 系统学习</li>
-<li><input disabled="" type="checkbox"> NextCloud 系统学习</li>
+<li><input disabled="" type="checkbox"> 学习<a href="https://www.bilibili.com/video/BV1ih411c7U3/?vd_source=237e295a40d7aaea043ead8c0d2c78ab">1panel</a>的linux运维面板</li>
+<li><input disabled="" type="checkbox"> wordpress系统学习</li>
+<li><input disabled="" type="checkbox"> NextCloud系统学习</li>
 <li><input disabled="" type="checkbox"> 梳理分支树</li>
 <li><input disabled="" type="checkbox"> 整理流动核心</li>
 <li><input disabled="" type="checkbox"> 整理《黄帝内经》</li>
-<li><input disabled="" type="checkbox"> 学习 Deutsch</li>
-<li><input disabled="" type="checkbox"> 学习 FPGA</li>
+<li><input disabled="" type="checkbox"> 学习Deutsch</li>
+<li><input disabled="" type="checkbox"> 学习FPGA</li>
 <li><input disabled="" type="checkbox"> 早睡早起</li>
 <li><input disabled="" type="checkbox"> 飞控的作业</li>
 <li><input disabled="" type="checkbox"> 航空训练的实习</li>
 </ul>
 <blockquote>
 <p>💡 特别鸣谢：<br>
-🌺 <a href="https://blog.tanglu.me/"><strong>tanglu</strong></a><strong>为公益博客提供的 cdn 加速服务</strong></p>
+🌺 <a href="https://blog.tanglu.me/"><strong>tanglu</strong></a><strong>为公益博客提供的cdn加速服务</strong></p>
 </blockquote>
 
 </content>

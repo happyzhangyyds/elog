@@ -32,7 +32,7 @@
 <meta itemprop="name" content="[野火] 第13章  层次化设计">
 <meta itemprop="description" content="通过全加器的例子来给大家讲解层次化设计的思想"><meta itemprop="datePublished" content="2023-09-30T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-09-30T00:00:00+00:00" />
-<meta itemprop="wordCount" content="426"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="wordCount" content="413"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
 <meta itemprop="keywords" content="野火FPGA," />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -227,107 +227,107 @@
 
 <content>
   <blockquote>
-<p>💡 特别鸣谢野火 FPGA 的教学与帮助！<br>
-本节相关的<a href="https://www.bilibili.com/video/BV17z411i7er?p=10&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab">教程 link</a><a href="https://www.bilibili.com/video/BV17z411i7er?p=9&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab"> </a>📌</p>
+<p>💡 特别鸣谢野火FPGA的教学与帮助！<br>
+本节相关的<a href="https://www.bilibili.com/video/BV17z411i7er?p=10&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab">教程link</a><a href="https://www.bilibili.com/video/BV17z411i7er?p=9&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab"> </a>📌</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 第 13 章 层次化设计:
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 13.1 章节导读:
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 13.2 理论知识:
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 13.3 实战演练:
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">-</span> 13.3.1 实验目标:
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">-</span> 13.3.2 硬件资源:
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">-</span> 13.3.3 程序设计:
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">-</span> 1. 模块框图:
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">-</span> 2. 波形图绘制:
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">-</span> 3. 代码编写:
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">-</span> 4. 仿真验证:
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">-</span> 仿真文件编写:
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">-</span> 仿真波形分析:
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">-</span> 13.3.4 上板验证:
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">-</span> 1. 引脚约束:
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">-</span> 2. 结果验证:
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 13.4 章末总结:
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">-</span> 知识点总结:
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 13.5 拓展训练:
-</span></span></code></pre></div><h2 id="131-章节导读">13.1 章节导读</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">-</span>  第13章  层次化设计:
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">-</span>  13.1  章节导读:
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">-</span>  13.2  理论知识:
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">-</span>  13.3  实战演练:
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">-</span>  13.3.1  实验目标:
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">-</span>  13.3.2  硬件资源:
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">-</span>  13.3.3  程序设计:
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">-</span>  1. 模块框图:
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">-</span>  2. 波形图绘制:
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">-</span>  3. 代码编写:
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">-</span>  4. 仿真验证:
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">-</span>  仿真文件编写:
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">-</span>  仿真波形分析:
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">-</span>  13.3.4  上板验证:
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">-</span>  1. 引脚约束:
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">-</span>  2. 结果验证:
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">-</span>  13.4  章末总结:
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">-</span>  知识点总结:
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">-</span>  13.5  拓展训练:
+</span></span></code></pre></div><h2 id="131--章节导读">13.1  章节导读</h2>
 <hr>
 <p>我们在基础篇中涉及的例程功能都比较简单,其模块划分就相对较少,有些工程只需一个模块就可实现功能,所以在层次化设计上的体现并不是很明显,但是我们要尽早让大家知道这种思想方法,以便在长期的学习过程中能够慢慢体会。本章我们就通过全加器的例子来给大家讲解层次化设计的思想。</p>
-<h2 id="132-理论知识">13.2 理论知识</h2>
+<h2 id="132--理论知识">13.2  理论知识</h2>
 <hr>
 <p>数字电路中根据模块层次不同有两种基本的结构设计方法:自底向上(Bottom-Up) 的设计方法和自顶向下(Top-Down)的设计方法。这两种方法能够有助于我们对整个项目的系统和结构有一个宏观的把控,这也是我们在基础章节中每个简单的实例都分析模块是如何设计的原因,虽然简单的系统不需要划分结构,但是养成好的习惯后会在强化和提高篇中的大型多模块设计中有着及其重要意义。
 自底向上的设计是一种传统的设计方法,对设计进行逐次划分的过程是从存在的基本单元出发的,设计树最末枝上的单元要么是已经构造出的单元,要么是其他项目开发好的单元或者是可外购得到的单元。在自底向上建模方法中,我们首先对现有的功能块进行分析,然后使用这些模块来搭建规模大一些的功能块,如此继续直至顶层模块。如图 13-1 所示显示了这种方法的设计过程。</p>
-<p><img src="https://bu.dusays.com/2023/09/30/651786101ec9a.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/30/651786101ec9a.png" alt="651786101ec9a.png"></p>
 <p>自上而下的设计是从系统级开始,把系统分为基本单元,然后再把每个单元划分为下一层次的基本单元,一直这样做下去,直到直接可以用 EDA 元件库中的原件来实现为止。
 在自顶向下设计方法中,我们首先定义顶层功能块,进而分析需要哪些构成顶层模块的必要子模块;然后进一步对各个子模块进行分解,直到到达无法进一步分解的底层功能块。</p>
-<p><img src="https://bu.dusays.com/2023/09/30/65178610ed3e9.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/30/65178610ed3e9.png" alt="65178610ed3e9.png"></p>
 <p>在典型的设计中,这两种方法是混合使用的。设计人员首先根据电路的体系结构定义顶层模块。逻辑设计者确定如何根据功能将整个设计划分为子模块;与此同时电路设计者对底层功能块电路进行优化设计,并进一步使用这些底层模块来搭建其高层模块。两者的工作按相反的方向独立进行,直至在某一中间点会合。这时,电路设计者已经创建了一个底层功能块库(具有独立完整的功能块、IP 核或逻辑门),而逻辑设计者也通过使用自顶向下的方法将整个设计分解为由库单元构成的结构描述。</p>
-<p><img src="https://bu.dusays.com/2023/09/30/65178611d26fd.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/30/65178611d26fd.png" alt="65178611d26fd.png"></p>
 <p>上面介绍的是相对抽象的理论总结,理论往往是晦涩难懂的,但是作为一种概括性的总结还是很有用的,或许大家在对 FPGA 的设计有了较为深刻的理解后再回过头来看这些理论的总结就会有感而发了。为了说明层次化设计的概念,下面我们以全加器的例子为载体,讲解一个简单的层次化设计在设计模块的思路和代码的编写上有何不同。</p>
-<h1 id="133-实战演练">13.3 实战演练</h1>
+<h1 id="133--实战演练">13.3  实战演练</h1>
 <hr>
-<h2 id="1331-实验目标">13.3.1 实验目标</h2>
+<h2 id="1331--实验目标">13.3.1  实验目标</h2>
 <hr>
 <p>使用上一章节实现的半加器,结合层次化设计思想,设计并实现一个全加器。</p>
-<h2 id="1332-硬件资源">13.3.2 硬件资源</h2>
+<h2 id="1332--硬件资源">13.3.2  硬件资源</h2>
 <hr>
 <p>与半加器相同,我们使用开发板上的按键和 LED 灯进行全加器的验证,选取 KEY1、KEY2、KEY3 分别作为被加数 in1、被加数 in2 和进位信号 cin 的信号输入;以 LED 灯 D7 作为和的输出 sum,以 LED 灯 D8 作为进位的输出 count;</p>
-<h2 id="1333-程序设计">13.3.3 程序设计</h2>
+<h2 id="1333--程序设计">13.3.3  程序设计</h2>
 <hr>
 <h3 id="1-模块框图">1. 模块框图</h3>
 <hr>
 <p>我们先给设计的顶层模块取一个名字为 full_adder,全加器和半加器唯一的不同就是输入除了有两个加数之外还有一个加数,第三个加数是上一级加法器的进位信号,这样子就相当于是三个 1bit 的加数相加求和。所以在整体结构框图的设计上我们依然可以采用半加器那样的设计,然后再在输入端加上一个 1bit 名为 cin 的信号即可</p>
-<p><img src="https://bu.dusays.com/2023/09/30/6517861356d1a.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/30/6517861356d1a.png" alt="6517861356d1a.png"></p>
 <p>然而本章中的这个模块却有所不同,我们在学习数电的时候知道全加器并不是最基本的结构,它可以由两个半加器构成,也就是说我们可以根据之前设计的半加器通过一定的组合再加上适当的门电路来构成一个全加器。全加器由半加器的推导方式有很多种,这里我们用一个方法推导一下:全加器有三个 1bit 的加数,我们可以先实现两个数的加和,再加上第三个数并不会影响最后的结果。我们知道两个数的加和就是半加器所实现的功能, 所以先进行的两个数的加和运算需要用到一个半加器来实现,然后输出求和信号和进位信号,求和信号再和第三个加数加和需要再使用一个半加器,然后输出进位信号和最后的总和号。但是进位信号有两个,这两个进位信号都是有用的,但又不会同时为存在,一个有效即有效,所以将两个半加器的进位信号用一个或门运算后作为最后的输出进位信号(也可以用逻辑表达式的方式推导)。本例我们将半加器作为本设计的一个基本单元,它既是顶层模块下的一个子模块,也是一个独立的模块。</p>
-<p><img src="https://bu.dusays.com/2023/09/30/651786143d2f2.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/30/651786143d2f2.png" alt="651786143d2f2.png"></p>
 <p>根据上面的分析设计出的 Visio 框图如图 13-6 所示,我们可以看到外部的信号端口和图 13-5 是一样的没有变化,而丰富的内容是其内部的结构,我们可以看到内部由两个半加器分别名为 half_adder0 和 half_adder1,每个半加器的信号端口依然和上一章的一模一样, 除了两个半加器还有一个或门电路。其次我们需要关注的就是连线,即外部的输入输出信号线是如何与内部模块进行连接的,内部的模块之间的信号线又是如何互相连接的,这里的连接关系是我们根据数字电路推导出的,但是其中的信号命名虽然是同一根线,但是却不在同一个层,为了和后面编写的代码对应,也为了让大家更容易理解所以将同一信号线上的名字和颜色(红色的为顶层的信号线,黑色的为底层模块的信号线)清晰的进行了划分。</p>
-<p>首先从 in1 和 in2 信号从外部模块的端口输入进来,然后连接到内部 half_adder0 的输入端口上,然后进入到 half_adder0 模块中进行运算(信号的颜色变化也代表层的变化), 外部模块的输入信号 in1 和 in2 也可以取和 half_adder0 的输入端口不同的名字,但是为了清晰表达他们是一根线所以我们用相同的名字,在代码编写的时候我们也遵循同样的原则。然后 in1 和 in2 经过半加器 half_adder0 的运算后得出 cout 和 sum 信号,此时将 half_adder0 的 sum 信号和 half_adder1 的 in1 信号连接,连接线还单独取了一个名字为 h0_sum 用于将 sum 信号的数据传到顶层(否则两个独立模块是没有任何交集的),外部的进位信号 cin 和 half_adder1 的 in2 连接,经过 half_adder1 的加和运算后产生 cout 和 sum 信号(进入到模块内部运算的过程有点和 C 语言中的函数调用类似)。因为 half_adder0 的 cout 和 half_adder0 的 cout 还要再经过一个或门电路,如果两个名字相同在顶层中出现会产生冲突,所以为了将 half_adder0 的 cout 和 half_adder1 的 cout 区别开,我们将 half_adder0 的 cout 和 h0_cout 连接,将 half_adder1 的 cout 和 h1_cout 连接后再经过或门进行运算,运算后的结果为系统的 cout 并输出,而 half_adder1 输出的 sum 就是系统的输出了。至此,整个信号运算的加和过程就是这样进行的,以上的描述过程其实就是代码的编写过程,后面面可以结合代码再回过头来和框图进行对照分析。
+<p>首先从 in1 和 in2 信号从外部模块的端口输入进来,然后连接到内部 half_adder0 的输入端口上,然后进入到 half_adder0 模块中进行运算(信号的颜色变化也代表层的变化), 外部模块的输入信号 in1 和 in2 也可以取和 half_adder0 的输入端口不同的名字,但是为了清晰表达他们是一根线所以我们用相同的名字,在代码编写的时候我们也遵循同样的原则。然后 in1 和 in2 经过半加器 half_adder0 的运算后得出 cout 和 sum 信号,此时将half_adder0 的 sum 信号和 half_adder1 的 in1 信号连接,连接线还单独取了一个名字为h0_sum 用于将 sum 信号的数据传到顶层(否则两个独立模块是没有任何交集的),外部的进位信号 cin 和 half_adder1 的 in2 连接,经过 half_adder1 的加和运算后产生 cout 和 sum 信号(进入到模块内部运算的过程有点和 C 语言中的函数调用类似)。因为 half_adder0 的cout 和 half_adder0 的 cout 还要再经过一个或门电路,如果两个名字相同在顶层中出现会产生冲突,所以为了将 half_adder0 的 cout 和 half_adder1 的 cout 区别开,我们将 half_adder0 的 cout 和 h0_cout 连接,将 half_adder1 的 cout 和 h1_cout 连接后再经过或门进行运算,运算后的结果为系统的 cout 并输出,而 half_adder1 输出的 sum 就是系统的输出了。至此,整个信号运算的加和过程就是这样进行的,以上的描述过程其实就是代码的编写过程,后面面可以结合代码再回过头来和框图进行对照分析。
 在此提及一点,之前讲过数字电路中的每一个模块都相当于一个实体的“芯片”,而框图中的 half_adder0 和 half_adder1 就相当于两个不同的半加器芯片,再加上一个或门芯片就可以实现一个具有全加器功能的系统,这个“芯片”的概念结合下面这个框图我想表达是相当清晰的,我们做好的这个全加器也是一个模块,如有需要也可以把这个模块当成一个“芯片”用在其他的系统中。所以设计的时候我们可以把每个模块都做好,特别是具有通用性功能的模块,等用到的时候我们不必关心其内部结构是怎样的,只需知道其功能和端口信号,直接拿过来使用即可,是不是很方便。再如你设计实现了一个复杂的功能模块,而且通用性也很强,就可以做成加密 IP 核(知识产权核)卖给需要的用户。所以在综合器的内部,官方也提供了很多通用的免费 IP 核,使我们不用再对一些通用的模块进行单独设计,后面会有单独的章节进行详细介绍。
 端口列表与功能总结如表格 13-1 所示。</p>
-<p><img src="https://bu.dusays.com/2023/09/30/65178615184fd.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/30/65178615184fd.png" alt="65178615184fd.png"></p>
 <h3 id="2-波形图绘制">2. 波形图绘制</h3>
 <hr>
-<p>在绘制波形图前,我们还是先把如表格 13-2 所示的真值表列出,然后再根据真值表的输入与输出的对应关系画出波形图。首先输入是有三个加数,我们要表达出三种加数的任意 8 种组合就能够进行完全列举了,然后根据三个输入的相加关系,画出对应的进位 cout 信号和求和 sum 信号,其波形如图 13-7 所示,与真值表一一对应。</p>
-<p><img src="https://bu.dusays.com/2023/09/30/65178615ea3e5.png" alt=""></p>
-<p><img src="https://bu.dusays.com/2023/09/30/65178616c5687.png" alt=""></p>
+<p>在绘制波形图前,我们还是先把如表格 13-2 所示的真值表列出,然后再根据真值表的输入与输出的对应关系画出波形图。首先输入是有三个加数,我们要表达出三种加数的任意 8 种组合就能够进行完全列举了,然后根据三个输入的相加关系,画出对应的进位 cout 信号和求和sum 信号,其波形如图 13-7 所示,与真值表一一对应。</p>
+<p><img src="https://bu.dusays.com/2023/09/30/65178615ea3e5.png" alt="65178615ea3e5.png"></p>
+<p><img src="https://bu.dusays.com/2023/09/30/65178616c5687.png" alt="65178616c5687.png"></p>
 <h3 id="3-代码编写">3. 代码编写</h3>
 <hr>
 <p>顶层模块代码如下所示:
-顶层代码编写完成后还不能直接综合,否则会有如图 13-8 所示的报错提示,这是提示你找不到 half_adder 这个模块,也就是说你虽然实例化,但是还没有把 half_adder 这个模块添加到工程中,所以识别不了。所以我们还要将半加器的.v 文件拷贝到全加器的 rtl 文件夹中,如图 13-9 所示,然后再将该文件添加到工程中。把文件添加到工程中的过程和添加 Testbench 文件的方式是一样的,找准文件夹的位置,按照相同的步骤添加即可。
-添 加 完 half_adder 后 再 进 行 综 合 就 不 会 再 产 生 报 错 信 息 了 , 然 后 我 们 选 择“ Hierarchy ” 标 签 看 到 顶 层 文 件 名 下 会 有 两 个 模 块 , 如 图 13-10 所 示 分 别 名 为 half_adder:half_adder_inst0 和 half_adder:half_adder_inst1,这种层此化关系一目了然。
+顶层代码编写完成后还不能直接综合,否则会有如图 13-8 所示的报错提示,这是提示你找不到 half_adder 这个模块,也就是说你虽然实例化,但是还没有把 half_adder 这个模块添加到工程中,所以识别不了。所以我们还要将半加器的.v 文件拷贝到全加器的 rtl 文件夹中,如图 13-9 所示,然后再将该文件添加到工程中。把文件添加到工程中的过程和添加Testbench 文件的方式是一样的,找准文件夹的位置,按照相同的步骤添加即可。
+添 加 完 half_adder 后 再 进 行 综 合 就 不 会 再 产 生 报 错 信 息 了 , 然 后 我 们 选 择“ Hierarchy ” 标 签 看 到 顶 层 文 件 名 下 会 有 两 个 模 块 , 如 图  13-10 所 示 分 别 名 为half_adder:half_adder_inst0 和 half_adder:half_adder_inst1,这种层此化关系一目了然。
 接下来我们看一下 RTL 代码综合出的 RTL 视图如图 13-11 所示,可以看到和我们最初分析设计的结构一模一样。
 我们可以双击任意一个模块,如图 13-12 所示,其内部结构就是上一章中设计的半加器。
 至此,我想学习者应该渐渐明白了这种层次化设计的思想到底是怎么一回事了,而且可以发现这种基于层次化的设计方案结构清晰明了,而且还能够实现模块的复用,甚至可以实现协同分工,十分方便高效,在大型项目中用这种方法可以极大地加快开发进程。
 在以后的设计中会有很多情况下具有特定功能的模块需要再次被使用,为了方便调用我们往往把这种具有独立功能的模块做成通用的模块,日积月累,当我们的积累越来越多的时候,开发也会变得更容易了。</p>
-<p><img src="https://bu.dusays.com/2023/09/30/651786180d478.png" alt=""></p>
-<p><img src="https://bu.dusays.com/2023/09/30/6517861e6ce34.png" alt=""></p>
-<p><img src="https://bu.dusays.com/2023/09/30/6517861fb309d.png" alt=""></p>
-<p><img src="https://bu.dusays.com/2023/09/30/65178620a7e2a.png" alt=""></p>
-<p><img src="https://bu.dusays.com/2023/09/30/65178621823ed.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/30/651786180d478.png" alt="651786180d478.png"></p>
+<p><img src="https://bu.dusays.com/2023/09/30/6517861e6ce34.png" alt="6517861e6ce34.png"></p>
+<p><img src="https://bu.dusays.com/2023/09/30/6517861fb309d.png" alt="6517861fb309d.png"></p>
+<p><img src="https://bu.dusays.com/2023/09/30/65178620a7e2a.png" alt="65178620a7e2a.png"></p>
+<p><img src="https://bu.dusays.com/2023/09/30/65178621823ed.png" alt="65178621823ed.png"></p>
 <h3 id="4-仿真验证">4. 仿真验证</h3>
 <hr>
 <p><strong>仿真文件编写</strong></p>
 <p>仿真文件参考代码如下所示：</p>
 <p>层次化设计的仿真需要注意一些问题,这里因为半加器我们在上一章已经验证过了, 是好用的,所以本章直接对顶层模块进行验证,对顶层的验证和之前对某一个模块的验证过程没有任何区别。如果之前我们没有对顶层的子模块进行验证过的话,而在这里直接验证顶层模块,子模块有可能会是错误的,这样我们在分析系统错误原因的时候往往会变得复杂,所以推荐大家一定要先对子模块进行单独验证,这样不至于当整个设计太大的时候直接验证最顶层模块而导致错误很难找,养成好的习惯,会让你的设计越来越轻松,越来越顺利。</p>
-<p><img src="https://bu.dusays.com/2023/09/30/65178622e9aa4.png" alt=""></p>
-<p><img src="https://bu.dusays.com/2023/09/30/65178623e3cde.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/30/65178622e9aa4.png" alt="65178622e9aa4.png"></p>
+<p><img src="https://bu.dusays.com/2023/09/30/65178623e3cde.png" alt="65178623e3cde.png"></p>
 <p><strong>仿真波形分析</strong></p>
 <hr>
-<p>Testbench 编写完毕后,我们开始启动 ModelSim 进行功能验证,同样我们也让波形跑 500ns 即可验证结果,通过图 13-13 所示的波形我们可以观察到 3 个 1bit 加数通过随机数函数组成的任意组合与对应的 sum 和 cout,一个一个对应查看,发现波形中所有的输入与输出之间的对应关系和编写的代码中的逻辑关系是完全一致的。</p>
+<p>Testbench 编写完毕后,我们开始启动 ModelSim 进行功能验证,同样我们也让波形跑500ns 即可验证结果,通过图 13-13 所示的波形我们可以观察到 3 个 1bit 加数通过随机数函数组成的任意组合与对应的 sum 和 cout,一个一个对应查看,发现波形中所有的输入与输出之间的对应关系和编写的代码中的逻辑关系是完全一致的。</p>
 <p>我们又通过观察“Transcript”界面(如图 13-14 所示)中打印的结果比对真值表进一步验证发现输入与输出的关系都符合全加器运算结果。</p>
-<p><img src="https://bu.dusays.com/2023/09/30/65178624c9eaa.png" alt=""></p>
-<h3 id="1334-上板验证">13.3.4 上板验证</h3>
+<p><img src="https://bu.dusays.com/2023/09/30/65178624c9eaa.png" alt="65178624c9eaa.png"></p>
+<h3 id="1334--上板验证">13.3.4  上板验证</h3>
 <hr>
 <h3 id="1-引脚约束"><strong>1. 引脚约束</strong></h3>
 <hr>
 <p>仿真验证通过后,准备上板验证,上板验证之前先要进行引脚约束。</p>
-<p><img src="https://bu.dusays.com/2023/09/30/65178625af8fc.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/30/65178625af8fc.png" alt="65178625af8fc.png"></p>
 <h3 id="2-结果验证"><strong>2. 结果验证</strong></h3>
 <hr>
 <p>如图 13-16 所示,开发板连接 5V 直流电源和 USB-Blaster 下载器 JTAG 端口。线路正确连接后,打开开关为板卡上电。</p>
-<p>程序下载完毕后,开始进行结果验证。如图 13-18 所示,当按键 KEY1、KEY2 同时按下,in1、in2 输入均为低电平,进位 cin 输入为高电平,得到和 sum 为 1,进位 count 为 0, D7 被点亮。
+<p>程序下载完毕后,开始进行结果验证。如图 13-18 所示,当按键 KEY1、KEY2 同时按下,in1、in2 输入均为低电平,进位 cin 输入为高电平,得到和 sum 为 1,进位 count 为0, D7 被点亮。
 只按下按键 KEY3,in1、in2 输入高电平,进位 cin 输入低电平,得到和 sum 为 0,进位 count 为 1, D6 被点亮。
 三个按键同时按下,in1 和 in2 输出均为高电平,得到和 sum 为 0, 进位 count 为 1,D6、被点亮。</p>
-<h1 id="134-章末总结">13.4 章末总结</h1>
+<h1 id="134--章末总结">13.4  章末总结</h1>
 <hr>
 <p>本章通过全加器的例子介绍了如何利用层次化的设计方法来进行设计一个项目,全加器的项目例子虽然简单,但是已经足够有代表性,在基础部分,我们对层次化设计的要求并不高,因为设计的例子都很简单,大多一个或几个模块就可以实现整个的设计,但是在强化和高级部分,会有数十个以上的模块,那时就会体会到这种层次化设计的方法好处, 也会有更多的体会,希望大家能够通过不断的学习熟练掌握这种方法。</p>
 <h3 id="知识点总结">知识点总结</h3>

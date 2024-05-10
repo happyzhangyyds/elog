@@ -32,7 +32,7 @@
 <meta itemprop="name" content="[图像处理] yolov5后续的性能调节">
 <meta itemprop="description" content="接下来的主要任务是把中期的课设报告完善一下，提升逻辑性，美观度，加一些问题和思考。"><meta itemprop="datePublished" content="2023-11-17T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-11-17T00:00:00+00:00" />
-<meta itemprop="wordCount" content="169"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="wordCount" content="163"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
 <meta itemprop="keywords" content="实用教程," />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -228,13 +228,13 @@
 <content>
   <h1 id="前言">前言</h1>
 <hr>
-<p>之前在前面的文章里已经介绍了前期的一些工作流程，但是还有一些没弄明白的地方，比如 yolov5 训练集、验证集、测试集之间的区别是什么。</p>
+<p>之前在前面的文章里已经介绍了前期的一些工作流程，但是还有一些没弄明白的地方，比如yolov5训练集、验证集、测试集之间的区别是什么。</p>
 <h1 id="正文">正文</h1>
 <hr>
 <p>这部分详细介绍目前存在的疑惑。</p>
 <h2 id="训练集和验证集">训练集和验证集</h2>
 <hr>
-<p>非常感谢给我解答困惑的博主：梅花 14 的文章，标题为：<a href="https://blog.csdn.net/qq_41621362/article/details/88979961">训练集、验证集、测试集的区别，这次你一定能看懂</a>。</p>
+<p>非常感谢给我解答困惑的博主：梅花14的文章，标题为：<a href="https://blog.csdn.net/qq_41621362/article/details/88979961">训练集、验证集、测试集的区别，这次你一定能看懂</a>。</p>
 <pre><code>**训练集和验证集都是在训练阶段使用的！！！**
 
 
@@ -343,73 +343,73 @@ for each epoch
   这部分首先要特别感谢up主：[yolo目标检测](https://space.bilibili.com/3493293505645464)的文章:[目标检测之性能指标](https://www.bilibili.com/video/BV1EQ4y1h7G9?p=4&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab)
 
 
-	![](https://bu.dusays.com/2023/11/17/655755348e9ab.png)
+	![655755348e9ab.png](https://bu.dusays.com/2023/11/17/655755348e9ab.png)
 
 
 	首先是关于混淆矩阵的理解，用于理解准确率，召回率
 
 
-	![](https://bu.dusays.com/2023/11/17/655755340ef93.png)
+	![655755340ef93.png](https://bu.dusays.com/2023/11/17/655755340ef93.png)
 
 
 	这张图更加形象地解释了什么是准确率和召回率
 
 
-	![](https://bu.dusays.com/2023/11/17/65575536e7963.png)
+	![65575536e7963.png](https://bu.dusays.com/2023/11/17/65575536e7963.png)
 
 
 	这张图介绍了AP和mAP的含义，mAP是取所有类别的平均值。
 
 
-	![](https://bu.dusays.com/2023/11/17/6557553414d8a.png)
+	![6557553414d8a.png](https://bu.dusays.com/2023/11/17/6557553414d8a.png)
 
 
 	这张图我猜测应该是mAP的COCO标准
 
 
-	![](https://bu.dusays.com/2023/11/17/65575533f1862.png)
+	![65575533f1862.png](https://bu.dusays.com/2023/11/17/65575533f1862.png)
 
 
 	这种图是介绍预测框和绘制框重叠率
 
 
-	![](https://bu.dusays.com/2023/11/17/6557553695187.png)
+	![6557553695187.png](https://bu.dusays.com/2023/11/17/6557553695187.png)
 
 
 	这张图用直观的方式介绍了什么是重叠率
 
 
-	![](https://bu.dusays.com/2023/11/17/65575b32ef81d.jpg)
+	![65575b32ef81d.jpg](https://bu.dusays.com/2023/11/17/65575b32ef81d.jpg)
 
 
 	根据不同的重叠率对应的宽松程度
 
 
-	![](https://bu.dusays.com/2023/11/17/65575f9ed1131.jpg)
+	![65575f9ed1131.jpg](https://bu.dusays.com/2023/11/17/65575f9ed1131.jpg)
 
 
 	比较同一数据集不同模型的性能
 
 
-	![](https://bu.dusays.com/2023/11/17/6557622f0f054.jpg)
+	![6557622f0f054.jpg](https://bu.dusays.com/2023/11/17/6557622f0f054.jpg)
 
 
 	AP计算的11点法，在2010前适用
 
 
-	![](https://bu.dusays.com/2023/11/17/6557625997555.jpg)
+	![6557625997555.jpg](https://bu.dusays.com/2023/11/17/6557625997555.jpg)
 
 
 	AP计算之积分法
 
 
-	![](https://bu.dusays.com/2023/11/17/6557629c8e035.jpg)
+	![6557629c8e035.jpg](https://bu.dusays.com/2023/11/17/6557629c8e035.jpg)
 
 
 	总结AP计算方法的变化
 
 
-	![](https://bu.dusays.com/2023/11/17/655762ef7f4b9.jpg)
+	![655762ef7f4b9.jpg](https://bu.dusays.com/2023/11/17/655762ef7f4b9.jpg)
 
 
 	还有一些其他的性能指标来对模型进行评价
@@ -424,19 +424,19 @@ for each epoch
 	  现在我感觉对训练多少轮模型是最佳的状态还没能有一个非常好的评估，我也只能通过观察，不同轮数准确率的变化来猜测拐点。当然炼丹太消耗时间和精力了。我跑300轮就得花费两个多小时，100轮差不多也得半个多小时。但是100轮的模型的精准度似乎比300轮的准确度还要高出0.002，应该是出现了拐点。然后我现在在等130轮的训练结果。
 
 
-	![](https://bu.dusays.com/2023/11/17/65576340b93bf.png)
+	![65576340b93bf.png](https://bu.dusays.com/2023/11/17/65576340b93bf.png)
 
 
-	![](https://bu.dusays.com/2023/11/17/655764efaba4b.png)
+	![655764efaba4b.png](https://bu.dusays.com/2023/11/17/655764efaba4b.png)
 </code></pre>
-<p><img src="https://bu.dusays.com/2023/11/17/6557642d7c780.png" alt=""></p>
-<p><img src="https://bu.dusays.com/2023/11/17/6557644323790.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/11/17/6557642d7c780.png" alt="6557642d7c780.png"></p>
+<p><img src="https://bu.dusays.com/2023/11/17/6557644323790.png" alt="6557644323790.png"></p>
 <h1 id="总结">总结</h1>
 <hr>
 <p>接下来的主要任务是把中期的课设报告继续完善一下，提升逻辑性，美观度。</p>
 <ul>
 <li>特别是前期的方案对比，我觉得可以继续搜集一些资料，使得其更加饱满一些</li>
-<li>然后对于 yolov5 原理这部分还需要继续优化</li>
+<li>然后对于yolov5原理这部分还需要继续优化</li>
 <li>后面对于模型的评估指标，包括自己思考和遇到的一些问题也可以持续优化。</li>
 </ul>
 

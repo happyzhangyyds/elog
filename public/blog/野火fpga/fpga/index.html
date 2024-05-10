@@ -32,7 +32,7 @@
 <meta itemprop="name" content="[野火] 第16章 阻塞赋值与非阻塞赋值">
 <meta itemprop="description" content="本章主要讲解了阻塞赋值(=)与非阻塞赋值(&lt;=)会给设计的电路所产生的差异"><meta itemprop="datePublished" content="2023-10-02T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-10-02T00:00:00+00:00" />
-<meta itemprop="wordCount" content="128"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="wordCount" content="120"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
 <meta itemprop="keywords" content="野火FPGA," />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -227,15 +227,15 @@
 
 <content>
   <blockquote>
-<p>💡 特别鸣谢野火 FPGA 的教学与帮助！<br>
-本节相关的<a href="https://www.bilibili.com/video/BV17z411i7er?p=14&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab">教程 link</a><a href="https://www.bilibili.com/video/BV17z411i7er?p=9&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab"> </a>📌</p>
+<p>💡 特别鸣谢野火FPGA的教学与帮助！<br>
+本节相关的<a href="https://www.bilibili.com/video/BV17z411i7er?p=14&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab">教程link</a><a href="https://www.bilibili.com/video/BV17z411i7er?p=9&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab"> </a>📌</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 第 16 章 阻塞赋值与非阻塞赋值:
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 16.0 理论学习:
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 16.1 章节导读:
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 16.2 阻塞赋值:
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 16.3 非阻塞赋值:
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 16.4 章末总结:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">-</span>  第16章  阻塞赋值与非阻塞赋值:
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">-</span>  16.0  理论学习:
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">-</span>  16.1  章节导读:
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">-</span>  16.2  阻塞赋值:
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">-</span>  16.3  非阻塞赋值:
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">-</span>  16.4  章末总结:
 </span></span></code></pre></div><h2 id="160-理论学习">16.0 理论学习</h2>
 <hr>
 <p>阻塞赋值的赋值号用“=”表示。为什么称这种赋值方式为阻塞赋值呢?因为对应的电路结构往往与触发沿没有关系,只与输入电平的变化有关系。阻塞赋值的操作可以认为是只有一个步骤的操作,即计算赋值号右边的语句并更新赋值号左边的语句,此时不允许有来自任何其他 Verilog 语句的干扰,直到现行的赋值完成时刻,即把当前赋值号右边的值赋值给左边的时刻完成后,它才允许下一条的赋值语句的执行。串行块(begin-end)中的各条阻塞型过程赋值语句将以它们在顺序块后的排列次序<strong>依次执行</strong>。阻塞型过程赋值语句的执行过程是:首先计算赋值号右边的值,然后立即将计算结果赋值给左边,赋值语句结束,变量值立即发生改变。阻塞的概念是指在同一个 always 块中,其后面的赋值语句从概念上是在前一句赋值语句结束后再开始下面的赋值。</p>
@@ -247,31 +247,31 @@
 <h2 id="162-阻塞赋值">16.2 阻塞赋值</h2>
 <hr>
 <p>下面的例子可以说明这个问题:</p>
-<p><img src="https://bu.dusays.com/2023/10/02/651a0e2d736f1.png" alt=""></p>
-<p><img src="https://bu.dusays.com/2023/10/02/651a0e2e5cf35.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/10/02/651a0e2d736f1.png" alt="651a0e2d736f1.png"></p>
+<p><img src="https://bu.dusays.com/2023/10/02/651a0e2e5cf35.png" alt="651a0e2e5cf35.png"></p>
 <p>为了进一步验证,我们做通过 Testbench 进行仿真验证一下结果。</p>
-<p><img src="https://bu.dusays.com/2023/10/02/651a0e2f3f595.png" alt=""></p>
-<p><img src="https://bu.dusays.com/2023/10/02/651a0e30527f8.png" alt=""></p>
-<p>打开 ModelSim 执行仿真,仿真出来的波形如图 16-2 所示,我们让仿真运行了 500ns 即可得到较好的观察效果。根据上一章的内容,我们知道一个寄存器就是“延一拍”,所以该仿真波形和前面的 RTL 视图刚好对应,发现输入信号 in 和中间变量 in_reg、输出信号 out 的关系就是延迟一拍的关系,但是为什么只是延迟一拍呢?首先中间变量 in_reg 一定要等待复位被释放后且第一个时钟上升沿来到时才会被赋值为输入信号 in 的值,所以会比输入信号 in 延迟一拍,而中间变量 in_reg 和输出信号 out 却没有延迟一拍的关系了,而是在同一时刻同时变化的,因为我们使用的是阻塞赋值,也就是说只要赋值号右边的表达式的值有变化,赋值号左边的表达式的值也将立刻变化,所以我们最终看到的结果是中间变量 in_reg 和输出信号 out 是同时变化的。</p>
-<p><img src="https://bu.dusays.com/2023/10/02/651a0e314157d.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/10/02/651a0e2f3f595.png" alt="651a0e2f3f595.png"></p>
+<p><img src="https://bu.dusays.com/2023/10/02/651a0e30527f8.png" alt="651a0e30527f8.png"></p>
+<p>打开 ModelSim 执行仿真,仿真出来的波形如图 16-2 所示,我们让仿真运行了 500ns 即可得到较好的观察效果。根据上一章的内容,我们知道一个寄存器就是“延一拍”,所以该仿真波形和前面的 RTL 视图刚好对应,发现输入信号 in 和中间变量 in_reg、输出信号out 的关系就是延迟一拍的关系,但是为什么只是延迟一拍呢?首先中间变量 in_reg 一定要等待复位被释放后且第一个时钟上升沿来到时才会被赋值为输入信号 in 的值,所以会比输入信号 in 延迟一拍,而中间变量 in_reg 和输出信号 out 却没有延迟一拍的关系了,而是在同一时刻同时变化的,因为我们使用的是阻塞赋值,也就是说只要赋值号右边的表达式的值有变化,赋值号左边的表达式的值也将立刻变化,所以我们最终看到的结果是中间变量in_reg 和输出信号 out 是同时变化的。</p>
+<p><img src="https://bu.dusays.com/2023/10/02/651a0e314157d.png" alt="651a0e314157d.png"></p>
 <h2 id="163-非阻塞赋值">16.3 非阻塞赋值</h2>
 <hr>
 <p>下面的例子可以说明这个问题:</p>
-<p><img src="https://bu.dusays.com/2023/10/02/651a0e3227055.png" alt=""></p>
-<p><img src="https://bu.dusays.com/2023/10/02/651a0e330cd76.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/10/02/651a0e3227055.png" alt="651a0e3227055.png"></p>
+<p><img src="https://bu.dusays.com/2023/10/02/651a0e330cd76.png" alt="651a0e330cd76.png"></p>
 <p>为了进一步验证,我们通过 Testbench 进行仿真验证一下结果,并和阻塞赋值(=)的波形进行对比。</p>
-<p><img src="https://bu.dusays.com/2023/10/02/651a0e33f066a.png" alt=""></p>
-<p><img src="https://bu.dusays.com/2023/10/02/651a0e34cfbe3.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/10/02/651a0e33f066a.png" alt="651a0e33f066a.png"></p>
+<p><img src="https://bu.dusays.com/2023/10/02/651a0e34cfbe3.png" alt="651a0e34cfbe3.png"></p>
 <p>我们发现输入信号 in 和中间变量 in_reg 是延迟一拍的关系,而中间变量 in_reg 和输出信号 out 也是延迟一拍的关系,也就是输入信号 in 和输出信号 out 一共是延迟两拍的关系,为什么会这样呢?首先中间变量 in_reg 一定要等待复位被释放后且第一个时钟上升沿来到时才会被赋值为输入信号 in 的值,所以会比输入信号 in 延迟一拍,这是和阻塞赋值过程相同的,但是接下来就不一样了,因为我们使用的是非阻塞赋值,也就是说只要赋值号右边的表达式的值有变化,赋值号左边的表达式的值也不会立刻变化,需要等待下一次时钟沿到来时一起变化,所以我们最终看到的结果是输出信号 out 相对于输入信号是打了两拍的关系。</p>
-<p><img src="https://bu.dusays.com/2023/10/02/651a0e35c0bd8.png" alt=""></p>
-<p>那么到底谁对谁错呢?这个当然没有定论,但总有一点是没错的,如果你迷惑不清, 随便使用那其结果就不是我们可以预判的了,会出现各种问题,我们想要做的就是要完全掌控我们所写的代码。在我们使用的阻塞赋值的例子中,其实我们可以发现想要达到这种效果显然是多余的,也就是说我们完全可以不这么写也能实现这种效果,<!-- raw HTML omitted -->所以我们在编写时序逻辑电路的 RTL 代码时以第二种非阻塞赋值的写法为标准,在编写组合逻辑电路的 RTL 代码时以第一种阻塞赋值的写法为标准,这也是官方的推荐写法。<!-- raw HTML omitted --></p>
+<p><img src="https://bu.dusays.com/2023/10/02/651a0e35c0bd8.png" alt="651a0e35c0bd8.png"></p>
+<p>那么到底谁对谁错呢?这个当然没有定论,但总有一点是没错的,如果你迷惑不清, 随便使用那其结果就不是我们可以预判的了,会出现各种问题,我们想要做的就是要完全掌控我们所写的代码。在我们使用的阻塞赋值的例子中,其实我们可以发现想要达到这种效果显然是多余的,也就是说我们完全可以不这么写也能实现这种效果,<!-- raw HTML omitted -->所以我们在编写时序逻辑电路的 RTL 代码时以第二种非阻塞赋值的写法为标准,在编写组合逻辑电路的RTL 代码时以第一种阻塞赋值的写法为标准,这也是官方的推荐写法。<!-- raw HTML omitted --></p>
 <h2 id="164-章末总结">16.4 章末总结</h2>
 <hr>
 <p>本章主要讲解了阻塞赋值(=)与非阻塞赋值(&lt;=)会给设计的电路所产生的差异, 重新理解阻塞赋值与非阻塞赋值的原理和意义,能够使我们在以后的设计中正确设计出符合我们所想要表达的电路。
 阻塞赋值(=):该语句结束时就完成赋值操作,前面的语句没有完成前,后面的语句是不能执行的。<!-- raw HTML omitted -->在一个过程块内多个阻塞赋值语句是顺序执行的。<!-- raw HTML omitted -->
 非阻塞赋值(&lt;=):一条非阻塞赋值语句的执行是不会阻塞下一条语句的执行,也就是说在本条非阻塞赋值语句执行完毕前,下一条语句也可开始执行。<!-- raw HTML omitted -->非阻塞赋值语句在过程块结束时才完成赋值操作。在一个过程块内的多个非阻塞赋值语句是并行执行的。<!-- raw HTML omitted -->
 最后我们总结在编写 RTL 代码时推荐的一些规范,详细如下:</p>
-<p><img src="https://bu.dusays.com/2023/10/02/651a0e36da8c2.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/10/02/651a0e36da8c2.png" alt="651a0e36da8c2.png"></p>
 
 </content>
 <p>

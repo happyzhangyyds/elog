@@ -1,7 +1,7 @@
 ---
 password: ''
 icon: ''
-date: '2023-10-18'
+date: '2023-10-18 00:00:00'
 type: Post
 category: 璀璨星空
 slug: DeuM1
@@ -12,7 +12,7 @@ title: '[Deutsch] Module 1'
 status: Published
 cover: 'https://bu.dusays.com/2023/10/18/652fd58fe2eaa.png'
 urlname: d0af679f-6886-49b7-8558-2dc5b237ad62
-updated: '2023-11-19 16:39:00'
+updated: '2024-02-25 17:14:00'
 ---
 
 # Preface
