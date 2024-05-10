@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://hugo.matrixcore.life/images/favicon.png" />
+<title>第1讲 函数极限与连续 | Hugo ʕ•ᴥ•ʔ Bear Blog</title>
+<meta name="title" content="第1讲 函数极限与连续" />
+<meta name="description" content="高数强化第一讲" />
+<meta name="keywords" content="研数-高数强化,热门文章," />
+
+
+<meta property="og:title" content="第1讲 函数极限与连续" />
+<meta property="og:description" content="高数强化第一讲" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugo.matrixcore.life/yu101/" /><meta property="og:image" content="https://hugo.matrixcore.life/images/share.png"/><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-08-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-08-23T00:00:00+00:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://hugo.matrixcore.life/images/share.png"/>
+
+<meta name="twitter:title" content="第1讲 函数极限与连续"/>
+<meta name="twitter:description" content="高数强化第一讲"/>
+
+
+
+<meta itemprop="name" content="第1讲 函数极限与连续">
+<meta itemprop="description" content="高数强化第一讲"><meta itemprop="datePublished" content="2023-08-23T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-08-23T00:00:00+00:00" />
+<meta itemprop="wordCount" content="38"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="keywords" content="研数-高数强化,热门文章," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Hugo ʕ•ᴥ•ʔ Bear Blog</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<content>
+  <hr>
+<h1 id="知识结构marginnote3appnote642989ac-de0c-4ce6-9653-f4801ecb7b24">知识结构:<a href="marginnote3app://note/642989AC-DE0C-4CE6-9653-F4801ECB7B24"></a></h1>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a56e0afc9.png" alt=""></p>
+<h2 id="一函数极限的定义与使用">一、函数极限的定义与使用:</h2>
+<h3 id="1定义marginnote3appnote20cc957b-fe82-4cbe-91a0-5822e6eae267">1.定义:<a href="marginnote3app://note/20CC957B-FE82-4CBE-91A0-5822E6EAE267"></a></h3>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a56fa471f.png" alt=""></p>
+<h3 id="2-使用marginnote3appnotee2ab644b-e6d6-4a05-aed5-25610e96a228">2. 使用:<a href="marginnote3app://note/E2AB644B-E6D6-4A05-AED5-25610E96A228"></a></h3>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a5713970e.png" alt=""></p>
+<ul>
+<li>1.1:<a href="marginnote3app://note/C95F63E3-43B2-489C-889F-51EC3EFD5AEA"></a></li>
+</ul>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a5729fb7f.png" alt=""></p>
+<ul>
+<li>1.2:<a href="marginnote3app://note/6EDB20AC-521C-44AF-A8C0-25C3E5AAD802"></a></li>
+</ul>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a573e9031.png" alt=""></p>
+<ul>
+<li>1.3:<a href="marginnote3app://note/08A3CBDB-EC42-432A-A8BC-E9A417FBEFF3"></a></li>
+</ul>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a575813b2.png" alt=""></p>
+<ul>
+<li>1.4:<a href="marginnote3app://note/8A3E304D-69E8-46B9-AC2B-DC9573C68B65"></a></li>
+</ul>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a57728f81.png" alt=""></p>
+<ul>
+<li>1.5:<a href="marginnote3app://note/07D3B87E-2CD5-4A9C-8FD6-EA9CFDFF60B6"></a></li>
+</ul>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a578b9091.png" alt=""></p>
+<h2 id="二函数极限的计算marginnote3appnote06bda9c3-c2d5-42fc-8071-cabeb3a5be9e">二、函数极限的计算:<a href="marginnote3app://note/06BDA9C3-C2D5-42FC-8071-CABEB3A5BE9E"></a></h2>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a579e21e8.png" alt=""></p>
+<h3 id="1-化简先行marginnote3appnotef17bc438-e52c-41a1-8168-f48fe0850d03">1. 化简先行:<a href="marginnote3app://note/F17BC438-E52C-41A1-8168-F48FE0850D03"></a></h3>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a57b94394.png" alt=""></p>
+<ul>
+<li>1.6:</li>
+</ul>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a57d41763.png" alt=""></p>
+<ul>
+<li>1.7:<a href="marginnote3app://note/B2675284-2865-4C3F-8B39-561159755E73"></a></li>
+</ul>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a57eda2a8.png" alt=""></p>
+<ul>
+<li>1.8:<a href="marginnote3app://note/2D0C6D78-EF93-4164-B91A-AF7D53598E5A"></a></li>
+</ul>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a5807a1ea.png" alt=""></p>
+<ul>
+<li>1.9:<a href="marginnote3app://note/FC818E61-A948-40A8-9E84-7C8EA360C2D2"></a></li>
+</ul>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a5823f0e0.png" alt=""></p>
+<ul>
+<li>1.10:<a href="marginnote3app://note/264C9B72-D908-45B2-BFD9-F1B7233C690A"></a></li>
+</ul>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a5839c38a.png" alt=""></p>
+<ul>
+<li>1.11*:<a href="marginnote3app://note/9ED42E41-683F-4159-98CD-11FD08D3E213"></a></li>
+</ul>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a58592a18.png" alt=""></p>
+<h3 id="2洛必达法则marginnote3appnote645d9906-d240-421a-8702-a905e99614ce">2.洛必达法则:<a href="marginnote3app://note/645D9906-D240-421A-8702-A905E99614CE"></a></h3>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a5870cf2c.png" alt=""></p>
+<ul>
+<li>1.12:<a href="marginnote3app://note/6201B9F2-5906-4486-A3C4-04F1CAE0F3F0"></a></li>
+</ul>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a5886862e.png" alt=""></p>
+<h3 id="3泰勒公式marginnote3appnote9ea67234-6b29-4ad9-be3d-8953c17cec88">3.泰勒公式:<a href="marginnote3app://note/9EA67234-6B29-4AD9-BE3D-8953C17CEC88"></a></h3>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a58a9a9eb.png" alt=""></p>
+<ul>
+<li>1.11:<a href="marginnote3app://note/0F5C49C8-DBC1-4E0E-819B-C6CB87F76C9B"></a></li>
+</ul>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a58c6ceec.png" alt=""></p>
+<h3 id="4无穷小比阶marginnote3appnote3383e83d-d112-4c76-b4b2-132850306406">4.无穷小比阶:<a href="marginnote3app://note/3383E83D-D112-4C76-B4B2-132850306406"></a></h3>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a58ddc827.png" alt=""></p>
+<ul>
+<li>1.13:<a href="marginnote3app://note/22B93B81-0914-47AD-88ED-9243A861AC35"></a></li>
+</ul>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a58f8b871.png" alt=""></p>
+<h2 id="三函数极限的存在性">三、函数极限的存在性:</h2>
+<h3 id="1-具体型marginnote3appnote0058bca7-8b4c-4c04-9bc0-30e768d5a9bc">1. 具体型:<a href="marginnote3app://note/0058BCA7-8B4C-4C04-9BC0-30E768D5A9BC"></a></h3>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a590f117d.png" alt=""></p>
+<ul>
+<li>1.14:<a href="marginnote3app://note/5FFC9EE0-CF40-40F1-8BF1-C97EC4237712"></a></li>
+</ul>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a59273cdc.png" alt=""></p>
+<ul>
+<li>1.15:<a href="marginnote3app://note/DE9DCCFA-9141-45A3-8007-92FBBFAEA03C"></a></li>
+</ul>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a593c01a8.png" alt=""></p>
+<h3 id="2抽象型marginnote3appnotea1740aa5-0fa5-47fe-bb3d-453931f0e582">2.抽象型:<a href="marginnote3app://note/A1740AA5-0FA5-47FE-BB3D-453931F0E582"></a></h3>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a5950951d.png" alt=""></p>
+<ul>
+<li>1.16:<a href="marginnote3app://note/B11079BF-74D4-43DE-AF7A-4FDF39B80F24"></a></li>
+</ul>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a596ae6a3.png" alt=""></p>
+<h2 id="四函数极限的应用连续与间断">四、函数极限的应用连续与间断〕:</h2>
+<h3 id="连续与间断marginnote3appnote2ca7d73b-5082-4261-ba51-49af45f2d642">连续与间断:<a href="marginnote3app://note/2CA7D73B-5082-4261-BA51-49AF45F2D642"></a></h3>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a59821171.png" alt=""></p>
+<ul>
+<li>1.17:<a href="marginnote3app://note/30AB162F-E962-4587-AD13-0838B097BC93"></a></li>
+</ul>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a599ab21e.png" alt=""></p>
+<ul>
+<li>1.18:<a href="marginnote3app://note/E8A62929-156C-4C74-83C0-3AC1B79A8339"></a></li>
+</ul>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a59b28ddc.png" alt=""></p>
+<ul>
+<li>1.19:<a href="marginnote3app://note/17E2A5FD-3C8A-4E70-B068-1FEFE7EE5F38"></a></li>
+</ul>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a59c9dc97.png" alt=""></p>
+<ul>
+<li>1.20:<a href="marginnote3app://note/2466A613-1A5E-4992-81E8-AF7A9EC4DD4A"></a></li>
+</ul>
+<p><img src="https://bu.dusays.com/2023/08/23/64e5a59e2b1a1.png" alt=""></p>
+
+</content>
+<p>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%BC%BA%E5%8C%96/">#研数-高数强化</a>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/">#热门文章</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>

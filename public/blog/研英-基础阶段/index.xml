@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>研英-基础阶段 on Hugo ʕ•ᴥ•ʔ Bear Blog</title>
+    <link>https://hugo.matrixcore.life/blog/%E7%A0%94%E8%8B%B1-%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/</link>
+    <description>Recent content in 研英-基础阶段 on Hugo ʕ•ᴥ•ʔ Bear Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2020, Jane Doe.</copyright>
+    <lastBuildDate>Mon, 10 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo.matrixcore.life/blog/%E7%A0%94%E8%8B%B1-%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[考研英语] 阅读理解</title>
+      <link>https://hugo.matrixcore.life/xu/</link>
+      <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/xu/</guid>
+      <description>对考研英语阅读理解解题方法的一个汇总</description>
+    </item>
+    
+    <item>
+      <title>[考研英语] 完形填空</title>
+      <link>https://hugo.matrixcore.life/cong/</link>
+      <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/cong/</guid>
+      <description>对考研英语完形填空解题方法的一个汇总</description>
+    </item>
+    
+    <item>
+      <title>[考研英语] 语法基础</title>
+      <link>https://hugo.matrixcore.life/jing/</link>
+      <pubDate>Sun, 18 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/jing/</guid>
+      <description>考研英语语法汇总</description>
+    </item>
+    
+  </channel>
+</rss>

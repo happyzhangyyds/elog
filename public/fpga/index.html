@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://hugo.matrixcore.life/images/favicon.png" />
+<title>[野火] 第16章 阻塞赋值与非阻塞赋值 | Hugo ʕ•ᴥ•ʔ Bear Blog</title>
+<meta name="title" content="[野火] 第16章 阻塞赋值与非阻塞赋值" />
+<meta name="description" content="本章主要讲解了阻塞赋值(=)与非阻塞赋值(&lt;=)会给设计的电路所产生的差异" />
+<meta name="keywords" content="野火FPGA," />
+
+
+<meta property="og:title" content="[野火] 第16章 阻塞赋值与非阻塞赋值" />
+<meta property="og:description" content="本章主要讲解了阻塞赋值(=)与非阻塞赋值(&lt;=)会给设计的电路所产生的差异" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugo.matrixcore.life/fpga/" /><meta property="og:image" content="https://hugo.matrixcore.life/images/share.png"/><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-10-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-10-02T00:00:00+00:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://hugo.matrixcore.life/images/share.png"/>
+
+<meta name="twitter:title" content="[野火] 第16章 阻塞赋值与非阻塞赋值"/>
+<meta name="twitter:description" content="本章主要讲解了阻塞赋值(=)与非阻塞赋值(&lt;=)会给设计的电路所产生的差异"/>
+
+
+
+<meta itemprop="name" content="[野火] 第16章 阻塞赋值与非阻塞赋值">
+<meta itemprop="description" content="本章主要讲解了阻塞赋值(=)与非阻塞赋值(&lt;=)会给设计的电路所产生的差异"><meta itemprop="datePublished" content="2023-10-02T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-10-02T00:00:00+00:00" />
+<meta itemprop="wordCount" content="128"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="keywords" content="野火FPGA," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Hugo ʕ•ᴥ•ʔ Bear Blog</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<content>
+  <blockquote>
+<p>💡 特别鸣谢野火 FPGA 的教学与帮助！<br>
+本节相关的<a href="https://www.bilibili.com/video/BV17z411i7er?p=14&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab">教程 link</a><a href="https://www.bilibili.com/video/BV17z411i7er?p=9&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab"> </a>📌</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 第 16 章 阻塞赋值与非阻塞赋值:
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 16.0 理论学习:
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 16.1 章节导读:
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 16.2 阻塞赋值:
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 16.3 非阻塞赋值:
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 16.4 章末总结:
+</span></span></code></pre></div><h2 id="160-理论学习">16.0 理论学习</h2>
+<hr>
+<p>阻塞赋值的赋值号用“=”表示。为什么称这种赋值方式为阻塞赋值呢?因为对应的电路结构往往与触发沿没有关系,只与输入电平的变化有关系。阻塞赋值的操作可以认为是只有一个步骤的操作,即计算赋值号右边的语句并更新赋值号左边的语句,此时不允许有来自任何其他 Verilog 语句的干扰,直到现行的赋值完成时刻,即把当前赋值号右边的值赋值给左边的时刻完成后,它才允许下一条的赋值语句的执行。串行块(begin-end)中的各条阻塞型过程赋值语句将以它们在顺序块后的排列次序<strong>依次执行</strong>。阻塞型过程赋值语句的执行过程是:首先计算赋值号右边的值,然后立即将计算结果赋值给左边,赋值语句结束,变量值立即发生改变。阻塞的概念是指在同一个 always 块中,其后面的赋值语句从概念上是在前一句赋值语句结束后再开始下面的赋值。</p>
+<p>非阻塞赋值的赋值号用“&lt;=”表示。为什么称这种赋值方式为非阻塞赋值呢?这是因为对应的电路结构往往与触发沿有关系,只有在触发沿的时刻才能进行非阻塞赋值。非阻塞操作开始时计算非阻塞赋值符的赋值号右边的语句,赋值操作结束时刻才更新赋值号左边的语句,可以认为是两个步骤(赋值开始时刻和结束时刻)来完成非阻塞赋值。在计算非阻塞语句赋值号右边的语句和更新赋值号左边的语句期间,其他的 Verilog 语句包括其他的 Verilog 非阻塞赋值语句都能同时计算赋值号右边的语句和更新赋值号左边的语句,允许其他的 Verilog 语句同时进行操作。非阻塞赋值的操作可以看作为两个步骤的过程:在赋值开始时刻,计算赋值号右边的语句。在赋值结束时刻,更新赋值号左边的语句。注意:<!-- raw HTML omitted --><strong>非阻塞操作只能用于对寄存器类型变量进行赋值,因此只能用于“initial”和“always”块中,不允许用于连续赋值“assign”。</strong><!-- raw HTML omitted --></p>
+<h2 id="161-章节导读">16.1 章节导读</h2>
+<hr>
+<p>大家可能存在疑问,有时候用阻塞赋值而有时候用非阻塞赋值,所以阻塞赋值和非阻塞赋值的概念一直是初学者较为头疼的一件事情,因为大多数人往往因为文字概念的描述理解不透彻,说白了就是看那些文字的解释反而让我们更难理解,更容易被绕进去,产生懵的感觉。甚至有些很有经验的 逻辑设计工程师也不能完全正确地理解何时使用非阻塞赋值何时使用阻塞赋值才能设计出符合要求的电路,不明白在电路结构的设计中,即可综合风格的 Verilog 模块的设计中,究竟为什么还要用非阻塞赋值,以及符合 IEEE 标准的 Verilog 仿真器究竟如何来处理非阻塞赋值的仿真。
+本章的目的是尽可能地把阻塞和非阻塞赋值的含义和用法详细地解释清楚,并通过实例给出正确的用法,使之能够设计出符合我们意愿的的代码及功能。</p>
+<h2 id="162-阻塞赋值">16.2 阻塞赋值</h2>
+<hr>
+<p>下面的例子可以说明这个问题:</p>
+<p><img src="https://bu.dusays.com/2023/10/02/651a0e2d736f1.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/10/02/651a0e2e5cf35.png" alt=""></p>
+<p>为了进一步验证,我们做通过 Testbench 进行仿真验证一下结果。</p>
+<p><img src="https://bu.dusays.com/2023/10/02/651a0e2f3f595.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/10/02/651a0e30527f8.png" alt=""></p>
+<p>打开 ModelSim 执行仿真,仿真出来的波形如图 16-2 所示,我们让仿真运行了 500ns 即可得到较好的观察效果。根据上一章的内容,我们知道一个寄存器就是“延一拍”,所以该仿真波形和前面的 RTL 视图刚好对应,发现输入信号 in 和中间变量 in_reg、输出信号 out 的关系就是延迟一拍的关系,但是为什么只是延迟一拍呢?首先中间变量 in_reg 一定要等待复位被释放后且第一个时钟上升沿来到时才会被赋值为输入信号 in 的值,所以会比输入信号 in 延迟一拍,而中间变量 in_reg 和输出信号 out 却没有延迟一拍的关系了,而是在同一时刻同时变化的,因为我们使用的是阻塞赋值,也就是说只要赋值号右边的表达式的值有变化,赋值号左边的表达式的值也将立刻变化,所以我们最终看到的结果是中间变量 in_reg 和输出信号 out 是同时变化的。</p>
+<p><img src="https://bu.dusays.com/2023/10/02/651a0e314157d.png" alt=""></p>
+<h2 id="163-非阻塞赋值">16.3 非阻塞赋值</h2>
+<hr>
+<p>下面的例子可以说明这个问题:</p>
+<p><img src="https://bu.dusays.com/2023/10/02/651a0e3227055.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/10/02/651a0e330cd76.png" alt=""></p>
+<p>为了进一步验证,我们通过 Testbench 进行仿真验证一下结果,并和阻塞赋值(=)的波形进行对比。</p>
+<p><img src="https://bu.dusays.com/2023/10/02/651a0e33f066a.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/10/02/651a0e34cfbe3.png" alt=""></p>
+<p>我们发现输入信号 in 和中间变量 in_reg 是延迟一拍的关系,而中间变量 in_reg 和输出信号 out 也是延迟一拍的关系,也就是输入信号 in 和输出信号 out 一共是延迟两拍的关系,为什么会这样呢?首先中间变量 in_reg 一定要等待复位被释放后且第一个时钟上升沿来到时才会被赋值为输入信号 in 的值,所以会比输入信号 in 延迟一拍,这是和阻塞赋值过程相同的,但是接下来就不一样了,因为我们使用的是非阻塞赋值,也就是说只要赋值号右边的表达式的值有变化,赋值号左边的表达式的值也不会立刻变化,需要等待下一次时钟沿到来时一起变化,所以我们最终看到的结果是输出信号 out 相对于输入信号是打了两拍的关系。</p>
+<p><img src="https://bu.dusays.com/2023/10/02/651a0e35c0bd8.png" alt=""></p>
+<p>那么到底谁对谁错呢?这个当然没有定论,但总有一点是没错的,如果你迷惑不清, 随便使用那其结果就不是我们可以预判的了,会出现各种问题,我们想要做的就是要完全掌控我们所写的代码。在我们使用的阻塞赋值的例子中,其实我们可以发现想要达到这种效果显然是多余的,也就是说我们完全可以不这么写也能实现这种效果,<!-- raw HTML omitted -->所以我们在编写时序逻辑电路的 RTL 代码时以第二种非阻塞赋值的写法为标准,在编写组合逻辑电路的 RTL 代码时以第一种阻塞赋值的写法为标准,这也是官方的推荐写法。<!-- raw HTML omitted --></p>
+<h2 id="164-章末总结">16.4 章末总结</h2>
+<hr>
+<p>本章主要讲解了阻塞赋值(=)与非阻塞赋值(&lt;=)会给设计的电路所产生的差异, 重新理解阻塞赋值与非阻塞赋值的原理和意义,能够使我们在以后的设计中正确设计出符合我们所想要表达的电路。
+阻塞赋值(=):该语句结束时就完成赋值操作,前面的语句没有完成前,后面的语句是不能执行的。<!-- raw HTML omitted -->在一个过程块内多个阻塞赋值语句是顺序执行的。<!-- raw HTML omitted -->
+非阻塞赋值(&lt;=):一条非阻塞赋值语句的执行是不会阻塞下一条语句的执行,也就是说在本条非阻塞赋值语句执行完毕前,下一条语句也可开始执行。<!-- raw HTML omitted -->非阻塞赋值语句在过程块结束时才完成赋值操作。在一个过程块内的多个非阻塞赋值语句是并行执行的。<!-- raw HTML omitted -->
+最后我们总结在编写 RTL 代码时推荐的一些规范,详细如下:</p>
+<p><img src="https://bu.dusays.com/2023/10/02/651a0e36da8c2.png" alt=""></p>
+
+</content>
+<p>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E9%87%8E%E7%81%ABfpga/">#野火FPGA</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://hugo.matrixcore.life/images/favicon.png" />
+<title>[高数基础]  第一讲 高等数学预备知识 | Hugo ʕ•ᴥ•ʔ Bear Blog</title>
+<meta name="title" content="[高数基础]  第一讲 高等数学预备知识" />
+<meta name="description" content="衔接高中与大学之间的基础知识" />
+<meta name="keywords" content="研数-高数基础,热门文章," />
+
+
+<meta property="og:title" content="[高数基础]  第一讲 高等数学预备知识" />
+<meta property="og:description" content="衔接高中与大学之间的基础知识" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugo.matrixcore.life/yu001/" /><meta property="og:image" content="https://hugo.matrixcore.life/images/share.png"/><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-08-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-08-10T00:00:00+00:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://hugo.matrixcore.life/images/share.png"/>
+
+<meta name="twitter:title" content="[高数基础]  第一讲 高等数学预备知识"/>
+<meta name="twitter:description" content="衔接高中与大学之间的基础知识"/>
+
+
+
+<meta itemprop="name" content="[高数基础]  第一讲 高等数学预备知识">
+<meta itemprop="description" content="衔接高中与大学之间的基础知识"><meta itemprop="datePublished" content="2023-08-10T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-08-10T00:00:00+00:00" />
+<meta itemprop="wordCount" content="40"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="keywords" content="研数-高数基础,热门文章," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Hugo ʕ•ᴥ•ʔ Bear Blog</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<content>
+  <p>💡 自您所看到的这个系列的第一篇文章起，都是对张宇老师《基础 30 讲》的整理学习和汇总，我对张宇老师的帮助致以崇高的敬意！🌹🌹🌹</p>
+<p>写在前面：整理出来方便索引，相当于这里提供基础的土壤，在这基础上，记录与之相关的灵感！</p>
+<p>另外，由于时间跨度拉得比较长，在对新式学习方法的探索当中，不免遗失了之前的笔记，所以在前面几章的笔记不是很详细。</p>
+<p>在这一章里，初次加载时间较长，需要耐心等待 🌹</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span> <span style="color:#ae81ff">010</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">-</span> <span style="color:#ae81ff">011</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">-</span> <span style="color:#ae81ff">0111</span><span style="color:#a6e22e">函数概念与特性</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">-</span> <span style="color:#ae81ff">012</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">-</span> <span style="color:#ae81ff">0121</span><span style="color:#a6e22e">基本初等函数图象</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">-</span> <span style="color:#ae81ff">0122</span><span style="color:#a6e22e">图象变换</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">-</span> <span style="color:#ae81ff">0123</span><span style="color:#a6e22e">极坐标系下图象</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">-</span> <span style="color:#ae81ff">013</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">-</span> <span style="color:#ae81ff">0131</span><span style="color:#a6e22e">常用基础知识</span>
+</span></span></code></pre></div><h1 id="010">010</h1>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/650053397b0f1.png" alt=""></p>
+<h1 id="011">011</h1>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/6500533e9aed2.png" alt=""></p>
+<h2 id="0111-函数概念与特性">0111 函数概念与特性</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/65005349220df.png" alt=""></p>
+<h1 id="012">012</h1>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/650053789d245.png" alt=""></p>
+<h2 id="0121-基本初等函数图象">0121 基本初等函数图象</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/6500539b3b5e2.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/650053ba6a75b.png" alt=""></p>
+<h2 id="0122-图象变换">0122 图象变换</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/650053c69b26b.png" alt=""></p>
+<h2 id="0123-极坐标系下图象">0123 极坐标系下图象</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/650053ca78c05.png" alt=""></p>
+<h1 id="013">013</h1>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/650053cd13684.png" alt=""></p>
+<h2 id="0131-常用基础知识">0131 常用基础知识</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/650053d31e717.png" alt=""></p>
+
+</content>
+<p>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/">#研数-高数基础</a>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/">#热门文章</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>

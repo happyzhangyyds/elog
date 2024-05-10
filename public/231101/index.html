@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://hugo.matrixcore.life/images/favicon.png" />
+<title>[种颗种子] 启发式的数据库操作 | Hugo ʕ•ᴥ•ʔ Bear Blog</title>
+<meta name="title" content="[种颗种子] 启发式的数据库操作" />
+<meta name="description" content="我们并不单纯是对于海量数据进行机械式地存储和提取，我们更像是运用一种生成式的方式来表达我们自己的观点。" />
+<meta name="keywords" content="情绪表达," />
+
+
+<meta property="og:title" content="[种颗种子] 启发式的数据库操作" />
+<meta property="og:description" content="我们并不单纯是对于海量数据进行机械式地存储和提取，我们更像是运用一种生成式的方式来表达我们自己的观点。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugo.matrixcore.life/231101/" /><meta property="og:image" content="https://hugo.matrixcore.life/images/share.png"/><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-11-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-11-01T00:00:00+00:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://hugo.matrixcore.life/images/share.png"/>
+
+<meta name="twitter:title" content="[种颗种子] 启发式的数据库操作"/>
+<meta name="twitter:description" content="我们并不单纯是对于海量数据进行机械式地存储和提取，我们更像是运用一种生成式的方式来表达我们自己的观点。"/>
+
+
+
+<meta itemprop="name" content="[种颗种子] 启发式的数据库操作">
+<meta itemprop="description" content="我们并不单纯是对于海量数据进行机械式地存储和提取，我们更像是运用一种生成式的方式来表达我们自己的观点。"><meta itemprop="datePublished" content="2023-11-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-11-01T00:00:00+00:00" />
+<meta itemprop="wordCount" content="52"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="keywords" content="情绪表达," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Hugo ʕ•ᴥ•ʔ Bear Blog</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<content>
+  <h1 id="前言">前言</h1>
+<hr>
+<p>在<a href="https://matrixcore.top/article/231025">《癸卯年九月十一小记》</a>这篇文章当中，的倒数第二和第三段，我提出了这样的一个观点，原来并不存在的条件双方，在机缘巧合的情况下被组合在了一次，产生了新的不同的效果。</p>
+<p>同时在<a href="https://matrixcore.top/article/231022">《近期数据归档及体会》</a>这篇文章中，我提出了“日志文件的设想”，我引用以下表述：</p>
+<blockquote>
+<p><em>我们的大脑就像是地球上的蚂蚁，而各式各样的记忆和技能如同各种各样的地形，所以我们的灵感会被快速遗忘，我们瞬时记忆，很大来自于潜意识，长期记忆，以及短期大量重复记忆。<br>
+如果我们没有请求数据库的操作，那么这些记忆，有价值的记忆会被遗忘。即使有请求数据库的操作，如果延时过多，或者负载冲击，也会导致数据库中“精灵”的死亡，精灵的生命周期取决于我们对于数据库的执行策略和环境干扰，即上述的联想拦截，在用户端发送请求时，数据会跨越很多条线路，做一个形象的比喻，我们就像是地球上忙碌的蚂蚁。</em></p>
+</blockquote>
+<p>今天我着重对“精灵”的概念做一些深入的解析，我所认为的精灵是一种碰撞和组合形式，您可以将其想象为信号中的 δ 脉冲，这是那些能够刺激我们兴趣的事情。每一个精灵都在以其自身的方式帮助我们进入心流的状态，但是每一个精灵都有其生命周期，所以在博客设计和演变的过程中，我一直在思考一个最小稳定系统。</p>
+<h1 id="正文">正文</h1>
+<hr>
+<p>由于在我们生活中存在数以万计的干扰，我们每天将会面对海量的变量，我们需要上课，需要对我们的大脑进行数据库的复杂读写工作，诚然有一些操作并不符合我们主观的意愿，但是正因为如此，才衬托出碎片和离子时代中最小稳定系统和过程的重要性。要么我们只能在夸克级别的数据流中，消耗自己宝贵的生命，用低价值的麻醉进行买椟还珠。</p>
+<h2 id="我并不知道我会做出什么但是我知道我在做什么">我并不知道我会做出什么，但是我知道我在做什么</h2>
+<hr>
+<p>现在我在写作的时候，我不会刻意去构思一篇文章的所有架构，如同完成一篇标准的应试文章一样，这不符合我的个性。我的大部分的动力来源，基本上仅仅是由一些有趣的想法驱动， 比如我遇到了某个有趣的精灵，值得我去记录下来，就是这样简单的行为。</p>
+<p>我必须先进行阐述明白什么是最小稳定系统，在<a href="https://matrixcore.top/article/improve">《博客优化》</a>这篇文章中，我进行了更为细致的阐述。</p>
+<blockquote>
+<p><em>谈谈我的博客的设计思路， 基于 notion 架构下的博客，我是这么理解的，我将展示的界面仅仅设置为五个，分别以具有特殊意义的名字进行命名，这个五个界面，分别象征着一个完整的工作流所应该具备的几个基本步骤，导向-输入-存储-输出-反馈。</em></p>
+</blockquote>
+<p>我觉得做一件事情的时候，哪怕是一件很小的事情的时候，我更愿意遵循以上的步骤，从导向到反馈，我将其视为一个完整的生命周期，我们需要像自然语言处理技术那里索取相对应的经验。</p>
+<p>我们并不单纯是对于海量数据的存储和提取，我们更像是运用一种生成式的方式来表达我们自己的观点。</p>
+<h2 id="萤火虫">萤火虫</h2>
+<hr>
+<p>小时候我们读《拇指姑娘》，还有古代神话里的田螺姑娘，您也可以想象您小时候在农村河边抓过的萤火虫。</p>
+<p>正因为，我们醒来的时间是有限的，比如，今天早上我是 7:10 醒来，我晚上大概 23:30 开始睡觉，那么我这一天醒来的时间可以被视为一块区域，您也可以看作是一张白纸，或者一个表格，以任何您喜欢的比喻都可以。</p>
+<p>在这一天，我也许不会有特别明确的目标，于是我去搜索近三天的数据库，哦，然后我知道我必须吃早饭，然后去上课。上课需要占用多少的固定时长，在这段时间内我希望达到什么样的效果，这一切的您需要根据您的感觉做出对应的评估。</p>
+<p>就我上午的体验来说，主要学习了飞机通信系统的组成构建，了解了 P8 板上各个部件的作用，进行了飞机通信系统的调试，能够接收到塔台的信号。然后我饿得很快，对于我来讲，我很渴望吃饭，也很渴望睡觉。</p>
+<p>上午我并没有遇到属于我的精灵，下午和晚上的时候才慢慢遇到，首先是阅读《javascript 百炼成仙》，我找到了自己感兴趣的事情，晚上看了看 up 主：<a href="https://www.bilibili.com/video/BV1Sj411a74k/?spm_id_from=333.999.top_right_bar_window_history.content.click&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab">小梅 vlog</a>的视频，仿佛重新回到了安宁的农村生活。看到老石分享的<a href="https://t.bilibili.com/858969699475521558">视频</a>，最开始我是打算分享到朋友圈，但是一想，不如一起写到今天的总结里。</p>
+<p>所以，每天写总结的过程，你也可以理解为抓萤火虫的过程，你需要知道自己喜欢哪些事情，哪些事情对你比较有启发，以及如何制衡生活中的其他事情，并做好这些事。</p>
+<h2 id="用更好的方式表达精灵的嵌套逻辑">用更好的方式表达精灵的嵌套逻辑</h2>
+<hr>
+<p>您可以选择总结的范围，比如专注于某一个特定主题的书写，或者采用更符合时间线的方式，对整个的生活轨迹做具体的梳理，取决于您对于生活中的其他事情是选择直接忘记，还是做出合适的归档。</p>
+<p>那些被塞进脑袋里的知识，之所以不进脑子，大概率是被忘掉了。</p>
+<p>正如我上文写到的，如果我不回忆今天的上课内容，大概率在这门课结课后的数个月就忘掉了一大半。</p>
+<p>但如果您希望用更好的方式表达您所遇到的精灵的嵌套逻辑，我想您需要花更多的心思，正如您以及学会了折千纸鹤，但未必会折玫瑰千纸鹤。二者的技术难度和带来的震撼是不一样的。</p>
+<p>这就需要更多的能量和更高的专注度，同时您还需要在实践的过程中开发出属于自己思考逻辑的独特算法。</p>
+<h2 id="明确阅读与内化的区别和联系">明确阅读与内化的区别和联系</h2>
+<hr>
+<p>当我们在阅读一件作品或者在欣赏一部艺术品的时候，由于参与条件的双方都在释放能量，所以在单位时间内的能量冲击会更大，带来的体验也更好，但是听懂未必能内化并且讲出来，这是非常值得思考的问题，同样这也把学习的过程往更加高阶的方向去引导，在当下，这确实是很高的要求，“高山仰止，景行行止”。我进行如下<a href="https://www.zhihu.com/question/24801258">引用</a>：</p>
+<blockquote>
+<p><em>这句话原出于《诗经·小雅·车舝》。后司马迁《史记·孔子世家》专门引以赞美孔子：“《诗》有之：‘高山仰止，景行行止。&lsquo;虽不能至，然心向往之。”这使得本来的意思发生了变化。<br>
+《诗经·小雅·甫田之什·车辖》原句：高山仰止，景行行止。四牡騑騑，六辔如琴。觏尔新婚，以慰我心。<br>
+意思正如宋朱熹解释：“仰，瞻望也。景行，大道也。高山则可仰，景行则可行。”朱熹的“高山”，就说是人们平时仰望的高山，没有什么喻义；而“景行”是大道、大路，“景行行止”是说大道可供人们行走。<br>
+结合诗经通篇，就是喜气洋洋的新郎官在快乐地吟唱娶亲之事，所以这句话的本来意思就是——抬头仰望高高山，快快奔行在大道。四匹马儿跑不停，六条缰绳连如琴。见你车上新娘子，安慰我心暖如春。<br>
+直到司马迁赞美孔子：高山仰止，景行行止。虽不能至，然心向往之。这就与道德品行挂起钩来了，正如汉郑玄注解说：“古人有高德者则慕仰之，有明行者则而行之。”郑把“高山”比喻崇高的道德，“仰”是慕仰；“景行”是“明行”，即光明正大的行为，是人们行动的准则。这样，司马迁这句话的意思就是——__高尚品德如巍巍高山让人仰慕，光明言行似通天大道使人遵循。虽然不能达到（上面）这样的境界，但心里也知道了努力的方向。</em></p>
+</blockquote>
+<h1 id="总结">总结</h1>
+<hr>
+<p>今天的总结暂时先到这里，在实践的过程中我们还需要不断去优化和修正我们自身的理论，保持有趣的灵魂，向内心朝拜。</p>
+
+</content>
+<p>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/">#情绪表达</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>

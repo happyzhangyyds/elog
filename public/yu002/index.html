@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://hugo.matrixcore.life/images/favicon.png" />
+<title>[高数基础] 第二讲 数列极限 | Hugo ʕ•ᴥ•ʔ Bear Blog</title>
+<meta name="title" content="[高数基础] 第二讲 数列极限" />
+<meta name="description" content="数列极限的基本知识" />
+<meta name="keywords" content="研数-高数基础,热门文章," />
+
+
+<meta property="og:title" content="[高数基础] 第二讲 数列极限" />
+<meta property="og:description" content="数列极限的基本知识" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugo.matrixcore.life/yu002/" /><meta property="og:image" content="https://hugo.matrixcore.life/images/share.png"/><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-08-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-08-10T00:00:00+00:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://hugo.matrixcore.life/images/share.png"/>
+
+<meta name="twitter:title" content="[高数基础] 第二讲 数列极限"/>
+<meta name="twitter:description" content="数列极限的基本知识"/>
+
+
+
+<meta itemprop="name" content="[高数基础] 第二讲 数列极限">
+<meta itemprop="description" content="数列极限的基本知识"><meta itemprop="datePublished" content="2023-08-10T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-08-10T00:00:00+00:00" />
+<meta itemprop="wordCount" content="33"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="keywords" content="研数-高数基础,热门文章," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Hugo ʕ•ᴥ•ʔ Bear Blog</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<content>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 020
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 0201 引言
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 0202 极限定义
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 0203 收敛数列性质
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 0204 极限运算规则
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 0205 夹逼准则
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 0206 单调有界准则
+</span></span></code></pre></div><h1 id="020">020</h1>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/65005db68542c.png" alt=""></p>
+<h2 id="0201-引言">0201 引言</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/65005db87af21.png" alt=""></p>
+<h2 id="0202-极限定义">0202 极限定义</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/65005dccc37ab.png" alt=""></p>
+<h2 id="0203-收敛数列性质">0203 收敛数列性质</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/65005dceddd2a.png" alt=""></p>
+<h2 id="0204-极限运算规则">0204 极限运算规则</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/65005dd066a1e.png" alt=""></p>
+<h2 id="0205-夹逼准则">0205 夹逼准则</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/65005dd17d88f.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/65005dd2c3671.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/65005dd3f1cba.png" alt=""></p>
+<h2 id="0206-单调有界准则">0206 单调有界准则</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/65005dd54baa4.png" alt=""></p>
+
+</content>
+<p>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/">#研数-高数基础</a>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/">#热门文章</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>

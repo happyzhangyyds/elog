@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://hugo.matrixcore.life/images/favicon.png" />
+<title>[自动飞控] 第3章 飞行控制系统分析 | Hugo ʕ•ᴥ•ʔ Bear Blog</title>
+<meta name="title" content="[自动飞控] 第3章 飞行控制系统分析" />
+<meta name="description" content="飞机姿态、轨迹控制、空速马赫数、自动飞行性能、电/光传操作系统" />
+<meta name="keywords" content="近期规划,自动飞控," />
+
+
+<meta property="og:title" content="[自动飞控] 第3章 飞行控制系统分析" />
+<meta property="og:description" content="飞机姿态、轨迹控制、空速马赫数、自动飞行性能、电/光传操作系统" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugo.matrixcore.life/afcs03/" /><meta property="og:image" content="https://hugo.matrixcore.life/images/share.png"/><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-09-24T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-09-24T00:00:00+00:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://hugo.matrixcore.life/images/share.png"/>
+
+<meta name="twitter:title" content="[自动飞控] 第3章 飞行控制系统分析"/>
+<meta name="twitter:description" content="飞机姿态、轨迹控制、空速马赫数、自动飞行性能、电/光传操作系统"/>
+
+
+
+<meta itemprop="name" content="[自动飞控] 第3章 飞行控制系统分析">
+<meta itemprop="description" content="飞机姿态、轨迹控制、空速马赫数、自动飞行性能、电/光传操作系统"><meta itemprop="datePublished" content="2023-09-24T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-09-24T00:00:00+00:00" />
+<meta itemprop="wordCount" content="334"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="keywords" content="近期规划,自动飞控," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Hugo ʕ•ᴥ•ʔ Bear Blog</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<content>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>第 3 章 飞行控制系统分析: - 3.1 概述: - 3.1.1 典型自动飞行控制系统的工作回路: - 3.1.2 典型自动飞行控制系统的分类: - 3.2 飞机的姿态控制系统: - 3.2.1 姿态控制系统的构成与工作原理: - 2. 积分式自动驾驶仪: - 3. 比例加积分式自动驾驶仪: - 3.2.2 飞机纵向姿态稳定与控制: - 3.2.3 飞机横侧向姿态稳定与控制: - 1. 横侧向姿态的稳定和控制的基本方式: - 1)通过方向舵实现水平转弯的侧向驾驶仪: - 2)通过副翼修正航向而用方向舵削弱荷兰滚的方案将上面自动驾驶仪副翼通道的航向控制律修改: - 2. 协调转弯控制: - 1)协调转弯: - 2)协调转弯飞行时自动驾驶仪的控制规律: - 3) 协调转弯的纵向控制: - 3.3 飞机的轨迹控制系统: - 3.3.1 飞行高度的稳定与控制: - 1.工作原理: - 2.高度稳定系统结构图的建立: - 3.3.2 下滑波束导引系统: - 1. 工作原理: - 2.建立下滑波束导引系统结构图: - 3.3.3 自动拉平着陆系统: - 3.3.4 飞机侧向偏离的自动控制: - 1. 飞机侧向偏离运动方程的简化: - 2. 侧向偏离的控制规律: - 3.4 空速和马赫数的保持与控制: - 3.4.1 飞行速度保持与控制的作用: - 1. 飞行速度保持与控制系统能保证飞机在低动压平飞时,仍具有速度的稳定性: - 2. 飞行速度的保持与控制是航迹控制的必要前提: - 3. 当进行跨声速飞行时能够保持速度稳定: - 3.4.2 速度保持与控制系统的构成与工作原理: - 1. 控制速度的两种常用方案: - 2. 适用于速度控制系统的飞机近似方程: - 3.4.3 控制速度的作用: - 1. 速度控制系统可保证飞机在低动压状态平飞时,仍具有速度的稳定性: - 2. 速度控制是航迹控制的必要前提: - 3. 进行跨声速飞行时,能够保持速度稳定: - 3.5 自动飞行控制系统基本性能要求: - 1. 姿态角自动控制系统的精度及瞬态响应: - 2. 角速度控制系统及增稳阻尼系统的技术要求: - 3. 轨迹(中心)自动控制系统的精度与瞬态响应要求: - 3.6 电/光传操纵系统: - 3.6.1 电传操纵系统(余度舵机): - 3.6.2 光传操纵系统: - 1. 光传操纵系统的基本组成和原理: - 2. 光传操纵系统的分类: - 3. 光传操纵系统的优点: - 4. 实例验证:
+</span></span></code></pre></div><h1 id="31-概述">3.1 概述</h1>
+<hr>
+<p>一个典型的自动飞行控制系统包括五大功能 : 自动驾驶 ( / A P ) 、 飞行指引 ( / F D ) 、自动油门( ATS )、安定面配平、偏航阻尼( / Y D )。大部分现代飞机都装有飞行管理计算机系统(Flight Management Computer System,FMCS )。自动飞行控制系统能接收并执行 FMCS 的飞行制导指令,按照飞行计划完成整个自动飞行过程动飞行控制系统功能如图 3.1 所示。</p>
+<p><img src="https://bu.dusays.com/2023/09/24/651032be321e5.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/24/651032bf59c5f.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/24/651032c06c9f7.png" alt=""></p>
+<h2 id="311-典型自动飞行控制系统的工作回路">3.1.1 典型自动飞行控制系统的工作回路</h2>
+<hr>
+<p>典型自动飞行控制系统一般由四个反馈回路构成,即同步回路、舵回路、稳定回路和控制(制导)回路。自动驾驶仪系统是自动飞行控制系统的典型子系统,下面以自动驾驶仪系统工作回路为例加以说明。</p>
+<h2 id="312-典型自动飞行控制系统的分类">3.1.2 典型自动飞行控制系统的分类</h2>
+<hr>
+<p>根据飞行控制系统的功能和作用,基本的自动飞行控制系统包括阻尼器(Damper)、增稳系统(Stability Augmentation Systems, SAS)、控制增稳系统(Control Augmentation Systems, CAS)和自动驾驶仪(Autopilot)等。</p>
+<p><img src="https://bu.dusays.com/2023/09/24/651032c18a096.png" alt=""></p>
+<h1 id="32-飞机的姿态控制系统">3.2 飞机的姿态控制系统</h1>
+<hr>
+<h2 id="321-姿态控制系统的构成与工作原理">3.2.1 姿态控制系统的构成与工作原理</h2>
+<hr>
+<p>下面主要分析讨论自动驾驶仪(Autopilot)在姿态控制过程中的工作原理。其中包括比例式自动驾驶仪 、 积分式自动驾驶仪和比例加积分式自动驾驶仪 (均衡反馈式自动驾驶仪) 。</p>
+<p><img src="https://bu.dusays.com/2023/09/24/651032c281d69.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/24/651032c378b24.png" alt=""></p>
+<p><strong>2)工作原理</strong></p>
+<p><img src="https://bu.dusays.com/2023/09/24/651032c494422.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/24/651032c58d1dd.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/24/651032c69b42f.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/24/651032c7b266f.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/24/651032c8b8b91.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/24/651032c9c13bc.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/24/651032cae68aa.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/24/651032cc17bfc.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/24/651032cd30438.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/24/651032ce62f77.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/24/6510357ebfda6.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/24/651032d09c55f.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/24/651032d1b8900.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/24/651032d2bee17.png" alt=""></p>
+<h3 id="2-积分式自动驾驶仪"><strong>2. 积分式自动驾驶仪</strong></h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/26/6512a2975d298.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/26/6512a29858ffb.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/26/6512a29970edb.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/26/6512a29a65daf.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/26/6512a29b60c73.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/26/6512a29c474b9.png" alt=""></p>
+<h3 id="3-比例加积分式自动驾驶仪"><strong>3. 比例加积分式自动驾驶仪</strong></h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/26/6512a29d437b0.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/26/6512a29e53c80.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/26/6512a24eeb00c.png" alt=""></p>
+<h2 id="322-飞机纵向姿态稳定与控制">3.2.2 飞机纵向姿态稳定与控制</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/26/6512a29f85934.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/26/6512a2a09ab94.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/26/6512a2a195599.png" alt=""></p>
+<h2 id="323-飞机横侧向姿态稳定与控制">3.2.3 飞机横侧向姿态稳定与控制</h2>
+<hr>
+<h3 id="1-横侧向姿态的稳定和控制的基本方式">1. 横侧向姿态的稳定和控制的基本方式</h3>
+<hr>
+<p>1)通过方向舵实现水平转弯的侧向驾驶仪</p>
+<p>2)通过副翼修正航向而用方向舵削弱荷兰滚的方案将上面自动驾驶仪副翼通道的航向控制律修改</p>
+<h3 id="2-协调转弯控制">2. 协调转弯控制</h3>
+<hr>
+<p>为了克服侧滑角的出现,必须研究侧向转弯过程中的协调控制问题。</p>
+<p><strong>1)协调转弯</strong></p>
+<p><img src="https://bu.dusays.com/2023/10/08/6522a450bb448.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/10/08/6522a45218332.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/10/08/6522a45347e5d.png" alt=""></p>
+<p><strong>2)协调转弯飞行时自动驾驶仪的控制规律</strong></p>
+<ol>
+<li>协调转弯的纵向控制</li>
+</ol>
+<p><img src="https://bu.dusays.com/2023/10/08/6522a454c73b2.png" alt=""></p>
+<h1 id="33-飞机的轨迹控制系统">3.3 飞机的轨迹控制系统</h1>
+<hr>
+<p>轨迹控制 (制导) 系统是在姿态 (角运动) 控制系统的基础上构成的。轨迹控制 (制导) 系统的反馈回路可以在飞行器内部闭合,也可以由飞行器通过地面设备进行闭合。</p>
+<h2 id="331-飞行高度的稳定与控制">3.3.1 飞行高度的稳定与控制</h2>
+<hr>
+<p>根据飞行阶段的不同要求和系统构型不同,通常将飞行高度的稳定与控制划分为巡航、下滑波束引导、拉平三个典型阶段。</p>
+<h3 id="1工作原理">1.工作原理</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/10/08/6522a455d988a.png" alt=""></p>
+<p>由于角稳定系统在常值干扰力矩(例如,垂直风等)的干扰下存在姿态角的静差,因而导致高度飘移,所以不能直接应用于飞行高度的稳定与控制系统中。因此,在飞行高度的稳定与控制系统中需要直接测量飞行高度,使用高度传感器,如气压式高度表或无线电高度表等测高仪器,根据高度差的信息来直接控制飞机的飞行姿态,从而改变航迹倾角,以实现对飞机高度的闭环稳定和控制。</p>
+<h3 id="2高度稳定系统结构图的建立">2.高度稳定系统结构图的建立</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/10/08/6522a456eb9a6.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/10/08/6522a45800957.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/10/08/6522a45902475.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/10/08/6522a45a46f39.png" alt=""></p>
+<h2 id="332-下滑波束导引系统">3.3.2 下滑波束导引系统</h2>
+<hr>
+<h3 id="1-工作原理">1. 工作原理</h3>
+<hr>
+<p>为了实现全天候飞行,保证能在恶劣气象情况、无目视基准的条件下实现自动着陆,下滑波束导引系统是现代高性能飞机必不可少的机载系统。</p>
+<ol>
+<li>
+<p>着陆过程:一般包括定高、下滑、拉平和滑跑等阶段着陆过程如图 3.27 所示</p>
+<p><img src="https://bu.dusays.com/2023/10/08/6522a45b424df.png" alt=""></p>
+</li>
+<li>
+<p>实现下滑波束导引的地面设备和机载设备</p>
+<p><img src="https://bu.dusays.com/2023/10/08/6522a45c6c822.png" alt=""></p>
+</li>
+</ol>
+<h3 id="2建立下滑波束导引系统结构图">2.建立下滑波束导引系统结构图</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/10/08/6522a45db1845.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/10/08/6522a45ec00d0.png" alt=""></p>
+<h2 id="333-自动拉平着陆系统">3.3.3 自动拉平着陆系统</h2>
+<hr>
+<h3 id="1拉平轨迹">1.拉平轨迹</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/10/08/6522a45ff2fff.png" alt=""></p>
+<p>按照拉平飞行距离公式(3-67),如果给定起始拉平高度 0h 、容许接地速度 1h 和飞行速度 0 V 以及时间常数 ,那么飞机在拉平飞行段的飞行距离 l 就可以计算出来,并可以作为选择降落跑道的参考因素。</p>
+<h2 id="334-飞机侧向偏离的自动控制">3.3.4 飞机侧向偏离的自动控制</h2>
+<hr>
+<p>而侧向偏离控制系统, 则是以偏航角和滚转角控制系统为内回路构成的 , 一般采用飞机倾斜转弯方式来修正和控制侧向偏离。对于侧向轨迹控制系统而言,航向和滚转两个通道的协调控制方法与侧向角运动的控制方法是一致的。</p>
+<p>由于在一般情况下侧向偏离控制是由飞机倾斜转弯来实现的,那么,依据转弯的方式可将侧向偏离控制律的方案分为两大类: (1) 利用倾斜转弯(Bank-to-Turn,BTT)的形式,主要是以副翼和方向舵来实现侧向偏离控制的。
+(2) 通过侧滑转弯(Skid-to-Turn,STT)实现侧向偏离控制。侧滑转弯形式通常应用在具有轴对称布局的导弹中,而大多数具有面对称布局的飞机和巡航导弹都采用倾斜转弯(BTT) 形式来进行侧向偏离控制。
+在此,仅讨论第一类方案利用协调转弯(Coordinated-turn)的侧向偏离控制系统。</p>
+<h1 id="34-空速和马赫数的保持与控制">3.4 空速和马赫数的保持与控制</h1>
+<hr>
+<h2 id="341-飞行速度保持与控制的作用">3.4.1 飞行速度保持与控制的作用</h2>
+<hr>
+<h3 id="1-飞行速度保持与控制系统能保证飞机在低动压平飞时仍具有速度的稳定性">1. 飞行速度保持与控制系统能保证飞机在低动压平飞时,仍具有速度的稳定性</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/10/12/6527aeb4f32c6.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/10/12/6527aeb648df1.png" alt=""></p>
+<h3 id="2-飞行速度的保持与控制是航迹控制的必要前提">2. 飞行速度的保持与控制是航迹控制的必要前提</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/10/12/6527aeb7592be.png" alt=""></p>
+<h3 id="3-当进行跨声速飞行时能够保持速度稳定">3. 当进行跨声速飞行时能够保持速度稳定</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/10/12/6527aeb855926.png" alt=""></p>
+<h2 id="342-速度保持与控制系统的构成与工作原理">3.4.2 速度保持与控制系统的构成与工作原理</h2>
+<hr>
+<h3 id="1-控制速度的两种常用方案">1. 控制速度的两种常用方案</h3>
+<hr>
+<ol>
+<li>通过升降舵偏转来改变俯仰角从而实现速度控制</li>
+<li>自动油门系统</li>
+</ol>
+<h3 id="2-适用于速度控制系统的飞机近似方程">2. 适用于速度控制系统的飞机近似方程</h3>
+<hr>
+<ol>
+<li>单独操纵升降舵或油门</li>
+<li>同时操作升降舵和油门杆</li>
+</ol>
+<h2 id="343-控制速度的作用">3.4.3 控制速度的作用</h2>
+<hr>
+<h3 id="1-速度控制系统可保证飞机在低动压状态平飞时仍具有速度的稳定性">1. 速度控制系统可保证飞机在低动压状态平飞时,仍具有速度的稳定性</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/10/12/6527aeb9313d2.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/10/12/6527aeba0cf72.png" alt=""></p>
+<h3 id="2-速度控制是航迹控制的必要前提">2. 速度控制是航迹控制的必要前提</h3>
+<h3 id="3-进行跨声速飞行时能够保持速度稳定">3. 进行跨声速飞行时,能够保持速度稳定</h3>
+<h1 id="35-自动飞行控制系统基本性能要求">3.5 自动飞行控制系统基本性能要求</h1>
+<hr>
+<h3 id="1-姿态角自动控制系统的精度及瞬态响应">1. 姿态角自动控制系统的精度及瞬态响应</h3>
+<h3 id="2-角速度控制系统及增稳阻尼系统的技术要求">2. 角速度控制系统及增稳阻尼系统的技术要求</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/10/12/6527aebad31c4.png" alt=""></p>
+<h3 id="3-轨迹中心自动控制系统的精度与瞬态响应要求">3. 轨迹(中心)自动控制系统的精度与瞬态响应要求</h3>
+<h1 id="36-电光传操纵系统">3.6 电/光传操纵系统</h1>
+<hr>
+<h3 id="361-电传操纵系统余度舵机">3.6.1 电传操纵系统(余度舵机)</h3>
+<h3 id="362-光传操纵系统">3.6.2 光传操纵系统</h3>
+<h3 id="1-光传操纵系统的基本组成和原理">1. 光传操纵系统的基本组成和原理</h3>
+<h3 id="2-光传操纵系统的分类">2. 光传操纵系统的分类</h3>
+<hr>
+<p>光传操纵系统通常可以分为时分复用光传操纵系统和波分复用光传操纵系统两大类 , 这两大类的共同特点是它们均采用了光纤多路复用技术。
+所谓的光纤多路复用是指在一根光纤中同时传输若干路信号 。 光纤多路复用可以极大地提高传输效率,提高传输容量。在飞行器上采用多路复用技术可以进一步减轻重量,减小体积,增加传输灵活性,有利于实现多余度技术,从而提高系统的可靠性。</p>
+<p><img src="https://bu.dusays.com/2023/10/12/6527aebc0b3ca.png" alt=""></p>
+<h3 id="3-光传操纵系统的优点">3. 光传操纵系统的优点</h3>
+<hr>
+<p>光传操纵系统不仅能有效地预防电磁感应、电磁干扰及雷击或闪电引起的电磁冲击,而且能有效地消除各个信号之间的串扰,可以极大地减小系统的重量和尺寸。它不存在金属导线所固有的地环流和由此引起的瞬间扰动;光纤的频带很宽、容量大、传输信号速度高,而且利用时分复用或波分复用技术可以实现多路信号的传输;光纤的电隔离性好,消除了电火花的产生及其引起的爆炸的危险;光纤的抗腐蚀性和热防护性优良,故障隔离性好,当一个通道发生故障不会影响到其他通道。光纤传输损耗很低,同轴电缆 1.5 km 需要有中继站, 而光纤可以轻松传输上百千米无须中继;光纤价格低,比同轴电缆低约 30%。
+由于以上这些优点,光纤用作信号传输线获得了广泛的应用。新一代的自适应飞行控制系统也将利用光纤来传输大量数据。光传操纵系统在军、民用飞行器上的应用研究和使用被称为继陀螺和加速度计应用以来飞行控制技术最重大的发展。</p>
+<h3 id="4-实例验证">4. 实例验证</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/10/12/6527aebd04cc1.png" alt=""></p>
+
+</content>
+<p>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E8%BF%91%E6%9C%9F%E8%A7%84%E5%88%92/">#近期规划</a>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E8%87%AA%E5%8A%A8%E9%A3%9E%E6%8E%A7/">#自动飞控</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>

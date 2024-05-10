@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://hugo.matrixcore.life/images/favicon.png" />
+<title>[高数基础]  第十八讲 三重积分、曲线曲面积分 | Hugo ʕ•ᴥ•ʔ Bear Blog</title>
+<meta name="title" content="[高数基础]  第十八讲 三重积分、曲线曲面积分" />
+<meta name="description" content="三重积分、三重积分的概念性质、对称性和计算、第一型曲线积分、第一型曲面积分、重积分与第一型线面积分的应用、第二型曲线和曲面积分" />
+<meta name="keywords" content="研数-高数基础,热门文章," />
+
+
+<meta property="og:title" content="[高数基础]  第十八讲 三重积分、曲线曲面积分" />
+<meta property="og:description" content="三重积分、三重积分的概念性质、对称性和计算、第一型曲线积分、第一型曲面积分、重积分与第一型线面积分的应用、第二型曲线和曲面积分" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugo.matrixcore.life/yu018/" /><meta property="og:image" content="https://hugo.matrixcore.life/images/share.png"/><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-08-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-08-10T00:00:00+00:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://hugo.matrixcore.life/images/share.png"/>
+
+<meta name="twitter:title" content="[高数基础]  第十八讲 三重积分、曲线曲面积分"/>
+<meta name="twitter:description" content="三重积分、三重积分的概念性质、对称性和计算、第一型曲线积分、第一型曲面积分、重积分与第一型线面积分的应用、第二型曲线和曲面积分"/>
+
+
+
+<meta itemprop="name" content="[高数基础]  第十八讲 三重积分、曲线曲面积分">
+<meta itemprop="description" content="三重积分、三重积分的概念性质、对称性和计算、第一型曲线积分、第一型曲面积分、重积分与第一型线面积分的应用、第二型曲线和曲面积分"><meta itemprop="datePublished" content="2023-08-10T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-08-10T00:00:00+00:00" />
+<meta itemprop="wordCount" content="116"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="keywords" content="研数-高数基础,热门文章," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Hugo ʕ•ᴥ•ʔ Bear Blog</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<content>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>180 基础知识框架
+</span></span><span style="display:flex;"><span>- 181 三重积分
+</span></span><span style="display:flex;"><span>    - 1811 三重积分的概念性质和对称性
+</span></span><span style="display:flex;"><span>        - 18.2
+</span></span><span style="display:flex;"><span>        - 18.5
+</span></span><span style="display:flex;"><span>    - 1812 三重积分的计算
+</span></span><span style="display:flex;"><span>        - 18.1
+</span></span><span style="display:flex;"><span>        - 18.2
+</span></span><span style="display:flex;"><span>        - 18.3
+</span></span><span style="display:flex;"><span>        - 18.4
+</span></span><span style="display:flex;"><span>- 182 第一型曲线积分
+</span></span><span style="display:flex;"><span>    - 1821 第一型曲线积分的概念性质和对称性
+</span></span><span style="display:flex;"><span>    - 1822 第一型曲线积分的计算
+</span></span><span style="display:flex;"><span>        - 18.6
+</span></span><span style="display:flex;"><span>        - 18.7
+</span></span><span style="display:flex;"><span>- 183 第一型曲面积分
+</span></span><span style="display:flex;"><span>    - 1831 第一型曲面积分的概念、性质和对称性
+</span></span><span style="display:flex;"><span>    - 1832 第一型曲面积分的计算
+</span></span><span style="display:flex;"><span>        - 18.8
+</span></span><span style="display:flex;"><span>- 184 应用
+</span></span><span style="display:flex;"><span>    - 1841 重积分与第一型线面积分的应用
+</span></span><span style="display:flex;"><span>        - 18.9
+</span></span><span style="display:flex;"><span>        - 18.11
+</span></span><span style="display:flex;"><span>        - 18.12
+</span></span><span style="display:flex;"><span>- 185 第二型曲线和曲面积分
+</span></span><span style="display:flex;"><span>    - 1851 第二型曲线积分的概念与性质
+</span></span><span style="display:flex;"><span>    - 1852 平面第二型曲线积分的计算
+</span></span><span style="display:flex;"><span>        - 18.13
+</span></span><span style="display:flex;"><span>        - 18.14
+</span></span></code></pre></div><h2 id="180-基础知识框架">180 基础知识框架</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/650025b286cb9.png" alt=""></p>
+<h2 id="181-三重积分">181 三重积分</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/65002615d4d53.png" alt=""></p>
+<h3 id="1811-三重积分的概念性质和对称性">1811 三重积分的概念性质和对称性</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/65002625d3cea.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/650026c3ae48d.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/650026c4e6e40.png" alt=""></p>
+<p><strong>18.2</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/650027395993f.png" alt=""></p>
+<p><strong>18.5</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/6500273dcd23d.png" alt=""></p>
+<h3 id="1812-三重积分的计算">1812 三重积分的计算</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/650027827062c.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/6500279d21b32.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/650027a0c56a0.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/650027a5a244f.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/650027aba7cb4.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/650027b292b78.png" alt=""></p>
+<p><strong>18.1</strong></p>
+<p><img src="https://bu.dusays.com/2023/09/12/650027b9285ff.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/650027beb3203.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/650027c461dfb.png" alt=""></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/650027d7245e4.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/65002878e66c7.png" alt=""></p>
+<p><strong>18.2</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/6500287cc3e24.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/6500288fdc895.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/6500289765a42.png" alt=""></p>
+<p><strong>18.3</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/650028ff030c0.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/650029004f6e8.png" alt=""></p>
+<p><strong>18.4</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/650029146dbd0.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/65002915a1948.png" alt=""></p>
+<h2 id="182-第一型曲线积分">182 第一型曲线积分</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/650029248661e.png" alt=""></p>
+<h3 id="1821-第一型曲线积分的概念性质和对称性">1821 第一型曲线积分的概念性质和对称性</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/650029398abac.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/6500293ac7f25.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/6500293be97ca.png" alt=""></p>
+<h3 id="1822-第一型曲线积分的计算">1822 第一型曲线积分的计算</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/6500295ad9321.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/6500295c078d5.png" alt=""></p>
+<p><strong>18.6</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/6500297b830e4.png" alt=""></p>
+<p><strong>18.7</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/6500297cb5eb4.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/6500297dc8896.png" alt=""></p>
+<h2 id="183-第一型曲面积分">183 第一型曲面积分</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/6500297f1670a.png" alt=""></p>
+<h3 id="1831-第一型曲面积分的概念性质和对称性">1831 第一型曲面积分的概念、性质和对称性</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/650029809ac39.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/650029d9a00a3.png" alt=""></p>
+<h3 id="1832-第一型曲面积分的计算">1832 第一型曲面积分的计算</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/650029ebcc1ba.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/650029ecf0e77.png" alt=""></p>
+<p><strong>18.8</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/650029ee4d35f.png" alt=""></p>
+<h2 id="184-应用">184 应用</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/650029efa70ed.png" alt=""></p>
+<h3 id="1841-重积分与第一型线面积分的应用">1841 重积分与第一型线面积分的应用</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/65002a289856d.png" alt=""></p>
+<p><strong>18.9</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/65002a3ad216c.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/65002a3be1f56.png" alt=""></p>
+<p><strong>18.11</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/65002a4ed8518.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/65002a503a2df.png" alt=""></p>
+<p><strong>18.12</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/65002a5cc1060.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/65002a5da8ca9.png" alt=""></p>
+<h2 id="185-第二型曲线和曲面积分">185 第二型曲线和曲面积分</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/65002a69ca1da.png" alt=""></p>
+<h3 id="1851-第二型曲线积分的概念与性质">1851 第二型曲线积分的概念与性质</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/65002a738cd69.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/65002a74a976b.png" alt=""></p>
+<h3 id="1852-平面第二型曲线积分的计算">1852 平面第二型曲线积分的计算</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/65002a896434d.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/65002a8e8b88d.png" alt=""></p>
+<p><strong>18.13</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/65002aa892e68.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/65002aa9e3d2b.png" alt=""></p>
+<p><strong>18.14</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/12/65002ab9f01c7.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/12/65002abb315d3.png" alt=""></p>
+
+</content>
+<p>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/">#研数-高数基础</a>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/">#热门文章</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>

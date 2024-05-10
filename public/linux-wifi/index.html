@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://hugo.matrixcore.life/images/favicon.png" />
+<title>[网络中继] 使用linux来中继wifi信号 | Hugo ʕ•ᴥ•ʔ Bear Blog</title>
+<meta name="title" content="[网络中继] 使用linux来中继wifi信号" />
+<meta name="description" content="大多数手机和许多现代的无线网卡支持一种叫作“Wi-Fi Direct”或“软件接入点（Soft AP）”的功能，它们可以让设备即作为无线客户端连接到Wi-Fi网络，同时也能作为热点向其他设备提供Wi-Fi连接。" />
+<meta name="keywords" content="实用教程," />
+
+
+<meta property="og:title" content="[网络中继] 使用linux来中继wifi信号" />
+<meta property="og:description" content="大多数手机和许多现代的无线网卡支持一种叫作“Wi-Fi Direct”或“软件接入点（Soft AP）”的功能，它们可以让设备即作为无线客户端连接到Wi-Fi网络，同时也能作为热点向其他设备提供Wi-Fi连接。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugo.matrixcore.life/linux-wifi/" /><meta property="og:image" content="https://hugo.matrixcore.life/images/share.png"/><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2024-03-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-03-30T00:00:00+00:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://hugo.matrixcore.life/images/share.png"/>
+
+<meta name="twitter:title" content="[网络中继] 使用linux来中继wifi信号"/>
+<meta name="twitter:description" content="大多数手机和许多现代的无线网卡支持一种叫作“Wi-Fi Direct”或“软件接入点（Soft AP）”的功能，它们可以让设备即作为无线客户端连接到Wi-Fi网络，同时也能作为热点向其他设备提供Wi-Fi连接。"/>
+
+
+
+<meta itemprop="name" content="[网络中继] 使用linux来中继wifi信号">
+<meta itemprop="description" content="大多数手机和许多现代的无线网卡支持一种叫作“Wi-Fi Direct”或“软件接入点（Soft AP）”的功能，它们可以让设备即作为无线客户端连接到Wi-Fi网络，同时也能作为热点向其他设备提供Wi-Fi连接。"><meta itemprop="datePublished" content="2024-03-30T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2024-03-30T00:00:00+00:00" />
+<meta itemprop="wordCount" content="409"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="keywords" content="实用教程," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Hugo ʕ•ᴥ•ʔ Bear Blog</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<content>
+  <h1 id="更新-log">更新 log</h1>
+<hr>
+<p>已通过购置 usb 网卡的方式实现了单设备 wifi 接受并共享热点，未实现 wifi 中继，中继和热点还是有区别的。之后有时间更新。</p>
+<h1 id="前言">前言</h1>
+<hr>
+<p>这是一篇不成熟的日志，记录了我对于 linux 中继网络的一些思考。</p>
+<p>我突然想到之前玩的一款手游，叫做贪婪洞窟，里面非常让人觉得有意思的事情是，往往在下洞穴探秘的时候，会收到前辈的手稿，这些手稿记录了先驱在探索洞穴的时的一些思考，读这些故事很有趣，此去经年，虽然已经不打这款游戏了，也装过盗版刷通了副本，但是这个片段始终让我觉得和现在的自己很像。</p>
+<h1 id="正文">正文</h1>
+<hr>
+<p>首先，这个需求适用于哪些方面，适用于房间 wifi 信号不好的时候，才会考虑使用设备进行中继。</p>
+<p>我先是去京东上看了看无线中继的价格，巴掌大小，也就几十块钱。</p>
+<p>但是我突然一想，它能做，我的鲁班猫为什么不能做。</p>
+<p>之前闲置了数个月的鲁班猫终于在尘封的袋子里被拿出来。</p>
+<h2 id="未能搞懂的驱动模块">未能搞懂的驱动模块</h2>
+<hr>
+<p>在 Linux 上，你可以将你的电脑配置成一个无线信号中继器或扩展器，这样做可以帮助扩展现有无线网络的覆盖范围。这个过程通常包括两个无线网络接口：一个用于连接到现有的无线网络（作为客户端），另一个用于创建一个新的无线热点，其他设备可以连接到这个热点以接入网络。</p>
+<p>在最开始，我是沿着这个思路去走的，过程如下；</p>
+<ol>
+<li>
+<p><strong>确保硬件兼容性</strong>：</p>
+<ul>
+<li>你需要一个支持 AP 模式的无线网卡。你可以通过运行<code>iw list</code>命令来检查你的无线网卡是否支持 AP 模式。</li>
+</ul>
+</li>
+<li>
+<p><strong>安装必要的软件</strong>：</p>
+<ul>
+<li>确保你的系统上安装了<code>hostapd</code>（用于 AP 模式）和<code>dnsmasq</code>（用于 DHCP 和 DNS 服务）：</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo apt-get install hostapd dnsmasq
+</span></span></code></pre></div></li>
+<li>
+<p><strong>配置网络接口</strong>：</p>
+<ul>
+<li>编辑<code>/etc/network/interfaces</code>或使用<code>nmcli</code>（NetworkManager 的命令行接口）来配置网络接口。你需要为两个无线接口分别配置客户端和 AP 设置。</li>
+</ul>
+</li>
+<li>
+<p><strong>配置**</strong><code>hostapd</code>**：</p>
+<ul>
+<li>创建<code>/etc/hostapd/hostapd.conf</code>配置文件，设置 SSID 和密码等：</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>interface<span style="color:#f92672">=</span>wlan1
+</span></span><span style="display:flex;"><span>driver<span style="color:#f92672">=</span>nl80211 <span style="color:#75715e">#卡在了这一步</span>
+</span></span><span style="display:flex;"><span>ssid<span style="color:#f92672">=</span>YourRepeaterSSID
+</span></span><span style="display:flex;"><span>hw_mode<span style="color:#f92672">=</span>g
+</span></span><span style="display:flex;"><span>channel<span style="color:#f92672">=</span><span style="color:#ae81ff">6</span>
+</span></span><span style="display:flex;"><span>wmm_enabled<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>macaddr_acl<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>ignore_broadcast_ssid<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>auth_algs<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>wpa<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>wpa_passphrase<span style="color:#f92672">=</span>YourPassphrase
+</span></span><span style="display:flex;"><span>wpa_key_mgmt<span style="color:#f92672">=</span>WPA-PSK
+</span></span><span style="display:flex;"><span>wpa_pairwise<span style="color:#f92672">=</span>TKIP
+</span></span><span style="display:flex;"><span>rsn_pairwise<span style="color:#f92672">=</span>CCMP
+</span></span></code></pre></div><p>最开始我使用 hostapd，一种有驱动报错的问题，之后就重启了系统找其他的思路。我也尝试过怎么适配这个驱动，但一时半会搞不成。</p>
+<h2 id="使用-create_ap-脚本"><strong>使用 create_ap 脚本</strong></h2>
+<hr>
+<p><strong>使用</strong> <strong><code>create_ap</code></strong> <strong>脚本</strong>：</p>
+<ul>
+<li>
+<p><code>create_ap</code> 是一个简化创建接入点过程的 shell 脚本。它允许您通过一个命令行界面轻松地创建一个接入点。您可以从 GitHub 获取这个脚本并按照提供的说明进行安装和使用。</p>
+<p>我也尝试使用过这个脚本，但是实际情况是这样的，鲁班猫的网卡不具备同时开启 wlan0 和 waln1 的能力，在同一时间只能作为设备或者热点存在。</p>
+</li>
+</ul>
+<h2 id="使用-networkmanager-的热点功能">使用 NetworkManager 的热点功能</h2>
+<hr>
+<p>我还是比较喜欢这个，原因如下：</p>
+<p>1.系统自带</p>
+<p>2.操作便捷</p>
+<h3 id="确认设备网卡是否支持-ap-模式">确认设备网卡是否支持 AP 模式。</h3>
+<hr>
+<p>打开终端，运行以下命令查看无线网卡是否支持 AP 模式：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>iw list
+</span></span></code></pre></div><p>在输出中寻找 &ldquo;Supported interface modes&rdquo; 部分，查看是否包含 &ldquo;AP&rdquo;。</p>
+<p>终端我是使用串口进行连接的。</p>
+<h3 id="创建一个共享的网络连接"><strong>创建一个共享的网络连接</strong></h3>
+<hr>
+<p>使用命令行：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>nmcli dev wifi hotspot ifname wlan0 ssid YourHotspotSSID password <span style="color:#e6db74">&#34;YourPassword&#34;</span>
+</span></span></code></pre></div><p>请将 <code>wlan0</code> 替换为你的无线设备名称，<code>YourHotspotSSID</code> 替换为你想要的热点名称，<code>YourPassword</code> 替换为你的密码。</p>
+<p>一般在这种情况下，一个 wifi 热点就被创建完成了，但是需要注意的是，该热点还不具备上网功能，目前只具备信号的中继功能。您还需要输入，就是进入互联网的最根本的设备，可以是您的光猫，当然也可以是手机。</p>
+<h2 id="走过的弯路">走过的弯路</h2>
+<hr>
+<p>我花了很多时间尝试同时开启 wlan0 和 wlan1，在我一筹莫展的时候，我才突然想起手机可以作为信号的输入，但是由于手机的天线质量比较一般，通过鲁班猫做下一步操作或许更加合适。</p>
+<p>第一次成功是使用 wlan1 作为热点，但是缺点是重启后，鲁班猫又重新恢复了作为设备的角色。每一次重启重新用串口进终端显然不是我们需要的效果。</p>
+<p>而且中途还遇到了很奇怪的事情，让我深深陷进去了。在我执行完这一步之后，或许是一些其他的步骤，导致 wlan 在软件层面被禁用了，在终端里死活打不开，气得我都快要怀疑是硬件出了问题，都准备好重装系统了。然后还顺带看了点 openwrt 的知识，很零碎。</p>
+<p><strong>确保没有冲突的网络服务</strong>:</p>
+<pre><code>有时候，其他网络服务（如 `wpa_supplicant` 或 `dhclient`）可能会跟 NetworkManager 冲突，尝试禁用或停止这些服务，然后再次尝试启用接口。
+
+
+```shell
+sudo systemctl stop wpa_supplicant
+sudo systemctl stop dhclient
+```
+
+
+然后再次尝试启用 `wlan1`。
+</code></pre>
+<p>一直在徘徊，找不到问题所在：</p>
+<p><strong>检查无线设备的 RF-Kill 状态</strong>:</p>
+<p>有时候无线设备可能被软件或硬件层面的 RF-Kill 锁定，导致设备不可用。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>rfkill list
+</span></span></code></pre></div><p>如果您看到 <code>wlan1</code> 被列为 <code>Soft blocked</code> 或 <code>Hard blocked</code>，您可以解锁它：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo rfkill unblock wifi
+</span></span></code></pre></div><p><strong>检查接口状态</strong>:</p>
+<p>使用以下命令检查两个接口的状态：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>nmcli device status
+</span></span></code></pre></div><p>这将显示所有网络设备的列表以及它们的状态。</p>
+<p>一直是 wlan0 state DOWN，搞得我心灰意冷。</p>
+<!-- raw HTML omitted -->
+<ol>
+<li>
+<p><strong>检查无线设备是否被禁用</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>rfkill list
+</span></span></code></pre></div><p>如果看到 <code>wlan0</code> 或 <code>wlan1</code> 被列为 <code>Soft blocked</code> 或 <code>Hard blocked</code>，可以使用以下命令解锁：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo rfkill unblock wifi
+</span></span></code></pre></div></li>
+<li>
+<p><strong>启动无线接口</strong>:</p>
+<p>尝试手动启动 <code>wlan0</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo nmcli device set wlan0 managed yes
+</span></span><span style="display:flex;"><span>sudo nmcli device connect wlan0
+</span></span></code></pre></div></li>
+<li>
+<p><strong>检查 NetworkManager 配置</strong>:</p>
+<p>确保 NetworkManager 配置没有错误地禁用了 <code>wlan0</code>。检查 <code>/etc/NetworkManager/NetworkManager.conf</code> 和 <code>/etc/NetworkManager/conf.d/</code> 目录下的任何配置文件，看看是否有任何配置可能会导致 <code>wlan0</code> 处于关闭状态。</p>
+</li>
+<li>
+<p><strong>查看接口状态</strong>:</p>
+<p>再次检查接口的状态：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>nmcli device status
+</span></span></code></pre></div><p>这将显示所有网络设备的列表以及它们的状态。确保 <code>wlan0</code> 和 <code>wlan1</code> 都不是 <code>unavailable</code> 或 <code>down</code>。</p>
+</li>
+<li>
+<p><strong>检查驱动和硬件支持</strong>:</p>
+<p>确保您的无线网络适配器和驱动程序支持同时用作连接到无线网络和热点。您可以使用 <code>iw list</code> 命令来检查无线适配器的功能。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>iw list
+</span></span></code></pre></div><p>在输出中查找 <code>valid interface combinations</code> 或类似的部分，以确定您的硬件是否支持所需的操作模式。</p>
+</li>
+<li>
+<p><strong>查看系统日志</strong>:</p>
+<p>如果 <code>wlan0</code> 无法启动，查看系统日志可能会提供一些线索：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>journalctl -u NetworkManager
+</span></span></code></pre></div><p>这可能会显示尝试启动接口时遇到的任何错误信息。</p>
+</li>
+</ol>
+<!-- raw HTML omitted -->
+<p>更专业的问题的解释：</p>
+<p>您的无线设备支持接入点（AP）和监控（monitor）模式，但不支持接口组合。这意味着您的无线适配器可能无法同时在两个不同的模式下运行，例如，不能同时作为一个普通的无线网络连接（客户端模式）和一个无线热点（AP 模式）。</p>
+<p>如果您需要 <code>wlan0</code> 和 <code>wlan1</code> 同时运行，并且一个用于连接到无线网络，另一个用于创建热点，这可能是不可行的，因为硬件不支持这种配置。</p>
+<h3 id="热点模式系统守护">热点模式系统守护</h3>
+<hr>
+<p>经过上述一顿操作猛如虎，一看战绩 0-5 的操作之后，终于迈入了期待的方向，经过和舍友的讨论，确认了问题的解决思路，手机连接 wifi 同时使用 usb 共享到鲁班猫，这样就可以解决无法同时开启两个网口的问题，使用 usb 在传输速率和稳定性上也会好一点，然后鲁班猫进行中继，用两根小天线就可以将 wifi 广播到整个屋子了。</p>
+<p>要在系统启动时自动执行<code>nmcli</code>命令来创建一个热点，您可以将该命令添加到系统启动脚本中。在 Ubuntu 系统中，您可以使用<code>systemd</code>来管理系统服务和启动脚本。以下是一种在系统启动时自动执行<code>nmcli</code>命令创建热点的方法：首先，创建一个<code>nmcli-hotspot.service</code>服务文件，您可以使用以下命令创建并编辑该文件：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo nano /etc/systemd/system/nmcli-hotspot.service
+</span></span></code></pre></div><p>在打开的编辑器中，添加以下内容：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>[Unit]
+</span></span><span style="display:flex;"><span>Description=Start nmcli wifi hotspot on boot
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Service]
+</span></span><span style="display:flex;"><span>Type=oneshot
+</span></span><span style="display:flex;"><span>ExecStart=/usr/bin/nmcli dev wifi hotspot ifname wlan0 ssid cat password cattemppwd
+</span></span><span style="display:flex;"><span>ExecStop=/usr/bin/nmcli con up id YourWiFiSSID
+</span></span><span style="display:flex;"><span>RemainAfterExit=yes
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Install]
+</span></span><span style="display:flex;"><span>WantedBy=multi-user.target
+</span></span></code></pre></div><p>请确保<code>ExecStart</code>行中的命令与您想要运行的<code>nmcli</code>命令相匹配。启用并启动<code>systemd</code>服务：保存并关闭编辑器。然后，运行以下命令启用并启动新创建的<code>nmcli-hotspot.service</code>服务：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo systemctl enable nmcli-hotspot.service
+</span></span><span style="display:flex;"><span>sudo systemctl start nmcli-hotspot.service
+</span></span></code></pre></div><p>这将使您的<code>nmcli</code>命令在系统启动时自动执行，创建无线热点。请注意，确保您的系统正确配置了无线网络接口<code>wlan0</code>以及<code>nmcli</code>命令在系统启动时可以正确执行。如果有任何问题，您可以查看<code>systemd</code>日志以获取更多信息：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo journalctl -u nmcli-hotspot
+</span></span></code></pre></div><p>这样您就可以在系统启动时自动创建无线热点了。</p>
+<p>在我断掉串口和 mipi 屏幕之后，重新启动之后，发现 cat 的热点正常启动，遂认为取得了够用的效果。</p>
+<h2 id="后话">后话</h2>
+<hr>
+<p>经过测试，ipad 可以正常使用，笔记本三个系统，ubuntu 好久没用了，没测试，mac 在使用 cat 热点的时候，存在问题，晚上没解决。win 是正常可以使用该热点的。</p>
+<h3 id="手机为什么既能连接网络又能充当热点">手机为什么既能连接网络又能充当热点</h3>
+<hr>
+<p>我不得不感慨，生活中随便用的一个设备，tmd 功能这么牛逼。</p>
+<p>手机能够同时连接网络和充当热点是因为它们具备两种无线通信模块：</p>
+<ol>
+<li><strong>蜂窝数据连接</strong>：手机通过蜂窝网络（如 2G, 3G, 4G, 或 5G）连接到互联网。这是通过手机内置的蜂窝无线模块实现的，该模块可以连接到移动运营商的网络。</li>
+<li><strong>Wi-Fi 热点功能</strong>：同时，手机可以开启 Wi-Fi 热点功能，这实际上是将手机变成一个无线路由器。其他设备可以通过 Wi-Fi 连接到这个热点，然后通过手机的蜂窝数据连接访问互联网。</li>
+</ol>
+<p>这两种功能可以同时工作，因为它们使用不同的无线技术和频率。蜂窝网络通常在 800MHz 到 2600MHz 频段工作，而 Wi-Fi 则通常在 2.4GHz 或 5GHz 频段工作。因此，手机可以通过蜂窝网络接收数据，同时通过 Wi-Fi 热点功能分享这些数据。</p>
+<p>不过，值得注意的是，当手机作为热点使用时，它通常会消耗更多的电池电量，并且可能会变热，因为它需要同时处理蜂窝网络和 Wi-Fi 网络的信号。此外，手机作为热点时，其蜂窝数据使用量可能会增加，这取决于连接到热点的其他设备的数据使用情况。</p>
+<p>大多数手机和许多现代的无线网卡支持一种叫作“Wi-Fi Direct”或“软件接入点（Soft AP）”的功能，它们可以让设备即作为无线客户端连接到 Wi-Fi 网络，同时也能作为热点向其他设备提供 Wi-Fi 连接。</p>
+<p>但是，大多数手机和设备在使用 Wi-Fi 连接到网络的同时，通常不能将同一个 Wi-Fi 适配器用于创建热点来共享这个连接。这是因为大多数 Wi-Fi 适配器在任何给定时间只能在一个模式下工作，即要么作为客户端连接到一个 Wi-Fi 网络，要么作为热点允许其他设备连接。</p>
+<p>不过，一些特定的硬件和驱动程序支持一种名为“虚拟接入点（Virtual Access Point, VAP）”或“多 SSID”功能，它可以让单个无线网卡同时扮演多个角色。对于这样的硬件，理论上是可能的，但这需要硬件支持，并且在软件上也需要相应的配置，这通常不是大多数手机或操作系统默认提供的功能。</p>
+<p>因此，如果您的手机可以做到这一点，那么它可能具有特定的硬件和软件支持，允许其无线网卡同时运行在客户端模式和热点模式。这种功能不是所有设备都支持的，通常取决于设备的硬件能力和操作系统的软件实现。</p>
+<h1 id="总结">总结</h1>
+<hr>
+<p>总之，今晚鲁班猫和它的两根小天线给了我巨大的失落和巨大的惊喜，感谢野火的奉献！后续我有机会抽空了解了解。</p>
+</li>
+</ol>
+
+</content>
+<p>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/">#实用教程</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>

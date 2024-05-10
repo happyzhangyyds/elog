@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://hugo.matrixcore.life/images/favicon.png" />
+<title>[螺旋自洽] 算法与自博弈  | Hugo ʕ•ᴥ•ʔ Bear Blog</title>
+<meta name="title" content="[螺旋自洽] 算法与自博弈 " />
+<meta name="description" content="在生命土壤中盛开的苍凉而妖艳的花朵，似乎暗含着神秘的征兆" />
+<meta name="keywords" content="情绪表达," />
+
+
+<meta property="og:title" content="[螺旋自洽] 算法与自博弈 " />
+<meta property="og:description" content="在生命土壤中盛开的苍凉而妖艳的花朵，似乎暗含着神秘的征兆" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugo.matrixcore.life/conch/" /><meta property="og:image" content="https://hugo.matrixcore.life/images/share.png"/><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-10-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-10-07T00:00:00+00:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://hugo.matrixcore.life/images/share.png"/>
+
+<meta name="twitter:title" content="[螺旋自洽] 算法与自博弈 "/>
+<meta name="twitter:description" content="在生命土壤中盛开的苍凉而妖艳的花朵，似乎暗含着神秘的征兆"/>
+
+
+
+<meta itemprop="name" content="[螺旋自洽] 算法与自博弈 ">
+<meta itemprop="description" content="在生命土壤中盛开的苍凉而妖艳的花朵，似乎暗含着神秘的征兆"><meta itemprop="datePublished" content="2023-10-07T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-10-07T00:00:00+00:00" />
+<meta itemprop="wordCount" content="81"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="keywords" content="情绪表达," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Hugo ʕ•ᴥ•ʔ Bear Blog</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<content>
+  <h1 id="前言">前言</h1>
+<hr>
+<p>钱理群老师在一篇文章中有如下表述，我在此引用：</p>
+<blockquote>
+<p><strong>五、两层理想：永远活出生命的诗意与尊严</strong></p>
+</blockquote>
+<pre><code>  _**要保持赤子之心很难，怎么能够一辈子保持赤子之心？这是人生最大的难题。**__在这方面我想谈谈我个人的经验，因为在座的还有一些将要毕业的同学，我想讲点当年我大学毕业后的遭遇以及我是如何面对的，这可能对在座的即将毕业的同学有点意义。大家一步入社会就会发现社会比学校复杂千百万倍，大学期间是一个做梦的季节，而社会非常现实。人生道路绝对是坎坷的，会遇到很多外在的黑暗，更可怕的是这些外在的黑暗都会转化为内在的黑暗、内心的黑暗。外在压力大了以后，你就会觉得绝望，觉得人生无意义，这就是内在的黑暗。所以你要不断面对并战胜这两方面的黑暗，就必须唤醒你内心的光明。我为什么前面强调打好底子?如果你在大学期间没有打好光明的底子，当你遇到外在黑暗和内在黑暗的时候，你心里的光明唤不出来，那你就会被黑暗压跨，或者和它同流合污，很多人都走这个路子。你要做到不被压垮，不同流合污，在大学里要打好光明的底子，无论是知识底子还是精神底子，内心要有一个光明的底子。__我自己每当遇到外在压力的时候，总是为自己设计一些富有创造性的工作，全身心地投入进去，在这一过程中抵御外在和内在的黑暗。压力越大，书读得越多，写东西越多，我每一次的精神危机都是这样度过的。_
+</code></pre>
+<h1 id="我的观点">我的观点</h1>
+<hr>
+<p>说实话我只记得最后三句，我很喜欢，但是做得不好，但我们必须承认，很多毁灭性的打击是来自于内源的，我们很难面对自己的弱点，不喜欢开诚布公地承认自己的错误，很难接受别人的批评，而且，一旦上层的思维领域被击垮，系统就直接宕机了。</p>
+<p>上面所说的只是一个引子，下面开始我对今天察觉到的问题进行思考：</p>
+<p>题目叫做算法与自博弈，也是我在看剧时候一直，在思考的一个问题，自博弈你也可以理解为独立博弈，然后上升到联合博弈，只不过我们先从自博弈开始，那为什么要引入算法来讲呢，这其间的关系是什么。</p>
+<p>第一，算法加速和便捷了人类的生活，但我们并不是算法的受益者，也不是算法的受害者，因为站在受害者的角度来看我们是受益者，站在受益者的角度来看我们是受害者，由于我们本能的主观倾向，使得我们更愿意相信我们是算法的受益者，我们可以开开心心地刷着 bilibli 和抖音，吃着泡面，声音越大越好，一条一条，笑到停不下来，然后就可以累累地睡觉，忘掉一切烦恼。一天刷三小时，快活赛神仙。</p>
+<p>第二，算法降低着我们的决策和判断能力，通过入侵我们的生活习惯，对我们的弱点进行着致命的打击，算法有可能让我们获得更多的消费，使我们获得超越思维水平的能力，加速工作的效率，让我们的娱乐更加个性化，精准化。这一切都很美好。</p>
+<p>第三，算法预判了我们的预判，如果把人类比作通用型人工智能的高阶形态，具有独立自主的情感意识判断，那我们的 CPU 可能是 1 核的，内存大概是 1GB，运行内存大概是，500KB，上行和下行带宽，大概是 100bit/s，通信传输速率大概是 640bit/min。如果这个配置对比现在市场上的低配服务器，2 核 CPU，30GB 内存，2MB/s，年费也才不到两百，但是好消息是，我们是通用型人工智能的高阶形态，正因为我们是“客观的存在”，才并非是“VPS”，并且我们具备 LLM，自然语言处理技术，和深度学习的能力，并且我的身体的传感器，非常先进，16K 的大眼睛，5d 的嗅觉，对于四维空间的感知和运算能力，所以在维度上，就算我们的性能比不上低配版服务器，但我们进化了几万年，即使现在的算力爆炸，至少还需要一段时间才可能了解我们人类本身，而要想了解我们本身，就必须对我们的身体进行访问授权，人类为了生存，需要狩猎，有需求才会有欲望，寻找另一半最根本的动机也是本能，虽然我们对此表示掩饰，但是也是情有可原。算法尚还年轻，但我们的身体和灵魂却已经千疮百孔，如果我们获得我们自身身体服务器的 root 权限，相信在我们意识清醒的时候，没人会输入：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cd /
+</span></span><span style="display:flex;"><span>sudo rm -rf
+</span></span></code></pre></div><p>因为我们大家都知道生命只有一次，没人会愿意主动放弃生命，但我们纵观历史，英雄之所以被称作英雄，正因为他做到了我们普通人做不到的事情。当然佞臣也一样。</p>
+<p>为什么说算法预判了我们的预判呢，因为科技的发展，就像被甜蜜地灌醉，然后：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo ufw allow <span style="color:#ae81ff">22</span>
+</span></span><span style="display:flex;"><span>sudo ufw allow <span style="color:#ae81ff">443</span>
+</span></span><span style="display:flex;"><span>sudo ufw allow <span style="color:#ae81ff">8080</span>
+</span></span></code></pre></div><p>我们起床需要闹钟，离不开算法，因为公司的上班时间是 8:30，所以我必须依赖闹钟叫醒，但是宿舍的光线条件又不好，我无法通过自然光进行启动。</p>
+<p>我们睡觉也需要算法，必须在和亲爱的人互诉衷肠之后才能安然入眠。</p>
+<p>我们吃饭也需要算法，微微支付，美美优选，饿饿了吗。</p>
+<p>随着我们被迫放开我们服务器的端口权限，这种被甜蜜灌醉的冲动，已经冲击着我们的能量峰值，每一次大笑，每一次购物，每一次胡吃海喝，每一次通宵游戏。</p>
+<p>一般来讲，一会减寿，二会失去控制能力，三会生病，四会痛苦，五会宕机，六会抑郁，七会疯狂，八会自残，九会人格分裂，十会去天堂。</p>
+<p>每一层级对应着不同能量峰值冲击的结果，一般来讲，到达第四层就已经失去学习能力了，自我排故的能力也很难启动了。</p>
+<p>第四，别担心，时间会帮你保守秘密，我们不否认算法给我们创造了美好的生活，也不否认我们再也不用但愿人长久，千里共婵娟，因为想见面就打微信电话，分手之后也不用再难过，因为给对方发给微笑表情就可以被拉黑，自己偷偷干坏事也不用愧疚，因为只要足够隐蔽。再不然，时间会帮你保守秘密，若干年后的恋人再见面，所回忆起的也大多是美好的事情。再重的情伤，伴随着下一个小甜甜的到来，也会被逼退到潜意识里去。</p>
+<p>第五，自博弈的结果可能性分析，当然我们不能忘记，我们这么糟蹋我们的身体，我们的自信和筹码在哪里，一个是未来的 ICU 病床，一个是失眠的夜晚，反正只要现在的片刻欢愉，结果留给未来承担，但是还会有另一个声音告诉我们，辛巴，你要相信自己，于是我们在心里会开始自博弈，所以我们白天是天使，夜晚是恶魔，最好不要在深夜发朋友圈，因为我一般第二天早上就会撤回。</p>
+<p>第六，新的还是旧的，自博弈是通过数据抓包进行分析，在我们所学过的哲学体系中，事物是螺旋上升的，并且还是曲折的，既满足了人的虚荣心，也预示着美好的将来。我们的直觉告诉我们，只要我们努力，就一定会过上幸福美满的生活，我们更愿意这么相信，我们也会相信，假如爱有天意，年少时的我们曾以为，相爱的人就会到永远。当我们苦思冥想自己为什么这么笨的时候，我们必须要找到一个借口，说明自己不小心。所以我们更愿意把能量进行聚点，我们把我们所爱的人，寄托在一个形象里，我推算过我遇到真爱的概率，大约是千分之二的平方，这仅仅是能在我生命中路过的人的概率。能量聚点之后，我们习惯开始逃避，开始指责，开始懒惰，开始进入无主域。</p>
+<p>人类本身就是复杂而矛盾的，我和自己相处了这么多年，我一直以为自己有很多的人格，少年时像个小孩，青年时像个青年，中年时像个油腻大叔，老年时我还不知道。但上面说的都不是重点。</p>
+<p>第七，自博弈的另一重结果，我们认识螺旋是因为我们觉得海螺很好看，我们喜欢走螺旋梯，体验高处不胜寒的感觉，所以我们的直觉和潜意识都接受不了事实的结果，我们始终都无法和自己好好相处，我们每天都幻想着今天能干劲满满，我们永远对自己高标准要求却一件都很难完成。我们希望另一半无比完美，但是自己却七零八落。什么时候我们可以放下，我希望，我觉得，我认为，我们拔高了理想和现实的距离，如果自博弈本身就是没有结果呢，如果我们一开始的选择就是错或者对的呢，自博弈本身并不是什么坏事，这是我们自身服务器防火墙的应激机制，谁伤心了不哭，开心了不笑啦。特别是在睡不够，起不来，没精力的现在，很多人都处于亚健康的阶段。</p>
+<p>第八，敢问路在何方，古有雄鸡一声天下白，之前过年回外婆家的时候，每天六七点鸡就打鸣，甚至半夜还打鸣，刚从村庄回到深山老林的我晚上铁定睡不着，但是能比往常睡早一点，因为村里普遍睡得早，早上鸡一叫就可以起床玩，不像之前 tmd 上高中的时候，五点四十放百鸟朝凤，生怕迟到，一路狂奔到二楼东侧的教室，我一般 5:40 从家出发，5:50 准点到教室，闭着眼睛早读还得强撑着睡意。很抽象，可以看出，不同的环境对人的刺激不同，当然我们必须要学会适应，这只是一种比较保守的自我治疗的办法，既然被刺激很难受，那就尽量减少联合的时间，多一点独立的时间，如果独立太久受不了，要么看看书，要么和同学同事花点小钱出去散散步，总之世界和他人不会按照我们希冀的路线一致，如果我们坚持这么认为，我们必然痛苦，同样，感情亦如此，在该需要的时候，适当一些即可，书籍和运动在某种程度上可以缓解压力，前面钱理群老师说的，写作也这样，把疯癫时候自己想的东西，想说的话，全部倒出来，然后就好了。</p>
+<p>第九，人生苦短，鲁迅先生有本书叫做《朝花夕拾》，我对名字很感兴趣，还有句诗，“譬如朝露，去日苦多”，我也很喜欢，我已经在这个世界上苟活了二十余年，想想我被欺负和折磨的时光，还有那个笨笨的又可爱的自己，甚至在这个世界上还有人愿意来我的心里看看，想到这里，也就想到这里。</p>
+<h1 id="总结">总结</h1>
+<hr>
+<p>不想写总结了，我引用我之前写过的一段来总结，花这么长时间写这些，纯粹是为了好玩，也不仅仅是为了好玩，我带上小丑的面具，学着小丑的假笑，当我看到自己扮演小丑，我会努力去倾听他的痛苦，或者远远走开，让他静静。</p>
+<blockquote>
+<p><strong>文章二，生命悲歌与自由意志</strong><br>
+<em>在世界大环境如此的条件下，仿佛来自生命之地的土壤中，重金属的正在侵蚀着每一块微小的地方。<br>
+疾病，战争，饥荒，似乎伴随着人类社会，而我们作为其中的渺小个体，又如同鸟雀般惶恐。<br>
+在生命土壤中盛开的苍凉而妖艳的花朵，似乎暗含着神秘的征兆，带血的花朵，拥堵的根茎，盘庚错扰根系，一切似乎都是那么不安。<br>
+作为其中的个人，在享受着现代化成功的时候，仿佛又成为现代化的奴隶，物质的丰裕无法填满精神的沟壑，何况物质本身就是对于贪婪无尽的追求，生活陷入了一场怪圈。<br>
+为生存所付出的代价，赢得片刻的欢愉，精神类的刺激又使得人类陷入疯狂，永远填不满的肚子，面对孤独的战栗，在面对现实时如同上瘾般的发作，对于荒诞不经的执着。<br>
+个人在寻找出路，是钟表上的时间吗，或许是，但也许不是，时间并不属于我们，我们只是按照引力行走在规定轨道的行星。<br>
+值得庆幸的是，尽管如此，上述种种，我们获得了这张旅行的门票，直到终点。</em><br>
+<em>2023-07-09 → 2023-07-10</em></p>
+</blockquote>
+
+</content>
+<p>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/">#情绪表达</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>
