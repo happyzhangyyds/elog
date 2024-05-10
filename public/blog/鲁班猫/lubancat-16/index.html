@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://bu.dusays.com/2024/04/23/6627ad7c08194.jpeg" />
+<title>[静态网络] 为鲁班猫设置静态ip（理论） | Hugo ʕ•ᴥ•ʔ Bear Blog</title>
+<meta name="title" content="[静态网络] 为鲁班猫设置静态ip（理论）" />
+<meta name="description" content="从理论角度介绍了如何为鲁班猫设置静态ip" />
+<meta name="keywords" content="鲁班猫," />
+
+
+<meta property="og:title" content="[静态网络] 为鲁班猫设置静态ip（理论）" />
+<meta property="og:description" content="从理论角度介绍了如何为鲁班猫设置静态ip" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugo.matrixcore.life/blog/%E9%B2%81%E7%8F%AD%E7%8C%AB/lubancat-16/" /><meta property="og:image" content="https://hugo.matrixcore.life/images/share.png"/><meta property="article:section" content="Blog" />
+<meta property="article:published_time" content="2023-11-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-11-23T00:00:00+00:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://hugo.matrixcore.life/images/share.png"/>
+
+<meta name="twitter:title" content="[静态网络] 为鲁班猫设置静态ip（理论）"/>
+<meta name="twitter:description" content="从理论角度介绍了如何为鲁班猫设置静态ip"/>
+
+
+
+<meta itemprop="name" content="[静态网络] 为鲁班猫设置静态ip（理论）">
+<meta itemprop="description" content="从理论角度介绍了如何为鲁班猫设置静态ip"><meta itemprop="datePublished" content="2023-11-23T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-11-23T00:00:00+00:00" />
+<meta itemprop="wordCount" content="137"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="keywords" content="鲁班猫," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Hugo ʕ•ᴥ•ʔ Bear Blog</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<content>
+  <h1 id="前言">前言</h1>
+<hr>
+<p>有时候待久了就会犯迷糊，失去动力，情绪就像捉摸不定的天气一样。</p>
+<p>今天来分享一下关于鲁班猫的一些小百科。鲁班猫是对标树莓派，香橙派的 linux 卡片电脑。通过对 linux 卡片电脑的学习，我们可以对操纵系统有一个更加直观的了解。</p>
+<p>对内核的启动过程，网络的配置，如何使用命令行来查看相关的信息，因为我们平时操作电脑大多数时候都是在图形化界面中进行操作的，而我们购买的服务器，也是无需我们去了解如何配置网络和 ip 的，也是直接提供好的给我们。</p>
+<p>linux 卡片电脑可以用来学习嵌入式开发，可以用来对接项目，当然，在这前提下，是需要很多专业知识的。</p>
+<p>我觉得学习知识，需要一种好的心态，但凡内心不够宁静，绝对是在浪费时间而毫无成效，所以这也是为什么我不喜欢开摆的时候的自己。</p>
+<h1 id="正文">正文</h1>
+<hr>
+<p>关于鲁班猫的详细介绍可以<a href="https://doc.embedfire.com/products/link/zh/latest/linux/ebf_lubancat.html">查看文档</a>，静态的<a href="https://doc.embedfire.com/linux/rk356x/quick_start/zh/latest/quick_start/network/network2.html">文档</a>，<a href="https://www.bilibili.com/video/BV16h4y1x7k8/?spm_id_from=333.999.top_right_bar_window_history.content.click&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab">视频</a>。</p>
+<p>鲁班猫连接网络的方式很多，以太网口，Wi-Fi 模块，PCIE，USB。</p>
+<h2 id="前置知识">前置知识</h2>
+<hr>
+<p>通过 ping 命令检测网络连接是否通畅。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e">#ping命令</span>
+</span></span><span style="display:flex;"><span>sudo ping + ip地址
+</span></span><span style="display:flex;"><span>sudo ping xxx.com
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#查看ip</span>
+</span></span><span style="display:flex;"><span>ifconfig
+</span></span></code></pre></div><p>设备如果想要连接互联网就需要获取 IP，那这个 IP 就是可以对应设备的名字，然后局域网的设备就可以通过 ip 进行沟通，我们使用 ssh 连接远程服务器也是这个原理。鲁班猫可以通过网线进行网络的接入。</p>
+<h2 id="无线连接">无线连接</h2>
+<hr>
+<p>可通过 USB 网卡或者 pcie 网卡。</p>
+<ul>
+<li>命令行图形化的连接方式，移到  <code>Active a connection</code>  按  <code>Enter键</code>，然后选择 wifi，按住<code>Enter</code>进行连接。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo nmtui
+</span></span></code></pre></div><ul>
+<li>命令行连接</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>nmcli dev wifi list
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 列出可用的wifi接入点, list可以省略</span>
+</span></span><span style="display:flex;"><span>sudo nmcli dev wifi list
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 连接热点PPP, 连接成功后，就会自动生成配置文件，以后要再连接，可以使用nmcli connectio up mySSID命令了</span>
+</span></span><span style="display:flex;"><span>sudo nmcli dev wifi connect PPP password <span style="color:#e6db74">&#39;00000000&#39;</span> ifname wlan0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#如果连接成功后，下次想再连接，就可以使用</span>
+</span></span><span style="display:flex;"><span>sudo nmcli dev wifi connect PPP
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#更多nmcli的命令可以使用来查看</span>
+</span></span><span style="display:flex;"><span>nmcli help
+</span></span><span style="display:flex;"><span>nmcli OBJECT help
+</span></span></code></pre></div><p>这篇文章详细介绍<a href="https://doc.embedfire.com/linux/rk356x/quick_start/zh/latest/quick_start/wireless/wifi/wifi.html#nmcli">nmcli</a>命令。</p>
+<ul>
+<li>桌面端连接是我们熟用的办法。</li>
+</ul>
+<h2 id="usb-网络共享">USB 网络共享</h2>
+<hr>
+<p>可以采用手机或者电脑进行网络共享。当然我现在还没试过，之后再看看，可以先<a href="https://doc.embedfire.com/linux/rk356x/quick_start/zh/latest/quick_start/network/network2.html">阅读手册</a>的理论部分。</p>
+<h2 id="配置静态-ip">配置静态 ip</h2>
+<hr>
+<p>刚刚阅读了一篇<a href="https://mp.weixin.qq.com/s/jiPMUk6zUdOY6eKxAjNDbQ">很好的文章</a>，介绍生活中的互联网的数据传输，设计到 mac 地址，ip 地址，路由器，交换机等概念的讲解，有兴趣大家可以看看。</p>
+<p>为什么要配置静态 ip，如果需要涉及到设备之间的数据通信，ssh 连接，就希望 ip 地址是固定的。</p>
+<p>一种办法是需要有路由器的控制权，在路由器的面板上进行静态 ip 的配置。</p>
+<p>另一种方式是在板卡上进行静态 ip 的设置。</p>
+<p>一般会先设置为自动分配的 ip 地址，同时进行 ping 命令查看该 ip 地址是否被使用，然后在图形化界面进行静态 ip 和 DNS 服务器的设置。</p>
+<p>或者使用命令行进行静态 ip 的配置。先使用<code>ifconfig</code>查看网络的连接情况，记住 ip 地址和掩码，然后使用<code>route</code>查看网关，使用<code>nmtui</code>进行配置。</p>
+<h1 id="总结">总结</h1>
+<hr>
+<p>简单从理论角度介绍了如何为鲁班猫设置静态 ip。</p>
+
+</content>
+<p>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E9%B2%81%E7%8F%AD%E7%8C%AB/">#鲁班猫</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>

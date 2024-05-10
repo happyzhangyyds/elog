@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://bu.dusays.com/2024/04/23/6627ad7c08194.jpeg" />
+<title>[检索技巧] 关键字匹配提升准确率 | Hugo ʕ•ᴥ•ʔ Bear Blog</title>
+<meta name="title" content="[检索技巧] 关键字匹配提升准确率" />
+<meta name="description" content="获取想要的信息要花费一些心力，而时间似乎又是有限的，我们可以采用高级检索的方式对结果进行精确匹配。" />
+<meta name="keywords" content="实用教程," />
+
+
+<meta property="og:title" content="[检索技巧] 关键字匹配提升准确率" />
+<meta property="og:description" content="获取想要的信息要花费一些心力，而时间似乎又是有限的，我们可以采用高级检索的方式对结果进行精确匹配。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/231116/" /><meta property="og:image" content="https://hugo.matrixcore.life/images/share.png"/><meta property="article:section" content="Blog" />
+<meta property="article:published_time" content="2023-11-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-11-16T00:00:00+00:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://hugo.matrixcore.life/images/share.png"/>
+
+<meta name="twitter:title" content="[检索技巧] 关键字匹配提升准确率"/>
+<meta name="twitter:description" content="获取想要的信息要花费一些心力，而时间似乎又是有限的，我们可以采用高级检索的方式对结果进行精确匹配。"/>
+
+
+
+<meta itemprop="name" content="[检索技巧] 关键字匹配提升准确率">
+<meta itemprop="description" content="获取想要的信息要花费一些心力，而时间似乎又是有限的，我们可以采用高级检索的方式对结果进行精确匹配。"><meta itemprop="datePublished" content="2023-11-16T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-11-16T00:00:00+00:00" />
+<meta itemprop="wordCount" content="47"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="keywords" content="实用教程," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Hugo ʕ•ᴥ•ʔ Bear Blog</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<content>
+  <h1 id="前言">前言</h1>
+<hr>
+<p>今天写的前言可以不看，因为估计和我接下来写的正文无关。我很欣赏金庸的作品，有一天我走在路上的时候，我就在想，为什么林平之和令狐冲的命运相差这么大，我觉得在写的过程中，排除剧情需要的因素，我觉得这样的设定是很令人惋惜的，令狐冲在万念俱灰的时候遇到了任盈盈，而林平之似乎从一开始就是不幸的，直到最后也是不幸的，真的是命运无可避免吗？似乎在武侠小说当中，总会因为至高无上的秘籍而遭受余殃。当然如果没有这些秘籍，是不是武侠小说的根基也就不存在了呢。另外还有一个角色也让我觉得印象深刻，是殷离，也可以被叫做是蛛儿，同样是面对原生家庭的困境，蛛儿的性格可以说是古灵精怪，在遇到从山上跌伤腿的曾阿牛，也就是张无忌，在初遇时候的场景显得很有趣，我也很欣赏后面的这段剧情的发展，当我看到《倚天屠龙记》的结尾的时候，我发现在张无忌和芷若赵敏退隐江湖时，蛛儿说了这样一句，我要去找我的阿牛哥哥了，蛛儿对于这样意象空洞的执念，恰恰是反映出一种更深层次的悲凉，一个充满个性，但是却又是与这个时代格格不入的人物形象，如同《红楼梦》里的晴雯一般，不甘心成为袭人一样一昧忍让，心比天高，身为下贱，最终彩云易散琉璃碎，对待宝玉给了人生中最真的情，在凄婉的结局中香消玉殒。</p>
+<p>那么为什么要写这些文字呢，写这些文字的意义是什么呢，我觉得这背后涉及到对于内在性格的深入辨析，对于自我而言，存在社会性人格，当然还会有自我的双重人格，我们会发现，似乎在蛛儿和晴雯的故事中，都是自我人格与社会人格的割裂，不甘心沦为时代环境阶层的附庸，希望去表现出一个真实的自我，但是这样的代价是昂贵的，乃至于付出生命的代价。</p>
+<p>我突然想到这样的一个描述，叫做活出“生命的诗意与尊严”，当然，这样的描述是带有褒义色彩的，我更希望找到一个中性的词语来描述，这样的困境就像是屈原和渔父在江边的对白，两个完全不同的精神世界的对白，在寻找彼此所为之坚守的价值观。</p>
+<p>在面对科技程度越来越发展的今天，梭罗在上上个世纪写出的《瓦尔登湖》依旧充满盎然的兴趣，黑塞也曾带着妻子在博登湖居住过五年，诚然人类既无法脱离社会的各种关系的支持，又不甘心沦为时代的附庸，希望在高速发展的时代能留出喘息的时间来思考一些更加深刻的事情。当然，目前这些深刻的事情显得有些滑稽，但我想它们是有意义的。</p>
+<h1 id="正文">正文</h1>
+<hr>
+<p>OK，跳过了前言部分，我们需要花时间梳理一下今天正文的主题，关于如何使用关键字对信息进行更加高效的检索，目前就互联网而言，检索的方式大概有这么两种，一种是通过搜索引擎进行检索，一种是向大模型进行提问，bing 将大模型的搜索结果引入了 bing 搜索当中，所以目前，互联网对于我们普通人而言，依然是一座巨大的宝库。</p>
+<p>但是细心的我们会发现，搜索并不是一件简单的事情，而时间似乎又是有限的，我们可以采用高级检索的方式对结果进行精确匹配，虽然这已经不是什么新鲜的话题了，但是搜索引擎仍然是我们目前对于新鲜信息的检索渠道。</p>
+<p>从内容创作者的角度而言，发布自己的内容到 web 服务器上，需要通过域名或者 ip 地址，然后需要如果想要内容被更多人看到，需要对网站进行 Seo 优化，优化关键词，提高搜索引擎的排名。就需要去 bing 站长，谷歌控制台去上传自己的网址。</p>
+<p>从信息需求者的角度而言，获得自己想要的信息，就需要去不断的检索，从最常见的代码报错信息，比如上传本地文件到远程服务器，可以通过哪些方式。但是自己遇到的问题不一定能精确匹配搜索得到的信息，为此就需要进行多次检索。</p>
+<p>算了，直接进入正题吧，等会还有其他的事情要去做一下。</p>
+<p>我的这期灵感，参考自 up 主：<a href="https://space.bilibili.com/14739873"><strong>檀东东 Tango</strong></a></p>
+<p>标题为：<a href="https://www.bilibili.com/video/BV1yw411F7J1/?spm_id_from=333.999.0.0&amp;vd_source=237e295a40d7aaea043ead8c0d2c78ab">超级搜索技术，普通人变强的唯一外挂 | 全套宝藏实操秘技</a></p>
+<p>当然我刚才简单浏览完了这个视频，我很喜欢这个视频的前半部分，但是后半部分作者还是要恰饭的。</p>
+<p>当然，刚才在尝试完搜索之后，确实是会有一些提升。</p>
+<p>当然，我还是希望，能把时间用于专注做自己喜欢的事情上，我现在对互联网冲浪的热情已经少了很多，更多的时间希望能花在技术的专精提升上， 现在我给我自己的感觉还是太过于浮躁，真别说，真是这样，我还有很多缺点。</p>
+<h1 id="总结">总结</h1>
+<hr>
+<p>最后讲讲我的观点吧，对于高级检索技术，我认为可以概括为对于数据的提取和二次记忆，就比如我们学习，读书，加书签就是记忆的很好的方式，而检索就是对于记忆的提取和融合，也许一碰撞，就产生新的灵感了呢，所以这种高级检索方式归根到底，还是满足自己的需求。</p>
+<p>那么自己到底要什么呢，我认为其实筛选到后面的不多，知识，健康，金钱，科技，情感，价值。</p>
+<p>好吧，可以回归到马斯洛需求层次上。</p>
+<p>就我而言，现在真不是很喜欢在互联网上冲浪了，但是对 bilibli 的还是有瘾的，当然有好有坏吧，取决于是如何利用的。</p>
+<p>我更喜欢去逛逛博客，因为我知道相比较视频创作，用文字记录生活已经是一种相对来说更加合理的方式，期望越大失望越大， 所以，博客作为一种爱好，也许是能比较好的调协生活的，而且在博客当中，我能看到朋友真实的生活和体会。</p>
+<p>在生活当中，谁没有压力呢，谁没有个发疯的时候呢，谁不希望大哭大闹一场呢，当然那是小孩子的做法，成年人的世界是荒诞的。</p>
+<p>好了，其实写了这么半天，我还是颇有感概的，最近的这个月，略微有点颓废，不知道是为啥，季节性情绪障碍？总之就是觉得不好玩。</p>
+<p>放假甚至都没有平时充实，我不知道为啥，一种深刻的疲惫正在挑战我的精神状态，或许真的是我太过于焦虑了呢。</p>
+<p>然后，接下来的日子里，对于我而言，或许没那么特别狼狈了，这段日子里，我还是希望在忙于其他的事情之后，好好看看书，背背单词，学一学技术，每天被动的生活真的让我产生了巨量的不开心。</p>
+<p>OK，先到这里。</p>
+
+</content>
+<p>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/">#实用教程</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>

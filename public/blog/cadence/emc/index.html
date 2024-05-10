@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://bu.dusays.com/2024/04/23/6627ad7c08194.jpeg" />
+<title>[电磁兼容] 学习EMC电磁兼容仿真 | Hugo ʕ•ᴥ•ʔ Bear Blog</title>
+<meta name="title" content="[电磁兼容] 学习EMC电磁兼容仿真" />
+<meta name="description" content="在前期的设计阶段考虑电磁兼容性并采取相应的措施，可以有效降低电子设备的电磁干扰和辐射水平。" />
+<meta name="keywords" content="Cadence," />
+
+
+<meta property="og:title" content="[电磁兼容] 学习EMC电磁兼容仿真" />
+<meta property="og:description" content="在前期的设计阶段考虑电磁兼容性并采取相应的措施，可以有效降低电子设备的电磁干扰和辐射水平。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugo.matrixcore.life/blog/cadence/emc/" /><meta property="og:image" content="https://hugo.matrixcore.life/images/share.png"/><meta property="article:section" content="Blog" />
+<meta property="article:published_time" content="2023-12-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-12-21T00:00:00+00:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://hugo.matrixcore.life/images/share.png"/>
+
+<meta name="twitter:title" content="[电磁兼容] 学习EMC电磁兼容仿真"/>
+<meta name="twitter:description" content="在前期的设计阶段考虑电磁兼容性并采取相应的措施，可以有效降低电子设备的电磁干扰和辐射水平。"/>
+
+
+
+<meta itemprop="name" content="[电磁兼容] 学习EMC电磁兼容仿真">
+<meta itemprop="description" content="在前期的设计阶段考虑电磁兼容性并采取相应的措施，可以有效降低电子设备的电磁干扰和辐射水平。"><meta itemprop="datePublished" content="2023-12-21T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-12-21T00:00:00+00:00" />
+<meta itemprop="wordCount" content="122"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="keywords" content="Cadence," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Hugo ʕ•ᴥ•ʔ Bear Blog</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<content>
+  <h1 id="前言">前言</h1>
+<hr>
+<p>在闲暇时，看<a href="https://www.mr-wu.cn/">老吴的博客</a>的一些比较有感触的地方。</p>
+<p>关于麦克斯韦方程组，读<a href="https://www.mr-wu.cn/james-clerk-maxwell/">科学家的故事</a>一直都是比较有意思的流程，就像小时候看《一千零一夜》一样。老吴讲故事的水平不错的。</p>
+<blockquote>
+<p>1855 年，麦克斯韦发表了他的第一篇电磁学论文**《论法拉第的力线》**。在麦克斯韦手中，深奥的力线、场思想神奇般地用数学语言描述出来了，为法拉第的物理思想做了细致的数学“翻译”，使之定量化、精确化。</p>
+<p>法拉第盛赞麦克斯韦：“我惊讶地看到，这个主题居然处理得如此之好”，“我并不认为自己的学说一定是真理，但你是真正理解它的人”，“你不应该局限于借用数学来解释我的见解，而应该突破它。”<br>
+——<a href="https://www.mr-wu.cn/james-clerk-maxwell/">老吴的博客</a></p>
+</blockquote>
+<p>对于我这个数学菜狗来说，我只能默默长叹一声，感谢祖师爷赏饭。</p>
+<h1 id="正文">正文</h1>
+<hr>
+<p>在电子产品设计的过程中，电磁兼容实验是产品合格的重要指标。</p>
+<h2 id="电磁兼容实验">电磁兼容实验</h2>
+<hr>
+<p>电磁兼容实验是用于评估电子设备在电磁环境中的抗干扰和抗辐射能力的实验。它的目的是确保电子设备在正常运行时不会产生或受到不必要的电磁干扰，并且不会对周围的设备或环境产生有害的辐射。</p>
+<p>电磁兼容实验通常包括以下几个方面的测试：</p>
+<ol>
+<li>辐射发射测试：评估设备在正常操作时是否会产生电磁辐射，以及辐射的强度是否在规定的限制范围内。这个测试通常使用射频干扰场或开放区域测试方法进行。</li>
+<li>抗干扰测试：评估设备在外部电磁场干扰下的正常工作能力。这个测试通常使用射频干扰场或传导干扰场进行，以模拟设备在实际使用环境中可能遇到的干扰情况。</li>
+<li>静电放电测试：评估设备对静电放电的敏感性。这个测试通常使用电静电放电模拟器进行，以模拟设备在操作过程中可能遭受的静电干扰。</li>
+<li>快速瞬变测试：评估设备对电源线上的瞬态电压变化的抗干扰能力。这个测试通常使用快速瞬变发生器进行，以模拟设备在电源线上可能遇到的瞬态干扰。</li>
+<li>浪涌测试：评估设备对电源线上的浪涌电压的抗干扰能力。这个测试通常使用浪涌发生器进行，以模拟设备在电源线上可能遇到的浪涌干扰。</li>
+</ol>
+<p>通过进行这些实验，可以评估电子设备的电磁兼容性能，发现潜在的问题，并采取相应的措施来改善设备的抗干扰和抗辐射能力，确保设备在各种电磁环境中的正常运行和安全性。</p>
+<p>感谢作者 CTC 华商检测的文章：<a href="https://zhuanlan.zhihu.com/p/377514932"><strong>电磁兼容测试都包括哪些项目？</strong></a></p>
+<blockquote>
+<p>电磁兼容测试：是指设备或系统在其电磁环境中符合要求运作并不对其环境中的任何设备产生无法忍受的电磁干扰能力。</p>
+</blockquote>
+<pre><code>  电磁兼容测试包括两个方面的要求：一方面是指设备在正常运行过程中对所在的环境产生的电磁干扰不能超过一定的限值；另一方面是指器具对所在环境中存在的电磁干扰具有一定程度的抗扰度，即电磁敏感性。
+
+
+  EMI：CE（传导干扰），RE（辐射干扰），PT(干扰功率测试)等等。
+
+
+  EMS：ESD(静电放电），RS（辐射耐受），EFT/B(快速脉冲耐受)，surge（雷击），CS（传导耐受）等等。
+</code></pre>
+<h2 id="如何进行电磁兼容实验">如何进行电磁兼容实验</h2>
+<hr>
+<p>最主要的是去相关质检中心进行电磁兼容实验的测试。</p>
+<p>另外，也许还可以在电脑上用 EMC 仿真软件进行分析，但对电脑配置要求极高。</p>
+<p>在这里引用老吴的一段话：</p>
+<blockquote>
+<p>采用计算机建模技术，以得到最优的 EMC 解决方案才是最佳实践，通过计算机 EMC 仿真建模工具可以直观的告诉我们为什么必须遵循相关的设计规则以及它们在什么情况下适用。</p>
+</blockquote>
+<pre><code>  OK，用上EMC仿真之后，我们是不是就不用愁了，EMC仿真软件会告诉我们正确的设计解决方案？
+
+
+  emmm，想多了 🙃 你用仪器进行测量，仪器会告诉你有指标超标，但仪器会告诉你怎样才是正确的设计吗？显然不会，仿真亦然，只是让你试错更加方便效率更高，而且不用真的每次修改设计都要去生产一个真正的实物出来，省时省力。
+</code></pre>
+<h2 id="在前期的设计当中如何考虑电磁兼容">在前期的设计当中如何考虑电磁兼容</h2>
+<hr>
+<p>在前期的设计阶段，考虑电磁兼容性是非常重要的，可以采取以下几个方面的措施：</p>
+<ol>
+<li>电磁兼容性设计指南：了解和遵循相关的电磁兼容性设计指南和标准，如国际电工委员会（IEC）的 IEC 61000 系列标准，以及各个国家和地区的电磁兼容性规定。这些指南和标准提供了关于电磁兼容性设计的基本原则和要求，可以作为设计的参考依据。</li>
+<li>电磁兼容性分析：在设计过程中进行电磁兼容性分析，评估设备可能面临的电磁干扰源和辐射环境。这可以通过使用电磁场仿真软件、频谱分析仪和其他相关工具来完成。分析的结果可以帮助设计人员确定可能的干扰路径和敏感部件，从而指导设计的改进和优化。</li>
+<li>**地线和屏蔽设计：**合理设计设备的地线系统和屏蔽结构，以降低电磁干扰的传导和辐射。地线系统的设计应考虑地线的布局、接地电阻的控制和地线回路的优化。屏蔽结构的设计应考虑使用合适的屏蔽材料和屏蔽技术，以减少电磁辐射和接收外部干扰。</li>
+<li>**模拟和数字电路分离：**在设计中尽可能将模拟和数字电路分离，以减少彼此之间的相互干扰。这可以通过合理的电路布局、分离的供电和地线系统、合适的滤波器和隔离措施来实现。</li>
+<li>**滤波和抑制措施：**在设计中使用适当的滤波器和抑制措施，以降低电磁干扰的传导和辐射。这可以包括使用滤波器来抑制电源线上的高频噪声、使用抑制器来减少电路中的共模干扰、使用衰减器来降低传导干扰等。</li>
+<li>**地址布线和电源布线：**合理规划和设计设备的地址布线和电源布线，以减少电磁干扰的传导和辐射。这包括使用合适的布线方式、合理分布信号和电源线路、减少线路的长度和交叉等。</li>
+<li>**选择合适的元器件和材料：**在设计中选择符合电磁兼容性要求的元器件和材料。这包括选择具有良好抗干扰性能的元器件、使用低噪声和低辐射的材料，以及避免使用容易受到电磁干扰的元器件和材料。</li>
+</ol>
+<p>综上所述，通过在前期的设计阶段考虑电磁兼容性并采取相应的措施，可以有效降低电子设备的电磁干扰和辐射水平，提高设备的抗干扰和抗辐射能力，确保设备在各种电磁环境中的正常运行和安全性。</p>
+<h2 id="在设计中什么情况下会同时使用数字电路和模拟电路数字电路和模拟电路的优缺点和应用范围有哪些">在设计中什么情况下会同时使用数字电路和模拟电路。数字电路和模拟电路的优缺点和应用范围有哪些？</h2>
+<hr>
+<p>在设计中，通常会同时使用数字电路和模拟电路的情况包括：</p>
+<ol>
+<li>综合性电子系统：许多电子系统需要同时处理数字信号和模拟信号。例如，通信系统中的调制解调器、音频设备中的信号处理电路、传感器接口电路等都需要同时使用数字电路和模拟电路。</li>
+<li>数据转换和接口：当需要将模拟信号转换为数字信号（模数转换）或将数字信号转换为模拟信号（数模转换）时，通常需要同时使用数字电路和模拟电路。例如，音频编解码器、模拟到数字转换器（ADC）和数字到模拟转换器（DAC）等。</li>
+<li>控制系统：控制系统通常需要同时处理数字信号和模拟信号。数字电路用于实现逻辑控制和算法处理，而模拟电路用于接收和生成控制信号。例如，自动化系统、机器人控制系统等。</li>
+</ol>
+<p>数字电路和模拟电路各有优缺点和应用范围：</p>
+<p><strong>数字电路的优点包括：</strong></p>
+<ol>
+<li>**高稳定性：**数字电路的逻辑门电平稳定，不受温度、电压和噪声的影响，能够在广泛的工作条件下可靠地工作。</li>
+<li>**可编程性：**数字电路可以通过编程实现复杂的逻辑功能，具有较高的灵活性和可配置性。</li>
+<li>**高精度：**数字电路的精度通常受到器件分辨率的限制，可以实现高精度的计算和处理。</li>
+<li>**抗干扰能力强：**数字信号具有较高的抗干扰能力，能够在噪声环境下准确地传输和处理信息。</li>
+</ol>
+<p><strong>模拟电路的优点包括：</strong></p>
+<ol>
+<li><strong>高精确度</strong>：模拟电路能够处理连续变化的信号，具有较高的精确度和分辨率。</li>
+<li>低功耗：模拟电路通常具有较低的功耗，适合于一些对能耗要求较高的应用场景。</li>
+<li><strong>快速响应</strong>：模拟电路能够实时响应输入信号的变化，适用于需要实时处理和控制的应用。</li>
+<li><strong>真实性</strong>：模拟电路能够准确地模拟真实世界中的连续信号，适用于音频、视频和传感器等领域。</li>
+</ol>
+<p>数字电路主要应用于计算、控制、通信和存储等领域，如微处理器、FPGA、数字信号处理器（DSP）等。模拟电路主要应用于音频、视频、传感器、滤波器、功率放大器等领域。</p>
+<p>需要注意的是，随着技术的进步，数字电路和模拟电路之间的界限逐渐模糊，出现了数字信号处理技术、混合信号集成电路等融合了数字和模拟特性的设计方法。因此，在实际设计中，数字电路和模拟电路往往是相互结合、相互配合的。</p>
+<h2 id="模拟电路的历史及未来的发展趋势"><strong>模拟电路的历史及未来的发展趋势</strong></h2>
+<hr>
+<p>非常感谢<a href="https://www.elecfans.com/analog/20190705983626.html">电子发烧友官网</a>，摩尔定律，半导体工艺，集成电路，晶体管尺寸越来越小，数量越来越多。引用文章里的一段话：</p>
+<blockquote>
+<p>随着大规<a href="https://www.elecfans.com/v/tag/1180/"><!-- raw HTML omitted -->模电<!-- raw HTML omitted --></a>路发展，晶体管越来越小，集成数量成几何级增加，其制造工艺却越来越难了。克服这些技术和工艺壁垒不仅需要大量的时间和研究，还需要大量的资金和投资。因此，摩尔定律也中的时间也逐渐放缓，甚至可它可能会很快不成立，摩尔定律危机爆发（当然如果没有巨大变革这是必然的）。<br>
+随着电子元件越来越小（纳米级），量子特性和效应逐渐显现。随着我们不断减小晶体管的尺寸，其 Pn 结耗尽层的尺寸也越来减小。耗尽层非常重要，用于阻止电子的流动。研究人员通过计算得出，由于电子在其耗尽区中的隧道效应，小于 5nm 的晶体管将无法阻止电子流动。由于隧穿，电子将不会感知耗尽区域，直接 &ldquo;跨穿&rdquo;。如果不能阻止电子流动，晶体管就会失效。<br>
+此外，我们现在正在慢慢接近原子本身的大小，理论上我们不能建立一个比原子小的晶体管。硅原子的直径约为 1 纳米，现在我们制造的晶体管的栅极尺寸约为该尺寸的 10 倍。就算是不考虑量子效应的，我们也将达到晶体管的物理极限，无法做到更小。<br>
+我们可能已经注意到，尽管晶体管变得更小，但是在过去十年中<a href="https://m.elecfans.com/v/tag/132/"><!-- raw HTML omitted -->CPU<!-- raw HTML omitted --></a>计算速率并没有上升，这是由于 Dennard Scaling 崩溃。高时钟速率下的高损耗也是<a href="https://m.elecfans.com/v/tag/11230/"><!-- raw HTML omitted -->智能手机<!-- raw HTML omitted --></a><a href="https://www.elecfans.com/v/tag/137/"><!-- raw HTML omitted -->芯片<!-- raw HTML omitted --></a>使用较低时钟速度（通常为 1.5 GHz）的原因。</p>
+</blockquote>
+<pre><code>  通过改进当前的芯片实现并具有更好的指令流水线，我们可以改善芯片的性能。所以斯坦福的教授乔纳森·库梅提出了库梅（Koomey）定律：每焦耳能量的计算次数将每1.5年翻一番。预计这种情况将持续到2048年，届时Landauer的原理和热力学简单定律将阻止进一步的改进。目前，Landauer Limits的计算机效率约为0.00001%。
+</code></pre>
+<h2 id="单片机中-ad-转换的作用">单片机中 AD 转换的作用</h2>
+<hr>
+<p>在单片机中，AD 转换（Analog-to-Digital Conversion）的作用是将模拟信号转换为数字信号，使单片机能够对模拟信号进行处理、分析和控制。AD 转换器是单片机中的重要模块，它将模拟信号的连续变化转换为离散的数字数值，以便单片机能够对其进行数字化处理。</p>
+<p>AD 转换的主要作用包括：</p>
+<ol>
+<li>**信号采集：**AD 转换器可以将来自外部传感器、信号源或其他模拟设备的模拟信号转换为数字信号，使单片机能够获取和采集外部环境或设备的信息。例如，温度传感器、光敏电阻、压力传感器等模拟传感器输出的模拟信号可以通过 AD 转换器转换为数字形式，供单片机进行处理和判断。</li>
+<li>**数据处理：**通过 AD 转换，单片机可以对模拟信号进行数字化处理和算法运算。例如，单片机可以对采集到的模拟信号进行滤波、放大、平均、积分等处理，以提取有用的信息或进行特定的控制操作。</li>
+<li>**控制决策：**AD 转换器可以将模拟信号转换为数字信号后，单片机可以根据这些数字数据进行控制决策。例如，通过对温度传感器输出信号进行 AD 转换，单片机可以根据温度数值来控制加热或冷却系统，实现温度的自动调节。</li>
+<li>**数据传输和通信：**AD 转换器可以将模拟信号转换为数字信号后，单片机可以通过数字信号进行数据传输和通信。例如，单片机可以将采集到的模拟信号转换为数字形式后，通过串行通信接口（如 UART、SPI、I2C 等）将数据发送给其他设备或接收其他设备发送的数据。</li>
+</ol>
+<p>总之，AD 转换在单片机中的作用是将模拟信号转换为数字信号，使单片机能够对模拟信号进行处理、分析和控制，实现数据采集、处理、决策和通信等功能。</p>
+<h1 id="总结">总结</h1>
+<hr>
+<p>这篇文章是基于兴趣的离散总结，之后仍需进行针对性地深入学习。</p>
+
+</content>
+<p>
+  
+  <a href="https://hugo.matrixcore.life/blog/cadence/">#Cadence</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>

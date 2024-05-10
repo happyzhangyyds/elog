@@ -6,257 +6,257 @@
     <description>Recent content in 实用教程 on Hugo ʕ•ᴥ•ʔ Bear Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <copyright>Copyright © 2020, Jane Doe.</copyright>
+    <copyright>Copyright © 2024, MatrixCore</copyright>
     <lastBuildDate>Sun, 21 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[文献管理]  Nextcloud_Webdav的Zotero同步方案</title>
-      <link>https://hugo.matrixcore.life/nextcloud_webdav-zotero/</link>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/nextcloud_webdav-zotero/</link>
       <pubDate>Sun, 21 Apr 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.matrixcore.life/nextcloud_webdav-zotero/</guid>
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/nextcloud_webdav-zotero/</guid>
       <description>这篇文章简单介绍了如何通过Nextcloud Webdav的方式进行Zotero同步，内容包括：服务器入门，linux运维面板的安装，Nextcloud和Mysql的安装，Nginx的使用，Zotero的Webdav的设置，解除php上传的限制，从而实现在自有网盘间进行数据同步，为搭建大规模数据集提供了基础。</description>
     </item>
     
     <item>
       <title>[网络中继] 使用linux来中继wifi信号</title>
-      <link>https://hugo.matrixcore.life/linux-wifi/</link>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/linux-wifi/</link>
       <pubDate>Sat, 30 Mar 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.matrixcore.life/linux-wifi/</guid>
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/linux-wifi/</guid>
       <description>大多数手机和许多现代的无线网卡支持一种叫作“Wi-Fi Direct”或“软件接入点（Soft AP）”的功能，它们可以让设备即作为无线客户端连接到Wi-Fi网络，同时也能作为热点向其他设备提供Wi-Fi连接。</description>
     </item>
     
     <item>
       <title>[毕业设计] 基于Yolo的航拍图像黑匣子检测算法设计</title>
-      <link>https://hugo.matrixcore.life/graduation-design/</link>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/graduation-design/</link>
       <pubDate>Fri, 01 Mar 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.matrixcore.life/graduation-design/</guid>
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/graduation-design/</guid>
       <description>这篇文章随进度更新，用于记录在毕设过程中遇到的心得和问题。</description>
     </item>
     
     <item>
       <title>[数据中心] 测试crontab同步elog&#43;Onedrive</title>
-      <link>https://hugo.matrixcore.life/crontab-1/</link>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/crontab-1/</link>
       <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.matrixcore.life/crontab-1/</guid>
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/crontab-1/</guid>
       <description>为obsidian建立数据中心，使用vps定时同步到onedrive</description>
     </item>
     
     <item>
       <title>[狗命要紧] jellyfin&#43;crontab&#43;mailx快感管理</title>
-      <link>https://hugo.matrixcore.life/pleasure-management/</link>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/pleasure-management/</link>
       <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.matrixcore.life/pleasure-management/</guid>
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/pleasure-management/</guid>
       <description>使用jellyfin+crontab+mailx+postfix+QQ邮箱+微信提醒实现快感的时间调度</description>
     </item>
     
     <item>
       <title>[主题推荐] 宝藏hugo-virgo</title>
-      <link>https://hugo.matrixcore.life/hugo-virgo/</link>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/hugo-virgo/</link>
       <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.matrixcore.life/hugo-virgo/</guid>
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/hugo-virgo/</guid>
       <description>Hugo是静态网页的速度很快，virgo主题又非常简洁美观，值得推荐给大家。</description>
     </item>
     
     <item>
       <title>[笔记同传] 用双手减少大脑过度思考的偏差</title>
-      <link>https://hugo.matrixcore.life/video-record/</link>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/video-record/</link>
       <pubDate>Sat, 18 Nov 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.matrixcore.life/video-record/</guid>
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/video-record/</guid>
       <description>笔记同传的思想归根到底还是来自于从前老师的提醒：不动笔墨不读书，本质上就是读电子书，做电子笔记。</description>
     </item>
     
     <item>
       <title>[图像处理] yolov5后续的性能调节</title>
-      <link>https://hugo.matrixcore.life/yolov5-2/</link>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/yolov5-2/</link>
       <pubDate>Fri, 17 Nov 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.matrixcore.life/yolov5-2/</guid>
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/yolov5-2/</guid>
       <description>接下来的主要任务是把中期的课设报告完善一下，提升逻辑性，美观度，加一些问题和思考。</description>
     </item>
     
     <item>
       <title>[检索技巧] 关键字匹配提升准确率</title>
-      <link>https://hugo.matrixcore.life/231116/</link>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/231116/</link>
       <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.matrixcore.life/231116/</guid>
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/231116/</guid>
       <description>获取想要的信息要花费一些心力，而时间似乎又是有限的，我们可以采用高级检索的方式对结果进行精确匹配。</description>
     </item>
     
     <item>
       <title>[图像处理] 基于yolov5的水果识别</title>
-      <link>https://hugo.matrixcore.life/yolov5-1/</link>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/yolov5-1/</link>
       <pubDate>Wed, 15 Nov 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.matrixcore.life/yolov5-1/</guid>
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/yolov5-1/</guid>
       <description>选择yolov5自定义数据集对红富士、黄元帅、国光进行识别。</description>
     </item>
     
     <item>
       <title>[新的尝试] 在安卓上尝试使用obsidian&#43;notion的组合</title>
-      <link>https://hugo.matrixcore.life/obsidian/</link>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/obsidian/</link>
       <pubDate>Sat, 04 Nov 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.matrixcore.life/obsidian/</guid>
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/obsidian/</guid>
       <description>我发现在安卓上使用obsidian+notion成为可能。</description>
     </item>
     
     <item>
       <title>[数据归档] 博客：静态还是动态</title>
-      <link>https://hugo.matrixcore.life/hugo/</link>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/hugo/</link>
       <pubDate>Sat, 28 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.matrixcore.life/hugo/</guid>
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/hugo/</guid>
       <description>这些天在研究hugo，据说是最快的博客系统</description>
     </item>
     
     <item>
       <title>[notion] Customize Notion domain and link to Apple Calendar</title>
-      <link>https://hugo.matrixcore.life/calendar/</link>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/calendar/</link>
       <pubDate>Sat, 14 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.matrixcore.life/calendar/</guid>
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/calendar/</guid>
       <description>Customizing the domain for Notion and integrating it with Apple Calendar is an incredibly marvelous endeavor.</description>
     </item>
     
     <item>
       <title>[跨域协同]  elog&#43;notion实现md优雅备份</title>
-      <link>https://hugo.matrixcore.life/elog/</link>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/elog/</link>
       <pubDate>Wed, 11 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.matrixcore.life/elog/</guid>
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/elog/</guid>
       <description>通过elog实现notion文章批量下载到本地，以及自动化云端备份和迁移。</description>
     </item>
     
     <item>
       <title>[记忆方法] 整理自up主：ZoeLanguages的学习经验</title>
-      <link>https://hugo.matrixcore.life/sprache/</link>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/sprache/</link>
       <pubDate>Tue, 10 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.matrixcore.life/sprache/</guid>
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/sprache/</guid>
       <description>笔记的三大策略、信息筛选、如何整理以及主动回忆。</description>
     </item>
     
     <item>
       <title>[外语学习] 沙拉查词&#43;anki进行记忆强化 </title>
-      <link>https://hugo.matrixcore.life/saladict/</link>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/saladict/</link>
       <pubDate>Thu, 28 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.matrixcore.life/saladict/</guid>
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/saladict/</guid>
       <description>介绍了通过沙拉查词+anki导出的方式，对学习的单词进行可视化整理</description>
     </item>
     
     <item>
       <title>[外语学习] 沙拉查词&#43;anki进行记忆强化 </title>
-      <link>https://hugo.matrixcore.life/saladict/</link>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/saladict/</link>
       <pubDate>Thu, 28 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.matrixcore.life/saladict/</guid>
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/saladict/</guid>
       <description>介绍了通过沙拉查词+anki导出的方式，对学习的单词进行可视化整理</description>
     </item>
     
     <item>
       <title>[外语学习] 沙拉查词&#43;anki进行记忆强化 </title>
-      <link>https://hugo.matrixcore.life/saladict/</link>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/saladict/</link>
       <pubDate>Thu, 28 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.matrixcore.life/saladict/</guid>
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/saladict/</guid>
       <description>介绍了通过沙拉查词+anki导出的方式，对学习的单词进行可视化整理</description>
     </item>
     
     <item>
       <title>[云服务器] “moments”&amp;”Navidrome”demo</title>
-      <link>https://hugo.matrixcore.life/azure/</link>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/azure/</link>
       <pubDate>Sun, 24 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.matrixcore.life/azure/</guid>
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/azure/</guid>
       <description>用热情去做好自己喜欢的事情</description>
     </item>
     
     <item>
       <title>[速度优化]  前端图片性能优化</title>
-      <link>https://hugo.matrixcore.life/picturespeed/</link>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/picturespeed/</link>
       <pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.matrixcore.life/picturespeed/</guid>
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/picturespeed/</guid>
       <description>用杜老师的图床对图片进行加速</description>
     </item>
     
     <item>
       <title>[桌面美化] Windows也可以像Mac一样优雅</title>
-      <link>https://hugo.matrixcore.life/beautify/</link>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/beautify/</link>
       <pubDate>Fri, 11 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.matrixcore.life/beautify/</guid>
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/beautify/</guid>
       <description>介绍win桌面美化插件，WinDynamicDesktop和rainmeter</description>
     </item>
     
     <item>
       <title>[技能拓展]  计算机专业学习路线—点亮你的科技树🌲</title>
-      <link>https://hugo.matrixcore.life/hackway/</link>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/hackway/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.matrixcore.life/hackway/</guid>
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/hackway/</guid>
       <description>分享计算机专业学习路线和讲讲我的规划及感受！</description>
     </item>
     
     <item>
       <title>[知识分享] 开源许可证教程</title>
-      <link>https://hugo.matrixcore.life/license/</link>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/license/</link>
       <pubDate>Wed, 09 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.matrixcore.life/license/</guid>
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/license/</guid>
       <description>介绍互联网软件开源协议</description>
     </item>
     
     <item>
       <title>[天之骄子] RSS为什么退出了互联网的舞台？</title>
-      <link>https://hugo.matrixcore.life/rss/</link>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/rss/</link>
       <pubDate>Tue, 08 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.matrixcore.life/rss/</guid>
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/rss/</guid>
       <description>万物皆可RSS（🐶保命）</description>
     </item>
     
     <item>
       <title>[海岛奇兵] 1600副本纯妹单图攻略</title>
-      <link>https://hugo.matrixcore.life/boombeach/</link>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/boombeach/</link>
       <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.matrixcore.life/boombeach/</guid>
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/boombeach/</guid>
       <description>平时也没什么爱好，除了打打海岛奇兵就是修修博客，写写文章，本来我感觉自己的娱乐方式就不是很多，上班之后时间也更少。海岛每天花个几分钟也能稍微调节一下生活，其实往深处了看，海岛是一款好游戏，不肝不氪。</description>
     </item>
     
     <item>
       <title>[海岛奇兵] 重建特遣队</title>
-      <link>https://hugo.matrixcore.life/boombeach/</link>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/boombeach/</link>
       <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.matrixcore.life/boombeach/</guid>
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/boombeach/</guid>
       <description>其实往深处看，海岛是一款好游戏，不肝不氪，能提供适度娱乐。</description>
     </item>
     
     <item>
       <title>[技术分享] Ubuntu_linux</title>
-      <link>https://hugo.matrixcore.life/ubuntu/</link>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/ubuntu/</link>
       <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.matrixcore.life/ubuntu/</guid>
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/ubuntu/</guid>
       <description>我特别喜欢ubuntu的命令行的使用方式，这样可以更加简洁纯粹的去做一件事情</description>
     </item>
     
     <item>
       <title>[技术分享] 博客优化</title>
-      <link>https://hugo.matrixcore.life/improve/</link>
+      <link>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E5%BF%85%E7%9C%8B%E7%B2%BE%E9%80%89/improve/</link>
       <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://hugo.matrixcore.life/improve/</guid>
+      <guid>https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E5%BF%85%E7%9C%8B%E7%B2%BE%E9%80%89/improve/</guid>
       <description>记录我对博客优化的过程，您可以看作是博客优化的日志。</description>
     </item>
     

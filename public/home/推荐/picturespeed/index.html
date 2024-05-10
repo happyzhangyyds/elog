@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://bu.dusays.com/2024/04/23/6627ad7c08194.jpeg" />
+<title>[速度优化]  前端图片性能优化 | Hugo ʕ•ᴥ•ʔ Bear Blog</title>
+<meta name="title" content="[速度优化]  前端图片性能优化" />
+<meta name="description" content="用杜老师的图床对图片进行加速" />
+<meta name="keywords" content="推荐," />
+
+
+<meta property="og:title" content="[速度优化]  前端图片性能优化" />
+<meta property="og:description" content="用杜老师的图床对图片进行加速" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugo.matrixcore.life/home/%E6%8E%A8%E8%8D%90/picturespeed/" /><meta property="og:image" content="https://hugo.matrixcore.life/images/share.png"/><meta property="article:section" content="Home" />
+<meta property="article:published_time" content="2023-08-13T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-08-13T00:00:00+00:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://hugo.matrixcore.life/images/share.png"/>
+
+<meta name="twitter:title" content="[速度优化]  前端图片性能优化"/>
+<meta name="twitter:description" content="用杜老师的图床对图片进行加速"/>
+
+
+
+<meta itemprop="name" content="[速度优化]  前端图片性能优化">
+<meta itemprop="description" content="用杜老师的图床对图片进行加速"><meta itemprop="datePublished" content="2023-08-13T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-08-13T00:00:00+00:00" />
+<meta itemprop="wordCount" content="183"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="keywords" content="推荐," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Hugo ʕ•ᴥ•ʔ Bear Blog</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+</nav>
+</header>
+  <main>
+
+<content>
+  <h1 id="前言">前言</h1>
+<hr>
+<p>今天做一道极限的题目，用到的等价无穷小，但是图片一直是博客杀手，我等了半天也出不来，却是没办法，notion 本身的图片加载速度只能说一般，而且国内的访问速度不是很理想，所以前几天我一直很苦恼。
+今天我打算用杜老师的图床对图片进行加速，之前使用 marginnote+obsidian 的时候就研究过这个东东，因为 obsidian 虽然强大，但是图片都是存储在本地，没办法同步到 notion，然后就用到了 picgo，一开始我不知道能用杜老师的图床，后来才发现，可以的，腾讯云的图床我用的还不是很舒服，smms 的图床虽然免费，但感觉有时候不稳定。
+picgo 就是一种快捷的图片上传服务，上传图片的同时还可以给你图片的链接。</p>
+<blockquote>
+<p>💡 首先感谢杜老师提供的图床服务 🌺🌺🌺<br>
+具体可以去杜老师的<a href="https://dusays.com/">博客</a>看一看<br>
+本文也参考了掘金社区作者<strong>lzg9527 的文章：</strong><a href="https://juejin.cn/post/6965761736083243044"><strong>前端性能优化——图片篇</strong></a><br>
+感谢作者热心的分享和介绍 😄</p>
+</blockquote>
+<h1 id="正文">正文</h1>
+<hr>
+<p>进行细节介绍，关于网站加载的步骤，图片的格式</p>
+<h2 id="为什么要进行图片优化">为什么要进行图片优化</h2>
+<hr>
+<p>图片众多以及图片体积过大往往会影响页面加载速度，造成不良的用户体验，所以对图片进行优化势在必行。</p>
+<p>并发的图片请求次数是有限的，其他的请求会推入到队列中等待或者停滞不前，直到上轮请求完成后新的请求才会发出。所以相当一部分图片资源请求是需要排队等待时间的，过多的图片必然会影响页面的加载和展示。</p>
+<h2 id="图片格式介绍">图片格式介绍</h2>
+<hr>
+<p>JPEG 是由 Joint Photographic Experts Group 所开发出的一种图片。它最大的特点是  <strong>有损压缩</strong>。当我们把图片体积压缩至原有体积的 50% 以下时，JPG 仍然可以保持住 60% 的品质。可以呈现多达 1600 万种颜色，足以应对大多数场景下对色彩的要求。</p>
+<p>PNG（可移植网络图形格式）是由 W3C 开发的图片格式，是一种<strong>无损压缩</strong>的高保真的图片格式。PNG 图片具有比 JPEG 更强的色彩表现力，对线条的处理更加细腻，对透明度有良好的支持。它弥补了上文我们提到的 JPEG 的局限性，唯一的缺点就是　<strong>体积太大</strong>。</p>
+<p>GIF 是一种最多支持 256 种颜色的 8 位无损图片格式。这个限制让 GIF 格式对于多颜色或者摄影图片的展示无能为力。支持动画，适合去展示一些无限循环的动画，比如图标、表情、广告栏等。</p>
+<p>WebP 是一种同时提供了有损压缩与无损压缩（可逆压缩）的图片文件格式，派生自影像编码格式 VP8。它像 JPEG 一样对细节丰富的图片信手拈来，像 PNG 一样支持透明，像 GIF 一样可以显示动态图片，集多种图片文件格式的优点于一身。虽然 webP 有诸多优点，但是它不能完全替代 JPEG 和 PNG，因为浏览器对 WebP 支持并不普遍。特别是移动端 IOS 系统基本不支持。</p>
+<h2 id="图片压缩工具">图片压缩工具</h2>
+<hr>
+<p>我使用的是 Mac 的<a href="https://imageoptim.com/mac">ImageOptim</a>，使用体验还是比较良好的。
+然后文章的作者也提供了一些其他的方案，比如：</p>
+<ul>
+<li><a href="https://link.juejin.cn/?target=https%3A%2F%2Ftinypng.com%2F">tinypng</a>  免费、批量、速度块</li>
+<li><a href="https://link.juejin.cn/?target=https%3A%2F%2Fzhitu.isux.us%2F">智图压缩</a>  百度很难搜到官网了，免费、批量、好用</li>
+<li><a href="https://link.juejin.cn/?target=https%3A%2F%2Fsquoosh.app%2F">squoosh</a>  在线图片压缩工具</li>
+<li><a href="https://link.juejin.cn/?target=https%3A%2F%2Fcompressor.io%2F">compressor</a>  支持 JPG、PNG、SVG、GIF</li>
+</ul>
+<h2 id="使用-cdn-图片">🌟<strong>使用 CDN 图片</strong></h2>
+<hr>
+<p>CDN 的全称是 Content Delivery Network，即内容分发网络。<!-- raw HTML omitted -->CDN 是构建在网络之上的内容分发网络，依靠部署在各地的边缘服务器，通过中心平台的负载均衡、内容分发、调度等功能模块，使用户就近获取所需内容，降低网络拥塞，提高用户访问响应速度和命中率。<!-- raw HTML omitted -->CDN 的关键技术主要有内容存储和分发技术。</p>
+<p>举个简单的例子：</p>
+<blockquote>
+<p><em>以前买火车票大家都只能去火车站买，后来我们买火车票就可以在楼下的火车票代售点买了。</em></p>
+</blockquote>
+<p>这个比喻还是很形象的，通过多地部署，提高速度。
+这里都是引用的作者的描述</p>
+<p><strong>基本原理</strong></p>
+<p>CDN 的基本原理是广泛采用各种缓存服务器，将这些缓存服务器分布到用户访问相对集中的地区或网络中，在用户访问网站时，利用全局负载技术将用户的访问指向距离最近的工作正常的缓存服务器上，由缓存服务器直接响应用户请求。</p>
+<p><strong>基本思路</strong></p>
+<p>CDN 的基本思路是<!-- raw HTML omitted -->尽可能避开互联网上有可能影响数据传输速度和稳定性的瓶颈和环节，<!-- raw HTML omitted -->使内容传输的更快、更稳定。<!-- raw HTML omitted -->通过在网络各处放置节点服务器所构成的在现有的互联网基础之上的一层智能虚拟网络，CDN 系统能够实时地根据网络流量和各节点的连接、负载状况以及到用户的距离和响应时间等综合信息将用户的请求重新导向离用户最近的服务节点上。<!-- raw HTML omitted -->其目的是使用户可就近取得所需内容，解决 Internet 网络拥挤的状况，提高用户访问网站的响应速度。</p>
+<p><strong>CDN 的优势</strong></p>
+<ul>
+<li>CDN 节点解决了跨运营商和跨地域访问的问题，访问延时大大降低；</li>
+<li>大部分请求在 CDN 边缘节点完成，CDN 起到了分流作用，减轻了源站的负载。</li>
+</ul>
+<h2 id="其他方案">其他方案</h2>
+<hr>
+<p><strong>使用 css 代替图片</strong>。</p>
+<p>比如实现修饰效果，如半透明、边框、圆角、阴影、渐变等，在当前主流浏览器中都可以用 CSS 达成，这样能减少图片的请求，达到优化的目的。</p>
+<p><strong>缺点</strong></p>
+<ul>
+<li>
+<p>受限于 css 的浏览器的兼容性</p>
+</li>
+<li>
+<p>对于较复杂的图案就无能为力了，写也麻烦，开发成本大</p>
+<p><strong>图片懒加载</strong></p>
+<p>懒加载是一种网页性能优化的方式，它能极大的提升用户体验。图片一直是影响网页性能的主要元凶，现在一张图片超过几兆已经是很经常的事了。如果每次进入页面就请求所有的图片资源，那么可能等图片加载出来用户也早就走了。所以进入页面的时候，只请求可视区域的图片资源。</p>
+</li>
+</ul>
+<p>总结出来就是：</p>
+<ul>
+<li>减少资源的加载，页面启动只加载首屏的图片，这样能明显减少了服务器的压力和流量，也能够减小浏览器的负担。</li>
+<li>防止并发加载的资源过多而阻塞 js 的加载，影响整个网站的启动，影响用户体验</li>
+<li>浪费用户的流量，有些用户并不想全部看完，全部加载会耗费大量流量。</li>
+</ul>
+<blockquote>
+<p>💡 这个技术博客的开发作者应该也是用上了的，我觉得 javascript 还是很有意思的，里面蕴含着很多解决问题的思想和办法。</p>
+</blockquote>
+<p><strong>图片预加载</strong></p>
+<p>图片预加载，是指在一些需要展示大量图片的网站，将图片提前加载到本地缓存中，从而提升用户体验。</p>
+<p>常用的方式有两种，一种是隐藏在 css 的 background 的 url 属性里面，一种是通过 javascript 的 Image 对象设置实例对象的 src 属性实现图片的预加载。</p>
+<p><strong>响应式图片加载</strong></p>
+<p>什么是响应式图片加载？其实就是在不同分辨率的设备上显示不同尺寸的图片，避免资源的浪费。</p>
+<p>常用的方法就是 css3 的媒体查询(media query)。</p>
+<p><strong>渐进式图片</strong></p>
+<p>渐进式图片的意思是在高画质图像加载完之前会先显示低画质版本。低画质版本由于画质低、压缩率高，尺寸很小，加载很快。在两者之间我们也可以根据需要显示不同画质的版本。</p>
+<p><img src="https://bu.dusays.com/2023/08/13/64d8e3653b7ae.png" alt=""></p>
+<p>渐进式图片可以让用户产生图片加载变快的印象。用户不再盯着一片空白区域等待图片加载，而能看到图像变得越来越清晰，这样对用户体验也是友好的。</p>
+<p>骨架屏技术也是类似的原理。</p>
+<h1 id="总结">总结</h1>
+<hr>
+<p>作者的总结还是非常详细的，对于一个问题提供了很多解决问题的思路。再赞一个 👍！</p>
+<ol>
+<li>
+<p>选择合适的图片格式和压缩大图，可从根源上截图大图加载过慢的问题。</p>
+</li>
+<li>
+<p>使用雪碧图，iconfont，base64，css 代替图片等可减少图片 http 请求，提高页面加载速度。</p>
+</li>
+<li>
+<p>使用 CDN 图片可达到分流的效果，减少服务器压力。</p>
+</li>
+<li>
+<p>图片懒加载，预加载，渐进式图片等可不同程度减少白屏时间，提高产品体验。</p>
+</li>
+</ol>
+
+</content>
+<p>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E6%8E%A8%E8%8D%90/">#推荐</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://bu.dusays.com/2024/04/23/6627ad7c08194.jpeg" />
+<title>[创作环境] 尝试多终端进行写作 | Hugo ʕ•ᴥ•ʔ Bear Blog</title>
+<meta name="title" content="[创作环境] 尝试多终端进行写作" />
+<meta name="description" content="我希望用我熟悉的掌中设备来做一些更有意义的事情，通过多终端来分别记录自己的不同感受。" />
+<meta name="keywords" content="情绪表达," />
+
+
+<meta property="og:title" content="[创作环境] 尝试多终端进行写作" />
+<meta property="og:description" content="我希望用我熟悉的掌中设备来做一些更有意义的事情，通过多终端来分别记录自己的不同感受。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugo.matrixcore.life/blog/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231104/" /><meta property="og:image" content="https://hugo.matrixcore.life/images/share.png"/><meta property="article:section" content="Blog" />
+<meta property="article:published_time" content="2023-11-04T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-11-04T00:00:00+00:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://hugo.matrixcore.life/images/share.png"/>
+
+<meta name="twitter:title" content="[创作环境] 尝试多终端进行写作"/>
+<meta name="twitter:description" content="我希望用我熟悉的掌中设备来做一些更有意义的事情，通过多终端来分别记录自己的不同感受。"/>
+
+
+
+<meta itemprop="name" content="[创作环境] 尝试多终端进行写作">
+<meta itemprop="description" content="我希望用我熟悉的掌中设备来做一些更有意义的事情，通过多终端来分别记录自己的不同感受。"><meta itemprop="datePublished" content="2023-11-04T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-11-04T00:00:00+00:00" />
+<meta itemprop="wordCount" content="45"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="keywords" content="情绪表达," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Hugo ʕ•ᴥ•ʔ Bear Blog</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<content>
+  <h1 id="前言">前言</h1>
+<hr>
+<p>我在试图寻找一个轻量化的写作软件，具体来说，我是否可以暂时不用背着重重的电脑，而只需要用我最熟悉的掌中设备来做一些有意义的事情。要知道，我在 2014 年接触智能手机，再往前推，则是使用诺基亚，小灵通等手机练习打字，小孩子的天性和学习能力总是异乎寻常的强。而接触电脑的时间，则在 2020 年，接触 ipad 的时间在 2022 年，也就意味着，我在手机上的打字速度可以高出电脑至少 1.5 倍。加之从前有在 QQ 空间写作的习惯。在大一回家过年的火车上，九个多小时的时间里，写出了 11000 多字的年度回忆。所以说，手机上的打字效率往往要比其他设备高很多。</p>
+<h1 id="正文">正文</h1>
+<hr>
+<p>Notion 在手机上的表现效果不是很好，由于巨大的延迟原因无法充当一个好的灵感记录的软件，而采用的 nextcloud 由于是建在服务器上的，对于文件的打开速度也不理想。我现在已经不使用 QQ 空间了，也并不希望使用朋友圈。一者我试图减少在社交平台上进行心迹的表露，其次因为历史原因，我总是感觉到我需要一个更加独立和安静的写作环境，写作对我来说是一件很奢侈的事情，就像吃一道菜一样，总是对环境有着极高的要求。</p>
+<p>今天的这篇写作是在手机上的 anki 中完成的。看上去 anki 的定位仅仅是一个记忆软件，但是由于惰性，我一直很难主动的去做背诵相关的困难的事情。</p>
+<p>如果你觉得我表面上很上进，那么可能是一个误判。对于自我的真实评价，我会这样回答，我总是感觉我无法安静和沉淀下来，去摆脱环境的干扰，去扎根地做深一件事情。我拥有大量的碎片式的灵感，却很难拿出一件像样的成果，我总是追求偏激，却往往在最低级的问题上犯错误。</p>
+<p>我已经没有一个心境去读一本有价值的书了。我焦躁的心境，让我无法阅读《追忆似水年华》，但是之前能把《瓦尔登湖》给读下来。当然我也没有心境去读很多诗歌，我总是感觉我一直在追求速度的路上狂奔，停不下来了。</p>
+<p>这是最致命的缺点，如果我认定一件事情，我会付出任何代价来执行我的意愿。所以我有时候感觉到我的情绪不是很稳定。</p>
+<p>由于今天这篇文章是在手机上完成的，所以你会看到一个在手机屏幕面前的我，很显然我的逻辑感不会比在电脑面前进行写作那样，一种更加情绪化的写作冲动控制着我的大脑。</p>
+<p>我必须在文字前面进行忏悔，如果像昨天那样为今天进行回顾，我认为今天是过去数十百个日子的一个缩影。</p>
+<p>我提出这样的一个观点，当我们要去做一件事情的时候，实际上我们的潜意识已经做过了。潜意识产生于环境和习惯当中。</p>
+<p>白天人可能会更加理智，而晚上人的理智会慢慢消失，变得失控起来，一旦失控坠入深渊，人们则更加愿意投入低级欲望的追求当中，从而完全失控。</p>
+<p>上午是个失败的例子，表现出在失去任何约束条件下，我的颓废，逃避和混乱。</p>
+<p>中午匆匆忙忙去北苑拍完了毕业照采样。下午继续躺在宿舍睡大觉。确实是这样，呆在宿舍总是让我觉得有些焦躁，而图书馆的环境似乎让我感觉很安静，也许是电磁干扰的结果呢？</p>
+<p>晚餐过后，开始收拾烂摊子，先把校服放回去，垃圾扔一扔。然后来图书馆，总有个声音告诉我，失败虽然很可耻，但是当做鸵鸟和掩饰失败会错上加错。</p>
+<p>同时我必须理智分析我遭受了哪些思绪的干扰，我总是倾向于在遇到困难时逃避，投送 bilibili 的怀抱，然则这是一个错误的选择。人在错误的路上会继续失控。</p>
+<p>同时我们应当和世界保持距离。看过《星际穿越》那段嘛，空间站高速旋转，为了对接上，飞船也必须以同样的方式旋转然后对接。</p>
+<p>对于世界上出现的各种现象，我不反对作为普通人的我们去关心和共情，但是沉浸在其中所带来的后果就是意志的消沉。我应该再度发起倡议，为了系统的安全和稳定，我们应该保持我们的思绪和世界有一定距离。</p>
+<h1 id="总结">总结</h1>
+<hr>
+<p>一般来讲，正常情况下，我自己写的文章可能会看三遍，第一遍发布检查语法错误，第二遍整体再进行吸收理解，第三遍则是对前文进行回调，一般来讲，有价值的文章，被回调和思考的次数应当越多。正如之前所说，我已经在在这个世界上苟活了二十多年。我不清楚我来这个世界的使命，但我感谢主的恩赐，很抱歉我是一个唯心主义者，我对于道教和佛教有着浓厚的兴趣。我始终认为我的存在是众多姻缘的聚合，而我能清楚感知到我的心，我的大脑，和我的身体之间的感觉的交流。在《黄帝内经》中，一直说心为君主之官，但我无时不刻感觉到我的心是作为客体而存在。我能在某种情况下感受到她的悸动，也能在某种情况下感受到她的温暖，当我们具有一致目标时所产生的巨大动力，有时候我也能感觉到她的痛苦和无奈。对于我而言，这些文字最主要还是写给自己看的，如果有缘能够被您所看到，那么个中滋味，只能细品。我是一个离群索居的人，但我希望做自己喜欢的事情，也希望在自己喜欢的事情上发一点微弱的光。请原谅我的笨拙，我与这个世界的聪明格格不入。</p>
+
+</content>
+<p>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/">#情绪表达</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>

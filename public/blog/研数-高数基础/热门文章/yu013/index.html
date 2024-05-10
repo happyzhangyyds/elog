@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://bu.dusays.com/2024/04/23/6627ad7c08194.jpeg" />
+<title>[高数基础]  第十三讲 常微分方程 | Hugo ʕ•ᴥ•ʔ Bear Blog</title>
+<meta name="title" content="[高数基础]  第十三讲 常微分方程" />
+<meta name="description" content="微分方程的概念、求解、伯努利方程、二阶可降阶微分方程的求解、高阶线性微分方程的求解、二阶常系数齐次线性微分方程的通解、二阶常系数非齐次线性微分方程的特解、n阶常系数线性微分方程的解" />
+<meta name="keywords" content="研数-高数基础,热门文章," />
+
+
+<meta property="og:title" content="[高数基础]  第十三讲 常微分方程" />
+<meta property="og:description" content="微分方程的概念、求解、伯努利方程、二阶可降阶微分方程的求解、高阶线性微分方程的求解、二阶常系数齐次线性微分方程的通解、二阶常系数非齐次线性微分方程的特解、n阶常系数线性微分方程的解" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugo.matrixcore.life/blog/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu013/" /><meta property="og:image" content="https://hugo.matrixcore.life/images/share.png"/><meta property="article:section" content="Blog" />
+<meta property="article:published_time" content="2023-08-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-08-10T00:00:00+00:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://hugo.matrixcore.life/images/share.png"/>
+
+<meta name="twitter:title" content="[高数基础]  第十三讲 常微分方程"/>
+<meta name="twitter:description" content="微分方程的概念、求解、伯努利方程、二阶可降阶微分方程的求解、高阶线性微分方程的求解、二阶常系数齐次线性微分方程的通解、二阶常系数非齐次线性微分方程的特解、n阶常系数线性微分方程的解"/>
+
+
+
+<meta itemprop="name" content="[高数基础]  第十三讲 常微分方程">
+<meta itemprop="description" content="微分方程的概念、求解、伯努利方程、二阶可降阶微分方程的求解、高阶线性微分方程的求解、二阶常系数齐次线性微分方程的通解、二阶常系数非齐次线性微分方程的特解、n阶常系数线性微分方程的解"><meta itemprop="datePublished" content="2023-08-10T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-08-10T00:00:00+00:00" />
+<meta itemprop="wordCount" content="94"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="keywords" content="研数-高数基础,热门文章," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Hugo ʕ•ᴥ•ʔ Bear Blog</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<content>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#f92672">-</span> <span style="color:#ae81ff">130</span>  <span style="color:#a6e22e">基础知识结构</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">-</span> <span style="color:#ae81ff">131</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">-</span> <span style="color:#ae81ff">1311</span><span style="color:#a6e22e">微分方程的概念</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">-</span> <span style="color:#ae81ff">132</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">-</span> <span style="color:#ae81ff">1321</span><span style="color:#a6e22e">微分方程的求解</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#f92672">-</span> <span style="color:#ae81ff">13.1</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">-</span> <span style="color:#ae81ff">1322</span><span style="color:#a6e22e">可化为变量分离型</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#f92672">-</span> <span style="color:#ae81ff">13.2</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#f92672">-</span> <span style="color:#ae81ff">13.3</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">-</span> <span style="color:#ae81ff">1323</span><span style="color:#a6e22e">一阶线性微分方程</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#f92672">-</span> <span style="color:#ae81ff">13.4</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#f92672">-</span> <span style="color:#ae81ff">13.3</span><span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">-</span> <span style="color:#ae81ff">1324</span><span style="color:#a6e22e">伯努利方程</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#f92672">-</span> <span style="color:#ae81ff">13.5</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">-</span> <span style="color:#ae81ff">133</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">-</span> <span style="color:#ae81ff">1331</span><span style="color:#a6e22e">二阶可降阶微分方程的求解</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#f92672">-</span> <span style="color:#ae81ff">13.6</span><span style="color:#f92672">+</span><span style="color:#ae81ff">13.7</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">-</span> <span style="color:#ae81ff">1332</span><span style="color:#a6e22e">高阶线性微分方程的求解</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#f92672">-</span> <span style="color:#ae81ff">13.8</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">-</span> <span style="color:#ae81ff">1333</span><span style="color:#a6e22e">二阶常系数齐次线性微分方程的通解</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">-</span> <span style="color:#ae81ff">1334</span><span style="color:#a6e22e">二阶常系数非齐次线性微分方程的特解</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">-</span> <span style="color:#ae81ff">1335</span><span style="color:#a6e22e">n阶常系数线性微分方程的解</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#f92672">-</span> <span style="color:#ae81ff">13.9</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#f92672">-</span> <span style="color:#ae81ff">13.10</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#f92672">-</span> <span style="color:#ae81ff">13.11</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#f92672">-</span> <span style="color:#ae81ff">13.8</span><span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#f92672">-</span> <span style="color:#ae81ff">13.9</span><span style="color:#f92672">*</span>
+</span></span></code></pre></div><hr>
+<h1 id="130-基础知识结构">130 基础知识结构</h1>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501677a91149.png" alt=""></p>
+<h2 id="131">131</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501679c481df.png" alt=""></p>
+<h3 id="1311-微分方程的概念">1311 微分方程的概念</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501679de644e.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501679f5e77e.png" alt=""></p>
+<h2 id="132">132</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650167a097418.png" alt=""></p>
+<h3 id="1321-微分方程的求解">1321 微分方程的求解</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650167a1f3880.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/650167a2d72d9.png" alt=""></p>
+<p><strong>13.1</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650167a4abf51.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/650167a5d015e.png" alt=""></p>
+<h3 id="1322-可化为变量分离型">1322 可化为变量分离型</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650167a752ef2.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/650167a841c5c.png" alt=""></p>
+<p><strong>13.2</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650167e1bcc32.png" alt=""></p>
+<p><strong>13.3</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650167e3b8dc4.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/650167e502f17.png" alt=""></p>
+<h3 id="1323-一阶线性微分方程">1323 一阶线性微分方程</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650167e70e5c5.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/650167e89a3be.png" alt=""></p>
+<p><strong>13.4</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650167e9d21e6.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/650167eb004c4.png" alt=""></p>
+<p>13.3*</p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650167ebf366b.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/650167ed50618.png" alt=""></p>
+<h3 id="1324-伯努利方程">1324 伯努利方程</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650167ee6f0b4.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501681874ae8.png" alt=""></p>
+<p><strong>13.5</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/65016827c0044.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/65016828f2f83.png" alt=""></p>
+<h2 id="133">133</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501682a812fd.png" alt=""></p>
+<h3 id="1331-二阶可降阶微分方程的求解">1331 二阶可降阶微分方程的求解</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501682c0ce03.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501682d1bf4f.png" alt=""></p>
+<p><strong>13.6+13.7</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/65016831d352c.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/65016833c87c2.png" alt=""></p>
+<h3 id="1332-高阶线性微分方程的求解">1332 高阶线性微分方程的求解</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/65016835c26f3.png" alt=""></p>
+<p><strong>13.8</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650168375a062.png" alt=""></p>
+<h3 id="1333-二阶常系数齐次线性微分方程的通解">1333 二阶常系数齐次线性微分方程的通解</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/65016838b891f.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501683a0f8c7.png" alt=""></p>
+<h3 id="1334-二阶常系数非齐次线性微分方程的特解">1334 二阶常系数非齐次线性微分方程的特解</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501687d0b053.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501687e953ee.png" alt=""></p>
+<h3 id="1335-n-阶常系数线性微分方程的解">1335 n 阶常系数线性微分方程的解</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650168838d852.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/65016884b2879.png" alt=""></p>
+<p>13.9</p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501688631bc7.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501688744447.png" alt=""></p>
+<p><strong>13.10</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/65016888c6177.png" alt=""></p>
+<p><strong>13.11</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501688a6c6ba.png" alt=""></p>
+<p><strong>13.8*</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501688b9f61b.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501688c92565.png" alt=""></p>
+<p><strong>13.9*</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501688dad42d.png" alt=""></p>
+
+</content>
+<p>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/">#研数-高数基础</a>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/">#热门文章</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>

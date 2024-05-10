@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://bu.dusays.com/2024/04/23/6627ad7c08194.jpeg" />
+<title>[外语学习] 沙拉查词&#43;anki进行记忆强化  | Hugo ʕ•ᴥ•ʔ Bear Blog</title>
+<meta name="title" content="[外语学习] 沙拉查词&#43;anki进行记忆强化 " />
+<meta name="description" content="介绍了通过沙拉查词&#43;anki导出的方式，对学习的单词进行可视化整理" />
+<meta name="keywords" content="实用教程,推荐," />
+
+
+<meta property="og:title" content="[外语学习] 沙拉查词&#43;anki进行记忆强化 " />
+<meta property="og:description" content="介绍了通过沙拉查词&#43;anki导出的方式，对学习的单词进行可视化整理" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugo.matrixcore.life/home/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/saladict/" /><meta property="og:image" content="https://hugo.matrixcore.life/images/share.png"/><meta property="article:section" content="Home" />
+<meta property="article:published_time" content="2023-09-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-09-28T00:00:00+00:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://hugo.matrixcore.life/images/share.png"/>
+
+<meta name="twitter:title" content="[外语学习] 沙拉查词&#43;anki进行记忆强化 "/>
+<meta name="twitter:description" content="介绍了通过沙拉查词&#43;anki导出的方式，对学习的单词进行可视化整理"/>
+
+
+
+<meta itemprop="name" content="[外语学习] 沙拉查词&#43;anki进行记忆强化 ">
+<meta itemprop="description" content="介绍了通过沙拉查词&#43;anki导出的方式，对学习的单词进行可视化整理"><meta itemprop="datePublished" content="2023-09-28T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-09-28T00:00:00+00:00" />
+<meta itemprop="wordCount" content="255"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="keywords" content="实用教程,推荐," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Hugo ʕ•ᴥ•ʔ Bear Blog</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+</nav>
+</header>
+  <main>
+
+<content>
+  <h1 id="前言">前言</h1>
+<hr>
+<p>在阅读英文文献或者是其他的作品时，通常网页进行翻译已经适应绝大多数的学习情况，而当读者立下目标想要提升自己的语言水平时，沙拉查词+anki 就可以派上用场。</p>
+<p>沙拉查词是一款浏览器拓展，对 edge，chrome 支持良好，safari 支持并不完美，支持浏览器内的语言翻译，同时最惊艳的功能是生词摘录和 anki 的同步，同时也支持扇贝和欧路词典的生词本同步。因此该功能是打通了“摘录+记忆”的关键枢纽。</p>
+<p>anki 是一个专注于背诵的软件，具有极高的自由度和丰富的玩法，几乎支持所有平台（在 linux 上由于输入法框架兼容的问题可能体验并不完美），结合强大的插件，对于常见的 win，mac，android，ios 都具有强大的适配能力。</p>
+<h1 id="正文">正文</h1>
+<hr>
+<p>以下为配置教程：</p>
+<h2 id="1沙拉查词的安装">1.沙拉查词的安装</h2>
+<hr>
+<p>详见<a href="https://saladict.crimx.com/">沙拉查词的官网</a>，写得非常好！</p>
+<h2 id="2结合-quickerwin或者-popclipmac实现浏览器外查词进阶可选">2.结合 quicker（win）或者 popclip（mac）实现浏览器外查词（进阶）（可选）</h2>
+<p>详见沙拉查词的<a href="https://saladict.crimx.com/native.html">进阶文档</a></p>
+<h2 id="3同步-anki">3.同步 anki</h2>
+<hr>
+<p>详见沙拉查词的<a href="https://saladict.crimx.com/anki.html">配合 anki 使用的文档</a>，对您的 anki 进行同步</p>
+<h2 id="4沙拉查词的生词本功能">4.沙拉查词的生词本功能</h2>
+<hr>
+<p>选择适合您的翻译引擎，您可以对您的词典进行精确地匹配</p>
+<p><img src="https://bu.dusays.com/2023/09/28/6514d42f1fe06.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/28/6514d43677b69.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/28/6514dd8b8030b.png" alt=""></p>
+<h2 id="5优化沙拉查词独立窗口的体验">5.优化沙拉查词独立窗口的体验</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/28/6514d5dd4345d.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/28/6514d5ea35021.png" alt=""></p>
+<h2 id="6anki-导出的步骤">6.anki 导出的步骤</h2>
+<hr>
+<p>首先您需要安装 anki 软件，可以访问 anki 的<a href="https://apps.ankiweb.net/">官网</a>进行安装
+如果配置正确，能够进行同步，那么您可以看到在您的 anki 中会出现沙拉查词的牌组</p>
+<p><img src="https://bu.dusays.com/2023/09/28/6514d7ef79545.png" alt=""></p>
+<p>接下来我将介绍最重要和有趣的功能，即 anki 的牌组如何导出为 PDF
+首先您可以参照<a href="https://weownthenight.github.io/2020/12/29/Anki%E5%AF%BC%E5%87%BApdf%E7%9A%84%E6%96%B9%E6%B3%95/">这篇文章</a>做一个简单的了解</p>
+<p>您需要根具上述的参考文章进行相应的插件的安装，路径在：<strong>工具-插件-获取插件-插件代码</strong>
+插件的代码是<code>1897277426</code></p>
+<p><img src="https://bu.dusays.com/2023/09/28/6514d806417c0.png" alt=""></p>
+<p>当您需要对摘录的卡组进行导出的时候，<strong>点击：工具-Export deck to HTML</strong></p>
+<p>由于插件版本的升级，可能会让大家感到无从下手</p>
+<p><img src="https://bu.dusays.com/2023/09/28/6514d83f9342c.png" alt=""></p>
+<p>最主要的是 html 的模版的编写，我这里提供了针对沙拉查词的模板，可以根据自己的需要，自行编写和修改 html 和 css，同时提供针对沙拉查词的 html 模板（右键下载）</p>
+<p><a href="https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/c4372573-9156-4aa9-8233-b249b7e1691e/%E5%BE%B7%E8%AF%AD.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231103%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231103T145035Z&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=fc4bf4888fe48f7fceeb6e7f2f071e774bdc565bf00e29adeb442b8d7ce0f17e&amp;X-Amz-SignedHeaders=host&amp;x-id=GetObject">image</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">style</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">table</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">font-family</span>: <span style="color:#66d9ef">sans-serif</span>, NSimSun, SimSun;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">13</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#333333</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">border-width</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">border-color</span>: <span style="color:#ae81ff">#666666</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">border-collapse</span>: <span style="color:#66d9ef">collapse</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">th</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">border-width</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">8</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">border-style</span>: <span style="color:#66d9ef">solid</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">border-color</span>: <span style="color:#ae81ff">#666666</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#dedede</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">td</span>.<span style="color:#a6e22e">column1</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">border-width</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">8</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">border-style</span>: <span style="color:#66d9ef">solid</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">border-color</span>: <span style="color:#ae81ff">#666666</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#ffffff</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">td</span>.<span style="color:#a6e22e">column2</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">border-width</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">8</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">border-style</span>: <span style="color:#66d9ef">solid</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">border-color</span>: <span style="color:#ae81ff">#666666</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#ffffff</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">50</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">td</span>.<span style="color:#a6e22e">column3</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">border-width</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">8</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">border-style</span>: <span style="color:#66d9ef">solid</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">border-color</span>: <span style="color:#ae81ff">#666666</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#ffffff</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">30</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">img</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">max-width</span>: <span style="color:#ae81ff">50</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">height</span>: <span style="color:#66d9ef">auto</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">style</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">table</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">tr</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">td</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;column1&#34;</span>&gt;{{Text}}&lt;/<span style="color:#f92672">td</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">td</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;column2&#34;</span>&gt;{{Context}}&lt;/<span style="color:#f92672">td</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">td</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;column3&#34;</span>&gt;{{Note}}&lt;/<span style="color:#f92672">td</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">tr</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">table</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">**代码理解****：**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">这段代码是一个简单的HTML代码片段，用于创建一个包含表格的网页。下面是代码的解析：
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">- `&lt;head&gt;` 标签包含了一些关于文档的元数据和样式信息。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">- `&lt;meta charset=&#34;UTF-8&#34;&gt;` 定义了文档的字符编码为 UTF-8，以支持显示多种语言和字符集。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">- `&lt;style&gt;` 标签用于定义内部样式表，其中包含了一些CSS样式规则。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">- `table` 样式规则定义了表格的样式，包括字体、字号、颜色、边框等属性。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">- `th` 样式规则定义了表头单元格的样式，包括边框、填充、背景颜色等属性。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">- `td` 样式规则定义了表格数据单元格的样式，包括边框、填充、背景颜色等属性。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">   此外，设置了单元格的宽度为50%。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">- `img` 样式规则定义了图片的样式，设置了图片的最大宽度为50%，高度自适应。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">   在 `&lt;body&gt;` 标签中，创建了一个表格 `&lt;table&gt;`，其中包含一行 `&lt;tr&gt;`，
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">   该行包含了三个单元格 `&lt;td&gt;`。这些单元格中的内容使用了模板语法 `{{...}}`，
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">表示这些内容将在后台动态生成或填充。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">总体来说，这段代码创建了一个带有样式的表格，用于展示文本、上下文和注释等信息。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">这些信息可以通过后台代码动态生成，并通过模板语法插入到表格中。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> --&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">**修改单元格宽度的办法：**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">要让三列单元格设置为自定义的宽度，你可以使用不同的CSS选择器为每个单元格指定特定的宽度。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;style&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    td.column1 {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        width: 20%; 进行自定义宽度
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    td.column2 {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">       width: 20%;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    td.column3 {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">       width: 20%;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;/style&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;table&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    &lt;tr&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        &lt;td class=&#34;column1&#34;&gt;内容1&lt;/td&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        &lt;td class=&#34;column2&#34;&gt;内容2&lt;/td&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        &lt;td class=&#34;column3&#34;&gt;内容3&lt;/td&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    &lt;/tr&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;/table&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">在上述示例中，我们为每个单元格添加了一个类名，分别是 column1、column2 和 column3。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">然后，在 &lt;style&gt; 标签中，我们使用这些类名作为选择器来定义相应的样式属性。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">你可以根据实际情况修改类名和样式属性，以适应你的代码和设计需求。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">这样，这些样式将仅应用于具有相应类名的单元格。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> --&gt;</span>
+</span></span></code></pre></div><h2 id="7浏览您的导出文件在浏览器进行打印导出为-pdf">7.浏览您的导出文件，在浏览器进行打印导出为 PDF</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/27/65142d97ef111.png" alt=""></p>
+<h1 id="总结">总结</h1>
+<hr>
+<p>介绍了通过沙拉查词+anki 导出的方式，对学习的单词进行可视化整理，方便后续的复习！</p>
+<p>🍒 如果您觉得沙拉查词对您帮助很大，也可以赞助一下<a href="https://saladict.crimx.com/support.html">开发者</a>，为开源社区贡献自己的一份努力！</p>
+<p>如果有任何问题，也欢迎在评论区留言，有时间我将及时为您解答！</p>
+
+</content>
+<p>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/">#实用教程</a>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E6%8E%A8%E8%8D%90/">#推荐</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>

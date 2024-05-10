@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://bu.dusays.com/2024/04/23/6627ad7c08194.jpeg" />
+<title>[高数基础]  第十七讲 多元函数积分学的基础知识 | Hugo ʕ•ᴥ•ʔ Bear Blog</title>
+<meta name="title" content="[高数基础]  第十七讲 多元函数积分学的基础知识" />
+<meta name="description" content="向量代数、空间平面与直线、空间曲线与曲面、场论初步、多元函数微分学的几何应用" />
+<meta name="keywords" content="研数-高数基础,热门文章," />
+
+
+<meta property="og:title" content="[高数基础]  第十七讲 多元函数积分学的基础知识" />
+<meta property="og:description" content="向量代数、空间平面与直线、空间曲线与曲面、场论初步、多元函数微分学的几何应用" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugo.matrixcore.life/home/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu017/" /><meta property="og:image" content="https://hugo.matrixcore.life/images/share.png"/><meta property="article:section" content="Home" />
+<meta property="article:published_time" content="2023-08-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-08-10T00:00:00+00:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://hugo.matrixcore.life/images/share.png"/>
+
+<meta name="twitter:title" content="[高数基础]  第十七讲 多元函数积分学的基础知识"/>
+<meta name="twitter:description" content="向量代数、空间平面与直线、空间曲线与曲面、场论初步、多元函数微分学的几何应用"/>
+
+
+
+<meta itemprop="name" content="[高数基础]  第十七讲 多元函数积分学的基础知识">
+<meta itemprop="description" content="向量代数、空间平面与直线、空间曲线与曲面、场论初步、多元函数微分学的几何应用"><meta itemprop="datePublished" content="2023-08-10T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-08-10T00:00:00+00:00" />
+<meta itemprop="wordCount" content="73"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="keywords" content="研数-高数基础,热门文章," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Hugo ʕ•ᴥ•ʔ Bear Blog</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+</nav>
+</header>
+  <main>
+
+<content>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#f92672">-</span> <span style="color:#ae81ff">170</span><span style="color:#a6e22e">基础知识结构</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">-</span> <span style="color:#ae81ff">171</span> <span style="color:#a6e22e">向量代数</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">-</span> <span style="color:#ae81ff">1711</span> <span style="color:#a6e22e">向量代数</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">-</span> <span style="color:#ae81ff">17.6</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">-</span> <span style="color:#ae81ff">1712</span>  <span style="color:#a6e22e">空间平面与直线</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">-</span> <span style="color:#ae81ff">1713</span>  <span style="color:#a6e22e">空间曲线与曲面</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">-</span> <span style="color:#ae81ff">17.3</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">-</span> <span style="color:#ae81ff">17.4</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">-</span> <span style="color:#ae81ff">172</span>  <span style="color:#a6e22e">空间平面和直线</span><span style="color:#960050;background-color:#1e0010">、</span><span style="color:#a6e22e">曲线和曲面</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">-</span> <span style="color:#ae81ff">1721</span>  <span style="color:#a6e22e">多元函数微分学的几何应用</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">-</span> <span style="color:#ae81ff">17.2</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">-</span> <span style="color:#ae81ff">17.5</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">-</span> <span style="color:#ae81ff">173</span>  <span style="color:#a6e22e">场论初步</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">-</span> <span style="color:#ae81ff">1731</span> <span style="color:#a6e22e">场论初步</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">-</span> <span style="color:#ae81ff">17.7</span>
+</span></span></code></pre></div><h1 id="170-基础知识结构">170 基础知识结构</h1>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/65017b4341daf.png" alt=""></p>
+<p>💡 简要概括：</p>
+<p>在本章的知识结构当中，主要的部分有向量代数、空间平面和直线、空间曲线和曲面、多元函数微分学的几何应用、场论初步、第十七讲的地位主要是服务于第十八讲，也有单独考察五分的题型。</p>
+<p><img src="https://bu.dusays.com/2023/09/13/65017b562d89d.png" alt=""></p>
+<h2 id="171-向量代数">171 向量代数</h2>
+<hr>
+<p>💡 具体来看向量代数，这里面，包括向量及其表达形式，向量的运算和应用，向量的方向角和方向余弦。</p>
+<p><img src="https://bu.dusays.com/2023/09/13/65017b575582a.png" alt=""></p>
+<hr>
+<h3 id="1711-向量代数">1711 向量代数</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/65017b58e579d.png" alt=""></p>
+<p>💡 关注数量积及其应用，数量积的计算方法和公式，一种是对应分量相乘相加，一种是通过模和夹角，这里就涉及夹角余弦的计算，其中要留心投影的定义。</p>
+<p>然后是向量积及其应用，还有混合积。</p>
+<p>下一部分是向量的方向角和方向余弦，方向角的定义如下图所示，记住方向余弦的计算公式。</p>
+<p><strong>17.6</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501b6e24b5ef.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501c30d09d1e.png" alt=""></p>
+<h3 id="1712-空间平面与直线">1712 空间平面与直线</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501c2eab7d68.png" alt=""></p>
+<p>💡 这一部分是关于空间平面与直线，平面方程，直线方程，位置关系</p>
+<h3 id="1713-空间曲线与曲面">1713 空间曲线与曲面</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501c2edcb704.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501c2ef88681.png" alt=""></p>
+<p><strong>17.3</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501c2f12f90e.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501c2f2c3ae3.png" alt=""></p>
+<p><strong>17.4</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501c2f46c55c.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501c2f612ade.png" alt=""></p>
+<h2 id="172-空间平面和直线曲线和曲面">172 空间平面和直线、曲线和曲面</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501c2f7f1aea.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501c2f971752.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501c2fb0218c.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501c2fc94d9b.png" alt=""></p>
+<h3 id="1721-多元函数微分学的几何应用">1721 多元函数微分学的几何应用</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501c2ff15c48.png" alt=""></p>
+<p><strong>17.2</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501c30110c4d.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501c3030cf19.png" alt=""></p>
+<p><strong>17.5</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501c3047ca59.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501c305c9498.png" alt=""></p>
+<h2 id="173-场论初步">173 场论初步</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501c3072577b.png" alt=""></p>
+<h3 id="1731-场论初步">1731 场论初步</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501c309b7e94.png" alt=""></p>
+<p><strong>17.7</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501c30ba6fda.png" alt=""></p>
+
+</content>
+<p>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/">#研数-高数基础</a>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/">#热门文章</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>

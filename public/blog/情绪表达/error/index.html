@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://bu.dusays.com/2024/04/23/6627ad7c08194.jpeg" />
+<title>[命运咽喉]  系统中的常值误差 | Hugo ʕ•ᴥ•ʔ Bear Blog</title>
+<meta name="title" content="[命运咽喉]  系统中的常值误差" />
+<meta name="description" content="甘其食，美其服，安其居，乐其俗。" />
+<meta name="keywords" content="情绪表达," />
+
+
+<meta property="og:title" content="[命运咽喉]  系统中的常值误差" />
+<meta property="og:description" content="甘其食，美其服，安其居，乐其俗。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugo.matrixcore.life/blog/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/error/" /><meta property="og:image" content="https://hugo.matrixcore.life/images/share.png"/><meta property="article:section" content="Blog" />
+<meta property="article:published_time" content="2023-10-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-10-09T00:00:00+00:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://hugo.matrixcore.life/images/share.png"/>
+
+<meta name="twitter:title" content="[命运咽喉]  系统中的常值误差"/>
+<meta name="twitter:description" content="甘其食，美其服，安其居，乐其俗。"/>
+
+
+
+<meta itemprop="name" content="[命运咽喉]  系统中的常值误差">
+<meta itemprop="description" content="甘其食，美其服，安其居，乐其俗。"><meta itemprop="datePublished" content="2023-10-09T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-10-09T00:00:00+00:00" />
+<meta itemprop="wordCount" content="27"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="keywords" content="情绪表达," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Hugo ʕ•ᴥ•ʔ Bear Blog</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<content>
+  <h1 id="前言">前言</h1>
+<hr>
+<p>这两天莫名烦躁，而且是治不好的那种。每个月总有几天会陷入这种奇怪的感觉。</p>
+<h1 id="正文">正文</h1>
+<hr>
+<p>先从晚上的心情说起，下午打算打印三方协议，很不巧刚好遇到下课的时间，然后返程回宿舍洗澡，然后准备洗澡的装备，然后突然想起要收被子，晚上还需要洗衣服，然后傍晚的天气有点凉，以后傍晚洗澡的时候就需要额外注意，因为有一次傍晚洗澡就是因为受了风寒导致三阳，难受了一个星期，洗完澡，骑车车去食饭，想着先去打印三方协议，结果打印店搬去了南三二楼，我没注意骑到了快递站，然后去打印三方协议，顺便打印了一些自动飞行控制的题目，然后就去寄三方协议，快递站人还是很多，文件寄顺丰，15 元。然后忙完所有的之后就去食晚饭，食完晚饭之后回到图书馆，感觉很烦躁，然后写自控的作业，我真搞不懂，一道题三个小问题，写着写着又很烦躁，碰巧书架哪里的信号也一般，刷剧还有点卡。导致晚上的工作效率很低，而且突然觉得自己在忙忙碌碌的事情，没有很大的意义，并且也不清楚自己干这些到底有什么意义，很不快乐。</p>
+<p>所以这些天很排斥和人交往，对于学习的专业课和语言，也是心不在焉的，番茄钟也是一塌糊涂，早上更是起不来，晚上睡不着，感觉心里憋着一肚子的火，结果直接上火了。</p>
+<p>每天都感觉有些浑浑噩噩的，感觉现在的生物钟，和高中有很大的影响，晚上各种失眠，早上各种打盹，中午各种睡不够，我真的很想骂一句，草！</p>
+<p>很抱歉，我不知道为什么，突然间往日的邪恶记忆涌上心头，但就是这种长期的失落感，疲惫感，烦躁感，孤独感，让我的心像一锅沸水一样压不下去。</p>
+<p>我平时并不是一个喜欢发泄情绪的人，而且我对生活本身的鸡毛蒜皮的小事根本不感兴趣，但是今天在写专业课，在忙这些事情的时候，就感觉自己的精神状态不是很对。</p>
+<p>当然，无所谓了，明年就毕业了，写完毕业论文就该滚蛋了，然后开启一段新路。</p>
+<p>当然，我很清楚，这些坏心情，对生活有很大的破坏，没有足够的心理能力是很难稳住的。</p>
+<p>总之，光抱怨并不能解决问题，从前我记得我在集体里的时候，一直扮演着都是一个很冷静的人，面对很多的挑战，也是尽全力去做好，虽然集体外的生活极其不一样，但是在我和自己相处的这段时间里，我才能更好地陪自己，去治疗自己的过往。</p>
+<p>分析现在的情况：</p>
+<p>只是情绪上很坏，其他并没有很大的问题，说说接下来的计划吧，首先是先花一点时间，把自动飞控的作业给写完，虽然我写得过程中很累，也很烦躁，但是这是要交的，还有就是形式与政策的集体大论文，希望在交的前两天完善一下。 2023-10-18</p>
+<p>最主要的是，作息，作息还是有点糟糕的，最近晚上入睡真的很难，我不知道为什么，仿佛从前的梦魇一直在生活里重复，使我变得更加易怒，但是这没办法，试着找一些合适的音乐来辅助入眠吧，然后尽量找到自己的爱好，和喜欢做的事情，需要专注于自己的目标。</p>
+<p>最近还有个大问题，就是畏难心理，这是很困难的事情，导致每次学习学累了，就会想着如何去放纵，但是本身学习新东西的过程就是如此，就是需要付出精力的。</p>
+<p>然后最近，我想整理整理英文版王尔德的《夜莺和玫瑰》，其他的没什么要说的了。</p>
+<p>虽然外在的因素对自己会构成一定的威胁，但是内源的因素往往威胁很大，有一种神秘的感觉叫做，我不清楚我在干什么，沉迷于刷视频是你的不对吗，沉迷于打游戏是你的问题吗，不好好学习是你的问题吗，我们忽视了主客体之间的重要关系，一个是缘分，一个是自我意识和自由意志。</p>
+<p>当我们沉醉在任何一种感觉里的时候，我们永远成为了感觉的奴隶，就像是坐上了一辆一直在加速的车，我们挣脱不开，我们无法跳车，我们在刺激感官的动作和音乐里迷失了自我，我们的自我被麻痹了，我们终于成为了温水里的青蛙，我们活成了矛盾的自我，活成了自己讨厌的样子，哈哈！</p>
+<h1 id="总结">总结</h1>
+<hr>
+<p>甘其食，美其服，安其居，乐其俗。</p>
+<p>最近还有一件很重要的事情，玫瑰千纸鹤没学会，道德经勉强抄满了 81 篇，其中省略了几篇治国的，我太笨了，所以无论我看多少遍，治国的篇章都让我觉得很深奥，但我也会一直努力学习的。</p>
+<p>后面打算摘抄几段《黄帝内经》。</p>
+<p>靠，随心写的，结果通篇没有点题，算了，反正也是写给自己看的，和留着以后考古的。</p>
+
+</content>
+<p>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/">#情绪表达</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://bu.dusays.com/2024/04/23/6627ad7c08194.jpeg" />
+<title>[野火] 第8章  初识 Verilog HDL | Hugo ʕ•ᴥ•ʔ Bear Blog</title>
+<meta name="title" content="[野火] 第8章  初识 Verilog HDL" />
+<meta name="description" content="FPGA基本知识" />
+<meta name="keywords" content="野火FPGA," />
+
+
+<meta property="og:title" content="[野火] 第8章  初识 Verilog HDL" />
+<meta property="og:description" content="FPGA基本知识" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugo.matrixcore.life/blog/%E9%87%8E%E7%81%ABfpga/fpga008/" /><meta property="og:image" content="https://hugo.matrixcore.life/images/share.png"/><meta property="article:section" content="Blog" />
+<meta property="article:published_time" content="2023-09-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-09-19T00:00:00+00:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://hugo.matrixcore.life/images/share.png"/>
+
+<meta name="twitter:title" content="[野火] 第8章  初识 Verilog HDL"/>
+<meta name="twitter:description" content="FPGA基本知识"/>
+
+
+
+<meta itemprop="name" content="[野火] 第8章  初识 Verilog HDL">
+<meta itemprop="description" content="FPGA基本知识"><meta itemprop="datePublished" content="2023-09-19T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-09-19T00:00:00+00:00" />
+<meta itemprop="wordCount" content="407"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="keywords" content="野火FPGA," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Hugo ʕ•ᴥ•ʔ Bear Blog</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<content>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>8.2.2 Verilog HDL 和 C 语言的比较:
+</span></span><span style="display:flex;"><span>8.3.2 逻辑值:
+</span></span><span style="display:flex;"><span>8.3.3 常量:
+</span></span><span style="display:flex;"><span>8.3.4 变量:
+</span></span><span style="display:flex;"><span>8.3.5 参数:
+</span></span><span style="display:flex;"><span>8.3.6 赋值语句:
+</span></span><span style="display:flex;"><span>8.3.7 注释:
+</span></span><span style="display:flex;"><span>8.3.8 关系运算符:
+</span></span><span style="display:flex;"><span>8.3.9 归约运算符、按位运算符和逻辑运算符:
+</span></span><span style="display:flex;"><span>8.3.10 移位运算符:
+</span></span><span style="display:flex;"><span>8.3.11 条件运算符:
+</span></span><span style="display:flex;"><span>8.3.12 优先级:
+</span></span><span style="display:flex;"><span>8.3.13 位拼接运算符:
+</span></span><span style="display:flex;"><span>8.3.14 if-else 与 case:
+</span></span><span style="display:flex;"><span>8.3.15 inout 双向端口:
+</span></span><span style="display:flex;"><span>8.3.16 Verilog 语言中的系统任务和系统函数:
+</span></span></code></pre></div><h2 id="822-verilog-hdl-和-c-语言的比较">8.2.2 Verilog HDL 和 C 语言的比较</h2>
+<hr>
+<p>Verilog 在很多语法上都和 C 语言极其相似,甚至有些语法是通用的,这也是 Verilog 语言容易上手的一个很重要的原因。
+Verilog 语言本身就是从 C 语言继承并发展而来的,但是它主要用于描述硬件,和 C 语言这种软件语言思想完全不同。
+C 语言所描述的代码功能在执行时都是一行一行顺序执行的,而 Verilog 语言在设计完成后执行时则是并行执行的,C 语言所描述的代码功能并不会真实的映射成最后的硬件,只是对内存的操作和进行数据的搬移,而用 Verilog 语言所描述的代码功能则会真真正正的生成所对应的硬件电路,所以这也是 Verilog 语言被称为“硬件描述语言”的原因。
+C 语言和 Verilog 语言之间的关系就是软件和硬件之间的关系,所以大家不要混为一谈,可以通过 C 语言的语法基础来辅助学习 Verilog 语法,但是切不可生搬硬套,特别在代码的风格和理解上一定要区别对待。</p>
+<h2 id="832-逻辑值">8.3.2 逻辑值</h2>
+<hr>
+<p>Verilog 语言中的所有数据都是由以上描述的 4 种基本逻辑值“0”、“1”、“X”和“Z”构成的,同时,“X”和“Z”是不区分大小写的,例如 0z1x 和 0Z1X 表示同一个数据。</p>
+<h2 id="833-常量">8.3.3 常量</h2>
+<hr>
+<p>常量是 Verilog 中不变的数值,Verilog 中的常量有三种类型 (1) 整数型; (2) 实数型; (3) 字符串型。</p>
+<p>整数型常量也可以采用基数表示法表示,这种写法清晰明了,所以更推荐这种表示方法,例如:
+(1) 8’hab 表示 8bit 的十六进制数,换算成二进制是 1010_1011;
+(2) 8’d171 表示 8bit 的十进制数,换算成二进制是 1010_1011;
+(3) 8’o253 表示 8bit 的八进制数,换算成二进制是 1010_1011;
+(4) 8’b1010_1011 表示 8bit 的二进制数,二进制就是 1010_1011。
+虽然上面的表示方式不同,但都表示的是相同的值,数值经过运算后的结果也都相同。</p>
+<h2 id="834-变量">8.3.4 变量</h2>
+<hr>
+<p>Verilog 语言中主要的两种变量类型 1. 线网型:表示电路间的物理连接; 2. 寄存器型:Verilog 中一个抽象的数据存储单元。
+线网型变量最常用的变量就是 wire,而寄存器型最常用的变量是 reg。wire 可以看成直接的连接,在可综合的逻辑中会被映射成一根真实的物理连线;而 reg 具有对某一个时间点状态进行保持的功能,如果在可综合的时序逻辑中表达,会被映射成一个真实的的物理寄存器,而在 Verilog 仿真器中,寄存器类型的变量通常要占据一个仿真内存空间。
+因此在设计逻辑的时候要明确定义每个信号是 wire 还是 reg 属性。凡是在 always 或 initial 语句中被赋值的变量(赋值号左边的变量),不论表达的是组合逻辑还是时序逻辑, 都一定是 reg 型变量;凡是在 assign 语句中被赋值的变量,一定是 wire 型变量。</p>
+<h2 id="835-参数">8.3.5 参数</h2>
+<hr>
+<p>参数是一种常量,通常出现在 module 内部,常被用于定义状态机的状态、数据位宽和计数器计数个数大小等,例如:</p>
+<p>可以在编译时修改参数的值,因此它又被常用于一些参数可调的模块中,使用户在实例化模块时,可以根据需要配置参数,</p>
+<p><img src="https://bu.dusays.com/2023/09/19/65097663ec828.png" alt=""></p>
+<h2 id="836-赋值语句">8.3.6 赋值语句</h2>
+<hr>
+<p>赋值语句的赋值方式有两种,分别为“&lt;=”(非阻塞赋值)和“=”(阻塞赋值)。 1.以赋值操作符“&lt;=”来标识的赋值操作称为“非阻塞型过程赋值(Nonblocking Assignment)”。非阻塞型过程赋值语句的特点如下: (1) 在 begin-end 串行语句块中,一条非阻塞过程语句的执行不会阻塞下一语句的执行,也就是说在本条非阻塞型过程赋值语句对应的赋值操作执行完之前,下一条语句也可以开始执行; (2) 仿真过程在遇到非阻塞型过程赋值语句后首先计算其右端赋值表达式的值,然后等到仿真时间结束时再将该计算结果赋值变量。也就是说,这种情况下的赋值操作是在同一仿真时刻上的其他普通操作结束后才得以执行。 2.以 赋 值 操 作 符 “ = ” 来 标 识 的 赋 值 操 作 称 为 “ 阻 塞 型 过 程 赋 值 ( Blocking Assignment)”。阻塞型过程赋值语句的特点如下: (1) 在 begin-end 串行语句块中的各条阻塞型过程赋值语句将以它们在顺序块后排列次序依次得到执行; (2) 阻塞型过程赋值语句的执行过程是:首先计算右端赋值表达式的值,然后立即将计算结果赋值给“=”左端的被赋值变量。
+阻塞型过程赋值语句的这两个特点表明:仿真进程在遇到阻塞型过程赋值语句时将计算表达式的值并立即将其结果赋给等式左边的被赋值变量;在串行语句块中,下一条语句的执行会被本条阻塞型过程赋值语句所阻塞,只有在当前这条阻塞型过程赋值语句所对应的赋值操作执行完后下一条语句才能开始执行。</p>
+<h2 id="837-注释">8.3.7 注释</h2>
+<hr>
+<p>Verilog 中双反斜线“//”可以实现对一行的注释,除此之外“/<em>&hellip;&hellip;</em>/”也是一种注释,进行注释时“/<em>&hellip;&hellip;</em>/”之间的语句都将被注释掉,所以“/<em>&hellip;&hellip;</em>/”不仅仅可以实现一行的注释,还可以实现对多行的注释,注释对整个代码的功能没有任何影响, 只是设计者为了增强代码的可读性而增加的内容。</p>
+<h2 id="838-关系运算符">8.3.8 关系运算符</h2>
+<hr>
+<p>在进行关系运算时,如果声明的关系是假的(false),则返回值是 0;如果声明的关系是真的(true),则返回值是 1;如果某个操作数的值不定,则关系是模糊的,返回值是 x。所有的关系运算符都有着相同的优先级别,但关系运算符的优先级要比算数运算符的低。</p>
+<p>当表达式 size-(1&lt;a)进行运算时,关系表达式先被运算,然后返回值 0 或 1 被 size 减去;而表达式 size-1&lt;a 进行运算时,size 先被减去 1,然后再同 a 相比。</p>
+<h2 id="839-归约运算符按位运算符和逻辑运算符">8.3.9 归约运算符、按位运算符和逻辑运算符</h2>
+<hr>
+<p>(1) 归约运算符和按位运算符 “&amp;”操作符有两种用途,既可以作为一元运算符(仅有一个参与运算的量),也可以作为二元运算符(有两个参与运算的量)。
+当“&amp;”作为一元运算符时表示归约与。&amp;m 是将 m 中所有比特相与,最后的结果为 1bit。</p>
+<p>(2) 逻辑运算符 我们在写 Verilog 代码时常常当 if 的条件有多个同时满足时就执行使用“&amp;&amp;”逻辑与操作符。m&amp;&amp;n 是判断 m 和 n 是否都为真,最后的结果只有 1bit,如果都为真则输出 1’b1,如果不都为真则输出 1’b0。要注意和“&amp;”的功能区分。</p>
+<h2 id="8310-移位运算符">8.3.10 移位运算符</h2>
+<hr>
+<p>移位运算符是二元运算符,左移符号为“&laquo;”,右移符号为“&raquo;”,将运算符左边的操作数左移或右移指定的位数,用 0 来补充空闲位。如果右边操作数的值为 x 或 z,则移位结果为未知数 x。在应用以为运算符的时候一定要注意它的这个特性,那就是空闲位用 0 来填充,也就是说,一个二进制数不管原数值是多少,只要一直移位,最终全部会变为 0。例如:4&rsquo;b1000 &raquo; 3 后的结果为 4&rsquo;b0001,4&rsquo;b1000 &raquo; 4 的结果为 4&rsquo;b0000。
+移位运算符在使用时,左移一位可以看成是乘以 2,右移一位可以看成是除以 2。所以移位运算符用在计算中,代替乘法和除法。尤其是除法,使用移位的方式,可以节省资源。但使用的前提是数据位宽要进行拓展,否则就会出现移位后全为 0 的情况。</p>
+<h2 id="8311-条件运算符">8.3.11 条件运算符</h2>
+<hr>
+<p>如果在条件语句中,只执行单个的赋值语句时,用条件表达式会更方便。条件运算符为“ ? : ”,它是一个三元运算符,即有三个参与运算的量。
+由条件运算符组成的条件表达式的一般形式为:表达式 1 ? 表达式 2 : 表达式 3 执行过程是:当表达式 1 为真,则表达式 2 作为条件表达式的值,否则以表达式 3 作为条件表达式的值。
+例如:当 a = 6, b = 7,条件表达式<code>(a &gt; b) ? a : b</code> 的结果为 7。
+注意: (1) 使用条件表达式时“?”和“:”是一对,不可以只是用一个; (2) 条件运算符从右向左结合</p>
+<h2 id="8312-优先级">8.3.12 优先级</h2>
+<hr>
+<p>总的优先级关系为:归约运算符 &gt; 算数运算符 &gt; 移位运算符 &gt; 关系运算符 &gt; “= =”和“!=”&gt; 按位运算符 &gt; “&amp;&amp;”和“||”&gt; 条件运算符,总的来说是一元运算符 &gt; 二元运算符 &gt; 三元运算符。
+如果在编写代码的时候对这些关系容易混淆,最好的方式就是使用“( )”增加优先级。</p>
+<h2 id="8313-位拼接运算符">8.3.13 位拼接运算符</h2>
+<hr>
+<p>位拼接运算符由一对花括号加逗号组成“{ , }”,拼接的不同数据之间用“,”隔开。位拼接运算符的作用主要有两种,一种是将位宽较短的数据拼接成一个位宽长的数据;另一种是可以通过位拼接实现移位的效果。</p>
+<h2 id="8314-if-else-与-case">8.3.14 if-else 与 case</h2>
+<hr>
+<p>Verilog HDL 语言中存在两种分支语言: 1、 if-else 条件分支语句 2、 case 分支控制语句 很多初学者会问编写代码的时候,到底是用 if 语句好还是用 case 语句好。同样的逻辑,可能我们用 if-else 语句可以实现,用 case 语句也可以实现。但是在很多的场合,我们又会发现 case 语句和 if-else 语句又总是同时出现,互相嵌套,密切配合。</p>
+<p>case 分支语句是另一种用来实现多路分支控制的分支语句。与使用 if-else 条件分支语句相比,采用 case 分支语句来实现多路控制将显得更为方便与直观。case 分支语句通常用于对微处理器指令译码功能的描述以及对有限状态机的描述。case 分支语句有“case”、“casez”、“casex”三种形式。</p>
+<h2 id="8315-inout-双向端口">8.3.15 inout 双向端口</h2>
+<hr>
+<p>在定义端口列表的时候我们知道输入用 input,输出用 output,其实还有一种双向端口,我们定义时使用 inout,在后面的实例中会用到,例如 IIC 和 SDRAM 的数据线都是双向端口。定义为 inout 的端口表示该端口是双向口,既可以作为数据的输入端口也可以作为数据的输出端口</p>
+<h2 id="8316-verilog-语言中的系统任务和系统函数">8.3.16 Verilog 语言中的系统任务和系统函数</h2>
+<p>Verilog 语言中预先定义了一些任务和函数,用于完成一些特殊的功能,它们被称为系统任务和系统函数,这些函数大多数都是只能在 Testbench 仿真中使用的,使我们更方便的进行验证。</p>
+<p><img src="https://bu.dusays.com/2023/09/19/650976654f1c4.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/19/6509766648b5a.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/19/650976674bbd1.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/19/650976683acb5.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/19/650976695f293.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/19/6509766a81f44.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/19/6509766ba9965.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/19/6509766cc95b1.png" alt=""></p>
+
+</content>
+<p>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E9%87%8E%E7%81%ABfpga/">#野火FPGA</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>
