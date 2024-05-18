@@ -3127,8 +3127,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240518%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240518T131038Z&X-Amz-Expires=3600&X-Amz-Signature=8645e51e6dd1de0a1371d8c7f52885029282656ff4b4034c744ea5a657a7ba2c&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2024-05-18T14:10:38.390Z"
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240518%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240518T132112Z&X-Amz-Expires=3600&X-Amz-Signature=f7cd86be78632ca2071139a17db81657391749d6161be3abf832153b25a086d9&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2024-05-18T14:21:12.522Z"
         }
       },
       "icon": null,
