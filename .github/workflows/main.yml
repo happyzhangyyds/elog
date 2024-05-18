@@ -16,10 +16,10 @@ jobs:
 
     steps:
       - name: 检查分支
-        uses: actions/checkout@master
+        uses: actions/checkout@branch
 
       - name: 安装node环境
-        uses: actions/setup-node@master
+        uses: actions/setup-node@branch
         with:
           node-version: "16.x"
 
@@ -58,7 +58,7 @@ jobs:
           git commit -m "更新文档" -a
 
       - name: 推送文章到仓库
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@branch
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
