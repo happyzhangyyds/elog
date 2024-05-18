@@ -1,204 +1,163 @@
 ---
-password: ''
-icon: ''
-date: '2023-09-28 00:00:00'
+password: ""
+icon: ""
+date: "2023-09-28"
 type: Post
 category: 动手实践
 slug: Saladict
 tags:
   - 实用教程
 summary: 介绍了通过沙拉查词+anki导出的方式，对学习的单词进行可视化整理
-title: '[外语学习] 沙拉查词+anki进行记忆强化 '
+title: "[外语学习] 沙拉查词+anki进行记忆强化 "
 status: Published
-cover: 'https://bu.dusays.com/2023/09/28/6514dc0f581b6.png'
 urlname: c0568225-bbac-4228-80a6-ee40451b009b
-updated: '2024-02-25 20:12:00'
+updated: "2024-02-25 12:12:00"
 ---
 
 # 前言
 
-
 ---
 
+在阅读英文文献或者是其他的作品时，通常网页进行翻译已经适应绝大多数的学习情况，而当读者立下目标想要提升自己的语言水平时，沙拉查词+anki 就可以派上用场。
 
-   在阅读英文文献或者是其他的作品时，通常网页进行翻译已经适应绝大多数的学习情况，而当读者立下目标想要提升自己的语言水平时，沙拉查词+anki就可以派上用场。
+沙拉查词是一款浏览器拓展，对 edge，chrome 支持良好，safari 支持并不完美，支持浏览器内的语言翻译，同时最惊艳的功能是生词摘录和 anki 的同步，同时也支持扇贝和欧路词典的生词本同步。因此该功能是打通了“摘录+记忆”的关键枢纽。
 
-
-   沙拉查词是一款浏览器拓展，对edge，chrome支持良好，safari支持并不完美，支持浏览器内的语言翻译，同时最惊艳的功能是生词摘录和anki的同步，同时也支持扇贝和欧路词典的生词本同步。因此该功能是打通了“摘录+记忆”的关键枢纽。
-
-
-  anki是一个专注于背诵的软件，具有极高的自由度和丰富的玩法，几乎支持所有平台（在linux上由于输入法框架兼容的问题可能体验并不完美），结合强大的插件，对于常见的win，mac，android，ios都具有强大的适配能力。
-
+anki 是一个专注于背诵的软件，具有极高的自由度和丰富的玩法，几乎支持所有平台（在 linux 上由于输入法框架兼容的问题可能体验并不完美），结合强大的插件，对于常见的 win，mac，android，ios 都具有强大的适配能力。
 
 # 正文
 
-
 ---
 
-
-  以下为配置教程：
-
+以下为配置教程：
 
 ## 1.沙拉查词的安装
 
-
 ---
-
 
 详见[沙拉查词的官网](https://saladict.crimx.com/)，写得非常好！
 
-
-## 2.结合quicker（win）或者popclip（mac）实现浏览器外查词（进阶）（可选）
-
+## 2.结合 quicker（win）或者 popclip（mac）实现浏览器外查词（进阶）（可选）
 
 详见沙拉查词的[进阶文档](https://saladict.crimx.com/native.html)
 
-
-## 3.同步anki
-
+## 3.同步 anki
 
 ---
 
-
-详见沙拉查词的[配合anki使用的文档](https://saladict.crimx.com/anki.html)，对您的anki进行同步
-
+详见沙拉查词的[配合 anki 使用的文档](https://saladict.crimx.com/anki.html)，对您的 anki 进行同步
 
 ## 4.沙拉查词的生词本功能
 
-
 ---
-
 
 选择适合您的翻译引擎，您可以对您的词典进行精确地匹配
 
+![](https://bu.dusays.com/2023/09/28/6514d42f1fe06.png)
 
-![6514d42f1fe06.png](https://bu.dusays.com/2023/09/28/6514d42f1fe06.png)
+![](https://bu.dusays.com/2023/09/28/6514d43677b69.png)
 
-
-![6514d43677b69.png](https://bu.dusays.com/2023/09/28/6514d43677b69.png)
-
-
-![6514dd8b8030b.png](https://bu.dusays.com/2023/09/28/6514dd8b8030b.png)
-
+![](https://bu.dusays.com/2023/09/28/6514dd8b8030b.png)
 
 ## 5.优化沙拉查词独立窗口的体验
 
+---
+
+![](https://bu.dusays.com/2023/09/28/6514d5dd4345d.png)
+
+![](https://bu.dusays.com/2023/09/28/6514d5ea35021.png)
+
+## 6.anki 导出的步骤
 
 ---
 
+首先您需要安装 anki 软件，可以访问 anki 的[官网](https://apps.ankiweb.net/)进行安装
+如果配置正确，能够进行同步，那么您可以看到在您的 anki 中会出现沙拉查词的牌组
 
-![6514d5dd4345d.png](https://bu.dusays.com/2023/09/28/6514d5dd4345d.png)
+![](https://bu.dusays.com/2023/09/28/6514d7ef79545.png)
 
+接下来我将介绍最重要和有趣的功能，即 anki 的牌组如何导出为 PDF
+首先您可以参照[这篇文章](https://weownthenight.github.io/2020/12/29/Anki导出pdf的方法/)做一个简单的了解
 
-![6514d5ea35021.png](https://bu.dusays.com/2023/09/28/6514d5ea35021.png)
+您需要根具上述的参考文章进行相应的插件的安装，路径在：**工具-插件-获取插件-插件代码**
+插件的代码是`1897277426`
 
+![](https://bu.dusays.com/2023/09/28/6514d806417c0.png)
 
-## 6.anki导出的步骤
+当您需要对摘录的卡组进行导出的时候，**点击：工具-Export deck to HTML**
 
+由于插件版本的升级，可能会让大家感到无从下手
 
----
+![](https://bu.dusays.com/2023/09/28/6514d83f9342c.png)
 
+最主要的是 html 的模版的编写，我这里提供了针对沙拉查词的模板，可以根据自己的需要，自行编写和修改 html 和 css，同时提供针对沙拉查词的 html 模板（右键下载）
 
-  首先您需要安装anki软件，可以访问anki的[官网](https://apps.ankiweb.net/)进行安装
-  如果配置正确，能够进行同步，那么您可以看到在您的anki中会出现沙拉查词的牌组
-
-
-![6514d7ef79545.png](https://bu.dusays.com/2023/09/28/6514d7ef79545.png)
-
-
-  接下来我将介绍最重要和有趣的功能，即anki的牌组如何导出为PDF
-  首先您可以参照[这篇文章](https://weownthenight.github.io/2020/12/29/Anki导出pdf的方法/)做一个简单的了解
-
-
-  您需要根具上述的参考文章进行相应的插件的安装，路径在：**工具-插件-获取插件-插件代码**
-  插件的代码是`1897277426`
-
-
-![6514d806417c0.png](https://bu.dusays.com/2023/09/28/6514d806417c0.png)
-
-
-  
-  当您需要对摘录的卡组进行导出的时候，**点击：工具-Export deck to HTML**
-
-
-  由于插件版本的升级，可能会让大家感到无从下手
-
-
-![6514d83f9342c.png](https://bu.dusays.com/2023/09/28/6514d83f9342c.png)
-
-
-  最主要的是html的模版的编写，我这里提供了针对沙拉查词的模板，可以根据自己的需要，自行编写和修改html和css，同时提供针对沙拉查词的html模板（右键下载）
-
-
-[%E5%BE%B7%E8%AF%AD.html](https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/c4372573-9156-4aa9-8233-b249b7e1691e/%E5%BE%B7%E8%AF%AD.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240510%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240510T162203Z&X-Amz-Expires=3600&X-Amz-Signature=b318f2cc36d30f3a83ae3e3cba763b417359acf101a178ba409979dd1f96dd89&X-Amz-SignedHeaders=host&x-id=GetObject)
-
+[image](https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/c4372573-9156-4aa9-8233-b249b7e1691e/%E5%BE%B7%E8%AF%AD.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240518%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240518T113534Z&X-Amz-Expires=3600&X-Amz-Signature=36b72400c7ebff6ecb576bd3a05991830d0af3fefc50e326b125ca9f9d6bcfc9&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 ```html
 <head>
-    <meta charset="UTF-8">
-    <style>
-        table {
-            font-family: sans-serif, NSimSun, SimSun;
-            font-size: 13px;
-            color: #333333;
-            border-width: 1px;
-            border-color: #666666;
-            border-collapse: collapse;
-            width: 100%;
-        }
+  <meta charset="UTF-8" />
+  <style>
+    table {
+      font-family: sans-serif, NSimSun, SimSun;
+      font-size: 13px;
+      color: #333333;
+      border-width: 1px;
+      border-color: #666666;
+      border-collapse: collapse;
+      width: 100%;
+    }
 
-        th {
-            border-width: 1px;
-            padding: 8px;
-            border-style: solid;
-            border-color: #666666;
-            background-color: #dedede;
-        }
+    th {
+      border-width: 1px;
+      padding: 8px;
+      border-style: solid;
+      border-color: #666666;
+      background-color: #dedede;
+    }
 
-        td.column1 {
-            border-width: 1px;
-            padding: 8px;
-            border-style: solid;
-            border-color: #666666;
-            background-color: #ffffff;
-            width: 20%;
-        }
+    td.column1 {
+      border-width: 1px;
+      padding: 8px;
+      border-style: solid;
+      border-color: #666666;
+      background-color: #ffffff;
+      width: 20%;
+    }
 
-        td.column2 {
-            border-width: 1px;
-            padding: 8px;
-            border-style: solid;
-            border-color: #666666;
-            background-color: #ffffff;
-            width: 50%;
-        }
+    td.column2 {
+      border-width: 1px;
+      padding: 8px;
+      border-style: solid;
+      border-color: #666666;
+      background-color: #ffffff;
+      width: 50%;
+    }
 
-        td.column3 {
-            border-width: 1px;
-            padding: 8px;
-            border-style: solid;
-            border-color: #666666;
-            background-color: #ffffff;
-            width: 30%;
-        }
+    td.column3 {
+      border-width: 1px;
+      padding: 8px;
+      border-style: solid;
+      border-color: #666666;
+      background-color: #ffffff;
+      width: 30%;
+    }
 
-        img {
-            max-width: 50%;
-            height: auto;
-        }
-    </style>
+    img {
+      max-width: 50%;
+      height: auto;
+    }
+  </style>
 </head>
 
 <body>
-    <table>
-        <tr>
-            <td class="column1">{{Text}}</td>
-            <td class="column2">{{Context}}</td>
-            <td class="column3">{{Note}}</td>
-        </tr>
-    </table>
+  <table>
+    <tr>
+      <td class="column1">{{Text}}</td>
+      <td class="column2">{{Context}}</td>
+      <td class="column3">{{Note}}</td>
+    </tr>
+  </table>
 </body>
-
 
 <!-- 
 **代码理解****：**
@@ -249,27 +208,18 @@ updated: '2024-02-25 20:12:00'
  -->
 ```
 
-
-## 7.浏览您的导出文件，在浏览器进行打印导出为PDF
-
+## 7.浏览您的导出文件，在浏览器进行打印导出为 PDF
 
 ---
 
-
-![65142d97ef111.png](https://bu.dusays.com/2023/09/27/65142d97ef111.png)
-
+![](https://bu.dusays.com/2023/09/27/65142d97ef111.png)
 
 # 总结
 
-
 ---
 
+介绍了通过沙拉查词+anki 导出的方式，对学习的单词进行可视化整理，方便后续的复习！
 
-  介绍了通过沙拉查词+anki导出的方式，对学习的单词进行可视化整理，方便后续的复习！
+🍒 如果您觉得沙拉查词对您帮助很大，也可以赞助一下[开发者](https://saladict.crimx.com/support.html)，为开源社区贡献自己的一份努力！
 
-
-  🍒如果您觉得沙拉查词对您帮助很大，也可以赞助一下[开发者](https://saladict.crimx.com/support.html)，为开源社区贡献自己的一份努力！
-
-
-  如果有任何问题，也欢迎在评论区留言，有时间我将及时为您解答！
-
+如果有任何问题，也欢迎在评论区留言，有时间我将及时为您解答！
