@@ -14,10 +14,10 @@ jobs:
 
     steps:
       - name: 检查分支
-        uses: actions/checkout@v2  # 更新至具体版本号
+        uses: actions/checkout@branch
 
       - name: 安装node环境
-        uses: actions/setup-node@v3  # 更新至具体版本号
+        uses: actions/setup-node@branch
         with:
           node-version: "16.x"
 
@@ -52,7 +52,7 @@ jobs:
           git commit -m "更新文档" -a
 
       - name: 推送文章到仓库
-        uses: ad-m/github-push-action@v0.6.0  # 更新至具体版本号
+        uses: ad-m/github-push-action@branch
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
