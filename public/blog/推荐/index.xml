@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>推荐 on Hugo ʕ•ᴥ•ʔ Bear Blog</title>
+    <link>https://hugo.matrixcore.life/blog/%E6%8E%A8%E8%8D%90/</link>
+    <description>Recent content in 推荐 on Hugo ʕ•ᴥ•ʔ Bear Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2024, MatrixCore</copyright>
+    <lastBuildDate>Sun, 21 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo.matrixcore.life/blog/%E6%8E%A8%E8%8D%90/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[数据中心] 测试crontab同步elog&#43;Onedrive</title>
+      <link>https://hugo.matrixcore.life/crontab-1/</link>
+      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/crontab-1/</guid>
+      <description>为obsidian建立数据中心，使用vps定时同步到onedrive</description>
+    </item>
+    
+    <item>
+      <title>[年度总结] 走一座迷宫 寻一家灯火</title>
+      <link>https://hugo.matrixcore.life/231230/</link>
+      <pubDate>Sat, 30 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/231230/</guid>
+      <description>希望在未来的一年里，我能好好沉淀自己，静下心学习知识，传承开源精神，把这份热爱坚持下去！</description>
+    </item>
+    
+    <item>
+      <title>[主题推荐] 宝藏hugo-virgo</title>
+      <link>https://hugo.matrixcore.life/hugo-virgo/</link>
+      <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/hugo-virgo/</guid>
+      <description>Hugo是静态网页的速度很快，virgo主题又非常简洁美观，值得推荐给大家。</description>
+    </item>
+    
+    <item>
+      <title>[跨域协同]  elog&#43;notion实现md优雅备份</title>
+      <link>https://hugo.matrixcore.life/elog/</link>
+      <pubDate>Wed, 11 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/elog/</guid>
+      <description>通过elog实现notion文章批量下载到本地，以及自动化云端备份和迁移。</description>
+    </item>
+    
+    <item>
+      <title>[跨域协同]  elog&#43;notion实现md优雅备份</title>
+      <link>https://hugo.matrixcore.life/elog/</link>
+      <pubDate>Wed, 11 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/elog/</guid>
+      <description>通过elog实现notion文章批量下载到本地，以及自动化云端备份和迁移。</description>
+    </item>
+    
+    <item>
+      <title>[外语学习] 沙拉查词&#43;anki进行记忆强化 </title>
+      <link>https://hugo.matrixcore.life/saladict/</link>
+      <pubDate>Thu, 28 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/saladict/</guid>
+      <description>介绍了通过沙拉查词+anki导出的方式，对学习的单词进行可视化整理</description>
+    </item>
+    
+    <item>
+      <title>[放松心情] 钢琴鉴赏 </title>
+      <link>https://hugo.matrixcore.life/piano/</link>
+      <pubDate>Fri, 18 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/piano/</guid>
+      <description>搞点钢琴听听，钢琴相对而言，听起来比较舒服一点，至少我是这么觉得的。</description>
+    </item>
+    
+    <item>
+      <title>[速度优化]  前端图片性能优化</title>
+      <link>https://hugo.matrixcore.life/picturespeed/</link>
+      <pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/picturespeed/</guid>
+      <description>用杜老师的图床对图片进行加速</description>
+    </item>
+    
+    <item>
+      <title>[速度优化]  前端图片性能优化</title>
+      <link>https://hugo.matrixcore.life/picturespeed/</link>
+      <pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/picturespeed/</guid>
+      <description>用杜老师的图床对图片进行加速</description>
+    </item>
+    
+    <item>
+      <title>[沉没成本] 通过番茄人生来聊沉没成本 </title>
+      <link>https://hugo.matrixcore.life/tomato/</link>
+      <pubDate>Sat, 12 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/tomato/</guid>
+      <description>该做的事情得做，该优化的逻辑得优化，比起被动地接受安排，顺着自己的心去做，或许会好过一点。一招一式，都是学习。</description>
+    </item>
+    
+    <item>
+      <title>[技能拓展]  计算机专业学习路线—点亮你的科技树🌲</title>
+      <link>https://hugo.matrixcore.life/hackway/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/hackway/</guid>
+      <description>分享计算机专业学习路线和讲讲我的规划及感受！</description>
+    </item>
+    
+    <item>
+      <title>[哲学讲堂] 什么是性灵？（王德峰）</title>
+      <link>https://hugo.matrixcore.life/wdf-1/</link>
+      <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/wdf-1/</guid>
+      <description>根据王老师的讲座视频进行整理</description>
+    </item>
+    
+    <item>
+      <title>[经验分享] 谈学习观</title>
+      <link>https://hugo.matrixcore.life/learn/</link>
+      <pubDate>Mon, 12 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/learn/</guid>
+      <description>大学对于独立人格的塑造是很重要的，最主要的是在不断试错的过程当中培养自己解决问题的能力。</description>
+    </item>
+    
+    <item>
+      <title>[技术分享] 博客优化</title>
+      <link>https://hugo.matrixcore.life/improve/</link>
+      <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/improve/</guid>
+      <description>记录我对博客优化的过程，您可以看作是博客优化的日志。</description>
+    </item>
+    
+  </channel>
+</rss>
