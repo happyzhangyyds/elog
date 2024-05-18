@@ -9,9 +9,9 @@ tags:
   - 实用教程
 summary: 已经很晚了，最后还有一点是关于如何兼容Hugo和NotionNext，我觉得markdown语法还是要学的，因为有些block使用elog转换为md之后还是不完美，不如就在一开始写的时候就用md省心。
 title: "[心路历程]  NotionNext和Hugo_Bear的组合"
-status: Draft
+status: Published
 urlname: 3fce4caa-8ffb-4d18-96c9-3dba29188ea2
-updated: "2024-05-18 14:59:00"
+updated: "2024-05-18 15:01:00"
 ---
 
 # 前言
