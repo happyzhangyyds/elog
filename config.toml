@@ -6,7 +6,7 @@ baseURL = "https://hugo.matrixcore.life"
 theme = 'hugo-bearblog'
 
 # Basic metadata configuration for your blog.
-title = "Hugo ʕ•ᴥ•ʔ Bear Blog"
+title = "ʕ•ᴥ•ʔ"
 author = "MatrixCore"
 copyright = "Copyright © 2024, MatrixCore"
 languageCode = "en-US"
