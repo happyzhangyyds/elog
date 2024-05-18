@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://bu.dusays.com/2024/04/23/6627ad7c08194.jpeg" />
+<title>[高数基础] 第八讲  一元函数积分学的概念与计算 | Hugo ʕ•ᴥ•ʔ Bear Blog</title>
+<meta name="title" content="[高数基础] 第八讲  一元函数积分学的概念与计算" />
+<meta name="description" content="基本积分计算" />
+<meta name="keywords" content="研数-高数基础,热门文章," />
+
+
+<meta property="og:title" content="[高数基础] 第八讲  一元函数积分学的概念与计算" />
+<meta property="og:description" content="基本积分计算" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugo.matrixcore.life/home/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu008/" /><meta property="og:image" content="https://hugo.matrixcore.life/images/share.png"/><meta property="article:section" content="Home" />
+<meta property="article:published_time" content="2023-08-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-08-10T00:00:00+00:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://hugo.matrixcore.life/images/share.png"/>
+
+<meta name="twitter:title" content="[高数基础] 第八讲  一元函数积分学的概念与计算"/>
+<meta name="twitter:description" content="基本积分计算"/>
+
+
+
+<meta itemprop="name" content="[高数基础] 第八讲  一元函数积分学的概念与计算">
+<meta itemprop="description" content="基本积分计算"><meta itemprop="datePublished" content="2023-08-10T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-08-10T00:00:00+00:00" />
+<meta itemprop="wordCount" content="45"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="keywords" content="研数-高数基础,热门文章," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Hugo ʕ•ᴥ•ʔ Bear Blog</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+</nav>
+</header>
+  <main>
+
+<content>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#f92672">-</span> <span style="color:#ae81ff">080</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">-</span> <span style="color:#ae81ff">081</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">-</span> <span style="color:#ae81ff">0811</span><span style="color:#a6e22e">不定积分</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">-</span> <span style="color:#ae81ff">0812</span><span style="color:#a6e22e">定积分的基本概念</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">-</span> <span style="color:#ae81ff">0813</span><span style="color:#a6e22e">变限积分</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">-</span> <span style="color:#ae81ff">0814</span><span style="color:#a6e22e">反常积分</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">-</span> <span style="color:#ae81ff">082</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">-</span> <span style="color:#ae81ff">0821</span><span style="color:#a6e22e">基本积分公式</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">-</span> <span style="color:#ae81ff">0822</span><span style="color:#a6e22e">凑微分法</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">-</span> <span style="color:#ae81ff">0823</span><span style="color:#a6e22e">换元法</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">-</span> <span style="color:#ae81ff">0824</span><span style="color:#a6e22e">分部积分法</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">-</span> <span style="color:#ae81ff">0825</span><span style="color:#a6e22e">有理函数积分</span>
+</span></span></code></pre></div><h1 id="080">080</h1>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650135481c1de.png" alt=""></p>
+<h2 id="081">081</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/65013564cc391.png" alt=""></p>
+<h3 id="0811-不定积分">0811 不定积分</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501356616e3c.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/65013567357ec.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/650135688858a.png" alt=""></p>
+<h3 id="0812-定积分的基本概念">0812 定积分的基本概念</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/65013569dccc3.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501356b0891f.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501356c3581f.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501356d8de9a.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501356f1121b.png" alt=""></p>
+<h3 id="0813-变限积分">0813 变限积分</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501357056e6e.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501359950822.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501359a9505a.png" alt=""></p>
+<h3 id="0814-反常积分">0814 反常积分</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501359bf00b5.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501359da364c.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501359f11f33.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/650135a0836f6.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/650135a1b116b.png" alt=""></p>
+<h2 id="082">082</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650135a2bc620.png" alt=""></p>
+<h3 id="0821-基本积分公式">0821 基本积分公式</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650135a464c33.png" alt=""></p>
+<h3 id="0822-凑微分法">0822 凑微分法</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650135a5b5af4.png" alt=""></p>
+<h3 id="0823-换元法">0823 换元法</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650135c5cfa68.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/650135c75c7dd.png" alt=""></p>
+<h3 id="0824-分部积分法">0824 分部积分法</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650135c929715.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/650135ca3c498.png" alt=""></p>
+<h3 id="0825-有理函数积分">0825 有理函数积分</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650135cb8b7f7.png" alt=""></p>
+
+</content>
+<p>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/">#研数-高数基础</a>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/">#热门文章</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://bu.dusays.com/2024/04/23/6627ad7c08194.jpeg" />
+<title>[文件管理] NextCloud为Obsidian保驾护航 | Hugo ʕ•ᴥ•ʔ Bear Blog</title>
+<meta name="title" content="[文件管理] NextCloud为Obsidian保驾护航" />
+<meta name="description" content="obsidian与notion珠联璧合，nextcloud为obsidian保驾护航。" />
+<meta name="keywords" content="实用教程," />
+
+
+<meta property="og:title" content="[文件管理] NextCloud为Obsidian保驾护航" />
+<meta property="og:description" content="obsidian与notion珠联璧合，nextcloud为obsidian保驾护航。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/nextcloud-obsidian/" /><meta property="og:image" content="https://hugo.matrixcore.life/images/share.png"/><meta property="article:section" content="Blog" />
+<meta property="article:published_time" content="2023-12-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-12-20T00:00:00+00:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://hugo.matrixcore.life/images/share.png"/>
+
+<meta name="twitter:title" content="[文件管理] NextCloud为Obsidian保驾护航"/>
+<meta name="twitter:description" content="obsidian与notion珠联璧合，nextcloud为obsidian保驾护航。"/>
+
+
+
+<meta itemprop="name" content="[文件管理] NextCloud为Obsidian保驾护航">
+<meta itemprop="description" content="obsidian与notion珠联璧合，nextcloud为obsidian保驾护航。"><meta itemprop="datePublished" content="2023-12-20T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-12-20T00:00:00+00:00" />
+<meta itemprop="wordCount" content="7"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="keywords" content="实用教程," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Hugo ʕ•ᴥ•ʔ Bear Blog</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<content>
+  <p>我将简单介绍这个短暂而震撼的尝试。
+我相中了obsidian的双链和关系图谱的功能，这一块正好补足了notion尚未开发出导图的缺陷。
+而无法多端同步一直是obsidian的痛点，如果搭配上具备一个同步网盘，那么这个问题也将迎刃而解。
+我搜索了一下，obsidian可以配合坚果云使用，但我之前用过一段时间的坚果云，并表示其实我还是更喜欢nextcloud。
+问题出在如何协调nextcloud和obsidian的同步文件夹。
+我不得不感谢notionnext的自定义同步文件夹的功能，使得我不需要迁移obsidian的默认保存位置，就可以无缝上传obsidian的整个文件夹。
+当然，需要为nextcloud设置后台和耗电权限。然后您就可以在obsidian自由创造了。</p>
+
+</content>
+<p>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/">#实用教程</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>

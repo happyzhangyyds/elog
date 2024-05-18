@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://bu.dusays.com/2024/04/23/6627ad7c08194.jpeg" />
+<title>[高数基础]  第十二讲 二重积分 | Hugo ʕ•ᴥ•ʔ Bear Blog</title>
+<meta name="title" content="[高数基础]  第十二讲 二重积分" />
+<meta name="description" content="二重积分的概念与计算" />
+<meta name="keywords" content="研数-高数基础,热门文章," />
+
+
+<meta property="og:title" content="[高数基础]  第十二讲 二重积分" />
+<meta property="og:description" content="二重积分的概念与计算" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugo.matrixcore.life/blog/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu012/" /><meta property="og:image" content="https://hugo.matrixcore.life/images/share.png"/><meta property="article:section" content="Blog" />
+<meta property="article:published_time" content="2023-08-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-08-10T00:00:00+00:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://hugo.matrixcore.life/images/share.png"/>
+
+<meta name="twitter:title" content="[高数基础]  第十二讲 二重积分"/>
+<meta name="twitter:description" content="二重积分的概念与计算"/>
+
+
+
+<meta itemprop="name" content="[高数基础]  第十二讲 二重积分">
+<meta itemprop="description" content="二重积分的概念与计算"><meta itemprop="datePublished" content="2023-08-10T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-08-10T00:00:00+00:00" />
+<meta itemprop="wordCount" content="78"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="keywords" content="研数-高数基础,热门文章," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Hugo ʕ•ᴥ•ʔ Bear Blog</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<content>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#f92672">-</span> <span style="color:#ae81ff">120</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">-</span> <span style="color:#ae81ff">121</span> <span style="color:#a6e22e">二重积分的概念与性质</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">-</span> <span style="color:#ae81ff">1211</span><span style="color:#a6e22e">二重积分的几何背景</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">-</span> <span style="color:#ae81ff">1212</span><span style="color:#a6e22e">二重积分的性质</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">-</span> <span style="color:#ae81ff">1213</span><span style="color:#a6e22e">二重积分的对称性</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">-</span> <span style="color:#ae81ff">12.2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">-</span> <span style="color:#ae81ff">122</span><span style="color:#a6e22e">二重积分的计算</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">-</span> <span style="color:#ae81ff">1221</span><span style="color:#a6e22e">二重积分直角坐标系的算法</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">-</span> <span style="color:#ae81ff">12.1</span><span style="color:#a6e22e">直角坐标系计算</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">-</span> <span style="color:#ae81ff">12.3</span><span style="color:#a6e22e">直角坐标系计算</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">-</span> <span style="color:#ae81ff">1222</span><span style="color:#a6e22e">二重积分极坐标系算法</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">-</span> <span style="color:#ae81ff">12.4</span><span style="color:#a6e22e">极坐标系计算</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">-</span> <span style="color:#ae81ff">12.5</span><span style="color:#a6e22e">极坐标系计算</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">-</span> <span style="color:#ae81ff">12.6</span><span style="color:#a6e22e">极坐标系计算</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">-</span> <span style="color:#ae81ff">1223</span><span style="color:#a6e22e">直角坐标系和极坐标系互相转化</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">-</span> <span style="color:#ae81ff">1224</span><span style="color:#a6e22e">极坐标系和直角坐标系相互转化</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">-</span> <span style="color:#ae81ff">12.7</span><span style="color:#a6e22e">换积分次序</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">-</span> <span style="color:#ae81ff">12.8</span><span style="color:#a6e22e">二重积分解决一元积分</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">-</span> <span style="color:#ae81ff">12.9</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">-</span> <span style="color:#ae81ff">12.10</span><span style="color:#a6e22e">高斯曲线</span>
+</span></span></code></pre></div><hr>
+<h1 id="120">120</h1>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501631ca1d76.png" alt=""></p>
+<h2 id="121-二重积分的概念与性质">121 二重积分的概念与性质</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650163674fa7c.png" alt=""></p>
+<h3 id="1211-二重积分的几何背景">1211 二重积分的几何背景</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650163689c169.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501636981736.png" alt=""></p>
+<h3 id="1212-二重积分的性质">1212 二重积分的性质</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501636acd49b.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501636bc07b1.png" alt=""></p>
+<h3 id="1213-二重积分的对称性">1213 二重积分的对称性</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501636d3b348.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501636e99c91.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501636ff17bd.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/65016370d58e8.png" alt=""></p>
+<p><strong>12.2</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/6501637210642.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/65016392b67b8.png" alt=""></p>
+<h2 id="122-二重积分的计算">122 二重积分的计算</h2>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650163a29737d.png" alt=""></p>
+<h3 id="1221-二重积分直角坐标系的算法">1221 二重积分直角坐标系的算法</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650163a4139c7.png" alt=""></p>
+<p><strong>12.1 直角坐标系计算</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650163a576574.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/650163a671106.png" alt=""></p>
+<p><strong>12.3 直角坐标系计算</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650163a79dda8.png" alt=""></p>
+<h3 id="1222-二重积分极坐标系算法">1222 二重积分极坐标系算法</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650163a8ef41b.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/650163aa1fd5b.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/650163ab230f7.png" alt=""></p>
+<p><strong>12.4 极坐标系计算</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650163ac7acc4.png" alt=""></p>
+<p><strong>12.5 极坐标系计算</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650163ae87796.png" alt=""></p>
+<p><strong>12.6 极坐标系计算</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650163afc315a.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/650163ed275ed.png" alt=""></p>
+<h3 id="1223-直角坐标系和极坐标系互相转化">1223 直角坐标系和极坐标系互相转化</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650163ff499ab.png" alt=""></p>
+<h3 id="1224-极坐标系和直角坐标系相互转化">1224 极坐标系和直角坐标系相互转化</h3>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/65016400530f0.png" alt=""></p>
+<p><strong>12.7 换积分次序</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650164018aa01.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/65016402c5521.png" alt=""></p>
+<p><strong>12.8 二重积分解决一元积分</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/65016404124ff.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/65016405381f4.png" alt=""></p>
+<p><strong>12.9</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/650164064c822.png" alt=""></p>
+<p><strong>12.10 高斯曲线</strong></p>
+<hr>
+<p><img src="https://bu.dusays.com/2023/09/13/65016407b4a84.png" alt=""></p>
+<p><img src="https://bu.dusays.com/2023/09/13/6501640947419.png" alt=""></p>
+
+</content>
+<p>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/">#研数-高数基础</a>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/">#热门文章</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>

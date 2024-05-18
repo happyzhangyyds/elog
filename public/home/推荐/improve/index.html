@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://bu.dusays.com/2024/04/23/6627ad7c08194.jpeg" />
+<title>[技术分享] 博客优化 | Hugo ʕ•ᴥ•ʔ Bear Blog</title>
+<meta name="title" content="[技术分享] 博客优化" />
+<meta name="description" content="记录我对博客优化的过程，您可以看作是博客优化的日志。" />
+<meta name="keywords" content="推荐," />
+
+
+<meta property="og:title" content="[技术分享] 博客优化" />
+<meta property="og:description" content="记录我对博客优化的过程，您可以看作是博客优化的日志。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugo.matrixcore.life/home/%E6%8E%A8%E8%8D%90/improve/" /><meta property="og:image" content="https://hugo.matrixcore.life/images/share.png"/><meta property="article:section" content="Home" />
+<meta property="article:published_time" content="2023-04-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-04-20T00:00:00+00:00" /><meta property="og:site_name" content="Hugo ʕ•ᴥ•ʔ Bear" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://hugo.matrixcore.life/images/share.png"/>
+
+<meta name="twitter:title" content="[技术分享] 博客优化"/>
+<meta name="twitter:description" content="记录我对博客优化的过程，您可以看作是博客优化的日志。"/>
+
+
+
+<meta itemprop="name" content="[技术分享] 博客优化">
+<meta itemprop="description" content="记录我对博客优化的过程，您可以看作是博客优化的日志。"><meta itemprop="datePublished" content="2023-04-20T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-04-20T00:00:00+00:00" />
+<meta itemprop="wordCount" content="276"><meta itemprop="image" content="https://hugo.matrixcore.life/images/share.png"/>
+<meta itemprop="keywords" content="推荐," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Hugo ʕ•ᴥ•ʔ Bear Blog</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+</nav>
+</header>
+  <main>
+
+<content>
+  <h1 id="前言">前言</h1>
+<hr>
+<!-- raw HTML omitted -->
+<p>我大概是从 2014 年开始，在 QQ 空间上写作，一直持续到 2022 年 10 月，这里承载了我很多的回忆，但是我仍然选择了关闭。</p>
+<p>我也在 2021 年尝试成为一名 up 主，截至到 2023 年 2 月，累计 1900 的播放，随后放弃。</p>
+<p>2022 年运行微信公众号，截至到 2023 年 2 月，进行了注销。</p>
+<p>这里面有我个人主观的原因，有所经历带来的认知改变的原因。倘若一个人已然浑身冰冷，又如何指望他去发光发热呢。</p>
+<p>于是我希望重新开启一段新的旅程，2023 年是这段旅行的元年，Core_2023_1 这是新的名字，2023 年，我希望一个人好好爱自己，不去打扰别人，努力学习。</p>
+<p>我感觉自己是一个精神能量很大的人，所以有时候，我也在自我克制。</p>
+<p>现在我来到了这里，如果有幸能在这里遇见你，那么非常感谢你听过我的故事，往后我也会继续更新和优化博客，只不过因为时间很紧张，要做的事情还有很多，所以更新的进度会很缓慢。</p>
+<p>本科期间，电子信息工程，总的来说，我感觉我的自学能力还是有待提高的，疫情三年，我一直在尝试优化学习的方法，我还是感觉到自己的学习力远远不够。</p>
+<p>大一大二主要的专业课，像单片机，了解很浅，模电数电当时学得也不是很懂，计算机目前只学过 C，专业课，自控，高频电子线路，通信原理，数字信号处理，随机信号分析，EDA，电磁场与电磁波，基本上大三下就开始和民航相关的专业课程。</p>
+<p>所以感觉自我的发育还不是很好，自己的人生主线还不是很清晰。</p>
+<p>很幸运，在 github 上遇见了<a href="https://tangly1024.com/">Tangly</a>，在他的帮助下我搭建了这个博客。</p>
+<p>在我写下这段文字的时候，博客还很小，尚不满月，但是已经给了我足够的惊喜。</p>
+<p>现阶段，我打算用一些时间来更好地了解自己，同时准备考研，当你踏上一段新的旅程的时候，沿途的风景会为你拂去疲惫。</p>
+<p>2023-05-07</p>
+<!-- raw HTML omitted -->
+<p>这里记录我对博客优化的过程，您可以看作是博客优化的日志。</p>
+<p>为什么要这么做？</p>
+<blockquote>
+<p><em>陆陆续续参观了一些优秀的博客，由衷地感觉，博客确实为我打开了一扇新的世界，这里是一座舞台，坚持很难，但很有趣！<br>
+——MatrixCore</em></p>
+</blockquote>
+<p>目前采用的是<strong>heo 主题</strong>，支持 algolia 搜索，可以看看<a href="https://zhuanlan.zhihu.com/p/568538285">这篇文章</a>的介绍</p>
+<h1 id="正文">正文</h1>
+<hr>
+<p>按照时间倒序记录我对博客优化的一些思考，即使有些想法可能已经不适用于现在的博客配置，但也希望能给您带来一些启发！</p>
+<h3 id="字体优化-2024-03-23">字体优化 2024-03-23</h3>
+<hr>
+<p>之前的字体会拖慢网站加载速度，后采用<a href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/style.css">LXGW WenKai Screen</a>在<code>blog.config.js</code>中引入。
+另外顺带插一句，因为之前写的文章质量不高，然后各种修改和迁移，导致 bing 产生了大量错误的索引，今天一个一个 block 的时候极为头疼，所以还是按照对应的规则好好去写一些有意义的文章，让大多数的 index 具备不错的质量。</p>
+<h3 id="页脚布局-白边溢出-2024-03-23">页脚布局-白边溢出 2024-03-23</h3>
+<hr>
+<p>移动端黑夜模式下，此前页脚会出现空白
+解决方案：<strong>溢出隐藏（Overflow Hidden）</strong>：在包含内容的容器上应用  <code>overflow: hidden;</code>  样式，这将隐藏超出容器的内容，而不是让它溢出显示在容器之外。该样式的路径适用于<code>themes/heo/style.js</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">footer</span><span style="color:#f92672">-</span><span style="color:#a6e22e">bottom</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">overflow</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">hidden</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="为博客添加全局友链">为博客添加全局友链</h3>
+<hr>
+<p>主要是方便我随时去溜达，哈哈。</p>
+<h3 id="借助-memos-为博客添加说说界面-2024-03-10">借助 Memos 为博客添加说说界面 2024-03-10</h3>
+<hr>
+<p>之前一直希望能把 Memos 融入 heo 主题，但是尝试之后没成功，然后就单独建了一个页面，现在可以通过菜单栏进行预览。</p>
+<h3 id="升级-notionnext-至-430-版本-2024-03-03">升级 NotionNext 至 4.3.0 版本 2024-03-03</h3>
+<hr>
+<p>感谢 tangly 和其他群友的付出，持续更新和优化 NotionNext，其中我感觉 4.3.0 版本比上一代 4.0.18 版本快了很多。</p>
+<p>说说我的感受，我觉得 notionnext 最大的特点就是可以将 notion 与博客动态结合起来，和静态博客的区别如下：</p>
+<ul>
+<li>在 notion 中编辑，可以即时体现在博客中，这一点就使得内容更新非常迅速，静态博客需要重新编译部署，在更新时会稍微麻烦些，但静态博客更加快速和稳定。</li>
+<li>notion 丰富点块理念，有些时候会比 markdown 更加丰富。</li>
+<li>notionnext 特别需要注意 block 上限为 1000 个，这也是我为什么会限制数量的原因，因为溢出之后博客会出现不可预知的故障。所以我把一些旧的内容，重新归档到 hugo 里去了。</li>
+<li>notionnext 可能需要您耐心研究代码，遇到问题积极提问，因为 notionnext 的复杂度是比很多静态博客要高的。</li>
+</ul>
+<h3 id="放弃使用-google-adsense-重新为-blog-进行个性化定制-2023-09-12">放弃使用 google adsense ，重新为 Blog 进行个性化定制 2023-09-12</h3>
+<hr>
+<p>之前在七月底的时候，我曾经权衡过是否引入 google Adsense，当时我做了两种规划，一种是作为商业化部署，代价是失去 blog 的灵动性，需要更多的原创性，尊重版权，一种是完全自主式的装饰和部署，近两个月的尝试，我得出了以下结论，虽然 google Adsense 能够在一定程度上弥补 blog 的资金和收入来源的缺陷，但也得付出同等的代价，不过有一个好处是阅读 google 的合作规范也让我对 blog 的写作规范化的问题更加重视。
+现在我的选择是，为爱发电，营造纯净的 blog 环境和创作有价值的内容，至于是否商业化，我打算秋招的时候先找个好工作。用工作的资金来维持 blog 功能的升级和优化。
+这样子我创作的自由度会得到更多的提升，我不需要再因为广告合作而让渡一部分权利，和牺牲一部分读者体验（虽然小破站流量也不大，但还是会有友友来的）
+而且我认为优质的内容本身就是一种潜在价值的累积，两条道路虽然实现的方式不同，但通过实践验证，都能归化出适合自己成长的经验。
+最后非常感谢友友们的支持，让小破站更有意义！</p>
+<h3 id="博客性能优化-2023-09-11">博客性能优化 2023-09-11</h3>
+<hr>
+<p>目前来看博客性能比较一般，有时间需要优化一下
+挑个两个小时的配色，原来的配色感觉看久了很累，我选的是这张荷花
+同时改左边英雄区的标签组为岁月长廊，右边则为如下的荷花
+同时最近将为之前学习过的知识做 cdn 优化</p>
+<h3 id="关于博客发展的一些思考-2023-09-03">关于博客发展的一些思考 2023-09-03</h3>
+<hr>
+<p>随着个人成长，博客的总体的信息量也变得越发地庞杂，哪些信息该被记录到博客当中，又通过什么样的方式进行记录呢，如何看待每一篇博文的含金量和精力的平衡呢？
+值得庆幸的是，我感觉每一天就像是行走在稻田里的插秧机和收割机。
+春天播种，秋天收获，或许在冬天只需要想到冬天该做的事情，和春天的播种就好了，如果只是把精力放到来年秋天的收成，或是对老天爷的担忧上，那人生也会不堪重负。
+到底什么能产生价值，是劳动本身。劳动本身在对于理论的实践中得到了收获。
+那博客也是这个道理，如果把一天比作是四季，春夏播种，秋季收获，冬季窖藏。
+早晨应该专心完成早晨的任务，冬季应该好好休息。秋季应该好好收获，夏季应该挥洒汗水。
+问题就在于我们把所有的一切都想得太超前了，以至于我们的身体和精神不堪重负。
+除去客观因素的制约，我们的主观的学习方式和学习能力的建立则更加关键，我们通常发现，假期比工作日更加焦虑，十几年的教育使得我们对任务绝对服从，但是在独立规划自己人生的时候却陷入了困境，这也是我当下正在面对的问题。
+同样也体现在博客当中。
+我现在总体的打算是，按照板块逻辑进行建设，这是最主要的逻辑，比方说，我会为博客的优化单独开设一个博文，把博客的演化变迁都记录在这个模块当中，这样就可以在一篇文章中看到博客总体的一个变化。
+分类的方式是非常重要的，另外就是筛选和提取，在数据量特别庞大之后，就需要有更好的筛选方式。这两者之间需要更好的协调，其实本质上两个流程指向的都是同一个结果。
+另外就是对于价值的一个思考，什么样的东西能带来价值呢，一方面是考虑需求，一方面是要融入自己真实的体会和思考，并且是确确实实对自己的人生路上是有启发的事情，最好还是能够对当下能够造成影响的，这样的优先级就会更加高一些。
+我们知道信息都是有时间限制的，而在当下的信息时代，我们也是被各种各样的信息包围当中，很难获得一种成就感或者安慰感，更多的是希望追求立竿见影的效果，这种感觉是很折磨人的，我曾经也陷入这种感觉无法自拔，但我现在觉得，我们不仅仅是充当世界的顾客，我们有机会应当成为自己的主人，学着好好去关心自己，爱自己，这样子，或许自己的内心会更加宁静和富有生命力，对待未来和未知也不会很特别焦虑了，好了，今天的分享就先到这里，我们不见不散。</p>
+<h3 id="优化归档-2023-08-18">优化归档 2023-08-18</h3>
+<hr>
+<blockquote>
+<p>💡 <strong>main（现阶段可能受影响的配置）</strong></p>
+<ul>
+<li>**【图床相关】**评论区的图床可能支持不了很大的图片，理论上 1-2MB 左右，<!-- raw HTML omitted -->如果超过 3 MB 大概率会上传失败。<!-- raw HTML omitted -->twikoo 作为一个即时的灵感收集容器，可以即时并且有效地进行数据处理 。增加了 twikoo 评论邮件通知和及时回复功能，最主要的一步是获取邮箱的<a href="https://note.youdao.com/ynoteshare/index.html?id=f9fef46114fb922b45460f4f55d96853&amp;type=note&amp;_time=1659422937634">授权码（教程）</a>在 twikoo 的后台管理中配合 7bu 建立图床，请参阅<a href="https://twikoo.js.org/faq.html#%E6%94%B6%E4%B8%8D%E5%88%B0%E6%8F%90%E9%86%92%E9%82%AE%E4%BB%B6">twikoo 的官方文档</a>。</li>
+<li><strong>【RSS 订阅】</strong> 只能通过手动重新部署项目完成更新</li>
+<li>**【番茄自习室】**借助番茄人生的平台搭建了线上自习室，可以点击<a href="https://www.tomatolist.com/show_group.html?group_id=27f2b200-d549-4ba9-a2cc-1b6025be2c7b">这里</a></li>
+<li>**【友链功能】**其实之前我想的是，把博客作为一个闭源的平台，用于自己的写作和整理就够了，可是后来慢慢会发现，在上面花费的时间和心思就比较少了。这是一项很有意义的事情，为什么不坚持下去呢，每一个微小的开始都需要有一些勇气。友链也是一个很好的方式，相似和有趣的灵魂同样让人感到喜悦！</li>
+<li>**【博客音乐】**后续考虑引入肖邦，莫扎特，舒伯特等音乐大师的作品</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>💡 <strong>branch（过期配置，但是曾经发挥过作用）</strong></p>
+<ul>
+<li>【<strong>medium 主题</strong>】由于时间异常，移除了关于创建时间的展示 2023-07-08 <strong>（在 heo 主题中保留了创建时间和修改时间）</strong></li>
+<li>【<strong>medium 主题</strong>】优化了博客的背景，依依不舍地告别从前绚丽的 css 背景色，换上了护眼的杏黄色 2023-06-18</li>
+<li>【<strong>medium 主题</strong>】更改了博客的展示逻辑，区别于传统的博客的展示方案，我将五个页面设置成五个端口，这样更加方便内容的管理，如果内容太多，反倒不是一件好事。<strong>（由于二级三级页面会严重拖慢博客的加载速度，所以放弃关于该想法的路径规划，但是保留流动核心的地位）</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<p>💡 <strong>Tips（一些好玩的小技巧）</strong></p>
+<ul>
+<li>
+<p><strong>【全屏浏览】</strong><br>
+方案一，按住 F11，即可体验全屏的快乐和奢侈<br>
+方案二，借助 edge 的展台功能，在命令行（win+r）中输入：</p>
+</li>
+<li>
+<p>【快捷键】</p>
+</li>
+</ul>
+</blockquote>
+<h3 id="fork-大佬imsyy-的项目httpsgithubcomimsyy搭建的个人导航页httpsnavmatrixcoretop-2023-07-17">Fork 大佬<a href="https://github.com/imsyy">imsyy 的项目</a>搭建的<a href="https://nav.matrixcore.top/">个人导航页</a> 2023-07-17</h3>
+<hr>
+<p>完成的工作包括但不限于</p>
+<ul>
+<li>
+<p>1.通过 meting-api 自建稳定的音乐 api 服务，完成导航页的音乐正常播放</p>
+</li>
+<li>
+<p>2.引入哲学和诗词类<a href="https://developer.hitokoto.cn/sentence/">一言 api</a>，完成一言模块的搭建</p>
+</li>
+<li>
+<p>3.完成<a href="https://lbs.amap.com/">高德开发者</a>认证，获取高达 30000 次日上限的天气 api 调用，整合到天气模块</p>
+<p>接下来的目标是对导航页的其他资源做更好的整合，包括学习环境的整体搭建，从学习输入，知识输出的整个流程做更好的规划，现在是资源很多，但是还没有投入足量的时间挖掘。一个舒服的小窝就此搭建完成。</p>
+</li>
+</ul>
+<hr>
+<h3 id="关于博客和生活之间联系的思考-2023-07-06">关于博客和生活之间联系的思考 2023-07-06</h3>
+<hr>
+<p>我觉得有一种很奇怪的感觉会经常发生，似乎在某个特定的时刻总会遭遇特定的危机，生活似乎都是有一些不完美的碎片拼接而成的。</p>
+<p>这是一个信息相对爆炸的时候，但是似乎又是一个相当空虚的时代，身处于其中 ，似乎任何一个微小的事情都得到了无线的放大，然而人的精力是很有限的。</p>
+<p>看上去这总是一个意外，过度的思考在某种程度上不是一件好事。
+如果把人的感觉视作计算机指令的反馈，我想这其中仍然有很多的规律可循。</p>
+<p>每一次陷入精神危机，大抵是由于能量过载所导致的。
+比如在我们学习累了之后，如何进行放松，面对这么多的事情如何找出重点。</p>
+<p>生活最好是能理出一条清洗的主线来，而博客就是在做这样的事情。</p>
+<p>我们要尽可能去理解主客体之间的辩证关系，以其能发挥更好的作用</p>
+<h3 id="关于博客设计思路的探讨-2023-06-13">关于博客设计思路的探讨 2023-06-13</h3>
+<hr>
+<p>传统博客的展示方式，是将博客作为一个大的容器，对容器内部进行更加详细的分类和配置相应的标签，这样，在这个容器当中可以展现出玲琅满目的珍奇异物，加上丰富的图片，相当具有吸引力，这样的博客的展示方式对于知识输出和分享是有非常不错的效果的。但是缺点就在于，数据积累多了之后，总是感觉让人有一种沉重的感觉。</p>
+<p>谈谈我的博客的设计思路， 基于 notion 架构下的博客，我是这么理解的，我将展示的界面仅仅设置为五个，分别以具有特殊意义的名字进行命名，这个五个界面，分别象征着一个完整的工作流所应该具备的几个基本步骤，导向-输入-存储-输出-反馈。</p>
+<p>比如我可以这么介绍我的一天：</p>
+<blockquote>
+<p><em>今天我希望完成线性代数课程的学习，我听了两节课，我将我的知识存储在 mn 中，我还没有对我的知识体系做出更好的整理，我希望能够在之后的学习当中优化这个问题。</em></p>
+</blockquote>
+<p>在这段话中，分别对应五个步骤，这个五个步骤可以看作是一个通用的模块，无论所做的事情的大或者小都可以找到这件事对应的阶段，我将基于线性的逻辑打造这个博客体系。你可以把这个博客看作是从上到下或者是从左到右。</p>
+<p>因此我的博客将会保持一定程度上的简洁，这即是优点也是缺点，但我更喜欢这种优雅的模式，轻量并保持其该有的逻辑，每一部分专注从事其应该做的事情，博客将成为辅助工作流的很棒的方式，在这里可以展示自己创意。</p>
+<p>此外在我们收集创意和灵感的时候，有的灵感大或者小，甚至是转瞬即逝，我们不可能在短时间内形成一篇文章来进行输出，文章的形式和内容的丰富度会极大的影响灵感的生命周期，我们试图用一种新的方式来动态品尝灵感的甘露，也许大脑更加喜欢简单的事情，这也就是工作流体系存在的意义。即使记录即标志这一个模块的任务结束，于是我们可以快速进入下一个模块化的工作，并且在模块的间隙中嵌入个性化的休息方式，这样可以保持一个相对良好的心情。</p>
+<p>传统的总结方式，往往是遗忘性很强的，大脑不喜欢哪些令人忧伤的事情，但是这些恰恰是我们成长的优秀养分，所以一个更具有生命力的总结方式应当是更好地让各个部分参入进来，更多地去调动内源的数据处理结构，而不仅仅过渡地依赖外源。</p>
+<p>格物致知是认识物理世界相当棒的手段，科学与艺术都是自然之子，在相互碰撞中，就会有惊喜。</p>
+<h1 id="写在最后">写在最后</h1>
+<hr>
+<p>很感谢您能看到这里，无论是过去现在还是未来，相遇即是缘分。</p>
+
+</content>
+<p>
+  
+  <a href="https://hugo.matrixcore.life/blog/%E6%8E%A8%E8%8D%90/">#推荐</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+    
+</body>
+
+</html>
