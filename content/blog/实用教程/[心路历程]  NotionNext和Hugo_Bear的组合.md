@@ -11,7 +11,7 @@ summary: 已经很晚了，最后还有一点是关于如何兼容Hugo和NotionN
 title: "[心路历程]  NotionNext和Hugo_Bear的组合"
 status: Published
 urlname: 3fce4caa-8ffb-4d18-96c9-3dba29188ea2
-updated: "2024-05-18 15:01:00"
+updated: "2024-05-18 15:09:00"
 ---
 
 # 前言
@@ -201,6 +201,39 @@ as.vit9696.Lilu	1.6.1
 这里有几个坑很深。感谢[科技小飞哥](https://www.techxiaofei.com/post/hugo/hugo_vercel/)的提示，源码托管主要有三个主意的点，第一个是要在环境变量中指定 hugo 的版本，因为自带的版本很老会报错。第二点，是要检查`theme`是不是软链接，这也会导致报错。然后需要指定编译命令和输出文件，最后将 public 添加到`gitignore`里去。
 
 我踩中的软链接和环境变量的坑，导致我花了很多的时间。小飞哥还出了视频，非常棒了。另外，还遇到了`WARN 2021/11/29 14:03:51 found no layout file for "HTML" for kind "page": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.`的问题，这就是软链接的提示信息。然后需要设置 Hugo 版本，当时我把项目删了重新部署，我记得虽然一开始制定了环境变量，但是结果网页变成了 xml，后来去环境变量里一看，版本还是没指定，指定完重新编译就正常了。
+
+## 使用 Vercel 进行 301 重定向
+
+---
+
+要在 Vercel 上设置 301 重定向，您可以通过 Vercel 的配置文件  `vercel.json`  来实现。
+
+1. **在您的项目根目录下创建** **`vercel.json`** **文件**，如果已经存在，请跳过这一步。
+2. **在** **`vercel.json`** **文件中添加重定向规则**，例如：
+
+   ```json
+   {
+     "cleanUrls": true,
+     "trailingSlash": false,
+     "headers": [],
+     "redirects": [
+       {
+         "source": "/article/wdf-1",
+         "destination": "https://hugo.matrixcore.life/blog/情绪表达/推荐/wdf-1/",
+         "permanent": true
+       },
+       {
+         "source": "/article/LubanCat-16",
+         "destination": "https://hugo.matrixcore.life/blog/%E9%B2%81%E7%8F%AD%E7%8C%AB/lubancat-16/",
+         "permanent": true
+       }
+     ]
+   }
+   ```
+
+   这个配置将把  `/old-url`  重定向到  `/new-url`，并返回 301 状态码。注意前面的 oldurl 输入路径即可。
+
+3. **将** **`vercel.json`** **文件部署到 Vercel**。
 
 # 总结
 
