@@ -11,7 +11,7 @@ summary: 已经很晚了，最后还有一点是关于如何兼容Hugo和NotionN
 title: "[心路历程]  NotionNext和Hugo_Bear的组合"
 status: Published
 urlname: 3fce4caa-8ffb-4d18-96c9-3dba29188ea2
-updated: "2024-05-18 15:09:00"
+updated: "2024-06-10 13:40:00"
 ---
 
 # 前言
@@ -219,12 +219,17 @@ as.vit9696.Lilu	1.6.1
      "redirects": [
        {
          "source": "/article/wdf-1",
-         "destination": "https://hugo.matrixcore.life/blog/情绪表达/推荐/wdf-1/",
+         "destination": "https://hugo.matrixcore.top/wdf-1/",
          "permanent": true
        },
        {
-         "source": "/article/LubanCat-16",
-         "destination": "https://hugo.matrixcore.life/blog/%E9%B2%81%E7%8F%AD%E7%8C%AB/lubancat-16/",
+         "source": "/article/beauty03",
+         "destination": "https://hugo.matrixcore.to p/beauty03/",
+         "permanent": true
+       },
+       {
+         "source": "/article/beauty07",
+         "destination": "https://hugo.matrixcore.top/beauty07/",
          "permanent": true
        }
      ]
