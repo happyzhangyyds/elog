@@ -2241,7 +2241,7 @@
         ],
         "summary": "这次出游整体体验是非常不错的，但我还有很多功课做得不够好，例如旅游卡激活失败；在玩水的时候，也没考虑到实际手机根本不可能放在裤兜里 ，感谢同事的帮助；次日黑龙潭的时候，旅游卡还忘了；前天晚上玩太过了，导致精力不充沛没有保证好关键节点；总的来说，首先是要记录鲜活的体验，其次把暴露出的问题记录下来，类比迁移到工作当中，也是一种警示和预防。",
         "title": "[年度团建] 清凉谷与黑龙潭之旅 ",
-        "status": "Draft",
+        "status": "Published",
         "urlname": "fc507818-38d1-4ee9-a5a7-dddba9b6964b",
         "updated": "2024-06-16 15:14:00"
       },
@@ -3659,8 +3659,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240616%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240616T151405Z&X-Amz-Expires=3600&X-Amz-Signature=be41105e3492282f7acc73b8223fc39fb84319a8c7d53a61b0a5c60b26066f90&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2024-06-16T16:14:05.016Z"
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240616%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240616T151635Z&X-Amz-Expires=3600&X-Amz-Signature=4dd7cb9ef99ad22a3e1f5da190f78a0e6f1ed225c8a002e4c0ff2202d9f6c6cc&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2024-06-16T16:16:35.147Z"
         }
       },
       "icon": null,
