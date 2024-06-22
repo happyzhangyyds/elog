@@ -2200,9 +2200,85 @@
       "body": "",
       "realName": "[年度团建] 清凉谷与黑龙潭之旅 ",
       "relativePath": "/情绪表达/[年度团建] 清凉谷与黑龙潭之旅 .md"
+    },
+    {
+      "id": "5d4c37e1-f5f8-4d2c-9139-4b0151344f1e",
+      "doc_id": "5d4c37e1-f5f8-4d2c-9139-4b0151344f1e",
+      "updated": 1719039780000,
+      "body_original": "\n# 前言\n\n\n---\n\n\n> 有善始者实繁，能克终者盖寡。岂取之易而守之难乎？  \n> ——魏征《谏太宗十思疏》\n\n\n# 背景\n\n\n---\n\n\n受1874博主的影响， 结合自己的工作生活体会，按照自己设计的生活方式去生活是非常困难的。这其中有诸多影响因素。\n\n\n```mermaid\ngraph TB\n不知道-->不想且不知;\n知不道-->想知而不知;\n知道不-->知道不去做;\n\n```\n\n\n从很久以前，哲人就告诉我们要探知自我，剖析自我，实际上这个想法基于的假设是自我是能动的，内在的精神世界是充盈的。而根据我的体会，至少我是非能动的，自我驱动能力是比较弱的，内在的精神世界比较贫瘠，受干扰和抵抗能力比较弱。\n\n\n# 问题的提出\n\n\n---\n\n\n从不知道-->知不道-->知道不三个维度来分析，第一种面对未知的事物，不想且不知是愚蠢的。因为只有在运动中才能维持相对静止，身处桃花源有可能会被现实扬弃。\n\n\n第二种知不道是受客观条件制约，并不是所有的路都是别人给我们铺好的，工作中的技巧也不是一入职就会的，知不道本身就是一宗能量差，需要我们花时间和经历去学习和适应。\n\n\n第三种知道不，知道而不去做，这种其实是比较可悲的，知道熬夜伤身体却不去避免，知道年轻的时候应该学习却沉迷娱乐。\n\n\n那么问题的症结到底在哪里呢？\n\n\n# 分析问题\n\n\n---\n\n- 工作与生活方法论的割裂\n\n常年受填鸭方式的影响，已经习惯被动地接受各种任务的安排，而缺乏积极主动的能力，更谈不上创造性，所带来的意义确实也成为附加影响，自我康复的周期也比较漫长，难度也比较高。\n\n\n而工作与生活观上的割裂，导致一直摆脱不了填鸭的诅咒，具体表现为：工作上进，生活懒散，实际上，久而久之，这就会成为一个风险项，若无生活，则很难在学习能力上有较大的提升，也很难用在工作实践上，自学能力也会受到限制。\n\n\n追求低水平的娱乐导致时间被浪费，在较高节奏的工作状态中会导致疲惫的累积，从而埋下风险的种子。\n\n\n# 问题解决方案的设计\n\n\n---\n\n\n事实上，尽管问题重重，但还不至于山穷水尽，积重难返的地步，仍然还是有一些优秀的经验被传承下来用于问题的解决。\n\n- 规定范式，保证节点\n\n任何一种状态都依托时间，抛开时间谈问题大概率是耍流氓。尽管在[《流浪者之歌》](notion://www.notion.so/fragrantknowledge/5d4c37e1f5f84d2c91394b0151344f1e)中也提出时间本不存在这一观念，但面对公众的共识，我仍将其视为一项基本准则。\n\n\n例如八点上下班，保证7-9h的睡眠就是首要任务，在23点之前入睡已经是一项基本常识，而从高中始就引出另外两个问题：压力水平和情绪管理。若不解决这两个问题，很难保证节点。这两个问题也将贯穿我们的一生。此方面，我给出的设计方案是减少人为因素在控制过程中的参与比，通过机器协助来更好地达成目标。我不否认强者有极强的自制能力，但作为弱者寻求自救亦不可耻。学习crontab+mailx搭建提醒流程配合ios的自动化进行节点提示是一个不错的辅助方案。\n\n- 建筑精神之家\n\n如果你没有合适的家人、爱人、朋友可以倾诉。不要紧，寻求精神价值和分流的方式也有很多，也有可以提供相近感受的解决方案，但选择一个符合价值观的导向是有必要的，尽管可以通过非正常的方式达到同样的效果，但不作为我们的最佳实践。同样地，我们可以做一些有趣的事情，转换为对于知识技能和文学修养的累积，或规划次日的生活，或归档一天的情绪，记录到flomo中。\n\n\n对相知相守的美好愿望，鼓舞着我们努力向上。而关爱自我，延续自我亦未尝不是在这个阶段到来前的最佳选择。面的复杂的环境和高昂的代价，以退为进是一个审慎的选择，首先是为自己而活，其次才是除自己以外的人而活。不珍重自我，如何珍重别人。爱不应该带有附加价值的回报。\n\n\n培养爱的艺术，总结此去二十年的人生历程，也是一个值得关注的方面，每天都有非常多的时刻，可以让我们学习进步。\n\n- 习惯与反直觉\n\n加班愚蠢？摸鱼有罪！我们倾向于接受符合大众直觉的观念，但一些观念往往值得推敲，周五的放纵看似合理，实则会牺牲周六上午的时间，那么周六上午去工作写周志，就会倒逼周五做合理的休息，留出一段时间来反思总结，未尝不是一种智慧。\n\n\n# 总结\n\n\n---\n\n\n取易守难，就要知难守易，生活范式的优化问题始终值得思考，尤其是在新旧交替的人生阶段，必定会遇到很多的困难和挫折，兼听多方意见，结合自身体会，正视过往缺点，才能从泥泞中走出迷雾。\n\n\n## 附件\n\n\n---\n\n\n![](https://bu.dusays.com/2024/06/22/66767651c55f4.jpeg)\n\n\n# 特别鸣谢\n\n\n---\n\n- [月刊（第1期）：刻意练习 • 1874's BLOG](https://blog.1874.cool/2024-month-01)\n- [☕️ 关于这里 | flomo 101 (flomoapp.com)](https://help.flomoapp.com/about-101.html)\n- [安达维尔 (andawell.com)](http://www.andawell.com/)\n",
+      "properties": {
+        "password": "",
+        "icon": "",
+        "date": "2024-06-22",
+        "type": "Post",
+        "category": "走近生活",
+        "slug": "240622",
+        "tags": [
+          "必看精选"
+        ],
+        "summary": "取易守难，就要知难守易，生活范式的优化问题始终值得思考，尤其是在新旧交替的人生阶段，必定会遇到很多的困难和挫折，兼听多方意见，结合自身体会，正视过往缺点，才能从泥泞中走出迷雾。",
+        "title": "[知难守易]  生活范式的优化",
+        "status": "Published",
+        "urlname": "5d4c37e1-f5f8-4d2c-9139-4b0151344f1e",
+        "updated": "2024-06-22 07:03:00"
+      },
+      "catalog": [
+        {
+          "title": "必看精选",
+          "doc_id": "5d4c37e1-f5f8-4d2c-9139-4b0151344f1e"
+        }
+      ],
+      "body": "",
+      "realName": "[知难守易]  生活范式的优化",
+      "relativePath": "/必看精选/[知难守易]  生活范式的优化.md"
     }
   ],
   "catalog": [
+    {
+      "object": "page",
+      "id": "5d4c37e1-f5f8-4d2c-9139-4b0151344f1e",
+      "created_time": "2024-06-22T07:00:00.000Z",
+      "last_edited_time": "2024-06-22T07:03:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "12c2841c-d7a5-4616-994c-596fe69e6ccf"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "12c2841c-d7a5-4616-994c-596fe69e6ccf"
+      },
+      "cover": {
+        "type": "external",
+        "external": {
+          "url": "https://bu.dusays.com/2024/06/22/66767651c55f4.jpeg"
+        }
+      },
+      "icon": null,
+      "parent": {
+        "type": "database_id",
+        "database_id": "2492b81a-2b1e-4c76-89ee-23e379c2e915"
+      },
+      "archived": false,
+      "in_trash": false,
+      "properties": {
+        "password": "",
+        "icon": "",
+        "date": "2024-06-22",
+        "type": "Post",
+        "category": "走近生活",
+        "slug": "240622",
+        "tags": [
+          "必看精选"
+        ],
+        "summary": "取易守难，就要知难守易，生活范式的优化问题始终值得思考，尤其是在新旧交替的人生阶段，必定会遇到很多的困难和挫折，兼听多方意见，结合自身体会，正视过往缺点，才能从泥泞中走出迷雾。",
+        "title": "[知难守易]  生活范式的优化",
+        "status": "Published",
+        "urlname": "5d4c37e1-f5f8-4d2c-9139-4b0151344f1e",
+        "updated": "2024-06-22 07:03:00"
+      },
+      "url": "https://www.notion.so/5d4c37e1f5f84d2c91394b0151344f1e",
+      "public_url": "https://fragrantknowledge.notion.site/5d4c37e1f5f84d2c91394b0151344f1e"
+    },
     {
       "object": "page",
       "id": "fc507818-38d1-4ee9-a5a7-dddba9b6964b",
@@ -3659,8 +3735,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240616%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240616T151635Z&X-Amz-Expires=3600&X-Amz-Signature=4dd7cb9ef99ad22a3e1f5da190f78a0e6f1ed225c8a002e4c0ff2202d9f6c6cc&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2024-06-16T16:16:35.147Z"
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240622%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240622T070559Z&X-Amz-Expires=3600&X-Amz-Signature=7bd129df364696cd8b594f2999e08423571b15457b3fa38f72c45da882564713&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2024-06-22T08:05:59.757Z"
         }
       },
       "icon": null,
