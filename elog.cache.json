@@ -2328,7 +2328,7 @@
     {
       "id": "909f8026-776e-4833-ba73-eae44a0b5941",
       "doc_id": "909f8026-776e-4833-ba73-eae44a0b5941",
-      "updated": 1721477520000,
+      "updated": 1721477940000,
       "body_original": "\n# 前言\n\n\n---\n\n\n习惯的养成是主动和被动共同的硕果，但完全依赖习惯，也会增加大脑的负担。这几天往往因为其他的事情，而忘记上下班打卡。为此，基于之前的经验，重新在瓦工上部署了mailx+posfix，并且通过cron脚本定时提醒，以下是操作的步骤。\n\n\n# 正文\n\n\n---\n\n\n最初我的目的是搭建一个web邮箱服务，但后面考虑到复杂程度和需求，最终决定先使用Postfix + Dovecot，\n\n\n> 简介：Postfix是一个流行的邮件传输代理，Dovecot是一个IMAP/POP3服务器。结合使用可以搭建功能强大的邮件服务。特点：灵活性高，支持多种邮件协议，适合有一定技术基础的用户。\n\n\n目前还没花时间研究Dovecot，所以这部分等有空的时候再去补充。\n\n\n## 安装 Postfix 和 Dovecot\n\n\n---\n\n\n在基于 Debian 或 Ubuntu 的系统上，可以使用以下命令安装：\n\n\n```shell\nsudo apt update\nsudo apt install postfix dovecot-core dovecot-imapd\n\n```\n\n\n在安装过程中，会提示配置 Postfix，选择 \"Internet Site\"，并输入你的域名。\n\n\n## 配置 Postfix\n\n\n---\n\n\n编辑 Postfix 配置文件 `/etc/postfix/main.cf`，确保以下设置：\n\n\n```text\nmyhostname = your.com\nalias_maps = hash:/etc/aliases\nalias_database = hash:/etc/aliases\nmyorigin = /etc/mailname\nmydestination = $myhostname, localhost.$mydomain, localhost, $mydomain\nrelayhost =\nmynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128\nmailbox_size_limit = 0\nrecipient_delimiter = +\ninet_interfaces = all\ninet_protocols = all\n\n```\n\n\n编辑 `/etc/mailname` 文件\n\n\n```shell\nsudo nano /etc/mailname\n\n```\n\n\n在文件中输入你的域名，例如：\n\n\n```text\nmatrixcore.life\n\n```\n\n\n重启postfix\n\n\n```shell\nsudo systemctl restart postfix\n\n```\n\n\n替换发件人名称，创建或编辑 `/etc/postfix/sender_canonical` 文件：\n\n\n```shell\nsudo nano /etc/postfix/sender_canonical\n\n```\n\n\n添加以下行：\n\n\n```text\nroot@原来 root@现在\n\n```\n\n\n运行以下命令以生成 Postfix 可使用的映射数据库：\n\n\n```shell\nsudo postmap /etc/postfix/sender_canonical\n\n```\n\n\n确保在 `/etc/postfix/main.cf` 中添加或更新以下行：\n\n\n```text\nsender_canonical_maps = hash:/etc/postfix/sender_canonical\n\n```\n\n\n在完成上述步骤后，重新加载 Postfix 以应用更改：\n\n\n```shell\nsudo systemctl reload postfix\n\n```\n\n\n## 配置 DNS 记录\n\n\n---\n\n\n### 添加 MX 记录\n\n\n---\n\n- **查找 MX 记录设置**：在 DNS 管理页面，找到添加 MX 记录的选项。\n- **输入信息**：\n- **主机名**（Host）：通常是 `@`（表示根域名）。\n- **值**（Value）：输入邮件服务器的完整域名（如 `mail.yourdomain.com`）。\n- **优先级**（Priority）：设置优先级，通常为 `10`（如果没有其他邮件服务器，可以使用这个值）。\n- **保存记录**。\n- \n\n### 添加 A 记录\n\n\n---\n\n- **查找 A 记录设置**：在 DNS 管理页面，找到添加 A 记录的选项。\n- **输入信息**：\n- **主机名**（Host）：通常是 `@`（表示根域名）或 `mail`（如果你希望使用 `mail.yourdomain.com`）。\n- **值**（Value）：输入你的邮件服务器的 IP 地址。\n- **TTL**（生存时间）：可以使用默认值或设置为 3600 秒（1 小时）。\n\n### 验证配置\n\n\n---\n\n\n```shell\ndig MX yourdomain.com\ndig A mail.yourdomain.com\n\n```\n\n\n确保返回的结果与你设置的记录相符。\n\n\n## 安装mailx\n\n\n---\n\n\n```shell\nsudo apt install mailutils\n#sudo apt install bsd-mailx  或者使用这条命令\n\n```\n\n\n### 配置 mailx\n\n\n---\n\n\n```shell\nsudo vim /etc/mail.rc\n\n```\n\n\n然后添加以下内容（根据你的邮件服务器设置进行调整）：\n\n\n```text\nset from=your@qq.com\nset smtp=smtps://smtp.qq.com:465\nset smtp-auth-user=your@qq.com\nset smtp-auth-password=获取授权\nset smtp-auth=login\nset ssl-verify=ignore\nset smtp-use-starttls\nset nss-config-dir=/root/.certs/\n\nset from=your@163.com\nset smtp=smtps://smtp.163.com\nset smtp-auth=login\nset smtp-auth-user=your@163.com\nset smtp-auth-password=获取授权\nset ssl-verify=ignore\nset nss-config-dir=/root/.certs/\n\n```\n\n\n参考[mailx通过smtp登录QQ邮箱发送邮件 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/418193520)因为需要 QQ 邮箱的 SSL 证书，所以我们还需要手动的获取QQ 邮箱的证书保存到本地指定的目录里以备调用和验证，具体命令如下：\n\n\n```text\nmkdir -p /root/.certs/\necho -n | openssl s_client -connect smtp.qq.com:465 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > ~/.certs/qq.crt\ncertutil -A -n \"GeoTrust SSL CA\" -t \"C,,\" -d ~/.certs -i ~/.certs/qq.crt\ncertutil -A -n \"GeoTrust Global CA\" -t \"C,,\" -d ~/.certs -i ~/.certs/qq.crt\ncertutil -L -d /root/.certs\n\n```\n\n\n为了防止出现发送邮件警告提示，还需要进入邮箱 SSL 证书存放目录\n\n\ncd /root/.certs 里执行如下命令：\n\n\n```text\ncertutil -A -n \"GeoTrust SSL CA - G3\" -t \"Pu,Pu,Pu\" -d ./ -i qq.crt\n\n```\n\n\n返回如下提示即可：\n\n\n**Notice: Trust flag u is set automatically if the private key is present.**\n\n\n这是为了信任证书的标记操作\n\n\n## 发送测试邮件\n\n\n---\n\n\n```shell\necho \"Test email body\" | mail -s \"Test Subject\" recipient@example.com\n\n```\n\n\n## 使用cron任务\n\n\n---\n\n\n使用以下命令查看当前时区：`timedatectl`\n\n\n如果时区不正确，可以使用以下命令设置为上海时间：`sudo timedatectl set-timezone Asia/Shanghai`\n\n\n更改时区后，您可能需要重启 `cron` 服务以应用更改：`sudo systemctl restart cron`\n\n\n```text\n30 19 * * 1-6 echo \"记得打卡\" | mailx -s \"Remember to clock in and out.\" your@qq.com\n\n```\n\n\n# 总结\n\n\n---\n\n\n本文介绍了如何在服务器上搭建邮件服务，使用 Postfix 和 Dovecot 的组合，以实现定时提醒功能。首先，安装并配置 Postfix 和 Dovecot，设置正确的 DNS 记录以确保邮件服务器可用。接着，安装并配置 mailx，添加必要的 SMTP 信息和 SSL 证书以确保邮件安全发送。最后，通过 cron 设置每日提醒，帮助用户避免忘记上下班打卡，从而提升日常工作管理效率。\n\n",
       "properties": {
         "password": "",
@@ -2342,9 +2342,9 @@
         ],
         "summary": "本文介绍了如何在服务器上搭建邮件服务，使用 Postfix 和 Dovecot 的组合，以实现定时提醒功能。首先，安装并配置 Postfix 和 Dovecot，设置正确的 DNS 记录以确保邮件服务器可用。接着，安装并配置 mailx，添加必要的 SMTP 信息和 SSL 证书以确保邮件安全发送。最后，通过 cron 设置每日提醒，帮助用户避免忘记上下班打卡，从而提升日常工作管理效率。",
         "title": "[减少遗忘]  Mailx+Crontab定时提醒",
-        "status": "Draft",
+        "status": "Published",
         "urlname": "909f8026-776e-4833-ba73-eae44a0b5941",
-        "updated": "2024-07-20 12:12:00"
+        "updated": "2024-07-20 12:19:00"
       },
       "catalog": [
         {
@@ -2362,7 +2362,7 @@
       "object": "page",
       "id": "909f8026-776e-4833-ba73-eae44a0b5941",
       "created_time": "2024-07-20T12:10:00.000Z",
-      "last_edited_time": "2024-07-20T12:12:00.000Z",
+      "last_edited_time": "2024-07-20T12:19:00.000Z",
       "created_by": {
         "object": "user",
         "id": "e66e3bc6-30f1-4020-b696-2787f04dc3ea"
@@ -2374,7 +2374,7 @@
       "cover": {
         "type": "external",
         "external": {
-          "url": "https://source.unsplash.com/random"
+          "url": "https://bu.dusays.com/2024/07/20/669baaebb0087.jpeg"
         }
       },
       "icon": null,
@@ -2396,9 +2396,9 @@
         ],
         "summary": "本文介绍了如何在服务器上搭建邮件服务，使用 Postfix 和 Dovecot 的组合，以实现定时提醒功能。首先，安装并配置 Postfix 和 Dovecot，设置正确的 DNS 记录以确保邮件服务器可用。接着，安装并配置 mailx，添加必要的 SMTP 信息和 SSL 证书以确保邮件安全发送。最后，通过 cron 设置每日提醒，帮助用户避免忘记上下班打卡，从而提升日常工作管理效率。",
         "title": "[减少遗忘]  Mailx+Crontab定时提醒",
-        "status": "Draft",
+        "status": "Published",
         "urlname": "909f8026-776e-4833-ba73-eae44a0b5941",
-        "updated": "2024-07-20 12:12:00"
+        "updated": "2024-07-20 12:19:00"
       },
       "url": "https://www.notion.so/Mailx-Crontab-909f8026776e4833ba73eae44a0b5941",
       "public_url": "https://fragrantknowledge.notion.site/Mailx-Crontab-909f8026776e4833ba73eae44a0b5941"
@@ -4039,8 +4039,8 @@
       "cover": {
         "type": "file",
         "file": {
-          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240720%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240720T121323Z&X-Amz-Expires=3600&X-Amz-Signature=c92be5e766d3a6d2f4faf190ff521b97df68fd51bad04ac1360978c62b052838&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2024-07-20T13:13:23.699Z"
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/b07cc048-dba6-4d59-8aff-9199a0bb6d5b/v2-97fec510246c342a057e14410b2b9de3_r.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240720%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240720T122153Z&X-Amz-Expires=3600&X-Amz-Signature=988673aad5feb279ee2dc1026369a2e274e8138357e089d1485fc490460860d7&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2024-07-20T13:21:53.334Z"
         }
       },
       "icon": null,

@@ -9,9 +9,9 @@ tags:
   - 实用教程
 summary: 本文介绍了如何在服务器上搭建邮件服务，使用 Postfix 和 Dovecot 的组合，以实现定时提醒功能。首先，安装并配置 Postfix 和 Dovecot，设置正确的 DNS 记录以确保邮件服务器可用。接着，安装并配置 mailx，添加必要的 SMTP 信息和 SSL 证书以确保邮件安全发送。最后，通过 cron 设置每日提醒，帮助用户避免忘记上下班打卡，从而提升日常工作管理效率。
 title: "[减少遗忘]  Mailx+Crontab定时提醒"
-status: Draft
+status: Published
 urlname: 909f8026-776e-4833-ba73-eae44a0b5941
-updated: "2024-07-20 12:12:00"
+updated: "2024-07-20 12:19:00"
 ---
 
 # 前言
