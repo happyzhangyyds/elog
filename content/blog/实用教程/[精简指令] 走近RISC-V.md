@@ -9,9 +9,9 @@ tags:
   - 实用教程
 summary: 这是一篇很仓促的文章，但与其说其非常不成熟，我更愿意视其为一个起点，因为目前所从事的岗位也是在和各种硬件打交道，所以我还是希望能对此保持长久的热情，去做自己喜欢的事情。
 title: "[精简指令] 走近RISC-V"
-status: Published
+status: Invisible
 urlname: a1ab1b34-cb6d-44bf-82b0-37dc781c79b9
-updated: "2024-04-25 15:42:00"
+updated: "2024-08-11 03:47:00"
 ---
 
 # 前言

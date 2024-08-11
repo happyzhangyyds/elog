@@ -9,9 +9,9 @@ tags:
   - 项塔兰-Gregory
 summary: 介绍了《项塔兰》这本书的几个片段，非常耐人寻味，里面很多的东西值得思考
 title: "[极夜星光] 黑暗世界的心灵之镜-Gregory"
-status: Published
+status: Invisible
 urlname: 7f4d4a8a-685e-44d6-8092-bace1d17d030
-updated: "2024-04-23 12:55:00"
+updated: "2024-08-11 03:47:00"
 ---
 
 # 前言
