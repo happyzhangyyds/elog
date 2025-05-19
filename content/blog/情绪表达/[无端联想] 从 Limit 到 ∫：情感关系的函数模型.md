@@ -9,9 +9,9 @@ tags:
   - 情绪表达
 summary: 初恋是极限，教会我们如何趋近；婚姻是积分，让我们学会积累。
 title: "[无端联想] 从 Limit 到 ∫：情感关系的函数模型"
-status: Draft
+status: Published
 urlname: 1f76ddcd-5429-80dd-88c3-c086f66ff1d0
-updated: "2025-05-19 16:56:00"
+updated: "2025-05-19 16:58:00"
 ---
 
 # 前言
