@@ -144,3 +144,13 @@ function parseSiteParams() {
 
 	return JSON.parse(_vars.innerText)
 }
+
+// 自动读取 URL 参数并触发搜索
+window.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('q');
+    if (query) {
+        scInput.value = query;
+        search();
+    }
+});
