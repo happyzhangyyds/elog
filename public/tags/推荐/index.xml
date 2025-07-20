@@ -2,81 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>推荐 on MatrixCore</title>
-    <link>https://matrixcore.life/tags/%E6%8E%A8%E8%8D%90/</link>
+    <link>https://hugo.matrixcore.life/tags/%E6%8E%A8%E8%8D%90/</link>
     <description>Recent content in 推荐 on MatrixCore</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 11 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://matrixcore.life/tags/%E6%8E%A8%E8%8D%90/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo.matrixcore.life/tags/%E6%8E%A8%E8%8D%90/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>[跨域协同]  elog&#43;notion实现md优雅备份</title>
-      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/elog/</link>
-      <pubDate>Wed, 11 Oct 2023 00:00:00 +0000</pubDate>
+      <title>[清明时节] 你好阳朔-山水绕城</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%8E%A8%E8%8D%90/qingming_guilin_trip-2/</link>
+      <pubDate>Thu, 10 Apr 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/elog/</guid>
-      <description>通过elog实现notion文章批量下载到本地，以及自动化云端备份和迁移。</description>
+      <guid>https://hugo.matrixcore.life/posts/%E6%8E%A8%E8%8D%90/qingming_guilin_trip-2/</guid>
+      <description>这次清明桂林之旅虽然短暂，但行程丰富而充实：爬相公山挑战仙人台，打卡漓江20元人民币景点，体验遇龙河竹筏漂流，虽返程堵车艰辛，但与好友同行，收获满满，青春的记忆值得珍惜。</description>
     </item>
     
     <item>
-      <title>[外语学习] 沙拉查词&#43;anki进行记忆强化 </title>
-      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/saladict/</link>
-      <pubDate>Thu, 28 Sep 2023 00:00:00 +0000</pubDate>
+      <title>[清明时节] 桂林市区 - 两江四湖</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%8E%A8%E8%8D%90/qingming_guilin_trip-1/</link>
+      <pubDate>Wed, 09 Apr 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/saladict/</guid>
-      <description>介绍了通过沙拉查词+anki导出的方式，对学习的单词进行可视化整理</description>
+      <guid>https://hugo.matrixcore.life/posts/%E6%8E%A8%E8%8D%90/qingming_guilin_trip-1/</guid>
+      <description>作者的描述让我仿佛置身于桂林的美丽风景和美食中，尤其是那种临时决定出行的兴奋感。虽然有些计划没能实现，但这种随性和与朋友的互动让旅行更显得生动。整体来说，这段经历让我对桂林产生了浓厚的兴趣，也让我想起了自己和朋友们的旅行时光。</description>
     </item>
     
     <item>
-      <title>[放松心情] 钢琴鉴赏 </title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/%E6%8E%A8%E8%8D%90/piano/</link>
-      <pubDate>Fri, 18 Aug 2023 00:00:00 +0000</pubDate>
+      <title>[清明时节] 桂林市区-两江四湖</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%8E%A8%E8%8D%90/qingming_guilin_trip-1/</link>
+      <pubDate>Wed, 09 Apr 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/%E6%8E%A8%E8%8D%90/piano/</guid>
-      <description>搞点钢琴听听，钢琴相对而言，听起来比较舒服一点，至少我是这么觉得的。</description>
+      <guid>https://hugo.matrixcore.life/posts/%E6%8E%A8%E8%8D%90/qingming_guilin_trip-1/</guid>
+      <description>作者的描述让我仿佛置身于桂林的美丽风景和美食中，尤其是那种临时决定出行的兴奋感。虽然有些计划没能实现，但这种随性和与朋友的互动让旅行更显得生动。整体来说，这段经历让我对桂林产生了浓厚的兴趣，也让我想起了自己和朋友们的旅行时光。</description>
     </item>
     
     <item>
-      <title>[速度优化]  前端图片性能优化</title>
-      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/picturespeed/</link>
-      <pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate>
+      <title>[技术分享] 博客优化</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%8E%A8%E8%8D%90/improve/</link>
+      <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/picturespeed/</guid>
-      <description>用杜老师的图床对图片进行加速</description>
-    </item>
-    
-    <item>
-      <title>[沉没成本] 通过番茄🍅人生来聊沉没成本 </title>
-      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/tomato/</link>
-      <pubDate>Sat, 12 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/tomato/</guid>
-      <description>番茄钟和沉没成本以及一些经历思考</description>
-    </item>
-    
-    <item>
-      <title>[技能拓展]  计算机专业学习路线—点亮你的科技树🌲</title>
-      <link>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/hackway/</link>
-      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/%E6%8E%A8%E8%8D%90/hackway/</guid>
-      <description>分享计算机专业学习路线和讲讲我的规划及感受！</description>
-    </item>
-    
-    <item>
-      <title>[哲学讲堂] 什么是性灵？（王德峰）</title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/%E6%8E%A8%E8%8D%90/wdf-1/</link>
-      <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/%E6%8E%A8%E8%8D%90/wdf-1/</guid>
-      <description>根据王老师的讲座视频进行整理</description>
-    </item>
-    
-    <item>
-      <title>[经验分享] 谈学习观</title>
-      <link>https://matrixcore.life/posts/%E6%8E%A8%E8%8D%90/%E5%BF%85%E7%9C%8B%E7%B2%BE%E9%80%89/learn/</link>
-      <pubDate>Mon, 12 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://matrixcore.life/posts/%E6%8E%A8%E8%8D%90/%E5%BF%85%E7%9C%8B%E7%B2%BE%E9%80%89/learn/</guid>
-      <description>大学对于独立人格的塑造是很重要的，最主要的是在不断试错的过程当中培养自己解决问题的能力。</description>
+      <guid>https://hugo.matrixcore.life/posts/%E6%8E%A8%E8%8D%90/improve/</guid>
+      <description>记录我对博客优化的过程，您可以看作是博客优化的日志。</description>
     </item>
     
   </channel>

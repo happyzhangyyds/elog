@@ -10,8 +10,8 @@ tags:
 summary: 我特别喜欢ubuntu的命令行的使用方式，这样可以更加简洁纯粹的去做一件事情
 title: "[技术分享] Ubuntu_linux"
 status: Published
-urlname: cfe7d585-e634-434b-b08a-8fc6dd6a8906
-updated: "2023-11-02 09:18:00"
+urlname: 6d3fe114-b343-457d-8adf-79db7bba2f3c
+updated: "2024-12-09 13:00:00"
 ---
 
 > 💡 <u>**230704 更新**</u>  

@@ -25,9 +25,9 @@
     mod
   ));
 
-  // ns-hugo:/Users/matrixcore/Documents/GitHub/elog/themes/virgo/assets/js/libs/jquery.min.js
+  // ns-hugo:C:\Users\zjw\Desktop\test\elog\themes\virgo\assets\js\libs\jquery.min.js
   var require_jquery_min = __commonJS({
-    "ns-hugo:/Users/matrixcore/Documents/GitHub/elog/themes/virgo/assets/js/libs/jquery.min.js"(exports, module) {
+    "ns-hugo:C:\\Users\\zjw\\Desktop\\test\\elog\\themes\\virgo\\assets\\js\\libs\\jquery.min.js"(exports, module) {
       !function(e, t) {
         "use strict";
         "object" == typeof module && "object" == typeof module.exports ? module.exports = e.document ? t(e, true) : function(e2) {
@@ -2465,9 +2465,9 @@
     }
   });
 
-  // ns-hugo:/Users/matrixcore/Documents/GitHub/elog/themes/virgo/assets/js/libs/lodash.min.js
+  // ns-hugo:C:\Users\zjw\Desktop\test\elog\themes\virgo\assets\js\libs\lodash.min.js
   var require_lodash_min = __commonJS({
-    "ns-hugo:/Users/matrixcore/Documents/GitHub/elog/themes/virgo/assets/js/libs/lodash.min.js"(exports, module) {
+    "ns-hugo:C:\\Users\\zjw\\Desktop\\test\\elog\\themes\\virgo\\assets\\js\\libs\\lodash.min.js"(exports, module) {
       (function() {
         function n(n2, t2, r2) {
           switch (r2.length) {
@@ -5812,9 +5812,9 @@
     }
   });
 
-  // ns-hugo:/Users/matrixcore/Documents/GitHub/elog/themes/virgo/assets/js/libs/darkreader.min.js
+  // ns-hugo:C:\Users\zjw\Desktop\test\elog\themes\virgo\assets\js\libs\darkreader.min.js
   var require_darkreader_min = __commonJS({
-    "ns-hugo:/Users/matrixcore/Documents/GitHub/elog/themes/virgo/assets/js/libs/darkreader.min.js"(exports, module) {
+    "ns-hugo:C:\\Users\\zjw\\Desktop\\test\\elog\\themes\\virgo\\assets\\js\\libs\\darkreader.min.js"(exports, module) {
       !function(e, t) {
         "object" == typeof exports && "undefined" != typeof module ? t(exports) : "function" == typeof define && define.amd ? define(["exports"], t) : t((e = "undefined" != typeof globalThis ? globalThis : e || self).DarkReader = {});
       }(exports, function(e) {
@@ -8380,7 +8380,7 @@
     }
   });
 
-  // ns-hugo:/Users/matrixcore/Documents/GitHub/elog/themes/virgo/assets/js/init/greet.js
+  // ns-hugo:C:\Users\zjw\Desktop\test\elog\themes\virgo\assets\js\init\greet.js
   function greet() {
     console.log(
       `---------------------
@@ -8391,14 +8391,14 @@
     );
   }
 
-  // ns-hugo:/Users/matrixcore/Documents/GitHub/elog/themes/virgo/assets/js/init/eventBinding.js
+  // ns-hugo:C:\Users\zjw\Desktop\test\elog\themes\virgo\assets\js\init\eventBinding.js
   var import_jquery9 = __toESM(require_jquery_min());
   var import_lodash = __toESM(require_lodash_min());
 
-  // ns-hugo:/Users/matrixcore/Documents/GitHub/elog/themes/virgo/assets/js/init/fixAnchorTop.js
+  // ns-hugo:C:\Users\zjw\Desktop\test\elog\themes\virgo\assets\js\init\fixAnchorTop.js
   var import_jquery = __toESM(require_jquery_min());
 
-  // ns-hugo:/Users/matrixcore/Documents/GitHub/elog/themes/virgo/assets/js/utils/isMobile.js
+  // ns-hugo:C:\Users\zjw\Desktop\test\elog\themes\virgo\assets\js\utils\isMobile.js
   function browserRedirect() {
     let sUserAgent = navigator.userAgent.toLowerCase(), bIsIpad = sUserAgent.match(/ipad/i) == "ipad", bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os", bIsMidp = sUserAgent.match(/midp/i) == "midp", bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4", bIsUc = sUserAgent.match(/ucweb/i) == "ucweb", bIsAndroid = sUserAgent.match(/android/i) == "android", bIsCE = sUserAgent.match(/windows ce/i) == "windows ce", bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
     if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
@@ -8406,7 +8406,7 @@
     }
   }
 
-  // ns-hugo:/Users/matrixcore/Documents/GitHub/elog/themes/virgo/assets/js/init/fixAnchorTop.js
+  // ns-hugo:C:\Users\zjw\Desktop\test\elog\themes\virgo\assets\js\init\fixAnchorTop.js
   function fixAnchorTop() {
     let _hash = decodeURIComponent(location.hash);
     let _ele = browserRedirect() ? (0, import_jquery.default)("body") : (0, import_jquery.default)("html");
@@ -8414,7 +8414,7 @@
       _ele.scrollTop((0, import_jquery.default)(_hash).offset().top - 48);
   }
 
-  // ns-hugo:/Users/matrixcore/Documents/GitHub/elog/themes/virgo/assets/js/init/colorHeader.js
+  // ns-hugo:C:\Users\zjw\Desktop\test\elog\themes\virgo\assets\js\init\colorHeader.js
   var import_jquery2 = __toESM(require_jquery_min());
   function colorHeader() {
     let _curScroll = (0, import_jquery2.default)(this).scrollTop() + 48;
@@ -8425,10 +8425,10 @@
     }
   }
 
-  // ns-hugo:/Users/matrixcore/Documents/GitHub/elog/themes/virgo/assets/js/init/colorToc.js
+  // ns-hugo:C:\Users\zjw\Desktop\test\elog\themes\virgo\assets\js\init\colorToc.js
   var import_jquery4 = __toESM(require_jquery_min());
 
-  // ns-hugo:/Users/matrixcore/Documents/GitHub/elog/themes/virgo/assets/js/init/initToc.js
+  // ns-hugo:C:\Users\zjw\Desktop\test\elog\themes\virgo\assets\js\init\initToc.js
   var import_jquery3 = __toESM(require_jquery_min());
   function initToc() {
     (0, import_jquery3.default)("h2, h3").addClass("headline");
@@ -8439,7 +8439,7 @@
     });
   }
 
-  // ns-hugo:/Users/matrixcore/Documents/GitHub/elog/themes/virgo/assets/js/init/colorToc.js
+  // ns-hugo:C:\Users\zjw\Desktop\test\elog\themes\virgo\assets\js\init\colorToc.js
   function colorToc() {
     initToc();
     let _curScroll = (0, import_jquery4.default)(this).scrollTop() + 48;
@@ -8458,7 +8458,7 @@
     });
   }
 
-  // ns-hugo:/Users/matrixcore/Documents/GitHub/elog/themes/virgo/assets/js/utils/toggleToc.js
+  // ns-hugo:C:\Users\zjw\Desktop\test\elog\themes\virgo\assets\js\utils\toggleToc.js
   var import_jquery5 = __toESM(require_jquery_min());
   function toggleToc(e) {
     e.stopPropagation();
@@ -8475,11 +8475,11 @@
     }
   }
 
-  // ns-hugo:/Users/matrixcore/Documents/GitHub/elog/themes/virgo/assets/js/utils/toggleColor.js
+  // ns-hugo:C:\Users\zjw\Desktop\test\elog\themes\virgo\assets\js\utils\toggleColor.js
   var import_darkreader = __toESM(require_darkreader_min());
   var import_jquery7 = __toESM(require_jquery_min());
 
-  // ns-hugo:/Users/matrixcore/Documents/GitHub/elog/themes/virgo/assets/js/utils/parseSiteParams.js
+  // ns-hugo:C:\Users\zjw\Desktop\test\elog\themes\virgo\assets\js\utils\parseSiteParams.js
   var import_jquery6 = __toESM(require_jquery_min());
   function parseSiteParams() {
     let _vars = (0, import_jquery6.default)("#vars");
@@ -8487,7 +8487,7 @@
     return JSON.parse(_vars.text());
   }
 
-  // ns-hugo:/Users/matrixcore/Documents/GitHub/elog/themes/virgo/assets/js/utils/toggleColor.js
+  // ns-hugo:C:\Users\zjw\Desktop\test\elog\themes\virgo\assets\js\utils\toggleColor.js
   var dark = parseSiteParams().dark;
   var sun = `<svg t="1657283336399" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2283" width="16" height="16"><path d="M512 288c-123.488 0-224 100.512-224 224 0 123.488 100.512 224 224 224s224-100.512 224-224C736 388.512 635.488 288 512 288zM512 672c-88.384 0-160-71.616-160-160s71.616-160 160-160 160 71.616 160 160S600.384 672 512 672zM512 224c17.664 0 32-14.336 32-32L544 128c0-17.664-14.336-32-32-32s-32 14.336-32 32l0 64C480 209.664 494.336 224 512 224zM512 800c-17.664 0-32 14.336-32 32l0 64c0 17.664 14.336 32 32 32s32-14.336 32-32l0-64C544 814.336 529.664 800 512 800zM760.864 308.32l45.248-45.248c12.512-12.512 12.512-32.736 0-45.248-12.512-12.512-32.736-12.512-45.248 0l-45.248 45.248c-12.512 12.512-12.512 32.736 0 45.248C728.128 320.832 748.384 320.832 760.864 308.32zM263.136 715.68l-45.248 45.248c-12.512 12.512-12.512 32.736 0 45.248s32.736 12.512 45.248 0l45.248-45.248c12.512-12.544 12.512-32.768 0-45.248C295.872 703.168 275.616 703.136 263.136 715.68zM224 512c0-17.664-14.336-32-32-32L128 480c-17.664 0-32 14.336-32 32s14.336 32 32 32l64 0C209.664 544 224 529.664 224 512zM896 480l-64 0c-17.664 0-32 14.336-32 32s14.336 32 32 32l64 0c17.664 0 32-14.336 32-32S913.664 480 896 480zM263.072 308.32c12.512 12.512 32.768 12.512 45.248 0 12.512-12.512 12.512-32.736 0-45.248l-45.248-45.248c-12.512-12.512-32.736-12.512-45.248 0-12.512 12.512-12.512 32.736 0 45.248L263.072 308.32zM760.928 715.616c-12.544-12.512-32.768-12.512-45.248 0-12.512 12.512-12.544 32.736 0 45.248l45.248 45.248c12.512 12.512 32.736 12.512 45.248 0s12.512-32.736 0-45.248L760.928 715.616z" p-id="2284" fill="#6c757d"></path></svg>`;
   var moon = `<svg t="1656411842215" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5086" width="12" height="12"><path d="M1007.492874 384.513055c-8.795694-34.58307-21.189627-67.666874-36.682043-99.05151-2.698679-5.397358-10.894667-3.498287-10.894666 2.598728v0.299853c0 32.484098-6.896624 63.868734-19.890263 92.554691-10.694764 23.488501-25.487523 45.077933-43.978471 64.068635-41.779547 42.679107-99.05151 66.967217-158.722299 67.26707-61.869712 0.299853-119.941284-24.188159-162.920244-68.966238-40.280281-41.979449-62.56937-98.251902-62.269516-156.323473 0.399804-59.270984 23.588452-114.94373 65.567901-156.823229 19.59041-19.59041 42.179351-35.082826 66.667364-46.077443C672.956643 71.166451 704.041426 64.469729 736.125719 64.469729h1.299364c6.097015 0 8.096037-8.096037 2.598728-10.794715C708.739126 37.982696 675.655322 25.488812 641.172203 16.493216 599.492607 5.598549 555.714038-0.098662 510.536154 0.001289 222.37722 0.700947-7.41029 237.38508 0.185992 525.444064c7.096526 271.667008 225.889418 490.559851 497.456474 497.856279 287.559228 7.796183 524.14341-220.891864 525.842579-508.551044 0.299853-44.977981-5.297407-88.656599-15.992171-130.236244z m-83.15929 301.552378c-22.588942 53.27392-54.873137 101.250434-95.953027 142.330323-41.179841 41.179841-89.056403 73.464036-142.330324 95.953027-55.172991 23.288599-113.744317 35.182777-174.314666 35.182777s-119.141675-11.794226-174.314666-35.182777c-53.27392-22.588942-101.250434-54.873137-142.330323-95.953027-41.179841-41.179841-73.464036-89.056403-95.953027-142.330323C75.749001 630.892442 63.954774 572.221164 63.954774 511.750767s11.794226-119.141675 35.182777-174.314666c22.588942-53.27392 54.873137-101.250434 95.953027-142.330323 41.179841-41.179841 89.056403-73.464036 142.330323-95.953027C392.593892 75.7642 451.26517 63.969974 511.735567 63.969974c13.99315 0 27.886348 0.599706 41.679596 1.89907C489.246577 118.643209 448.266638 198.704016 448.266638 288.360126c0 159.022152 128.836929 287.859081 287.859081 287.859081 89.156354 0 168.817357-40.580134 221.691473-104.149015 1.099462 13.09359 1.699168 26.387082 1.699168 39.680575 0 60.470397-11.794226 119.141675-35.182776 174.314666z" p-id="5087" fill="#6c757d"></path></svg>`;
@@ -8532,7 +8532,7 @@
     localStorage.setItem("dark", flag);
   }
 
-  // ns-hugo:/Users/matrixcore/Documents/GitHub/elog/themes/virgo/assets/js/utils/viewImage.js
+  // ns-hugo:C:\Users\zjw\Desktop\test\elog\themes\virgo\assets\js\utils\viewImage.js
   var import_jquery8 = __toESM(require_jquery_min());
   function viewImage(e) {
     if (location.pathname === "/")
@@ -8623,7 +8623,7 @@
     );
   }
 
-  // ns-hugo:/Users/matrixcore/Documents/GitHub/elog/themes/virgo/assets/js/init/eventBinding.js
+  // ns-hugo:C:\Users\zjw\Desktop\test\elog\themes\virgo\assets\js\init\eventBinding.js
   function initEventBinding() {
     (0, import_jquery9.default)(window).bind("hashchange", fixAnchorTop);
     (0, import_jquery9.default)(window).bind("scroll", (0, import_lodash.throttle)(colorHeader, 20));
@@ -8635,7 +8635,7 @@
     (0, import_jquery9.default)(".content img").bind("click", viewImage);
   }
 
-  // ns-hugo:/Users/matrixcore/Documents/GitHub/elog/themes/virgo/assets/js/init/initCodeBlock.js
+  // ns-hugo:C:\Users\zjw\Desktop\test\elog\themes\virgo\assets\js\init\initCodeBlock.js
   var import_jquery10 = __toESM(require_jquery_min());
   function initCodeBlock() {
     const _arr = (0, import_jquery10.default)("pre code");
@@ -8670,7 +8670,7 @@
     });
   }
 
-  // ns-hugo:/Users/matrixcore/Documents/GitHub/elog/themes/virgo/assets/js/init/initNavLink.js
+  // ns-hugo:C:\Users\zjw\Desktop\test\elog\themes\virgo\assets\js\init\initNavLink.js
   var import_jquery11 = __toESM(require_jquery_min());
   var blankLiItem = `<li><a></a></li>`;
   var col = !browserRedirect() ? 5 : 2;
@@ -8692,10 +8692,10 @@
     _prevEle.html(_prevEle.html() + ` <sup>\u300C${_bmLen}\u300D</sup> ${_st}`);
   }
 
-  // ns-hugo:/Users/matrixcore/Documents/GitHub/elog/themes/virgo/assets/js/init/initMouseClickAnimate.js
+  // ns-hugo:C:\Users\zjw\Desktop\test\elog\themes\virgo\assets\js\init\initMouseClickAnimate.js
   var import_jquery12 = __toESM(require_jquery_min());
 
-  // ns-hugo:/Users/matrixcore/Documents/GitHub/elog/themes/virgo/assets/js/init/enhanceOrgMode.js
+  // ns-hugo:C:\Users\zjw\Desktop\test\elog\themes\virgo\assets\js\init\enhanceOrgMode.js
   var import_jquery13 = __toESM(require_jquery_min());
   function enhanceOrgMode_default() {
     (0, import_jquery13.default)(".html-block p").each((idx, item) => {
@@ -8703,7 +8703,7 @@
     });
   }
 
-  // ns-hugo:/Users/matrixcore/Documents/GitHub/elog/themes/virgo/assets/js/init/enhanceMarkdown.js
+  // ns-hugo:C:\Users\zjw\Desktop\test\elog\themes\virgo\assets\js\init\enhanceMarkdown.js
   var import_jquery14 = __toESM(require_jquery_min());
   function enhanceMarkdown_default() {
     (0, import_jquery14.default)("em").each((idx, item) => {

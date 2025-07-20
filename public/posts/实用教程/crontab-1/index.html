@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="description" content="[数据中心] 测试crontab同步elog&#43;Onedrive - https://hugo.matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/crontab-1/">
+    <meta name="author" content="MatrixCore - https://hugo.matrixcore.life/">
+    
+    <meta name="msvalidate.01" content="B46311949B856F2A7015F366FB3CE878" />
+    <title>[数据中心] 测试crontab同步elog&#43;Onedrive</title>
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="https://hugo.matrixcore.life/style.min.d252ad53a5e6b2ae6b8c6c1661107189be3668e36c8dd61697bbe008595a7e04.css">
+    
+    <script type="text/javascript" src="/main.js" defer></script>
+    
+</head>
+<body class="active-animate ">
+        <div id="header"><div class="container-header">
+    <div id="vars" class="container-vars" style="display: none;">
+	{
+		"isSingleColumnOfPostList": true,
+		"hasFoldAllCodeBlocks": false,
+		"svgColor": "",
+		"en": false,
+		"dark": true
+	}
+</div>
+    <h1 class="title">
+        
+            [数据中心] 测试crontab同步elog&#43;Onedrive
+            
+        
+    </h1>
+
+    <div class="container-breadcrumb-nav">
+    
+    <div class="breadcrumb-nav-bar">
+        <div><a href="/"><svg t="1656411084410" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2954" width="16" height="16"><path d="M947.5 390.6l-377-290c-34.5-26.5-82.6-26.5-117.1 0l-377 290c-14 10.8-16.6 30.9-5.9 44.9 10.8 14 30.9 16.6 44.9 5.9l28.5-21.9V768c0 88.2 71.8 160 160 160h80c35.3 0 64-28.7 64-64V640c0-17.6 14.4-32 32-32h64c17.6 0 32 14.4 32 32v224c0 35.3 28.7 64 64 64h80c88.2 0 160-71.8 160-160V419.4l28.5 21.9c5.8 4.5 12.7 6.6 19.5 6.6 9.6 0 19.1-4.3 25.4-12.5 10.8-13.9 8.2-34-5.8-44.8zM816 768c0 52.9-43.1 96-96 96h-80V640c0-52.9-43.1-96-96-96h-64c-52.9 0-96 43.1-96 96v224h-80c-52.9 0-96-43.1-96-96V370.2l284.5-218.8c11.5-8.8 27.5-8.8 39 0L816 370.2V768z" fill="#6c757d" p-id="2955"></path></svg></a></div>
+        <div><a href="/nav"><svg t="1656411531924" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5827" width="16" height="16"><path d="M849.59197473 125.23018519L139.22930586 391.72854662a23.35052669 23.35052669 0 0 0-14.95414244 21.65490745c-0.12257519 9.70384955 5.61801843 18.46795771 14.40255493 22.04306141l318.42928099 129.25528056 119.51057092 320.39047893c3.06437293 8.23295069 10.35758221 13.89182751 18.7335381 14.87242563l2.7170774 0.14300521a22.79893918 22.79893918 0 0 0 21.20546682-15.36272638l259.51158924-729.54564933a23.8612558 23.8612558 0 0 0-5.31158128-24.55584682 22.3290685 22.3290685 0 0 0-23.9021142-5.43415649zM793.65694081 211.64552314l-196.63064161 552.75171747-91.91077952-246.37564122-253.62799211-102.96295445 542.16941324-203.4131218z" p-id="5828" fill="#6c757d"></path></svg></a></div>
+        <div><a href="/search"><svg t="1656411627509" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1730" width="14" height="14"><path d="M469.333333 85.333333c211.968 0 384 172.032 384 384s-172.032 384-384 384-384-172.032-384-384 172.032-384 384-384z m0 682.666667c164.992 0 298.666667-133.674667 298.666667-298.666667 0-165.034667-133.674667-298.666667-298.666667-298.666666-165.034667 0-298.666667 133.632-298.666666 298.666666 0 164.992 133.632 298.666667 298.666666 298.666667z m362.026667 3.029333l120.704 120.661334-60.373333 60.373333-120.661334-120.704 60.330667-60.330667z" p-id="1731" fill="#6c757d"></path></svg></a></div>
+        <div><a href="/posts"><svg t="1656411724198" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5655" width="12" height="12"><path d="M811.705761 1024H212.294239c-93.1199 0-174.823046-87.570975-174.823046-187.387854V162.322018C37.471193 69.776145 112.604921 0 212.294239 0H596.190595l7.015883 5.93161c111.74388 95.479788 185.857116 170.741078 279.614824 266.093304 29.65805 30.040735 61.165743 62.122454 96.436499 97.393211l7.271006 7.334787v459.859234c-0.063781 99.816879-81.703145 187.387854-174.823046 187.387854zM212.294239 49.94033c-72.391155 0-124.882716 47.261538-124.882716 112.381688v674.290128c0 71.94469 59.507443 137.383743 124.882716 137.383743h599.411522c65.311492 0 124.882716-65.439053 124.882716-137.383743V397.417876c-32.528184-32.464404-61.73977-62.250016-89.356836-90.377328-90.951355-92.418312-163.278729-165.957521-269.601245-257.163999H212.294239z" fill="#6c757d" p-id="5656"></path><path d="M936.588477 449.526752h-212.326129c-99.753099 0-187.324073-81.703145-187.324073-174.823046V49.94033a25.002055 25.002055 0 0 1 49.94033 0v224.763376c0 65.311492 65.502834 124.882716 137.383743 124.882716h212.326129a25.002055 25.002055 0 1 1 0 49.94033z" fill="#6c757d" p-id="5657"></path></svg></a></div>
+        <div><a href="/archive"><svg t="1656411795742" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7334" width="12" height="12"><path d="M884.224 522.24H504.32V141.824c0-16.896-13.824-30.72-30.72-30.72-120.32 0-233.472 47.616-317.952 134.144S26.112 445.952 29.184 566.784c2.56 114.688 49.152 222.72 131.072 304.128 81.92 81.408 189.952 128 304.64 130.56h10.24c117.76 0 227.84-45.568 312.32-128.512 86.528-85.504 133.632-199.68 132.608-321.024-0.512-2.048-1.536-29.696-35.84-29.696z m-140.288 307.712c-74.752 73.728-173.056 112.64-277.504 110.592-205.824-4.608-370.688-169.472-375.296-374.784-3.072-104.448 35.84-202.752 108.544-277.504 65.536-67.072 151.552-107.52 243.712-114.688v378.88c0 16.896 13.824 30.72 30.72 30.72 129.024 0 311.296 0 382.976 0.512-6.144 93.184-46.08 179.712-113.152 246.272z" fill="#6c757d" p-id="7335"></path><path d="M603.136 11.264c-8.192-0.512-15.872 3.072-22.016 8.704-5.632 5.632-9.216 13.824-9.216 22.016v378.88c0 16.896 13.824 30.72 30.72 30.72h378.88c16.896 0 30.72-13.824 30.72-30.72 0-223.744-183.808-407.552-409.088-409.6z m30.208 378.88V74.24c167.424 16.384 301.056 150.016 315.904 315.904h-315.904z" fill="#6c757d" p-id="7336"></path></svg></a></div>
+        <div id="light-dark" style="cursor: pointer;"><a><svg t="1656411842215" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5086" width="12" height="12"><path d="M1007.492874 384.513055c-8.795694-34.58307-21.189627-67.666874-36.682043-99.05151-2.698679-5.397358-10.894667-3.498287-10.894666 2.598728v0.299853c0 32.484098-6.896624 63.868734-19.890263 92.554691-10.694764 23.488501-25.487523 45.077933-43.978471 64.068635-41.779547 42.679107-99.05151 66.967217-158.722299 67.26707-61.869712 0.299853-119.941284-24.188159-162.920244-68.966238-40.280281-41.979449-62.56937-98.251902-62.269516-156.323473 0.399804-59.270984 23.588452-114.94373 65.567901-156.823229 19.59041-19.59041 42.179351-35.082826 66.667364-46.077443C672.956643 71.166451 704.041426 64.469729 736.125719 64.469729h1.299364c6.097015 0 8.096037-8.096037 2.598728-10.794715C708.739126 37.982696 675.655322 25.488812 641.172203 16.493216 599.492607 5.598549 555.714038-0.098662 510.536154 0.001289 222.37722 0.700947-7.41029 237.38508 0.185992 525.444064c7.096526 271.667008 225.889418 490.559851 497.456474 497.856279 287.559228 7.796183 524.14341-220.891864 525.842579-508.551044 0.299853-44.977981-5.297407-88.656599-15.992171-130.236244z m-83.15929 301.552378c-22.588942 53.27392-54.873137 101.250434-95.953027 142.330323-41.179841 41.179841-89.056403 73.464036-142.330324 95.953027-55.172991 23.288599-113.744317 35.182777-174.314666 35.182777s-119.141675-11.794226-174.314666-35.182777c-53.27392-22.588942-101.250434-54.873137-142.330323-95.953027-41.179841-41.179841-73.464036-89.056403-95.953027-142.330323C75.749001 630.892442 63.954774 572.221164 63.954774 511.750767s11.794226-119.141675 35.182777-174.314666c22.588942-53.27392 54.873137-101.250434 95.953027-142.330323 41.179841-41.179841 89.056403-73.464036 142.330323-95.953027C392.593892 75.7642 451.26517 63.969974 511.735567 63.969974c13.99315 0 27.886348 0.599706 41.679596 1.89907C489.246577 118.643209 448.266638 198.704016 448.266638 288.360126c0 159.022152 128.836929 287.859081 287.859081 287.859081 89.156354 0 168.817357-40.580134 221.691473-104.149015 1.099462 13.09359 1.699168 26.387082 1.699168 39.680575 0 60.470397-11.794226 119.141675-35.182776 174.314666z" p-id="5087" fill="#6c757d"></path></svg></a></div>
+        
+    </div>
+
+    
+</div>
+
+            <div id="toc">📜</div>
+        
+    
+    
+</div>
+</div>
+        <div id="content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-main 
+     container-page 
+">
+
+    <div class="desc">
+        
+        <span>
+            
+            <svg t="1656736000388" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7409" width="12" height="12"><path d="M524.885333 338.986667L200.362667 663.466667c-17.28 15.274667-27.989333 36.693333-29.696 56.234666v133.76l130.730666 0.085334c22.784-1.621333 43.989333-12.245333 61.013334-31.701334l322.688-322.645333-160.213334-160.213333z m60.373334-60.330667l160.170666 160.213333 102.144-102.144a19.712 19.712 0 0 0 0-27.861333L715.093333 176.426667a19.456 19.456 0 0 0-27.605333 0L585.258667 278.613333zM701.312 85.333333c27.946667 0 54.741333 11.136 74.282667 30.848l132.309333 132.309334a105.045333 105.045333 0 0 1 0 148.565333L424.874667 879.957333c-29.824 34.346667-72.106667 55.466667-120.448 58.794667H85.333333v-42.666667l0.128-179.84c3.626667-44.970667 24.576-86.826667 56.448-114.944l485.12-485.034666A104.789333 104.789333 0 0 1 701.269333 85.333333z" p-id="7410" fill="#adb5bd"></path></svg>
+            2024-01-21&nbsp;
+        </span>
+        <span>
+            
+            <svg t="1656737270708" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="23838" width="11" height="11"><path d="M824.264 95.36c0-23.859 25.043-44.16 48.902-44.16s49.714 20.301 49.714 44.16v190.08c0 23.859-19.054 52.868-42.913 52.868h-190.08c-23.859 0-46.696-25.96-46.696-49.819s22.55-46.249 46.409-46.249h82.025C702.344 175.534 610.22 155.853 512 155.853c-206.775 0-360.398 149.372-360.398 356.147 0 206.775 153.623 358.23 360.398 358.23 206.775 0 357.467-151.455 357.467-358.23 0-23.859 23.634-50.706 53.413-50.706 29.78 0 49.92 26.847 49.92 50.706 0 254.493-206.307 460.8-460.8 460.8-254.493 0-460.8-206.307-460.8-460.8C51.2 257.507 257.507 51.2 512 51.2c122.4 0 226.684 33.296 312.264 117.369 0.358 0.351 0.358-24.052 0-73.209z" p-id="23839" fill="#adb5bd"></path></svg>
+            2024-01-21&nbsp;&nbsp;&nbsp;
+        </span>
+        <span>
+            
+            <svg t="1656737548689" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="33866" width="12" height="12"><path d="M832.038608 64.662657H192.030028C121.255125 64.662657 63.940169 121.98845 63.940169 192.694717v446.793671C63.940169 710.205493 121.255125 767.643272 192.030028 767.643272h133.353183a63.940169 63.940169 0 0 1 55.219742 31.576328l76.099638 129.83828c12.358154 21.093031 33.790754 31.626903 55.216129 31.626903s42.832688-10.544709 55.198067-31.619678l76.222461-129.870792a63.940169 63.940169 0 0 1 55.212517-31.551041h133.54103c70.576219 0 127.732228-57.289669 127.732227-127.800865V192.391272C959.825022 121.85479 902.643727 64.662657 832.038608 64.662657zM895.884854 639.842407A63.85347 63.85347 0 0 1 832.092795 703.703103h-133.54103a127.753903 127.753903 0 0 0-110.349172 63.09847l-76.222461 129.856342a0.274545 0.274545 0 0 1 0-0.050574h-0.032512s-0.021675 0.061411-0.032512 0.061412l-76.1466-129.85273A127.804477 127.804477 0 0 0 325.383211 703.703103H192.030028A64.207489 64.207489 0 0 1 127.880338 639.488388V192.694717A64.102729 64.102729 0 0 1 192.030028 128.602826h640.00858A63.799284 63.799284 0 0 1 895.884854 192.391272v447.451135z" fill="#adb5bd" p-id="33867"></path><path d="M608.154093 288.092004A31.970084 31.970084 0 0 0 576.184009 320.062089v160.078006l-134.650049-179.278119A31.970084 31.970084 0 0 0 384.002258 320.062089v255.760676a31.970084 31.970084 0 0 0 63.940169 0v-159.958796l134.650048 179.274507a31.970084 31.970084 0 0 0 57.531703-19.200113V320.062089a31.970084 31.970084 0 0 0-31.970085-31.970085z" fill="#adb5bd" p-id="33868"></path></svg>
+            3143 字</span>&nbsp;
+        <span>
+            
+            <svg t="1656737462334" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="32892" width="12" height="12"><path d="M512 74.666667C270.933333 74.666667 74.666667 270.933333 74.666667 512S270.933333 949.333333 512 949.333333 949.333333 753.066667 949.333333 512 753.066667 74.666667 512 74.666667z m0 810.666666c-204.8 0-373.333333-168.533333-373.333333-373.333333S307.2 138.666667 512 138.666667 885.333333 307.2 885.333333 512 716.8 885.333333 512 885.333333z" p-id="32893" fill="#adb5bd"></path><path d="M695.466667 567.466667l-151.466667-70.4V277.333333c0-17.066667-14.933333-32-32-32s-32 14.933333-32 32v238.933334c0 12.8 6.4 23.466667 19.2 29.866666l170.666667 81.066667c4.266667 2.133333 8.533333 2.133333 12.8 2.133333 12.8 0 23.466667-6.4 29.866666-19.2 6.4-14.933333 0-34.133333-17.066666-42.666666z" p-id="32894" fill="#adb5bd"></path></svg>
+            7 分钟</span>
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+		</div>
+		<div class="tag">
+			
+			 - 
+			
+			<a href="/tags/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B">实用教程</a>
+			
+		</div>
+	</div>
+</div>
+        
+    </div>
+    
+    <div class="toc">
+        
+        <div class="page-operation">
+            <div><a href="#"><img src="/imgs/icons/arrow-up-circle.svg" alt=""></a></div>
+            <div><a href="https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/240121/"><img src="/imgs/icons/arrow-left-circle.svg" alt=""></a></div>
+            <div><a href="https://hugo.matrixcore.life/posts/%E5%AF%B9%E8%AF%9D%E6%9C%AA%E6%9D%A5/240120/"><img src="/imgs/icons/arrow-right-circle.svg" alt=""></a></div>
+        </div>
+        
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#需求的提出">需求的提出</a></li>
+      </ul>
+    </li>
+    <li><a href="#思路的来源">思路的来源</a></li>
+    <li><a href="#前后端分离">前后端分离</a>
+      <ul>
+        <li><a href="#后端的组成">后端的组成</a></li>
+        <li><a href="#部署流程">部署流程</a></li>
+        <li><a href="#前端的组成">前端的组成</a></li>
+      </ul>
+    </li>
+    <li><a href="#数据中心的建立">数据中心的建立</a>
+      <ul>
+        <li><a href="#服务器同步模块之-onedrive-安装">服务器同步模块之 onedrive 安装</a></li>
+        <li><a href="#服务器同步模块之-onedrive-使用">服务器同步模块之 onedrive 使用</a></li>
+        <li><a href="#服务器同步模块之-elog-的环境配置">服务器同步模块之 elog 的环境配置</a></li>
+        <li><a href="#服务器同步模块之-crontab-定时脚本">服务器同步模块之 crontab 定时脚本</a></li>
+        <li><a href="#本地环境的使用说明">本地环境的使用说明</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#附录">附录</a></li>
+    <li><a href="#致谢">致谢</a></li>
+  </ul>
+</nav>
+    </div>
+
+    <div class='content  content '>
+        <h1 id="前言">前言</h1>
+<hr>
+<p>建立数据中心的意义：在建立知识体系的环节中，我们正确认识到人类的大脑无法保留过多的缓存，能保留的只能是方式，简而言之，我们无法保留文件的具体内容，更容易记得寻找文件的路径，基于此，数据中心的应运而生。</p>
+<h1 id="正文">正文</h1>
+<hr>
+<p>在寻求数据管理中出现了非常多优秀的软件，基于我目前的了解，使用 git 进行分布式管理是非常有效的方式和手段，作为开源社区的土壤，github 为全世界的程序员提供了协作的机会，也是分布式数据中心成功的代表。我们可以从中学到很多有用的经验。</p>
+<p>另外，在数据管理中，时间的调度成为不可忽视的重要因素，日志作为过程记录和经验总结的重要经验来源，既承接着举足轻重的地位，又对时间的分配提出了较高的要求，因此，作为一种轻量标记语言的 markdown 成为 log 记录的优秀格式。保持高阅读性的同时，最大化地保留了日志的流畅性。</p>
+<p>另外，图表在文档介绍中也起到至关重要的作用，mermaid 语法成为一种新型的，具备创造力的表现方式，衔接了文字与图片之间的关系，成为一些值得掌握的技能。</p>
+<p>与此同时，学会正则表达式，对于文档检索有很大的帮助，这对于精确检索数据提供了快捷有效的方式，obsidian 的检索和脑图功能，提供了更简明的搜索技巧，但正则表达式仍然是一项值得学习的技能。</p>
+<h3 id="需求的提出">需求的提出</h3>
+<hr>
+<p>我的需求来自于对于多设备之间数据管理的困扰，首先我们需要注意的一点是，我们的技能和工作效率很大程度上来自于学习的积累所得，但同样矛盾的地方在于学习积累的客观困难性，使得效率的提升和体验的优化成为一项极为困难的事情。因此，我们就如同推石头的西西弗斯，没办法用更加优化的方式和思维来进行学习方式和知识管理的优化。</p>
+<h2 id="思路的来源">思路的来源</h2>
+<hr>
+<p>我们已经积累了一部分工作流的经验，如下图所示。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph LR
+obsidian &amp; marginnote --&gt; notion --&gt; notionnext
+</code></pre><p>其中，我主要通过，obsidian 和 marginnote 来进行内容的梳理，我将简单介绍一下两个工具的特点，您也可以自行上网查询了解。</p>
+<p>obsidian 作为 md 笔记中的佼佼者，凭借其优秀的特性，开源，丰富插件，双链，关系图谱，使之成为 md 笔记的最佳承载。</p>
+<p>marginnote 作为苹果系统中的学习类软件，将笔记，标注，脑图，搜索一体化，结合社区的强大插件，使得学习得到最优体验。</p>
+<p>为什么选择 notion，notion 本身作为一款极为优秀的笔记管理软件，开启了自由笔记的先河，丰富的块理念和多种数据视图，使得知识管理可以更加富有层次化的呈现，集合管理与协作与一身，在线协作功能也非常出色。</p>
+<p>notionnext 是由 tangly 开发的博客框架，可以将您在 notion 上的笔记变为博客进行渲染，使得知识分享更为便捷。让您在任何一台可以连接到互联网上的设备进行随时随地查看并分享给需要的人，同时可以让更多地人参与到对该话题的讨论。细化的功能，可以等到之后有时间的时候进行细讲。</p>
+<h2 id="前后端分离">前后端分离</h2>
+<hr>
+<p>在上述的讨论过程中，我们发现，内容的创作是单向流动的，我们无法完成知识的反馈和纵向管理，那么就会导致知识的实时性受到极大的影响。</p>
+<p>那么，有没有什么办法可以解决这个问题。首先我们来看知识管理的总架构。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph TB
+subgraph 后端
+
+内容创作 &amp; 本地双链 &amp; 关系图谱 --&gt; id0[&#34;obsidian&#34;];
+end
+subgraph 部署流程
+id2 &amp; id4 &amp; id5 &amp; notion &amp; vercel;
+end;
+subgraph 前端
+id1[&#34;notionnext(main)&#34;] &amp; id3[&#34;hugo(backup)&#34;];
+end;
+id0 --&gt; notion --&gt; id4[&#34;github:repo(1)&#34;] &amp; id2[&#34;elog(auto)&#34;];
+id2[&#34;elog(auto)&#34;] --&gt; id5[&#34;github:repo(2)&#34;];
+id4[&#34;github:repo(1)&#34;] &amp; id5[&#34;github:repo(2)&#34;] --&gt; vercel --&gt; id1 &amp; id3;
+style id2 color:#f9f
+id1 &amp; notion -- How  --&gt; id0;
+style id1 color:#ff0000
+style id0 color:#ff0000;
+</code></pre><h3 id="后端的组成">后端的组成</h3>
+<hr>
+<p>后端主要依赖 obsidian，在 obsidian 中进行如下工作：</p>
+<ul>
+<li>内容的创作</li>
+<li>关系图谱的梳理</li>
+<li>通过图谱确认更新需求</li>
+</ul>
+<h3 id="部署流程">部署流程</h3>
+<hr>
+<p>通过 obisidian 完成内容的创作后输出到 notion 中进行标准化处理，所谓标准化处理，就是通过 notion 的数据数据库给文章分配属性，例如标准化标题、文章分组及标签分配。这些工作便于后续 elog 按照 notion 的字段进行对应组别的导出。</p>
+<h3 id="前端的组成">前端的组成</h3>
+<hr>
+<p>目前前端的组成分为两个博客，NotionNext 为主要架构，Hugo 为容灾备份。用于分享交流。</p>
+<h2 id="数据中心的建立">数据中心的建立</h2>
+<hr>
+<p>为了解决提出的需求，也就是上图所示的 How 的问题。我们打算采用 vps 中的定时脚本来为我们完成数据库的迁移。简明原理如下。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph TB
+id0[&#34;ondrive(本机)&#34;];
+id1[&#34;onedrive(远程)&#34;]
+subgraph 本地环境
+obsidian &amp; id0;
+end;
+obsidian -- 创作中remotesave --&gt; id1;
+obsidian -- notion标准化 --&gt; 服务器定时同步;
+subgraph 服务器定时同步
+vps &amp; crontab &amp; id1[&#34;onedrive(远程)&#34;];
+end;
+vps --&gt; crontab -- 先elog同步数据,后执行sync确保远程最新 --&gt; id1;
+id1 -- 本机启动之后下载最新版本 --&gt; id0;
+id0 --&gt; obsidian -- 增加双链 --&gt; id1;
+</code></pre><h3 id="服务器同步模块之-onedrive-安装">服务器同步模块之 onedrive 安装</h3>
+<hr>
+<p>服务器您无需把它想得很高大上，它就像一台 24 小时开机的远程电脑，可以执行您的需求。基于此，一个好用的定时脚本可以为我们完成很多事情。</p>
+<p>第一步，我们通过进入服务器的终端。首先安装必要的远程仓库的组件。如何在 ubuntu 上安装 onedrive，很感谢 github 为我们提供了 onedrive 的安装方式，具体的安装步骤需要您参考对应的<a href="https://github.com/abraunegg/onedrive/tree/master">项目手册</a>。</p>
+<p>以下内容是对社区文档的转载。</p>
+<p>我的操作系统是 ubuntu20.04，对应的安装步骤如下：</p>
+<ul>
+<li>确认移除旧的客户端</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sudo apt remove onedrive
+</span></span><span style="display:flex;"><span>sudo add-apt-repository --remove ppa:yann1ck/onedrive
+</span></span></code></pre></div><ul>
+<li>此外，Ubuntu 及其克隆在安装“onedrive”软件包时有创建“默认”系统服务文件的坏习惯，这样客户端将自动运行正在验证的客户端帖子。此系统条目是错误的，需要删除。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sudo rm /etc/systemd/user/default.target.wants/onedrive.service
+</span></span></code></pre></div><ul>
+<li>使用类似于以下内容的脚本，以确保您的系统正确更新</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>#!/bin/bash
+</span></span><span style="display:flex;"><span>rm -rf /var/lib/dpkg/lock-frontend
+</span></span><span style="display:flex;"><span>rm -rf /var/lib/dpkg/lock
+</span></span><span style="display:flex;"><span>apt-get update
+</span></span><span style="display:flex;"><span>apt-get upgrade -y
+</span></span><span style="display:flex;"><span>apt-get dist-upgrade -y
+</span></span><span style="display:flex;"><span>apt-get autoremove -y
+</span></span><span style="display:flex;"><span>apt-get autoclean -y
+</span></span></code></pre></div><ul>
+<li>确认您的操作系统，示例如下</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>alex@ubuntu-system:~$ lsb_release -a
+</span></span><span style="display:flex;"><span>No LSB modules are available.
+</span></span><span style="display:flex;"><span>Distributor ID: Ubuntu
+</span></span><span style="display:flex;"><span>Description:    Ubuntu 22.04 LTS
+</span></span><span style="display:flex;"><span>Release:        22.04
+</span></span><span style="display:flex;"><span>Codename:       jammy
+</span></span></code></pre></div><ul>
+<li>选择对应的发行版（Ubuntu20.04）添加 OpenSuSE Build Service 存储库发布密钥</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>wget -qO - &lt;https://download.opensuse.org/repositories/home:/npreining:/debian-ubuntu-onedrive/xUbuntu_20.04/Release.key&gt; | sudo apt-key add -
+</span></span></code></pre></div><ul>
+<li>添加 OpenSuSE Build Service 存储库</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>echo &#39;deb &lt;https://download.opensuse.org/repositories/home:/npreining:/debian-ubuntu-onedrive/xUbuntu_20.04/&gt; ./&#39; | sudo tee /etc/apt/sources.list.d/onedrive.list
+</span></span></code></pre></div><ul>
+<li>更新您的 apt 软件包缓存</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sudo apt-get update
+</span></span></code></pre></div><ul>
+<li>安装 onedrive</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>sudo apt install --no-install-recommends --no-install-suggests onedrive
+</span></span></code></pre></div><ul>
+<li>阅读并了解以下这些软件包的<a href="https://github.com/abraunegg/onedrive/blob/master/docs/ubuntu-package-install.md#known-issues-with-installing-from-the-above-packages">已知问题</a>，采取任何需要的行动。</li>
+</ul>
+<h3 id="服务器同步模块之-onedrive-使用">服务器同步模块之 onedrive 使用</h3>
+<hr>
+<p>同样，您应该优先选择阅读项目文档，我的转载未必全面，同时如果转载过于消耗时间，那我将会省略该步骤。</p>
+<p>关于<a href="https://github.com/abraunegg/onedrive/blob/master/docs/USAGE.md">onedrive</a>的使用如下：</p>
+<ul>
+<li>授权，您将被要求使用网络浏览器打开特定的 URL，您必须登录您的微软帐户，并授予应用程序访问文件的权限。授予应用程序权限后，您将被重定向到空白页面。将空白页面的 URI 复制到应用程序中。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>[user@hostname ~]$ onedrive
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Authorize this app visiting:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>https://.....
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Enter the response uri:
+</span></span></code></pre></div><ul>
+<li>显示您的配置</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>onedrive --display-config
+</span></span></code></pre></div><ul>
+<li>执行同步</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>onedrive --synchronize
+</span></span></code></pre></div><p>更多详细的步骤我将不再具体介绍，需要您阅读项目文档。</p>
+<h3 id="服务器同步模块之-elog-的环境配置">服务器同步模块之 elog 的环境配置</h3>
+<hr>
+<p>这部分您需要参考两份文档，由于我之前已经写过关于 elog 的配置文档，将不再赘述。引用如下：</p>
+<ul>
+<li><a href="https://elog.1874.cool/">Elog 开放式跨平台博客解决方案</a></li>
+<li><a href="https://matrixcore.top/article/elog">elog+notion 实现 md 优雅备份</a></li>
+</ul>
+<p>首先您需要阅读官方文档，其次您可以参考我的配置。</p>
+<h3 id="服务器同步模块之-crontab-定时脚本">服务器同步模块之 crontab 定时脚本</h3>
+<hr>
+<p>关于 crontab 定时脚本的功能非常丰富，我认为仍然有很多的玩法可以被开发。这里我主要是结合 elog+onedrive 来进行使用。</p>
+<p>当您在服务器上完成 elog 和 onedrive 的环境安装之后，您可以编写同步脚本。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>00 12 * * *  cd /root/OneDrive/software/remotely-save/elog &amp;&amp; elog sync -e .elog.env
+</span></span><span style="display:flex;"><span>02 12 * * *  onedrive --synchronize
+</span></span></code></pre></div><p>这段代码的意思就是每天中午 12 点执行一次 elog 同步，获取 notion 中的最新数据，过两分钟执行 onedrive 的主动同步，来保障远程仓库是最新的。（因为我不确定是否 onedrive 会自动同步，所以我选择了手动的方式。）</p>
+<h3 id="本地环境的使用说明">本地环境的使用说明</h3>
+<hr>
+<p>在完成上述操作之后，当您打开一台新的设备，如果您的个人机器不在身边，过年了去哥哥姐姐外婆家串门，您就可以在新的设备当中，使用 onedrive 获取到远程仓库的最新文档。并在 obsidian 接力未完成的工作，使得假期不再无聊。</p>
+<p>那么，obsidian 既可以进行文档的初始写作，也可以接力任何一台设备的中断写作。同样，建立双链之后也可以更新到远程仓库，完成文档的写作也可以进行标准化输出。也可以进行旧有文档的更新。</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph LR
+obsidian --&gt; 初始写作 &amp; 接力写作 &amp; 双链更新 &amp; 翻新旧文档
+</code></pre><h1 id="总结">总结</h1>
+<hr>
+<p>由于时间和精力的限制，今天的分享就到这里，因为内容太多了，也会非常疲惫。</p>
+<h2 id="附录">附录</h2>
+<hr>
+<ul>
+<li>经测试 nextcloud 和 onedrive 同理，也可以在服务器上安装 nextcloud 客户端进行同步指令，remotesave 也支持 nextcloud 的 webdav，只不过配置稍微麻烦一点。</li>
+<li>关于后端工作流的输入源的优化也是一个值得关注的问题。</li>
+</ul>
+<h2 id="致谢">致谢</h2>
+<hr>
+<ul>
+<li>
+<p>🌺 感谢 1874 博主对于本工作流的建议，同时提出了一篇值得参考的<a href="https://www.v2ex.com/t/1005055#reply27">文章</a></p>
+</li>
+<li>
+<p>感谢一位博主提供的工作流图</p>
+<p><img src="https://bu.dusays.com/2024/02/03/65bdf3b50d669.jpg" alt=""></p>
+</li>
+</ul>
+
+    </div>
+
+    
+
+    
+
+    <div class="container-prevnext">
+    <div><a href="https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/240121/">← [情绪价值] 环境与启蒙的基石</a></div>
+    <div><a href="https://hugo.matrixcore.life/posts/%E5%AF%B9%E8%AF%9D%E6%9C%AA%E6%9D%A5/240120/">[阶段小结] “M-CⅡ”模型落地生根  →</a></div>
+</div>
+    
+    
+
+    
+</div>
+
+        </div>
+        <div id="footer"><div class="container-footer">
+    
+    <a href="//beian.miit.gov.cn" target="_blank">
+        
+        萌ICP备20241020号
+        
+    </a>
+    <a id="s" href="/secrets">&nbsp;</a>
+    
+</div></div>
+    </body>
+</html>

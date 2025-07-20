@@ -2,71 +2,71 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>流动核心 on MatrixCore</title>
-    <link>https://matrixcore.life/tags/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/</link>
+    <link>https://hugo.matrixcore.life/tags/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/</link>
     <description>Recent content in 流动核心 on MatrixCore</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 05 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://matrixcore.life/tags/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo.matrixcore.life/tags/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[二级缓存]  Terminal优化</title>
-      <link>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/terminal/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/terminal/</link>
       <pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/terminal/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/terminal/</guid>
       <description>及时对建议库进行更新是一项非常重要的事情</description>
     </item>
     
     <item>
       <title>[三级缓存] 向阳花笺</title>
-      <link>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/sunflower/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/sunflower/</link>
       <pubDate>Sun, 18 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/sunflower/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/sunflower/</guid>
       <description>看飞鱼在空中划过优美的弧线，看繁星倒影在大海</description>
     </item>
     
     <item>
       <title>[流动核心] 采桑小道 相视抿笑</title>
-      <link>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/poem/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/poem/</link>
       <pubDate>Sun, 18 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/poem/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/poem/</guid>
       <description>人间四月芳菲尽  山寺桃花始盛开</description>
     </item>
     
     <item>
       <title>[流动核心] 蜿蜒曲折 妙遇神女</title>
-      <link>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/feedback/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/feedback/</link>
       <pubDate>Tue, 06 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/feedback/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/feedback/</guid>
       <description>情书写给山鬼  心事寄予西风</description>
     </item>
     
     <item>
       <title>[流动核心] 闲敲棋子 倩舞灯花</title>
-      <link>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/inexhaustible/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/inexhaustible/</link>
       <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/inexhaustible/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/inexhaustible/</guid>
       <description>谷神不死  是谓玄牝</description>
     </item>
     
     <item>
       <title>[流动核心] 东方璀璨 遗我明珠</title>
-      <link>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/sunrise/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/sunrise/</link>
       <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/sunrise/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/sunrise/</guid>
       <description>草木有本心  何求美人折</description>
     </item>
     
     <item>
       <title>[流动核心] 少沽风雅 静颂松劝</title>
-      <link>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/flow/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/flow/</link>
       <pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/flow/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/flow/</guid>
       <description>无人问津的渡口  开满鲜花</description>
     </item>
     

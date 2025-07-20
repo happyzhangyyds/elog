@@ -10,8 +10,8 @@ tags:
 summary: 接下来的主要任务是把中期的课设报告完善一下，提升逻辑性，美观度，加一些问题和思考。
 title: "[图像处理] yolov5后续的性能调节"
 status: Published
-urlname: c0fd1b34-ad22-40a9-98f1-1655233bd01a
-updated: "2023-11-17 13:31:00"
+urlname: c41d1d32-8a6a-498a-adf1-d9b34ddccaac
+updated: "2024-02-25 12:12:00"
 ---
 
 # 前言

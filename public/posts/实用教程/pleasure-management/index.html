@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="description" content="[狗命要紧] jellyfin&#43;crontab&#43;mailx快感管理 - https://hugo.matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/pleasure-management/">
+    <meta name="author" content="MatrixCore - https://hugo.matrixcore.life/">
+    
+    <meta name="msvalidate.01" content="B46311949B856F2A7015F366FB3CE878" />
+    <title>[狗命要紧] jellyfin&#43;crontab&#43;mailx快感管理</title>
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="https://hugo.matrixcore.life/style.min.d252ad53a5e6b2ae6b8c6c1661107189be3668e36c8dd61697bbe008595a7e04.css">
+    
+    <script type="text/javascript" src="/main.js" defer></script>
+    
+</head>
+<body class="active-animate ">
+        <div id="header"><div class="container-header">
+    <div id="vars" class="container-vars" style="display: none;">
+	{
+		"isSingleColumnOfPostList": true,
+		"hasFoldAllCodeBlocks": false,
+		"svgColor": "",
+		"en": false,
+		"dark": true
+	}
+</div>
+    <h1 class="title">
+        
+            [狗命要紧] jellyfin&#43;crontab&#43;mailx快感管理
+            
+        
+    </h1>
+
+    <div class="container-breadcrumb-nav">
+    
+    <div class="breadcrumb-nav-bar">
+        <div><a href="/"><svg t="1656411084410" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2954" width="16" height="16"><path d="M947.5 390.6l-377-290c-34.5-26.5-82.6-26.5-117.1 0l-377 290c-14 10.8-16.6 30.9-5.9 44.9 10.8 14 30.9 16.6 44.9 5.9l28.5-21.9V768c0 88.2 71.8 160 160 160h80c35.3 0 64-28.7 64-64V640c0-17.6 14.4-32 32-32h64c17.6 0 32 14.4 32 32v224c0 35.3 28.7 64 64 64h80c88.2 0 160-71.8 160-160V419.4l28.5 21.9c5.8 4.5 12.7 6.6 19.5 6.6 9.6 0 19.1-4.3 25.4-12.5 10.8-13.9 8.2-34-5.8-44.8zM816 768c0 52.9-43.1 96-96 96h-80V640c0-52.9-43.1-96-96-96h-64c-52.9 0-96 43.1-96 96v224h-80c-52.9 0-96-43.1-96-96V370.2l284.5-218.8c11.5-8.8 27.5-8.8 39 0L816 370.2V768z" fill="#6c757d" p-id="2955"></path></svg></a></div>
+        <div><a href="/nav"><svg t="1656411531924" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5827" width="16" height="16"><path d="M849.59197473 125.23018519L139.22930586 391.72854662a23.35052669 23.35052669 0 0 0-14.95414244 21.65490745c-0.12257519 9.70384955 5.61801843 18.46795771 14.40255493 22.04306141l318.42928099 129.25528056 119.51057092 320.39047893c3.06437293 8.23295069 10.35758221 13.89182751 18.7335381 14.87242563l2.7170774 0.14300521a22.79893918 22.79893918 0 0 0 21.20546682-15.36272638l259.51158924-729.54564933a23.8612558 23.8612558 0 0 0-5.31158128-24.55584682 22.3290685 22.3290685 0 0 0-23.9021142-5.43415649zM793.65694081 211.64552314l-196.63064161 552.75171747-91.91077952-246.37564122-253.62799211-102.96295445 542.16941324-203.4131218z" p-id="5828" fill="#6c757d"></path></svg></a></div>
+        <div><a href="/search"><svg t="1656411627509" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1730" width="14" height="14"><path d="M469.333333 85.333333c211.968 0 384 172.032 384 384s-172.032 384-384 384-384-172.032-384-384 172.032-384 384-384z m0 682.666667c164.992 0 298.666667-133.674667 298.666667-298.666667 0-165.034667-133.674667-298.666667-298.666667-298.666666-165.034667 0-298.666667 133.632-298.666666 298.666666 0 164.992 133.632 298.666667 298.666666 298.666667z m362.026667 3.029333l120.704 120.661334-60.373333 60.373333-120.661334-120.704 60.330667-60.330667z" p-id="1731" fill="#6c757d"></path></svg></a></div>
+        <div><a href="/posts"><svg t="1656411724198" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5655" width="12" height="12"><path d="M811.705761 1024H212.294239c-93.1199 0-174.823046-87.570975-174.823046-187.387854V162.322018C37.471193 69.776145 112.604921 0 212.294239 0H596.190595l7.015883 5.93161c111.74388 95.479788 185.857116 170.741078 279.614824 266.093304 29.65805 30.040735 61.165743 62.122454 96.436499 97.393211l7.271006 7.334787v459.859234c-0.063781 99.816879-81.703145 187.387854-174.823046 187.387854zM212.294239 49.94033c-72.391155 0-124.882716 47.261538-124.882716 112.381688v674.290128c0 71.94469 59.507443 137.383743 124.882716 137.383743h599.411522c65.311492 0 124.882716-65.439053 124.882716-137.383743V397.417876c-32.528184-32.464404-61.73977-62.250016-89.356836-90.377328-90.951355-92.418312-163.278729-165.957521-269.601245-257.163999H212.294239z" fill="#6c757d" p-id="5656"></path><path d="M936.588477 449.526752h-212.326129c-99.753099 0-187.324073-81.703145-187.324073-174.823046V49.94033a25.002055 25.002055 0 0 1 49.94033 0v224.763376c0 65.311492 65.502834 124.882716 137.383743 124.882716h212.326129a25.002055 25.002055 0 1 1 0 49.94033z" fill="#6c757d" p-id="5657"></path></svg></a></div>
+        <div><a href="/archive"><svg t="1656411795742" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7334" width="12" height="12"><path d="M884.224 522.24H504.32V141.824c0-16.896-13.824-30.72-30.72-30.72-120.32 0-233.472 47.616-317.952 134.144S26.112 445.952 29.184 566.784c2.56 114.688 49.152 222.72 131.072 304.128 81.92 81.408 189.952 128 304.64 130.56h10.24c117.76 0 227.84-45.568 312.32-128.512 86.528-85.504 133.632-199.68 132.608-321.024-0.512-2.048-1.536-29.696-35.84-29.696z m-140.288 307.712c-74.752 73.728-173.056 112.64-277.504 110.592-205.824-4.608-370.688-169.472-375.296-374.784-3.072-104.448 35.84-202.752 108.544-277.504 65.536-67.072 151.552-107.52 243.712-114.688v378.88c0 16.896 13.824 30.72 30.72 30.72 129.024 0 311.296 0 382.976 0.512-6.144 93.184-46.08 179.712-113.152 246.272z" fill="#6c757d" p-id="7335"></path><path d="M603.136 11.264c-8.192-0.512-15.872 3.072-22.016 8.704-5.632 5.632-9.216 13.824-9.216 22.016v378.88c0 16.896 13.824 30.72 30.72 30.72h378.88c16.896 0 30.72-13.824 30.72-30.72 0-223.744-183.808-407.552-409.088-409.6z m30.208 378.88V74.24c167.424 16.384 301.056 150.016 315.904 315.904h-315.904z" fill="#6c757d" p-id="7336"></path></svg></a></div>
+        <div id="light-dark" style="cursor: pointer;"><a><svg t="1656411842215" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5086" width="12" height="12"><path d="M1007.492874 384.513055c-8.795694-34.58307-21.189627-67.666874-36.682043-99.05151-2.698679-5.397358-10.894667-3.498287-10.894666 2.598728v0.299853c0 32.484098-6.896624 63.868734-19.890263 92.554691-10.694764 23.488501-25.487523 45.077933-43.978471 64.068635-41.779547 42.679107-99.05151 66.967217-158.722299 67.26707-61.869712 0.299853-119.941284-24.188159-162.920244-68.966238-40.280281-41.979449-62.56937-98.251902-62.269516-156.323473 0.399804-59.270984 23.588452-114.94373 65.567901-156.823229 19.59041-19.59041 42.179351-35.082826 66.667364-46.077443C672.956643 71.166451 704.041426 64.469729 736.125719 64.469729h1.299364c6.097015 0 8.096037-8.096037 2.598728-10.794715C708.739126 37.982696 675.655322 25.488812 641.172203 16.493216 599.492607 5.598549 555.714038-0.098662 510.536154 0.001289 222.37722 0.700947-7.41029 237.38508 0.185992 525.444064c7.096526 271.667008 225.889418 490.559851 497.456474 497.856279 287.559228 7.796183 524.14341-220.891864 525.842579-508.551044 0.299853-44.977981-5.297407-88.656599-15.992171-130.236244z m-83.15929 301.552378c-22.588942 53.27392-54.873137 101.250434-95.953027 142.330323-41.179841 41.179841-89.056403 73.464036-142.330324 95.953027-55.172991 23.288599-113.744317 35.182777-174.314666 35.182777s-119.141675-11.794226-174.314666-35.182777c-53.27392-22.588942-101.250434-54.873137-142.330323-95.953027-41.179841-41.179841-73.464036-89.056403-95.953027-142.330323C75.749001 630.892442 63.954774 572.221164 63.954774 511.750767s11.794226-119.141675 35.182777-174.314666c22.588942-53.27392 54.873137-101.250434 95.953027-142.330323 41.179841-41.179841 89.056403-73.464036 142.330323-95.953027C392.593892 75.7642 451.26517 63.969974 511.735567 63.969974c13.99315 0 27.886348 0.599706 41.679596 1.89907C489.246577 118.643209 448.266638 198.704016 448.266638 288.360126c0 159.022152 128.836929 287.859081 287.859081 287.859081 89.156354 0 168.817357-40.580134 221.691473-104.149015 1.099462 13.09359 1.699168 26.387082 1.699168 39.680575 0 60.470397-11.794226 119.141675-35.182776 174.314666z" p-id="5087" fill="#6c757d"></path></svg></a></div>
+        
+    </div>
+
+    
+</div>
+
+            <div id="toc">📜</div>
+        
+    
+    
+</div>
+</div>
+        <div id="content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-main 
+     container-page 
+">
+
+    <div class="desc">
+        
+        <span>
+            
+            <svg t="1656736000388" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7409" width="12" height="12"><path d="M524.885333 338.986667L200.362667 663.466667c-17.28 15.274667-27.989333 36.693333-29.696 56.234666v133.76l130.730666 0.085334c22.784-1.621333 43.989333-12.245333 61.013334-31.701334l322.688-322.645333-160.213334-160.213333z m60.373334-60.330667l160.170666 160.213333 102.144-102.144a19.712 19.712 0 0 0 0-27.861333L715.093333 176.426667a19.456 19.456 0 0 0-27.605333 0L585.258667 278.613333zM701.312 85.333333c27.946667 0 54.741333 11.136 74.282667 30.848l132.309333 132.309334a105.045333 105.045333 0 0 1 0 148.565333L424.874667 879.957333c-29.824 34.346667-72.106667 55.466667-120.448 58.794667H85.333333v-42.666667l0.128-179.84c3.626667-44.970667 24.576-86.826667 56.448-114.944l485.12-485.034666A104.789333 104.789333 0 0 1 701.269333 85.333333z" p-id="7410" fill="#adb5bd"></path></svg>
+            2023-12-16&nbsp;
+        </span>
+        <span>
+            
+            <svg t="1656737270708" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="23838" width="11" height="11"><path d="M824.264 95.36c0-23.859 25.043-44.16 48.902-44.16s49.714 20.301 49.714 44.16v190.08c0 23.859-19.054 52.868-42.913 52.868h-190.08c-23.859 0-46.696-25.96-46.696-49.819s22.55-46.249 46.409-46.249h82.025C702.344 175.534 610.22 155.853 512 155.853c-206.775 0-360.398 149.372-360.398 356.147 0 206.775 153.623 358.23 360.398 358.23 206.775 0 357.467-151.455 357.467-358.23 0-23.859 23.634-50.706 53.413-50.706 29.78 0 49.92 26.847 49.92 50.706 0 254.493-206.307 460.8-460.8 460.8-254.493 0-460.8-206.307-460.8-460.8C51.2 257.507 257.507 51.2 512 51.2c122.4 0 226.684 33.296 312.264 117.369 0.358 0.351 0.358-24.052 0-73.209z" p-id="23839" fill="#adb5bd"></path></svg>
+            2023-12-16&nbsp;&nbsp;&nbsp;
+        </span>
+        <span>
+            
+            <svg t="1656737548689" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="33866" width="12" height="12"><path d="M832.038608 64.662657H192.030028C121.255125 64.662657 63.940169 121.98845 63.940169 192.694717v446.793671C63.940169 710.205493 121.255125 767.643272 192.030028 767.643272h133.353183a63.940169 63.940169 0 0 1 55.219742 31.576328l76.099638 129.83828c12.358154 21.093031 33.790754 31.626903 55.216129 31.626903s42.832688-10.544709 55.198067-31.619678l76.222461-129.870792a63.940169 63.940169 0 0 1 55.212517-31.551041h133.54103c70.576219 0 127.732228-57.289669 127.732227-127.800865V192.391272C959.825022 121.85479 902.643727 64.662657 832.038608 64.662657zM895.884854 639.842407A63.85347 63.85347 0 0 1 832.092795 703.703103h-133.54103a127.753903 127.753903 0 0 0-110.349172 63.09847l-76.222461 129.856342a0.274545 0.274545 0 0 1 0-0.050574h-0.032512s-0.021675 0.061411-0.032512 0.061412l-76.1466-129.85273A127.804477 127.804477 0 0 0 325.383211 703.703103H192.030028A64.207489 64.207489 0 0 1 127.880338 639.488388V192.694717A64.102729 64.102729 0 0 1 192.030028 128.602826h640.00858A63.799284 63.799284 0 0 1 895.884854 192.391272v447.451135z" fill="#adb5bd" p-id="33867"></path><path d="M608.154093 288.092004A31.970084 31.970084 0 0 0 576.184009 320.062089v160.078006l-134.650049-179.278119A31.970084 31.970084 0 0 0 384.002258 320.062089v255.760676a31.970084 31.970084 0 0 0 63.940169 0v-159.958796l134.650048 179.274507a31.970084 31.970084 0 0 0 57.531703-19.200113V320.062089a31.970084 31.970084 0 0 0-31.970085-31.970085z" fill="#adb5bd" p-id="33868"></path></svg>
+            6427 字</span>&nbsp;
+        <span>
+            
+            <svg t="1656737462334" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="32892" width="12" height="12"><path d="M512 74.666667C270.933333 74.666667 74.666667 270.933333 74.666667 512S270.933333 949.333333 512 949.333333 949.333333 753.066667 949.333333 512 753.066667 74.666667 512 74.666667z m0 810.666666c-204.8 0-373.333333-168.533333-373.333333-373.333333S307.2 138.666667 512 138.666667 885.333333 307.2 885.333333 512 716.8 885.333333 512 885.333333z" p-id="32893" fill="#adb5bd"></path><path d="M695.466667 567.466667l-151.466667-70.4V277.333333c0-17.066667-14.933333-32-32-32s-32 14.933333-32 32v238.933334c0 12.8 6.4 23.466667 19.2 29.866666l170.666667 81.066667c4.266667 2.133333 8.533333 2.133333 12.8 2.133333 12.8 0 23.466667-6.4 29.866666-19.2 6.4-14.933333 0-34.133333-17.066666-42.666666z" p-id="32894" fill="#adb5bd"></path></svg>
+            13 分钟</span>
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+		</div>
+		<div class="tag">
+			
+			 - 
+			
+			<a href="/tags/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B">实用教程</a>
+			
+		</div>
+	</div>
+</div>
+        
+    </div>
+    
+    <div class="toc">
+        
+        <div class="page-operation">
+            <div><a href="#"><img src="/imgs/icons/arrow-up-circle.svg" alt=""></a></div>
+            <div><a href="https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231217/"><img src="/imgs/icons/arrow-left-circle.svg" alt=""></a></div>
+            <div><a href="https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231210/"><img src="/imgs/icons/arrow-right-circle.svg" alt=""></a></div>
+        </div>
+        
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#从黄帝内经解读欲望本性">从《黄帝内经》解读欲望本性</a></li>
+    <li><a href="#从管理中习得经验在欲望本征中提取抗体">从管理中习得经验，在欲望本征中提取抗体</a></li>
+    <li><a href="#使用jellyfincrontab实现快感的时间调度">使用jellyfin+crontab实现快感的时间调度</a>
+      <ul>
+        <li><a href="#安装jellyfin">安装jellyfin</a></li>
+        <li><a href="#文件传输">文件传输</a></li>
+        <li><a href="#使用crontab进行jellyfin规定时间段的关机与启动">使用crontab进行jellyfin规定时间段的关机与启动</a></li>
+        <li><a href="#mailxpostfixqq邮箱微信提醒crontab实现提醒">mailx+postfix+QQ邮箱+微信提醒+crontab实现提醒</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+
+    <div class='content  content '>
+        <h1 id="前言">前言</h1>
+<hr>
+<p>唉，没想到一周之后的第一篇日志要来写这样难以启齿的故事。</p>
+<p>非常感谢博主<a href="https://www.thyuu.com/"><strong>风记星辰</strong></a>的文章。</p>
+<p><a href="https://www.thyuu.com/article/77576"><strong>风记星辰的思考与社论：不要因为别人都交卷了，就乱填答案哦</strong></a><strong>。</strong></p>
+<p>这篇文章我一直记到现在，我很欣赏文章里面表达的核心意思，有时候，人工智能在处理复杂问题时，表现得比我更为冷静。</p>
+<p>首先对在这里引用风的文章表示歉意，因为这个话题并不合事宜。</p>
+<p>我问了gpt一个问题：<code>如何管理自己的欲望</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>管理自己的欲望是一个重要的生活技能，可以帮助我们更好地掌控自己的行为和情绪。以下是一些方法，可以帮助你管理自己的欲望：
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">1.</span> 自我意识：首先，要意识到自己的欲望，并了解它们对你的生活和目标的影响。意识到自己的欲望是关键的第一步。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">2.</span> 目标设定：设定明确的目标，并将注意力集中在实现这些目标上。有明确的目标可以帮助你更好地抵制诱惑，以及更好地管理和引导自己的欲望。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">3.</span> 自我控制：发展自我控制的能力是管理欲望的关键。这可以通过一些方法来实现，例如：深呼吸、冥想、正念练习等。这些方法可以帮助你保持冷静和决心，不受欲望的干扰。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">4.</span> 寻找替代品：当你感到强烈的欲望时，尝试找到一些替代品来满足你的需求。例如，如果你渴望吃零食，可以选择吃一些健康的水果或坚果。寻找更健康和积极的替代品可以帮助你满足欲望，同时保持良好的生活习惯。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">5.</span> 建立支持系统：与支持你的朋友、家人或社区建立联系，与他们分享你的目标和挑战。他们可以给予你鼓励和支持，帮助你在面对欲望时保持积极的态度和行动。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">6.</span> 逐步实践：管理欲望是一个需要时间和实践的过程。不要期望一蹴而就，要持续努力并逐步改善。当你成功地管理一个欲望时，你会感到自豪和更有动力去管理其他的欲望。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>最重要的是，要记住每个人都有欲望，重要的是如何管理和引导这些欲望，以使它们对你的生活产生积极的影响。对自己有耐心，并持续努力，你会逐渐发展出更好的欲望管理技能。
+</span></span></code></pre></div><h1 id="正文">正文</h1>
+<hr>
+<p>这里我将开诚布公地介绍我所遇到的困惑和解决思路。</p>
+<h2 id="从黄帝内经解读欲望本性">从《黄帝内经》解读欲望本性</h2>
+<hr>
+<p>帝曰：人年老而无子者，材力尽邪？将天数然也？岐伯曰：女子七岁，肾气盛，齿更发长；二七而天癸至，任脉通，太冲脉盛，月事以时下，故有子；三七肾气平均，故真牙生而长极；四七筋骨坚，发长极，身体盛壮；五七阳明脉衰，面始焦，发始墮；六七三阳脉衰于上，面皆焦，发始白；七七任脉虚，太冲脉衰少，天癸竭，地道不通，故形坏而无子也。丈夫八岁，肾气实，发长齿更；二八肾气盛，天癸至，精气溢泻，阴阳和，故能有子；三八肾气平均，筋骨劲强，故真牙生而长极；四八筋骨隆盛，肌肉满壮；五八肾气衰，发墮齿槁；六八阳气衰竭于上，面焦，发鬓斑白；七八肝气衰，筋不能动，天癸竭，精少，肾藏衰，形体皆极；八八则齿发去。肾者主水，受五脏六腑之精而藏之，故五脏盛乃能泻。今五脏皆衰，筋骨解墮，天癸尽矣，故发鬓白，身体重，行步不正，而无子耳。</p>
+<p>正常的生长发育规律使得性欲成为伴随我们一生中挥之不去并且是极为重要的话题。由于对于性欲的保守教育，使得个人在这方面的探索隐秘而艰难。</p>
+<p>开诚布公的玩笑成为了男生之间的小秘密，似乎在天性中，人类就充满了对于未知的好奇，不管是周易最初的阴阳变化，还是老子对于道的辩证描述，都隐隐约约在追问生命的本能。</p>
+<p>引用曲黎敏老师的一段话：</p>
+<blockquote>
+<p>关于生命的产生，《易经》里说：“天地氤氲，万物化醇，男女媾精，万物化生。”<br>
+“氤氲”指的是天地处在一种混沌的状态。“化醇”的意思是变化而精醇。《易经》这句话中的男女不仅仅指男人和女人，也代指阴阳两性。<br>
+这句话的意思是说：天地之间阴阳相互作用就化生出万物。万物产生的前提条件是阴阳交媾，有了阴阳交媾，才会有天地万物生生不息的本性。人类只是浩渺宇宙中的一粒尘埃，但人类这个幼小生命的诞生原理也是如此。</p>
+</blockquote>
+<p>内经中指出，保养身心的办法。</p>
+<p>夫上古圣人之教下也，皆谓之：虚邪贼风，避之有时，恬淡虚无，真气从之，精神内守，病安从来。是以志闲而少欲，心安而不惧，形劳而不倦，气从以顺，各从其欲，皆得所愿。故美其食，任其服，乐其俗，高下不相慕，其民故曰朴。是以嗜欲不能劳其目，淫邪不能惑其心，愚、智、贤、不肖，不惧于物，故合于道。所以能年皆度百岁，而动作不衰者，以其德全不危也。</p>
+<p>但我做不好，其一，我的抗压能力太弱，其二，容易被环境干扰，其三，自控能力太弱，故我始终无法很好解决这个问题。</p>
+<h2 id="从管理中习得经验在欲望本征中提取抗体">从管理中习得经验，在欲望本征中提取抗体</h2>
+<hr>
+<p>追求性的快感本质上和抽烟喝酒的行为是类似的，人的情志过于离散或过于集中都有可能导致促使本能的情况发生，而由于熵的无法排解，导致压力在身体内部”硬着陆“，无法在”软件层面“处理，只能降落在”物理层面“。</p>
+<p>令人更加惋惜的是，最坚固的防御往往是从内部被攻破的，人的情志一旦失控，就如同特洛伊木马一样，成就了海伦的传说。</p>
+<p>一旦技术失控，所带来的成瘾性将更加难以被克制，从而在寻找抗体的过程中被一步步同质化，最后沉沦，从”人变成兽“，”从兽变成鬼“。</p>
+<p>我们将自己看作是身体的root用户，将五脏六腑和大脑看作是社会的总和，我们不能说是因为旧的机器的运行环境”逼良为娼“，真正冲破最后一道防线的，是潜意识中的无力反抗，正如同每一个个体细胞无法反抗整个身体矩阵一样。从大脑被潜意识入侵的那一刻开始，变化就已经产生了。</p>
+<blockquote>
+<p>“子弹上膛，趋向于发射的概率就被提升了”</p>
+</blockquote>
+<p>真的，就无法摆脱矩阵的约束了吗？</p>
+<p>请注意在和GPT对话的最后一段。</p>
+<blockquote>
+<p>最重要的是，要记住每个人都有欲望，重要的是如何管理和引导这些欲望，以使它们对你的生活产生积极的影响。对自己有耐心，并持续努力，你会逐渐发展出更好的欲望管理技能。</p>
+</blockquote>
+<p>不管是在人文角度，还是从理想角度都映射这种制衡的观点，阳无法摆脱阴，因为孤阳不生，孤阴不长，没有阴阳的和谐，生活不可能“氤氲”出多样的变化，而生命本身所赋予我们的特质，就是生命的传承和接纳，失去了性、爱情、子嗣，即使这一生能完成全部的理想，也如同玉石有了微瑕。</p>
+<p>我已经是四世同堂了，问及外公这一辈子最开心的事，就是雨后春笋一样，遍地发芽了。</p>
+<p>而正如同上面所说，在机器运行过程中所产生bug，会在特定的情况下被暴露出来，为了维护机器的续航和实用性，我们需要熟悉管理的手段。</p>
+<p>从卢梭的《社会契约论》开始，组织和管理社会成为一项值得学习的技能，通过实习期间的体验，我对这项技能有了新的感受。</p>
+<p>管理公司和管理身体矩阵其实很类似，分为很多部门，独立的划分与联合的协作，新人来公司的第一步不是快速上手项目的开发，而是对公司规章制度的学习。从最简单和基础的事情开始做起。培养心流的体验。</p>
+<p>而之所以管理身体矩阵情绪的失衡，很大原因是因为程序在运行时的执行逻辑出现了问题。</p>
+<blockquote>
+<p>需要对规则的敬畏，足够的耐心，坚定的目标，合理的奖赏，适当的休息来维持工作的节奏。</p>
+</blockquote>
+<p>一旦欲望开始贪杯，一切有如洪水决堤，而这是视频时代的常见手段，温水煮青蛙般的浸润，将人性的弱点揣摩到了极致。当牧羊的小男孩再次喊出”狼来了“的告警的时候，村民只当作是一个幼稚的玩笑，所受到的损失并不是没有后果的，这一切的因，都将在潜意识中得到回馈。</p>
+<p>关于深度的解读我并不打算继续书写了，但是我想引用博客中之前写到的两篇文章。</p>
+<p><a href="https://matrixcore.top/article/accident">**[偶然天成] 取次花丛懒回顾**</a>中我这样写道：</p>
+<blockquote>
+<p>回到我自己，我必须承认，我不是一个纯粹的人，我喜欢诗歌，喜欢朗诵，喜欢文学，对文学作品有着异乎寻常的穿透力。但我也有自己的阴暗面，有很坏很坏的时候，有可能白天我是一个天使，晚上我是一个恶魔。由生物本能所驱动的原始欲望，在某些时刻，会让我觉得烈火焚身。但我是幸运的，至少在我遇到的心动的姑娘里，她们都曾带给我过纯粹的温暖。<br>
+我记得有一次给盈盈过生日，我们几个好朋友给她朗诵了一首诗，她都快感动得哭了，后来我们学习青年舞曲，我笨手笨脚的，她很耐心地指导我，盈盈是我的学姐，我们在某一个夏天相识，在某一个夏天告别。那将会是我人生中最炙热的夏天，也将成为永恒的回忆，是一次奇遇，也是一场心灵的洗礼。同样陪伴过我夏天的还有很多的朋友，伙伴。<br>
+我不确定未来我会走向什么样的道路，但就像那句话说的，只要想起一生中遗憾的事，梅花便落满了南山。</p>
+</blockquote>
+<p><a href="https://matrixcore.top/article/jianzhen-4">**[水问] 水经注——诀朋**</a>中简嫃这样写道：</p>
+<blockquote>
+<p>你终于来了，两年的仳离之后你站在我的面前，还是那一副佶屈聱牙的骄傲，不言不语。我在心里浅笑，何必倔强呢！我难道看不出你已然心软！我真想对你莞尔一笑，像以前我们的争执冰释之时我的忍俊不禁。然而，这一次，我的理性原则控制了感情，那一股不容忽略的生之尊严主掌我，苦过、泪尽之后，我不能想象拥抱，人的一生只能浪漫一次，最初也是最后，哪怕是对同一个人，黄金时代只允许一次，破镜不能重圆。<br>
+那就把各自的碎片还给各人，“情”还是有的，就是回不了头。我想你也知道，我不可能在往后的人生中发现像你一样热烈阳刚的知己（啊！你那原始生命力的美！），而你也不可能在人群中找到另一个我。你当不难畅饮泉涌之酒，而我知道，你会依然眷恋着我为你服侍过的滴水之恩。啊！夸父逐日只能一次，我们在少年的野旷中完成自戕与戕人的爱，我们歃血为盟，我们伤痕累累，我们的祭典完成了，应该绝版。<br>
+再见！把项链与贝壳还给你——婚约的信誓与海洋的象征。再见！所有的错误乃为了雕琢生的精萃，我们都无罪。<br>
+你看！这样我们又回到自己的第一页，可以自由地赞叹自己的季节、蝉嘶、风香、草色及周遭的友谊……爱是一门艺术，需要天赋也需要学习，从你那里，我得到严格的训练；从我这儿，你亦应理解相待的奥秘，虽然这样的果实无法让最初的友伴分享，但一想到它将落实于另一个各自选择的友人身上，这些都不是白费。<br>
+我们是可以安心地在往后的日子里行吟了，因为属于我们的这一辈子已尽，宿愿已偿。</p>
+</blockquote>
+<h2 id="使用jellyfincrontab实现快感的时间调度">使用jellyfin+crontab实现快感的时间调度</h2>
+<hr>
+<p>这部分即使难以启齿，但我觉得比变成一个道貌岸然的伪君子更加可悲。</p>
+<p>Jellyfin 是一个自由、开源的媒体服务器软件，它提供了一个方便的方式来组织、管理和流媒体各种媒体内容，如电影、电视节目、音乐和照片。</p>
+<p>为什么不选择本地存储，因为，本次存储的方案，作为独立的root用户，不可能通过内部的进程调度来完成欲望的控制。比如依照上述的制定原则之一，敬畏规则。</p>
+<p>因此我们需要一台机器辅助我们完成控制，作为外源的控制平台。</p>
+<p>首先通过remote ssh进入机器。</p>
+<h3 id="安装jellyfin">安装jellyfin</h3>
+<hr>
+<p>关于影音平台的对比，您可以参考这篇文章：<a href="https://zhuanlan.zhihu.com/p/370799025"><strong>【玩转影音一】plex、emby、jellyfin、elfilm简介及对比</strong></a><strong>，作者：红尘。</strong></p>
+<p>在<a href="https://jellyfin.org/downloads/server/">jellyfin的官网</a>，您可以找到自己的部署方案，我选择的是最简单的脚本，用于在ubuntu20.04上执行。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
+</span></span></code></pre></div><p>您也可以尝试通过docker进行部署。</p>
+<p>成功之后您应该可以在机器的8096端口进行访问，您需要提前在机器上放开防火墙的8096端口。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo ufw allow <span style="color:#099">8096</span>
+</span></span></code></pre></div><p>在完成注册和引导之后您就可以开始正常使用了，但我需要提醒您的是，需要注意正确挂载媒体库的位置。需要注意文件夹的访问权限。您可以设置为<code>/media</code>文件夹。</p>
+<h3 id="文件传输">文件传输</h3>
+<hr>
+<p>我希望您选择合适的文件和合适的vps来进行这项操作，您需要清楚您所在的区域和您的行为可能造成的影响。</p>
+<p>目前我仍然习惯使用scp命令进行文件的上传。</p>
+<p>如果您遇到上传速度不够的情况，也许您可以尝试使用BBR脚本进行加速，但我并没有确认脚本的速度生效。</p>
+<p>您可以参考博主；一灯不是和尚的文章：<a href="https://iyideng.net/black-technology/accelerator/best-linux-vps-network-speed-up-and-one-click-install-scripts.html"><strong>最全面的 Linux VPS 网络优化加速技术详解和一键加速脚本推荐</strong></a><strong>进行尝试。</strong></p>
+<h3 id="使用crontab进行jellyfin规定时间段的关机与启动">使用crontab进行jellyfin规定时间段的关机与启动</h3>
+<hr>
+<p>Cron是一个用于在特定时间执行任务的工具。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo apt update
+</span></span><span style="display:flex;"><span>sudo apt install cron
+</span></span><span style="display:flex;"><span>sudo systemctl status cron <span style="color:#998;font-style:italic">#校验状态</span>
+</span></span><span style="display:flex;"><span>crontab -e <span style="color:#998;font-style:italic">#编写定时脚本</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># 使用以下命令来管理jellyfin</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># 查看当前运行状态</span>
+</span></span><span style="display:flex;"><span>sudo service jellyfin status
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># 启动/重启jellyfin</span>
+</span></span><span style="display:flex;"><span>sudo systemctl restart jellyfin
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># 停止jellyfin</span>
+</span></span><span style="display:flex;"><span>sudo /etc/init.d/jellyfin stop
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#二者进行结合</span>
+</span></span><span style="display:flex;"><span><span style="color:#099">00</span> <span style="color:#099">22</span> * * <span style="color:#099">5</span> sudo systemctl restart jellyfin
+</span></span><span style="display:flex;"><span><span style="color:#099">30</span> <span style="color:#099">23</span> * * <span style="color:#099">5</span> sudo /etc/init.d/jellyfin stop
+</span></span></code></pre></div><p>请注意您需要选择您熟悉的编辑器，vim或nano。</p>
+<p>您可以选择确认您的机器的时区。确保crontab的执行权限。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>timedatectl show --property<span style="color:#000;font-weight:bold">=</span>Timezone --value <span style="color:#998;font-style:italic">#时区</span>
+</span></span><span style="display:flex;"><span>ls -l /usr/bin/crontab <span style="color:#998;font-style:italic">#查看权限</span>
+</span></span><span style="display:flex;"><span>-rwxr-xr-x <span style="color:#099">1</span> root root <span style="color:#099">40000</span> Sep <span style="color:#099">20</span>  <span style="color:#099">2021</span> /usr/bin/crontab <span style="color:#998;font-style:italic">#权限输出，rwxr-xr-x 表示所有者具有读、写和执行权限，同组用户和其他用户具有读和执行权限，您可以在脚本中加入sudo权限来确保脚本的执行。</span>
+</span></span></code></pre></div><p>至此您需要安装设定的时间，通过合适的方式来安排您的计划，您还可以设计一个定时指令，为自己发一份邮件。</p>
+<h3 id="mailxpostfixqq邮箱微信提醒crontab实现提醒">mailx+postfix+QQ邮箱+微信提醒+crontab实现提醒</h3>
+<hr>
+<p>我以为的最简单的一步居然是最复杂的一步，折腾了三个小时。附上成功截图。</p>
+<p><img src="https://bu.dusays.com/2023/12/17/657ddc91ee638.jpg" alt="657ddc91ee638.jpg"></p>
+<p>唉，真牛啊，但是死了一堆脑细胞，QQ邮箱整个spf验证，不得不说真牛啊。</p>
+<p>哎呀，累死了，我简单写完睡觉了，半夜，牙都没刷。在屏幕前连续盘了五六个小时，受不了。</p>
+<p>感谢扣丁学堂的普及，<a href="https://zhuanlan.zhihu.com/p/96753071"><strong>在Linux命令行发送邮件的5种方法(推荐)</strong></a><strong>，<strong>我一开始遇到了两难的选择，sendmail还是mailx，最后选了mailx。看了廖雪峰老师的教程：<a href="https://www.liaoxuefeng.com/article/895886450140288"><strong>3分钟安装配置Postfix邮件服务器</strong></a></strong>。</strong></p>
+<p>标题写得真好啊，三分钟安装。</p>
+<p>安装确实只要三分钟，发挥作用却花了我三个小时，很难想象博主现在的精神状态。</p>
+<p>简单说一下我遇到的问题。</p>
+<p>执行mail代码的时候，发送到教育邮箱可以，显示发件人是root@matrixcore。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#0086b3">echo</span> <span style="color:#d14">&#34;狗命要紧，控制欲望，注意身体&#34;</span> | mail -s <span style="color:#d14">&#34;来自理性的关心&#34;</span> xxx.edu.cn
+</span></span></code></pre></div><p>但是QQ邮箱通过这个发件人是发不出去的，要有SPF验证，关于SPF看这里。</p>
+<p>感谢Renfei Song的文章：<a href="https://www.renfei.org/blog/introduction-to-spf.html"><strong>SPF 记录：原理、语法及配置方法简介</strong></a></p>
+<p>QQ邮箱会验证发件人是否伪造，比如验证ip和域名的权威性。</p>
+<p>QQ邮箱这里藏得很深，也许是我太笨，找了三个小时才找到。在这里，<a href="https://service.mail.qq.com/detail/134/230?expand=16">他域互通</a>，您需要先填入你的域名，域名最好rdns到ip地址，因为我解析了，有兴趣您可以试一试，最重要的是cloudflare控制台中的txt验证。您需要按照上面他域互通的引导。</p>
+<p>您最好在QQ邮箱<a href="https://service.mail.qq.com/detail/122/73?expand=9%2C16">帮助中心查看关于SPF的介绍</a>。特别是具体的报错代码。</p>
+<p>您需要学会查看postfix的log，先安装</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo apt-get install postfix <span style="color:#998;font-style:italic">#安装Postfix</span>
+</span></span><span style="display:flex;"><span>systemctl status postfix <span style="color:#998;font-style:italic">#运行以下命令来检查Postfix服务是否正在运行</span>
+</span></span><span style="display:flex;"><span>sudo systemctl start postfix <span style="color:#998;font-style:italic">#如果服务未运行，可以使用以下命令启动它</span>
+</span></span><span style="display:flex;"><span>sudo vim /etc/postfix/main.cf <span style="color:#998;font-style:italic">#检查主配置文件</span>
+</span></span><span style="display:flex;"><span>sudo tail -f /var/log/mail.log  <span style="color:#998;font-style:italic">#你可以使用以下命令查看Postfix的日志文件：</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#配置主机名和域名：在配置Postfix之前，您需要确保您的主机名和域名设置正确。您可以通过编辑/etc/hostname文件来设置主机名，以及编辑/etc/hosts文件来添加主机名和IP地址的映射。</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#配置Postfix主配置文件：Postfix的主配置文件位于/etc/postfix/main.cf。您可以使用任何文本编辑器打开此文件进行编辑。以下是一些常见的配置选项：</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># myhostname：设置您的主机名。</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># mydomain：设置您的域名。</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># myorigin：设置邮件的发件人地址的默认域名。</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># mydestination：设置本地邮件传递的目标域名。</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># mynetworks：设置允许发送邮件的网络地址范围。</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># relayhost：如果您希望将邮件转发到其他SMTP服务器，则可以设置此选项。</span>
+</span></span></code></pre></div><p>中间可能还有一步，参考了书三四的文章：<a href="https://zhuanlan.zhihu.com/p/418193520"><strong>mailx通过smtp登录QQ邮箱发送邮件</strong></a><strong>。</strong></p>
+<p>您可以修改发件人的别名。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#008080">sender_canonical_maps</span> <span style="color:#000;font-weight:bold">=</span> hash:/etc/postfix/sender_canonical 
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># 首先在/etc/postfix/main.cf 末尾添加这一段</span>
+</span></span><span style="display:flex;"><span>sudo vim /etc/postfix/sender_canonical
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># 进行编辑</span>
+</span></span><span style="display:flex;"><span>root@matrixcore love
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#将主机名替换为love，发件人显示love@matrixcore.top</span>
+</span></span><span style="display:flex;"><span>sudo postmap /etc/postfix/sender_canonical
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#提交更改</span>
+</span></span><span style="display:flex;"><span>sudo postfix reload
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># 重启postfix</span>
+</span></span></code></pre></div><p>如果您要使用QQ邮箱+微信提醒服务，请注意您必须配置好SPF验证。</p>
+<p>不然日志报错：<code>550 SPF check failed.</code></p>
+<p>您需要设置好发件人的地址，不然报错<code>550 Invalid sender address.</code></p>
+<p>您需要通过log判断问题的原因，结合QQ邮箱的帮助中心进行排故。</p>
+<p>最后验证完毕之后，在crontab配置。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#099">00</span> <span style="color:#099">22</span> * * <span style="color:#099">5</span>  <span style="color:#0086b3">echo</span> <span style="color:#d14">&#34;狗命要紧，控制欲望，注意身体&#34;</span> | mail -s <span style="color:#d14">&#34;来自理性的关心&#34;</span> xxx@qq.com <span style="color:#998;font-style:italic"># 周五发送提醒邮件。</span>
+</span></span></code></pre></div><p>最后的最后检查您的垃圾箱。</p>
+<h1 id="总结">总结</h1>
+<hr>
+<p>再不睡要寄了，我草。且看且珍惜了。</p>
+
+    </div>
+
+    
+
+    
+
+    <div class="container-prevnext">
+    <div><a href="https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231217/">← [心路历程] 远赴山海，未来可期</a></div>
+    <div><a href="https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231210/">[寒假开端] 实习生活的入口  →</a></div>
+</div>
+    
+    
+
+    
+</div>
+
+        </div>
+        <div id="footer"><div class="container-footer">
+    
+    <a href="//beian.miit.gov.cn" target="_blank">
+        
+        萌ICP备20241020号
+        
+    </a>
+    <a id="s" href="/secrets">&nbsp;</a>
+    
+</div></div>
+    </body>
+</html>

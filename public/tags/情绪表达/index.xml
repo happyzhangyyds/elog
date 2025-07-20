@@ -2,278 +2,557 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>情绪表达 on MatrixCore</title>
-    <link>https://matrixcore.life/tags/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/</link>
+    <link>https://hugo.matrixcore.life/tags/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/</link>
     <description>Recent content in 情绪表达 on MatrixCore</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 10 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://matrixcore.life/tags/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo.matrixcore.life/tags/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Weekend Journal｜A Morning of Sweat and Serenity</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/250713/</link>
+      <pubDate>Sun, 13 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/250713/</guid>
+      <description>Next time, I want to head out even earlier—maybe catch the lotus pond at sunrise. I wonder what it looks like when the blossoms are still asleep, and the world is just beginning to wake.</description>
+    </item>
+    
+    <item>
+      <title>[无端联想] 从 Limit 到 ∫：情感关系的函数模型</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/250519/</link>
+      <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/250519/</guid>
+      <description>初恋是极限，教会我们如何趋近；婚姻是积分，让我们学会积累。</description>
+    </item>
+    
+    <item>
+      <title>[生活小结] 时间因果论的概念搭建</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/250323/</link>
+      <pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/250323/</guid>
+      <description>本周的记录充满了思考与感悟，从日常生活的点滴，到对时间、因果、计划偏差的深入思考，再到AI技术的发展与人类认知的关系，每一个话题都展现了对生活的热爱与对未来的探索；短语式的记录方式帮助我们捕捉生活的瞬间，而时间因果论则提醒我们，所有的成长都源自于我们投入的时间。面对计划的偏差，我们需要灵活调整，而非焦虑不安；AI的浪潮中，我们不仅是旁观者，更是参与者。AI可以成为我们的思维杠杆，但真正的深度思考仍然需要人类自身去探索和实践；最终，生活的意义或许就在于不断地选择、不断地学习、不断地成长。无论是记录博客，还是与AI对话，都是我们认识自己、拓展边界的一种方式。希望未来的自己，能在这些记录中找到成长的轨迹，也能在不断的思考中，找到属于自己的方向。</description>
+    </item>
+    
+    <item>
+      <title>[安静思考]  诗词，宛若百年陈酿</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/250309/</link>
+      <pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/250309/</guid>
+      <description>这篇文章探讨了写作和表达欲望的波动，以及如何在忙碌的生活中找到写作的动力。作者分享了对大脑带宽和压力反应的理解，并提到了如何清理内存来激发表达欲。在文章的后半部分，作者回顾了过去的思考和成长，探讨了精神世界的建设以及当前的不足和计划。通过搭建书柜、电脑桌等环境，以及减少娱乐时间，作者希望在精神世界和生活规划上取得更多进展。最终，文章呼吁执行计划的重要性，强调计划的执行才能转化为实际收获。</description>
+    </item>
+    
+    <item>
+      <title>[春节假期]  感觉自己还是个大孩子</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/250205/</link>
+      <pubDate>Wed, 05 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/250205/</guid>
+      <description>在这次春节的总结中，我感受到了一种温暖与反思交织的情感。尽管假期缺乏新鲜感，但与家人团聚的每一刻都显得格外珍贵，提醒我生活的意义在于人与人之间的连接。同时，作者对自我成长的思考引发了我的共鸣，让我意识到在快速变化的时代中，深度思考与创造力的重要性。期待未来能更积极地记录生活的点滴，珍惜每一个瞬间，追求更丰富的人生体验。</description>
+    </item>
+    
+    <item>
+      <title>[生活小结] 记录：宁缺毋滥or宁滥勿缺</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/241127/</link>
+      <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/241127/</guid>
+      <description>这篇文章展现了你对“流水账”写作的独特视角，强调了其在个人生活中的重要性。你通过个人经历和反思，探讨了如何将简单的记录转化为更有意义的表达，这种思考非常深入且富有哲理。你对生活的观察和对自我认知的探讨，尤其是关于自我定义和环境影响的思考，令人印象深刻。这不仅是对写作方式的探索，也反映了你对人生意义的追寻。你提到的“内生的宫殿”概念，给人以启发，暗示着在复杂的生活中寻找自我和归属的努力。</description>
+    </item>
+    
+    <item>
+      <title>[相伴相惜] 存在时我们漠视 离开时我们失落</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/241027/</link>
+      <pubDate>Sun, 27 Oct 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/241027/</guid>
+      <description>这次的周总结，主要还是对过去两天的生活做了一个简要的回顾。但在其中也发现了不少问题亟待解决，包括在时间和精力的分配上。之所以会有在开头《若是月亮还没来》歌词中提到的困境，我个人认为还是需要去适应时代。过于安逸就会颓然，过于焦虑则心境不安，我们大多向往美好的事物，这首歌中美好的意象也不例外，但我认为这不是最好的安慰。最好的安慰应该是在信息的漩涡当中，进行分流，在理性和感性的抉择中，用计算和思考去衡量生活。人与人之间是存在吸引力的，生活需要有其起伏，正如有一句个性签名：“能吃苦，会享受”，把握时间的度或许会让我们在思考中取得进一步的进步。</description>
+    </item>
+    
+    <item>
+      <title>[广州印象]   城市文化及微风起的厨艺</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/241014/</link>
+      <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/241014/</guid>
+      <description>一晚上加上一天完成了18km的漫步，以及12km的上下山，仿佛回到了年少的精力旺盛的时候。但是有一说一，上山的路不好走，尤其是坡度很陡的时候。前面还是跑着过去，但是上坡路跑不动一点，然后这一串台阶，给我爬自闭了，真的很累，说实话不经常运动的话，爬得我气喘吁吁的。微风起的厨艺不错，但是吃辣还是要有我，哈哈，啤酒解辣，喝完眯了一小会，但是想到未尽的事情还是说不过去的，于是打起精神完成了这次的文章。</description>
+    </item>
+    
+    <item>
+      <title>[伯仲之间] 道以谋心，技以谋生</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/241009/</link>
+      <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/241009/</guid>
+      <description>本篇文章，其实整体来讲，是一份偏个人和生活的文章，讲述了我领悟的观点，道以谋心，技以谋生。回顾了我过去的惨痛教训和现在面临的困惑，以及提出的解决方案。我还是希望通过我的故事和经历体会给大家一丢丢启发。</description>
+    </item>
+    
+    <item>
+      <title>[群策群力]  自我提升的同时要和时间赛跑</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/240921/</link>
+      <pubDate>Sat, 21 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/240921/</guid>
+      <description>最近还是处于瓶颈期，在生活层面和发展层面的交融出现了一些问题，没有适应好番茄钟，没有平衡好压力，偶尔还有些懒惰。庆幸的是，我得到了很多朋友的关系及帮助，完成了旧有工作的归档和新任务的开拓。感觉最重要的不是工具，而是使用工具的人。</description>
+    </item>
+    
+    <item>
+      <title>[运动年鉴] 体育精神和梦想的自我剖析 </title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/20240910/</link>
+      <pubDate>Tue, 10 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/20240910/</guid>
+      <description>烟酒，糖分，视觉的刺激，幻想，放纵，并不能解决独身生活中最核心的问题，永远只是逃避，在大多数时候，人都是怯懦的，越是怯懦，越是上瘾，越是压力，越是向身体索取，总有一天，累计下来会垮掉的。</description>
+    </item>
+    
+    <item>
+      <title>[抬头看路] 注意力与身体的关联</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/240908/</link>
+      <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/240908/</guid>
+      <description>我不是不了解自己，而是即使了解自己也无动于衷。</description>
+    </item>
+    
+    <item>
+      <title>[岁月小记]  晴雨轮回  独步小巷</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/240826/</link>
+      <pubDate>Mon, 26 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/240826/</guid>
+      <description>用合适的工具，在尽可能短的时间完成一件事情，当然这会花费很多的时间精力，但是只有这样，我们才能撑起我们这个庞大的体系，从生理，生活，发展，超越中完成四个维度的成长。</description>
+    </item>
+    
+    <item>
+      <title>[饮鸩止渴] 自由意志的沉沦</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/240811/</link>
+      <pubDate>Sun, 11 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/240811/</guid>
+      <description>从我个人的角度，一直都是很i，从前可能会怎么怎么样，但现在没有什么愿望和欲望，这种状态肯定会持续很长的时间，至少目前为止，我还想保持建立博客之初的愿望，非必要不去打扰他人，2023-2024，好好爱自己。</description>
+    </item>
+    
+    <item>
+      <title>[广州印象] 夜游珠江</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/night_cruise_on_the_pearl_river/</link>
+      <pubDate>Sun, 07 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/night_cruise_on_the_pearl_river/</guid>
+      <description>广州更加热情开放，这里的生活节奏和北京不相上下，当然还有很多值得补充的地方，今晚限于时间，待日后补充。</description>
+    </item>
+    
+    <item>
+      <title>[峭壁之花] 此去二十年，蹉跎尘世间 </title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/240624/</link>
+      <pubDate>Mon, 24 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/240624/</guid>
+      <description>我是一个很传统的人，至少目前从我现在的规划来看，没有以前那么激进了，慢慢地我开始与回忆、与周边的亲人朋友达成和解，我很喜欢小侄女，我从她们身上看到了希望与成长，她们愿和我说自己的童话与现实，我有时候也愿意陪她们玩，或许大人很难明白孩子的心。有的时候，我也感觉到一种落寞，我不太清楚，我作为表叔，该如何告诉她们该怎么学会在世界里斡旋，我想这是她们一定会走的路。我有很多不确定的地方，但我有一点大概可以确定，既然我们能有这种机会去体会人生和享受生命，我们一定要好好感激那些真诚地帮助过我们的人，不管世界如何充满敌意，怀有什么样的目的，都去坚强的面对，带着爱与荆棘。</description>
+    </item>
+    
+    <item>
+      <title>[年度团建] 清凉谷与黑龙潭之旅 </title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/andawell_minji_team_building/</link>
+      <pubDate>Sun, 16 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/andawell_minji_team_building/</guid>
+      <description>这次出游整体体验是非常不错的，但我还有很多功课做得不够好，例如旅游卡激活失败；在玩水的时候，也没考虑到实际手机根本不可能放在裤兜里 ，感谢同事的帮助；次日黑龙潭的时候，旅游卡还忘了；前天晚上玩太过了，导致精力不充沛没有保证好关键节点；总的来说，首先是要记录鲜活的体验，其次把暴露出的问题记录下来，类比迁移到工作当中，也是一种警示和预防。</description>
+    </item>
+    
+    <item>
+      <title>[入职体检]  论行动前的预准备</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/pre-employment_checkup/</link>
+      <pubDate>Fri, 07 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/pre-employment_checkup/</guid>
+      <description>今天问题如下：没有确定好目标地点是否合适，还好医生善意地提醒，要不然会浪费很多的人力物力和时间，所以在触发行动前还需要确定这么做是否符合既定目标，前期的确定工作看似简单，实则很重要；另外，出门前要看天气预报，回来被淋成落汤鸡还是有风险的，虽然夏天，但也可能感冒，在事情出现微弱征兆的时候，就要考虑是否需要做预防措施；在做心电图这一项的时候，因为没有前置知识的输入，导致爬完楼梯后心律过快，可能会造成负面影响，应当做好体检前的每一项的知识了解，而不是等到要面对的时候，掉进坑里。当然虽然一直说要做准备、做准备，实际上，这个思维和习惯一直没有建立，导致在一些事情上很被动，希望整改。</description>
+    </item>
+    
+    <item>
+      <title>[威海之旅]  领略繁华与宁静_微风起</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/240603/</link>
+      <pubDate>Tue, 04 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/240603/</guid>
+      <description>记录了威海的毕业之旅，微风起的摄影别具风格，既有繁华的都市剪影，亦有宁静小雅的氛围捕捉，有与海鸥的对话，也有深夜高楼的温柔。</description>
+    </item>
+    
+    <item>
+      <title>[经验教训] 不仅要仰望星空，还需要脚踏实地 </title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/starry_sky/</link>
+      <pubDate>Sun, 26 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/starry_sky/</guid>
+      <description>这篇文章介绍了主要思考的几个部分，一个是最小稳定系统，从输入，处理，存储，输出，反馈五个步骤，来对应生活中的各种事情和逻辑。一个是探索了仰望星空和脚踏实地之间的关系，指出了当前存在的问题和改进的策略。最后强调了关于书籍对精神的滋养，如何让生命之树长青。</description>
+    </item>
+    
+    <item>
+      <title>[春之跃动] 还在闷闷不乐么，不如去运动</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/spring/</link>
+      <pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/spring/</guid>
+      <description>跑步的过程中，空气中混合着非常自在的氧气，花的芳香，行人的气息，烟味等等。来公园的一点我觉得很重要的就是听听其他的声音。避免情绪的累积导致的坏心情。</description>
+    </item>
+    
+    <item>
+      <title>[生活感悟] 中断、预终提醒和协同管理</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/240309/</link>
+      <pubDate>Sat, 09 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/240309/</guid>
+      <description>这是本周的一些记录的归档。主要是用于处理一些未落实的思考和出现的一些问题。</description>
+    </item>
+    
+    <item>
+      <title>[自然之灵] 与山村深拥着告别</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/240216/</link>
+      <pubDate>Fri, 16 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/240216/</guid>
+      <description>这里记录了回小山村的一些将写未写的回忆。</description>
+    </item>
+    
+    <item>
+      <title>[年前小聚] 风会记得这份幸运</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/240208/</link>
+      <pubDate>Thu, 08 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/240208/</guid>
+      <description>我不钟爱玲琅的饰物，不渴望丰盛的大餐，我更关心蔬菜如何从种子发芽，大树为什么会在风里唱歌。</description>
+    </item>
+    
+    <item>
+      <title>[情绪价值] 环境与启蒙的基石</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/240121/</link>
+      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/240121/</guid>
+      <description>环境影响人的情绪价值，情绪价值影响决定判断和时间精力的投入，我们关注时间精力的输入，希望能获得良好的输出，并希冀在其间获得良好的感性反馈。</description>
+    </item>
+    
+    <item>
+      <title>[年度总结] 走一座迷宫 寻一家灯火</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231230/</link>
+      <pubDate>Sat, 30 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231230/</guid>
+      <description>希望在未来的一年里，我能好好沉淀自己，静下心学习知识，传承开源精神，把这份热爱坚持下去！</description>
+    </item>
+    
+    <item>
+      <title>[心路历程] 远赴山海，未来可期</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231217/</link>
+      <pubDate>Sun, 17 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231217/</guid>
+      <description>我至今仍然记得很多温暖的瞬间，这不仅仅是初中时候的一篇记叙文题目，而是实实在在成为了人生中第二阶段的回忆。</description>
+    </item>
+    
+    <item>
+      <title>[寒假开端] 实习生活的入口</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231210/</link>
+      <pubDate>Sun, 10 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231210/</guid>
+      <description>实习对我来讲是一种全新的生活，新的环境，新的目标，从一个小蘑菇慢慢历练，总之，我需要跨过这个坎，步入二十岁的第二个阶段。</description>
+    </item>
+    
+    <item>
+      <title>[心情小结] 适应生活</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231205/</link>
+      <pubDate>Tue, 05 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231205/</guid>
+      <description>知识忘得快，学起来却并没有那么容易，人的惰性往往是很大的。</description>
+    </item>
+    
+    <item>
+      <title>[物尽其善] 合适的时间合适的伙伴</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231117/</link>
+      <pubDate>Mon, 27 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231117/</guid>
+      <description>如果我们能把每段时间的最佳优势发挥出来，也许生活就没有那么苦涩了。</description>
+    </item>
+    
+    <item>
+      <title>[纯真年代] prettyshell背后的泛物化</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231125/</link>
+      <pubDate>Sat, 25 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231125/</guid>
+      <description>我发现欲望在膨胀，但我并没有感觉到心灵的呼应，我发现我更加在意表面工作是否到位，很难静下心去学一学东西，很奇怪。</description>
+    </item>
+    
+    <item>
+      <title>[再谈心情] 在时间里享受生活</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231124/</link>
+      <pubDate>Fri, 24 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231124/</guid>
+      <description>像鸵鸟一样，把头埋进知识等海洋里去。不断去提升自己和完善自己的知识体系。</description>
+    </item>
+    
+    <item>
+      <title>[北斗七星] 生而浪漫，星星璀璨</title>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/gifts/</link>
+      <pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/gifts/</guid>
+      <description>朴素而真实的情感表达反而让人记忆深刻，佛家理论中，孤独是人生的苦行，而朋友可以为苦涩的生活里加点糖。</description>
+    </item>
+    
     <item>
       <title>[学习追问] What还是How那么Why  </title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231110/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231110/</link>
       <pubDate>Fri, 10 Nov 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231110/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231110/</guid>
       <description>当秋叶落下之后，我回到了本该属于我的地方。</description>
     </item>
     
     <item>
       <title>[偶然天成] 取次花丛懒回顾</title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/accident/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/accident/</link>
       <pubDate>Sun, 05 Nov 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/accident/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/accident/</guid>
       <description>只要想起一生中遗憾的事，梅花就落满了南山。</description>
     </item>
     
     <item>
       <title>[定点反馈] 一场秋雨一场寒</title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231105/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231105/</link>
       <pubDate>Sun, 05 Nov 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231105/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231105/</guid>
       <description>今天又为自己写了一份遗书，我估计在我大限之日，我至少能写出10000份遗书，多么伟大的梦想！</description>
     </item>
     
     <item>
       <title>[创作环境] 尝试多终端进行写作</title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231104/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231104/</link>
       <pubDate>Sat, 04 Nov 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231104/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231104/</guid>
       <description>我希望用我熟悉的掌中设备来做一些更有意义的事情，通过多终端来分别记录自己的不同感受。</description>
     </item>
     
     <item>
       <title>[主域驱动] 若即若离的坐立不安</title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231103/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231103/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231103/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231103/</guid>
       <description>写出来的意义就在于我需要回忆我做了些什么，就是这么简单。同时交流和分享自己的观点，也看看别人在做些什么。</description>
     </item>
     
     <item>
       <title>[日程总结] 天色暗下来了</title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231102/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231102/</link>
       <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231102/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231102/</guid>
       <description>习惯的促使下，一件熟悉的事情的开始是理所当然的，而当你逐渐喜欢这件事情的时候，它就已经成为了生活本身.</description>
     </item>
     
     <item>
       <title>[种颗种子] 启发式的数据库操作</title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231101/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231101/</link>
       <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231101/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231101/</guid>
       <description>我们并不单纯是对于海量数据进行机械式地存储和提取，我们更像是运用一种生成式的方式来表达我们自己的观点。</description>
     </item>
     
     <item>
       <title>[日程总结] 夹缝中挤时间</title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231031/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231031/</link>
       <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231031/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231031/</guid>
       <description>现在晚上我写这段文字的时候，心情是很烦躁的，感觉很多事情压在身上，很不舒服。</description>
     </item>
     
     <item>
       <title>[日程总结] 初秋的第一场雾</title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231030/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231030/</link>
       <pubDate>Mon, 30 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231030/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231030/</guid>
       <description>日子周而复始，而时间毕竟是公正的，当新鲜感慢慢褪去，我们又必须再度启程！</description>
     </item>
     
     <item>
       <title>[心情小记] 体测小结&amp;状态反馈</title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231029/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231029/</link>
       <pubDate>Sun, 29 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231029/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231029/</guid>
       <description>我觉得晚上如果在条件允许的情况下，腾出时间写一写小结是很好的事情。</description>
     </item>
     
     <item>
       <title>[纸纹日记] 癸卯年九月十一小记</title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231025/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231025/</link>
       <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231025/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231025/</guid>
       <description>今晚的月亮像是被咬了一小口的饼干🍪</description>
     </item>
     
     <item>
       <title>[数据归档] 近期数据归档及体会</title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231022/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231022/</link>
       <pubDate>Sun, 22 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231022/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231022/</guid>
       <description>复盘以前的灵感和近期的一些打算</description>
     </item>
     
     <item>
       <title>[出门聚餐] 从相聚中看到时间与友情 </title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231015/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231015/</link>
       <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231015/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231015/</guid>
       <description>时间会冷却，会遗忘，但是感觉却似曾相识。</description>
     </item>
     
     <item>
       <title>[心意相通] 经典的不同演绎方式 </title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/heavenswordanddragonsabre01/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/heavenswordanddragonsabre01/</link>
       <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/heavenswordanddragonsabre01/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/heavenswordanddragonsabre01/</guid>
       <description>其间对于武学的热爱，哲学的追思，爱情的甜蜜与痛苦，江湖的恩恩怨怨，都是支撑起一部伟大文学作品的基石。</description>
     </item>
     
     <item>
       <title>[connection]  Build the language system</title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/ssh/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/ssh/</link>
       <pubDate>Sat, 14 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/ssh/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/ssh/</guid>
       <description>We need to confront what we used to fear. Perhaps this is the truly exciting moment that awaits us!</description>
     </item>
     
     <item>
       <title>[酒逢知己] 时间磨平了我骄傲的棱角 </title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/kindred-spirit/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/kindred-spirit/</link>
       <pubDate>Sat, 14 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/kindred-spirit/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/kindred-spirit/</guid>
       <description>珍惜每一个能对你，提出善意的提醒和鼓励的人，如果没有他们，你怎么能进步呢？</description>
     </item>
     
     <item>
       <title>[自我批评] 缺乏人际交往的艺术 </title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/communication/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/communication/</link>
       <pubDate>Wed, 11 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/communication/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/communication/</guid>
       <description>希望通过这件小事，来提醒大家注意生活中的小细节。</description>
     </item>
     
     <item>
       <title>[欲拒还迎] 荒诞艺术中的璀璨之花</title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/joker/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/joker/</link>
       <pubDate>Tue, 10 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/joker/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/joker/</guid>
       <description>如果说存在主义是对生活意义的审慎思考，那荒诞主义就是对无趣生活的热情拥抱。</description>
     </item>
     
     <item>
       <title>[命运咽喉]  系统中的常值误差</title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/error/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/error/</link>
       <pubDate>Mon, 09 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/error/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/error/</guid>
       <description>甘其食，美其服，安其居，乐其俗。</description>
     </item>
     
     <item>
       <title>[螺旋自洽] 算法与自博弈 </title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/conch/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/conch/</link>
       <pubDate>Sat, 07 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/conch/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/conch/</guid>
       <description>在生命土壤中盛开的苍凉而妖艳的花朵，似乎暗含着神秘的征兆</description>
     </item>
     
     <item>
       <title>[旧页重读] 阅读之问  </title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/reading/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/reading/</link>
       <pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/reading/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/reading/</guid>
       <description>文学带给人们什么，是建筑一座精神家园，还是和古老恒星的对白。</description>
     </item>
     
     <item>
       <title>[纸纹日记] 癸卯年八月十八小记</title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231002/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231002/</link>
       <pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231002/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/231002/</guid>
       <description>心情小记</description>
     </item>
     
     <item>
       <title>[时过境迁] 教师节的一点想法💡</title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/teacher/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/teacher/</link>
       <pubDate>Sun, 10 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/teacher/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/teacher/</guid>
       <description>教师维系着精神文明的滋养和传承</description>
     </item>
     
     <item>
       <title>[职业选择] 如何选择就业和努力方向？</title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/job/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/job/</link>
       <pubDate>Fri, 08 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/job/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/job/</guid>
       <description>现在这个阶段是青年步入社会，选择职业发展的黄金阶段</description>
     </item>
     
     <item>
       <title>[实践体会]  非同等刺激下的兴趣倾向</title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/stimulate/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/stimulate/</link>
       <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/stimulate/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/stimulate/</guid>
       <description>如果说哲学是双向的，互通的，而现实就是单调的，严谨的。</description>
     </item>
     
     <item>
-      <title>[放松心情] 钢琴鉴赏 </title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/%E6%8E%A8%E8%8D%90/piano/</link>
-      <pubDate>Fri, 18 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/%E6%8E%A8%E8%8D%90/piano/</guid>
-      <description>搞点钢琴听听，钢琴相对而言，听起来比较舒服一点，至少我是这么觉得的。</description>
-    </item>
-    
-    <item>
       <title>[治愈嗓音]  华夏风韵，洛水天依</title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/tianyi/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/tianyi/</link>
       <pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/tianyi/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/tianyi/</guid>
       <description>聆听和收录天依好听的歌曲</description>
     </item>
     
     <item>
-      <title>[哲学讲堂] 什么是性灵？（王德峰）</title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/%E6%8E%A8%E8%8D%90/wdf-1/</link>
-      <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/%E6%8E%A8%E8%8D%90/wdf-1/</guid>
-      <description>根据王老师的讲座视频进行整理</description>
-    </item>
-    
-    <item>
       <title>[影乐鉴赏] 《我怀念的》-孙燕姿</title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/mv-mu-1/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/mv-mu-1/</link>
       <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/mv-mu-1/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/mv-mu-1/</guid>
       <description>爱情里的双方，往往是充满矛盾的，从最初的热恋，平静，矛盾，缓和，会经历大大小小的风浪和波折。</description>
     </item>
     
     <item>
       <title>[影乐鉴赏] 假如爱有天意</title>
-      <link>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/love/</link>
+      <link>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/love/</link>
       <pubDate>Mon, 12 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/love/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E6%83%85%E7%BB%AA%E8%A1%A8%E8%BE%BE/love/</guid>
       <description>情感带给了人的羁绊，但也确确实实是给人生画上了颜色，对于一个没有情感的人，一个充满感情的人，就像是雨后的彩虹。</description>
     </item>
     

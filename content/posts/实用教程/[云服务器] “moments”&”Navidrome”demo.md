@@ -10,8 +10,8 @@ tags:
 summary: "用热情去做好自己喜欢的事情 "
 title: "[云服务器] “moments”&”Navidrome”demo"
 status: Published
-urlname: b457af70-b5c6-460a-870a-3896d3c41856
-updated: "2023-11-02 09:17:00"
+urlname: 076f8f5f-91e9-4464-82d6-6d377e55ac68
+updated: "2024-02-25 12:12:00"
 ---
 
 # 前言

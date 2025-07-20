@@ -1,4 +1,4 @@
-baseURL = 'https://matrixcore.life/'
+baseURL = 'https://hugo.matrixcore.life/'
 languageCode = 'zh-cn'
 title = 'MatrixCore'
 
@@ -12,7 +12,7 @@ enableGitInfo = true
 
 [params]
     author = 'MatrixCore'
-    slogan = '少年辛苦终身事，莫向光阴惰寸功'  # 'Life is just a joker.'
+    slogan = '少年辛苦终身事，莫向光阴惰寸功'  
 
     # 页面语言，默认中文
     en = false
@@ -106,25 +106,15 @@ enableGitInfo = true
         # 将默认使用图片自身分辨率尺寸
         src = 'cat.svg'
         width = 0
-        # words = "Stay hungry, Stay foolish. <br>Your time is limited, so don't waste it living someone else's life. <br>Have the courage to follow your heart and intuition. They somehow already know what you truly want to become. Everything else is secondary. <br>-- Steve Jobs."
-        # words = "多少事，从来急；<br>天地转，光阴迫。<br>一万年太久，只争朝夕。<br>-- 教员"
-        words = "“照顾好自己的身体和情绪，<br>这场人生，<br>你就赢了一大半，<br>其余的其余，<br>人生自有安排。”"
+        words = "《当你老了》<br>威廉·巴特勒·叶芝<br>当你年老，鬓斑，睡意昏沉，<br>在炉旁打盹时，取下这本书，<br>慢慢诵读，梦忆从前你双眸<br>神色柔和，眼波中倒影深深；<br>多少人爱你风韵妩媚的时光，<br>爱你的美丽出自假意或真情，<br>但唯有一人爱你灵魂的至诚，<br>爱你渐衰的脸上愁苦的风霜；<br>弯下身子，在炽红的壁炉边，<br>忧伤地低诉，爱神如何逃走，<br>在头顶上的群山巅漫步闲游，<br>把他的面孔隐没在繁星中间。"
+
 
     [params.contact]
-        icp = '萌ICP备20241020号'                # 备案号，如果你不想显示，设置为 '' 空即可
+        icp = '苏ICP备2024132328号-1'                # 备案号，如果你不想显示，设置为 '' 空即可
         icplink = '//beian.miit.gov.cn'           # 备案链接
-        weibo = ''                              # e.g. https://weibo.com/u/6867589681
-        wechat = ''                             # 微信二维码地址
-        # zhihu = ''                            # e.g. https://www.zhihu.com/people/loveminimal
-        # jianshu = ''                          # e.g. https://www.jianshu.com/u/eebcc2974936
         email = 'matrixcore@qq.com'
-        github = ''                             # e.g. https://github.com/loveminimal
-        bilibili = ''                           # e.g. https://space.bilibili.com/11608450
-        # twitter = ''                          # e.g. https://twitter.com/loveminimal163
-        # facebook = ' '                        # e.g. https://facebook.com/loveminimal
-        # instagram = ''                        # e.g. https://www.instagram.com/loveminimal163
-        # youtube = ''                          # e.g. https://www.youtube.com/channel/UCkWIBwe3rZTDAmBs0GJngkA
-        # telegram = ''                         # e.g. https://web.telegram.org/k/#@loveminimal
+        github = 'https://github.com/happyzhangyyds'                        
+        bilibili = 'https://space.bilibili.com/690893106'                        
         color = '#696969'                        # 图标颜色，默认为浅灰色
         slogan = 'Find me via : )'               # 联系标语，不想显示，可以置空
 
@@ -132,10 +122,10 @@ enableGitInfo = true
     # 如果想在开发环境下启用它，修改服务端口即可，如下
     # hugo server -p=1314
     [params.utterances]
-        active = false                             # 是否启用评论插件
-        repo = "loveminimal/comment"               # 输入你的仓库名称
+        active = true                             # 是否启用评论插件
+        repo = "happyzhangyyds/comment"               # 输入你的仓库名称
         issueTerm = "pathname"
-        theme = "github-light"
+        theme = "github-dark"
         crossorigin = "anonymous"
 
 # 以下为 Markdown 解析擎的一些设置，

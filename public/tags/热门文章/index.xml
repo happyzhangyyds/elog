@@ -2,206 +2,206 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>热门文章 on MatrixCore</title>
-    <link>https://matrixcore.life/tags/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/</link>
+    <link>https://hugo.matrixcore.life/tags/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/</link>
     <description>Recent content in 热门文章 on MatrixCore</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 23 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://matrixcore.life/tags/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo.matrixcore.life/tags/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>第1讲 函数极限与连续</title>
-      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%BC%BA%E5%8C%96/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu101/</link>
+      <link>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%BC%BA%E5%8C%96/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu101/</link>
       <pubDate>Wed, 23 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%BC%BA%E5%8C%96/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu101/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%BC%BA%E5%8C%96/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu101/</guid>
       <description>高数强化第一讲</description>
     </item>
     
     <item>
       <title>第2讲 数列极限</title>
-      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%BC%BA%E5%8C%96/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu102/</link>
+      <link>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%BC%BA%E5%8C%96/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu102/</link>
       <pubDate>Wed, 23 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%BC%BA%E5%8C%96/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu102/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%BC%BA%E5%8C%96/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu102/</guid>
       <description>高数强化第二讲</description>
     </item>
     
     <item>
       <title>[高数基础]   第三讲 函数极限与连续性</title>
-      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu003/</link>
+      <link>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu003/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu003/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu003/</guid>
       <description>极限、连续和间断</description>
     </item>
     
     <item>
       <title>[高数基础]  第一讲 高等数学预备知识</title>
-      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu001/</link>
+      <link>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu001/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu001/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu001/</guid>
       <description>衔接高中与大学之间的基础知识</description>
     </item>
     
     <item>
       <title>[高数基础]  第十一讲 多元函数微分学</title>
-      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu011/</link>
+      <link>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu011/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu011/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu011/</guid>
       <description>多元函数多元函数偏导数、极值和最值、条件极值和拉格朗日乘法</description>
     </item>
     
     <item>
       <title>[高数基础]  第十七讲 多元函数积分学的基础知识</title>
-      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu017/</link>
+      <link>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu017/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu017/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu017/</guid>
       <description>向量代数、空间平面与直线、空间曲线与曲面、场论初步、多元函数微分学的几何应用</description>
     </item>
     
     <item>
       <title>[高数基础]  第十三讲 常微分方程</title>
-      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu013/</link>
+      <link>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu013/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu013/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu013/</guid>
       <description>微分方程的概念、求解、伯努利方程、二阶可降阶微分方程的求解、高阶线性微分方程的求解、二阶常系数齐次线性微分方程的通解、二阶常系数非齐次线性微分方程的特解、n阶常系数线性微分方程的解</description>
     </item>
     
     <item>
       <title>[高数基础]  第十二讲 二重积分</title>
-      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu012/</link>
+      <link>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu012/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu012/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu012/</guid>
       <description>二重积分的概念与计算</description>
     </item>
     
     <item>
       <title>[高数基础]  第十五讲 数学一、数学二专题内容</title>
-      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu015/</link>
+      <link>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu015/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu015/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu015/</guid>
       <description>一元函数微分学应用、一元函数积分学应用、微分方程的物理应用、傅立叶级数</description>
     </item>
     
     <item>
       <title>[高数基础]  第十八讲 三重积分、曲线曲面积分</title>
-      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu018/</link>
+      <link>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu018/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu018/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu018/</guid>
       <description>三重积分、三重积分的概念性质、对称性和计算、第一型曲线积分、第一型曲面积分、重积分与第一型线面积分的应用、第二型曲线和曲面积分</description>
     </item>
     
     <item>
       <title>[高数基础]  第十四讲 无穷级数</title>
-      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu014/</link>
+      <link>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu014/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu014/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu014/</guid>
       <description>常数项级数的概念与性质、正向级数及其敛散性的判别、交错级数和任意项级数及其敛散性的判别、幂级数及其收敛域、幂级数求和函数、函数展开成幂级数</description>
     </item>
     
     <item>
       <title>[高数基础]  第四讲 一元函数微分学的概念与计算</title>
-      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu004/</link>
+      <link>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu004/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu004/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu004/</guid>
       <description>高数基础知识第四讲知识点索引</description>
     </item>
     
     <item>
       <title>[高数基础] 第七讲 零点问题与微分不等式</title>
-      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu007/</link>
+      <link>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu007/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu007/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu007/</guid>
       <description>零点问题与微分不等式</description>
     </item>
     
     <item>
       <title>[高数基础] 第九讲 一元函数积分学的几何应用</title>
-      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu009/</link>
+      <link>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu009/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu009/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu009/</guid>
       <description>用定积分计算平面图形和旋转体的面积体积</description>
     </item>
     
     <item>
       <title>[高数基础] 第二讲 数列极限</title>
-      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu002/</link>
+      <link>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu002/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu002/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu002/</guid>
       <description>数列极限的基本知识</description>
     </item>
     
     <item>
       <title>[高数基础] 第五讲  一元函数微分学的几何应用</title>
-      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu005/</link>
+      <link>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu005/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu005/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu005/</guid>
       <description>极值、单调性、凹凸性</description>
     </item>
     
     <item>
       <title>[高数基础] 第八讲  一元函数积分学的概念与计算</title>
-      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu008/</link>
+      <link>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu008/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu008/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu008/</guid>
       <description>基本积分计算</description>
     </item>
     
     <item>
       <title>[高数基础] 第六讲 中值定理</title>
-      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu006/</link>
+      <link>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu006/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu006/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu006/</guid>
       <description>有界与最值、介值定理、平均值定理、零点定理、费马定理、罗尔定理，拉格朗日中值定理、柯西中值定理、泰勒公式、积分中值定理</description>
     </item>
     
     <item>
       <title>[高数基础] 第十讲  积分等式与积分不等式</title>
-      <link>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu010/</link>
+      <link>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu010/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu010/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E7%A0%94%E6%95%B0-%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/yu010/</guid>
       <description>积分等式与积分不等式</description>
     </item>
     
     <item>
       <title>[考研英语] 阅读理解</title>
-      <link>https://matrixcore.life/posts/%E7%A0%94%E8%8B%B1-%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/xu/</link>
+      <link>https://hugo.matrixcore.life/posts/%E7%A0%94%E8%8B%B1-%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/xu/</link>
       <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E7%A0%94%E8%8B%B1-%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/xu/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E7%A0%94%E8%8B%B1-%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/xu/</guid>
       <description>对考研英语阅读理解解题方法的一个汇总</description>
     </item>
     
     <item>
       <title>[考研英语] 完形填空</title>
-      <link>https://matrixcore.life/posts/%E7%A0%94%E8%8B%B1-%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/cong/</link>
+      <link>https://hugo.matrixcore.life/posts/%E7%A0%94%E8%8B%B1-%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/cong/</link>
       <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E7%A0%94%E8%8B%B1-%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/cong/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E7%A0%94%E8%8B%B1-%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/cong/</guid>
       <description>对考研英语完形填空解题方法的一个汇总</description>
     </item>
     
     <item>
       <title>[考研英语] 语法基础</title>
-      <link>https://matrixcore.life/posts/%E7%A0%94%E8%8B%B1-%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/jing/</link>
+      <link>https://hugo.matrixcore.life/posts/%E7%A0%94%E8%8B%B1-%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/jing/</link>
       <pubDate>Sun, 18 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E7%A0%94%E8%8B%B1-%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/jing/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E7%A0%94%E8%8B%B1-%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0/jing/</guid>
       <description>考研英语语法汇总</description>
     </item>
     

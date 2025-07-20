@@ -2,116 +2,116 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>野火FPGA on MatrixCore</title>
-    <link>https://matrixcore.life/tags/%E9%87%8E%E7%81%ABfpga/</link>
+    <link>https://hugo.matrixcore.life/tags/%E9%87%8E%E7%81%ABfpga/</link>
     <description>Recent content in 野火FPGA on MatrixCore</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 12 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://matrixcore.life/tags/%E9%87%8E%E7%81%ABfpga/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://hugo.matrixcore.life/tags/%E9%87%8E%E7%81%ABfpga/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[野火] 第19章  按键消抖模块的设计与验证</title>
-      <link>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga019/</link>
+      <link>https://hugo.matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga019/</link>
       <pubDate>Thu, 12 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga019/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga019/</guid>
       <description>根据机械按键的构造与原理,设计并实现按键消抖模块，思考并解决其中遇到的问题。</description>
     </item>
     
     <item>
       <title>[野火] 第18章  分频器</title>
-      <link>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga018/</link>
+      <link>https://hugo.matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga018/</link>
       <pubDate>Fri, 06 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga018/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga018/</guid>
       <description>时序逻辑电路中最常用的偶数分频和奇数分频的实现</description>
     </item>
     
     <item>
       <title>[野火] 第16章 阻塞赋值与非阻塞赋值</title>
-      <link>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga/</link>
+      <link>https://hugo.matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga/</link>
       <pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga/</guid>
       <description>本章主要讲解了阻塞赋值(=)与非阻塞赋值(&amp;lt;=)会给设计的电路所产生的差异</description>
     </item>
     
     <item>
       <title>[野火] 第17章 计数器</title>
-      <link>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga017/</link>
+      <link>https://hugo.matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga017/</link>
       <pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga017/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga017/</guid>
       <description>有了计数器我们能做的事情就太多了太多了</description>
     </item>
     
     <item>
       <title>[野火] 第15章  时序逻辑的开始 --- 寄存器</title>
-      <link>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga015/</link>
+      <link>https://hugo.matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga015/</link>
       <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga015/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga015/</guid>
       <description>进行时序逻辑的设计,那寄存器就是必不可少的元素</description>
     </item>
     
     <item>
       <title>[野火] 第13章  层次化设计</title>
-      <link>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga013/</link>
+      <link>https://hugo.matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga013/</link>
       <pubDate>Sat, 30 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga013/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga013/</guid>
       <description>通过全加器的例子来给大家讲解层次化设计的思想</description>
     </item>
     
     <item>
       <title>[野火] 第14章  避免 Latch 的产生</title>
-      <link>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga014/</link>
+      <link>https://hugo.matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga014/</link>
       <pubDate>Sat, 30 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga014/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga014/</guid>
       <description>本章主要讲解 Latch 是什么,以及它的产生、危害、如何避免</description>
     </item>
     
     <item>
       <title>[野火] 第12章  简单组合逻辑 --- 半加器</title>
-      <link>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga012/</link>
+      <link>https://hugo.matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga012/</link>
       <pubDate>Fri, 29 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga012/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga012/</guid>
       <description>用 Verilog 语言描述一个具有半加器功能的电路</description>
     </item>
     
     <item>
       <title>[野火] 第11章 简单组合逻辑 --- 译码器</title>
-      <link>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga011/</link>
+      <link>https://hugo.matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga011/</link>
       <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga011/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga011/</guid>
       <description>用Verilog 语言描述一个具有 3-8 译码器功能的电路</description>
     </item>
     
     <item>
       <title>[野火] 第10章  简单组合逻辑 --- 多路选择器</title>
-      <link>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga010/</link>
+      <link>https://hugo.matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga010/</link>
       <pubDate>Wed, 20 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga010/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga010/</guid>
       <description>用Verilog 语言描述一个具有多路选择器功能的电路</description>
     </item>
     
     <item>
       <title>[野火] 第8章  初识 Verilog HDL</title>
-      <link>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga008/</link>
+      <link>https://hugo.matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga008/</link>
       <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga008/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga008/</guid>
       <description>FPGA基本知识</description>
     </item>
     
     <item>
       <title>[野火] 第9章  点亮你的 LED 灯</title>
-      <link>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga009/</link>
+      <link>https://hugo.matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga009/</link>
       <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga009/</guid>
+      <guid>https://hugo.matrixcore.life/posts/%E9%87%8E%E7%81%ABfpga/fpga009/</guid>
       <description>建立一个完整的工程来验证软件安装是否正确</description>
     </item>
     

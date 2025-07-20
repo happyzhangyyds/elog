@@ -2,19 +2,19 @@
 <html lang="zh-CN"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta name="description" content="[流动核心] 蜿蜒曲折 妙遇神女 - https://matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/feedback/">
-    <meta name="author" content="MatrixCore - https://matrixcore.life/">
+    <meta name="description" content="[流动核心] 蜿蜒曲折 妙遇神女 - https://hugo.matrixcore.life/posts/%E6%B5%81%E5%8A%A8%E6%A0%B8%E5%BF%83/feedback/">
+    <meta name="author" content="MatrixCore - https://hugo.matrixcore.life/">
     
     <meta name="msvalidate.01" content="B46311949B856F2A7015F366FB3CE878" />
     <title>[流动核心] 蜿蜒曲折 妙遇神女</title>
     <link rel="icon" type="image/png" href="/favicon.ico">
     
-    <link rel="stylesheet" href="https://matrixcore.life/style.min.d252ad53a5e6b2ae6b8c6c1661107189be3668e36c8dd61697bbe008595a7e04.css">
+    <link rel="stylesheet" href="https://hugo.matrixcore.life/style.min.d252ad53a5e6b2ae6b8c6c1661107189be3668e36c8dd61697bbe008595a7e04.css">
     
     <script type="text/javascript" src="/main.js" defer></script>
     
 </head>
-<body class="active-animate cool">
+<body class="active-animate ">
         <div id="header"><div class="container-header">
     <div id="vars" class="container-vars" style="display: none;">
 	{
@@ -116,8 +116,8 @@
         
         <div class="page-operation">
             <div><a href="#"><img src="/imgs/icons/arrow-up-circle.svg" alt=""></a></div>
-            <div><a href="https://matrixcore.life/posts/%E6%8E%A8%E8%8D%90/%E5%BF%85%E7%9C%8B%E7%B2%BE%E9%80%89/learn/"><img src="/imgs/icons/arrow-left-circle.svg" alt=""></a></div>
-            <div><a href="https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/ubuntu/"><img src="/imgs/icons/arrow-right-circle.svg" alt=""></a></div>
+            <div><a href="https://hugo.matrixcore.life/posts/%E5%BF%85%E7%9C%8B%E7%B2%BE%E9%80%89/learn/"><img src="/imgs/icons/arrow-left-circle.svg" alt=""></a></div>
+            <div><a href="https://hugo.matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/ubuntu/"><img src="/imgs/icons/arrow-right-circle.svg" alt=""></a></div>
         </div>
         
         <nav id="TableOfContents">
@@ -333,13 +333,13 @@
 记录在解决 ohmymn 插件使用中遇到的问题，在 4.1.1 版本中，进行单词的自动摘录和上下文自动摘录和翻译，方式就是对选取进行二次框选。然后今天又遇到一个很奇怪的问题，就是调用百度 API 进行上下文进行翻译的时候，因为把百度 appid 和密钥填反来，导致排查了很久才找到问题，最后才发现，为什么采用百度翻译的 API，因为每个月有 100 万次的调用量，对于英语学习是非常好的。彩云翻译作为补充使用。</p>
 <details>
   <summary>mn自动翻译和摘录上下文演示demo</summary>
-<p><a href="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ab3b3f8e-90e4-4295-8b56-daa02f5c3e6e/%E5%B1%8F%E5%B9%95%E5%BD%95%E5%88%B62023-07-09_12.08.25.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231103%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231103T145054Z&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=53c869346c6c2bdb9888f3cf0d14af66866f09cb9c4693d1248be7db45f38e49&amp;X-Amz-SignedHeaders=host&amp;x-id=GetObject">image</a></p>
+<p><a href="https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/ab3b3f8e-90e4-4295-8b56-daa02f5c3e6e/%E5%B1%8F%E5%B9%95%E5%BD%95%E5%88%B62023-07-09_12.08.25.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240518%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20240518T113600Z&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=a37a789d0db1633cb2e412ad9f63d69286c5b7cbe84c3b83fdb6e5f0927d9a2d&amp;X-Amz-SignedHeaders=host&amp;x-id=GetObject">image</a></p>
   </details>
 <p>与此相对比的技术是沙拉查词的自动摘录上下文，在 edge 中不仅可以摘录网页的上下文，还可以读取 PDF 的上下文。
 作为查词插件，沙拉查词绝对 YYDS，但是更加精细化的学习和管理，mn yyds</p>
 <details>
   <summary>沙拉查词自动翻译和摘录上下文演示demo</summary>
-<p><a href="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ecdb5d62-d1a6-4de3-b2ea-f60f16d6930a/%E5%B1%8F%E5%B9%95%E5%BD%95%E5%88%B62023-07-09_12.14.14.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231103%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231103T145054Z&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=e7037c20ef9e094289047712ec68d934fbbe38748f8778a7af6f8e208effd5b3&amp;X-Amz-SignedHeaders=host&amp;x-id=GetObject">image</a></p>
+<p><a href="https://prod-files-secure.s3.us-west-2.amazonaws.com/81a75f5f-eb3b-47db-bd61-d87d1cd413a6/ecdb5d62-d1a6-4de3-b2ea-f60f16d6930a/%E5%B1%8F%E5%B9%95%E5%BD%95%E5%88%B62023-07-09_12.14.14.mov?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Credential=AKIAT73L2G45HZZMZUHI%2F20240518%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20240518T113601Z&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=af685bab03e0725fd565e75bb5217baee5403d2a492740ae336063459a87105c&amp;X-Amz-SignedHeaders=host&amp;x-id=GetObject">image</a></p>
   </details>
 <p>我在思考一个问题，mn 具有脑图和文档两种方式，到底是以脑图为主还是文档为主，这是一个问题，如果仅仅停留在文档层面，想必 mn 就不值得花太多的精力去讲解，因为 goodnotes 甚至可以比他做得更好有着更棒的手写引擎优化，所以 mn 优势在于脑图，那么文档相对我们而言，可以视作为原始资源，需要对其进行加工，问题在于加工的场所，是在文档里加工还是在脑图里加工，这是一个问题，我想脑图的确是个不错的地方，但问题是，脑图并不是凭空产生，是需要通过手动进行摘录，这个步骤相对而言就如同把原始材料运输到工厂去加工一样，在什么样的情况下需要这么做呢？</p>
 <p>为此，我们不得不重新思考，脑图和文档的关系了，脑图不是复制文档，而是作为一种更高级的存储和索引方式，用更少的存储换取更灵活的存储和提取，我们需要区分哪些是需要进入脑图。
@@ -380,8 +380,8 @@
     
 
     <div class="container-prevnext">
-    <div><a href="https://matrixcore.life/posts/%E6%8E%A8%E8%8D%90/%E5%BF%85%E7%9C%8B%E7%B2%BE%E9%80%89/learn/">← [经验分享] 谈学习观</a></div>
-    <div><a href="https://matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/ubuntu/">[技术分享] Ubuntu_linux  →</a></div>
+    <div><a href="https://hugo.matrixcore.life/posts/%E5%BF%85%E7%9C%8B%E7%B2%BE%E9%80%89/learn/">← [经验分享] 谈学习观</a></div>
+    <div><a href="https://hugo.matrixcore.life/posts/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/ubuntu/">[技术分享] Ubuntu_linux  →</a></div>
 </div>
     
     

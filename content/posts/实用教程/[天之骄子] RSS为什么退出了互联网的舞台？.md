@@ -10,8 +10,8 @@ tags:
 summary: "万物皆可RSS（\U0001F436保命）"
 title: "[天之骄子] RSS为什么退出了互联网的舞台？"
 status: Published
-urlname: a36853ca-49f6-4e31-a18f-1f12ad5e0090
-updated: "2023-11-02 09:18:00"
+urlname: ef6ed23b-0d4e-4e60-b5dd-41f759211f3b
+updated: "2024-02-25 12:12:00"
 ---
 
 # 前言

@@ -3,7 +3,7 @@
   "baseUrl": ".",
   "paths": {
    "*": [
-    "../themes/virgo/assets/*"
+    "..\\themes\\virgo\\assets\\*"
    ]
   }
  }
