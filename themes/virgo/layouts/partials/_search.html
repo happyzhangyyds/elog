@@ -1,25 +1,42 @@
 <div class="container-search">
     <div id="data" style="display: none;">
-        {{ range where .Site.Pages "Kind" "section" }}
-            {{ if ne .Title "Secrets" }}
-                [{{ range .Pages }}
-                    {{- dict 
-                        "title" (lower .Title) 
-                        "permalink" .Permalink 
-                        "date" (.Date | time.Format "2006-01-02")
-                        "summary" .Summary
-                        "content" (lower .Plain)
-                    | jsonify -}},{{ end }}]
-            {{ end }}
+      {{ range where .Site.Pages "Kind" "section" }}
+        {{ if ne .Title "Secrets" }}
+          [{{ range .Pages }}
+            {{- dict 
+                "title" (lower .Title) 
+                "permalink" .Permalink 
+                "date" (.Date | time.Format "2006-01-02")
+                "summary" .Summary
+                "content" (lower .Plain)
+            | jsonify -}},{{ end }}]
         {{ end }}
+      {{ end }}
     </div>
-
+  
     <div id="search">
-        <!-- 🔎 -->
-        <span class="sc-icon"><img src="/imgs/icons/search.svg" width="48"> </span>
-        <span id="sc-clear" onclick="clearInputVal()">✖</span>
-        <input id="sc-input" oninput="search()" type="text" placeholder="here search search..." />
-        <div id="sc-res"></div>
+      <span class="sc-icon"><img src="/imgs/icons/search.svg" width="48"> </span>
+      <span id="sc-clear" onclick="clearInputVal()">✖</span>
+      <input id="sc-input" oninput="search()" type="text" placeholder="here search search..." />
+      <div id="sc-res"></div>
     </div>
+  
+    <!-- ✅ 搜索逻辑 -->
     <script src="/js/search.js" defer></script>
-</div>
+  
+    <!-- ✅ 自动读取 localStorage 并触发搜索 -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const kw = localStorage.getItem("search_kw");
+        if (kw) {
+          const input = document.getElementById("sc-input");
+          if (input) {
+            input.value = kw;
+            input.dispatchEvent(new Event("input")); // 触发搜索逻辑
+          }
+          localStorage.removeItem("search_kw");
+        }
+      });
+    </script>
+  </div>
+  
