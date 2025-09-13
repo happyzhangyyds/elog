@@ -6,8 +6,9 @@
     "@elog/cli": "^0.8.0"
   },
   "scripts": {
-    "sync:matrixcore:ci": "elog sync --config elog-matrixcore.config.js --cache elog-matrixcore.cache.json",
-    "sync:modulecycle:ci": "elog sync --config elog-modulecycle.config.js --cache elog-modulecycle.cache.json",
-    "sync:ci": "yarn sync:matrixcore:ci && yarn sync:modulecycle:ci"
+    "sync:matrixcore": "elog sync --config elog-matrixcore.config.js --env .elog-matrixcore.env --cache elog-matrixcore.cache.json",
+    "sync:modulecycle": "elog sync --config elog-modulecycle.config.js --env .elog-modulecycle.env --cache elog-modulecycle.cache.json",
+    "sync:all": "yarn sync:matrixcore && yarn sync:modulecycle",
+    "clean": "elog clean"
   }
 }
