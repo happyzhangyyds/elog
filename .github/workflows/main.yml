@@ -10,6 +10,9 @@ on:
     types:
       - deploy
 
+permissions:
+  contents: write  # ✅ 允许 workflow 向仓库提交更改
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -70,6 +73,21 @@ jobs:
           path: elog-modulecycle.cache.json
           key: elog-modulecycle-cache-${{ github.run_id }}
 
-      # 👉 可选：部署到 GitHub Pages / Vercel / Netlify
-      # - name: 🚀 Deploy
-      #   run: yarn export 或 yarn deploy 或其他部署命令
+      # ✅ 配置 Git 用户信息
+      - name: ⚙️ Setup Git Identity
+        run: |
+          git config --global user.name "happyzhangyyds"
+          git config --global user.email "1695257917@qq.com"
+
+      # ✅ 提交并推送 Notion 同步后的更改
+      - name: 📦 Commit and Push Changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
+        env:
+          TZ: Asia/Shanghai
+        run: |
+          echo "`date +"%Y-%m-%d %H:%M:%S"` 自动同步 Notion 数据库" > time.txt
+          git add .
+          git diff --cached --quiet || git commit -m "chore: 🤖 自动同步 Notion 数据库"
