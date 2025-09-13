@@ -18,36 +18,53 @@ jobs:
         with:
           node-version: 18
 
-      - name: 📦 Install dependencies
+      - name: 📥 Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: 🔄 Sync Notion Database:MatrixCore
+      # 👉 恢复 MatrixCore 缓存
+      - name: 📦 Restore MatrixCore Cache
+        uses: actions/cache@v3
+        with:
+          path: elog-matrixcore.cache.json
+          key: elog-matrixcore-cache-${{ hashFiles('elog-matrixcore.config.js') }}
+          restore-keys: elog-matrixcore-cache-
+
+      # 👉 恢复 ModuleCycle 缓存
+      - name: 📦 Restore ModuleCycle Cache
+        uses: actions/cache@v3
+        with:
+          path: elog-modulecycle.cache.json
+          key: elog-modulecycle-cache-${{ hashFiles('elog-modulecycle.config.js') }}
+          restore-keys: elog-modulecycle-cache-
+
+      # 👉 同步 Notion 数据库：MatrixCore
+      - name: 🔄 Sync Notion Database: MatrixCore
         run: yarn sync:matrixcore
         env:
           NOTION_TOKEN_MATRIXCORE: ${{ secrets.NOTION_TOKEN_MATRIXCORE }}
           DATABASE_ID_MATRIXCORE: ${{ secrets.DATABASE_ID_MATRIXCORE }}
 
-      - name: 🔄 Sync Notion Database:ModuleCycle
+      # 👉 同步 Notion 数据库：ModuleCycle
+      - name: 🔄 Sync Notion Database: ModuleCycle
         run: yarn sync:modulecycle
         env:
           NOTION_TOKEN_MODULECYCLE: ${{ secrets.NOTION_TOKEN_MODULECYCLE }}
           DATABASE_ID_MODULECYCLE: ${{ secrets.DATABASE_ID_MODULECYCLE }}
 
-      - name: 📤 提交更新后的缓存文件（如有变更）
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      # 👉 保存 MatrixCore 缓存
+      - name: 💾 Save MatrixCore Cache
+        uses: actions/cache/save@v3
+        with:
+          path: elog-matrixcore.cache.json
+          key: elog-matrixcore-cache-${{ github.run_id }}
 
-          git add elog-*.cache.json
+      # 👉 保存 ModuleCycle 缓存
+      - name: 💾 Save ModuleCycle Cache
+        uses: actions/cache/save@v3
+        with:
+          path: elog-modulecycle.cache.json
+          key: elog-modulecycle-cache-${{ github.run_id }}
 
-          if git diff --cached --quiet; then
-            echo "✅ 无缓存文件变更，跳过提交"
-          else
-            COMMIT_MSG="🔄 更新 MatrixCore 与 ModuleCycle 缓存文件"
-            git commit -m "$COMMIT_MSG"
-            git push
-          fi
-
-      # 可选：部署到 Vercel、GitHub Pages、S3 等
+      # 👉 可选：部署到 GitHub Pages / Vercel / Netlify
       # - name: 🚀 Deploy
-      #   run: yarn export 或使用你自己的部署命令
+      #   run: yarn export 或 yarn deploy 或其他部署命令
