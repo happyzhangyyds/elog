@@ -38,14 +38,14 @@ jobs:
           restore-keys: elog-modulecycle-cache-
 
       # 👉 同步 Notion 数据库：MatrixCore
-      - name: 🔄 Sync Notion Database: MatrixCore
+      - name: 🔄 Sync Notion Database:MatrixCore
         run: yarn sync:matrixcore
         env:
           NOTION_TOKEN_MATRIXCORE: ${{ secrets.NOTION_TOKEN_MATRIXCORE }}
           DATABASE_ID_MATRIXCORE: ${{ secrets.DATABASE_ID_MATRIXCORE }}
 
       # 👉 同步 Notion 数据库：ModuleCycle
-      - name: 🔄 Sync Notion Database: ModuleCycle
+      - name: 🔄 Sync Notion Database:ModuleCycle
         run: yarn sync:modulecycle
         env:
           NOTION_TOKEN_MODULECYCLE: ${{ secrets.NOTION_TOKEN_MODULECYCLE }}
