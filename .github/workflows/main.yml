@@ -4,7 +4,11 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
+
+  # 允许外部仓库事件触发
+  repository_dispatch:
+    types:
+      - deploy
 
 jobs:
   build-and-deploy:
