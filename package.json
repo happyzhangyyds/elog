@@ -1,13 +1,15 @@
 {
+  "name": "elog-sync",
+  "version": "1.0.0",
+  "private": true,
   "dependencies": {
     "@elog/cli": "^0.8.0"
   },
   "scripts": {
-    "build": "yarn", 
-    "elog:init": "elog init",
-    "sync:local": "elog sync -e .elog.env", 
-    "sync": "elog sync", 
-    "clean": "elog clean"
-  }
+  "build": "yarn",
+  "sync:matrixcore": "elog sync --config elog-matrixcore.config.js --env .elog-matrixcore.env --cache elog-matrixcore.cache.json",
+  "sync:modulecycle": "elog sync --config elog-modulecycle.config.js --env .elog-modulecycle.env --cache elog-modulecycle.cache.json",
+  "sync:all": "yarn sync:matrixcore && yarn sync:modulecycle",
+  "clean": "elog clean"
 }
-
+}
