@@ -22,13 +22,13 @@ jobs:
       - name: 📥 Install Dependencies
         run: npm ci
 
-      - name: 🔄 Sync Notion Database: MatrixCore
+      - name: 🔄 Sync Notion Database:MatrixCore
         run: npx elog sync --config elog-matrixcore.config.js
         env:
           NOTION_TOKEN_MATRIXCORE: ${{ secrets.NOTION_TOKEN_MATRIXCORE }}
           DATABASE_ID_MATRIXCORE: ${{ secrets.DATABASE_ID_MATRIXCORE }}
 
-      - name: 🔄 Sync Notion Database: ModuleCycle
+      - name: 🔄 Sync Notion Database:ModuleCycle
         run: npx elog sync --config elog-modulecycle.config.js
         env:
           NOTION_TOKEN_MODULECYCLE: ${{ secrets.NOTION_TOKEN_MODULECYCLE }}
