@@ -2,8 +2,8 @@ module.exports = {
   write: {
     platform: 'notion',
     notion: {
-      token: process.env.NOTION_TOKEN,
-      databaseId: process.env.NOTION_DATABASE_ID,
+      token: process.env.NOTION_TOKEN_MATRIXCORE,
+      databaseId: process.env.DATABASE_ID_MATRIXCORE,
       filter:  {
         property: 'type',
         select: {
