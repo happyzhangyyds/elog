@@ -1,54 +1,41 @@
-name: Deploy Elog Blog
+name: 🚀 Deploy to GitHub Pages
 
 on:
   push:
     branches:
       - main
-  workflow_dispatch:
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📦 Checkout Repository
+      - name: ⬇️ Checkout repository
         uses: actions/checkout@v3
 
-      - name: 🧱 Setup Node.js
+      - name: 🟢 Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: 18
 
-      - name: 📥 Install Dependencies
-        run: npm ci
-
-      - name: ♻️ Restore Elog Cache
-        uses: actions/cache@v3
-        with:
-          path: |
-            elog-matrixcore.cache.json
-            elog-modulecycle.cache.json
-          key: elog-cache-${{ hashFiles('**/elog-*.config.js') }}
-          restore-keys: |
-            elog-cache-
+      - name: 📦 Install dependencies
+        run: yarn install --frozen-lockfile
 
       - name: 🔄 Sync Notion Database:MatrixCore
-        run: npx elog sync --config elog-matrixcore.config.js
+        run: yarn sync:matrixcore
         env:
           NOTION_TOKEN_MATRIXCORE: ${{ secrets.NOTION_TOKEN_MATRIXCORE }}
           DATABASE_ID_MATRIXCORE: ${{ secrets.DATABASE_ID_MATRIXCORE }}
 
       - name: 🔄 Sync Notion Database:ModuleCycle
-        run: npx elog sync --config elog-modulecycle.config.js
+        run: yarn sync:modulecycle
         env:
           NOTION_TOKEN_MODULECYCLE: ${{ secrets.NOTION_TOKEN_MODULECYCLE }}
           DATABASE_ID_MODULECYCLE: ${{ secrets.DATABASE_ID_MODULECYCLE }}
 
       - name: 🛠️ Build Static Site
-        run: npm run build
+        run: yarn build
 
-      - name: 🚀 Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+      # 可选：部署到 Vercel、GitHub Pages、S3 等
+      # - name: 🚀 Deploy
+      #   run: yarn export 或使用你自己的部署命令
