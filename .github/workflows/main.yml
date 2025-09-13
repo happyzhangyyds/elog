@@ -1,6 +1,5 @@
 name: Deploy Elog to GitHub Pages
 
-# ✅ 支持 push 和手动触发
 on:
   push:
     branches:
@@ -23,16 +22,16 @@ jobs:
       - name: 📥 Install dependencies
         run: npm install --production
 
-      # ✅ 同步 Notion 数据库 1：MatrixCore
+      # ✅ 使用 npx 执行 elog 同步 Notion 数据库 1：MatrixCore
       - name: 🔄 Sync Notion 数据库：MatrixCore
-        run: elog sync
+        run: npx elog sync
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN_MATRIXCORE }}
           DATABASE_ID: ${{ secrets.DATABASE_ID_MATRIXCORE }}
 
-      # ✅ 同步 Notion 数据库 2：ModuleCycle
+      # ✅ 使用 npx 执行 elog 同步 Notion 数据库 2：ModuleCycle
       - name: 🔄 Sync Notion 数据库：ModuleCycle
-        run: elog sync
+        run: npx elog sync
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN_MODULECYCLE }}
           DATABASE_ID: ${{ secrets.DATABASE_ID_MODULECYCLE }}
