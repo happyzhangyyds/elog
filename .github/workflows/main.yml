@@ -79,15 +79,17 @@ jobs:
           git config --global user.name "happyzhangyyds"
           git config --global user.email "1695257917@qq.com"
 
-      # ✅ 提交并推送 Notion 同步后的更改
-      - name: 📦 Commit and Push Changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
-        env:
-          TZ: Asia/Shanghai
+      # ✅ 提交 Notion 同步后的更改
+      - name: 📦 Commit Changes
         run: |
           echo "`date +"%Y-%m-%d %H:%M:%S"` 自动同步 Notion 数据库" > time.txt
           git add .
           git diff --cached --quiet || git commit -m "chore: 🤖 自动同步 Notion 数据库"
+
+      # ✅ 推送到 GitHub 仓库
+      - name: 🚀 Push Changes to GitHub
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
+
