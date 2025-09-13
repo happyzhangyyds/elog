@@ -23,7 +23,7 @@ jobs:
 
       # 👉 恢复 MatrixCore 缓存
       - name: 📦 Restore MatrixCore Cache
-        uses: actions/cache@v3
+        uses: actions/cache/restore@v3
         with:
           path: elog-matrixcore.cache.json
           key: elog-matrixcore-cache-${{ hashFiles('elog-matrixcore.config.js') }}
@@ -31,7 +31,7 @@ jobs:
 
       # 👉 恢复 ModuleCycle 缓存
       - name: 📦 Restore ModuleCycle Cache
-        uses: actions/cache@v3
+        uses: actions/cache/restore@v3
         with:
           path: elog-modulecycle.cache.json
           key: elog-modulecycle-cache-${{ hashFiles('elog-modulecycle.config.js') }}
