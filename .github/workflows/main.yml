@@ -1,9 +1,9 @@
-name: Deploy Elog to GitHub Pages
+name: Deploy Elog Blog
 
 on:
   push:
     branches:
-      - master
+      - main
   workflow_dispatch:
 
 jobs:
@@ -14,33 +14,29 @@ jobs:
       - name: 📦 Checkout Repository
         uses: actions/checkout@v3
 
-      - name: 🧰 Setup Node.js
+      - name: 🧱 Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '18'
 
-      - name: 📥 Install dependencies
-        run: npm install --production
+      - name: 📥 Install Dependencies
+        run: npm ci
 
-      # ✅ 使用 npx 执行 elog 同步 Notion 数据库 1：MatrixCore
-      - name: 🔄 Sync Notion 数据库：MatrixCore
-        run: npx elog sync
+      - name: 🔄 Sync Notion Database: MatrixCore
+        run: npx elog sync --config elog-matrixcore.config.js
         env:
-          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN_MATRIXCORE }}
-          DATABASE_ID: ${{ secrets.DATABASE_ID_MATRIXCORE }}
+          NOTION_TOKEN_MATRIXCORE: ${{ secrets.NOTION_TOKEN_MATRIXCORE }}
+          DATABASE_ID_MATRIXCORE: ${{ secrets.DATABASE_ID_MATRIXCORE }}
 
-      # ✅ 使用 npx 执行 elog 同步 Notion 数据库 2：ModuleCycle
-      - name: 🔄 Sync Notion 数据库：ModuleCycle
-        run: npx elog sync
+      - name: 🔄 Sync Notion Database: ModuleCycle
+        run: npx elog sync --config elog-modulecycle.config.js
         env:
-          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN_MODULECYCLE }}
-          DATABASE_ID: ${{ secrets.DATABASE_ID_MODULECYCLE }}
+          NOTION_TOKEN_MODULECYCLE: ${{ secrets.NOTION_TOKEN_MODULECYCLE }}
+          DATABASE_ID_MODULECYCLE: ${{ secrets.DATABASE_ID_MODULECYCLE }}
 
-      # ✅ 构建静态网站
-      - name: 🏗️ Build static site
+      - name: 🛠️ Build Static Site
         run: npm run build
 
-      # ✅ 部署到 GitHub Pages
       - name: 🚀 Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
