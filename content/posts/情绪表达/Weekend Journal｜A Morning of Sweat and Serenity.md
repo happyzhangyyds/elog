@@ -10,8 +10,8 @@ tags:
 summary: "Next time, I want to head out even earlier—maybe catch the lotus pond at sunrise. I wonder what it looks like when the blossoms are still asleep, and the world is just beginning to wake."
 title: Weekend Journal｜A Morning of Sweat and Serenity
 status: Published
-urlname: 22f6ddcd-5429-80fa-b3e9-c007b8886748
-updated: "2025-07-13 09:38:00"
+urlname: 2406ddcd-5429-8143-ac0b-cdf15c53bb1a
+updated: "2025-07-30 15:35:00"
 ---
 
 # ⚜Preface
