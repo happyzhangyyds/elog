@@ -1,66 +1,49 @@
-name: Deploy To GitHub Pages
+name: Deploy Elog to GitHub Pages
 
+# ✅ 支持 push 和手动触发
 on:
   push:
     branches:
       - master
-  repository_dispatch:
-    types:
-      - deploy
+  workflow_dispatch:
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
-    env:
-      # Notion 多模块环境变量（来自 GitHub Secrets）
-      NOTION_TOKEN_MATRIXCORE: ${{ secrets.NOTION_TOKEN_MATRIXCORE }}
-      DATABASE_ID_MATRIXCORE: ${{ secrets.DATABASE_ID_MATRIXCORE }}
-      NOTION_TOKEN_MODULECYCLE: ${{ secrets.NOTION_TOKEN_MODULECYCLE }}
-      DATABASE_ID_MODULECYCLE: ${{ secrets.DATABASE_ID_MODULECYCLE }}
-
     steps:
-      - name: 检查分支
+      - name: 📦 Checkout Repository
         uses: actions/checkout@v3
 
-      - name: 安装 Node 环境
+      - name: 🧰 Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: '16'
 
-      - name: 安装依赖
-        run: |
-          export TZ='Asia/Shanghai'
-          npm install --production
+      - name: 📥 Install dependencies
+        run: npm install --production
 
-      - name: 拉取 Notion 文章（MatrixCore）
-        run: |
-          elog sync \
-            --config elog-matrixcore.config.js \
-            --cache elog-matrixcore.cache.json
+      # ✅ 同步 Notion 数据库 1：MatrixCore
+      - name: 🔄 Sync Notion 数据库：MatrixCore
+        run: elog sync
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN_MATRIXCORE }}
+          DATABASE_ID: ${{ secrets.DATABASE_ID_MATRIXCORE }}
 
-      - name: 拉取 Notion 文章（ModuleCycle）
-        run: |
-          elog sync \
-            --config elog-modulecycle.config.js \
-            --cache elog-modulecycle.cache.json
+      # ✅ 同步 Notion 数据库 2：ModuleCycle
+      - name: 🔄 Sync Notion 数据库：ModuleCycle
+        run: elog sync
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN_MODULECYCLE }}
+          DATABASE_ID: ${{ secrets.DATABASE_ID_MODULECYCLE }}
 
-      - name: 配置 Git 用户名邮箱
-        run: |
-          git config --global user.name "happyzhangyyds"
-          git config --global user.email "1695257917@qq.com"
+      # ✅ 构建静态网站
+      - name: 🏗️ Build static site
+        run: npm run build
 
-      - name: 提交拉取的文章到 GitHub 仓库
-        run: |
-          echo `date +"%Y-%m-%d %H:%M:%S"` begin > time.txt
-          git add .
-          git diff --cached --quiet || git commit -m "更新文档"
-
-      - name: 推送文章到仓库
-        uses: ad-m/github-push-action@v0.6.0
+      # ✅ 部署到 GitHub Pages
+      - name: 🚀 Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: 生成静态文件
-        run: |
-          npm run build
+          publish_dir: ./dist
