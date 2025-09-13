@@ -9,10 +9,7 @@
   "sync:matrixcore": "elog sync --config elog-matrixcore.config.js --cache elog-matrixcore.cache.json",
   "sync:modulecycle": "elog sync --config elog-modulecycle.config.js --cache elog-modulecycle.cache.json",
   "sync:all": "yarn sync:matrixcore && yarn sync:modulecycle",
-  "clean": "elog clean",
-  "build": "next build",
-  "dev": "next dev",
-  "start": "next start"
+  "clean": "elog clean"
 }
 
 

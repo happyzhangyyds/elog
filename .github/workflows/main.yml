@@ -33,8 +33,20 @@ jobs:
           NOTION_TOKEN_MODULECYCLE: ${{ secrets.NOTION_TOKEN_MODULECYCLE }}
           DATABASE_ID_MODULECYCLE: ${{ secrets.DATABASE_ID_MODULECYCLE }}
 
-      - name: 🛠️ Build Static Site
-        run: yarn build
+      - name: 📤 提交更新后的缓存文件（如有变更）
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add elog-*.cache.json
+
+          if git diff --cached --quiet; then
+            echo "✅ 无缓存文件变更，跳过提交"
+          else
+            COMMIT_MSG="🔄 更新 MatrixCore 与 ModuleCycle 缓存文件"
+            git commit -m "$COMMIT_MSG"
+            git push
+          fi
 
       # 可选：部署到 Vercel、GitHub Pages、S3 等
       # - name: 🚀 Deploy
