@@ -11,7 +11,7 @@ summary: 这是一篇兼具技术深度与系统思维的实战手记，不仅�
 title: "[深度实践] 用 Elog 构建双数据库内容系统：自动同步、缓存优化与 CI/CD 集成"
 status: Published
 urlname: 27b6ddcd-5429-8017-917e-c7780735f878
-updated: "2025-09-27 04:04:00"
+updated: "2025-09-27 04:08:00"
 ---
 
 # 前言
@@ -31,7 +31,6 @@ updated: "2025-09-27 04:04:00"
 # 指定读取elog-xxx.config.js中的配置，
 # 并将缓存文件命名为elog-xxx.cache.json
 elog sync -e .elog-xxx.env -a elog-xxx.cache.json -c elog-xxx.config.js
-
 ```
 
 对于我而言，我将其设置为`elog-matrixcore.config.js`和`elog-modulecycle.config.js`，里面的配置文件其实大同小异，但是要注意的是环境变量这一栏目要单独分开设置。
@@ -42,7 +41,6 @@ token: process.env.NOTION_TOKEN_MODULECYCLE,
 databaseId: process.env.DATABASE_ID_MODULECYCLE,
 ...
 },
-
 ```
 
 ### 将多个 elog 指令同步集成到一个 workflow 中
@@ -98,7 +96,6 @@ option alias 说明 默认值
 --config -c 自定义配置文件的名称 elog.config.js
 --env -e 自定义缓存文件的名称 elog.cache.json
 sync
-
 ```
 
 ```shell
@@ -112,7 +109,6 @@ option alias 说明 默认值
 --force 强制同步
 --full-cache 缓存文档全部信息
 --disable-cache 禁用缓存进行同步，等同于删除缓存文件进行全量更新
-
 ```
 
 ### 本地调试可能遇到的 dns 劫持的问题
@@ -121,7 +117,6 @@ option alias 说明 默认值
 
 ```shell
 FetchError: request to <https://api.notion.com/v1/databases/xxx/query> failed, reason: connect ECONNREFUSED 208.103.161.1:443
-
 ```
 
 首先排查是否是 notion 集成到问题，查阅后发现同一个 Notion 集成（Integration）是可以被多个数据库复用的。
@@ -135,7 +130,6 @@ curl <https://api.notion.com/v1/databases/2406ddcd542980eea03ef77ead8bd6f5/query
 -H "Content-Type: application/json" \\
 -X POST \\
 -d '{}'
-
 ```
 
 发现 api 能正确返回数据`e,"code":false,"color":"default"},"plain_text":"少年辛苦终身事，莫向光阴惰寸功。","href":null}]...`
@@ -161,19 +155,16 @@ curl <https://api.notion.com/v1/databases/2406ddcd542980eea03ef77ead8bd6f5/query
 ```bash
 sudo dscacheutil -flushcache
 sudo killall -HUP mDNSResponder
-
 ```
 
 2.增加临时解析测试
 
 ```bash
 sudo nano /etc/hosts
-
 ```
 
 ```text
 104.16.57.5 api.notion.com
-
 ```
 
 3.更换系统 DNS
@@ -198,7 +189,6 @@ git rm --cached .elog-matrixcore.env
 git rm --cached .elog-modulecycle.env
 # 提交更改
 git commit -m "chore: remove .env files from repo"
-
 ```
 
 如果已经推送了（`git push` ），使用 [BFG Repo-Cleaner](https://rtyley.github.io/bfg-repo-cleaner/)
@@ -211,14 +201,12 @@ bfg --delete-files .elog-modulecycle.env
 # 清理并强推
 git reflog expire --expire=now --all && git gc --prune=now --aggressive
 git push --force
-
 ```
 
 同时编辑`.gitignore` 文件，添加：
 
 ```text
 *.env
-
 ```
 
 同时也会触发 GitHub 的 Push Protection（推送保护）机制，它**阻止你将包含敏感信息（如 Notion Token）的提交推送到仓库**，以防止密钥泄露。
@@ -248,7 +236,6 @@ NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
 # 对应package.json中的script.sync
 npm run sync
 ...
-
 ```
 
 核心逻辑的修改在上面其实已经介绍了，稍后我会在下面贴出完整代码。另外本地和云 CLI 在读取环境变量的时候，在加载和运行环境变量的时候也是很不一样的。区别如下：
@@ -277,7 +264,6 @@ npm run sync
 
 ```text
 Cache not found for input keys: elog-matrixcore-cache-<hash>, elog-matrixcore-cache-
-
 ```
 
 ### 配置命令区别解析
@@ -317,7 +303,6 @@ run: |
 echo "`date +"%Y-%m-%d %H:%M:%S"` 自动同步 Notion 数据库" > time.txt
 git add .
 git diff --cached --quiet || git commit -m "chore: 🤖 自动同步 Notion 数据库"
-
 ```
 
 问题解析：`uses:` 和 `run:` **不能同时出现在一个 step 中**；`uses:` 是调用一个 Action；`run:` 是执行 Shell 命令。
@@ -338,18 +323,13 @@ uses: ad-m/github-push-action@master
 with:
 github_token: ${{ secrets.GITHUB_TOKEN }}
 branch: main
-
 ```
 
 ### 实现效果
 
 ---
 
-通过 Notion+NotionNext 搭配的方式，两种数据库创作不同风格和类目的文章，分别指向：matrixcore.love 和 matrixcore.top。通过 elog 的多数据库同步的能力，实现文档的开源和双重备份及开放式访问的渲染，并结合
-
-[git 的稀疏检出](https://hugo.matrixcore.top/posts/git/sparse-checkout-obsidian/)
-
-及 obsidian 强大的双链功能，最终实现数据的回归反馈和循环迭代，完成输入输出的闭环，构建第三代 CMS 的健壮的知识管理系统。
+通过 Notion+NotionNext 搭配的方式，两种数据库创作不同风格和类目的文章，分别指向：matrixcore.love 和 matrixcore.top。通过 elog 的多数据库同步的能力，实现文档的开源和双重备份及开放式访问的渲染，并结合[git 的稀疏检出](https://hugo.matrixcore.top/posts/git/sparse-checkout-obsidian/)及 obsidian 强大的双链功能，最终实现数据的回归反馈和循环迭代，完成输入输出的闭环，构建第三代 CMS 的健壮的知识管理系统。
 
 ![](https://bu.dusays.com/2025/09/27/68d760c378aa0.jpeg)
 
