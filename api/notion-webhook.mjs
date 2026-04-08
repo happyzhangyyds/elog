@@ -49,6 +49,13 @@ export default {
     }
 
     if (payload?.type !== 'page.properties_updated') {
+      console.log(
+        JSON.stringify({
+          stage: 'ignored',
+          reason: 'unsupported_event_type',
+          event_type: payload?.type ?? 'unknown',
+        }),
+      )
       return json({
         ok: true,
         ignored: true,
@@ -80,6 +87,15 @@ export default {
       filters.allowedDatabaseIds.length > 0 &&
       !filters.allowedDatabaseIds.includes(metadata.databaseId)
     ) {
+      console.log(
+        JSON.stringify({
+          stage: 'ignored',
+          reason: 'database_not_allowed',
+          page_id: pageId,
+          database_id: metadata.databaseId,
+          allowed_database_ids: filters.allowedDatabaseIds,
+        }),
+      )
       return json({
         ok: true,
         ignored: true,
@@ -89,6 +105,16 @@ export default {
     }
 
     if (metadata.typeValue !== filters.requiredType) {
+      console.log(
+        JSON.stringify({
+          stage: 'ignored',
+          reason: 'type_mismatch',
+          page_id: pageId,
+          current_type: metadata.typeValue,
+          expected_type: filters.requiredType,
+          title: metadata.title,
+        }),
+      )
       return json({
         ok: true,
         ignored: true,
@@ -98,6 +124,16 @@ export default {
     }
 
     if (metadata.statusValue !== filters.requiredStatus) {
+      console.log(
+        JSON.stringify({
+          stage: 'ignored',
+          reason: 'status_mismatch',
+          page_id: pageId,
+          current_status: metadata.statusValue,
+          expected_status: filters.requiredStatus,
+          title: metadata.title,
+        }),
+      )
       return json({
         ok: true,
         ignored: true,
@@ -118,6 +154,16 @@ export default {
     })
 
     if (!dispatch.ok) {
+      console.log(
+        JSON.stringify({
+          stage: 'dispatch_failed',
+          page_id: pageId,
+          database_id: metadata.databaseId,
+          title: metadata.title,
+          detail: dispatch.error,
+          status: dispatch.status,
+        }),
+      )
       return json(
         {
           ok: false,
@@ -128,6 +174,16 @@ export default {
         dispatch.status,
       )
     }
+
+    console.log(
+      JSON.stringify({
+        stage: 'dispatch_success',
+        page_id: pageId,
+        database_id: metadata.databaseId,
+        title: metadata.title,
+        github_event_type: process.env.GITHUB_EVENT_TYPE || 'notion_publish',
+      }),
+    )
 
     return json({
       ok: true,
