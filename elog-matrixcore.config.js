@@ -4,12 +4,22 @@ module.exports = {
     notion: {
       token: process.env.NOTION_TOKEN_MATRIXCORE,
       databaseId: process.env.DATABASE_ID_MATRIXCORE,
-      filter:  {
-        property: 'type',
-        select: {
-          equals: 'Post'
-        }
-      }, // {property: 'status', select: {equals: 'published'}}
+      filter: {
+        and: [
+          {
+            property: 'type',
+            select: {
+              equals: 'Post',
+            },
+          },
+          {
+            property: 'status',
+            select: {
+              equals: 'published',
+            },
+          },
+        ],
+      },
       sorts: true, // [{timestamp: 'created_time', direction: 'descending'}],
       catalog: {
         enable: true,

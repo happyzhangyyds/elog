@@ -11,7 +11,7 @@ summary: "This is a powerful declaration of personal and generational awakening.
 title: On the Burden of a Generation and the Pursuit of Self-Liberation
 status: Published
 urlname: 2376ddcd-5429-8073-b32f-cfb3c249e661
-updated: "2025-09-13 07:32:00"
+updated: "2025-09-13 15:32:00"
 ---
 
 ---
