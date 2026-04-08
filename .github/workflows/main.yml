@@ -4,25 +4,17 @@ on:
   push:
     branches:
       - main
-
-  # 允许外部仓库事件触发
   repository_dispatch:
     types:
       - deploy
-
-  # 每天北京时间 23:10 执行
-  # GitHub Actions cron 使用 UTC 时间
-  # 中国时间 UTC+8，所以 23:10 CST = 15:10 UTC
   schedule:
+    # 北京时间 23:10 = UTC 15:10
     - cron: '10 15 * * *'
-
-  # 支持手动触发
   workflow_dispatch:
 
 permissions:
   contents: write
 
-# 防止多个相同 workflow 同时运行
 concurrency:
   group: deploy-pages
   cancel-in-progress: true
@@ -46,7 +38,6 @@ jobs:
       - name: 📥 Install dependencies
         run: yarn install --frozen-lockfile
 
-      # 恢复 MatrixCore 缓存
       - name: 📦 Restore MatrixCore Cache
         uses: actions/cache/restore@v4
         with:
@@ -55,7 +46,6 @@ jobs:
           restore-keys: |
             elog-matrixcore-cache-
 
-      # 恢复 ModuleCycle 缓存
       - name: 📦 Restore ModuleCycle Cache
         uses: actions/cache/restore@v4
         with:
@@ -64,65 +54,51 @@ jobs:
           restore-keys: |
             elog-modulecycle-cache-
 
-      # 同步 Notion 数据库：MatrixCore
       - name: 🔄 Sync Notion Database: MatrixCore
         run: yarn sync:matrixcore
         env:
           NOTION_TOKEN_MATRIXCORE: ${{ secrets.NOTION_TOKEN_MATRIXCORE }}
           DATABASE_ID_MATRIXCORE: ${{ secrets.DATABASE_ID_MATRIXCORE }}
 
-      # 同步 Notion 数据库：ModuleCycle
       - name: 🔄 Sync Notion Database: ModuleCycle
         run: yarn sync:modulecycle
         env:
           NOTION_TOKEN_MODULECYCLE: ${{ secrets.NOTION_TOKEN_MODULECYCLE }}
           DATABASE_ID_MODULECYCLE: ${{ secrets.DATABASE_ID_MODULECYCLE }}
 
-      # 保存 MatrixCore 缓存
       - name: 💾 Save MatrixCore Cache
         uses: actions/cache/save@v4
         with:
           path: elog-matrixcore.cache.json
           key: elog-matrixcore-cache-${{ github.run_id }}
 
-      # 保存 ModuleCycle 缓存
       - name: 💾 Save ModuleCycle Cache
         uses: actions/cache/save@v4
         with:
           path: elog-modulecycle.cache.json
           key: elog-modulecycle-cache-${{ github.run_id }}
 
-      # 配置 Git 用户信息
       - name: ⚙️ Setup Git Identity
         run: |
           git config user.name "happyzhangyyds"
           git config user.email "1695257917@qq.com"
 
-      # 生成时间标记文件（如果你确实需要保留执行时间记录）
-      - name: 🕒 Update sync timestamp
-        run: |
-          echo "$(date '+%Y-%m-%d %H:%M:%S') 自动同步 Notion 数据库" > time.txt
-
-      # 检查是否有变更
       - name: 🔍 Check for changes
         id: changes
         run: |
           git add .
           if git diff --cached --quiet; then
-            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
             echo "没有检测到文件变更"
           else
-            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
             echo "检测到文件变更"
           fi
 
-      # 仅在有变更时提交
       - name: 📦 Commit Changes
         if: steps.changes.outputs.has_changes == 'true'
-        run: |
-          git commit -m "chore: 🤖 自动同步 Notion 数据库 [skip ci]"
+        run: git commit -m "chore: 🤖 自动同步 Notion 数据库 [skip ci]"
 
-      # 仅在有变更时推送
       - name: 🚀 Push Changes to GitHub
         if: steps.changes.outputs.has_changes == 'true'
         uses: ad-m/github-push-action@master
@@ -130,7 +106,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: main
 
-      # 无变更时输出提示
       - name: ✅ No changes, skip push
         if: steps.changes.outputs.has_changes == 'false'
         run: echo "本次同步没有产生变更，已跳过 commit 和 push。"
