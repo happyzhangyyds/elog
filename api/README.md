@@ -39,7 +39,7 @@ Optional:
 ## Setup
 
 1. Keep using your existing Vercel blog project for this repository.
-2. [vercel.json](/Users/matrixcore/Desktop/elog/vercel.json) only adds function settings for files under `api/` and does not force a framework preset, so it is less likely to disturb your current Hugo deployment configuration.
+2. [vercel.json](/Users/matrixcore/Desktop/elog/vercel.json) now pins the project to the `hugo` framework, runs `hugo --gc --minify`, outputs to `public`, and keeps the function settings for files under `api/`.
 3. Copy [`.env.vercel.example`](/Users/matrixcore/Desktop/elog/.env.vercel.example) into your Vercel environment variables and fill in the real values.
 4. Deploy the project once so the function URL exists.
 5. In Notion integration settings, create a webhook subscription pointing to:
@@ -79,3 +79,4 @@ This script:
 - If you only want one or two databases to trigger sync, set `NOTION_ALLOWED_DATABASE_IDS`.
 - The local smoke test does not call real Notion or GitHub APIs; it only verifies your function logic.
 - When this repo is already deployed as a blog on Vercel, the webhook can live on the same domain under `/api/notion-webhook` without changing the visible blog URLs.
+- If Vercel starts behaving like a generic Node project and skips Hugo generation, this `vercel.json` should force the deployment back to Hugo build output plus API functions in the same project.
