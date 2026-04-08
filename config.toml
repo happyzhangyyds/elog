@@ -9,6 +9,7 @@ hasCJKLanguage = true
 summaryLength = 40
 paginate = 11
 enableGitInfo = true
+buildFuture = true
 
 [params]
     author = 'MatrixCore'
