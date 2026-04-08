@@ -38,20 +38,24 @@ Optional:
 
 ## Setup
 
-1. Import this repository into Vercel as an `Other` framework project.
-2. Vercel will use [vercel.json](/Users/matrixcore/Desktop/elog/vercel.json) to treat this as a standard Functions project.
+1. Keep using your existing Vercel blog project for this repository.
+2. [vercel.json](/Users/matrixcore/Desktop/elog/vercel.json) only adds function settings for files under `api/` and does not force a framework preset, so it is less likely to disturb your current Hugo deployment configuration.
 3. Copy [`.env.vercel.example`](/Users/matrixcore/Desktop/elog/.env.vercel.example) into your Vercel environment variables and fill in the real values.
 4. Deploy the project once so the function URL exists.
-4. In Notion integration settings, create a webhook subscription pointing to:
+5. In Notion integration settings, create a webhook subscription pointing to:
 
    `https://<your-vercel-domain>/api/notion-webhook`
 
-5. Subscribe to `page.properties_updated`.
-6. When Notion sends the verification request, open the Vercel Function logs and copy the `verification_token`.
-7. Paste that token into Notion's verification modal.
-8. Save the same token in Vercel as `NOTION_VERIFICATION_TOKEN`.
-9. Redeploy so the verification token is live in the function environment.
-10. Share the target database with the same Notion integration.
+   For your current setup, this should be:
+
+   `https://hugo.matrixcore.top/api/notion-webhook`
+
+6. Subscribe to `page.properties_updated`.
+7. When Notion sends the verification request, open the Vercel Function logs and copy the `verification_token`.
+8. Paste that token into Notion's verification modal.
+9. Save the same token in Vercel as `NOTION_VERIFICATION_TOKEN`.
+10. Redeploy so the verification token is live in the function environment.
+11. Share the target database with the same Notion integration.
 
 ## Local Smoke Test
 
@@ -74,3 +78,4 @@ This script:
 - If your title property is not named `title`, the function falls back to the first property of type `title`.
 - If you only want one or two databases to trigger sync, set `NOTION_ALLOWED_DATABASE_IDS`.
 - The local smoke test does not call real Notion or GitHub APIs; it only verifies your function logic.
+- When this repo is already deployed as a blog on Vercel, the webhook can live on the same domain under `/api/notion-webhook` without changing the visible blog URLs.
