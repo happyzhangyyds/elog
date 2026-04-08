@@ -8,7 +8,7 @@ on:
     types:
       - deploy
   schedule:
-    - cron: '10 15 * * *'
+    - cron: '19 23 * * *'
   workflow_dispatch:
 
 permissions:
