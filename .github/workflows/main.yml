@@ -1,4 +1,4 @@
-name: 🚀 Deploy to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -8,7 +8,6 @@ on:
     types:
       - deploy
   schedule:
-    # 北京时间 23:10 = UTC 15:10
     - cron: '10 15 * * *'
   workflow_dispatch:
 
@@ -24,21 +23,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: ⬇️ Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: 🟢 Setup Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: yarn
 
-      - name: 📥 Install dependencies
+      - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: 📦 Restore MatrixCore Cache
+      - name: Restore MatrixCore Cache
         uses: actions/cache/restore@v4
         with:
           path: elog-matrixcore.cache.json
@@ -46,7 +45,7 @@ jobs:
           restore-keys: |
             elog-matrixcore-cache-
 
-      - name: 📦 Restore ModuleCycle Cache
+      - name: Restore ModuleCycle Cache
         uses: actions/cache/restore@v4
         with:
           path: elog-modulecycle.cache.json
@@ -54,58 +53,58 @@ jobs:
           restore-keys: |
             elog-modulecycle-cache-
 
-      - name: 🔄 Sync Notion Database: MatrixCore
+      - name: Sync Notion Database MatrixCore
         run: yarn sync:matrixcore
         env:
           NOTION_TOKEN_MATRIXCORE: ${{ secrets.NOTION_TOKEN_MATRIXCORE }}
           DATABASE_ID_MATRIXCORE: ${{ secrets.DATABASE_ID_MATRIXCORE }}
 
-      - name: 🔄 Sync Notion Database: ModuleCycle
+      - name: Sync Notion Database ModuleCycle
         run: yarn sync:modulecycle
         env:
           NOTION_TOKEN_MODULECYCLE: ${{ secrets.NOTION_TOKEN_MODULECYCLE }}
           DATABASE_ID_MODULECYCLE: ${{ secrets.DATABASE_ID_MODULECYCLE }}
 
-      - name: 💾 Save MatrixCore Cache
+      - name: Save MatrixCore Cache
         uses: actions/cache/save@v4
         with:
           path: elog-matrixcore.cache.json
           key: elog-matrixcore-cache-${{ github.run_id }}
 
-      - name: 💾 Save ModuleCycle Cache
+      - name: Save ModuleCycle Cache
         uses: actions/cache/save@v4
         with:
           path: elog-modulecycle.cache.json
           key: elog-modulecycle-cache-${{ github.run_id }}
 
-      - name: ⚙️ Setup Git Identity
+      - name: Setup Git Identity
         run: |
           git config user.name "happyzhangyyds"
           git config user.email "1695257917@qq.com"
 
-      - name: 🔍 Check for changes
+      - name: Check for changes
         id: changes
         run: |
           git add .
           if git diff --cached --quiet; then
             echo "has_changes=false" >> "$GITHUB_OUTPUT"
-            echo "没有检测到文件变更"
+            echo "No changes detected"
           else
             echo "has_changes=true" >> "$GITHUB_OUTPUT"
-            echo "检测到文件变更"
+            echo "Changes detected"
           fi
 
-      - name: 📦 Commit Changes
+      - name: Commit changes
         if: steps.changes.outputs.has_changes == 'true'
-        run: git commit -m "chore: 🤖 自动同步 Notion 数据库 [skip ci]"
+        run: git commit -m "chore: auto sync notion database [skip ci]"
 
-      - name: 🚀 Push Changes to GitHub
+      - name: Push changes
         if: steps.changes.outputs.has_changes == 'true'
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@v0.8.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: main
 
-      - name: ✅ No changes, skip push
+      - name: No changes skip push
         if: steps.changes.outputs.has_changes == 'false'
-        run: echo "本次同步没有产生变更，已跳过 commit 和 push。"
+        run: echo "No changes, skip commit and push."
