@@ -15,7 +15,7 @@ module.exports = {
           {
             property: 'status',
             select: {
-              equals: 'published',
+              equals: 'Published',
             },
           },
         ],
