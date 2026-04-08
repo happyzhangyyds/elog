@@ -96,7 +96,8 @@ jobs:
 
       - name: Commit changes
         if: steps.changes.outputs.has_changes == 'true'
-        run: git commit -m "chore: auto sync notion database [skip ci]"
+        run: |
+          git commit -m "chore: auto sync notion database [skip ci]"
 
       - name: Push changes
         if: steps.changes.outputs.has_changes == 'true'
