@@ -13,7 +13,7 @@ title: |-
   [DevTools] Modular Knowledge Management with Git Sparse-Checkout and Obsidian Git Integration
 status: Published
 urlname: 26f6ddcd-5429-80cb-8dea-f6287450c8dd
-updated: "2025-09-15 23:36:00"
+updated: "2025-09-15 15:36:00"
 ---
 
 # 🏗️Background
