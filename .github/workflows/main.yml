@@ -53,6 +53,11 @@ jobs:
           restore-keys: |
             elog-modulecycle-cache-
 
+      - name: Sync with remote main
+        run: |
+          git fetch origin main
+          git rebase origin/main
+
       - name: Sync Notion Database MatrixCore
         run: yarn sync:matrixcore
         env:
@@ -81,11 +86,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Sync with remote main
-        run: |
-          git fetch origin main
-          git rebase origin/main
 
       - name: Check for changes
         id: changes
