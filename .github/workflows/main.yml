@@ -25,6 +25,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -77,8 +78,13 @@ jobs:
 
       - name: Setup Git Identity
         run: |
-          git config user.name "happyzhangyyds"
-          git config user.email "1695257917@qq.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Sync with remote main
+        run: |
+          git fetch origin main
+          git rebase origin/main
 
       - name: Check for changes
         id: changes
@@ -99,10 +105,8 @@ jobs:
 
       - name: Push changes
         if: steps.changes.outputs.has_changes == 'true'
-        uses: ad-m/github-push-action@v0.8.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
+        run: |
+          git push origin HEAD:main
 
       - name: No changes skip push
         if: steps.changes.outputs.has_changes == 'false'
