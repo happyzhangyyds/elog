@@ -15,7 +15,7 @@ process.env.NOTION_ALLOWED_DATABASE_IDS ||= databaseId
 process.env.NOTION_TYPE_PROPERTY ||= 'type'
 process.env.NOTION_REQUIRED_TYPE ||= 'Post'
 process.env.NOTION_STATUS_PROPERTY ||= 'status'
-process.env.NOTION_REQUIRED_STATUS ||= 'published'
+process.env.NOTION_REQUIRED_STATUS ||= 'Published'
 process.env.NOTION_TITLE_PROPERTY ||= 'title'
 
 const originalFetch = globalThis.fetch
