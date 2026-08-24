@@ -11,10 +11,10 @@ summary: 从 iPad 计划本的实践局限出发，重新理解博客与 Hermes 
 title: "[日志整理] 从计划本到生命基座：第七代 CMS 的一个夜晚"
 status: Published
 urlname: 3be6ddcd-5429-8199-a0a5-f08b8a7e778e
-updated: "2026-08-16 03:10:00"
+updated: "2026-08-24 00:57:00"
 ---
 
-![封面：日光下的生命基座](https://bu.dusays.com/2026/08/16/6a8129acd885e.jpg)
+![封面：日光下的生命基座](https://bu.dusays.com/2026/08/24/6a8b96ce3a621.jpg)
 
 年初时，我接触到一类制作得很精致的年度电子计划本。
 
@@ -196,3 +196,12 @@ Hermes 负责协作。
 它不替我决定人生。
 
 它只是会在合适的时候，把那根线递回来。像暮色里仍可辨认的一点灯火，不替人选择远方，却让人知道自己并未失去来路。
+
+---
+
+## 继续阅读
+
+如果这篇文章对你有一点启发，可以沿着下面的线继续读：
+
+- [把“能用”慢慢做成“可信”](https://matrixcore.love/article/260815)
+- [技术、AI 与未来的长期思考（专题导读）](https://matrixcore.love/technology-future)
