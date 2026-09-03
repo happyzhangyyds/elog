@@ -181,7 +181,7 @@ export default {
         page_id: pageId,
         database_id: metadata.databaseId,
         title: metadata.title,
-        github_event_type: process.env.GITHUB_EVENT_TYPE || 'notion_publish',
+        github_event_type: process.env.GITHUB_EVENT_TYPE || 'notion_lish',
       }),
     )
 
@@ -200,7 +200,7 @@ function getFilterConfig() {
     typeProperty: process.env.NOTION_TYPE_PROPERTY || 'type',
     requiredType: process.env.NOTION_REQUIRED_TYPE || 'Post',
     statusProperty: process.env.NOTION_STATUS_PROPERTY || 'status',
-    requiredStatus: process.env.NOTION_REQUIRED_STATUS || 'published',
+    requiredStatus: process.env.NOTION_REQUIRED_STATUS || 'Published',
     titleProperty: process.env.NOTION_TITLE_PROPERTY || 'title',
     allowedDatabaseIds: (process.env.NOTION_ALLOWED_DATABASE_IDS || '')
       .split(',')
