@@ -71,34 +71,39 @@ globalThis.fetch = async (url, options = {}) => {
 }
 
 try {
-  const payload = {
-    id: '1782edd6-a853-4d4a-b02c-9c8c16f28e53',
-    type: 'page.properties_updated',
-    entity: {
-      id: pageId,
-      type: 'page',
-    },
-    data: {
-      updated_properties: ['status'],
-    },
+  for (const eventType of ['page.created', 'page.properties_updated']) {
+    const payload = {
+      id: '1782edd6-a853-4d4a-b02c-9c8c16f28e53',
+      type: eventType,
+      entity: {
+        id: pageId,
+        type: 'page',
+      },
+      data: {
+        updated_properties: ['status'],
+      },
+    }
+
+    const rawBody = JSON.stringify(payload)
+    const signature = await createSignature(rawBody, verificationToken)
+    const request = new Request('http://localhost/api/notion-webhook', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Notion-Signature': signature,
+      },
+      body: rawBody,
+    })
+
+    const response = await webhook.fetch(request)
+    const result = await response.json()
+    if (response.status !== 200 || result.dispatched !== true) {
+      throw new Error(
+        `Expected ${eventType} to dispatch, got ${response.status}: ${JSON.stringify(result)}`,
+      )
+    }
+    console.log(`${eventType}: dispatched`)
   }
-
-  const rawBody = JSON.stringify(payload)
-  const signature = await createSignature(rawBody, verificationToken)
-  const request = new Request('http://localhost/api/notion-webhook', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'X-Notion-Signature': signature,
-    },
-    body: rawBody,
-  })
-
-  const response = await webhook.fetch(request)
-  const text = await response.text()
-
-  console.log(`status=${response.status}`)
-  console.log(text)
 } finally {
   globalThis.fetch = originalFetch
 }

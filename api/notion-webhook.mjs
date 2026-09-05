@@ -48,7 +48,14 @@ export default {
       return json({ ok: false, error: 'Invalid Notion signature' }, 401)
     }
 
-    if (payload?.type !== 'page.properties_updated') {
+    // A post can be created with its final properties already set. Accept creation
+    // events as well as later property changes, but deliberately do not dispatch on
+    // every content edit (which would create unnecessary sync runs while drafting).
+    const supportedEventTypes = new Set([
+      'page.created',
+      'page.properties_updated',
+    ])
+    if (!supportedEventTypes.has(payload?.type)) {
       console.log(
         JSON.stringify({
           stage: 'ignored',
@@ -181,7 +188,7 @@ export default {
         page_id: pageId,
         database_id: metadata.databaseId,
         title: metadata.title,
-        github_event_type: process.env.GITHUB_EVENT_TYPE || 'notion_lish',
+        github_event_type: process.env.GITHUB_EVENT_TYPE || 'notion_publish',
       }),
     )
 
