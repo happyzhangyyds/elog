@@ -7,5 +7,16 @@
     "api/**/*.mjs": {
       "maxDuration": 10
     }
-  }
+  },
+  "routes": [
+    {
+      "src": "/api/notion-webhook",
+      "dest": "/api/notion-webhook.mjs"
+    },
+    {
+      "src": "/.*",
+      "status": 404,
+      "dest": "/404.html"
+    }
+  ]
 }
