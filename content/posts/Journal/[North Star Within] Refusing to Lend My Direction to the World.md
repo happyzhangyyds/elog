@@ -7,12 +7,14 @@ category: Mindset
 slug: "260919"
 tags:
   - Journal
-summary: "When fatigue, entertainment, and emptiness become a loop, the answer may not be tighter planning, but a north star that remains genuinely our own."
+summary: "When fatigue, entertainment, and emptiness become a loop, the answer may not be tighter planning but a north star that is genuinely our own."
 title: "[North Star Within] Refusing to Lend My Direction to the World"
 status: Published
 urlname: 3df6ddcd-5429-81bb-8a79-f42e3aa9e606
-updated: "2026-09-18 16:07:00"
+updated: "2026-09-18 16:15:00"
 ---
+
+![A lone traveler beneath a bright north star over dark blue mountains](https://bu.dusays.com/2026/09/19/6aad63628c90f.jpg)
 
 ## 1. A Tired Evening
 
