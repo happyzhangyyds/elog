@@ -31,4 +31,15 @@ install_hook() {
 
 install_hook pre-commit
 install_hook post-merge
+
+# Keep repository dependencies and site build output out of the local graph.
+# The vault config is ignored by Git and never replaces an existing user setup.
+settings_dir="$repo/.obsidian"
+settings_file="$settings_dir/app.json"
+if [ ! -e "$settings_file" ]; then
+    mkdir -p "$settings_dir"
+    printf '%s\n' '{' '  "userIgnoreFilters": [' '    "node_modules/",' '    "public/"' '  ]' '}' > "$settings_file"
+    printf 'Created local Obsidian ignore filters: %s\n' "$settings_file"
+fi
+
 printf '%s\n' 'Done. Obsidian changes will regenerate indexes before commits; pulls will refresh local indexes.'
