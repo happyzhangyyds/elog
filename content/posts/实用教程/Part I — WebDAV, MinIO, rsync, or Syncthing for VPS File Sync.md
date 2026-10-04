@@ -1,18 +1,17 @@
 ---
 password: ""
 icon: ""
-date: "2026-04-07"
+date: 2026-04-07
 type: Post
 category: Workflow
 slug: "260407"
 tags:
-  - Obsidian
   - MinIO
-summary: "This article explores practical ways to sync files between a VPS and local devices for note-taking with Obsidian. Starting from the limitations of Nextcloud WebDAV, it compares WebDAV, MinIO, rsync, and Syncthing to find a solution that best fits a personal knowledge workflow."
-title: "Part I — WebDAV, MinIO, rsync, or Syncthing for VPS File Sync"
+summary: This article explores practical ways to sync files between a VPS and local devices for note-taking with Obsidian. Starting from the limitations of Nextcloud WebDAV, it compares WebDAV, MinIO, rsync, and Syncthing to find a solution that best fits a personal knowledge workflow.
+title: Part I — WebDAV, MinIO, rsync, or Syncthing for VPS File Sync
 status: Published
 urlname: 33b6ddcd-5429-8092-8458-c461bec517c5
-updated: "2026-04-07 17:07:00"
+updated: 2026-04-07 17:07:00
 ---
 
 # 1. Introduction
