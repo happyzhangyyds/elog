@@ -1,17 +1,17 @@
 ---
 password: ""
 icon: ""
-date: "2023-10-11"
+date: 2023-10-11
 type: Post
 category: 动手实践
 slug: elog
 tags:
-  - 推荐
+  - 实用教程
 summary: 通过elog实现notion文章批量下载到本地，以及自动化云端备份和迁移。
 title: "[跨域协同]  elog+notion实现md优雅备份"
 status: Published
 urlname: 0cbead15-8fc2-44b4-930c-8f3e897b6215
-updated: "2024-02-25 12:12:00"
+updated: 2024-02-25 12:12:00
 ---
 
 # 前言
