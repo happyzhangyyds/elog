@@ -11,7 +11,7 @@ summary: 从 RSS 的退场出发，重新理解推荐流、信息选择与普通
 title: "[信息自守] 从 RSS 的退场，谈注意力如何归还自己"
 status: Published
 urlname: 3ff6ddcd-5429-8152-b40e-e2718fd630ea
-updated: "2026-10-20 04:46:00"
+updated: "2026-10-20 04:48:00"
 ---
 
 ![阳光透过窗边照在木桌、电子阅读器、笔记本与绿植上，画面安静明亮](https://bu.dusays.com/2026/10/20/6ad6f1d882b26.jpg)
